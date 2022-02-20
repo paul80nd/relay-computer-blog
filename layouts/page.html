@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ $page := . }}
+<main class="main" role="main">
+  <div class="columns">
+    <div class="column is-three-quarters-widescreen">
+      <div class="content">
+        {{ $page.Content }}
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}
