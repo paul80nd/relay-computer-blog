@@ -34,6 +34,22 @@
 {{ end }}
 <!-- alternate outputs end -->
 
+<!-- favicon begin -->
+{{ $icon16 := (partial "functions/favicon.html" (dict "context" $page "size" 16)) }}
+{{ with $icon16 }}
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .RelPermalink }}">
+{{ end }}
+{{ $icon32 := (partial "functions/favicon.html" (dict "context" $page "size" 32)) }}
+{{ with $icon32 }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ .RelPermalink }}">
+{{ end }}
+{{ $icon180 := (partial "functions/favicon.html" (dict "context" $page "size" 180)) }}
+{{ with $icon180 }}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}">
+{{ end }}
+<link rel="manifest" href="{{ "index.webmanifest" | relLangURL }}">
+<!-- favicon end -->
+
 <!-- Begin CSS Styles -->
 <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
