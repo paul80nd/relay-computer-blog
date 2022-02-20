@@ -1,16 +1,16 @@
-{{ $page := . }}
 <!DOCTYPE html>
 <html lang="{{ .Language.Lang }}">
 
 <head>
-  {{ partial "widgets/head.html" $page }}
+  {{ partial "widgets/head.html" . }}
 </head>
 
+
 <body>
-  {{ partial "widgets/header.html" $page }}
-  {{ partial "widgets/hero.html" $page }}
+  {{ partial "widgets/header.html" . }}
+  {{ partial "widgets/hero.html" . }}
   {{ block "main" . }}{{ end }}
-  {{ partial "widgets/footer.html" $page }}
+  {{ partial "widgets/footer.html" . }}
 </body>
 
 </html>

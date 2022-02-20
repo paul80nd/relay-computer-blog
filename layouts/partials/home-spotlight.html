@@ -1,7 +1,6 @@
 {{ range first 1 (where .Site.RegularPages "Type" "posts") }}
 {{ $image := .Params.thumbnail }}
-<article class="tile is-child card bg-img"
-  style="display: flex; flex-flow: column-reverse; {{ with $image }}{{ $imageRes := resources.Get $image }} background-image: url('{{ $imageRes.RelPermalink }}'){{end}}">
+<article class="tile is-child card bg-img" style="display: flex; flex-flow: column-reverse; {{ with $image }}{{ $imageRes := resources.Get $image }} background-image: url('{{ $imageRes.RelPermalink }}'){{end}}">
   <div class="card-content" style="background-color: rgba(255,255,255,0.95); flex-basis:0; margin-top: 10em;">
     <p class="subtitle">Latest Post:</p>
     <p class="title">

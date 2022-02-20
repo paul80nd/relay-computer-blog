@@ -1,9 +1,8 @@
-{{ $page := . -}}
 <nav class="navbar is-primary">
   <div class="container">
     <div class="navbar-brand">
-      <a href="{{ " /" | relLangURL }}" class="navbar-item">
-        {{ $page.Site.Title}}
+      <a href="/" class="navbar-item">
+        {{ .Site.Title}}
       </a>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
         <span aria-hidden="true"></span>
@@ -13,22 +12,23 @@
     </div>
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-start">
-        <a href="/" class="navbar-item {{ if eq $page.RelPermalink " /"}}is-active{{ end }}">Home</a>
+        <a href="/" class="navbar-item {{ if eq .RelPermalink " /"}}is-active{{ end }}">Home</a>
+
         {{ range $.Site.Data.navigation }}
         {{ if isset . "dropdown" }}
         <div class="navbar-item has-dropdown is-hoverable">
-          <a href="{{ .link }}" class="navbar-link {{ if eq .link $page.RelPermalink }}is-active{{ end }}">{{ .name
-            }}</a>
+          <a href="{{ .link }}" class="navbar-link {{ if eq .link .RelPermalink }}is-active{{ end }}">{{ .name }}</a>
           <div class="navbar-dropdown">
             {{ range .dropdown }}
-            <a href="{{ .link }}" class="navbar-item {{ if eq .link $page.RelPermalink }}is-active{{ end }}">{{ .name }}</a>
+            <a href="{{ .link }}" class="navbar-item {{ if eq .link .RelPermalink }}is-active{{ end }}">{{ .name }}</a>
             {{ end }}
           </div>
         </div>
         {{ else }}
-        <a href="{{ .link }}" class="navbar-item {{ if eq .link $page.RelPermalink }}is-active{{ end }}">{{ .name }}</a>
+        <a href="{{ .link }}" class="navbar-item {{ if eq .link .RelPermalink }}is-active{{ end }}">{{ .name }}</a>
         {{ end }}
         {{ end }}
+
       </div>
     </div>
   </div>

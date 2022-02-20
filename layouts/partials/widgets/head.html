@@ -1,28 +1,27 @@
-{{ $page := . -}}
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{ $title := printf "%s | %s" $page.Title $page.Site.Title -}}
+{{ $title := printf "%s | %s" .Title .Site.Title -}}
 {{ $title = strings.TrimLeft " | " $title -}}
 {{ with $title }}<title>{{ $title }}</title>{{ end }}
 
-{{ $author := $page.Params.author | default $page.Site.Params.author -}}
-{{ $description := $page.Description | default $page.Params.summary | default $page.Summary | default $page.Site.Params.description -}}
-{{ $keywords := (delimit $page.Keywords ",") | default $page.Site.Params.keywords -}}
-<meta property="og:title" content="{{ $page.Title }}" />
+{{ $author := .Params.author | default .Site.Params.author -}}
+{{ $description := .Description | default .Params.summary | default .Summary | default .Site.Params.description -}}
+{{ $keywords := (delimit .Keywords ",") | default .Site.Params.keywords -}}
+<meta property="og:title" content="{{ .Title }}" />
 {{ with $author }}<meta name="author" content="{{ . }}" />{{ end }}
-<meta property="og:locale" content="{{ $page.Language.Lang }}" />
+<meta property="og:locale" content="{{ .Language.Lang }}" />
 {{ with $description -}}
-<meta name="description" content="{{ . }}">
-<meta property="og:description" content="{{ . }}">
+<meta name="description" content="{{ . }}" />
+<meta property="og:description" content="{{ . }}" />
 {{ end -}}
-<link rel="canonical" href="{{ $page.Params.canonical | default $page.Permalink }}" />
-<meta property="og:url" content="{{ $page.Params.canonical | default $page.Permalink }}" />
-<meta property="og:site_name" content="{{ $page.Site.Title }}" />
+<link rel="canonical" href="{{ .Params.canonical | default .Permalink }}" />
+<meta property="og:url" content="{{ .Params.canonical | default .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 {{ with $keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
+{{ "<!-- Begin CSS Styles -->" | safeHTML }}
 <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
@@ -30,15 +29,30 @@
 {{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
+{{ "<!-- End CSS Styles -->" | safeHTML }}
 
-{{ $icon16 := (partial "functions/favicon.html" (dict "context" $page "size" 16)) -}}
-{{ $icon32 := (partial "functions/favicon.html" (dict "context" $page "size" 32)) -}}
-{{ $icon180 := (partial "functions/favicon.html" (dict "context" $page "size" 180)) -}}
-{{ with $icon180 }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}">{{ end }}
-{{ with $icon32 }}<link rel="icon" type="image/png" sizes="32x32" href="{{ .RelPermalink }}">{{ end }}
-{{ with $icon16 }}<link rel="icon" type="image/png" sizes="16x16" href="{{ .RelPermalink }}">{{ end }}
-<link rel="manifest" href="{{ "index.webmanifest" | relLangURL }}">
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
-{{ partial "plugins/cookie-consent.html" }}
+{{ "<!-- Begin EU Cookie Consent -->" | safeHTML }}
+{{ partial "plugins/cookie-consent.html" -}}
+{{ "<!-- End EU Cookie Consent -->" | safeHTML }}
 
+{{ "<!-- Begin Google Analytics -->" | safeHTML }}
 {{ template "_internal/google_analytics.html" . }}
+{{ "<!-- End Google Analytics -->" | safeHTML }}

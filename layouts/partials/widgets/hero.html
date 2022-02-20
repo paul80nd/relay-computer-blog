@@ -1,10 +1,9 @@
-{{ $page := . -}}
-{{ $image := $page.Params.hero_image -}}
+{{ $image := .Params.hero_image -}}
 <section class="hero is-bold is-primary"{{ with $image }}{{ $imageRes := resources.Get $image }} style="background: url('{{ $imageRes.RelPermalink }}') no-repeat center center; background-size: cover;"{{end}} >
     <div class="hero-body">
         <div class="container">
-            <h1 class="title ">{{ $page.Title }}</h1>
-            <h2 class="subtitle">{{ $page.Params.subtitle }}</h2>
+            <h1 class="title ">{{ .Title }}</h1>
+            <h2 class="subtitle">{{ .Params.subtitle }}</h2>
         </div>
     </div>
 </section>
