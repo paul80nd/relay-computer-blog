@@ -3,13 +3,13 @@
 <html lang="{{ .Language.Lang }}">
 
 <head>
-  {{ partial "widgets/header.html" $page }}
   {{ partial "widgets/head.html" $page }}
-  {{ partial "widgets/footer.html" $page }}
 </head>
 
 <body>
+  {{ partial "widgets/header.html" $page }}
   {{ block "main" . }}{{ end }}
+  {{ partial "widgets/footer.html" $page }}
 </body>
 
 </html>
