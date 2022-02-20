@@ -13,6 +13,7 @@ disableHugoGeneratorInject =  true
 # Temporary ugly urls until parity with old site
 uglyurls = true
 
+enableRobotsTXT = true
 summaryLength = 25
 paginate = 12
 
