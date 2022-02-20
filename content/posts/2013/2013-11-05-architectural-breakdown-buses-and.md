@@ -7,7 +7,7 @@ tags:
 - theory
 - Architecture
 modified_time: '2014-01-26T10:56:44.836Z'
-thumbnail: /assets/img/posts/2013/2013-11-05-4000.png
+thumbnail: /img/posts/2013/2013-11-05-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6513040670104646455
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/architectural-breakdown-buses-and.html
 ---

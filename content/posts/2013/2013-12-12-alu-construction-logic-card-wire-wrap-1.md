@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-01-25T10:35:15.050Z'
-thumbnail: /assets/img/posts/2013/2013-12-12-4002.jpg
+thumbnail: /img/posts/2013/2013-12-12-4002.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3038273609152310614
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-logic-card-wire-wrap-1.html
 ---

@@ -8,7 +8,7 @@ tags:
 - power
 - enclosure
 modified_time: '2017-10-29T11:02:16.861Z'
-thumbnail: /assets/img/posts/2017/2017-10-29-4000.jpg
+thumbnail: /img/posts/2017/2017-10-29-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1319014928633051501
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/10/miscellany-special-power-distribution.html
 ---

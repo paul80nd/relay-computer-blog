@@ -9,7 +9,7 @@ tags:
 - control
 - UI
 modified_time: '2018-01-29T22:12:50.533Z'
-thumbnail: /assets/img/posts/2018/2018-01-29-4000.png
+thumbnail: /img/posts/2018/2018-01-29-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2710789331528757115
 blogger_orig_url: http://relaycomputer.blogspot.com/2018/01/auxiliary-control-design-part-2-of-3.html
 ---

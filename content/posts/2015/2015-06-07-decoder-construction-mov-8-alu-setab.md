@@ -9,7 +9,7 @@ tags:
 - video
 - decoder
 modified_time: '2015-06-07T21:43:08.909+01:00'
-thumbnail: /assets/img/posts/2015/2015-06-07-4000.jpg
+thumbnail: /img/posts/2015/2015-06-07-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6039819533217163126
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/06/decoder-construction-mov-8-alu-setab.html
 ---

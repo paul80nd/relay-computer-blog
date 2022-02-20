@@ -8,7 +8,7 @@ tags:
 - design
 - control
 modified_time: '2017-09-17T12:57:13.497+01:00'
-thumbnail: /assets/img/posts/2017/2017-09-17-4000.png
+thumbnail: /img/posts/2017/2017-09-17-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3161759482276496399
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/09/control-design-fetch-and-increment.html
 ---

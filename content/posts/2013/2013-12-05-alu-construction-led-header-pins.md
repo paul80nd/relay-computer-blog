@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-01-25T10:52:57.017Z'
-thumbnail: /assets/img/posts/2013/2013-12-05-4000.jpg
+thumbnail: /img/posts/2013/2013-12-05-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-9190351908904068507
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-led-header-pins.html
 ---

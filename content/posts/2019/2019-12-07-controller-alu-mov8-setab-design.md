@@ -7,7 +7,7 @@ tags:
 - control
 - design
 modified_time: '2019-12-07T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-12-07-4000.png
+thumbnail: /img/posts/2019/2019-12-07-4000.png
 ---
 
 In my last post I covered off the controller design for the GOTO instruction. Being as I've decided to implement the

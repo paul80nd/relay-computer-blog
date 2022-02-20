@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2014-04-20T11:17:23.228+01:00'
-thumbnail: /assets/img/posts/2014/2014-04-20-4000.png
+thumbnail: /img/posts/2014/2014-04-20-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5912358853712087690
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/04/register-design-and-d-8-bit-registers.html
 ---

@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2017-05-29T17:13:58.764+01:00'
-thumbnail: /assets/img/posts/2017/2017-05-29-4000.png
+thumbnail: /img/posts/2017/2017-05-29-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5822212752536364773
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/05/register-design-program-counter.html
 ---

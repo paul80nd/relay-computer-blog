@@ -7,7 +7,7 @@ tags:
 - misc
 - construction
 modified_time: '2015-05-04T11:19:10.075+01:00'
-thumbnail: /assets/img/posts/2015/2015-05-04-4000.jpg
+thumbnail: /img/posts/2015/2015-05-04-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-7595080064701299728
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/05/new-workbench.html
 ---

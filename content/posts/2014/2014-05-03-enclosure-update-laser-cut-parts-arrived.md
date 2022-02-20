@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - enclosure
 modified_time: '2014-05-03T09:50:29.945+01:00'
-thumbnail: /assets/img/posts/2014/2014-05-03-4000.jpg
+thumbnail: /img/posts/2014/2014-05-03-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3721414048515411703
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/05/enclosure-update-laser-cut-parts-arrived.html
 ---

@@ -7,7 +7,7 @@ tags:
 - construction
 - enclosure
 modified_time: '2014-03-22T07:42:20.849Z'
-thumbnail: /assets/img/posts/2014/2014-03-22-4000.JPG
+thumbnail: /img/posts/2014/2014-03-22-4000.JPG
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-9093339016058087295
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/03/enclosure-initial-construction.html
 ---

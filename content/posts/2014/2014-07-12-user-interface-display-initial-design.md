@@ -8,7 +8,7 @@ tags:
 - construction
 - UI
 modified_time: '2014-07-12T10:31:22.281+01:00'
-thumbnail: /assets/img/posts/2014/2014-07-12-4000.jpg
+thumbnail: /img/posts/2014/2014-07-12-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1913215876291708138
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/07/user-interface-display-initial-design.html
 ---

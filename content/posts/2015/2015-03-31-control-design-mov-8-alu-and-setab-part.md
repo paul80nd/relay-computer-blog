@@ -7,7 +7,7 @@ tags:
 - design
 - control
 modified_time: '2015-03-31T22:26:24.973+01:00'
-thumbnail: /assets/img/posts/2015/2015-03-31-4000.png
+thumbnail: /img/posts/2015/2015-03-31-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-590905691965893868
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/03/control-design-mov-8-alu-and-setab-part.html
 ---

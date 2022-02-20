@@ -7,7 +7,7 @@ tags:
 - sequencing
 - design
 modified_time: '2015-01-26T22:03:49.751Z'
-thumbnail: /assets/img/posts/2015/2015-01-26-4000.png
+thumbnail: /img/posts/2015/2015-01-26-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2766185666697386020
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/01/sequencer-design-8-cycle-fsm.html
 ---

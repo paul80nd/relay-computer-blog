@@ -5,7 +5,7 @@ date: '2017-12-17T12:32:00.000Z'
 author: Paul Law
 tags: 
 modified_time: '2017-12-17T12:32:02.935Z'
-thumbnail: /assets/img/posts/2017/2017-12-17-4000.jpg
+thumbnail: /img/posts/2017/2017-12-17-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5285697635886901352
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/12/incrementer-construction-part-2-of-2.html
 ---

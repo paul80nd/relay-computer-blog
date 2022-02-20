@@ -7,7 +7,7 @@ tags:
 - design
 - musings
 modified_time: '2019-01-14T11:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-01-14-4000.png
+thumbnail: /img/posts/2019/2019-01-14-4000.png
 ---
 
 In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you've followed my blog (over the years) you'll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter. Each register card follows the same construction pattern: solder down LEDs, solder down relay sockets, solder down wire wrap posts, solder ground and power lines, wire wrap, wire wrap, wire wrap, wire wrap, etc, etc, insert relays in sockets. Tedious, tedious, tedious.

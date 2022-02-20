@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2014-04-16T22:08:09.767+01:00'
-thumbnail: /assets/img/posts/2014/2014-04-16-4000.png
+thumbnail: /img/posts/2014/2014-04-16-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2507354803942553873
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/04/register-design-general-purpose-8-bit.html
 ---

@@ -7,7 +7,7 @@ tags:
 - incrementer
 - design
 modified_time: '2017-07-17T21:36:36.578+01:00'
-thumbnail: /assets/img/posts/2017/2017-07-17-4000.png
+thumbnail: /img/posts/2017/2017-07-17-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1169799515837849020
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/07/incrementer-design.html
 ---

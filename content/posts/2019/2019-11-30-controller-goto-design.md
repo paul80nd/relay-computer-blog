@@ -7,7 +7,7 @@ tags:
 - control
 - design
 modified_time: '2019-11-30T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-11-30-4000.png
+thumbnail: /img/posts/2019/2019-11-30-4000.png
 ---
 
 With the sequencer now designed and constructed I'm much closer to getting branching working on my relay computer. The next

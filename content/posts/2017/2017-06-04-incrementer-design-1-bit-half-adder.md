@@ -7,7 +7,7 @@ tags:
 - incrementer
 - design
 modified_time: '2017-07-15T14:18:46.887+01:00'
-thumbnail: /assets/img/posts/2017/2017-06-04-4000.png
+thumbnail: /img/posts/2017/2017-06-04-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1407083931821601984
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/06/incrementer-design-1-bit-half-adder.html
 ---

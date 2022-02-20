@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - musings
 modified_time: '2019-01-06T11:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-01-06-4000.jpg
+thumbnail: /img/posts/2019/2019-01-06-4000.jpg
 ---
 
 ... or so the proverb goes ... and it's fair to say I've been procrastinating quite a bit recently.

@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2014-04-24T22:56:51.468+01:00'
-thumbnail: /assets/img/posts/2014/2014-04-24-4000.png
+thumbnail: /img/posts/2014/2014-04-24-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2641754186476607387
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/04/register-design-dual-output-8-bit.html
 ---

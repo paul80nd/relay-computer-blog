@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - enclosure
 modified_time: '2014-05-10T09:46:37.210+01:00'
-thumbnail: /assets/img/posts/2014/2014-05-10-4000.jpg
+thumbnail: /img/posts/2014/2014-05-10-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5790615446531052778
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/05/enclosure-update-magic-pen.html
 ---

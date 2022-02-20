@@ -9,7 +9,7 @@ tags:
 - design
 - control
 modified_time: '2019-09-23T01:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-09-23-4000.png
+thumbnail: /img/posts/2019/2019-09-23-4000.png
 ---
 
 There's been a common theme recently in the comments on my [YouTube videos](https://www.youtube.com/user/paul80nd) ...

@@ -7,7 +7,7 @@ tags:
 - pulse distribution
 - design
 modified_time: '2015-03-22T13:58:46.653Z'
-thumbnail: /assets/img/posts/2015/2015-03-22-4000.png
+thumbnail: /img/posts/2015/2015-03-22-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3166805450612640254
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/03/pulse-distribution-design-pulses-cd-and.html
 ---

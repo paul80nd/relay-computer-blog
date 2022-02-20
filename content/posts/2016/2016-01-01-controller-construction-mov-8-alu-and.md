@@ -8,7 +8,7 @@ tags:
 - control
 - video
 modified_time: '2016-01-01T23:37:02.172Z'
-thumbnail: /assets/img/posts/2016/2016-01-01-4000.jpg
+thumbnail: /img/posts/2016/2016-01-01-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1925430100973632520
 blogger_orig_url: http://relaycomputer.blogspot.com/2016/01/controller-construction-mov-8-alu-and.html
 ---

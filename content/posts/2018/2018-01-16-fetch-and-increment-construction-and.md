@@ -9,7 +9,7 @@ tags:
 - control
 - video
 modified_time: '2018-01-16T22:16:57.351Z'
-thumbnail: /assets/img/posts/2018/2018-01-16-4000.jpg
+thumbnail: /img/posts/2018/2018-01-16-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-7972421411466671157
 blogger_orig_url: http://relaycomputer.blogspot.com/2018/01/fetch-and-increment-construction-and.html
 ---

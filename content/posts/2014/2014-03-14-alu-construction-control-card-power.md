@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-03-14T19:51:32.323Z'
-thumbnail: /assets/img/posts/2014/2014-03-14-4000.jpg
+thumbnail: /img/posts/2014/2014-03-14-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3061249362112276422
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/03/alu-construction-control-card-power.html
 ---

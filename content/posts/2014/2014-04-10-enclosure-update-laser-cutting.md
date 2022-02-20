@@ -8,7 +8,7 @@ tags:
 - construction
 - enclosure
 modified_time: '2014-04-10T19:58:53.960+01:00'
-thumbnail: /assets/img/posts/2014/2014-04-10-4000.png
+thumbnail: /img/posts/2014/2014-04-10-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8284051616298818382
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/04/enclosure-update-laser-cutting.html
 ---

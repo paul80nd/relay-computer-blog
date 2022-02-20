@@ -8,7 +8,7 @@ tags:
 - registers
 - video
 modified_time: '2015-06-07T20:38:31.502+01:00'
-thumbnail: /assets/img/posts/2015/2015-05-16-4000.jpg
+thumbnail: /img/posts/2015/2015-05-16-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6166519978545466354
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/05/register-construction-completed.html
 ---

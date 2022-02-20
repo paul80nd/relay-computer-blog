@@ -10,7 +10,7 @@ tags:
 - video
 - musings
 modified_time: '2017-08-18T22:58:43.082+01:00'
-thumbnail: /assets/img/posts/2017/2017-08-18-4000.jpg
+thumbnail: /img/posts/2017/2017-08-18-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8906956484545056611
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/08/the-problem-with-memory.html
 ---

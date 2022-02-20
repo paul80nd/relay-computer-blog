@@ -7,7 +7,7 @@ tags:
 - sequencing
 - design
 modified_time: '2019-11-01T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-11-01-4000.png
+thumbnail: /img/posts/2019/2019-11-01-4000.png
 ---
 
 Recently I've been looking at what's needed to implement branching in my computer (the upcoming GOTO class of instructions).

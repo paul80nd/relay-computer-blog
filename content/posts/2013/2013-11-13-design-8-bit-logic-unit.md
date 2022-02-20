@@ -7,7 +7,7 @@ tags:
 - design
 - ALU
 modified_time: '2014-01-26T10:46:12.024Z'
-thumbnail: /assets/img/posts/2013/2013-11-13-4000.png
+thumbnail: /img/posts/2013/2013-11-13-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8093147107728620870
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/design-8-bit-logic-unit.html
 ---

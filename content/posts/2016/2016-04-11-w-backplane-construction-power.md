@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - construction
 modified_time: '2016-04-11T21:07:48.805+01:00'
-thumbnail: /assets/img/posts/2016/2016-04-11-4000.jpg
+thumbnail: /img/posts/2016/2016-04-11-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-415709624828724390
 blogger_orig_url: http://relaycomputer.blogspot.com/2016/04/w-backplane-construction-power.html
 ---

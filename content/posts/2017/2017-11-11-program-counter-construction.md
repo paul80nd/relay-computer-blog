@@ -9,7 +9,7 @@ tags:
 - registers
 - video
 modified_time: '2017-11-11T10:25:42.648Z'
-thumbnail: /assets/img/posts/2017/2017-11-11-4000.jpg
+thumbnail: /img/posts/2017/2017-11-11-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3439496089574914545
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/11/program-counter-construction.html
 ---

@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-03-04T18:03:42.754Z'
-thumbnail: /assets/img/posts/2014/2014-03-04-4000.jpg
+thumbnail: /img/posts/2014/2014-03-04-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-996809555140790963
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/03/alu-construction-control-card-header.html
 ---

@@ -7,7 +7,7 @@ tags:
 - design
 - decoder
 modified_time: '2015-01-04T22:23:50.840Z'
-thumbnail: /assets/img/posts/2015/2015-01-04-4000.png
+thumbnail: /img/posts/2015/2015-01-04-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6539738216630408616
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/01/decoder-design-mov-8-alu-setab.html
 ---

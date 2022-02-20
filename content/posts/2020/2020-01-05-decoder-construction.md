@@ -9,7 +9,7 @@ tags:
 - construction
 - video
 modified_time: '2020-01-05T03:03:00.004Z'
-thumbnail: /assets/img/posts/2020/2020-01-05-4000.jpg
+thumbnail: /img/posts/2020/2020-01-05-4000.jpg
 ---
 
 In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and

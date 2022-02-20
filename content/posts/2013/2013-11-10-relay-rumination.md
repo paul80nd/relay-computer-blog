@@ -7,7 +7,7 @@ tags:
 - design
 - musings
 modified_time: '2014-01-26T10:52:37.070Z'
-thumbnail: /assets/img/posts/2013/2013-11-10-4000.png
+thumbnail: /img/posts/2013/2013-11-10-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8997363704019148221
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/relay-rumination.html
 ---

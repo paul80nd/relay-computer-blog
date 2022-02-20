@@ -8,7 +8,7 @@ tags:
 - construction
 - video
 modified_time: '2019-11-20T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-11-20-4000.jpg
+thumbnail: /img/posts/2019/2019-11-20-4000.jpg
 ---
 
 In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I

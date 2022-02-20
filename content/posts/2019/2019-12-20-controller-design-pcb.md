@@ -7,7 +7,7 @@ tags:
 - control
 - design
 modified_time: '2019-12-20T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-12-20-4000.png
+thumbnail: /img/posts/2019/2019-12-20-4000.png
 ---
 
 In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of

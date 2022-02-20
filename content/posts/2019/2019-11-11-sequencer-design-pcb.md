@@ -7,7 +7,7 @@ tags:
 - sequencing
 - design
 modified_time: '2019-11-11T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-11-11-4000.png
+thumbnail: /img/posts/2019/2019-11-11-4000.png
 ---
 
 I've got the designs for the 24-cycle FSM and pulse distribution in place so all that's left for the sequencer is to bring

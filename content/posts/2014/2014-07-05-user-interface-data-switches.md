@@ -8,7 +8,7 @@ tags:
 - construction
 - UI
 modified_time: '2014-07-09T18:11:29.483+01:00'
-thumbnail: /assets/img/posts/2014/2014-07-05-4000.jpg
+thumbnail: /img/posts/2014/2014-07-05-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6700776355228293988
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/07/user-interface-data-switches.html
 ---

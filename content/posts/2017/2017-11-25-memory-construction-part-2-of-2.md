@@ -7,7 +7,7 @@ tags:
 - construction
 - memory
 modified_time: '2017-11-25T16:52:26.019Z'
-thumbnail: /assets/img/posts/2017/2017-11-25-4000.jpg
+thumbnail: /img/posts/2017/2017-11-25-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8131579644758037641
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/11/memory-construction-part-2-of-2.html
 ---

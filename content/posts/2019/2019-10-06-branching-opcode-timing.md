@@ -9,7 +9,7 @@ tags:
 - design
 - control
 modified_time: '2019-10-06T01:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-10-06-4000.png
+thumbnail: /img/posts/2019/2019-10-06-4000.png
 ---
 
 In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here's where I got to last time:

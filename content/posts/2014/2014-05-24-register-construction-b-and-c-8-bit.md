@@ -7,7 +7,7 @@ tags:
 - construction
 - registers
 modified_time: '2014-05-24T17:23:13.287+01:00'
-thumbnail: /assets/img/posts/2014/2014-05-24-4000.jpg
+thumbnail: /img/posts/2014/2014-05-24-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6948612220174278554
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/05/register-construction-b-and-c-8-bit.html
 ---

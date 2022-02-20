@@ -8,7 +8,7 @@ tags:
 - Architecture
 - coding
 modified_time: '2016-07-24T22:13:07.953+01:00'
-thumbnail: /assets/img/posts/2016/2016-07-24-4000.png
+thumbnail: /img/posts/2016/2016-07-24-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8532103637100145126
 blogger_orig_url: http://relaycomputer.blogspot.com/2016/07/yet-another-diversion.html
 ---

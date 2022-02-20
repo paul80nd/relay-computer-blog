@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-01-25T10:42:44.811Z'
-thumbnail: /assets/img/posts/2013/2013-12-09-4000.jpg
+thumbnail: /img/posts/2013/2013-12-09-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2795503988517438598
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-logic-card-relay.html
 ---

@@ -7,7 +7,7 @@ tags:
 - design
 - memory
 modified_time: '2017-09-03T22:37:09.674+01:00'
-thumbnail: /assets/img/posts/2017/2017-09-03-4000.png
+thumbnail: /img/posts/2017/2017-09-03-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8466019488360434615
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/09/memory-design-part-1-of-2.html
 ---

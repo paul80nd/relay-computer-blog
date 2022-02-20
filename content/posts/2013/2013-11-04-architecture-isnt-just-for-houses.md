@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - Architecture
 modified_time: '2014-01-26T10:57:11.417Z'
-thumbnail: /assets/img/posts/2013/2013-11-04-4000.png
+thumbnail: /img/posts/2013/2013-11-04-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2932307411612469043
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/architecture-isnt-just-for-houses.html
 ---

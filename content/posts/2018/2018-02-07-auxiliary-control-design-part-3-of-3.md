@@ -9,7 +9,7 @@ tags:
 - control
 - UI
 modified_time: '2018-02-07T22:07:00.001Z'
-thumbnail: /assets/img/posts/2018/2018-02-07-4000.png
+thumbnail: /img/posts/2018/2018-02-07-4000.png
 ---
 
 This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer's memory. In my last post I covered the design of the auxiliary clock which resulted in the following schematic:

@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2019-08-09T01:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-08-09-4000.png
+thumbnail: /img/posts/2019/2019-08-09-4000.png
 ---
 
 It's time for the oddly therapeutic part of designing a PCB ... laying out the board. In my last post I covered the

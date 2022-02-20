@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-02-16T10:08:27.716Z'
-thumbnail: /assets/img/posts/2014/2014-02-16-4000.jpg
+thumbnail: /img/posts/2014/2014-02-16-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-8041256146663749705
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/02/alu-construction-arithmetic-card-wire.html
 ---

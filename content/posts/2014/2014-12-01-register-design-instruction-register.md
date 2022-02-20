@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2014-12-01T21:20:31.247Z'
-thumbnail: /assets/img/posts/2014/2014-12-01-4000.png
+thumbnail: /img/posts/2014/2014-12-01-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1484136873622654917
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/12/register-design-instruction-register.html
 ---

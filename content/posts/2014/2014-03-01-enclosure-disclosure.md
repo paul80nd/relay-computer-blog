@@ -8,7 +8,7 @@ tags:
 - enclosure
 - musings
 modified_time: '2014-03-01T10:58:41.418Z'
-thumbnail: /assets/img/posts/2014/2014-03-01-4000.png
+thumbnail: /img/posts/2014/2014-03-01-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6045756186065671997
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/03/enclosure-disclosure.html
 ---

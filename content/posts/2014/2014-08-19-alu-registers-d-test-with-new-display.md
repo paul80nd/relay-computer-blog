@@ -10,7 +10,7 @@ tags:
 - video
 - ALU
 modified_time: '2014-08-19T18:24:56.780+01:00'
-thumbnail: /assets/img/posts/2014/2014-08-19-4000.JPG
+thumbnail: /img/posts/2014/2014-08-19-4000.JPG
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-575235464124926731
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/08/alu-registers-d-test-with-new-display.html
 ---

@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - enclosure
 modified_time: '2014-05-05T11:03:03.347+01:00'
-thumbnail: /assets/img/posts/2014/2014-05-05-4000.JPG
+thumbnail: /img/posts/2014/2014-05-05-4000.JPG
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2714729692156227408
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/05/enclosure-update-fitting-of-laser-cut.html
 ---

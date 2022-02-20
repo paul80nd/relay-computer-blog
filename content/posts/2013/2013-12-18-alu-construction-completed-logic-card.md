@@ -9,7 +9,7 @@ tags:
 - video
 - ALU
 modified_time: '2014-01-25T10:25:30.784Z'
-thumbnail: /assets/img/posts/2013/2013-12-18-4001.jpg
+thumbnail: /img/posts/2013/2013-12-18-4001.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2426892078309234287
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-completed-logic-card.html
 ---

@@ -7,7 +7,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-01-26T23:26:36.178Z'
-thumbnail: /assets/img/posts/2014/2014-01-26-4000.jpg
+thumbnail: /img/posts/2014/2014-01-26-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2866979254121927140
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/01/alu-construction-arithmetic-card-power.html
 ---

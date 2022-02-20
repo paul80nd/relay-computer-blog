@@ -7,7 +7,7 @@ tags:
 - construction
 - video
 modified_time: '2019-03-04T11:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-03-04-4000.jpg
+thumbnail: /img/posts/2019/2019-03-04-4000.jpg
 ---
 
 After years of using pad/prototyping boards to build my computer I've decided to switch things up a bit and

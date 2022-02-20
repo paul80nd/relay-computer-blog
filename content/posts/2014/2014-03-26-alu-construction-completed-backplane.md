@@ -8,7 +8,7 @@ tags:
 - construction
 - ALU
 modified_time: '2014-03-26T21:57:06.073Z'
-thumbnail: /assets/img/posts/2014/2014-03-26-4000.jpg
+thumbnail: /img/posts/2014/2014-03-26-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5462467478770881170
 blogger_orig_url: http://relaycomputer.blogspot.com/2014/03/alu-construction-completed-backplane.html
 ---

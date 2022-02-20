@@ -7,7 +7,7 @@ tags:
 - theory
 - Architecture
 modified_time: '2014-01-26T10:56:22.890Z'
-thumbnail: /assets/img/posts/2013/2013-11-06-4000.png
+thumbnail: /img/posts/2013/2013-11-06-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-4186572423607847021
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/architectural-breakdown-memory.html
 ---

@@ -7,7 +7,7 @@ tags:
 - design
 - ALU
 modified_time: '2014-01-26T10:39:31.491Z'
-thumbnail: /assets/img/posts/2013/2013-11-17-4000.png
+thumbnail: /img/posts/2013/2013-11-17-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-9149380662838298177
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/design-8-bit-arithmetic-unit.html
 ---

@@ -7,7 +7,7 @@ tags:
 - construction
 - registers
 modified_time: '2015-05-09T20:01:24.165+01:00'
-thumbnail: /assets/img/posts/2015/2015-05-09-4000.jpg
+thumbnail: /img/posts/2015/2015-05-09-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-7930868089582321996
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/05/register-construction-instruction.html
 ---

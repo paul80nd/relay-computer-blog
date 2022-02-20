@@ -7,7 +7,7 @@ tags:
 - completion
 - video
 modified_time: '2016-05-24T21:13:02.102+01:00'
-thumbnail: /assets/img/posts/2016/2016-05-24-4000.jpg
+thumbnail: /img/posts/2016/2016-05-24-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-4706632519475100222
 blogger_orig_url: http://relaycomputer.blogspot.com/2016/05/sequencing-control-test.html
 ---

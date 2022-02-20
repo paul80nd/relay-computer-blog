@@ -9,7 +9,7 @@ tags:
 - construction
 - video
 modified_time: '2019-12-21T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-12-21-4000.jpg
+thumbnail: /img/posts/2019/2019-12-21-4000.jpg
 ---
 
 In my last couple of posts I covered off the full design for the controller unit. As the PCBs have now arrived I

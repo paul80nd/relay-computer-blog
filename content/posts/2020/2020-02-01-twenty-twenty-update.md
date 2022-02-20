@@ -7,7 +7,7 @@ tags:
 - completion
 - video
 modified_time: '2020-02-01T03:03:00.004Z'
-thumbnail: /assets/img/posts/2020/2020-02-01-4000.png
+thumbnail: /img/posts/2020/2020-02-01-4000.png
 ---
 
 As the clock struck midnight at the very end of 2019 I decided, over a glass of something sparkling, that I'd set myself a

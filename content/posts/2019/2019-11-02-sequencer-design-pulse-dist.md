@@ -7,7 +7,7 @@ tags:
 - sequencing
 - design
 modified_time: '2019-11-02T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-11-02-4000.png
+thumbnail: /img/posts/2019/2019-11-02-4000.png
 ---
 
 In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run

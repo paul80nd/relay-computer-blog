@@ -10,7 +10,7 @@ tags:
 - UI
 - video
 modified_time: '2018-03-27T22:07:00.001Z'
-thumbnail: /assets/img/posts/2018/2018-03-27-4000.jpg
+thumbnail: /img/posts/2018/2018-03-27-4000.jpg
 ---
 
 In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …

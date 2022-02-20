@@ -8,7 +8,7 @@ tags:
 - completion
 - video
 modified_time: '2018-01-07T13:04:11.966Z'
-thumbnail: /assets/img/posts/2018/2018-01-07-4000.jpg
+thumbnail: /img/posts/2018/2018-01-07-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-7987843622087641592
 blogger_orig_url: http://relaycomputer.blogspot.com/2018/01/incrementer-test.html
 ---

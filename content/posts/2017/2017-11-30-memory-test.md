@@ -8,7 +8,7 @@ tags:
 - memory
 - video
 modified_time: '2017-11-30T21:15:34.135Z'
-thumbnail: /assets/img/posts/2017/2017-11-30-4000.jpg
+thumbnail: /img/posts/2017/2017-11-30-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-2149428779006990734
 blogger_orig_url: http://relaycomputer.blogspot.com/2017/11/memory-test.html
 ---

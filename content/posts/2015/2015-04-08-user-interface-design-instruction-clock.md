@@ -7,7 +7,7 @@ tags:
 - design
 - UI
 modified_time: '2015-04-08T23:19:35.288+01:00'
-thumbnail: /assets/img/posts/2015/2015-04-08-4000.png
+thumbnail: /img/posts/2015/2015-04-08-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-1630379224153065346
 blogger_orig_url: http://relaycomputer.blogspot.com/2015/04/user-interface-design-instruction-clock.html
 ---

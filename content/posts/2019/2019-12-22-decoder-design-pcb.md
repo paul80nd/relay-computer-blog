@@ -7,7 +7,7 @@ tags:
 - decoder
 - design
 modified_time: '2019-12-22T03:03:00.004Z'
-thumbnail: /assets/img/posts/2019/2019-12-22-4000.png
+thumbnail: /img/posts/2019/2019-12-22-4000.png
 ---
 
 I've almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing

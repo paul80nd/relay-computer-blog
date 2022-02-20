@@ -7,7 +7,7 @@ tags:
 - design
 - registers
 modified_time: '2019-07-15T11:00:00.001Z'
-thumbnail: /assets/img/posts/2019/2019-07-15-4000.png
+thumbnail: /img/posts/2019/2019-07-15-4000.png
 ---
 
 In my last couple of posts I've been building up to a change of approach in how I'm making the cards in my
