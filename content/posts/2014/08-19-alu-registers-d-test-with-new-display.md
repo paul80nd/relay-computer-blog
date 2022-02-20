@@ -27,9 +27,9 @@ constructed very similarly to the lower enclosure ... as before, out of
 aluminium profile. Here's a Sketchup image of how the upper enclosure should 
 look when sat on top of the lower enclosure:
 
-{% figure %}
+{{< fig >}}
 ![Upper Enclosure and Lower Enclosure together](/img/posts/2014/2014-08-19-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 The two blank 
 cards at the top of the upper enclosure are Display A and B (A on the left, B 
@@ -43,7 +43,7 @@ Here's a
 picture of the upper enclosure powered up and working with the lower enclosure 
 sat behind it:
 
-{% figure %}![Upper Enclosure powered up](/img/posts/2014/2014-08-19-0001.JPG){% endfigure %}
+{{< fig >}}![Upper Enclosure powered up](/img/posts/2014/2014-08-19-0001.JPG){{< /fig >}}
 
 As usual 
 I've put together a video which shows everything built so far working together 

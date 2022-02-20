@@ -21,9 +21,9 @@ output from this circuit is then passed to the Condition Registers so that the
 current value can be stored for future operations. The circuit itself is nice 
 and simple:
 
-{% figure %}
+{{< fig >}}
 ![Zero Detect Diagram](/img/posts/2013/2013-11-23-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 If all inputs are 
 off then the output Z is on otherwise, if any input is on, then Z is off. This 
@@ -31,18 +31,18 @@ design is taken from the [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~
 translating the design to use DPDT relays doesn't increase the physical relay 
 count:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-23-0001.png)
-{% endfigure %}
+{{< /fig >}}
 
 To save space and wire links this design places the relays in 
 alternating orientations so that the switches line up as required and all the 
 inter-relay connections are made on the solder side of the board. With the 
 relays and inputs/outputs hidden it looks like this:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-23-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 ... and that's it for the Zero Detect circuit. In the next post I'll 
 cover the Condition Registers and then following that I'll move on to putting 

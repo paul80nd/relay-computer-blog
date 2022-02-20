@@ -16,7 +16,7 @@ Finally, with all the soldering now done, it's time to set about
 [wire wrapping](http://en.wikipedia.org/wiki/Wire_wrap) the ALU logic card. First up is the internal connections within 
 each logic bit:
 
-{% figure %}![ALU Logic Card (with internal wire links added)](/img/posts/2013/2013-12-12-0004.jpg){% endfigure %}
+{{< fig >}}![ALU Logic Card (with internal wire links added)](/img/posts/2013/2013-12-12-0004.jpg){{< /fig >}}
 
 After wire wrapping a new set of wires I always run the multimeter 
 over the board to double check everything is connected as intended. Again 
@@ -30,11 +30,11 @@ Next is the internal
 power links in each logic bit and the links taking the results from each bit 
 down to the LEDs:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card (internal power &amp; result links added)](/img/posts/2013/2013-12-12-0005.jpg)
 ![ALU Logic Card (internal power &amp; result links added) (close up)](/img/posts/2013/2013-12-12-0006.JPG)
 ![ALU Logic Card (internal power &amp; result links added) (close up 2)](/img/posts/2013/2013-12-12-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 It just so happens that when using my 
 multimeter in the diode test mode it passes enough current to dimly light the 

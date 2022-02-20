@@ -29,11 +29,11 @@ Additionally, I quite like the finished look you get with wire-wrap.
 
 With the header pins added the three ALU cards look like this:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card](/img/posts/2013/2013-12-05-0000.jpg)
 ![ALU Arithmetic Card](/img/posts/2013/2013-12-05-0001.jpg)
 ![ALU Control Card](/img/posts/2013/2013-12-05-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Soldering the header 
 pins themselves is fairly straightforward but to link them to the connectors 
@@ -46,9 +46,9 @@ relatively powerful soldering iron). Again, this is mostly down to me doing
 things unconventionally so I can't moan too much. This is the underside of the 
 logic card:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card (solder side)](/img/posts/2013/2013-12-05-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The 
 cathodes of each pair of LEDs are joined together and then there is a line of 
@@ -59,9 +59,9 @@ pads first to see if that made it any easier to solder in the negative rail
 but it actually just wicked away the soldering iron heat all the more. Here's 
 the result:
 
-{% figure %}
+{{< fig >}}
 ![ALU Arithmetic Card (solder side)](/img/posts/2013/2013-12-05-0004.JPG)
-{% endfigure %}
+{{< /fig >}}
 
 For 
 the larger leaps on the negative rail I've placed insulated single core wire 

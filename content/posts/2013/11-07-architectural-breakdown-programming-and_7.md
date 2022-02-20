@@ -19,9 +19,9 @@ happens here again, for the last time (really last time), is the architecture
 I'll be building against (from the 
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html))
 
-{% figure caption:"System Architecture for a Relay Computer[^1]" %}
+{{< fig caption="System Architecture for a Relay Computer[^1]" >}}
 ![System Architecture for a Relay Computer](/img/posts/2013/2013-11-07-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 In the last post I covered an example of the 
 steps required to subtract 6 from 10 (with 6 placed in register B and 10 in 

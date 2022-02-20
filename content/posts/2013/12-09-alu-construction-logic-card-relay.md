@@ -32,10 +32,10 @@ try and make sure I do things in the 'right' order on the other cards ;)
 Anyho, after lots more soldering (and the occasional burnt finger) the 
 logic card now looks like this:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card](/img/posts/2013/2013-12-09-0000.jpg)
 ![ALU Logic Card (solder side)](/img/posts/2013/2013-12-09-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Oh yea, 
 I've added the diodes (at each relay for protection) whilst I was at it too. 

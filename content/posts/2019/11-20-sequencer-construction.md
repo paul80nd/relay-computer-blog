@@ -27,12 +27,12 @@ I was using previously.
 
 Just to finish off then here's a couple of pictures of the cards:
 
-{% figure caption:"Completed Lower Sequencer Card ([larger](/assets/img/pages/sql-1002.jpg))" %}![Completed Lower Sequencer Card](/img/posts/2019/2019-11-20-0000.jpg){% endfigure %}
+{{< fig caption="Completed Lower Sequencer Card ([larger](/assets/img/pages/sql-1002.jpg))" >}}![Completed Lower Sequencer Card](/img/posts/2019/2019-11-20-0000.jpg){{< /fig >}}
 
-{% figure caption:"Completed Upper Sequencer Card ([larger](/assets/img/pages/sqh-1002.jpg))" %}![Completed Upper Sequencer Card](/img/posts/2019/2019-11-20-0001.jpg){% endfigure %}
+{{< fig caption="Completed Upper Sequencer Card ([larger](/assets/img/pages/sqh-1002.jpg))" >}}![Completed Upper Sequencer Card](/img/posts/2019/2019-11-20-0001.jpg){{< /fig >}}
 
-{% figure caption:"Completed Sequencer Cards (front view) ([larger](/img/posts/2019/2019-11-20-1002.jpg))" %}![Completed Sequencer Cards (front view)](/img/posts/2019/2019-11-20-0002.jpg){% endfigure %}
+{{< fig caption="Completed Sequencer Cards (front view) ([larger](/img/posts/2019/2019-11-20-1002.jpg))" >}}![Completed Sequencer Cards (front view)](/img/posts/2019/2019-11-20-0002.jpg){{< /fig >}}
 
-{% figure caption:"Completed Sequencer Cards ([larger](/img/posts/2019/2019-11-20-1003.jpg))" %}![Completed Sequencer Cards](/img/posts/2019/2019-11-20-0003.jpg){% endfigure %}
+{{< fig caption="Completed Sequencer Cards ([larger](/img/posts/2019/2019-11-20-1003.jpg))" >}}![Completed Sequencer Cards](/img/posts/2019/2019-11-20-0003.jpg){{< /fig >}}
 
 So, with the sequencer complete we're much nearer to getting branching working in the computer via the GOTO instruction. Next task is to update the controller to handle the relay logic for firing the appropriate control lines at the right time. As with the sequencer I'll replace the existing controller cards with PCBs which technically means I'll be designing cards that can handle all the possible instruction classes but in this blog we'll focus on the existing SETAB, MOV8, ALU and GOTO instructions for now and then cover the other instructions later.

@@ -27,9 +27,9 @@ wired together (again, see the Harry Porter computer to see exactly how big
 these machines can be). Here's a scaled diagram of the MY4 relay showing the 
 coil and four sets of double toggle contacts.
 
-{% figure %}
+{{< fig >}}
 ![Omron 4PDT Relay (0.1inch grid)](/img/posts/2013/2013-11-10-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 Many of the constructors of 
 other relay computers I've read about have gone hunting on eBay for a job lot 
@@ -67,9 +67,9 @@ relays are needed [which I shouldn't as not all poles are used on the 4PDTs]).
 Here's a diagram at the same scale with two relays to make up the same pole 
 count as the Omron 4PDT:
 
-{% figure %}
+{{< fig >}}
 ![GoodSky DPDT Relays (0.1 inch grid)](/img/posts/2013/2013-11-10-0001.png)
-{% endfigure %}
+{{< /fig >}}
 
 Taking this all a 
 step further I started hunting out smaller and smaller relays and eventually 
@@ -81,9 +81,9 @@ strip/pad/matrixboard to construct the computer (the Omron 4PDT, being
 industrial relays, require special mounting rails or similar). Here's a 
 diagram at the same scale again for this relay:
 
-{% figure %}
+{{< fig >}}
 ![TE DPDT Relays (0.1 inch grid)](/img/posts/2013/2013-11-10-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 Oh, by the way, the 
 choice of 12 as a relay coil voltage wasn't an arbitrary one ... relays come 

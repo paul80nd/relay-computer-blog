@@ -31,7 +31,7 @@ three colours in the final display). The switches are X/Y stackable so it's
 quite easy to make keypad type layouts with them. Internally the switches are 
 laid out like this:
 
-{% figure %}![JB Series Switch (internal layout)](/img/posts/2014/2014-07-12-0000.png){% endfigure %}
+{{< fig >}}![JB Series Switch (internal layout)](/img/posts/2014/2014-07-12-0000.png){{< /fig >}}
 
 For 
 each switch I'll need to apply a label of some kind to indicate its function 
@@ -46,7 +46,7 @@ range of fonts, sizes and colours (back at my first job there were huge
 catalogues of available styles). With the letraset applied to one of the JB 
 key caps it looks like this:
 
-{% figure %}![JB Key Cap with lettering applied](/img/posts/2014/2014-07-12-0001.jpg){% endfigure %}
+{{< fig >}}![JB Key Cap with lettering applied](/img/posts/2014/2014-07-12-0001.jpg){{< /fig >}}
 
 I'm 
 quite pleased with how these look even though the lettering is a bit wonky 
@@ -66,7 +66,7 @@ and a method of labelling them tried and tested it was time to design the
 display board itself. As with the switch control board shown in the last post 
 this board has gaps in it where more functionality will be added later on. 
 This is the design so far with key caps on:
-{% figure caption:"Display A schematic ([larger](/img/posts/2014/2014-07-12-1000.png))" %}![Display A schematic](/img/posts/2014/2014-07-12-0002.png){% endfigure %}
+{{< fig caption="Display A schematic ([larger](/img/posts/2014/2014-07-12-1000.png))" >}}![Display A schematic](/img/posts/2014/2014-07-12-0002.png){{< /fig >}}
 
 The upper left set 
 of eight switches control and display the A, B, C and D register load and 
@@ -74,7 +74,7 @@ select lines. The lower right set of seven switches control and display the
 ALU operations. Finally the two switches above those control and display the 
 gating of the data switches on to the data and address busses respectively. 
 The same diagram with switches removed looks like this:
-{% figure caption:"Display A schematic (key caps removed) ([larger](/img/posts/2014/2014-07-12-1001.png))" %}![Display A schematic (key caps removed)](/img/posts/2014/2014-07-12-0003.png){% endfigure %}
+{{< fig caption="Display A schematic (key caps removed) ([larger](/img/posts/2014/2014-07-12-1001.png))" >}}![Display A schematic (key caps removed)](/img/posts/2014/2014-07-12-0003.png){{< /fig >}}
 
 The control signals come in (and go out on) the three sets of 
 header pins to the left of each switch group. These header pins will protrude 
@@ -97,21 +97,21 @@ the card this time with soldered Kynar wire. Other than that there's nothing
 too surprising or unusual in the construction so I'll get straight on with the 
 pictures. Here is the card as it currently stands viewed from the front:
 
-{% figure %}![Display A (front)](/img/posts/2014/2014-07-12-0004.jpg){% endfigure %}
+{{< fig >}}![Display A (front)](/img/posts/2014/2014-07-12-0004.jpg){{< /fig >}}
 
 ... and from the back 
 ...
 
-{% figure %}![Display A (back)](/img/posts/2014/2014-07-12-0005.jpg){% endfigure %}
+{{< fig >}}![Display A (back)](/img/posts/2014/2014-07-12-0005.jpg){{< /fig >}}
 
 ... and finally here's 
 a couple of close up pictures focussing on the upper right and then lower of 
 the back of the card ...
 
-{% figure %}
+{{< fig >}}
 ![Display A (back - upper right close up)](/img/posts/2014/2014-07-12-0006.JPG)
 ![Display A (back - bottom left close up)](/img/posts/2014/2014-07-12-0007.JPG)
-{% endfigure %}
+{{< /fig >}}
 
 ... and that's it for now on this card. I've tested everything 
 lights up properly and I'll put a video together showing everything working 

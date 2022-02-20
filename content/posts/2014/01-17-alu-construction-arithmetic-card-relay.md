@@ -35,12 +35,12 @@ given there's 123 sockets to place is quite a good thing).
 So, on 
 with the pictures:
 
-{% figure %}
+{{< fig >}}
 ![ALU Arithmetic Card](/img/posts/2014/2014-01-17-0000.jpg)
 ![ALU Arithmetic Card (close up)](/img/posts/2014/2014-01-17-0001.jpg)
 ![ALU Arithmetic Card (closer up)](/img/posts/2014/2014-01-17-0002.jpg)
 ![ALU Arithmetic Card (solder side)](/img/posts/2014/2014-01-17-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Next 
 job for this board is soldering on the power and ground links and after that 

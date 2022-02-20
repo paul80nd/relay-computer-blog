@@ -37,11 +37,11 @@ in the end a system of stacking header pins seemed the best route forward. So,
 to start construction I soldered down the ribbon cable connectors and board 
 interconnects ... once done it looked like this:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer Cards: Connectors and Interconnects (front view)](/img/posts/2015/2015-07-08-0000.jpg)
 ![Sequencer Cards: Connectors and Interconnects (rear view)](/img/posts/2015/2015-07-08-0001.jpg)
 ![Sequencer Cards: Connectors and Interconnects](/img/posts/2015/2015-07-08-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 To keep the two cards stable I also added some PCB 
 stand-offs in the front corners. Thankfully the distance between cards in the 
@@ -53,21 +53,21 @@ To stack the cards the upper card header pins are aligned and inserted
 into the respective sockets on the lower card producing a unit that looks like 
 this:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer Cards: Cards stacked together (top view)](/img/posts/2015/2015-07-08-0003.jpg)
 ![Sequencer Cards: Cards stacked together (side view)](/img/posts/2015/2015-07-08-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 With the basic connections in I moved on to soldering 
 in the wire wrapping posts for the interconnects and LEDs along with the LEDs 
 themselves.
 
-{% figure %}
+{{< fig >}}
 ![Sequencer connector wire wrap posts and LEDs (top view)](/img/posts/2015/2015-07-08-0005.jpg)
 ![Sequencer connector wire wrap posts and LEDs (rear view)](/img/posts/2015/2015-07-08-0006.jpg)
 ![Sequencer LEDs (close up view)](/img/posts/2015/2015-07-08-0007.jpg)
 ![Sequencer LED underside soldering](/img/posts/2015/2015-07-08-0008.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 One problem with the board interconnects on the upper card is that 
 it does make soldering a little fiddly as you have something protruding up 
@@ -86,10 +86,10 @@ and a steady hand it usually comes off OK.
 Next up were the relay 
 sockets and associated wire wrap posts:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer relay sockets and wire wrap pins (top view)](/img/posts/2015/2015-07-08-0009.jpg)
 ![Sequencer relay sockets and wire wrap pins (rear view)](/img/posts/2015/2015-07-08-0010.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've actually soldered down the relay sockets 
 for the upcoming 10 and 12-cycle relays on the lower card in addition to the 
@@ -105,18 +105,18 @@ Next job was
 to solder in the flyback and feedback diodes (which ensure produced outputs 
 don't feed back into parts of the sequencer's finite state machine):
 
-{% figure %}
+{{< fig >}}
 ![Sequencer with added flyback/feedback diodes (top view)](/img/posts/2015/2015-07-08-0011.jpg)
 ![Sequencer with added flyback/feedback diodes (rear view)](/img/posts/2015/2015-07-08-0012.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The final soldering job was to put in the 
 power and ground lines:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer with added power and ground lines (rear view)](/img/posts/2015/2015-07-08-0013.jpg)
 ![Sequencer with added power and ground lines (rear close up)](/img/posts/2015/2015-07-08-0014.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 This time around I finally got bored of 
 cutting and stripping all those short bits of coated wire for the ground lines 
@@ -136,19 +136,19 @@ the soldering done it's on with the wire wrapping. The sequencer probably has
 the most complicated wiring yet (second only, maybe, to the ALU arithmetic 
 unit).
 
-{% figure %}
+{{< fig >}}
 ![Sequencer with added internal connection wire wraps](/img/posts/2015/2015-07-08-0015.jpg)
 ![Sequencer with added power wire wraps](/img/posts/2015/2015-07-08-0016.jpg)
 ![Sequencer with added result wire wraps](/img/posts/2015/2015-07-08-0017.jpg)
 ![Sequencer with added control wire wraps](/img/posts/2015/2015-07-08-0018.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 With the wire wrap done the relays can then be placed in their 
 sockets: 
 
-{% figure %}
+{{< fig >}}
 ![Sequencer with relays inserted](/img/posts/2015/2015-07-08-0019.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 This is almost the last step however to make the sequencer useable 
 up to the 8th cycle I need to add a couple of extra temporary Kynar links that 
@@ -157,18 +157,18 @@ are implemented stage 9 and 10 will provide the required lines to keep stages
 7 and 8 alive ... for now, in their absence, the first stages will do the same 
 job. With the temporary links in place the lower card looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer with added temporary wire links](/img/posts/2015/2015-07-08-0020.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 So, finally, that's the sequencer complete for 8-cycle 
 instructions. The card will be extended over time as longer cycle instructions 
 are introduced but for now the sequencer as a whole looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Completed 8-Cycle Sequencer (front view)](/img/posts/2015/2015-07-08-0021.jpg)
 ![Completed 8-Cycle Sequencer (rear view)](/img/posts/2015/2015-07-08-0022.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As usual I've put a video together that demonstrates the sequencer 
 in operation. In this video I give a quick overview of the cards and then 

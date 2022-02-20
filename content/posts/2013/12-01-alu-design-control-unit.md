@@ -18,7 +18,7 @@ Registers. In this post I'll put all three of these components together to
 make up the ALU Control Card. So, placing the relays from the three components 
 onto the card (excluding wire links) we get the following:
 
-{% figure caption:"ALU Control Card Relays ([larger](/img/posts/2013/2013-12-01-1000.png))" %}![ALU Control Card Relays](/img/posts/2013/2013-12-01-0000.png){% endfigure %}
+{{< fig caption="ALU Control Card Relays ([larger](/img/posts/2013/2013-12-01-1000.png))" >}}![ALU Control Card Relays](/img/posts/2013/2013-12-01-0000.png){{< /fig >}}
 
 Unlike the 
 other cards that make up the full ALU (the logic and arithmetic cards) things 
@@ -32,7 +32,7 @@ the additional resistors) and follow the same colour code of red for results,
 yellow for inputs and green for output control signals. Diagram wise the 
 display looks like this:
 
-{% figure %}![Result/Control Display LEDs](/img/posts/2013/2013-12-01-0001.png){% endfigure %}
+{{< fig >}}![Result/Control Display LEDs](/img/posts/2013/2013-12-01-0001.png){{< /fig >}}
 
 Each block in the diagram 
 represents the same 3mm LED in a plastic holder as before (with the LED pushed 
@@ -47,7 +47,7 @@ Arithmetic card: there is the 8-bit data bus, power connections and control
 signals but the 8-bit inputs B and C are not required for this card. The 
 diagram of the connectors look like this:
 
-{% figure %}![ALU Control Card Connections](/img/posts/2013/2013-12-01-0002.png){% endfigure %}
+{{< fig >}}![ALU Control Card Connections](/img/posts/2013/2013-12-01-0002.png){{< /fig >}}
 
 This shows the three right angled 
 boxed headers (as per the Logic and Arithmetic card) — from left to right 
@@ -77,7 +77,7 @@ completeness each of the pins are as follows:
 So, with everything together including all the 
 wiring, power supply and ground lines we get the following:
 
-{% figure caption:"Complete ALU Control Card ([larger](/img/posts/2013/2013-12-01-1001.png))" %}![Complete ALU Control Card](/img/posts/2013/2013-12-01-0003.png){% endfigure %}
+{{< fig caption="Complete ALU Control Card ([larger](/img/posts/2013/2013-12-01-1001.png))" >}}![Complete ALU Control Card](/img/posts/2013/2013-12-01-0003.png){{< /fig >}}
 
 As before in 
 previous posts the completed Arithmetic Control Card design can be found [here in PDF format]({% link /assets/pdf/control-unit.pdf %}) (so you can zoom in for more 

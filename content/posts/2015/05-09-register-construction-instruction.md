@@ -21,11 +21,11 @@ design with the other register cards the construction is very similar.
 The first step is to solder down the LEDs. Here's some pictures, front 
 and back, of the card following this first round of soldering:
 
-{% figure %}
+{{< fig >}}
 ![Instruction Register card with LEDs added](/img/posts/2015/2015-05-09-0000.jpg)
 ![Instruction Register card with LEDs added (solder side)](/img/posts/2015/2015-05-09-0001.jpg)
 ![Instruction Register card with LEDs added (close up)](/img/posts/2015/2015-05-09-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've continued the trend of removing the negative 
 wrapping post behind each LED again to make wiring up easier later on. I've 
@@ -41,25 +41,25 @@ Following on from that the
 next job is to solder down the connectors, relay sockets and wire wrap posts. 
 Front and back it looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Instruction Register card with connectors added](/img/posts/2015/2015-05-09-0003.jpg)
 ![Instruction Register card with connectors added (solder side)](/img/posts/2015/2015-05-09-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and then the 'flyback' and feedback protection 
 diodes come in next ...
 
-{% figure %}
+{{< fig >}}
 ![Instruction Register card with diodes added](/img/posts/2015/2015-05-09-0005.jpg)
 ![Instruction Register card with diodes added (solder side)](/img/posts/2015/2015-05-09-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The final bit of soldering is to put down the power and 
 ground lines on the solder side of the board:
 
-{% figure %}
+{{< fig >}}
 ![Instruction Register card with power lines added (solder side)](/img/posts/2015/2015-05-09-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've still not got around to buying in some black 
 wire for the negative lines so I'm still on the grey wire for now.
@@ -69,12 +69,12 @@ wraps. This is done in stages by laying down each family of related
 connections then laying the next family on top of that. Here's four pictures 
 of the wraps building up over time:
 
-{% figure %}
+{{< fig >}}
 ![Instruction Register wire wraps stage 1](/img/posts/2015/2015-05-09-0008.jpg)
 ![Instruction Register wire wraps stage 2](/img/posts/2015/2015-05-09-0009.jpg)
 ![Instruction Register wire wraps stage 3](/img/posts/2015/2015-05-09-0010.jpg)
 ![Instruction Register wire wraps stage 4](/img/posts/2015/2015-05-09-0011.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The top left picture shows the first three wraps: the black 
 internal connections, black LED connections and the red power connections. The 

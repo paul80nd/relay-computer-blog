@@ -30,7 +30,7 @@ mnemonics. Here's a screenshot from the video showing the full set of
 mnemonics/instructions to perform the calculation of (((2 + 4 + 1) x 3) - 
 3):
 
-{% figure %}![Arithmetic Sequence Mnemonics](/img/posts/2014/2014-09-19-0000.png){% endfigure %}
+{{< fig >}}![Arithmetic Sequence Mnemonics](/img/posts/2014/2014-09-19-0000.png){{< /fig >}}
 
 Here's a 
 description of the mnemonics used in this calculation:
@@ -169,7 +169,7 @@ take:
 Visualising these as timing diagrams 
 we get the following:
 
-{% figure %}![Basic timing diagrams for instructions](/img/posts/2014/2014-09-19-0001.png){% endfigure %}
+{{< fig >}}![Basic timing diagrams for instructions](/img/posts/2014/2014-09-19-0001.png){{< /fig >}}
 
 As can be seen in the diagram above the value being copied (or 
 calculated for the ALU) is kept on the data bus longer than it is loaded in to 
@@ -205,7 +205,7 @@ relays).  Either way the timing diagram for the clock will always look as
 follows (with evenly timed on and off periods) regardless of relay/IC 
 selection:
 
-{% figure %}![Clock Pulses](/img/posts/2014/2014-09-19-0002.png){% endfigure %}
+{{< fig >}}![Clock Pulses](/img/posts/2014/2014-09-19-0002.png){{< /fig >}}
 
 The first step in using 
 these clock pulses is to achieve a sense of state in the computer. Effectively 
@@ -225,7 +225,7 @@ will come in useful later when combining these pulses to avoid any gaps in the
 resulting pulse that could cause erratic behaviour. The timing diagrams for 
 the first eight steps is as follows:
 
-{% figure %}![Finite State Machine pulses](/img/posts/2014/2014-09-19-0003.png){% endfigure %}
+{{< fig >}}![Finite State Machine pulses](/img/posts/2014/2014-09-19-0003.png){{< /fig >}}
 
 Given these 
 outputs from the FSM we can now apply the following logic to derive those 
@@ -240,7 +240,7 @@ three pulses needed to implement the MOV-8, SETAB and ALU instructions:
 
 Shown as a timing diagram these pulses combinations look like 
 this:
-{% figure %}![Sequenced Pulses](/img/posts/2014/2014-09-19-0004.png){% endfigure %}
+{{< fig >}}![Sequenced Pulses](/img/posts/2014/2014-09-19-0004.png){{< /fig >}}
 
 Now, this diagram 
 probably raises more questions than it answers. Firstly, why is the first 

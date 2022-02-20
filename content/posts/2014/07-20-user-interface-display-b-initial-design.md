@@ -35,7 +35,7 @@ in the UK I fell for the big chunky buttons/indicators on the ICL 2966's
 'washing machines' / storage units. Here's an example of my interpretation of 
 that retro look:
 
-{% figure %}![Indicator unit close up](/img/posts/2014/2014-07-20-0000.JPG){% endfigure %}
+{{< fig >}}![Indicator unit close up](/img/posts/2014/2014-07-20-0000.JPG){{< /fig >}}
 
 Here I've 
 applied a nice chunky letraset font directly to the faces of an Avago light 
@@ -58,7 +58,7 @@ the complete design for any of these partial cards drop me a line in the
 comments and I'll be happy to share). Anyho, here is the design with indicator 
 faces shown:
 
-{% figure caption:"Display B Schematic ([larger](/img/posts/2014/2014-07-20-1000.png))" %}![Display B Schematic](/img/posts/2014/2014-07-20-0001.png){% endfigure %}
+{{< fig caption="Display B Schematic ([larger](/img/posts/2014/2014-07-20-1000.png))" >}}![Display B Schematic](/img/posts/2014/2014-07-20-0001.png){{< /fig >}}
 
 The lower left 
 indicators show the condition register status (Sign, Carry and Zero). The 
@@ -68,7 +68,7 @@ also the Condition Register Load line. Finally there's the rectangle in the
 upper left of the card that marks the outline of the ammeter. The same diagram 
 with the indicator faces removed looks like this:
 
-{% figure caption:"Display B Schematic (indicator faces removed) ([larger](/img/posts/2014/2014-07-20-1001.png))" %}![Display B Schematic (indicator faces removed)](/img/posts/2014/2014-07-20-0002.png){% endfigure %}
+{{< fig caption="Display B Schematic (indicator faces removed) ([larger](/img/posts/2014/2014-07-20-1001.png))" >}}![Display B Schematic (indicator faces removed)](/img/posts/2014/2014-07-20-0002.png){{< /fig >}}
 
 If you look at this diagram close up (you can click the picture 
 above to view a larger version) you can see that each of the indicator units 
@@ -95,7 +95,7 @@ junior hacksaw but didn't get very far so I resorted to nibbling away at the
 board with a pair of pliers which actually worked very well. Here's the card 
 as it currently stands from the front:
 
-{% figure %}![Display B (front)](/img/posts/2014/2014-07-20-0003.JPG){% endfigure %}
+{{< fig >}}![Display B (front)](/img/posts/2014/2014-07-20-0003.JPG){{< /fig >}}
 
 The condition 
 register display units aren't shown here on this picture as they were out of 
@@ -107,22 +107,22 @@ addition which allows me to work on the back of the card without scratching
 the front of the card to bits. Speaking of the back of the card ... that looks 
 like this:
 
-{% figure %}![Display B (back)](/img/posts/2014/2014-07-20-0004.JPG){% endfigure %}
+{{< fig >}}![Display B (back)](/img/posts/2014/2014-07-20-0004.JPG){{< /fig >}}
 
 Here's a couple of 
 close up pictures of the card back:
 
-{% figure %}
+{{< fig >}}
 ![Close up of the ALU display connections](/img/posts/2014/2014-07-20-0005.JPG)
 ![Close up of the data bus display connections](/img/posts/2014/2014-07-20-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and here's a couple of close ups on the indicator units ...
 
-{% figure %}
+{{< fig >}}
 ![Data Bus Indicators](/img/posts/2014/2014-07-20-0007.JPG)
 ![ALU Indicator Units](/img/posts/2014/2014-07-20-0008.JPG)
-{% endfigure %}
+{{< /fig >}}
 
 ... and that's it 
 for now on this card. I've tested everything lights up correctly but I'm not 

@@ -24,11 +24,11 @@ should come together relatively quickly.
 So, I'll start with some 
 pictures of progress so far:
 
-{% figure %}
+{{< fig >}}
 ![ALU Control Card](/img/posts/2014/2014-03-04-0000.jpg)
 ![ALU Control Card (close up)](/img/posts/2014/2014-03-04-0001.jpg)
 ![ALU Control Card (solder side)](/img/posts/2014/2014-03-04-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Looking 
 at the first picture the sockets for the zero detect relays are down the left 

@@ -24,11 +24,11 @@ first few headers. Suffice to say that it's a lot easier to solder multi-leg
 components than it is to unsolder them. Here's the result of this evenings 
 work:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card](/img/posts/2013/2013-12-08-0000.jpg)
 ![ALU Logic Card (solder side)](/img/posts/2013/2013-12-08-0001.jpg)
 ![ALU Logic Card (close up)](/img/posts/2013/2013-12-08-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The board is 
 starting to take shape now ... the next job will be soldering down all the 

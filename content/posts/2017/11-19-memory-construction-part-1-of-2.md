@@ -17,11 +17,11 @@ as mentioned in my last post this one is a bit more complex than 'boring old
 registers' and so I'll split it over two posts. Let's dive in with the easy 
 part - soldering down the LEDs and backplane connectors:
 
-{% figure %}
+{{< fig >}}
 ![Memory cards with LEDs and type 'Y' connectors](/img/posts/2017/2017-11-19-0000.jpg)
 ![Close up of lower memory card LEDs](/img/posts/2017/2017-11-19-0001.jpg)
 ![Close up of upper memory card LEDs and switch](/img/posts/2017/2017-11-19-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 For the lower memory card there are 16 LEDs for the 16-bit 
 address bus and 8 LEDs for the 8-bit data bus. Both of these busses are 
@@ -40,19 +40,19 @@ on the right disconnects the memory from outputting to the data bus which
 comes in handy when debugging. Here's a close up of the cards from the 
 rear:
 
-{% figure %}
+{{< fig >}}
 ![Close up of memory card LEDs (solder side)](/img/posts/2017/2017-11-19-0003.jpg)
 ![Close up of memory card LEDs (solder side - from the left)](/img/posts/2017/2017-11-19-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Right, I'll leave the upper card there for now and pick it 
 up in my next post. Focussing on the lower card then let's add some sockets, 
 board interconnects and wire wrap posts:
 
-{% figure %}
+{{< fig >}}
 ![Lower memory card with added sockets, board interconnects and wire wrap posts](/img/posts/2017/2017-11-19-0005.jpg)
 ![Lower memory card with added sockets, board interconnects and wire wrap posts (rear view)](/img/posts/2017/2017-11-19-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Nothing too unusual there - 
 larger IC socket for the memory chip, smaller one for the relay driver. The 
@@ -68,10 +68,10 @@ lines going on (+12V, 12V ground, +5V and 5V ground). Moving on, let's add the
 diodes, resistors and caps:
 
 
-{% figure %}
+{{< fig >}}
 ![Lower memory card with added diodes, resistors and capacitors](/img/posts/2017/2017-11-19-0007.jpg)
 ![Lower memory card with added diodes, resistors and capacitors (rear view)](/img/posts/2017/2017-11-19-0008.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The diode is the usual 
 [flyback](https://en.wikipedia.org/wiki/Flyback_diode) 
@@ -87,16 +87,16 @@ out any noise on the circuit.
 Last bit of soldering to do is the 
 power rails:
 
-{% figure %}![Lower memory card with added power rails](/img/posts/2017/2017-11-19-0009.jpg){% endfigure %}
+{{< fig >}}![Lower memory card with added power rails](/img/posts/2017/2017-11-19-0009.jpg){{< /fig >}}
 
 ... and then it's on with the wire wrap ...
 
-{% figure %}
+{{< fig >}}
 ![Lower memory card with power wire wrap added](/img/posts/2017/2017-11-19-0010.jpg)
 ![Lower memory card with power wire wrap added](/img/posts/2017/2017-11-19-0011.jpg)
 ![Lower memory card with data bus out wire wrap added](/img/posts/2017/2017-11-19-0012.jpg)
 ![Lower memory card with control wire wrap added](/img/posts/2017/2017-11-19-0013.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Starting with the first picture the 5V power and ground 
 lines are wired out followed by the data and address bus lines in blue. With 
@@ -111,10 +111,10 @@ addressing the lower 32K address space.
 Last job then is to pop in 
 the ICs and the single relay and that's the lower card done:
 
-{% figure %}
+{{< fig >}}
 ![Finished lower memory card (front)](/img/posts/2017/2017-11-19-0014.jpg)
 ![Finished lower memory card (rear)](/img/posts/2017/2017-11-19-0015.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 In the 
 next post I'll construct the upper memory card which will have a lot more 

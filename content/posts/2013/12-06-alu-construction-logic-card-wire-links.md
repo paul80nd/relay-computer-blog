@@ -25,11 +25,11 @@ the same 30AWG Kynar wire I'll be using later for wire wrapping. This is a bit
 fiddly due to the size of the wire but not bad once you get the hang of it. 
 With the links in place the logic card now looks like this:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card (solder side)](/img/posts/2013/2013-12-06-0000.jpg)
 ![ALU Logic Card (solder side)](/img/posts/2013/2013-12-06-0001.jpg)
 ![ALU Logic Card (solder side)](/img/posts/2013/2013-12-06-0002.JPG)
-{% endfigure %}
+{{< /fig >}}
 
 I've also 
 tidied up some of the uglier solder joints whilst the 'iron was hot' (although 

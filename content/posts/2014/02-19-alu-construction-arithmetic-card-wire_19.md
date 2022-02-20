@@ -20,11 +20,11 @@ Inputs B and
 C are fully wired in now as is the data bus output. As all the wiring is now 
 complete on the arithmetic 1-bit units I've popped the relays in.
 
-{% figure %}
+{{< fig >}}
 ![ALU Arithmetic Card (close up top)](/img/posts/2014/2014-02-19-0000.JPG)
 ![ALU Arithmetic Card](/img/posts/2014/2014-02-19-0001.JPG)
 ![ALU Arithmetic Card (with added relays)](/img/posts/2014/2014-02-19-0002.JPG)
-![ALU Arithmetic Card (close up bottom)](/img/posts/2014/2014-02-19-0003.JPG){% endfigure %}
+![ALU Arithmetic Card (close up bottom)](/img/posts/2014/2014-02-19-0003.JPG){{< /fig >}}
 
 The next wire links to add are the control lines which 
 select either the Add or Increment operation and then once that's done the 

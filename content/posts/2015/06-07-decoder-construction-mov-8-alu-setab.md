@@ -31,11 +31,11 @@ but there'll be more added later on.
 Diving straight in to the 
 construction I start with soldering down the status LEDs: 
 
-{% figure %}
+{{< fig >}}
 ![Decoder Card: Status LEDs (Top View)](/img/posts/2015/2015-06-07-0000.jpg)
 ![Decoder Card: Status LEDs (Rear View)](/img/posts/2015/2015-06-07-0001.jpg)
 ![Decoder Card: Status LEDs (Front View)](/img/posts/2015/2015-06-07-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've continued to use the same method of joining all the LED 
 cathodes together with bits of trimmed off diode/LED legs as it takes the 
@@ -47,18 +47,18 @@ when more operation classes are added to this card.
 Next up are the 
 card connectors: 
 
-{% figure %}
+{{< fig >}}
 ![Decoder Card: Added Connectors (Card Side)](/img/posts/2015/2015-06-07-0003.jpg)
 ![Decoder Card: Added Connectors (Solder Side)](/img/posts/2015/2015-06-07-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Then fast forwarding a bit I add the relay sockets, 
 flyback diodes and power and ground lines: 
 
-{% figure %}
+{{< fig >}}
 ![Decoder Card: Added Sockets and Diodes (Card Side)](/img/posts/2015/2015-06-07-0005.jpg)
 ![Decoder Card: Added Sockets and Diodes (Solder Side)](/img/posts/2015/2015-06-07-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Again, there's a temporary kynar wire linking 
 the LED and relay grounds together ... when further LEDs are added a more 
@@ -69,17 +69,17 @@ it's on with the wire wrapping. There isn't much to do on this card - just the
 LED links, 'decision tree' lines between the relays and then the inbound 
 opcode bits and outbound instruction class lines: 
 
-{% figure %}
+{{< fig >}}
 ![Decoder Card: Added LED and inter-relay wire wraps](/img/posts/2015/2015-06-07-0007.jpg)
 ![Decoder Card: Added Inbound and Outbound wire wraps](/img/posts/2015/2015-06-07-0008.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and that's pretty much it. With the relays popped 
 in the card ends up looking like this: 
 
-{% figure %}
+{{< fig >}}
 ![Decoder Card](/img/posts/2015/2015-06-07-0009.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As usual I've 
 put a video together that demonstrates this card in operation. In this video I 

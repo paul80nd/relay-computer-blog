@@ -30,11 +30,11 @@ finally soldering the rest of the pins.
 Here's the result of this 
 evenings work:
 
-{% figure %}
+{{< fig >}}
 ![ALU Arithmetic Card](/img/posts/2014/2014-01-06-0000.jpg)
 ![ALU Arithmetic Card (closer up)](/img/posts/2014/2014-01-06-0001.jpg)
 ![ALU Arithmetic Card (solder side)](/img/posts/2014/2014-01-06-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The 
 next job ... which isn't all that much fun based on doing it on the logic card 

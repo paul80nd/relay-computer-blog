@@ -25,10 +25,10 @@ step was to solder down the LEDs, ribbon cable sockets, relay sockets and
 finally the wire wrapping posts. Here's some pictures, front and back, of the 
 card following this round of soldering:
 
-{% figure %}
+{{< fig >}}
 ![B/C Register Card with initial soldering completed (back)](/img/posts/2014/2014-05-24-0000.jpg)
 ![B/C Register Card with initial soldering completed (front)](/img/posts/2014/2014-05-24-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I made a few tweaks to the construction method on this 
 card. Firstly I applied a line of super glue to the board when placing the 
@@ -61,8 +61,8 @@ in place from one side whilst solder tacking the other side down.
 
 Here's a picture of the LEDs viewed from the front:
 
-{% figure %}
-![B/C Register Card LEDs](/img/posts/2014/2014-05-24-0002.jpg){% endfigure %}
+{{< fig >}}
+![B/C Register Card LEDs](/img/posts/2014/2014-05-24-0002.jpg){{< /fig >}}
 
 The left ten 
 LEDs are for register B and the right ten for register C. Each have the same 
@@ -73,8 +73,8 @@ and then the following eight LEDs show bits 7 down to 0 (in that order).
 The next stage of construction was soldering down the power and ground 
 lines on the solder side of the board:
 
-{% figure %}
-![B/C Register Card with power and ground lines completed](/img/posts/2014/2014-05-24-0003.jpg){% endfigure %}
+{{< fig >}}
+![B/C Register Card with power and ground lines completed](/img/posts/2014/2014-05-24-0003.jpg){{< /fig >}}
 
 This stage was pretty much consistent with previous cards 
 so nothing new to mention here other than I had to skirt around the messy 
@@ -87,12 +87,12 @@ down all the wire wraps. This is done in stages by laying down each family of
 related connections then laying the next family on top of that. Here's four 
 pictures of the wraps building up over time:
 
-{% figure %}
+{{< fig >}}
 ![B/C Register Card wire wraps stage 1](/img/posts/2014/2014-05-24-0004.jpg)
 ![B/C Register Card wire wraps stage 2](/img/posts/2014/2014-05-24-0005.jpg)
 ![B/C Register Card wire wraps stage 3](/img/posts/2014/2014-05-24-0006.jpg)
 ![B/C Register Card wire wraps stage 4](/img/posts/2014/2014-05-24-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The top left picture shows the first three wraps: the black 
 internal connections, the red power connections and blue data bus in/out 
@@ -105,11 +105,11 @@ connections.
 Finally here is three close up pictures of the final 
 wire wraps:
 
-{% figure %}
+{{< fig >}}
 ![B/C Register Card (left)](/img/posts/2014/2014-05-24-0008.jpg)
 ![B/C Register Card (middle)](/img/posts/2014/2014-05-24-0009.jpg)
 ![B/C Register Card (right)](/img/posts/2014/2014-05-24-0010.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 That's it for 
 the main construction of this card ... all I need to do now is pop in the 

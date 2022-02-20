@@ -17,7 +17,7 @@ ALU logic card it's fiddlier than the stage before it ... this stage is no
 exception. This time I'm adding the power and ground rails that run around the 
 solder side of the board. I'll start with a picture of how it looks:
 
-{% figure %}![ALU Logic Card (solder side)](/img/posts/2013/2013-12-10-0004.jpg){% endfigure %}
+{{< fig >}}![ALU Logic Card (solder side)](/img/posts/2013/2013-12-10-0004.jpg){{< /fig >}}
 
 The 
 really, really, fiddly bit this time is cutting all those lengths of (solid 

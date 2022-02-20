@@ -19,9 +19,9 @@ finally now we come on to Programming and Control of the computer. Here again,
 for the last time, is the architecture I'll be building against (from the 
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html))
 
-{% figure caption:"System Architecture for a Relay Computer[^1]" %}
+{{< fig caption="System Architecture for a Relay Computer[^1]" >}}
 ![System Architecture for a Relay Computer](/img/posts/2013/2013-11-07-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 With all the various parts of the 
 architecture I've discussed so far — the busses, registers, memory and ALU — 

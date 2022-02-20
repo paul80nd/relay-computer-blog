@@ -29,20 +29,20 @@ form of those three instruction classes:
 Mapping this out as a binary tree using the highest 4 bits 
 of the opcode we get the following:
 
-{% figure %}![Opcode binary tree for MOV-8, ALU and SETAB](/img/posts/2015/2015-01-04-0000.png){% endfigure %}
+{{< fig >}}![Opcode binary tree for MOV-8, ALU and SETAB](/img/posts/2015/2015-01-04-0000.png){{< /fig >}}
 
 There will be further branches to this tree in the future as more 
 instruction classes are added to the computer but for now I'm keeping to the 
 three above as that will be enough to perform some simple programs. The tree 
 above can now be easily mapped to the relays used by this computer:
 
-{% figure %}![Decoder Relay Tree](/img/posts/2015/2015-01-04-0001.png){% endfigure %}
+{{< fig >}}![Decoder Relay Tree](/img/posts/2015/2015-01-04-0001.png){{< /fig >}}
 
 With the basic relay 
 connections designed it's time to transfer this over to a 55 x 40 hole pad 
 board as used on all the computer cards so far.
 
-{% figure caption:"Decoder Relays &amp; Internal Links ([larger](/img/posts/2015/2015-01-04-1000.png))" %}![Decoder Relays &amp; Internal Links](/img/posts/2015/2015-01-04-0002.png){% endfigure %}
+{{< fig caption="Decoder Relays &amp; Internal Links ([larger](/img/posts/2015/2015-01-04-1000.png))" >}}![Decoder Relays &amp; Internal Links](/img/posts/2015/2015-01-04-0002.png){{< /fig >}}
 
 As 
 usual I'll want the card to display the current instruction class being 
@@ -51,7 +51,7 @@ independantly. 3 LEDs will be needed for this to handle the three classes
 currently decodable and as always these are the 12V LEDs with internal 
 resistor. Diagram wise it looks like this:
 
-{% figure %}![Decoder LEDs](/img/posts/2015/2015-01-04-0003.png){% endfigure %}
+{{< fig >}}![Decoder LEDs](/img/posts/2015/2015-01-04-0003.png){{< /fig >}}
 
 The mysterious gap between 
 the MOV8 and ALU LEDs above is where a later instruction class LED will go 
@@ -78,7 +78,7 @@ pulse timing signals (which will be produced by the upcoming sequencer card),
 8-bit control &amp; instruction bus, 8-bit operation bus and finally power 
 connections. The diagram of the connectors look like this:
 
-{% figure caption:"Decoder W1 Connectors ([larger](/img/posts/2015/2015-01-04-1001.png))" %}![Decoder W1 Connectors](/img/posts/2015/2015-01-04-0004.png){% endfigure %}
+{{< fig caption="Decoder W1 Connectors ([larger](/img/posts/2015/2015-01-04-1001.png))" >}}![Decoder W1 Connectors](/img/posts/2015/2015-01-04-0004.png){{< /fig >}}
 
 This shows the 
 four right angled boxed headers — from left to right these are: 5+5 power 
@@ -106,7 +106,7 @@ follows:
 So, finally, wiring everything together we get the 
 following:
 
-{% figure caption:"Completed Decoder Card (for SETAB, MOV-8 and ALU classes) ([larger](/img/posts/2015/2015-01-04-1002.png))" %}![Completed Decoder Card (for SETAB, MOV-8 and ALU classes)](/img/posts/2015/2015-01-04-0005.png){% endfigure %}
+{{< fig caption="Completed Decoder Card (for SETAB, MOV-8 and ALU classes) ([larger](/img/posts/2015/2015-01-04-1002.png))" >}}![Completed Decoder Card (for SETAB, MOV-8 and ALU classes)](/img/posts/2015/2015-01-04-0005.png){{< /fig >}}
 
 This diagram includes everything mentioned so far along 
 with the power supply and ground lines and all other internal wiring. As with 

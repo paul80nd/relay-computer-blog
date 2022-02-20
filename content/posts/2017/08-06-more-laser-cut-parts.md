@@ -47,16 +47,16 @@ going round in this loop until your design is perfect as once it's been sent
 off to be cut there's no going back. Here's a picture of Display A with the 
 paper prototype panel in place:
 
-{% figure %}
-![Display A Panel Paper Prototype](/img/posts/2017/2017-08-06-0000.jpg){% endfigure %}
+{{< fig >}}
+![Display A Panel Paper Prototype](/img/posts/2017/2017-08-06-0000.jpg){{< /fig >}}
 
 ... and here is the design itself (in which 
 I've thickened up all the cutting lines to 0.5mm so it's easier to see them 
 whereas in the original file that goes over to RazorLab the lines must be 
 0.01mm):
 
-{% figure caption:"Cutting File ([larger](/img/posts/2017/2017-08-06-1001.png))" %}
-![Cutting File](/img/posts/2017/2017-08-06-0001.png){% endfigure %}
+{{< fig caption="Cutting File ([larger](/img/posts/2017/2017-08-06-1001.png))" >}}
+![Cutting File](/img/posts/2017/2017-08-06-0001.png){{< /fig >}}
 
 So then, you upload the files to RazorLab, choose your 
 material, cross their palms with silver and then you wait for a knock on the 

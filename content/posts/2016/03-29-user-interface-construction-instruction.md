@@ -27,9 +27,9 @@ actions of the control and sequencer cards can be observed. The first job was
 to apply the legends to the new buttons and indicators that I'd be adding to 
 the two display cards. Here's a close up picture:
 
-{% figure %}
+{{< fig >}}
 ![Close up of additional buttons and indicators](/img/posts/2016/2016-03-29-0000.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The buttons at the top are (from left to right) 
 clock, instruction to bus (I2B), instruction load and condition load. Below 
@@ -41,10 +41,10 @@ indicator.
 With the additional buttons installed on 
 Display A we get the following:
 
-{% figure %}
+{{< fig >}}
 ![Display A Card (front)](/img/posts/2016/2016-03-29-0001.jpg)
 ![Display A Card (back)](/img/posts/2016/2016-03-29-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Previously on this card the Address Switch Select (sel AS) 
 was wired up to the Load Condition register line but now it has its own 
@@ -53,10 +53,10 @@ dedicated button (ld COND) I've removed the temporary wire link.
 Adding the new indicators to Display B we get the 
 following:
 
-{% figure %}
+{{< fig >}}
 ![Display B Card (front)](/img/posts/2016/2016-03-29-0003.jpg)
 ![Display B Card (back)](/img/posts/2016/2016-03-29-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The instruction register op code is shown at the top right 
 and around that is the decoded instruction class that op code represents 
@@ -72,9 +72,9 @@ With both
 display cards installed back in the upper enclosure it looks like 
 this:
 
-{% figure %}
+{{< fig >}}
 ![Upper Enclosure with Display Cards](/img/posts/2016/2016-03-29-0005.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 With the display cards updated the next job was to hook up 
 the right hand primary switches as I'll need the clock step and reset (RSET) 
@@ -82,24 +82,24 @@ switches to help operate the computer when everything constructed so far is
 tested together. The switches are soldered up to some ribbon cable much the 
 same way the left hand primary switches were:
 
-{% figure %}
+{{< fig >}}
 ![Right hand Primary Switches (rear view)](/img/posts/2016/2016-03-29-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The upper enclosure as a whole then looks like 
 this:
 
-{% figure %}
+{{< fig >}}
 ![Upper Enclosure (rear)](/img/posts/2016/2016-03-29-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 There's quite a lot of ribbon cables coming off the display 
 cards now and these all need wiring out on the display distribution 
 card:
 
-{% figure %}
+{{< fig >}}
 ![Display Distribution Card](/img/posts/2016/2016-03-29-0008.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 There's quite a bit added to this card. Firstly, the 
 instruction op code is brought in on the new 16 pin straight IDC socket on the 
@@ -116,9 +116,9 @@ to the auxiliary control card for activating the Select Data Switches
 operation (sel DS). Speaking of which ... here is the updated auxiliary 
 control card:
 
-{% figure %}
+{{< fig >}}
 ![Auxiliary Control Card](/img/posts/2016/2016-03-29-0009.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Not too much has changed here ... the right hand primary 
 switches are wired out to the X control bus and then I've marked up the 

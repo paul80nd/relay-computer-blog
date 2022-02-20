@@ -34,23 +34,23 @@ being built up over time as all the techniques I use have been covered in
 previous posts and shouldn't come as any surprise for my regular readers. So, 
 the cards without relays look like this:
 
-{% figure %}
+{{< fig >}}
 ![Controller Cards (front view without relays)](/img/posts/2016/2016-01-01-0000.jpg)
 ![Lower Controller Card (front view)](/img/posts/2016/2016-01-01-0001.jpg)
 ![Upper Controller Card (front view)](/img/posts/2016/2016-01-01-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and from the back they look like this ...
 
-{% figure %}
+{{< fig >}}
 ![Control Cards (rear view)](/img/posts/2016/2016-01-01-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and with relays like this ...
 
-{% figure %}
+{{< fig >}}
 ![Control Cards (with relays)](/img/posts/2016/2016-01-01-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The left hand card above handles the MOV-8 instruction in the top 
 left cluster of relays and the right hand card handles the ALU instruction on 
@@ -68,11 +68,11 @@ the lines as necessary.
 Finally picture wise here's the two cards 
 stacked together from different angles:
 
-{% figure %}
+{{< fig >}}
 ![Stacked Controller Cards](/img/posts/2016/2016-01-01-0005.jpg)
 ![Stacked Controller Cards](/img/posts/2016/2016-01-01-0006.jpg)
 ![Stacked Controller Cards](/img/posts/2016/2016-01-01-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As 
 always I've put a video together that demonstrates the controller in operation 

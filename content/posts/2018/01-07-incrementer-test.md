@@ -23,18 +23,18 @@ theory it can be used to increment any value put on the address bus.
 
 Here are the two incrementer cards side-by-side:
 
-{% figure %}
+{{< fig >}}
 ![Incrementer Cards (front side)](/img/posts/2018/2018-01-07-0000.jpg)
 ![Incrementer Cards (rear side)](/img/posts/2018/2018-01-07-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and 
 when stacked together they look like this ...
 
-{% figure %}
+{{< fig >}}
 ![Incrementer Unit (viewed from front)](/img/posts/2018/2018-01-07-0002.jpg)
 ![Incrementer Unit (viewed from front right)](/img/posts/2018/2018-01-07-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As in my other 'completion' blog posts I've put together a video which gives 
 an overview of the incrementer and shows it in use:

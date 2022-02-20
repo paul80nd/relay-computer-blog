@@ -22,11 +22,11 @@ The LEDs and backplane connectors were
 soldered down in my last post so we can jump straight to adding the card 
 interconnects which pass the local address/data busses to the lower card:
 
-{% figure %}
+{{< fig >}}
 ![Upper memory card with added card interconnects](/img/posts/2017/2017-11-25-0000.jpg)
 ![Upper memory card with added card interconnects (rear view)](/img/posts/2017/2017-11-25-0001.jpg)
 ![Upper memory card with added card interconnects (close up of rear)](/img/posts/2017/2017-11-25-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 These interconnects mate with the matching 
 sockets on the lower card and when sandwiched together the two cards form the 
@@ -42,10 +42,10 @@ tedious job and so I'm changing approach this time and having a go at
 soldering down whole rows of connectors for a group of relays. Here's what 
 that looks like:
 
-{% figure %}
+{{< fig >}}
 ![New style of relay sockets (front view)](/img/posts/2017/2017-11-25-0003.jpg)
 ![New style of relay sockets (rear view)](/img/posts/2017/2017-11-25-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As you can probably see this is slightly wasteful in terms of unused sockets 
 and pins (and therefore increases the cost slightly) but I've offset that 
@@ -55,10 +55,10 @@ should look for more efficient ways of doing things to save boredom setting
 in. I can repeat this pattern to get the rest of the relay sockets soldered 
 down:
 
-{% figure %}
+{{< fig >}}
 ![Upper memory card with added sockets and wire wrap posts](/img/posts/2017/2017-11-25-0005.jpg)
 ![Upper memory card with added sockets and wire wrap posts (rear view)](/img/posts/2017/2017-11-25-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 You may have noticed that there's no gaps left 
 for the diodes that sit in front of each relay and that's because they'll be 
@@ -83,7 +83,7 @@ yellow 5V line.
 With all the soldering in place it's time to move 
 on to fitting the diodes and making a start on the wire wrap:
 
-{% figure %}![Upper memory card with added diodes and initial wire wrap](/img/posts/2017/2017-11-25-0007.jpg){% endfigure %}
+{{< fig >}}![Upper memory card with added diodes and initial wire wrap](/img/posts/2017/2017-11-25-0007.jpg){{< /fig >}}
 
 You can now see how the diodes fit in which would make 
 replacement easier in the (very) unlikely event of a component failure. The 
@@ -93,7 +93,7 @@ output to 5V and when a line of the bus is disconnected from 12V the relays
 connect the output to the 5V ground. Let's complete the incoming data bus wire 
 wrap:
 
-{% figure %}![Upper memory card with added inbound data bus gating wire wrap](/img/posts/2017/2017-11-25-0008.jpg){% endfigure %}
+{{< fig >}}![Upper memory card with added inbound data bus gating wire wrap](/img/posts/2017/2017-11-25-0008.jpg){{< /fig >}}
 
 The converted inbound data bus lines are now 
 routed through a set of gating relays so that it's only connected to the 
@@ -101,10 +101,10 @@ internal memory bus when we need it ... and 'when we need it' is determined by
 the 'Bus To Memory' (B2M) control line seen here in yellow. Similarly we can 
 now wire up the output data bus:
 
-{% figure %}
+{{< fig >}}
 ![Upper memory card with added data bus out gating wire wrap](/img/posts/2017/2017-11-25-0009.jpg)
 ![Upper memory card with added data bus out wire wrap](/img/posts/2017/2017-11-25-0010.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 This time the green wire wrap comes off the card 
 interconnects and sends the outbound memory data bus through a set of gating 
@@ -121,7 +121,7 @@ Last wire wrap
 job is to hook up the computer's address bus to the local memory address 
 bus:
 
-{% figure %}![Upper memory card with added address bus wire wrap](/img/posts/2017/2017-11-25-0011.jpg){% endfigure %}
+{{< fig >}}![Upper memory card with added address bus wire wrap](/img/posts/2017/2017-11-25-0011.jpg){{< /fig >}}
 
 This is very similar to the incoming data bus wire wrap in 
 that we convert the connected/disconnected 12V to 5V power/ground. This time 
@@ -137,7 +137,7 @@ by the way ... it could be a display unit or similar.
 Right, let's 
 pop the relays in and the upper memory card is complete:
 
-{% figure %}![Upper memory card with added relays](/img/posts/2017/2017-11-25-0012.jpg){% endfigure %}
+{{< fig >}}![Upper memory card with added relays](/img/posts/2017/2017-11-25-0012.jpg){{< /fig >}}
 
 In 
 my next post I'll connect the upper and lower cards together thereby forming 

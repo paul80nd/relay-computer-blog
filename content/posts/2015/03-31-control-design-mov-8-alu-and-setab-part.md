@@ -44,7 +44,7 @@ only be designing and implementing MOV-8 for registers A, B, C and D.
 
 Mapping the instruction out as a diagram we get the following:
 
-{% figure %}![MV8 Instruction Map](/img/posts/2015/2015-03-31-0000.png){% endfigure %}
+{{< fig >}}![MV8 Instruction Map](/img/posts/2015/2015-03-31-0000.png){{< /fig >}}
 
 The decoder handles 
 the first two bits of the instruction so it's just a case of hooking a 
@@ -52,10 +52,10 @@ collection of relays together to handle the combinatorial logic of which
 register to select from / write to. In terms of timing we need the 
 following:
 
-{% figure %}
+{{< fig >}}
 ![MV8 Timing](/img/posts/2015/2015-03-31-0001.png)
 ![MV8 Timing Pulses](/img/posts/2015/2015-03-31-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 The first timing 
 diagram shows how the source register is selected on to the data bus at the 
@@ -67,7 +67,7 @@ instruction.
 Taking the above three diagrams together the relay 
 design is as follows:
 
-{% figure caption:"MV8 Relays ([larger](/img/posts/2015/2015-03-31-1000.png))" %}![MV8 Relays](/img/posts/2015/2015-03-31-0003.png){% endfigure %}
+{{< fig caption="MV8 Relays ([larger](/img/posts/2015/2015-03-31-1000.png))" >}}![MV8 Relays](/img/posts/2015/2015-03-31-0003.png){{< /fig >}}
 
 The relays are made up of 
 three distinct areas of functionality:
@@ -108,9 +108,9 @@ B by 1 and place the result in register A.
 Mapping the instruction 
 out as a diagram we get the following:
 
-{% figure %}
+{{< fig >}}
 ![ALU Instruction Map](/img/posts/2015/2015-03-31-0004.png)
-{% endfigure %}
+{{< /fig >}}
 
 The decoder handles 
 the first four bits of the instruction and in this case the ALU itself does 
@@ -118,10 +118,10 @@ most of the hard work (the last three bits are mapped directly to the ALU
 function code) so the only combinatorial logic needed in the control relays is 
 which register to write to. In terms of timing we need the following:
 
-{% figure %}
+{{< fig >}}
 ![ALU Timing](/img/posts/2015/2015-03-31-0005.png)
 ![ALU Timing Pulses](/img/posts/2015/2015-03-31-0006.png)
-{% endfigure %} 
+{{< /fig >}} 
 
 The first timing 
 diagram shows how the ALU is commanded which places the result on to the data 
@@ -134,7 +134,7 @@ needed for this instruction.
 Taking the above three diagrams 
 together the relay design is as follows:
 
-{% figure caption:"ALU Relays ([larger](/img/posts/2015/2015-03-31-1001.png))" %}![ALU Relays](/img/posts/2015/2015-03-31-0007.png){% endfigure %}
+{{< fig caption="ALU Relays ([larger](/img/posts/2015/2015-03-31-1001.png))" >}}![ALU Relays](/img/posts/2015/2015-03-31-0007.png){{< /fig >}}
 
 The relays are made up of 
 four distinct areas of functionality:
@@ -173,19 +173,19 @@ value between -16 and 15 can be loaded up directly from the instruction.
 
 Mapping the instruction out as a diagram we get the following:
 
-{% figure %}
+{{< fig >}}
 ![SET Instruction Map](/img/posts/2015/2015-03-31-0008.png)
-{% endfigure %}
+{{< /fig >}}
 
 The decoder handles 
 the first two bits of the instruction and with bits 0 through to 4 being gated 
 directly to the data bus there's only the combinatorial logic of which 
 register to write to left to do. In terms of timing we need the following:
 
-{% figure %}
+{{< fig >}}
 ![SET Timing](/img/posts/2015/2015-03-31-0009.png)
 ![SET Timing Pulses](/img/posts/2015/2015-03-31-0010.png)
-{% endfigure %}
+{{< /fig >}}
 
 The first timing 
 diagram shows how the value encoded within the instruction register is 
@@ -196,7 +196,7 @@ pulses P-D and P-E provide everything needed for this instruction.
 
 Taking the above three diagrams together the relay design is as follows:
 
-{% figure caption:"SET Relays ([larger](/img/posts/2015/2015-03-31-1002.png))" %}![SET Relays](/img/posts/2015/2015-03-31-0011.png){% endfigure %}
+{{< fig caption="SET Relays ([larger](/img/posts/2015/2015-03-31-1002.png))" >}}![SET Relays](/img/posts/2015/2015-03-31-0011.png){{< /fig >}}
 
 The relays are made up of 
 three distinct areas of functionality:
@@ -237,8 +237,8 @@ in place by the sequencer until it needs it.
 The relay that 
 controls the CHAT signal is very simple:
 
-{% figure %}
-![CHAT Relay](/img/posts/2015/2015-03-31-0012.png){% endfigure %}
+{{< fig >}}
+![CHAT Relay](/img/posts/2015/2015-03-31-0012.png){{< /fig >}}
 
 ... when pulse D is active 
 the power supply (V) is connected to the CHAT line.

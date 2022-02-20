@@ -20,32 +20,32 @@ the memory unit proper and give it all a test.
 Here's the upper 
 card (in close up and at a rakish angle) ...
 
-{% figure %}
+{{< fig >}}
 ![Upper memory card (top side)](/img/posts/2017/2017-11-30-0000.jpg)
-![Upper memory card (rear side)](/img/posts/2017/2017-11-30-0001.jpg){% endfigure %}
+![Upper memory card (rear side)](/img/posts/2017/2017-11-30-0001.jpg){{< /fig >}}
 
 ... and 
 here's the lower memory card (at an equally rakish angle) ...
 
-{% figure %}
+{{< fig >}}
 ![Lower memory card (top side)](/img/posts/2017/2017-11-30-0002.jpg)
-![Lower memory card (rear side)](/img/posts/2017/2017-11-30-0003.jpg){% endfigure %}
+![Lower memory card (rear side)](/img/posts/2017/2017-11-30-0003.jpg){{< /fig >}}
 
 ... and 
 when sandwiched together here's how the memory unit as a whole looks:
 
-{% figure %}
+{{< fig >}}
 ![Memory Unit (viewed from top)](/img/posts/2017/2017-11-30-0004.jpg)
 ![Memory Unit (viewed from the front)](/img/posts/2017/2017-11-30-0005.jpg)
 ![Memory Unit (viewed from the rear)](/img/posts/2017/2017-11-30-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As 
 for all the cards constructed before it I can whip out my trusty breadboard to 
 test the memory unit in isolation before hooking it up to the rest of the 
 computer:
 
-{% figure %}![Memory unit with testing breadboard attached](/img/posts/2017/2017-11-30-0007.jpg){% endfigure %}
+{{< fig >}}![Memory unit with testing breadboard attached](/img/posts/2017/2017-11-30-0007.jpg){{< /fig >}}
 
 Here I've hooked the data bus up to the bar display but it 
 can be switched over to the left hand DIP switches depending on whether I'm 

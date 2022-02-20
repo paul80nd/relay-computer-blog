@@ -27,10 +27,10 @@ first step was to solder down the LEDs and ribbon cable sockets. Here's some
 pictures, front and back, of the card following this first round of 
 soldering:
 
-{% figure %}
+{{< fig >}}
 ![A/D Register Card with initial soldering completed (front)](/img/posts/2014/2014-06-22-0000.jpg)
 ![A/D Register Card with initial soldering completed (back)](/img/posts/2014/2014-06-22-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've continued the trend of applying a line of super glue 
 to the board when placing the LEDs (to stop them moving about while soldering) 
@@ -42,43 +42,43 @@ wire and then soldered it down. This seems a bit better but the solder doesn't
 always take that well to the wire so I've had to resolder a couple of the 
 joints a few times. Close up it looks like this:
 
-{% figure %}
+{{< fig >}}
 ![LED Cathode Soldering (close up)](/img/posts/2014/2014-06-22-0002.jpg)
 ![LED Cathode Soldering (close up 2)](/img/posts/2014/2014-06-22-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Following on from that the next job was to solder down the relay 
 sockets and again I've used the two rows of 5 pin sockets which proved 
 successful on the B/C card. Front and back it looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Added Relay Sockets (front)](/img/posts/2014/2014-06-22-0004.jpg)
 ![Added Relay Sockets (back)](/img/posts/2014/2014-06-22-0005.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Next up is 
 the wiring wrapping header pins ...
 
-{% figure %}
+{{< fig >}}
 ![Added Wire Wrap Posts (front)](/img/posts/2014/2014-06-22-0006.jpg)
 ![Added Wire Wrap Posts (back)](/img/posts/2014/2014-06-22-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... and 
 then the 'flyback' protection diodes come in next ...
 
-{% figure %}
+{{< fig >}}
 ![Added Diodes (front)](/img/posts/2014/2014-06-22-0008.jpg)
 ![Added Diodes (back)](/img/posts/2014/2014-06-22-0009.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 This final bit of 
 soldering was to put down the power and ground lines on the solder side of the 
 board:
 
-{% figure %}
+{{< fig >}}
 ![A/D Register Card with power and ground lines completed](/img/posts/2014/2014-06-22-0010.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 This stage was pretty much consistent with previous cards 
 so nothing new to mention here other than I'd run out of black wire for the 
@@ -90,12 +90,12 @@ down all the wire wraps. This is done in stages by laying down each family of
 related connections then laying the next family on top of that. Here's four 
 pictures of the wraps building up over time:
 
-{% figure %}
+{{< fig >}}
 ![A/D Register Card wire wraps stage 1](/img/posts/2014/2014-06-22-0011.jpg)
 ![A/D Register Card wire wraps stage 2](/img/posts/2014/2014-06-22-0012.jpg)
 ![A/D Register Card wire wraps stage 3](/img/posts/2014/2014-06-22-0013.jpg)
 ![A/D Register Card wire wraps stage 4](/img/posts/2014/2014-06-22-0014.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The top left picture shows the first two wraps: the black internal 
 connections and the red power connections. The top right picture shows the 
@@ -107,11 +107,11 @@ which is the yellow control connections.
 Finally here is three 
 close up pictures of the final wire wraps:
 
-{% figure %}
+{{< fig >}}
 ![A/D Register Card (left)](/img/posts/2014/2014-06-22-0015.jpg)
 ![A/D Register Card (middle)](/img/posts/2014/2014-06-22-0016.jpg)
 ![A/D Register Card (right)](/img/posts/2014/2014-06-22-0017.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 That's it for 
 the main construction of this card ... all I need to do now is pop in the 

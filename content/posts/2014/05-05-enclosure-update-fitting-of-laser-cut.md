@@ -30,7 +30,7 @@ around the panel but even with this it certainly took some considerable arm
 strength to persuade it to go together.  After much perspiration the panel was 
 in and looks like this:
 
-{% figure %}![Door with panel fitted](/img/posts/2014/2014-05-05-0000.jpg){% endfigure %}
+{{< fig >}}![Door with panel fitted](/img/posts/2014/2014-05-05-0000.jpg){{< /fig >}}
 
 The front door 
 (pictured above) ended up as intended but with the matching back door I found 
@@ -57,10 +57,10 @@ wanting to use the curved aluminium profile on the case edges which meant I
 had to be a bit sneaky with where I placed the screws. With the front and rear 
 doors fitted the enclosure ends up looking like this:
 
-{% figure %}
+{{< fig >}}
 ![Enclosure with all panels fitted](/img/posts/2014/2014-05-05-0001.jpg)
 ![Enclosure with all panels fitted (rear view)](/img/posts/2014/2014-05-05-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 On the right hand picture you can better see the transparency of 
 the smoked acrylic panels with the floor boards showing through. 
@@ -75,9 +75,9 @@ back so I just had to dig them out and snap them in to the plywood ... all 40
 of them (5 per board, 2 boards per bay, 4 bays in total). With the card guides 
 attached a ceiling and floor board looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Card bay ceiling and floor with card guides attached](/img/posts/2014/2014-05-05-0003.JPG)
-{% endfigure %}
+{{< /fig >}}
 
 Somehow, despite following the data sheets for the card 
 guides closely, the two holes for the guides aren't quite far enough apart (by 
@@ -93,12 +93,12 @@ around. The problem is that the card guides stand proud of the board underside
 when fitted so that they would foul the aluminium profile they're fitted 
 against ... here's a picture that shows the problem:
 
-{% figure %}![Card guides protruding through underside of board](/img/posts/2014/2014-05-05-0004.JPG){% endfigure %}
+{{< fig >}}![Card guides protruding through underside of board](/img/posts/2014/2014-05-05-0004.JPG){{< /fig >}}
 
 Still, nothing the (sloppy) application of a Dremel can't sort out 
 (with the sanding drum attached) ...
 
-{% figure %}![Card board with guide protrusions sanded back](/img/posts/2014/2014-05-05-0005.JPG){% endfigure %}
+{{< fig >}}![Card board with guide protrusions sanded back](/img/posts/2014/2014-05-05-0005.JPG){{< /fig >}}
 
 With that little issue sorted I could finally fit the eight boards 
 to the enclosure. This was done using M4 screws and the special/magic bolts 
@@ -110,7 +110,7 @@ the bolts mentioned above in the top right of the picture - here it's acting
 as something the magnet in the doors can latch on to (the aluminium itself is 
 not magnetic of course)):
 
-{% figure %}![Card bay with fitted ceiling and floor boards](/img/posts/2014/2014-05-05-0006.JPG){% endfigure %}
+{{< fig >}}![Card bay with fitted ceiling and floor boards](/img/posts/2014/2014-05-05-0006.JPG){{< /fig >}}
 
 Incidentally, to get the alignment right I 
 secured the floor board as central as possible and then loosely attached the 
@@ -122,10 +122,10 @@ enclosure laser cut parts fitted. Here's a couple of pictures with all
 floors/ceiling boards in place ... first from the rear and then from the front 
 (with rear door fitted):
 
-{% figure %}
+{{< fig >}}
 ![Enclosure from rear](/img/posts/2014/2014-05-05-0007.JPG)
 ![Enclosure from front (with rear door fitted)](/img/posts/2014/2014-05-05-0008.JPG)
-{% endfigure %}
+{{< /fig >}}
 
 There's not too much to do on the lower enclosure now ... I do 
 need some way of attaching the card backplane(s) in place and I've got 

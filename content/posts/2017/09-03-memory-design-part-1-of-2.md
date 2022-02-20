@@ -78,7 +78,7 @@ First things first let's get the memory chip on to the card and to power it
 I'll add a DC/DC convertor which will drop the 12V down to the 5V the chip 
 needs:
 
-{% figure caption:"Memory Card B with memory chip and DC/DC convertor added ([larger](/img/posts/2017/2017-09-03-1000.png))" %}![Memory Card B with memory chip and DC/DC convertor added](/img/posts/2017/2017-09-03-0000.png){% endfigure %}
+{{< fig caption="Memory Card B with memory chip and DC/DC convertor added ([larger](/img/posts/2017/2017-09-03-1000.png))" >}}![Memory Card B with memory chip and DC/DC convertor added](/img/posts/2017/2017-09-03-0000.png){{< /fig >}}
 
 At the bottom of the card there are board interconnects for the 5V 
 and ground coming out of the DC/DC convertor which will pass through to the 
@@ -91,7 +91,7 @@ to the chip as possible.
 I can now start wiring the memory chip out 
 and I'll start with a easy one ... the address bus:
 
-{% figure caption:"Memory Card B with address bus lines added ([larger](/img/posts/2017/2017-09-03-1001.png))" %}![Memory Card B with address bus lines added](/img/posts/2017/2017-09-03-0001.png){% endfigure %}
+{{< fig caption="Memory Card B with address bus lines added ([larger](/img/posts/2017/2017-09-03-1001.png))" >}}![Memory Card B with address bus lines added](/img/posts/2017/2017-09-03-0001.png){{< /fig >}}
 
 As 
 mentioned earlier these bus lines must be connected to either +5V or ground 
@@ -100,7 +100,7 @@ handed off to the other memory card via the board interconnects. Note that
 there's only 15 bits connected (to address the 32K locations). I can now move 
 on to the data bus:
 
-{% figure caption:"Memory Card B with data bus lines added ([larger](/img/posts/2017/2017-09-03-1002.png))" %}![Memory Card B with data bus lines added](/img/posts/2017/2017-09-03-0002.png){% endfigure %}
+{{< fig caption="Memory Card B with data bus lines added ([larger](/img/posts/2017/2017-09-03-1002.png))" >}}![Memory Card B with data bus lines added](/img/posts/2017/2017-09-03-0002.png){{< /fig >}}
 
 As 
 with the address bus these data bus lines must be connected to either +5V or
@@ -110,7 +110,7 @@ obvious is that the data bus here is also 'read only'. We'll see why shortly
 but in the meanwhile given we've got address and data busses down lets add 
 some LEDs:
 
-{% figure caption:"Memory Card B with LEDs added ([larger](/img/posts/2017/2017-09-03-1003.png))" %}![Memory Card B with LEDs added](/img/posts/2017/2017-09-03-0003.png){% endfigure %}
+{{< fig caption="Memory Card B with LEDs added ([larger](/img/posts/2017/2017-09-03-1003.png))" >}}![Memory Card B with LEDs added](/img/posts/2017/2017-09-03-0003.png){{< /fig >}}
 
 There's nothing 
 too surprising there ... the usual LEDs ... however it's worth noting that 
@@ -126,7 +126,7 @@ for. When we're doing a read operation we need to drive the main data bus of
 the computer which runs at 12V. We've only got 5V running on our 'local' data 
 bus however so there's an extra bit of wizardry required:
 
-{% figure caption:"Memory Card B with relay driver added ([larger](/img/posts/2017/2017-09-03-1004.png))" %}![Memory Card B with relay driver added](/img/posts/2017/2017-09-03-0004.png){% endfigure %}
+{{< fig caption="Memory Card B with relay driver added ([larger](/img/posts/2017/2017-09-03-1004.png))" >}}![Memory Card B with relay driver added](/img/posts/2017/2017-09-03-0004.png){{< /fig >}}
 
 Here 
 I've added a ULN2803 darlington transistor array ([data sheet here](https://www.sparkfun.com/datasheets/IC/uln2803a.pdf)) 
@@ -141,7 +141,7 @@ need wiring out on the other memory card.
 Nearly there now. Let's 
 start adding some control lines:
 
-{% figure caption:"Memory Card B with first control lines added ([larger](/img/posts/2017/2017-09-03-1005.png))" %}![Memory Card B with first control lines added](/img/posts/2017/2017-09-03-0005.png){% endfigure %}
+{{< fig caption="Memory Card B with first control lines added ([larger](/img/posts/2017/2017-09-03-1005.png))" >}}![Memory Card B with first control lines added](/img/posts/2017/2017-09-03-0005.png){{< /fig >}}
 
 First of all there are three pull up resistors which keep the 
 inputs high on WE (write enable), OE (output enable) and CS (chip select). 
@@ -158,7 +158,7 @@ will switch the chip to write mode.
 Finally, let's add the 
 remaining control lines:
 
-{% figure caption:"Memory Card B with final control lines added ([larger](/img/posts/2017/2017-09-03-1006.png))" %}![Memory Card B with final control lines added](/img/posts/2017/2017-09-03-0006.png){% endfigure %}
+{{< fig caption="Memory Card B with final control lines added ([larger](/img/posts/2017/2017-09-03-1006.png))" >}}![Memory Card B with final control lines added](/img/posts/2017/2017-09-03-0006.png){{< /fig >}}
 
 There's a little more going on this time. Starting at the address 
 bus connector at the top left of the card we pick up the most 

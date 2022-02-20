@@ -44,10 +44,10 @@ biggest, chunkiest paddle switches. Although 'other manufacturers are
 available' I've settled on using switches from NKK in this computer and these 
 in particular are from their 'M' series:
 
-{% figure %}
+{{< fig >}}
 ![Switch Bar (from above)](/img/posts/2014/2014-07-05-0000.jpg)
 ![Switch Bar (side view)](/img/posts/2014/2014-07-05-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The data 
 switches are on the left in the top picture ... the set of eight black 
@@ -71,7 +71,7 @@ a cheap drill I got from Homebase for £15 has been perfect for the job). After
 several attempts I managed to drill some clean and precise holes so I could 
 then install the switches:
 
-{% figure %}![Switch Bar (back view)](/img/posts/2014/2014-07-05-0002.jpg){% endfigure %}
+{{< fig >}}![Switch Bar (back view)](/img/posts/2014/2014-07-05-0002.jpg){{< /fig >}}
 
 Each switch is 
 held in place with an M3 screw and matching nut. I intentionally positioned 
@@ -82,7 +82,7 @@ With the switches in place I can now drop over the laser cut acrylic panel and
 surprisingly (see, no confidence in my machining skills) it fits nicely and 
 doesn't snag any of the switches:
 
-{% figure %}![Switch Bar with Panel](/img/posts/2014/2014-07-05-0003.jpg){% endfigure %}
+{{< fig >}}![Switch Bar with Panel](/img/posts/2014/2014-07-05-0003.jpg){{< /fig >}}
 
 With the switches 
 all securely fixed in place I then moved on to wiring them up. Embarrassingly 
@@ -92,7 +92,7 @@ multimeter first. Rather than unpick the soldering I just turned the whole set
 of eight switches 180 degrees and refastened them to the aluminium channel. In 
 the end it looks like this:
 
-{% figure %}![Switch Bar with wiring](/img/posts/2014/2014-07-05-0004.jpg){% endfigure %}
+{{< fig >}}![Switch Bar with wiring](/img/posts/2014/2014-07-05-0004.jpg){{< /fig >}}
 
 The switches 
 have a common power supply and then each feeds back down the ribbon cable to 
@@ -105,7 +105,7 @@ it from use by the computer itself so what is needed is some gating circuitry.
 This is relatively simple and very similar to the gating circuitry used 
 elsewhere in the computer. Here's the schematic for it:
 
-{% figure caption:"Switch Control circuit ([larger](/img/posts/2014/2014-07-05-1000.png))" %}![Switch Control circuit](/img/posts/2014/2014-07-05-0005.png){% endfigure %}
+{{< fig caption="Switch Control circuit ([larger](/img/posts/2014/2014-07-05-1000.png))" >}}![Switch Control circuit](/img/posts/2014/2014-07-05-0005.png){{< /fig >}}
 
 Most of this is 
 hopefully self explanatory (if you're accustomed to my schematic style) but 
@@ -130,10 +130,10 @@ fairly quick and done more or less in a single evening. There's nothing
 special to mention here so I'll move swiftly on to some pictures of it in it's 
 almost finished state (just needs the relays popping in):
 
-{% figure %}
+{{< fig >}}
 ![Aux Switch Control Card](/img/posts/2014/2014-07-05-0006.jpg)
 ![Aux Switch Control Card (close up)](/img/posts/2014/2014-07-05-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I'll 
 give the control card and switches a whirl at some point over the weekend and 

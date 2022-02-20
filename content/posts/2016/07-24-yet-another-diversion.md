@@ -37,9 +37,9 @@ a couple of tablets/phones etc so it might not work everywhere (such is the
 should be fine. If it doesn't work for you then here's a picture of what it 
 would have looked like had it worked:
 
-{% figure %}
+{{< fig >}}
 ![Screenshot of the Relay Computer Simulator](/img/posts/2016/2016-07-24-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 Sorry, that was probably a bit of a tease if 
 it really didn't work for you but if it didn't work (and you really, really, 

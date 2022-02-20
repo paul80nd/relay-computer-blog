@@ -18,9 +18,9 @@ two input bits together (B and C) with carry in and out. Here's a schematic of
 the 1-bit Arithmetic Unit (based directly on the one used in the 
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html)):
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-15-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 The diagram shows two 4PDT relays (just as before for the 1-bit Logic 
 Unit) but this time the second relay has been rotated 180 degrees to make the 
@@ -46,9 +46,9 @@ As always, this 4PDT design is fine for those with 4PDT
 relays ... I'm using the smaller DPDT ones so I'll need to double up the relay 
 count. I therefore transform the above diagram to the following:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-15-0001.png)
-{% endfigure %}
+{{< /fig >}}
 
 So, certainly not as nice to look at as the 4PDT version but with the 
 equivalent functionality nonetheless. This layout focusses on lining up the 
@@ -61,17 +61,17 @@ switches with solder links or perhaps a jumper to bridge the two header pins.
 All the other links will be wire wrap as usual. In summary then, it'll take 
 the physical form as follows:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-15-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 ... and here's the same diagram with relays and wires (on the 
 component side of the pad board) omitted and with partial ground rails added 
 ...
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-15-0003.png)
-{% endfigure %}
+{{< /fig >}}
 
 That's it for the 1-bit Arithmetic Unit. In the next post I'll cover 
 linking 8 of these units together, gating the result and handling the 

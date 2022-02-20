@@ -15,11 +15,11 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-log
 Continuing on with the wire wrapping for the ALU logic card next up is the 
 input and result links:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card](/img/posts/2013/2013-12-12-0000.jpg)
 ![ALU Logic Card (close up - connectors)](/img/posts/2013/2013-12-12-0001.jpg)
 ![ALU Logic Card (close up - bit units)](/img/posts/2013/2013-12-12-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Given the limited range of colours I've got to choose from (Black, 
 Red, Green, Blue, Yellow) I've chosen the following scheme for the wire 

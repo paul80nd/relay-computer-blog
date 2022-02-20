@@ -40,10 +40,10 @@ following day with a parcel
 [containing this](https://www.amazon.co.uk/gp/product/B01DDIHKPI). Here's some pictures of said power supply 
 fitted to the computer:
 
-{% figure %}
+{{< fig >}}
 ![Power supply fitted to computer (front)](/img/posts/2017/2017-10-29-0000.jpg)
 ![Power supply fitted to computer (back)](/img/posts/2017/2017-10-29-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 There's plenty of choice with power supplies but I needed 
 something that was going to fit in the computer case, run at 12V but also 
@@ -58,7 +58,7 @@ there. Example calculations coming up next but let's take another quick
 picture break ... here's the power distribution board with those 2A 
 fuses:
 
-{% figure %}![Power distribution board](/img/posts/2017/2017-10-29-0002.jpg){% endfigure %}
+{{< fig >}}![Power distribution board](/img/posts/2017/2017-10-29-0002.jpg){{< /fig >}}
 
 So, let's take 
 an example. Looking at the 
@@ -97,7 +97,7 @@ near 10A of course). Let's assume it will hit 10A ... I now need to get that
 much electricity from the power supply to the distribution board ... enter the 
 power loom:
 
-{% figure %}![Power distribution board with power supply loom](/img/posts/2017/2017-10-29-0003.jpg){% endfigure %}
+{{< fig >}}![Power distribution board with power supply loom](/img/posts/2017/2017-10-29-0003.jpg){{< /fig >}}
 
 The wire I'm using for power distribution is stranded 
 16/0.2mm which is rated at 3A therefore can comfortably handle the maximum 2A 
@@ -112,7 +112,7 @@ everything has a little extra 'wiggle room' and is comfortably within
 tolerances. Here's a close up of the ammeter with the incoming power lines and 
 the wiring loom heading off to the distribution board:
 
-{% figure %}![Close up of ammeter with incoming and outgoing power lines](/img/posts/2017/2017-10-29-0004.jpg){% endfigure %}
+{{< fig >}}![Close up of ammeter with incoming and outgoing power lines](/img/posts/2017/2017-10-29-0004.jpg){{< /fig >}}
 
 Looking at the picture above there's an additional card 
 (hanging at a jaunty angle) that you might not have seen before. This is the 

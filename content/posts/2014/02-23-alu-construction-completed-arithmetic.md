@@ -17,11 +17,11 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2014/02/alu-construction-com
 
 The ALU arithmetic card is now complete! The final card looks like this:
 
-{% figure %}
+{{< fig >}}
 ![ALU Arithmetic Card](/img/posts/2014/2014-02-23-0000.jpg)
 ![](/img/posts/2014/2014-02-23-0001.jpg)
 ![ALU Arithmetic Card (close up LED side)](/img/posts/2014/2014-02-23-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As I did for the ALU logic card before I've put the following 
 YouTube video together which gives a walkthrough of the arithmetic card in 

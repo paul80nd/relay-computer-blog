@@ -15,9 +15,9 @@ So, with the scene now set (see previous posts) let's dive right in and take a
 look at the system architecture I'll be building my computer upon ... here it 
 is ...
 
-{% figure caption:"System Architecture for a Relay Computer[^1]" %}
+{{< fig caption="System Architecture for a Relay Computer[^1]" >}}
 ![System Architecture for a Relay Computer](/img/posts/2013/2013-11-04-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 This is a direct copy of the architecture Dr Harry Porter designed when creating 
 [his own relay computer](http://web.cecs.pdx.edu/~harry/Relay/index.html). 

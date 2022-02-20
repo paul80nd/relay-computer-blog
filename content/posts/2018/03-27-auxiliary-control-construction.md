@@ -15,51 +15,51 @@ thumbnail: /img/posts/2018/2018-03-27-4000.jpg
 
 In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …
 
-{% figure %}![Auxiliary Card Starting Point](/img/posts/2018/2018-03-27-0000.jpg){% endfigure %}
+{{< fig >}}![Auxiliary Card Starting Point](/img/posts/2018/2018-03-27-0000.jpg){{< /fig >}}
 
 Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required. So far these gating relays have been operated manually but that’s about to change as I add the remaining auxiliary control circuitry which will operate the gating directly. Also on the card are the row of LEDs on the left, card connectors at the top and finally the primary switch connectors on the right. Again, all of these bits will be hooked up shortly as I add the control circuitry. First though let’s get the auxiliary clock built and here’s a reminder of the clock circuit:
 
-{% figure caption:"Auxiliary Clock Schematic ([larger](/img/posts/2018/2018-02-07-1000.png))" %}![Auxiliary Clock Schematic](/img/posts/2018/2018-02-07-0000.png){% endfigure %}
+{{< fig caption="Auxiliary Clock Schematic ([larger](/img/posts/2018/2018-02-07-1000.png))" >}}![Auxiliary Clock Schematic](/img/posts/2018/2018-02-07-0000.png){{< /fig >}}
 
 … which builds out as follows …
 
-{% figure %}
+{{< fig >}}
 ![Auxiliary Card with Clock Relay Sockets Added](/img/posts/2018/2018-03-27-0001.jpg)
 ![Auxiliary Card with Additional Sockets](/img/posts/2018/2018-03-27-0002.jpg)
 ![Auxiliary Card rear view of Clock Relay Sockets](/img/posts/2018/2018-03-27-0003.jpg)
 ![Auxiliary Card with Clock Relays Added](/img/posts/2018/2018-03-27-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 If you’ve got a keen eye you might have noticed there’s eight columns of relays in the diagram but only seven in the picture above. Well, if you look closely at ACL6 in the diagram you’ll see you can actually implement that stage in one relay rather than two and that’s exactly what I’ve done. In the column nearest to the LEDs is a single relay for ACL6 and then another for ACLR.
 
 With the auxiliary clock in place the next job is to add the auxiliary control relays. Here’s the schematic we’re looking to implement …
 
-{% figure caption:"Final Control Relays with all instructions implemented ([larger](/img/posts/2018/2018-02-07-1007.png))" %}![Final Control Relays with all instructions implemented](/img/posts/2018/2018-02-07-0008.png){% endfigure %}
+{{< fig caption="Final Control Relays with all instructions implemented ([larger](/img/posts/2018/2018-02-07-1007.png))" >}}![Final Control Relays with all instructions implemented](/img/posts/2018/2018-02-07-0008.png){{< /fig >}}
 
 … which builds out as follows …
 
-{% figure %}
+{{< fig >}}
 ![Auxiliary Card with Control Relay Sockets Added](/img/posts/2018/2018-03-27-0005.jpg)
 ![Auxiliary Card rear view of Control Relay Sockets](/img/posts/2018/2018-03-27-0006.jpg)
 ![Auxiliary Card with Control Relays Added](/img/posts/2018/2018-03-27-0007.jpg)
 ![Auxiliary Card rear view](/img/posts/2018/2018-03-27-0008.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 If you fancy a challenge have a go at a ‘spot the difference’ between the two photos above of the rear side of the auxiliary card. An interesting one is the appearance of two resistors soldered on to the backs of two relays (one resistor across each relay coil). What’s going on there then? Well, it’s the afore mentioned ACL6 and ACLR again. The capacitors below the relays form a RC network with each relay coil and that sets how long each relay coil stays energised for. The timing is set for two coils in parallel but in this case for ACL6 there’s only one relay so I’ve added a resistor to ‘make up’ for the missing relay coil (same applies to ACLR). This is one of those things I discovered late when testing the card and so it ‘magically’ appears sometime between the two photos.
 
 That’s the construction completed so let’s compare the finished card with the design schematic …
 
-{% figure caption:"Auxiliary Card Design vs Construction ([larger design](/img/posts/2018/2018-02-07-1009.png)/[larger photo](/img/posts/2018/2018-03-27-1007.jpg))" %}
+{{< fig caption="Auxiliary Card Design vs Construction ([larger design](/img/posts/2018/2018-02-07-1009.png)/[larger photo](/img/posts/2018/2018-03-27-1007.jpg))" >}}
 ![Auxiliary Card Design](/img/posts/2018/2018-02-07-0010.png)
 ![Auxiliary Card](/img/posts/2018/2018-03-27-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 … and here’s the same compared with the rear side of the card …
 
-{% figure caption:"Auxiliary Card Design vs Construction ([larger design](/img/posts/2018/2018-02-07-1009.png)/[larger photo](/img/posts/2018/2018-03-27-1008.jpg))" %}
+{{< fig caption="Auxiliary Card Design vs Construction ([larger design](/img/posts/2018/2018-02-07-1009.png)/[larger photo](/img/posts/2018/2018-03-27-1008.jpg))" >}}
 ![Auxiliary Card Design](/img/posts/2018/2018-02-07-0010.png)
 ![Auxiliary Card Rear](/img/posts/2018/2018-03-27-0008.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 So the question is now … ‘does it work?’ … well ‘kinda’ but I’ll let the video take over at this point …
 

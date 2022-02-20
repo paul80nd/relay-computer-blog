@@ -42,9 +42,9 @@ at the heart of this.
 In the most basic terms we can store a single 
 bit in a relay as follows:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-30-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 In its initial state the register is off and both the IN and HOLD 
 inputs are off. A value is applied to the IN output and then the HOLD input is 
@@ -61,9 +61,9 @@ the relay when needed and that the hold line is off when 'loading' the relay
 accidentally). Adding these control and gating relays gives us the 
 following:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-30-0001.png)
-{% endfigure %}
+{{< /fig >}}
 
 This may look a little over complicated at 
 first but is designed to avoid feedback and oscillation in the control lines 
@@ -74,9 +74,9 @@ explanation on the issue of feedback and oscillation here in the evolution of
 this design). Using this base design I can now modify it to use my DPDT relays 
 and add the other two condition registers required:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-30-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 It's quite a 'busy' layout but breaking it down: the two relays at the 
 top right are the Load circuit supplying the input gate enable and register 
@@ -89,9 +89,9 @@ these outputs. Likewise, if we needed, we could produce CNS and CNCY (not Sign
 and not Carry) in a similar fashion. With the relays, inputs/outputs and wire 
 links hidden and partial ground rails added the design looks like this:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-30-0003.png)
-{% endfigure %}
+{{< /fig >}}
 
 With the design for the Condition Registers now complete we have 
 everything needed to put the ALU Control Card together and that'll be covered 

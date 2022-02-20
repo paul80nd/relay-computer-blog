@@ -20,9 +20,9 @@ Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I'll be
 building against (from the 
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html))
 
-{% figure caption:"System Architecture for a Relay Computer[^1]" %}
+{{< fig caption="System Architecture for a Relay Computer[^1]" >}}
 ![System Architecture for a Relay Computer](/img/posts/2013/2013-11-07-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 The Arithmetic Logic Unit (ALU) sits at the 
 very heart of the computer and without it you wouldn't be able to do much at 

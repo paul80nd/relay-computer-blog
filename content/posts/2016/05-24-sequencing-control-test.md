@@ -23,9 +23,9 @@ than before.
 Viewed from the front the computer now looks like 
 this:
 
-{% figure %}
+{{< fig >}}
 ![Relay Computer (front view)](/img/posts/2016/2016-05-24-0000.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've put together a new video to mark this construction milestone 
 which gives an overview of what's changed since the last milestone, a tour of 

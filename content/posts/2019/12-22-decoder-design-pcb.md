@@ -19,7 +19,7 @@ That's easily fixed though as the decoder is one of the simplest cards in my com
 So far the existing decoder can understand ALU, MOV8 and SETAB instruction classes. Mapped out as a tree diagram it looks like
 this:
 
-{% figure %}![Opcode binary tree for MOV-8, ALU and SETAB](/img/posts/2015/2015-01-04-0000.png){% endfigure %}
+{{< fig >}}![Opcode binary tree for MOV-8, ALU and SETAB](/img/posts/2015/2015-01-04-0000.png){{< /fig >}}
 
 Given the GOTO instruction ...
 
@@ -31,7 +31,7 @@ won't cover these in too much detail yet (I'll save those for another time) but 
 already capable of performing these instruction classes - they'll just need more relays soldering into the existing PCB.
 Anyho, here's the complete decoder tree diagram:
 
-{% figure %}![Opcode binary tree all instruction classes](/img/posts/2019/2019-12-22-0000.png){% endfigure %}
+{{< fig >}}![Opcode binary tree all instruction classes](/img/posts/2019/2019-12-22-0000.png){{< /fig >}}
 
 You can perhaps see that designing these opcodes requires quite a bit of thought. The MOV8 instruction, for example, starts
 with a '00' because we want to reserve the following six bits as parameters to that instruction type - same goes for the GOTO
@@ -46,7 +46,7 @@ an extra bit in the instruction at the cost of another instruction.
 Another way of visualising the possible permutations of instructions is via a map which shows how much 'space' each
 instruction class takes up what's available:
 
-{% figure %}![Opcode class map](/img/posts/2019/2019-12-22-0001.png){% endfigure %}
+{{< fig >}}![Opcode class map](/img/posts/2019/2019-12-22-0001.png){{< /fig >}}
 
 You can see that we have several blank sections marked 'NOP' which stands for 'No Operation'. These are areas where there's
 potential space for adding more instruction types in the future.
@@ -54,7 +54,7 @@ potential space for adding more instruction types in the future.
 Right, let's move on to designing the relay logic for the decoder and all we need to do is wire out the tree map you see
 above:
 
-{% figure %}![Decoder relay logic](/img/posts/2019/2019-12-22-0002.png){% endfigure %}
+{{< fig >}}![Decoder relay logic](/img/posts/2019/2019-12-22-0002.png){{< /fig >}}
 
 To that we just add the standard W1 backplane connectors which will bring in power, control/instruction bus, operation bus and the pulse bus. For this card the instruction bus is our input and the operation bus is the output. Finally the card needs
 a set of LEDs on the front to display the currently decoded instruction class. This all results in the final schematic
@@ -64,10 +64,10 @@ For the PCB design we follow the usual steps: place components that have to be i
 components in rough logical groups; lay tracks; build ground/power planes; add text labels etc. Being as this card is so
 straightforward let's skip to the finished design - here's a 'realistic' image of the final board design:
 
-{% figure caption:"Decoder Card (front and rear)" %}
+{{< fig caption="Decoder Card (front and rear)" >}}
 ![Upper Card (front)](/img/posts/2019/2019-12-22-0003.png)
 ![Upper Card (rear)](/img/posts/2019/2019-12-22-0004.png)
-{% endfigure %}
+{{< /fig >}}
 
 If you'd like to take a closer look at these you can find the full colour previews in
 [PDF format here](/assets/pdf/decoder-pcbp.pdf) and [another version here](/assets/pdf/decoder-pcb.pdf)

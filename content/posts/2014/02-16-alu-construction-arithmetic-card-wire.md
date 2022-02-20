@@ -22,10 +22,10 @@ the wraps in the right places.
 Here's a couple of pictures showing 
 the card in its current state of progress:
 
-{% figure %}
+{{< fig >}}
 ![ALU Arithmetic Card](/img/posts/2014/2014-02-16-0000.jpg)
 ![ALU Arithmetic Card (close up)](/img/posts/2014/2014-02-16-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 All the 
 'internal' links (black wires) in each 1-bit arithmetic unit are complete 

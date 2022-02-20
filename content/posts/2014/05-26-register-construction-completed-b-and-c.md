@@ -16,10 +16,10 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2014/05/register-constructio
 
 The B/C Register card is now complete and looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Completed B/C Register Card (front)](/img/posts/2014/2014-05-26-0000.jpg)
 ![Completed B/C Register Card (back)](/img/posts/2014/2014-05-26-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As 
 usual I've put a video together which demonstrates this card in operation ... 

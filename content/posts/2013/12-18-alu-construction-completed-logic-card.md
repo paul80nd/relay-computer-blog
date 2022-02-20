@@ -18,10 +18,10 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-com
 The ALU logic card is now finally complete! ... well, it is now I've popped 
 the last few relays into their sockets. The final card looks like this:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card](/img/posts/2013/2013-12-18-0003.jpg)
 ![ALU Logic Card (close up)](/img/posts/2013/2013-12-18-0004.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As the old 
 saying goes: a picture paints a thousand words ... I'm not sure therefore how 

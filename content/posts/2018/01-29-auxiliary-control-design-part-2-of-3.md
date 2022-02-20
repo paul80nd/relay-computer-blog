@@ -22,12 +22,12 @@ then it's definitely worth doing so as this post picks up where that
 one left off. As a reminder though we're looking to perform the following 
 operations:
 
-{% figure caption:"Auxiliary Control Operations Timing ([larger](/img/posts/2018/2018-01-29-1000.png))" %}![Auxiliary Control Operations Timing](/img/posts/2018/2018-01-29-0000.png){% endfigure %}
+{{< fig caption="Auxiliary Control Operations Timing ([larger](/img/posts/2018/2018-01-29-1000.png))" >}}![Auxiliary Control Operations Timing](/img/posts/2018/2018-01-29-0000.png){{< /fig >}}
 
 ... which 
 can be derived from the following pulses ...
 
-{% figure %}![Auxiliary Control Pulses ](/img/posts/2018/2018-01-29-0001.png){% endfigure %}
+{{< fig >}}![Auxiliary Control Pulses ](/img/posts/2018/2018-01-29-0001.png){{< /fig >}}
 
 To make those pulses 
 though we're going to need a clock signal (which is shown in red in the 
@@ -51,9 +51,9 @@ this delay is by the use of a capacitor which can store a charge when the
 relay is receiving power and then discharge through the relay when the power 
 is cut. Schematic wise it looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Relay with a capacitor to create a delay](/img/posts/2018/2018-01-29-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 In 
 this circuit when the power is applied the relay switches on and the capacitor 
@@ -65,9 +65,9 @@ lot more to it than that and this is the first place in the computer where
 we're going beyond power being either connected or disconnected. Let's first 
 look at how capacitors behave when charging and discharging:
 
-{% figure %}
+{{< fig >}}
 ![Behaviour of a charging/discharging relay over time](/img/posts/2018/2018-01-29-0003.png)
-{% endfigure %}
+{{< /fig >}}
 
 This graph tells us that after 5 time constants the 
 capacitor would be 99.2% charged and in the specific case where we're working 
@@ -81,9 +81,9 @@ circuit with 100 ohms resistance and a 470 micro-farad capacitor (
 [a farad is a very big unit](https://www.quora.com/Why-the-capacitor-value-starts-from-micro-farad-or-nano-farad) so capacitors are typically in the micro-farad 
 range):
 
-{% figure %}
+{{< fig >}}
 ![Calculating the time constant with 100 ohm resistance and 470 micro farad capacitance](/img/posts/2018/2018-01-29-0004.png)
-{% endfigure %}
+{{< /fig >}}
 
 Therefore it would take 5x47 
 = 235ms for the capacitor to reach 99.2% charge in this case. Discharge works 
@@ -94,9 +94,9 @@ simple relay circuit above? Well, looking at the
 internal resistance of 1029 ohms. Just as above we can pop that value in to 
 the formula to get our time constant:
 
-{% figure %}
+{{< fig >}}
 ![Calculating the time constant for a relay with a 470 micro farad capacitor](/img/posts/2018/2018-01-29-0005.png)
-{% endfigure %}
+{{< /fig >}}
 
 From this we can therefore calculate 
 that it would take 5x0.48363 = 2.42s for the capacitor to drain down to 0.08V. 
@@ -108,9 +108,9 @@ activated the voltage could drop all the way down to 1.2V before the relay
 deactivates. So, next question is when would the capacitor reach this value? 
 Well, that requires a slightly more complex formula:
 
-{% figure %}
+{{< fig >}}
 ![Formula for the voltage of a discharging capacitor at a given moment in time](/img/posts/2018/2018-01-29-0006.png)
-{% endfigure %}
+{{< /fig >}}
 
 Here Vc is the voltage across the 
 capacitor, Vs is the supply voltage, t is the elapsed time since the removal 
@@ -118,9 +118,9 @@ of the supply voltage and finally RC is the time constant of the discharging
 circuit. Here we want to find t for a given Vc so we can rearrange the formula 
 and solve it from there:
 
-{% figure %}
+{{< fig >}}
 ![Calculating the time for the capacitor to discharge to 1.2 volts](/img/posts/2018/2018-01-29-0007.png)
-{% endfigure %}
+{{< /fig >}}
 
 So, in theory, the relay would stay on for 1.1 
 seconds after the power supply is disconnected. Given everything else is a 
@@ -167,17 +167,17 @@ values but it also depends what you have laying around and I've got a load of
 for 220 ohms at 12V we get 54.55 mA which is well within the diode limit. The 
 updated relay circuit now looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Amended relay circuit with added resistor](/img/posts/2018/2018-01-29-0008.png)
-{% endfigure %}
+{{< /fig >}}
 
 Being as I've upped the resistance I've brought down the 
 capacitance to 47 micro-farads to compensate a bit. So what does that do to 
 the timings ...
 
-{% figure %}
+{{< fig >}}
 ![Final calculation for charge and discharge timings](/img/posts/2018/2018-01-29-0009.png)
-{% endfigure %}
+{{< /fig >}}
 
 Firstly we have the charging time constant which is 10.34ms 
 and therefore it'd take 51.7ms to get the capacitor up to 99.2% of the supply 
@@ -193,14 +193,14 @@ upstream diodes). We can now string a chain of these relays together to form a
 ripple effect where each relay controls the next two relays in sequence. 
 Here's the updated schematic:
 
-{% figure caption:"Updated Clock Schematic ([larger](/img/posts/2018/2018-01-29-1001.png))" %}![Updated Clock Schematic](/img/posts/2018/2018-01-29-0010.png){% endfigure %}
+{{< fig caption="Updated Clock Schematic ([larger](/img/posts/2018/2018-01-29-1001.png))" >}}![Updated Clock Schematic](/img/posts/2018/2018-01-29-0010.png){{< /fig >}}
 
 Hopefully you can see the pattern but if not 
 here's a table of the sequence:
 
-{% figure %}
+{{< fig >}}
 ![Table of clock sequence](/img/posts/2018/2018-01-29-0011.png)
-{% endfigure %}
+{{< /fig >}}
 
 Which 
 interestingly enough behaves a bit like the main sequencer in the computer 
@@ -208,14 +208,14 @@ interestingly enough behaves a bit like the main sequencer in the computer
 clock (changes at a steady rate). Looking at the table another way we now have 
 the following timing diagram:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2018/2018-01-29-0012.png)
-{% endfigure %}
+{{< /fig >}}
 
 Let's take a look at the operation pulses we're 
 aiming to derive and see if we can spot any clock pulses we can use:
 
-{% figure %}![Short and long target pulses](/img/posts/2018/2018-01-29-0013.png){% endfigure %}
+{{< fig >}}![Short and long target pulses](/img/posts/2018/2018-01-29-0013.png){{< /fig >}}
 
 It looks like 
 we've got a match straight away: AP-A = ACL2 and AP-B = ACL1. Looks like 
@@ -225,7 +225,7 @@ probably more correct to say that the control pulses are a consequence of the
 nature of how the clock works. Here's the relay schematic with the pulses 
 wired out:
 
-{% figure caption:"Relay schematic with derived pulses ([larger](/img/posts/2018/2018-01-29-1002.png))" %}![Relay schematic with derived pulses](/img/posts/2018/2018-01-29-0014.png){% endfigure %}
+{{< fig caption="Relay schematic with derived pulses ([larger](/img/posts/2018/2018-01-29-1002.png))" >}}![Relay schematic with derived pulses](/img/posts/2018/2018-01-29-0014.png){{< /fig >}}
 
 But 
 what about AP-D though? There's no obvious match for that pulse but what we 
@@ -238,7 +238,7 @@ relay coil as the LED has an internal resistor which will change the delay
 timing so I'll need a fresh set of contacts for that too. OK, it's time to add 
 more relays:
 
-{% figure caption:"Relay schematic with added state LEDs and AP-D pulse ([larger](/img/posts/2018/2018-01-29-1003.png))" %}![Relay schematic with added state LEDs and AP-D pulse](/img/posts/2018/2018-01-29-0015.png){% endfigure %}
+{{< fig caption="Relay schematic with added state LEDs and AP-D pulse ([larger](/img/posts/2018/2018-01-29-1003.png))" >}}![Relay schematic with added state LEDs and AP-D pulse](/img/posts/2018/2018-01-29-0015.png){{< /fig >}}
 
 That's all four pulses now accounted for so all that's left 
 is to find a way of making a short operation which stops after AP-A and AP-B 
@@ -250,9 +250,9 @@ timings accordingly taking special note that we've now got a 220 ohm resistor
 in series but then two 1029 ohm coils in parallel. Pocket calculators at the 
 ready:
 
-{% figure %}
+{{< fig >}}
 ![Delay time calculation with two relay coils present](/img/posts/2018/2018-01-29-0016.png)
-{% endfigure %}
+{{< /fig >}}
 
 As we can see this brings the delay time down from 135.17ms 
 to 79.95ms which makes sense as there's now two discharge paths through each 
@@ -267,7 +267,7 @@ Anyhoo, back to implementing the short operation. To make
 this work we need a way of disrupting the clock between ACL3 and ACL4. Let's 
 add that in now:
 
-{% figure caption:"Relay schematic with AUX ABORT relay ([larger](/img/posts/2018/2018-01-29-1004.png))" %}![Relay schematic with AUX ABORT relay](/img/posts/2018/2018-01-29-0017.png){% endfigure %}
+{{< fig caption="Relay schematic with AUX ABORT relay ([larger](/img/posts/2018/2018-01-29-1004.png))" >}}![Relay schematic with AUX ABORT relay](/img/posts/2018/2018-01-29-0017.png){{< /fig >}}
 
 As 
 long as the 'AUX-ABORT' line is held on then ACL3 is disconnected from ACL4 
@@ -279,7 +279,7 @@ once initially activated. I also therefore need to be able to release the line
 again once the sequence is finished. That's done easy enough with few more 
 relays:
 
-{% figure caption:"Final clock schematic ([larger](/img/posts/2018/2018-01-29-1005.png))" %}![Final clock schematic](/img/posts/2018/2018-01-29-0018.png){% endfigure %}
+{{< fig caption="Final clock schematic ([larger](/img/posts/2018/2018-01-29-1005.png))" >}}![Final clock schematic](/img/posts/2018/2018-01-29-0018.png){{< /fig >}}
 
 You'll be pleased 
 to know that at last we've reached the final schematic ... if the image above 
@@ -297,7 +297,7 @@ To wrap up then let's update the timing diagrams one
 last time to show how the abort and reset stages affect the short and long 
 operation timings:
 
-{% figure %}![Final clock timings](/img/posts/2018/2018-01-29-0019.png){% endfigure %}
+{{< fig >}}![Final clock timings](/img/posts/2018/2018-01-29-0019.png){{< /fig >}}
 
 Right, that was one 
 mahoosive post and it's taken ages to write but hopefully you can now see 

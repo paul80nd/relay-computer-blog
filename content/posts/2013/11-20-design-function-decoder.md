@@ -50,24 +50,24 @@ the 'result' of the ALU is loaded to a register it will effectively clear that
 register (set all bits to off). The 3-to-8 decoder is pretty 
 straightforward:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-20-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 This design is taken directly from the 
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html) and as usual I'll need to adapt it to use the 
 smaller DPDT relays. The physical layout diagram is therefore:
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-20-0001.png)
-{% endfigure %}
+{{< /fig >}}
 
 ... and here's the same diagram with relays and wires omitted and with 
 partial ground rails added ...
 
-{% figure %}
+{{< fig >}}
 ![](/img/posts/2013/2013-11-20-0002.png)
-{% endfigure %}
+{{< /fig >}}
 
 In the next couple of posts I'll cover the Zero Detect circuit and 
 Condition Registers and then cover putting all three together on the ALU 

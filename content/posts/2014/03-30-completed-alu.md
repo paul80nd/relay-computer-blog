@@ -18,19 +18,19 @@ connect all the other completed cards together to test the full ALU. The ALU
 is made up of the logic, arithmetic and control cards and here's how those 
 cards look when plugged in to the backplane:
 
-{% figure %}![ALU Cards attached to Backplane](/img/posts/2014/2014-03-30-0000.jpg){% endfigure %}
+{{< fig >}}![ALU Cards attached to Backplane](/img/posts/2014/2014-03-30-0000.jpg){{< /fig >}}
 
 ... and 
 when viewed from the top and back ...
 
-{% figure %}
+{{< fig >}}
 ![ALU Card Pack (viewed from top)](/img/posts/2014/2014-03-30-0001.jpg)
-![ALU Card Pack (viewed from rear)](/img/posts/2014/2014-03-30-0002.jpg){% endfigure %}
+![ALU Card Pack (viewed from rear)](/img/posts/2014/2014-03-30-0002.jpg){{< /fig >}}
 
 ... 
 and finally here's the four cards laid out side by side:
 
-{% figure %}![Three ALU Cards + Backplane](/img/posts/2014/2014-03-30-0003.jpg){% endfigure %}
+{{< fig >}}![Three ALU Cards + Backplane](/img/posts/2014/2014-03-30-0003.jpg){{< /fig >}}
 
 Surprisingly enough with everything connected together it all 
 appears to work OK with only one small exception ... I was finding that the 

@@ -37,7 +37,7 @@ read:
 Visualising these steps as a timing diagram we get the 
 following:
 
-{% figure %}![Fetch/Increment Timing](/img/posts/2017/2017-09-17-0000.png){% endfigure %}
+{{< fig >}}![Fetch/Increment Timing](/img/posts/2017/2017-09-17-0000.png){{< /fig >}}
 
 As with the ALU, SETAB 
 and MOV-8 instruction classes implemented so far we need to make sure any 
@@ -54,19 +54,19 @@ To implement these timing actions we need to revisit the
 sequencer and derived pulses. As a reminder, here is the timing diagram for 
 the sequencer as it currently stands:
 
-{% figure %}![Sequence 8 cycle timing](/img/posts/2017/2017-09-17-0001.png){% endfigure %}
+{{< fig >}}![Sequence 8 cycle timing](/img/posts/2017/2017-09-17-0001.png){{< /fig >}}
 
 The ALU, SETAB and 
 MOV-8 instructions all start operating from S4 onwards using derived pulses C, 
 D and E as follows:
 
-{% figure %}![Pulses C, D and E](/img/posts/2017/2017-09-17-0002.png){% endfigure %}
+{{< fig >}}![Pulses C, D and E](/img/posts/2017/2017-09-17-0002.png){{< /fig >}}
 
 Similarly to get the 
 instruction timings we need for the fetch and increment cycles we can derive 
 additional pulses A and B as follows:
 
-{% figure %}![Additional A and B pulses](/img/posts/2017/2017-09-17-0003.png){% endfigure %}
+{{< fig >}}![Additional A and B pulses](/img/posts/2017/2017-09-17-0003.png){{< /fig >}}
 
 Effectively we're 
 using pulses C, D and E to run the loaded instruction at the same time as the 
@@ -76,25 +76,25 @@ that do need the address bus would have to wait a bit for the increment to be
 completed before performing their action. As an example, this is what the 
 timing would look like for an ALU instruction loaded from memory:
 
-{% figure %}![ALU Instruction Timing](/img/posts/2017/2017-09-17-0004.png){% endfigure %}
+{{< fig >}}![ALU Instruction Timing](/img/posts/2017/2017-09-17-0004.png){{< /fig >}}
 
 OK, so we know what we want to achieve so it's time to 
 update the sequencer and control card designs. Starting with the sequencer the 
 design currently looks like this:
 
-{% figure caption:"Sequencer design before pulses A and B added ([larger](/img/posts/2017/2017-09-17-1000.png))" %}![Sequencer design before pulses A and B added](/img/posts/2017/2017-09-17-0005.png){% endfigure %}
+{{< fig caption="Sequencer design before pulses A and B added ([larger](/img/posts/2017/2017-09-17-1000.png))" >}}![Sequencer design before pulses A and B added](/img/posts/2017/2017-09-17-0005.png){{< /fig >}}
 
 We have all the states we need in the existing 8 cycle finite 
 state machine so adding pulses A and B is simply a case of pulling off the 
 appropriate states and routing them out through the upper card as follows:
 
-{% figure caption:"Sequencer cards with pulses A and B added ([larger](/img/posts/2017/2017-09-17-1001.png))" %}![Sequencer cards with pulses A and B added](/img/posts/2017/2017-09-17-0006.png){% endfigure %}
+{{< fig caption="Sequencer cards with pulses A and B added ([larger](/img/posts/2017/2017-09-17-1001.png))" >}}![Sequencer cards with pulses A and B added](/img/posts/2017/2017-09-17-0006.png){{< /fig >}}
 
 This 
 gives us the derived pulses we'll need so it's on to the control card. We can 
 implement the fetch/increment cycle with just four relays as follows:
 
-{% figure %}![Fetch/Increment control relays](/img/posts/2017/2017-09-17-0007.png){% endfigure %}
+{{< fig >}}![Fetch/Increment control relays](/img/posts/2017/2017-09-17-0007.png){{< /fig >}}
 
 Each relay 
 reacts to the four derived pulses P-A thru P-D and activates the corresponding 
@@ -112,12 +112,12 @@ The fetch/increment relays are ready to go ...
 they just need fitting within the control cards. Here is the controller design 
 as it currently stands:
 
-{% figure caption:"Controller before fetch/increment relays added ([larger](/img/posts/2017/2017-09-17-1002.png))" %}![Controller before fetch/increment relays added](/img/posts/2017/2017-09-17-0008.png){% endfigure %}
+{{< fig caption="Controller before fetch/increment relays added ([larger](/img/posts/2017/2017-09-17-1002.png))" >}}![Controller before fetch/increment relays added](/img/posts/2017/2017-09-17-0008.png){{< /fig >}}
 
 ... and here's how the design looks after adding the 
 fetch/increment relays ...
 
-{% figure caption:"Controller design with fetch/increment relays added ([larger](/img/posts/2017/2017-09-17-1003.png))" %}![Controller design with fetch/increment relays added](/img/posts/2017/2017-09-17-0009.png){% endfigure %}
+{{< fig caption="Controller design with fetch/increment relays added ([larger](/img/posts/2017/2017-09-17-1003.png))" >}}![Controller design with fetch/increment relays added](/img/posts/2017/2017-09-17-0009.png){{< /fig >}}
 
 The four new relays are added in the top right of the upper 
 control card (CTRL:a) and pick up the passing P-C and P-D lines alongside the 

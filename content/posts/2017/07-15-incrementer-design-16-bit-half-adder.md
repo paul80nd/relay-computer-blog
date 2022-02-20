@@ -20,7 +20,7 @@ So, diving straight
 in, here is what sixteen of the 1-bit Half Adder units look like all together 
 on the usual 55 x 40 hole pad board:
 
-{% figure caption:"16 x 1-bit Half Adder Units ([larger](/img/posts/2017/2017-07-15-1000.png))" %}![16 x 1-bit Half Adder Units](/img/posts/2017/2017-07-15-0000.png){% endfigure %}
+{{< fig caption="16 x 1-bit Half Adder Units ([larger](/img/posts/2017/2017-07-15-1000.png))" >}}![16 x 1-bit Half Adder Units](/img/posts/2017/2017-07-15-0000.png){{< /fig >}}
 
 Each half adder 
 bit is made up of two relays (as seen in the previous blog post) and starting 
@@ -34,7 +34,7 @@ circuit.
 We can now connect up the inputs and outputs of the 16-bit 
 half adder as follows:
 
-{% figure caption:"16-bit half adder with input and output connections ([larger](/img/posts/2017/2017-07-15-1001.png))" %}![16-bit half adder with input and output connections](/img/posts/2017/2017-07-15-0001.png){% endfigure %}
+{{< fig caption="16-bit half adder with input and output connections ([larger](/img/posts/2017/2017-07-15-1001.png))" >}}![16-bit half adder with input and output connections](/img/posts/2017/2017-07-15-0001.png){{< /fig >}}
 
 Each bit of the half adder is directly connected to the address 
 bus meaning that the adder is always active even when the output isn't needed. 
@@ -50,7 +50,7 @@ it's always useful to observe the value a card is producing ... and you can
 never have too many LEDs of course ... so the final step is to add a row of 
 LEDs across the front of the card:
 
-{% figure caption:"Final half adder ([larger](/img/posts/2017/2017-07-15-1002.png))" %}![Final half adder](/img/posts/2017/2017-07-15-0002.png){% endfigure %}
+{{< fig caption="Final half adder ([larger](/img/posts/2017/2017-07-15-1002.png))" >}}![Final half adder](/img/posts/2017/2017-07-15-0002.png){{< /fig >}}
 
 With this design we can now 
 take a value on the address bus and increment it by one. This is only half the 

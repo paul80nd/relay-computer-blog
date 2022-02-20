@@ -24,10 +24,10 @@ relays and pop them in the sockets that make up each logic bit unit. There's
 four relays needed in each logic bit unit so thats 32 relays in total and this 
 is what it looks like:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card](/img/posts/2013/2013-12-12-0008.jpg)
 ![ALU Logic Card (close up)](/img/posts/2013/2013-12-12-0009.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 I've resisted 
 the temptation to pop the relays in and do tests earlier as I don't want to 
@@ -41,7 +41,7 @@ earlier plugged in to the B/C input of the card and the power input passed
 through the test board over to my power supply. Just for a quick reminder the 
 test board looks like this:
 
-{% figure %}![Test Board](/img/posts/2013/2013-12-12-0010.jpg){% endfigure %}
+{{< fig >}}![Test Board](/img/posts/2013/2013-12-12-0010.jpg){{< /fig >}}
 
 The front row of buttons are 
 configured (via the wire links towards the top of the card) to act as Input B 

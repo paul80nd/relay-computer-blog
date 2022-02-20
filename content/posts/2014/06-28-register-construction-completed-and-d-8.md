@@ -16,10 +16,10 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2014/06/register-constructio
 
 The A/D Register card is now complete and looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Completed A/D Register Card (front)](/img/posts/2014/2014-06-28-0000.jpg)
 ![Completed A/D Register Card (back)](/img/posts/2014/2014-06-28-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As 
 usual I've put a video together that demonstrates this card in operation. This 
@@ -31,9 +31,9 @@ finally able to perform multiple operations and accumulate the result. I
 demonstrate this in the video by performing a series of arithmetic operations 
 by hand.
 
-{% figure %}
+{{< fig >}}
 ![Measurement of temperature inside card pack (41 deg C)](/img/posts/2014/2014-06-28-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The temperature steadily climbed over a couple of minutes 
 and eventually levelled out at 41 deg C ... it's starting to look a little 
@@ -43,9 +43,9 @@ card bays are full I think I'll need to install some fans in the enclosure to
 draw the air through. Also of note was how much current was being drawn in 
 this state:
 
-{% figure %}
+{{< fig >}}
 ![Measurement of current drawn by card pack (just under 2A)](/img/posts/2014/2014-06-28-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 That's coming in just under 2A ... assuming the other 
 remaining cards draw a similar amount I'll be looking at around 8A total for 

@@ -39,7 +39,7 @@ back at the half adder's bigger sibling, the full adder, which appeared in the
 design of the ALU arithmetic card. Here's the 1-bit full adder relay wiring 
 diagram again:
 
-{% figure %}![1-bit full adder relay diagram](/img/posts/2017/2017-06-04-0000.png){% endfigure %}
+{{< fig >}}![1-bit full adder relay diagram](/img/posts/2017/2017-06-04-0000.png){{< /fig >}}
 
 This takes two 
 1-bit inputs (B and C) and adds them together to produce a 1-bit result. Any 
@@ -71,7 +71,7 @@ rather than two and has the following truth table:
 
 Likewise this simplifies the relay wiring diagram to the following:
 
-{% figure %}![1-bit half adder relay diagram](/img/posts/2017/2017-06-04-0001.png){% endfigure %}
+{{< fig >}}![1-bit half adder relay diagram](/img/posts/2017/2017-06-04-0001.png){{< /fig >}}
 
 This layout 
 focusses on lining up the carry in and outs so that each unit can be stacked 
@@ -80,7 +80,7 @@ card I'm going to take this design and rotate it 90 degrees so I can stack the
 units vertically. Doing that, and using the schematic style used for other 
 cards in this computer, we have the following:
 
-{% figure %}![1-bit half adder rotated relay diagram](/img/posts/2017/2017-06-04-0002.png){% endfigure %}
+{{< fig >}}![1-bit half adder rotated relay diagram](/img/posts/2017/2017-06-04-0002.png){{< /fig >}}
 
 ... and 
 that's all there is to a 1-bit half adder. In the next post I'll cover linking 

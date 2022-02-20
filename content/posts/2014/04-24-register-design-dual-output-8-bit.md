@@ -22,7 +22,7 @@ additionally feed the ALU B and C inputs.
 For the A and D registers 
 I ended up with the following circuit per 8-bit register:
 
-{% figure caption:"8-bit Register Design ([larger](/img/posts/2014/2014-04-24-1000.png))" %}![8-bit Register Design](/img/posts/2014/2014-04-24-0000.png){% endfigure %}
+{{< fig caption="8-bit Register Design ([larger](/img/posts/2014/2014-04-24-1000.png))" >}}![8-bit Register Design](/img/posts/2014/2014-04-24-0000.png){{< /fig >}}
 
 In this design 
 the spare pad on the left of each of the lower relays feeds an LED to show the 
@@ -38,7 +38,7 @@ however this then requires an extra relay per bit because I'll then need three
 DPDT switches rather than the two used above. Diagram wise it'd look like 
 this:
 
-{% figure caption:"8-bit Register Design with additional output ([larger](/img/posts/2014/2014-04-24-1001.png))" %}![8-bit Register Design with additional output](/img/posts/2014/2014-04-24-0001.png){% endfigure %}
+{{< fig caption="8-bit Register Design with additional output ([larger](/img/posts/2014/2014-04-24-1001.png))" >}}![8-bit Register Design with additional output](/img/posts/2014/2014-04-24-0001.png){{< /fig >}}
 
 In this design there is now the required two pads available per 
 relay ... one for the LED and one for the ALU feed. However, doubling the 

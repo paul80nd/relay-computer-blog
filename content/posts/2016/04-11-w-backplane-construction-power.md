@@ -22,7 +22,7 @@ control units are spread over two cards each requiring a different set of
 connectors. The upshot is that the backplane has three 'W1' card slots and two 
 'W2' card slots. A diagram explains it better:
 
-{% figure caption:"W Backplane Diagram ([larger](/img/posts/2016/2016-04-11-1000.png))" %}![W Backplane Diagram](/img/posts/2016/2016-04-11-0000.png){% endfigure %}
+{{< fig caption="W Backplane Diagram ([larger](/img/posts/2016/2016-04-11-1000.png))" >}}![W Backplane Diagram](/img/posts/2016/2016-04-11-0000.png){{< /fig >}}
 
 On the 
 Z backplane each individual connector is joined to it's siblings via a ribbon 
@@ -34,16 +34,16 @@ ribbon cables to join the connectors together however this time the cables
 need to weave in and out to fit around the other connectors which are in the 
 way. After much coaxing of wires I ended up with the following:
 
-{% figure %}
+{{< fig >}}
 ![W Backplane Rear View](/img/posts/2016/2016-04-11-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... 
 and when viewed from the front the backplane looks like this:
 
-{% figure %}
+{{< fig >}}
 ![W Backplane Front View](/img/posts/2016/2016-04-11-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 ... 
 and that's about it for the backplane although behind the scenes constructing 
@@ -58,11 +58,11 @@ something more permanent together for distributing the power to each of the
 backplanes and display cards. Here is the power distribution board I've put 
 together:
 
-{% figure %}
+{{< fig >}}
 ![Power Distribution Board (Front Top)](/img/posts/2016/2016-04-11-0003.jpg)
 ![Power Distribution Board (Front Rear)](/img/posts/2016/2016-04-11-0004.jpg)
 ![Power Distribution Board (Rear View)](/img/posts/2016/2016-04-11-0005.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The board has five independent channels each fed from a metal tab, 
 through a fuse and then in to a screw terminal. These provide the primary 12V 
@@ -84,9 +84,9 @@ in two female 5 way connectors stuck together and heat shrinked which can then
 be plugged in to the right angled 10 way IDC connector of each backplane/card. 
 Here is a picture of the Z power cable:
 
-{% figure %}
+{{< fig >}}
 ![Power Distribution Cable](/img/posts/2016/2016-04-11-0006.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 That's it then, with the backplane and power distribution in place 
 I can now demonstrate all of the parts of the computer constructed so far 

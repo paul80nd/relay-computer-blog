@@ -17,10 +17,10 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2015/05/register-constructio
 Following on from my last post, and after popping in some relays, the 
 instruction register is complete and looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Completed Instruction Register (front view)](/img/posts/2015/2015-05-16-0000.jpg)
 ![Completed Instruction Register (rear view)](/img/posts/2015/2015-05-16-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 As usual I've put a video together that 
 demonstrates this card in operation. In this video I give a quick overview of 

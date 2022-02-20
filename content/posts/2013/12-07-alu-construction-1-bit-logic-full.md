@@ -20,11 +20,11 @@ sockets then wire wrap) I can't resist fully assembling a single bit alone to
 see if/how it works. Here of some pictures of that single bit all soldered in 
 and wired up:
 
-{% figure %}
+{{< fig >}}
 ![ALU Logic Card with first bit completed](/img/posts/2013/2013-12-07-0000.jpg)
 ![ALU Logic Card first bit close up](/img/posts/2013/2013-12-07-0001.jpg)
 ![ALU Logic Card first bit (solder side)](/img/posts/2013/2013-12-07-0002.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 This is the first bit logic unit out of 8 in total and effectively 
 the pattern is repeated 4 times across the board and for 2 rows up the board. 

@@ -28,10 +28,10 @@ Right, let's start with the sequencer. We need to pull
 off two new pulses (A and B) from the 8-cycle finite state machine and with 
 the changes in place the sequencer now looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer cards (top side)](/img/posts/2018/2018-01-16-0000.jpg)
 ![Sequencer cards (rear side)](/img/posts/2018/2018-01-16-0001.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 You'll be 
 forgiven for not spotting the changes straight away (doubly so if you've not 
@@ -39,19 +39,19 @@ been following my blog). The sequencer gains two LEDs to show the new pulses
 (on the lower card) but other than that it's just wire links. The two cards 
 close up look like this:
 
-{% figure %}
+{{< fig >}}
 ![Sequencer Upper Card LEDs](/img/posts/2018/2018-01-16-0002.jpg)
 ![Sequencer Lower Card LEDs](/img/posts/2018/2018-01-16-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 That's it for 
 the sequencer ... the changes on the controller cards are a bit more 
 involved:
 
-{% figure %}
+{{< fig >}}
 ![Controller Cards (top side)](/img/posts/2018/2018-01-16-0004.jpg)
 ![Controller Cards (rear side)](/img/posts/2018/2018-01-16-0005.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 On the 
 upper card (shown on the left when viewed from the front) there is a group of 
@@ -66,10 +66,10 @@ middle of the card.
 A close up photo of the front of the cards 
 shows the newly added LEDs:
 
-{% figure %}
+{{< fig >}}
 ![Upper Controller Card LEDs](/img/posts/2018/2018-01-16-0006.jpg)
 ![Lower Controller Card LEDs](/img/posts/2018/2018-01-16-0007.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 The upper 
 card gains the Memory Read LED whilst the lower card gains Load Instruction, 
@@ -77,10 +77,10 @@ Program Counter Select/Load and Incrementer Select/Load. All five of these
 control lines are fired as part of the fetch and increment cycle. Here's a 
 close up of the LEDs viewed from the rear side:
 
-{% figure %}
+{{< fig >}}
 ![Upper Controller Card LEDs (rear view)](/img/posts/2018/2018-01-16-0008.jpg)
 ![Lower Controller Card LEDs (rear view)](/img/posts/2018/2018-01-16-0009.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 You can see that much of the header strip is not soldered down yet and this 
 is because as the controller gains more functionality there'll be more LEDs 

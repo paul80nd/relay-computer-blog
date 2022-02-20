@@ -18,9 +18,9 @@ architecture that will make up my relay computer project — this time it's
 buses and registers. Here again is the architecture I'll be building against 
 (from the [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html)):
 
-{% figure caption:"System Architecture for a Relay Computer[^1]" %}
+{{< fig caption="System Architecture for a Relay Computer[^1]" >}}
 ![System Architecture for a Relay Computer](/img/posts/2013/2013-11-05-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 Buses are simply a set of wires that 
 connect up the various parts of a computer. As each wire can carry 1 bit it 

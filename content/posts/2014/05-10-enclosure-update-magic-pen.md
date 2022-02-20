@@ -17,12 +17,12 @@ you've read my recent posts you'll know I ordered in some laser cut acrylic
 parts for my enclosure including one part which is engraved as well as cut for 
 the switch panel. Close up it looks like this:
 
-{% figure %}
+{{< fig >}}
 ![Laser engraved switch panel (close up)](/img/posts/2014/2014-05-10-0000.jpg)
 ![Switch panel with infill](/img/posts/2014/2014-05-10-0001.jpg)
 ![Panel with infill following cleaning](/img/posts/2014/2014-05-10-0002.jpg)
 ![Full switch panel with infilled text](/img/posts/2014/2014-05-10-0003.jpg)
-{% endfigure %}
+{{< /fig >}}
 
 Only problem now is I've got tons of cleaning fluid left and 
 a pen mostly full of paint so I'm off now to find things around the house to 

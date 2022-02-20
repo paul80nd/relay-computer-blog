@@ -23,14 +23,14 @@ systems are combined.
 To quickly recap ... the 8-cycle FSM will 
 produce the following states given a clock signal as an input:
 
-{% figure %}![Output from 8-cycle FSM](/img/posts/2015/2015-03-22-0000.png){% endfigure %}
+{{< fig >}}![Output from 8-cycle FSM](/img/posts/2015/2015-03-22-0000.png){{< /fig >}}
 
 Producing the 
 instruction timing pulses is very straightforward and is just a case of either 
 taking the FSM states directly or combining them together so that we get the 
 following:
 
-{% figure %}![Instruction timing pulses](/img/posts/2015/2015-03-22-0001.png){% endfigure %}
+{{< fig >}}![Instruction timing pulses](/img/posts/2015/2015-03-22-0001.png){{< /fig >}}
 
 It really is 
 as simple as that ... all the hard work has been done in the design of the 
@@ -39,13 +39,13 @@ feedback upsetting the FSM - effectively the didoes act as a logic OR gate.
 Later on I'll cover the control board design which will take these timing 
 pulses and use them to operate the control lines thus:
 
-{% figure %}![Pulses required for each instruction type](/img/posts/2015/2015-03-22-0002.png){% endfigure %}
+{{< fig >}}![Pulses required for each instruction type](/img/posts/2015/2015-03-22-0002.png){{< /fig >}}
 
 With the theory in hand we can take the sequencer design from my 
 last post and wire up the timing pulses. I'll start off with the basic relays 
 on the usual 55 x 40 hole pad board:
 
-{% figure caption:"Sequencer Relays ([larger](/img/posts/2015/2015-03-22-1000.png))" %}![Sequencer Relays](/img/posts/2015/2015-03-22-0003.png){% endfigure %}
+{{< fig caption="Sequencer Relays ([larger](/img/posts/2015/2015-03-22-1000.png))" >}}![Sequencer Relays](/img/posts/2015/2015-03-22-0003.png){{< /fig >}}
 
 The only slight 
 difference from the design in my last post is that the relays are now further 
@@ -54,7 +54,7 @@ additional functionality is added to the sequencer and pulse distribution
 things fit in better. If I add on all the internal wiring for the 8-cycle FSM 
 we then get the following:
 
-{% figure caption:"8-stage FSM Relays and wiring ([larger](/img/posts/2015/2015-03-22-1001.png))" %}![8-stage FSM Relays and wiring](/img/posts/2015/2015-03-22-0004.png){% endfigure %}
+{{< fig caption="8-stage FSM Relays and wiring ([larger](/img/posts/2015/2015-03-22-1001.png))" >}}![8-stage FSM Relays and wiring](/img/posts/2015/2015-03-22-0004.png){{< /fig >}}
 
 The FSM 
 takes the clock and reset signal as inputs (shown as the yellow lines above). 
@@ -71,7 +71,7 @@ be deactivated allowing the FSM to continue on.
 With the FSM in 
 place I can now tap the state outputs to create the timing pulses:
 
-{% figure caption:"FSM with added pulse distribution ([larger](/img/posts/2015/2015-03-22-1002.png))" %}![FSM with added pulse distribution](/img/posts/2015/2015-03-22-0005.png){% endfigure %}
+{{< fig caption="FSM with added pulse distribution ([larger](/img/posts/2015/2015-03-22-1002.png))" >}}![FSM with added pulse distribution](/img/posts/2015/2015-03-22-0005.png){{< /fig >}}
 
 I've 
 decided that even where multiple FSM states don't need to be combined, that 
@@ -84,7 +84,7 @@ the card is up to. As there's nothing on the left hand 'W1' card it's only the
 'W2' card that'll need indicators on it ... for now at least. Here's what they 
 look like:
 
-{% figure caption:"W2 card indicators ([larger](/img/posts/2015/2015-03-22-1003.png))" %}![W2 card indicators](/img/posts/2015/2015-03-22-0006.png){% endfigure %}
+{{< fig caption="W2 card indicators ([larger](/img/posts/2015/2015-03-22-1003.png))" >}}![W2 card indicators](/img/posts/2015/2015-03-22-0006.png){{< /fig >}}
 
 On the left are the 
 outputs from the FSM. Each of the Sx' outputs are shown (although they're 
@@ -103,20 +103,20 @@ Here is a diagram of how
 the indicators would look when stepping through the states of the 8-cycle 
 FSM:
 
-{% figure %}![States of indicators whilst FSM running](/img/posts/2015/2015-03-22-0007.png){% endfigure %}
+{{< fig >}}![States of indicators whilst FSM running](/img/posts/2015/2015-03-22-0007.png){{< /fig >}}
 
 With the indicators added to the design so far we get the 
 following:
 
-{% figure caption:"Sequencer with added indicators ([larger](/img/posts/2015/2015-03-22-1004.png))" %}![Sequencer with added indicators](/img/posts/2015/2015-03-22-0008.png){% endfigure %}
+{{< fig caption="Sequencer with added indicators ([larger](/img/posts/2015/2015-03-22-1004.png))" >}}![Sequencer with added indicators](/img/posts/2015/2015-03-22-0008.png){{< /fig >}}
 
 The 
 next job is to add to the connectors so that the cards can talk to the rest of 
 the computer. These are the connectors we'll need, firstly for the 'W1' card 
 on the left followed by the 'W2' card on the right:
-{% figure caption:"W1 Connectors ([larger](/img/posts/2015/2015-03-22-1005.png))" %}![W1 Connectors](/img/posts/2015/2015-03-22-0009.png){% endfigure %}
+{{< fig caption="W1 Connectors ([larger](/img/posts/2015/2015-03-22-1005.png))" >}}![W1 Connectors](/img/posts/2015/2015-03-22-0009.png){{< /fig >}}
 
-{% figure caption:"W2 Connectors ([larger](/img/posts/2015/2015-03-22-1006.png))" %}![W2 Connectors](/img/posts/2015/2015-03-22-0010.png){% endfigure %}
+{{< fig caption="W2 Connectors ([larger](/img/posts/2015/2015-03-22-1006.png))" >}}![W2 Connectors](/img/posts/2015/2015-03-22-0010.png){{< /fig >}}
 
 These are the usual right 
 angle boxed headers used on previous cards and as before lines marked '***' 
@@ -148,9 +148,9 @@ On the W2 connectors the lines are as follows:
   * RSA/RSB/RSC/RSD ... Register Select A, B, C and D
   * ADD/INC/AND/ORR/XOR/NOT/SHL/ICY ... Internal ALU control lines
 
-{% figure caption:"Sequencer with added connectors and interconnects ([larger](/img/posts/2015/2015-03-22-1007.png))" %}![Sequencer with added connectors and interconnects](/img/posts/2015/2015-03-22-0011.png){% endfigure %}
+{{< fig caption="Sequencer with added connectors and interconnects ([larger](/img/posts/2015/2015-03-22-1007.png))" >}}![Sequencer with added connectors and interconnects](/img/posts/2015/2015-03-22-0011.png){{< /fig >}}
 
-{% figure caption:"8-cycle sequencer final design ([larger](/img/posts/2015/2015-03-22-1008.png))" %}![8-cycle sequencer final design](/img/posts/2015/2015-03-22-0012.png){% endfigure %}
+{{< fig caption="8-cycle sequencer final design ([larger](/img/posts/2015/2015-03-22-1008.png))" >}}![8-cycle sequencer final design](/img/posts/2015/2015-03-22-0012.png){{< /fig >}}
 
 As 
 always should you wish to take a much closer look at this design (and to be 

@@ -17,9 +17,9 @@ architecture that will make up my relay computer project — this time it's the
 memory. Here again is the architecture I'll be building against (from the 
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html))
 
-{% figure caption:"System Architecture for a Relay Computer[^1]" %}
+{{< fig caption="System Architecture for a Relay Computer[^1]" >}}
 ![System Architecture for a Relay Computer](/img/posts/2013/2013-11-06-0000.png)
-{% endfigure %}
+{{< /fig >}}
 
 In my last post I wrote about the computer 
 registers, each of which can store a binary value — they're typically very 
