@@ -11,7 +11,29 @@
 {{ end }}
 <!-- author end -->
 
-{% seo %}
+<!-- SEO begin -->
+{{ $keywords := (delimit $page.Keywords ",") | default $page.Site.Params.keywords }}
+{{ with $keywords }}
+    <meta name="keywords" content="{{ . }}">
+{{ end }}
+{{ $description := $page.Description | default $page.Params.summary | default $page.Summary | default $page.Site.Params.description }}
+{{ with $description }}
+    <meta name="description" content="{{ . }}">
+{{ end }}
+{{ $title := printf "%s | %s " $page.Title $page.Site.Title }}
+{{ $title = strings.TrimLeft " | " $title}}
+{{ with $title }}
+    <title>{{ $title }}</title>
+{{ end }}
+<link rel="canonical" href="{{ $page.Params.canonical | default $page.Permalink }}">
+<!-- SEO end -->
+
+<!-- alternate outputs begin -->
+{{ range $page.AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $title }}">
+{{ end }}
+<!-- alternate outputs end -->
+
 <!-- Begin CSS Styles -->
 <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
