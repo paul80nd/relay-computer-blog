@@ -1,0 +1,41 @@
+---
+layout: default
+title: A blog about a computer made from relays
+subtitle: My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.
+hero_image: /assets/img/header-bg.jpg
+pagination: 
+  enabled: true
+---
+
+{% if paginator.page == 1 %}
+<div class="tile is-ancestor">
+  <div class="tile is-vertical">
+    <div class="tile">
+      <div class="tile is-parent is-4">
+        {% include home-welcome.html %}   
+      </div>
+      <div class="tile is-parent">
+        {% include home-spotlight.html %}  
+      </div>
+    </div>              
+  </div>
+</div> 
+{% endif %}
+
+<div class="columns is-multiline">
+  {% for post in paginator.posts %}
+  {% unless post == site.posts.first %}
+  <div class="column is-half is-one-third-widescreen">
+      {% include home-postcard.html %}
+  </div>
+  {% endunless %}
+  {% endfor %} 
+
+  {% if paginator.page == 1 %}
+  <div class="column is-half is-one-third-widescreen">
+    {% include home-find-me.html %}
+  </div>
+  {% endif %}
+</div>
+  
+{% include home-pager.html %}  
