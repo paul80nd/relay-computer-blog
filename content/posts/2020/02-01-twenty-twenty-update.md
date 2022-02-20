@@ -1,6 +1,7 @@
 ---
 layout: post
 title: '2020 Update'
+slug: 'twenty-twenty-update'
 date: '2020-02-01T03:03:00.004Z'
 author: Paul Law
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Procrastination is the thief of time
+slug: 'procrastination-is'
 date: '2019-01-06T11:00:00.001Z'
 author: Paul Law
 tags:

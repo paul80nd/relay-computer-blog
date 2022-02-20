@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 16-bit Register Design
+slug: 16bit-register-design
 date: '2019-07-15T11:00:00.001Z'
 author: Paul Law
 tags:

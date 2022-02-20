@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 16-bit Register PCB Design
+slug: 16bit-register-pcb-design
 date: '2019-08-09T01:00:00.001Z'
 author: Paul Law
 tags:
