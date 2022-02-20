@@ -3,7 +3,9 @@
 <html lang="{{ .Language.Lang }}">
 
 <head>
+  {{ partial "widgets/header.html" $page }}
   {{ partial "widgets/head.html" $page }}
+  {{ partial "widgets/footer.html" $page }}
 </head>
 
 <body>
