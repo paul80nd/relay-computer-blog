@@ -17,12 +17,13 @@
 <link rel="canonical" href="{{ $page.Params.canonical | default $page.Permalink }}" />
 {{ with $keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
-<!-- Begin CSS Styles -->
 <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/app.css">
-<!-- End CSS Styles -->
+{{ $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "assets/css")) }}
+{{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ end }}
 
 {{ $icon16 := (partial "functions/favicon.html" (dict "context" $page "size" 16)) -}}
 {{ $icon32 := (partial "functions/favicon.html" (dict "context" $page "size" 32)) -}}
