@@ -1,5 +1,5 @@
 {{ $image := .Params.thumbnail }}
-<article class="card bg-img" style="display: flex; flex-flow: column-reverse; height:100%;{{ with $image }}{{ $imageRes := resources.Get $image }} background-image: url('{{ $imageRes.RelPermalink }}'){{end}}" >
+<article class="card bg-img" style="display: flex; flex-flow: column-reverse; height:100%;{{ with $image }} background-image: url('{{ $image }}'){{end}}" >
   <div class="card-content" style="background-color: rgba(255,255,255,0.95); flex-basis:0; margin-top: 8em;">
       <div class="content">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
