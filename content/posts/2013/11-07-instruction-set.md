@@ -12,8 +12,7 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/instruction-set.html
 ---
 
 In the last post I promised to reveal the planned instruction set for the 
-computer and [here it is]({% link /assets/pdf/instruction-set.pdf %}) 
-(pdf file).
+computer and [here it is](/pdf/instruction-set.pdf) (pdf file).
 
 This should be viewed alongside the architecture diagram which 
 can be found in my previous architecture posts ... and to be fair if you've 
