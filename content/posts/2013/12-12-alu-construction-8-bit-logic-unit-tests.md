@@ -52,7 +52,7 @@ So, the question is ... does
 it all work? Well, I'm delighted (and slightly surprised) to say that yes, yes 
 it does. Want some proof ... OK then, here's a video :)
 
-{% include youtube-player.html id="awcvyfjWVkI" %}
+{{< youtube awcvyfjWVkI >}}
 
 I'm really starting to feel some progress has 
 been made now and although there's still so, so, so much to do to finish the 

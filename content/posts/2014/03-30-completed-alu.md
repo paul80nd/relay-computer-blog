@@ -55,7 +55,7 @@ time but if nothing else it's reminded me that I need to switch internet
 provider ... it took 4 hours to upload the full HD video at around 2Gb in 
 size. Anyho, here is said video:
 
-{% include youtube-player.html id="2PS19gU3534" %}
+{{< youtube 2PS19gU3534 >}}
 
 With the 
 ALU now complete and working as expected I've checked off the first major 

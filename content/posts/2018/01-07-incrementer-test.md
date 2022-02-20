@@ -39,7 +39,7 @@ when stacked together they look like this ...
 As in my other 'completion' blog posts I've put together a video which gives 
 an overview of the incrementer and shows it in use:
 
-{% include youtube-player.html id="GfK5cpXfPv8" %}
+{{< youtube GfK5cpXfPv8 >}}
 
 With the incrementer unit now complete we're incredibly close to a computer 
 that can step through a program held in memory. The last step is to update the 

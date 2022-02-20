@@ -86,7 +86,7 @@ put a video together that demonstrates this card in operation. In this video I
 give a quick overview of the card and then demonstrate triggering the MOV8, 
 ALU and SETAB decoded results. 
 
-{% include youtube-player.html id="pYF2HUBwMp4" %}
+{{< youtube pYF2HUBwMp4 >}}
 
 That's it for this card ... at least for now. It has just enough 
 functionality to enable the computer to perform copying values between 

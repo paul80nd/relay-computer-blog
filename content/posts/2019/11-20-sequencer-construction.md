@@ -16,11 +16,11 @@ can get on with soldering up the cards and giving them a test.
 
 Let's start with the lower card and, as before, I've put together a video which covers the highlights:
 
-{% include youtube-player.html id="HBvL6sCmf1c" %}
+{{< youtube HBvL6sCmf1c >}}
 
 Likewise, here's a video covering the upper card construction which also includes giving the cards a test together and then testing the whole sequencer unit when placed in the computer:
 
-{% include youtube-player.html id="aIFWOAhqXLY" %}
+{{< youtube aIFWOAhqXLY >}}
 
 One thing I didn't cover in the video is just how much quicker it is constructing these cards compared to the wire wrap method
 I was using previously.

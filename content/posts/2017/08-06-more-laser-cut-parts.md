@@ -70,7 +70,7 @@ was right, if your material choice was the right one and if it made it through
 the post in one piece. To capture that 'special' moment I've put together a 
 video which also shows what I do with the panels afterwards:
 
-{% include youtube-player.html id="nymZrhuwn8Q" %}
+{{< youtube nymZrhuwn8Q >}}
 
 That's it for this post ... hopefully the video has 
 given you a bit of an insight to making laser cut parts (it's the sort of 

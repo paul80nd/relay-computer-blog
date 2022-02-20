@@ -63,7 +63,7 @@ That’s the construction completed so let’s compare the finished card with th
 
 So the question is now … ‘does it work?’ … well ‘kinda’ but I’ll let the video take over at this point …
 
-{% include youtube-player.html id="Jqr_2ryiy2c" %}
+{{< youtube Jqr_2ryiy2c >}}
 
 This post seems to be doing a lot to test your powers of observation (and perhaps testing your patience too no doubt) … you may have noticed that the photos above don’t quite match the finished article (pause your eyes if you want to guess at the differences). Firstly there’s resistors added over every capacitor to limit the inrush currents and save me from destroying diodes (took me a while before I realised unfortunately … luckily diodes are cheap). The clock schematic at the top of this post does include these resistors and that’s because that diagram was also created post mass diode-ocide. Next difference is the capacitors in the video are smaller than those in the picture (no, they’re not just further away) … the larger ones had a higher capacitance and therefore held the relays on longer which helped when testing the clock circuitry. With that tested I could then drop in smaller capacitors which shortened the clock time and makes each auxiliary operation quicker. So why didn’t I take an updated picture … well, if you’ve watched the video you’ll know the answer to that … queue the music ;)
 

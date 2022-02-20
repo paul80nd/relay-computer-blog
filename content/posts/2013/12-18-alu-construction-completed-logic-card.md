@@ -32,7 +32,7 @@ card in operation. This one also breaks tradition with my previous videos,
 where the only sound is the relays clicking, and has a narrative track added 
 courtesy of my very own 'dulcet' tones.
 
-{% include youtube-player.html id="pVNtRphZdQI" %}
+{{< youtube pVNtRphZdQI >}}
 
 As you can well imagine I'm pretty pleased that everything is working as 
 intended but this is just the beginning ... there's still two other cards 

@@ -15,7 +15,7 @@ thumbnail: /img/posts/2020/2020-01-05-4000.jpg
 In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and
 tested. As before I've put a video together which covers the highlights:
 
-{% include youtube-player.html id="R2zvB_M4D-k" %}
+{{< youtube R2zvB_M4D-k >}}
 
 As you can see towards the end of the video that's the basics of branching complete and finally my computer is capable of
 running more complicated programs that have loops and decision making points in them. As reaching this point has coincided

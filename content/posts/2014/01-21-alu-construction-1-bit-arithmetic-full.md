@@ -59,7 +59,7 @@ This time around the first four red buttons are hooked up to (from
 the left, in order): Input B, Input C, Carry In, ~Carry In. As usual, I've 
 taken a quick video clip showing the circuit being tested:
 
-{% include youtube-player.html id="V8kxI0QUauc" %}
+{{< youtube V8kxI0QUauc >}}
 
 Next job for this card will be to complete 
 the remaining power rails underneath (another fiddly job) and then it's on to 

@@ -93,7 +93,7 @@ up photos and that's because I've gone to the time and effort of making a
 but more importantly shows the computer running through a program - the 
 'landmark moment' mentioned at the top of this post. Here's that video:
 
-{% include youtube-player.html id="yx3dHbjkvEM" %}
+{{< youtube yx3dHbjkvEM >}}
 
 As I mention at the end of the video there's a lingering question of what's 
 next. Well, as I said, it's a pain to enter a program in to the computer at 

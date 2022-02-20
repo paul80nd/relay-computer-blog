@@ -32,4 +32,4 @@ got to so hopefully that'll start appearing over the next week or so but in
 the meanwhile here's a taster with the result 
 of this evenings solder fest ...
 
-{% include youtube-player.html id="oxtpizb_oNw" %}
+{{< youtube oxtpizb_oNw >}}

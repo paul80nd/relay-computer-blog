@@ -31,7 +31,7 @@ on the blog or on YouTube against the video or feel free to ask any questions
 about the computer as although I know this is a pretty niche subject I can't 
 help feeling I'm talking to myself ;)
 
-{% include youtube-player.html id="JyeZpZLaZNQ" %}
+{{< youtube JyeZpZLaZNQ >}}
 
 There's just one more card to go now before the first card bay is full 
 ... the A/D register card. This will effectively be a duplicate of this card 

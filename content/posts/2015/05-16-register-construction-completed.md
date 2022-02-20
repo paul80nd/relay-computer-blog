@@ -28,7 +28,7 @@ the card and then demonstrate loading values in to the register and
 instruction bus. I also  demonstrate gating part of the instruction bus on to 
 the data bus for the I2B (Immediate to Bus) functionality.
 
-{% include youtube-player.html id="42g6BejUVUA" %}
+{{< youtube 42g6BejUVUA >}}
 
 That's about all there is to say for this 
 card as it's relatively simple and shares much of its design with the other 

@@ -19,16 +19,16 @@ SETAB instructions for now.
 
 Let's start with the lower card and, as before, I've put together a video which covers the highlights:
 
-{% include youtube-player.html id="kMu4q65IUk8" %}
+{{< youtube kMu4q65IUk8 >}}
 
 Likewise, here's a video covering the upper card construction;
 
-{% include youtube-player.html id="iCu2DRJhtUc" %}
+{{< youtube iCu2DRJhtUc >}}
 
 Finally here's a video which brings the two cards together and gives the whole controller unit a test (on its own to
 begin with and then installed as part of the computer):
 
-{% include youtube-player.html id="Z1RIFHWTGRo" %}
+{{< youtube Z1RIFHWTGRo >}}
 
 So, with the controller done I'm really close to getting branching working in the computer. However, as I covered in the last
 video above, the computer can't currently identify a GOTO opcode even though the controller can perform one. What's needed

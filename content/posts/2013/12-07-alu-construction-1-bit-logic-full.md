@@ -39,7 +39,7 @@ being as I chose to use wire wrap it's trivial to correct mistakes. With
 everything then looking good it was time to stick in some relays and apply the 
 power:
 
-{% include youtube-player.html id="3tS5AH3d7kY" %}
+{{< youtube 3tS5AH3d7kY >}}
 
 All working as expected! This actually 
 represents a bit of a mini-milestone in the construction and it's really nice 

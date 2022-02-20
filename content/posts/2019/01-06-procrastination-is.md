@@ -16,7 +16,7 @@ I typically take a summer break from working on the relay computer so that I can
 
 The computer is now at the stage where you can load a simple program into memory and then let the computer execute it line-by-line. Instruction wise, you can set a value in register A or B (SETAB), copy a value between any of the four registers A, B, C and D (MOVE-8) and finally perform a basic ALU operation such as add, increment, and, or, xor and so on (ALU). Way back in April I put together a video which covers the current functionality so the following might be worth a look if you've not seen it already:
 
-{% include youtube-player.html id="eyUlF1wmxgA" %}
+{{< youtube eyUlF1wmxgA >}}
 
 What's missing from the computer at the moment is the ability to branch and loop. Any program fed into the computer is executed line by line and there's no way to jump to another part of the program, say, depending on the result of some operation. This really limits the scope of how useful any program written is going to be. Pretty much any useful computer  will have the concept of branching and looping in some form and this computer is no exception.
 

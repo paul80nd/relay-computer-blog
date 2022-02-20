@@ -50,7 +50,7 @@ I've put together a video which shows everything built so far working together
 which includes a quick tour around the new upper enclosure so rather than me 
 repeat all the detail here you can find the video below:
 
-{% include youtube-player.html id="-nCNhBx65u0" %}
+{{< youtube -nCNhBx65u0 >}}
 
 As mentioned at the end of the video I'm in the 
 process of moving house now so construction on the computer is going to slow 

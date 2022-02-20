@@ -31,7 +31,7 @@ now customary when I've completed a card I've created a video replete with
 voiceover track attempting to demonstrate the card in action and explain 
 what's going on. Here it is:
 
-{% include youtube-player.html id="ZmQDZCt3m10" %}
+{{< youtube ZmQDZCt3m10 >}}
 
 The 
 completion of the control card actually represents a bit of a mini-milestone 

@@ -80,7 +80,7 @@ along with the sequencer. In this video I give a quick overview of the cards
 and then demonstrate running through the three instructions MOV-8, ALU and 
 SETAB.
 
-{% include youtube-player.html id="fJzvwv28CEE" %}
+{{< youtube fJzvwv28CEE >}}
 
 That's it for now on the controller ... 
 when combined with the sequencer it's operating the required control lines to 

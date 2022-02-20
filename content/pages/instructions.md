@@ -14,4 +14,4 @@ The list of available instructions is as follows:
 
 There's also a video summary (as at Jan 2020) of the available instructions:
 
-{% include youtube-player.html id="szvNLpovAGM" %}
+{{< youtube szvNLpovAGM >}}

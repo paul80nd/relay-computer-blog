@@ -175,7 +175,7 @@ in operation. In this video I give a quick overview of the cards and then
 demonstrate running through the 8 stages of the finite state machine and 
 producing the three derived pulses C, D and E.
 
-{% include youtube-player.html id="P2G8LHeWb80" %}
+{{< youtube P2G8LHeWb80 >}}
 
 That's it for the sequencer ... at least for 
 now. It produces all the pulses that will be needed for the computer to 

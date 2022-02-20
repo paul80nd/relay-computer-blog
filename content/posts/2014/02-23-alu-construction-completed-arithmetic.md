@@ -28,7 +28,7 @@ YouTube video together which gives a walkthrough of the arithmetic card in
 operation ... and as before this one also has a narrative track delivered by 
 my own fair gob.
 
-{% include youtube-player.html id="PXoxrAFgzKs" %}
+{{< youtube PXoxrAFgzKs >}}
 
 So, that's two out of the three ALU cards done with just the control card 
 left to do. Well, I say that ... after the ALU is completed there's all those 

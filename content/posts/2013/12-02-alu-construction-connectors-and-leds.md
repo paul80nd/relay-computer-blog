@@ -86,7 +86,7 @@ the LEDs on the Logic card being tested ... you'll just have to trust me that
 the others work as it's not all that quick to take videos, run them through 
 iMovie and then upload them to YouTube:
 
-{% include youtube-player.html id="oxtpizb_oNw" %}
+{{< youtube oxtpizb_oNw >}}
 
 That's enough for this post ... it always 
 surprises me how much solder I get though and this has been no exception so 

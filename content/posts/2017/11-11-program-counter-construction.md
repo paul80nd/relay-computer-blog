@@ -96,7 +96,7 @@ As always I've created a video which gives an overview
 of the card and shows it working in isolation of the computer as well as when 
 plugged in to the computer.
 
-{% include youtube-player.html id="geT5kJOs29c" %}
+{{< youtube geT5kJOs29c >}}
 
 Next up will be the memory card construction which 
 is far more interesting than boring old registers. More interesting and more 

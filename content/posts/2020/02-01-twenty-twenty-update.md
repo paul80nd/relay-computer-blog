@@ -22,31 +22,31 @@ I've repeated them below.
 In episode 1/6 I gave an overview of the underlying architecture of my relay computer and dipped in to some of the decisions
 that led to that architecture:
 
-{% include youtube-player.html id="NfvgQCoFykE" %}
+{{< youtube NfvgQCoFykE >}}
 
 In episode 2/6 I covered the instruction set (collection of opcodes) which can be used to tell the computer what to do:
 
-{% include youtube-player.html id="szvNLpovAGM" %}
+{{< youtube szvNLpovAGM >}}
 
 Given opcodes are made up of 8-bit binary values they're not particularly user friendly and so in episode 3/6 I introduced an
 assembly language which makes it much easier to program the computer:
 
-{% include youtube-player.html id="IQW445iMnrc" %}
+{{< youtube IQW445iMnrc >}}
 
 In episode 4/6 I used the architecture diagram and  assembly language from the earlier videos to create a program that can
 calculate a portion of the Fibonacci series. I then used the list of opcodes to 'hand assemble' the program making it suitable
 for loading into the computer:
 
-{% include youtube-player.html id="_iBnu5HXscI" %}
+{{< youtube _iBnu5HXscI >}}
 
 Episode 5/6 I took a visual tour around my relay computer as it stands today:
 
-{% include youtube-player.html id="B_U0LM3CCgA" %}
+{{< youtube B_U0LM3CCgA >}}
 
 In the last video, arguably the main attraction, I take everything covered so far and put it all together to demonstrate
 running the Fibonacci program, for real, on my relay computer:
 
-{% include youtube-player.html id="JZyFSrNyhy8" %}
+{{< youtube JZyFSrNyhy8 >}}
 
 So, all in all, there's around 144 minutes of content in those videos above but I can assure you it took a lot longer than
 that to create them so I'm pretty much video'd out for the moment ;) That said though, in February I'm going to have a think

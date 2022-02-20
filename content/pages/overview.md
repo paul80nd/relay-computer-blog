@@ -40,9 +40,9 @@ Finally, an initial instruction set can be found here:
 If you like your information delivered in a more visual way here's the most recent collection of 'update' videos from Jan
 2020 which cover off many of the items above:
 
-{% include youtube-player.html id="NfvgQCoFykE" %}
-{% include youtube-player.html id="szvNLpovAGM" %}
-{% include youtube-player.html id="IQW445iMnrc" %}
-{% include youtube-player.html id="_iBnu5HXscI" %}
-{% include youtube-player.html id="B_U0LM3CCgA" %}
-{% include youtube-player.html id="JZyFSrNyhy8" %}
+{{< youtube NfvgQCoFykE >}}
+{{< youtube szvNLpovAGM >}}
+{{< youtube IQW445iMnrc >}}
+{{< youtube _iBnu5HXscI >}}
+{{< youtube B_U0LM3CCgA >}}
+{{< youtube JZyFSrNyhy8 >}}

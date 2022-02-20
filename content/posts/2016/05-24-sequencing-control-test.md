@@ -32,7 +32,7 @@ which gives an overview of what's changed since the last milestone, a tour of
 the computer as it currently stands and finally a demonstration of running a 
 program through the computer.
 
-{% include youtube-player.html id="d3_WiqAKCds" %}
+{{< youtube d3_WiqAKCds >}}
 
 So, 
 with a line drawn under what's been built so far it's time to look at what 

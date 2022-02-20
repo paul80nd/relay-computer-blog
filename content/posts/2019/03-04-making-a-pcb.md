@@ -25,7 +25,7 @@ over how it all went.
 
 So, let's start at the beginning where I prepare the copper clad board and print out the PCB design:
 
-{% include youtube-player.html id="c-LOiyI5N-g" %}
+{{< youtube c-LOiyI5N-g >}}
 
 One thing that does strike me watching this video (apart from cringing at hearing my own voice) is just how
 uncertain and unsure I am of everything I'm doing. It's fair to say that my previous videos have been pretty
@@ -36,7 +36,7 @@ have no idea how it'll turn out.
 
 In part 2 I give the printed design a check and attempt to transfer it to the copper clad board:
 
-{% include youtube-player.html id="RouOhDSAcRA" %}
+{{< youtube RouOhDSAcRA >}}
 
 This video's featured disaster-du-jour is toner transfer, well, not transferring. In hindsight I think using an
 iron does introduce plenty of scope for the transfer not working ... especially when it's an iron as tiny as
@@ -53,7 +53,7 @@ clean.
 
 In part 3 I finally manage to get the design transferred to the board and move on to etching:
 
-{% include youtube-player.html id="Su1j4IVEBzw" %}
+{{< youtube Su1j4IVEBzw >}}
 
 I think it'll be worth me investing in some decent etch resist pens so I can touch up any small issues in the
 toner transfer. As this is the point of no return for the board it's definitely worth getting it as tidy and
@@ -81,7 +81,7 @@ removing not only the copper but also the etch resist in places.
 By part 4 the board is etched and it's on to tin plating, inspecting the board and attempting (in vain) to fix
 some of the broken tracks:
 
-{% include youtube-player.html id="bNQbhyC7etU" %}
+{{< youtube bNQbhyC7etU >}}
 
 The tin plating actually went quite well although admittedly it's not a cheap product but it does make the PCB
 look good and protects the copper. I could probably have done with leaving the board in a bit longer than I
@@ -104,7 +104,7 @@ about giving up and farming the whole thing out to a professional PCB manufactur
 
 I didn't give up though and in part 5 I move on to drilling lots and lots of tiny holes in the PCB:
 
-{% include youtube-player.html id="GqdT_CnAjHU" %}
+{{< youtube GqdT_CnAjHU >}}
 
 Actually, this part went a lot better than I was expecting especially given how wobbly my Dremel drill stand
 seemed and how notorious those tiny drill bits are for snapping. In the end I only broke one drill bit and
@@ -116,7 +116,7 @@ really was unbearably loud.
 
 Nearly there then and at part 6 it's time to get soldering:
 
-{% include youtube-player.html id="HQw2D_RnhKk" %}
+{{< youtube HQw2D_RnhKk >}}
 
 In this video I use a product that I've not previously heard much about ... Green Coating by Bungard. It comes
 in a spray can and effectively acts as a protective layer once dry but whilst it's drying you can solder
@@ -141,7 +141,7 @@ down to a broken soldering iron.
 
 This all leads us to the final video ... part 7 ... which covers testing the PCB and making some final fixes:
 
-{% include youtube-player.html id="xIuX-k8bzhM" %}
+{{< youtube xIuX-k8bzhM >}}
 
 So, with the PCB completed what have I learnt? Well, I know how to make a PCB at home and, perhaps more
 importantly, I know how not to make a PCB at home. Being fair to myself I'm pretty sure my next DIY PCB will

@@ -64,7 +64,7 @@ truly sown. Actually, I re-discovered the video of the Z3 that started it all
 so I thought I'd share it below (it's in German but you'll get the general 
 idea):
 
-{% include youtube-player.html id="aUXnhVrT4CI" %}
+{{< youtube aUXnhVrT4CI >}}
 
 So, if I'm going to get more memory in less space I 
 need to wind the clock forward a bit and choose a newer technology. I was 

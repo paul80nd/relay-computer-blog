@@ -59,7 +59,7 @@ Anyhoo, it's video time. Here is an overview of the memory unit,
 testing it outside of the computer with the breadboard and then finally 
 testing it inside the computer:
 
-{% include youtube-player.html id="s0lELXLXHPY" %}
+{{< youtube s0lELXLXHPY >}}
 
 With the memory unit complete we're another step closer to a computer that 
 can step through a program held in memory. The next part of the puzzle is the 
