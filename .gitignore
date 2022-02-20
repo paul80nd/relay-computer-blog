@@ -2,3 +2,8 @@
 
 # Node
 node_modules/
+
+# Hugo
+# Tracking generated html but not images and static resources etc
+public/img/
+resources/
