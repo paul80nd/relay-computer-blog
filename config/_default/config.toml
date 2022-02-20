@@ -10,6 +10,9 @@ googleAnalytics = 'UA-47484999-2'
 # Disable Hugo generator meta tag in the HTML head.
 disableHugoGeneratorInject =  true
 
+[permalinks]
+  posts = '/:year/:month/:title'
+
 [params]
   author = 'Paul Law'
   description = 'My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.'
