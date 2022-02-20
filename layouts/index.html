@@ -50,16 +50,14 @@
       {{ end }}
       {{ end }}
 
-      {% if paginator.page == 1 %}
+      {{ if eq $paginator.PageNumber 1 }}
       <div class="column is-half is-one-third-widescreen">
-        {% include home-find-me.html %}
+        {{ partial "home-find-me" . }}
       </div>
-      {% endif %}
-
-      {{ partial "home-pager" .Paginator }}
+      {{ end }}
 
     </div>
-    {{ $page.Content }}
+    {{ partial "home-pager" .Paginator }}
   </div>
 </section>
 {{ end }}
