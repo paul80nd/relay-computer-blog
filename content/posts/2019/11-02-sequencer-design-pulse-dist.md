@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Sequencer Design: Pulse Distribution'
+slug: sequencer-design-pulse-dist
 date: '2019-11-02T03:03:00.004Z'
 author: Paul Law
 tags:

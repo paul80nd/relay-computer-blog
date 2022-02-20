@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Register Design: General Purpose 8-bit Register'
+slug: register-design-general-purpose-8-bit
 date: '2014-04-16T22:08:00.001+01:00'
 author: Paul Law
 tags:

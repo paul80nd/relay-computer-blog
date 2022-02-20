@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Control Design: MOV-8, ALU and SETAB (part 2 of 2)'
+slug: control-design-mov-8-alu-and-setab-part
 date: '2015-04-04T08:06:00.000+01:00'
 author: Paul Law
 tags:

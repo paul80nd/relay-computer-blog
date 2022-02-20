@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Register Design: A and D 8-bit Registers'
+slug: register-design-and-d-8-bit-registers
 date: '2014-04-20T11:15:00.001+01:00'
 author: Paul Law
 tags:
