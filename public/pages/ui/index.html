@@ -7,18 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Enclosure Summary | Relay Computer</title>
+<title>UI Summary | Relay Computer</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Enclosure Summary" />
+<meta property="og:title" content="UI Summary" />
 <meta name="author" content="Paul Law" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
 <meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
-<link rel="canonical" href="https://relaycomputer.co.uk/pages/enclosure" />
-<meta property="og:url" content="https://relaycomputer.co.uk/pages/enclosure" />
+<link rel="canonical" href="https://relaycomputer.co.uk/pages/ui" />
+<meta property="og:url" content="https://relaycomputer.co.uk/pages/ui" />
 <meta property="og:site_name" content="Relay Computer" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/pages/enclosure","description":"My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.","headline":"Enclosure Summary","@type":"WebPage","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/pages/ui","description":"My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.","headline":"UI Summary","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- Begin CSS Styles -->
@@ -99,59 +99,59 @@ window.cookieconsent.initialise({
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start">
                     <a href="/" class="navbar-item ">Home</a>
-                    
-                    
-                        
+
+
+
                         <a href="/pages/overview.html" class="navbar-item ">Overview</a>
-                        
-                    
-                        
+
+
+
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a href="/#" class="navbar-link ">Summaries</a>
                             <div class="navbar-dropdown">
-                                
+
                                 <a href="/pages/progress.html" class="navbar-item ">Progress</a>
-                                
+
                                 <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
-                                
+
                                 <a href="/pages/alu.html" class="navbar-item ">ALU</a>
-                                
+
                                 <a href="/pages/control.html" class="navbar-item ">Control</a>
-                                
+
                                 <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
-                                
+
                                 <a href="/pages/registers.html" class="navbar-item ">Registers</a>
-                                
+
                                 <a href="/pages/ui.html" class="navbar-item ">UI</a>
-                                
+
                             </div>
                         </div>
-                        
-                    
-                        
+
+
+
                         <a href="/archive.html" class="navbar-item ">Archive</a>
-                        
-                    
-                        
+
+
+
                         <a href="/tags.html" class="navbar-item ">Tags</a>
-                        
-                    
-                    
+
+
+
                 </div>
             </div>
         </div>
     </nav>
 
-      
+
         <section class="hero is-bold is-primary" >
     <div class="hero-body">
-        <div class="container">                
-            <h1 class="title ">Enclosure Summary</h1>
+        <div class="container">
+            <h1 class="title ">UI Summary</h1>
             <h2 class="subtitle"></h2>
         </div>
     </div>
 </section>
-      
+
 
       <section class="section">
         <div class="container">
@@ -159,9 +159,11 @@ window.cookieconsent.initialise({
     <div class="column is-three-quarters-widescreen">
       <div class="content">
 
-  <p>The enclosure for the computer is based on an aluminium profile frame with laser cut acrylic and plywood panelling. The original design was put together in the excellent SketchUp software before ordering the parts and moving on to the physical construction. The enclosure consists of an upper and lower unit with the lower unit containing all the various cards of the computer and the upper unit primarily acting as a display.</p>
+  <p>The computer’s user interface is comprised of two display cards (A and B) and then a row of data and control switches. Display A shows the state of the various control signals and allows the user to manually set those signals when the computer is placed in the ‘diagnostic mode’. Display B likewise shows other control signals but these are read only. Additionally Display B also shows the state of the data and address busses and shows the current consumption of the computer. The two display cards are wired out to the various busses on the display distribution card.</p>
 
-<p>Details of the design and construction of the enclosure can be found in the following posts:</p>
+<p>The auxiliary control card reads in from the data and control switches and can perform a limited set of operations such as loading memory and increasing the PC register to make entering programs easier.</p>
+
+<p>Details of the design, construction and testing of each of the user interface components can be found in the following posts:</p>
 
 <table>
   <thead>
@@ -169,23 +171,33 @@ window.cookieconsent.initialise({
       <th> </th>
       <th>Design</th>
       <th>Construction</th>
+      <th>Testing</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Enclosure</strong><br /><em>(in general)</em></td>
-      <td><a href="/2014/03/enclosure-disclosure">Aluminium Profile Introduction</a></td>
-      <td>Power Distribution (<a href="/2016/04/w-backplane-construction-power">Part 1</a>, <a href="/2017/10/miscellany-special-power-distribution">Part 2</a>)<br /><a href="/2017/11/miscellany-special-backplane-x-cable">Cable Routing</a></td>
+      <td><strong>UI</strong><br /><em>(in general)</em></td>
+      <td><a href="/2015/04/user-interface-design-instruction-clock">Instruction, Clock and Sequencer</a></td>
+      <td><a href="/2016/03/user-interface-construction-instruction">Instruction, Clock and Sequencer</a></td>
+      <td><a href="/2014/08/alu-registers-d-test-with-new-display">ALU &amp; Registers A-D Test</a></td>
     </tr>
     <tr>
-      <td><strong>Lower Enclosure</strong></td>
-      <td><a href="/2014/03/enclosure-disclosure">Basic Enclosure</a><br />Laser Cut Panels (<a href="/2014/03/enclosure-initial-construction">Part 1</a>, <a href="/2014/04/enclosure-update-laser-cutting">Part 2</a>)<br /><a href="/2013/12/backplane-design-and-construction">Backplanes</a></td>
-      <td><a href="/2014/03/enclosure-initial-construction">Basic Enclosure</a><br /><a href="/2014/05/enclosure-update-laser-cut-parts-arrived">Laser Cut Parts Arrived</a><br /><a href="/2014/05/enclosure-update-fitting-of-laser-cut">Fitting of Laser Cut Parts</a><br /><a href="/2016/04/w-backplane-construction-power">Backplane W</a><br /><a href="/2017/11/miscellany-special-backplane-x-cable">Backplane X</a><br />Backplane Z (<a href="/2013/12/backplane-design-and-construction">Part 1</a>, <a href="/2014/03/alu-construction-completed-backplane">Part 2</a>)</td>
+      <td><strong>Control Switch Bar</strong></td>
+      <td><a href="/2014/07/user-interface-data-switches">Data Swtiches</a><br />Auxiliary Control (<a href="/2018/01/auxiliary-control-design-part-1-of-3">Part 1</a>, <a href="/2018/01/auxiliary-control-design-part-2-of-3">Part 2</a>, <a href="/2018/02/auxiliary-control-design-part-3-of-3">Part 3</a>)</td>
+      <td><a href="/2014/07/user-interface-data-switches">Data Switches</a><br /><a href="/2018/03/auxiliary-control-construction">Auxiliary Control</a></td>
+      <td> </td>
     </tr>
     <tr>
-      <td><strong>Upper Enclosure</strong></td>
-      <td><a href="/2014/04/enclosure-update-laser-cutting">Laser Cut Panels</a></td>
-      <td><a href="/2014/05/enclosure-update-laser-cut-parts-arrived">Laser Cut Parts Arrived</a><br /><a href="/2014/05/enclosure-update-magic-pen">Switch Panel Legend Infill</a><br /><a href="/2017/08/more-laser-cut-parts">More Laser Cut Parts</a><br /><a href="/2017/10/miscellany-special-power-distribution">Power Distribution</a></td>
+      <td><strong>Display A</strong></td>
+      <td><a href="/2014/07/user-interface-display-initial-design">Initial Design</a></td>
+      <td><a href="/2014/07/user-interface-display-initial-design">Initial Construction</a><br /><a href="/2017/11/miscellany-special-backplane-x-cable">Address Bus</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Display B</strong></td>
+      <td><a href="/2014/07/user-interface-display-b-initial-design">Initial Design</a></td>
+      <td><a href="/2014/07/user-interface-display-b-initial-design">Initial Construction</a><br /><a href="/2017/11/miscellany-special-backplane-x-cable">Address Bus</a></td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -196,17 +208,17 @@ window.cookieconsent.initialise({
 </div>
         </div>
       </section>
-          
+
       <footer class="footer">
     <div class="container">
         <div class="columns">
-            <div class="column">   
-                <h3>On this blog</h3>  
+            <div class="column">
+                <h3>On this blog</h3>
                 <p><a href="/index.html">Home</a></p>
                 <p><a href="/archive">Archive</a></p>
                 <p><a href="/tags">Tags</a></p>
                 <p><a href="/pages/progress">Progress</a></p>
-            </div>        
+            </div>
             <div class="column">
                 <h3>Related sites</h3>
                 <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
@@ -217,12 +229,12 @@ window.cookieconsent.initialise({
                 <h3>Share on social media</h3>
                 <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
                 <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
-                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
-                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
-                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
-                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
             </div>
-        </div>                    
+        </div>
     </div>
 </footer>
 

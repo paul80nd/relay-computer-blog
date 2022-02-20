@@ -99,59 +99,59 @@ window.cookieconsent.initialise({
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start">
                     <a href="/" class="navbar-item ">Home</a>
-                    
-                    
-                        
+
+
+
                         <a href="/pages/overview.html" class="navbar-item ">Overview</a>
-                        
-                    
-                        
+
+
+
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a href="/#" class="navbar-link ">Summaries</a>
                             <div class="navbar-dropdown">
-                                
+
                                 <a href="/pages/progress.html" class="navbar-item ">Progress</a>
-                                
+
                                 <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
-                                
+
                                 <a href="/pages/alu.html" class="navbar-item ">ALU</a>
-                                
+
                                 <a href="/pages/control.html" class="navbar-item ">Control</a>
-                                
+
                                 <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
-                                
+
                                 <a href="/pages/registers.html" class="navbar-item ">Registers</a>
-                                
+
                                 <a href="/pages/ui.html" class="navbar-item ">UI</a>
-                                
+
                             </div>
                         </div>
-                        
-                    
-                        
+
+
+
                         <a href="/archive.html" class="navbar-item ">Archive</a>
-                        
-                    
-                        
+
+
+
                         <a href="/tags.html" class="navbar-item ">Tags</a>
-                        
-                    
-                    
+
+
+
                 </div>
             </div>
         </div>
     </nav>
 
-      
+
         <section class="hero is-bold is-primary" >
     <div class="hero-body">
-        <div class="container">                
+        <div class="container">
             <h1 class="title ">Instructions</h1>
             <h2 class="subtitle"></h2>
         </div>
     </div>
 </section>
-      
+
 
       <section class="section">
         <div class="container">
@@ -173,7 +173,7 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-primary">ALU</span>
                     <span class="tag is-success">8</span>
                 </div>
-            </div>              
+            </div>
             <div class="control">
                 <div class="tags has-addons are-medium" style="margin-bottom: 0;">
                     <span class="tag is-link">1</span>
@@ -185,11 +185,11 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-info">f</span>
                     <span class="tag is-info">f</span>
                 </div>
-                
-            </div>        
+
+            </div>
         </div>
         <pre class="is-size-7"><code>  r = destination register (0-A, 1-D)<br />fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL)</code></pre>
-    </div> 
+    </div>
 </article>
 
 <article class="box">
@@ -201,7 +201,7 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-primary">GOTO</span>
                     <span class="tag is-success">24</span>
                 </div>
-            </div>              
+            </div>
             <div class="control">
                 <div class="tags has-addons are-medium" style="margin-bottom: 0;">
                     <span class="tag is-link">1</span>
@@ -213,7 +213,7 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-info">n</span>
                     <span class="tag is-info">x</span>
                 </div>
-                
+
                 <div class="tags has-addons are-medium" style="margin-bottom: 0;">
                     <span class="tag is-info">h</span>
                     <span class="tag is-info">h</span>
@@ -234,11 +234,11 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-info">l</span>
                     <span class="tag is-info">l</span>
                 </div>
-                
-            </div>        
+
+            </div>
         </div>
         <pre class="is-size-7"><code>d = destination register (0-M, 1-J)<br />s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br />c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br />z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br />n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br />x = 1 = copy PC to XY; 0 = no copy<br />hhhhhhhh = address high byte (to set in M2/J2)<br />llllllll = address low byte (to set in M1/J1)</code></pre>
-    </div> 
+    </div>
 </article>
 
 <article class="box">
@@ -250,7 +250,7 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-primary">MOV8</span>
                     <span class="tag is-success">8</span>
                 </div>
-            </div>              
+            </div>
             <div class="control">
                 <div class="tags has-addons are-medium" style="margin-bottom: 0;">
                     <span class="tag is-link">0</span>
@@ -262,11 +262,11 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-info">s</span>
                     <span class="tag is-info">s</span>
                 </div>
-                
-            </div>        
+
+            </div>
         </div>
         <pre class="is-size-7"><code>ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br />sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)</code></pre>
-    </div> 
+    </div>
 </article>
 
 <article class="box">
@@ -278,7 +278,7 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-primary">SETAB</span>
                     <span class="tag is-success">8</span>
                 </div>
-            </div>              
+            </div>
             <div class="control">
                 <div class="tags has-addons are-medium" style="margin-bottom: 0;">
                     <span class="tag is-link">0</span>
@@ -290,11 +290,11 @@ related instructions (identifiable by the leading part of the op-code).</p>
                     <span class="tag is-info">d</span>
                     <span class="tag is-info">d</span>
                 </div>
-                
-            </div>        
+
+            </div>
         </div>
         <pre class="is-size-7"><code>    r = destination register (0-A, 1-B)<br />ddddd = value (-16..15)</code></pre>
-    </div> 
+    </div>
 </article>
 
 <p>There’s also a video summary (as at Jan 2020) of the available instructions:</p>
@@ -309,17 +309,17 @@ related instructions (identifiable by the leading part of the op-code).</p>
 </div>
         </div>
       </section>
-          
+
       <footer class="footer">
     <div class="container">
         <div class="columns">
-            <div class="column">   
-                <h3>On this blog</h3>  
+            <div class="column">
+                <h3>On this blog</h3>
                 <p><a href="/index.html">Home</a></p>
                 <p><a href="/archive">Archive</a></p>
                 <p><a href="/tags">Tags</a></p>
                 <p><a href="/pages/progress">Progress</a></p>
-            </div>        
+            </div>
             <div class="column">
                 <h3>Related sites</h3>
                 <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
@@ -330,12 +330,12 @@ related instructions (identifiable by the leading part of the op-code).</p>
                 <h3>Share on social media</h3>
                 <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
                 <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
-                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
-                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
-                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
-                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
             </div>
-        </div>                    
+        </div>
     </div>
 </footer>
 

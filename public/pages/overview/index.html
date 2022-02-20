@@ -7,18 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Registers Summary | Relay Computer</title>
+<title>Overview | Relay Computer</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Registers Summary" />
+<meta property="og:title" content="Overview" />
 <meta name="author" content="Paul Law" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
 <meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
-<link rel="canonical" href="https://relaycomputer.co.uk/pages/registers" />
-<meta property="og:url" content="https://relaycomputer.co.uk/pages/registers" />
+<link rel="canonical" href="https://relaycomputer.co.uk/pages/overview" />
+<meta property="og:url" content="https://relaycomputer.co.uk/pages/overview" />
 <meta property="og:site_name" content="Relay Computer" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/pages/registers","description":"My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.","headline":"Registers Summary","@type":"WebPage","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/pages/overview","description":"My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.","headline":"Overview","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- Begin CSS Styles -->
@@ -99,59 +99,59 @@ window.cookieconsent.initialise({
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start">
                     <a href="/" class="navbar-item ">Home</a>
-                    
-                    
-                        
+
+
+
                         <a href="/pages/overview.html" class="navbar-item ">Overview</a>
-                        
-                    
-                        
+
+
+
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a href="/#" class="navbar-link ">Summaries</a>
                             <div class="navbar-dropdown">
-                                
+
                                 <a href="/pages/progress.html" class="navbar-item ">Progress</a>
-                                
+
                                 <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
-                                
+
                                 <a href="/pages/alu.html" class="navbar-item ">ALU</a>
-                                
+
                                 <a href="/pages/control.html" class="navbar-item ">Control</a>
-                                
+
                                 <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
-                                
+
                                 <a href="/pages/registers.html" class="navbar-item ">Registers</a>
-                                
+
                                 <a href="/pages/ui.html" class="navbar-item ">UI</a>
-                                
+
                             </div>
                         </div>
-                        
-                    
-                        
+
+
+
                         <a href="/archive.html" class="navbar-item ">Archive</a>
-                        
-                    
-                        
+
+
+
                         <a href="/tags.html" class="navbar-item ">Tags</a>
-                        
-                    
-                    
+
+
+
                 </div>
             </div>
         </div>
     </nav>
 
-      
+
         <section class="hero is-bold is-primary" >
     <div class="hero-body">
-        <div class="container">                
-            <h1 class="title ">Registers Summary</h1>
+        <div class="container">
+            <h1 class="title ">Overview</h1>
             <h2 class="subtitle"></h2>
         </div>
     </div>
 </section>
-      
+
 
       <section class="section">
         <div class="container">
@@ -159,60 +159,72 @@ window.cookieconsent.initialise({
     <div class="column is-three-quarters-widescreen">
       <div class="content">
 
-  <p>The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.</p>
+  <p>This blog documents my journey in constructing an 8-bit relay computer, from scratch, made from tons of solder, wires,
+lights, relays, sweat, tears, swearing and money.</p>
 
-<p>In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus.</p>
+<p>The design of the computer is based on the one constructed by
+<a rel="nofollow" href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Dr. Harry Porter</a>
+at Portland State University (reproduced on this blog with kind permission) but the construction method is my own and so
+this blog captures the thoughts, experiences and pitfalls that I encounter along the way.</p>
 
-<p>Details of the design, construction and testing of each register can be found in the following posts:</p>
+<p>For more information about the ‘whys and wherefores’ of building a computer of this type these posts are a good starting place:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>Design</th>
-      <th>Construction</th>
-      <th>Testing</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Registers</strong><br /><em>(in general)</em></td>
-      <td><a href="/2014/04/register-design-general-purpose-8-bit">General Purpose 8-bit Register</a><br /><a href="/2019/07/16bit-register-design">General Purpose 16-bit Register</a></td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><strong>A / D Register</strong></td>
-      <td><a href="/2014/04/register-design-and-d-8-bit-registers">A and D 8-bit Registers</a></td>
-      <td><a href="/2014/06/register-construction-and-d-8-bit">A and D 8-bit Registers</a></td>
-      <td><a href="/2014/06/register-construction-completed-and-d-8">A and D 8-bit Registers Full Test</a></td>
-    </tr>
-    <tr>
-      <td><strong>B / C Register</strong></td>
-      <td><a href="/2014/04/register-design-dual-output-8-bit">Dual Output 8-bit Register</a><br /><a href="/2014/05/register-design-b-and-c-8-bit-registers">B and C 8-bit Registers</a></td>
-      <td><a href="/2014/05/register-construction-b-and-c-8-bit">B and C 8-bit Registers</a></td>
-      <td><a href="/2014/05/register-construction-completed-b-and-c">B and C 8-bit Registers Full Test</a></td>
-    </tr>
-    <tr>
-      <td><strong>Increment Register</strong></td>
-      <td><a href="/2017/07/incrementer-design">Increment Register</a></td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><strong>Instruction Register</strong></td>
-      <td><a href="/2014/12/register-design-instruction-register">Instruction Register</a></td>
-      <td><a href="/2015/05/register-construction-instruction">Instruction Register</a></td>
-      <td><a href="/2015/05/register-construction-completed">Instruction Register Full Test</a></td>
-    </tr>
-    <tr>
-      <td><strong>Program Counter</strong></td>
-      <td><a href="/2017/05/register-design-program-counter">Program Counter</a></td>
-      <td><a href="/2017/11/program-counter-construction">Program Counter</a></td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<ul>
+  <li><a href="/2013/10/it-begins">It begins</a> … the first post</li>
+  <li><a href="/2013/11/why">Why?</a> … musings on why I’m doing all this</li>
+  <li><a href="/2013/11/the-three-rs">The three Rs</a> … further musings on where to start the journey</li>
+</ul>
+
+<p>An overview of the architecture used in this relay computer can be found in the following posts:</p>
+
+<ul>
+  <li><a href="/2013/11/architecture-isnt-just-for-houses">Architecture isn’t just for houses</a></li>
+</ul>
+
+<p>The following posts go in to more detail … starting with the basics and building up from there:</p>
+
+<ul>
+  <li><a href="/2013/11/architectural-breakdown-binary">Architecturalbreakdown: Binary</a></li>
+  <li><a href="/2013/11/architectural-breakdown-buses-and">Architecturalbreakdown: Buses and Registers</a></li>
+  <li><a href="/2013/11/architectural-breakdown-memory">Architecturalbreakdown: Memory</a></li>
+  <li><a href="/2013/11/architectural-breakdown-alu">Architectural breakdown: the ALU</a></li>
+  <li><a href="/2013/11/architectural-breakdown-programming-and">Architecturalbreakdown: Programming and Control</a></li>
+  <li><a href="/2013/11/architectural-breakdown-programming-and_7">Architectural breakdown: Programming and Control 2</a></li>
+</ul>
+
+<p>An insight into the choice of relays to be used can be found here:</p>
+
+<ul>
+  <li><a href="/2013/11/relay-rumination">Relay Rumination</a></li>
+</ul>
+
+<p>Finally, an initial instruction set can be found here:</p>
+
+<ul>
+  <li><a href="/pages/instructions">Instruction Set</a></li>
+</ul>
+
+<p>If you like your information delivered in a more visual way here’s the most recent collection of ‘update’ videos from Jan
+2020 which cover off many of the items above:</p>
+
+<figure class="image is-16by9">
+    <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/NfvgQCoFykE" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+<figure class="image is-16by9">
+    <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/szvNLpovAGM" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+<figure class="image is-16by9">
+    <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/IQW445iMnrc" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+<figure class="image is-16by9">
+    <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/_iBnu5HXscI" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+<figure class="image is-16by9">
+    <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/B_U0LM3CCgA" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+<figure class="image is-16by9">
+    <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/JZyFSrNyhy8" frameborder="0" allowfullscreen=""></iframe>
+</figure>
 
 
     </div>
@@ -220,17 +232,17 @@ window.cookieconsent.initialise({
 </div>
         </div>
       </section>
-          
+
       <footer class="footer">
     <div class="container">
         <div class="columns">
-            <div class="column">   
-                <h3>On this blog</h3>  
+            <div class="column">
+                <h3>On this blog</h3>
                 <p><a href="/index.html">Home</a></p>
                 <p><a href="/archive">Archive</a></p>
                 <p><a href="/tags">Tags</a></p>
                 <p><a href="/pages/progress">Progress</a></p>
-            </div>        
+            </div>
             <div class="column">
                 <h3>Related sites</h3>
                 <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
@@ -241,12 +253,12 @@ window.cookieconsent.initialise({
                 <h3>Share on social media</h3>
                 <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
                 <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
-                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
-                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
-                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
-                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
             </div>
-        </div>                    
+        </div>
     </div>
 </footer>
 

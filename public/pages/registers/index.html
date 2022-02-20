@@ -7,18 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>ALU Summary | Relay Computer</title>
+<title>Registers Summary | Relay Computer</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="ALU Summary" />
+<meta property="og:title" content="Registers Summary" />
 <meta name="author" content="Paul Law" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
 <meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
-<link rel="canonical" href="https://relaycomputer.co.uk/pages/alu" />
-<meta property="og:url" content="https://relaycomputer.co.uk/pages/alu" />
+<link rel="canonical" href="https://relaycomputer.co.uk/pages/registers" />
+<meta property="og:url" content="https://relaycomputer.co.uk/pages/registers" />
 <meta property="og:site_name" content="Relay Computer" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/pages/alu","description":"My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.","headline":"ALU Summary","@type":"WebPage","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/pages/registers","description":"My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.","headline":"Registers Summary","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- Begin CSS Styles -->
@@ -99,59 +99,59 @@ window.cookieconsent.initialise({
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start">
                     <a href="/" class="navbar-item ">Home</a>
-                    
-                    
-                        
+
+
+
                         <a href="/pages/overview.html" class="navbar-item ">Overview</a>
-                        
-                    
-                        
+
+
+
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a href="/#" class="navbar-link ">Summaries</a>
                             <div class="navbar-dropdown">
-                                
+
                                 <a href="/pages/progress.html" class="navbar-item ">Progress</a>
-                                
+
                                 <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
-                                
+
                                 <a href="/pages/alu.html" class="navbar-item ">ALU</a>
-                                
+
                                 <a href="/pages/control.html" class="navbar-item ">Control</a>
-                                
+
                                 <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
-                                
+
                                 <a href="/pages/registers.html" class="navbar-item ">Registers</a>
-                                
+
                                 <a href="/pages/ui.html" class="navbar-item ">UI</a>
-                                
+
                             </div>
                         </div>
-                        
-                    
-                        
+
+
+
                         <a href="/archive.html" class="navbar-item ">Archive</a>
-                        
-                    
-                        
+
+
+
                         <a href="/tags.html" class="navbar-item ">Tags</a>
-                        
-                    
-                    
+
+
+
                 </div>
             </div>
         </div>
     </nav>
 
-      
+
         <section class="hero is-bold is-primary" >
     <div class="hero-body">
-        <div class="container">                
-            <h1 class="title ">ALU Summary</h1>
+        <div class="container">
+            <h1 class="title ">Registers Summary</h1>
             <h2 class="subtitle"></h2>
         </div>
     </div>
 </section>
-      
+
 
       <section class="section">
         <div class="container">
@@ -159,9 +159,11 @@ window.cookieconsent.initialise({
     <div class="column is-three-quarters-widescreen">
       <div class="content">
 
-  <p>The Arithmetic Logic Unit (ALU) is split into three units (and also three physical cards): the logic unit, the arithmetic unit and the control unit. The logic and arithmetic cards handle 8-bit logic and arithmetic functions respectively. The control unit handles function decoding, zero detection and holds the condition registers.</p>
+  <p>The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.</p>
 
-<p>Details of the design, construction and testing of each unit can be found in the following posts:</p>
+<p>In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus.</p>
+
+<p>Details of the design, construction and testing of each register can be found in the following posts:</p>
 
 <table>
   <thead>
@@ -174,22 +176,40 @@ window.cookieconsent.initialise({
   </thead>
   <tbody>
     <tr>
-      <td><strong>Arithmetic Unit</strong></td>
-      <td><a href="/2013/11/design-1-bit-arithmetic-unit">1-bit Arithmetic Unit</a><br /><a href="/2013/11/design-8-bit-arithmetic-unit">8-bit Arithmetic Unit</a></td>
-      <td><a href="/2013/12/alu-construction-connectors-and-leds">Connectors and LEDs</a><br /><a href="/2013/12/alu-construction-led-header-pins">LED Header Pins</a><br /><a href="/2014/01/alu-construction-arithmetic-card-header">Header Pins</a><br /><a href="/2014/01/alu-construction-arithmetic-card-relay">Relay Sockets</a><br /><a href="/2014/01/alu-construction-1-bit-arithmetic-full">1-bit Full Construction</a><br /><a href="/2014/01/alu-construction-arithmetic-card-power">Power Rails</a><br />Wire Wrap (<a href="/2014/02/alu-construction-arithmetic-card-wire">Part 1</a>, <a href="/2014/02/alu-construction-arithmetic-card-wire_19">Part 2</a>)</td>
-      <td><a href="/2013/12/alu-construction-led-tests">LED Tests</a><br /><a href="/2014/01/alu-construction-1-bit-arithmetic-full">1-bit Test</a><br /><a href="/2014/02/alu-construction-completed-arithmetic">Full Test</a></td>
+      <td><strong>Registers</strong><br /><em>(in general)</em></td>
+      <td><a href="/2014/04/register-design-general-purpose-8-bit">General Purpose 8-bit Register</a><br /><a href="/2019/07/16bit-register-design">General Purpose 16-bit Register</a></td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
-      <td><strong>Control Unit</strong></td>
-      <td><a href="/2013/11/design-function-decoder">Function Decoder</a><br /><a href="/2013/11/alu-design-zero-detect">Zero Detect</a><br /><a href="/2013/11/alu-design-condition-registers">Condition Registers</a><br /><a href="/2013/12/alu-design-control-unit">Control Unit</a></td>
-      <td><a href="/2013/12/alu-construction-connectors-and-leds">Connectors and LEDs</a><br /><a href="/2013/12/alu-construction-led-header-pins">LED Header Pins</a><br /><a href="/2014/03/alu-construction-control-card-header">Header Pins</a><br /><a href="/2014/03/alu-construction-control-card-header">Relay Sockets</a><br /><a href="/2014/03/alu-construction-control-card-power">Power Rails</a><br /><a href="/2014/03/alu-construction-control-card-power">Wire Wrap</a></td>
-      <td><a href="/2013/12/alu-construction-led-tests">LED Tests</a><br /><a href="/2014/03/alu-construction-completed-control-card">Full Test</a></td>
+      <td><strong>A / D Register</strong></td>
+      <td><a href="/2014/04/register-design-and-d-8-bit-registers">A and D 8-bit Registers</a></td>
+      <td><a href="/2014/06/register-construction-and-d-8-bit">A and D 8-bit Registers</a></td>
+      <td><a href="/2014/06/register-construction-completed-and-d-8">A and D 8-bit Registers Full Test</a></td>
     </tr>
     <tr>
-      <td><strong>Logic Unit</strong></td>
-      <td><a href="/2013/11/design-1-bit-logic-unit">1-bit Logic Unit</a><br /><a href="/2013/11/design-8-bit-logic-unit">8-bit Logic Unit</a></td>
-      <td><a href="/2013/12/alu-construction-connectors-and-leds">Connectors and LEDs</a><br /><a href="/2013/12/alu-construction-led-header-pins">LED Header Pins</a><br /><a href="/2013/12/alu-construction-logic-card-wire-links">LED Wire Links</a><br /><a href="/2013/12/alu-construction-1-bit-logic-full">1-bit Full Construction</a><br /><a href="/2013/12/alu-construction-logic-card-header-pins">Header Pins</a><br /><a href="/2013/12/alu-construction-logic-card-relay">Relay Sockets</a><br /><a href="/2013/12/alu-construction-logic-card-power-rails">Power Rails</a><br />Wire Wrap (<a href="/2013/12/alu-construction-logic-card-wire-wrap-1">Part 1</a>, <a href="/2013/12/alu-construction-logic-card-wire-wrap-2">Part 2</a>, <a href="/2013/12/alu-construction-logic-card-wire-wrap-3">Part 3</a>)</td>
-      <td><a href="/2013/12/alu-construction-led-tests">LED Tests</a><br /><a href="/2013/12/alu-construction-1-bit-logic-full">1-bit Test</a><br /><a href="/2013/12/alu-construction-8-bit-logic-unit-tests">8-bit Test</a><br /><a href="/2013/12/alu-construction-completed-logic-card">Full Test</a></td>
+      <td><strong>B / C Register</strong></td>
+      <td><a href="/2014/04/register-design-dual-output-8-bit">Dual Output 8-bit Register</a><br /><a href="/2014/05/register-design-b-and-c-8-bit-registers">B and C 8-bit Registers</a></td>
+      <td><a href="/2014/05/register-construction-b-and-c-8-bit">B and C 8-bit Registers</a></td>
+      <td><a href="/2014/05/register-construction-completed-b-and-c">B and C 8-bit Registers Full Test</a></td>
+    </tr>
+    <tr>
+      <td><strong>Increment Register</strong></td>
+      <td><a href="/2017/07/incrementer-design">Increment Register</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Instruction Register</strong></td>
+      <td><a href="/2014/12/register-design-instruction-register">Instruction Register</a></td>
+      <td><a href="/2015/05/register-construction-instruction">Instruction Register</a></td>
+      <td><a href="/2015/05/register-construction-completed">Instruction Register Full Test</a></td>
+    </tr>
+    <tr>
+      <td><strong>Program Counter</strong></td>
+      <td><a href="/2017/05/register-design-program-counter">Program Counter</a></td>
+      <td><a href="/2017/11/program-counter-construction">Program Counter</a></td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -200,17 +220,17 @@ window.cookieconsent.initialise({
 </div>
         </div>
       </section>
-          
+
       <footer class="footer">
     <div class="container">
         <div class="columns">
-            <div class="column">   
-                <h3>On this blog</h3>  
+            <div class="column">
+                <h3>On this blog</h3>
                 <p><a href="/index.html">Home</a></p>
                 <p><a href="/archive">Archive</a></p>
                 <p><a href="/tags">Tags</a></p>
                 <p><a href="/pages/progress">Progress</a></p>
-            </div>        
+            </div>
             <div class="column">
                 <h3>Related sites</h3>
                 <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
@@ -221,12 +241,12 @@ window.cookieconsent.initialise({
                 <h3>Share on social media</h3>
                 <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
                 <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
-                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
-                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
-                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
-                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
             </div>
-        </div>                    
+        </div>
     </div>
 </footer>
 
