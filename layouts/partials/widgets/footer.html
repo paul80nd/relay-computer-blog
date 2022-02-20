@@ -3,12 +3,12 @@
         <div class="columns">
             <div class="column">
                 <h3>On this blog</h3>
-                {{/*
-                <p><a href="{{site.baseurl}}{% link index.html %}">Home</a></p>
-                <p><a href="{{site.baseurl}}{% link archive.html %}">Archive</a></p>
-                <p><a href="{{site.baseurl}}{% link tags.html %}">Tags</a></p>
-                <p><a href="{{site.baseurl}}{% link pages/progress.html %}">Progress</a></p>
+                <p><a href="{{ relref . "/" }}">Home</a></p>
+                 {{/*
+                <p><a href="{{ relref . "archive" }}">Archive</a></p>
                 */}}
+                <p><a href="{{ relref . "tags" }}">Tags</a></p>
+                <p><a href="{{ relref . "pages/progress" }}">Progress</a></p>
             </div>
             <div class="column">
                 <h3>Related sites</h3>
@@ -18,14 +18,12 @@
             </div>
             <div class="column">
                 <h3>Share on social media</h3>
-                {{/*
-                <p><a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}&amp;quote={{ title }}" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
-                <p><a href="https://twitter.com/intent/tweet?source={{ url }}&amp;text={{ title }}" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
-                <p><a href="http://www.tumblr.com/share?v=3&amp;u={{ url }}&amp;quote={{ title }}&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
-                <p><a href="http://pinterest.com/pin/create/button/?url={{ url }}&amp;description={{ title }}" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
-                <p><a href="http://www.reddit.com/submit?url={{ url }}&amp;title={{ title }}" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
-                <p><a href="mailto:?subject={{ title }}&amp;body={{ url }}" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
-                */}}
+                <p><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&amp;quote={{ .Page.Title }}" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
+                <p><a href="https://twitter.com/intent/tweet?source={{ .Permalink }}&amp;text={{ .Page.Title }}" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u={{ .Permalink }}&amp;quote={{ .Page.Title }}&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
+                <p><a href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}&amp;description={{ .Page.Title }}" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
+                <p><a href="http://www.reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Page.Title }}" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
+                <p><a href="mailto:?subject={{ .Page.Title }}&amp;body={{ .Permalink }}" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
             </div>
         </div>
     </div>
