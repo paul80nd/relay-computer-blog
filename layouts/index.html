@@ -2,6 +2,65 @@
 {{ $page := . }}
 <section class="section">
   <div class="container">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") -}}
+    {{ if eq $paginator.PageNumber 1 }}
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical">
+        <div class="tile">
+          <div class="tile is-parent is-4">
+            <!-- home welcome begin -->
+            <article class="tile is-child card bg-img" style="display: flex; flex-flow: column; background-image: url(/img/header-bg.jpg)" >
+              <div class="card-content" style="background-color: rgba(255,255,255,0.95); flex-grow: 1">
+                <div class="content">
+                  <h3>Welcome</h3>
+                  <p>
+                      This is my blog covering the design and construction of a computer made from relays.
+                      If you're new here then a good place to start is the <a href="{{ relref . "pages/overview" }}">overview page</a>.
+                  </p>
+                  <p>
+                      The summaries also give more detail on the various aspects of the computer:
+                      <a href="{{ relref . "pages/alu" }}">ALU</a>,
+                      <a href="{{ relref . "pages/control" }}">Control</a>,
+                      <a href="{{ relref . "pages/enclosure" }}">Enclosure</a>,
+                      <a href="{{ relref . "pages/instructions" }}">Instructions</a>,
+                      <a href="{{ relref . "pages/registers" }}">Registers</a> &amp;
+                      <a href="{{ relref . "pages/ui" }}">UI</a>
+                  </p>
+                  <p>
+                      To see how far I've got check out the <a href="{{ relref . "pages/progress" }}">Progress</a> page.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- home welcome end -->
+          </div>
+          <div class="tile is-parent">
+            {% include home-spotlight.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+    <div class="columns is-multiline">
+      {{ range $paginator.Pages }}
+
+  {% unless post == site.posts.first %}
+      <div class="column is-half is-one-third-widescreen">
+        {{ partial "home-postcard" . }}
+      </div>
+  {% endunless %}
+
+      {{ end }}
+
+      {% if paginator.page == 1 %}
+      <div class="column is-half is-one-third-widescreen">
+        {% include home-find-me.html %}
+      </div>
+      {% endif %}
+
+      {% include home-pager.html %}
+
+    </div>
     {{ $page.Content }}
   </div>
 </section>
