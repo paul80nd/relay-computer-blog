@@ -1,0 +1,11 @@
+# The URL of the site
+# Hostname (and path) to the root, e.g. https://bep.is/
+baseURL = "https://relaycomputer.co.uk/"
+
+ # The title of site
+languageCode = 'en-gb'
+title = 'Relay Computer'
+
+[params]
+  author = 'Paul Law'
+  description = 'My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.'
