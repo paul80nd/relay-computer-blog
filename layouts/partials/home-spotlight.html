@@ -1,0 +1,30 @@
+{{ range first 1 (where .Site.RegularPages "Type" "posts") }}
+{{ $image := .Params.thumbnail }}
+<article class="tile is-child card bg-img"
+  style="display: flex; flex-flow: column-reverse; {{ with $image }}{{ $imageRes := resources.Get $image }} background-image: url('{{ $imageRes.RelPermalink }}'){{end}}">
+  <div class="card-content" style="background-color: rgba(255,255,255,0.95); flex-basis:0; margin-top: 10em;">
+    <p class="subtitle">Latest Post:</p>
+    <p class="title">
+      <a href="{{ .RelPermalink }}">{{.Title}}</a>
+    </p>
+    <div class="content">
+      <p>{{ .Summary }}</p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <div class="level-item">
+          <small>
+            {{.Date.Format "02 Jan 2006"}}&nbsp;&nbsp;&nbsp;—&nbsp;
+            {{ div (add (.Content | countwords) 250) 250 }} minute read
+          </small>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item has-text-right">
+          <a href="{{ .RelPermalink }}" class="button">Read More</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</article>
+{{ end }}
