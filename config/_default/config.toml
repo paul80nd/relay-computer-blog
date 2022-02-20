@@ -10,6 +10,9 @@ googleAnalytics = 'UA-47484999-2'
 # Disable Hugo generator meta tag in the HTML head.
 disableHugoGeneratorInject =  true
 
+# Temporary ugly urls until parity with old site
+uglyurls = true
+
 [permalinks]
   posts = '/:year/:month/:title'
 
