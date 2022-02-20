@@ -6,6 +6,12 @@ baseURL = "https://relaycomputer.co.uk/"
 languageCode = 'en-gb'
 title = 'Relay Computer'
 
+# Disable Hugo generator meta tag in the HTML head.
+disableHugoGeneratorInject =  true
+
+# Needed for now but should migrate to pretty urls once parity with old site
+uglyurls = true
+
 [params]
   author = 'Paul Law'
   description = 'My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.'
