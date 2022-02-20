@@ -1,7 +1,9 @@
+{{ $page := . }}
 <!DOCTYPE html>
 <html lang="{{ .Language.Lang }}">
 
 <head>
+  {{ partial "widgets/head.html" $page }}
 </head>
 
 <body>
