@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Memory Construction (Part 1 of 2) | Relay Computer</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Memory Construction (Part 1 of 2)" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It’s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than ‘boring old registers’ and so I’ll split it over two posts. Let’s dive in with the easy part - soldering down the LEDs and backplane connectors:" />
+<meta property="og:description" content="It’s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than ‘boring old registers’ and so I’ll split it over two posts. Let’s dive in with the easy part - soldering down the LEDs and backplane connectors:" />
+<link rel="canonical" href="https://relaycomputer.co.uk/2017/11/memory-construction-part-1-of-2" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2017/11/memory-construction-part-1-of-2" />
+<meta property="og:site_name" content="Relay Computer" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-11-19T14:53:00+00:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/2017/11/memory-construction-part-1-of-2","description":"It’s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than ‘boring old registers’ and so I’ll split it over two posts. Let’s dive in with the easy part - soldering down the LEDs and backplane connectors:","headline":"Memory Construction (Part 1 of 2)","@type":"BlogPosting","datePublished":"2017-11-19T14:53:00+00:00","dateModified":"2017-11-19T14:53:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://relaycomputer.co.uk/2017/11/memory-construction-part-1-of-2"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- Begin CSS Styles -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/app.css">
+<!-- End CSS Styles -->
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link type="application/atom+xml" rel="alternate" href="https://relaycomputer.co.uk/feed.xml" title="Relay Computer" />
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+})});
+</script>
+<!-- End EU Cookie Consent -->
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47484999-2', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', false);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+
+
+  <body>
+      <nav class="navbar is-primary" >
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    Relay Computer
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item ">Home</a>
+                    
+                    
+                        
+                        <a href="/pages/overview.html" class="navbar-item ">Overview</a>
+                        
+                    
+                        
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="/#" class="navbar-link ">Summaries</a>
+                            <div class="navbar-dropdown">
+                                
+                                <a href="/pages/progress.html" class="navbar-item ">Progress</a>
+                                
+                                <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
+                                
+                                <a href="/pages/alu.html" class="navbar-item ">ALU</a>
+                                
+                                <a href="/pages/control.html" class="navbar-item ">Control</a>
+                                
+                                <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
+                                
+                                <a href="/pages/registers.html" class="navbar-item ">Registers</a>
+                                
+                                <a href="/pages/ui.html" class="navbar-item ">UI</a>
+                                
+                            </div>
+                        </div>
+                        
+                    
+                        
+                        <a href="/archive.html" class="navbar-item ">Archive</a>
+                        
+                    
+                        
+                        <a href="/tags.html" class="navbar-item ">Tags</a>
+                        
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      
+        <section class="hero is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">                
+            <h1 class="title ">Memory Construction (Part 1 of 2)</h1>
+            <h2 class="subtitle"></h2>
+        </div>
+    </div>
+</section>
+      
+
+      <section class="section">
+        <div class="container">
+              <div class="columns">
+  <div class="column is-three-quarters-widescreen">
+    <div class="content">
+
+      <p>It’s time to make a start on the construction of the memory unit and 
+as mentioned in my last post this one is a bit more complex than ‘boring old 
+registers’ and so I’ll split it over two posts. Let’s dive in with the easy 
+part - soldering down the LEDs and backplane connectors:</p>
+
+<figure>
+  <img src="/assets/img/posts/2017/2017-11-19-0000.jpg" alt="Memory cards with LEDs and type 'Y' connectors" />
+  <img src="/assets/img/posts/2017/2017-11-19-0001.jpg" alt="Close up of lower memory card LEDs" />
+  <img src="/assets/img/posts/2017/2017-11-19-0002.jpg" alt="Close up of upper memory card LEDs and switch" />
+  
+</figure>
+
+<p>For the lower memory card there are 16 LEDs for the 16-bit 
+address bus and 8 LEDs for the 8-bit data bus. Both of these busses are 
+‘local’ to the memory unit and operate on +5V and ground as covered in my post 
+on the memory unit design. Unfortunately I’ve messed up here a bit as I’ve 
+merrily gone and soldered down the same LEDs I use on all the other cards … 
+the 12V ones. Although these LEDs will work with 5V they won’t be as bright 
+due to the internal resistor in each being rated for 12V operation. A bit of a 
+silly mistake to make but it’s done and I’m not so upset by it that it’s worth 
+changing them over … I only realised when I tested the card and noticed the 
+LEDs weren’t as bright as usual (doh).</p>
+
+<p>The upper memory card has 
+four LEDs on the left which show what the memory unit is up to and the switch 
+on the right disconnects the memory from outputting to the data bus which 
+comes in handy when debugging. Here’s a close up of the cards from the 
+rear:</p>
+
+<figure>
+  <img src="/assets/img/posts/2017/2017-11-19-0003.jpg" alt="Close up of memory card LEDs (solder side)" />
+  <img src="/assets/img/posts/2017/2017-11-19-0004.jpg" alt="Close up of memory card LEDs (solder side - from the left)" />
+  
+</figure>
+
+<p>Right, I’ll leave the upper card there for now and pick it 
+up in my next post. Focussing on the lower card then let’s add some sockets, 
+board interconnects and wire wrap posts:</p>
+
+<figure>
+  <img src="/assets/img/posts/2017/2017-11-19-0005.jpg" alt="Lower memory card with added sockets, board interconnects and wire wrap posts" />
+  <img src="/assets/img/posts/2017/2017-11-19-0006.jpg" alt="Lower memory card with added sockets, board interconnects and wire wrap posts (rear view)" />
+  
+</figure>
+
+<p>Nothing too unusual there - 
+larger IC socket for the memory chip, smaller one for the relay driver. The 
+interconnect sockets will mate with the equivalent on the upper card to pass 
+the memory address and data busses through. There’s only one relay in this 
+card (something that definitely can’t be said for the upper card) and so 
+accordingly only one relay socket is needed. In the middle right of the card 
+there’s two rows of posts which is where the pull up resistors will go and 
+finally at the top right the DC/DC convertor is soldered in which will take 
+the usual 12V used elsewhere in the computer and step it down to 5V which is 
+needed by the memory IC. This does mean, of course, that there’s four power 
+lines going on (+12V, 12V ground, +5V and 5V ground). Moving on, let’s add the 
+diodes, resistors and caps:</p>
+
+<figure>
+  <img src="/assets/img/posts/2017/2017-11-19-0007.jpg" alt="Lower memory card with added diodes, resistors and capacitors" />
+  <img src="/assets/img/posts/2017/2017-11-19-0008.jpg" alt="Lower memory card with added diodes, resistors and capacitors (rear view)" />
+  
+</figure>
+
+<p>The diode is the usual 
+<a rel="nofollow" href="https://en.wikipedia.org/wiki/Flyback_diode">flyback</a> 
+that goes across each relay in the computer to ‘soak up’ the voltage spike 
+caused when the relay coil is turned off. The resistors are used to 
+<a rel="nofollow" href="https://en.wikipedia.org/wiki/Pull-up_resistor">pull up</a> 
+some of the memory chip control lines so that they stay in that state 
+unless we ground that line intentionally to activate it. For the memory chips 
+the control lines operate in reverse to how you’d expect … so output enable 
+is active when grounded but disabled when held high. Finally there’s two <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decoupling_capacitor">decoupling capacitors</a> sat next to the IC sockets to filter 
+out any noise on the circuit.</p>
+
+<p>Last bit of soldering to do is the 
+power rails:</p>
+
+<figure><img src="/assets/img/posts/2017/2017-11-19-0009.jpg" alt="Lower memory card with added power rails" />
+  
+</figure>
+
+<p>… and then it’s on with the wire wrap …</p>
+
+<figure>
+  <img src="/assets/img/posts/2017/2017-11-19-0010.jpg" alt="Lower memory card with power wire wrap added" />
+  <img src="/assets/img/posts/2017/2017-11-19-0011.jpg" alt="Lower memory card with power wire wrap added" />
+  <img src="/assets/img/posts/2017/2017-11-19-0012.jpg" alt="Lower memory card with data bus out wire wrap added" />
+  <img src="/assets/img/posts/2017/2017-11-19-0013.jpg" alt="Lower memory card with control wire wrap added" />
+  
+</figure>
+
+<p>Starting with the first picture the 5V power and ground 
+lines are wired out followed by the data and address bus lines in blue. With 
+that done the third picture shows the data bus out lines which come off the 
+relay driver socket in green and then finally it’s the yellow control lines. 
+In this case there’s only one control line which comes off the last bit of the 
+address bus to enable/disable the memory unit as a whole. With that in place 
+it means if we wanted to use the upper 32K address space for something else 
+later on the memory unit won’t interfere - its only interested when we’re 
+addressing the lower 32K address space.</p>
+
+<p>Last job then is to pop in 
+the ICs and the single relay and that’s the lower card done:</p>
+
+<figure>
+  <img src="/assets/img/posts/2017/2017-11-19-0014.jpg" alt="Finished lower memory card (front)" />
+  <img src="/assets/img/posts/2017/2017-11-19-0015.jpg" alt="Finished lower memory card (rear)" />
+  
+</figure>
+
+<p>In the 
+next post I’ll construct the upper memory card which will have a lot more 
+relays on it and be far more densely packed.</p>
+
+
+    </div>
+
+    <div class="field is-grouped is-grouped-multiline">
+      <div class="control">
+        <a href="/archive#2017" class="tags has-addons">
+          <span class="tag is-link">Published</span>
+          <span class="tag is-info">Nov 19, 2017</span>
+        </a>
+      </div>
+      
+      <div class="control">
+        <a href="/tags#construction" class="tags">
+          <span class="tag is-primary">construction</span>
+        </a>
+      </div>
+      
+      <div class="control">
+        <a href="/tags#memory" class="tags">
+          <span class="tag is-primary">memory</span>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        
+          <span class="has-text-weight-semibold">Previous Post</span><br />
+          <a href="/2017/11/program-counter-construction">Program Counter Construction</a>
+                
+      </div>
+      <div class="column has-text-right">
+        
+          <span class="has-text-weight-semibold">Next Post</span><br />
+          <a href="/2017/11/memory-construction-part-2-of-2">Memory Construction (Part 2 of 2)</a>
+                
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+      </section>
+          
+      <footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column">   
+                <h3>On this blog</h3>  
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/archive">Archive</a></p>
+                <p><a href="/tags">Tags</a></p>
+                <p><a href="/pages/progress">Progress</a></p>
+            </div>        
+            <div class="column">
+                <h3>Related sites</h3>
+                <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+                <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+                <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+            </div>
+            <div class="column">
+                <h3>Share on social media</h3>
+                <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
+                <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+            </div>
+        </div>                    
+    </div>
+</footer>
+
+      <script src="/assets/js/app.js" type="text/javascript"></script>
+  </body>
+
+</html>

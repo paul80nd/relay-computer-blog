@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Architectural breakdown: Memory | Relay Computer</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Architectural breakdown: Memory" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the memory. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer)" />
+<meta property="og:description" content="In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the memory. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer)" />
+<link rel="canonical" href="https://relaycomputer.co.uk/2013/11/architectural-breakdown-memory" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2013/11/architectural-breakdown-memory" />
+<meta property="og:site_name" content="Relay Computer" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-11-06T20:14:00+00:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/2013/11/architectural-breakdown-memory","description":"In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the memory. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer)","headline":"Architectural breakdown: Memory","@type":"BlogPosting","datePublished":"2013-11-06T20:14:00+00:00","dateModified":"2013-11-06T20:14:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://relaycomputer.co.uk/2013/11/architectural-breakdown-memory"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- Begin CSS Styles -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/app.css">
+<!-- End CSS Styles -->
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link type="application/atom+xml" rel="alternate" href="https://relaycomputer.co.uk/feed.xml" title="Relay Computer" />
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+})});
+</script>
+<!-- End EU Cookie Consent -->
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47484999-2', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', false);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+
+
+  <body>
+      <nav class="navbar is-primary" >
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    Relay Computer
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item ">Home</a>
+                    
+                    
+                        
+                        <a href="/pages/overview.html" class="navbar-item ">Overview</a>
+                        
+                    
+                        
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="/#" class="navbar-link ">Summaries</a>
+                            <div class="navbar-dropdown">
+                                
+                                <a href="/pages/progress.html" class="navbar-item ">Progress</a>
+                                
+                                <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
+                                
+                                <a href="/pages/alu.html" class="navbar-item ">ALU</a>
+                                
+                                <a href="/pages/control.html" class="navbar-item ">Control</a>
+                                
+                                <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
+                                
+                                <a href="/pages/registers.html" class="navbar-item ">Registers</a>
+                                
+                                <a href="/pages/ui.html" class="navbar-item ">UI</a>
+                                
+                            </div>
+                        </div>
+                        
+                    
+                        
+                        <a href="/archive.html" class="navbar-item ">Archive</a>
+                        
+                    
+                        
+                        <a href="/tags.html" class="navbar-item ">Tags</a>
+                        
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      
+        <section class="hero is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">                
+            <h1 class="title ">Architectural breakdown: Memory</h1>
+            <h2 class="subtitle"></h2>
+        </div>
+    </div>
+</section>
+      
+
+      <section class="section">
+        <div class="container">
+              <div class="columns">
+  <div class="column is-three-quarters-widescreen">
+    <div class="content">
+
+      <p>In this post I’ll continue to try and explain away the various bits of the 
+architecture that will make up my relay computer project — this time it’s the 
+memory. Here again is the architecture I’ll be building against (from the 
+<a rel="nofollow" href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay Computer</a>)</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-06-0000.png" alt="System Architecture for a Relay Computer" />
+  
+  <figcaption>System Architecture for a Relay Computer<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></figcaption>
+</figure>
+
+<p>In my last post I wrote about the computer 
+registers, each of which can store a binary value — they’re typically very 
+fast although there’s a fixed number of them (in this computer there’s eight 
+‘general registers’ A, B, C, D, M1, M2, X and Y). Needless to say we wouldn’t 
+be able to do anything too exciting if we’re limited to only 8 storage slots 
+and that’s where the memory comes in — it’s not as fast (relatively) as the 
+registers but it can hold many, many more values.</p>
+
+<p>You can think of 
+memory as a set of <a rel="nofollow" href="http://en.wikipedia.org/wiki/Pigeon-hole_messagebox">pigeon holes</a> 
+with a finite number of slots/holes that can 
+each hold one value at a time. Each hole has a unique label on it so that we 
+can refer back to it and find a value we placed earlier. The memory in this 
+computer holds 8-bit values (also known as one byte … 1 byte = 8 bits) in 
+each slot and there are 32,768 slots in total. This memory would be described 
+as 32K because it can hold 32 kilobytes or 32 x 1024 bytes — note that there’s 
+1024 bytes to a kilobyte rather than 1000 as you might expect because 
+everything is based on binary and the base-2 numbering system again. It’s 
+worth noting that the values that are put in memory only stick around as long 
+as there’s a power supply connected — as soon as the power is gone so are the 
+values. You may have heard of memory being described as RAM (Random Access 
+Memory) — this is so called because you can access the values in memory in a 
+random fashion, that is, in any order.</p>
+
+<p>The memory takes an input 
+from the address bus and we provide the address of the location in memory we’d 
+like to access here. Once we have an address we can then either set the value 
+in memory from the data bus or read the current value from memory on to the 
+data bus. So, if we set 0000000011001110 on the address bus then we’d be 
+looking at the 206th slot in memory. As you can see dealing with addresses in 
+binary can be a bit of a mouthful so when programming the computer we tend to 
+use hexadecimal (base-16) notation which is more concise. For those not 
+familiar with hexadecimal (or hex for short) it uses the numbers 0-9 followed 
+by the letters a-f (so a=10 and f=15). This is quite handy because a single 
+hex digit covers all the values possible in a 4-bit binary value (so for 
+example, e in hex = 1110 in binary). Given this then we can describe the 
+16-bit address 0000000011001110 as 00CE (more commonly this would be written 
+as 0x00CE with the leading ‘0x’ so it’s clear it’s a hexadecimal value).</p>
+
+<p>You may have noticed, if you’ve got a pretty sharp eye for these 
+things, that the address bus is 16-bit which means it can hold 2^16 = 65536 
+unique values (the maximum value being 65535 or 0xFFFF) however our memory is 
+32K meaning there are 32768 unique slots (the last slot being number 32767 or 
+0x7FFF or 0111111111111111 in binary). Why the mismatch? Well, we don’t have 
+to assign all of the address values/spaces to the memory - we might want to 
+attach other devices to the computer later on which would sit on those other 
+addresses. A good example of this would be a monochrome monitor/screen. If you 
+think of the monitor being divided up into rows and columns of pixels then 
+each pixel would be either on or off (1 or 0). If you group up 8 pixels 
+together then that’s one byte and each series of 8 pixels could be referred to 
+with a unique address. If the monitor started at address 0x8000 then setting 
+the value 10101010 at address 0x8002 would turn on a pattern of pixels 
+starting at the 16th pixel of the first row. From a construction point of view 
+dividing the address space into two halves makes things simpler for sending 
+the address to the right location … taking the highest bit of the address 
+then a zero means the address is destined for the memory whereas a one sends 
+it to whatever I end up deciding to attach to the computer.</p>
+
+<p>One 
+thing very worthy of note for this computer is that it employs a 
+<a rel="nofollow" href="http://en.wikipedia.org/wiki/Von_Neumann_architecture">Von Neumann architecture</a>. 
+In this type of architecture the 
+program the computer is running is stored in the memory along with the data 
+used by the actual program itself. This makes things simpler compared with a 
+<a rel="nofollow" href="http://en.wikipedia.org/wiki/Harvard_architecture">Harvard architecture</a> 
+where the data store is physically 
+separate from the program storage (although the Harvard architecture does have 
+other advantages such as you can read the next program instruction whilst 
+moving data around due to the dedicated buses — as always with these things 
+there’s a trade off). An interesting side effect of storing the computer 
+program in the same memory as data is that the programmer can design a program 
+that modifies itself while it is running which can make the program either 
+very efficient or very hard to debug when things go wrong depending on your 
+viewpoint ;)</p>
+
+<p>So, there’s now just two parts of the architecture 
+left to discuss: the Arithmetic Logic Unit (ALU) and how a program actually 
+executes and controls the computer.</p>
+
+<hr />
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a rel="nofollow" href="http://web.cecs.pdx.edu/~harry/Relay/RelayPaper.htm#Overall%20System%20Architecture">Image</a> reproduced here with the kind permission of Dr Harry Porter <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+    </div>
+
+    <div class="field is-grouped is-grouped-multiline">
+      <div class="control">
+        <a href="/archive#2013" class="tags has-addons">
+          <span class="tag is-link">Published</span>
+          <span class="tag is-info">Nov 6, 2013</span>
+        </a>
+      </div>
+      
+      <div class="control">
+        <a href="/tags#theory" class="tags">
+          <span class="tag is-primary">theory</span>
+        </a>
+      </div>
+      
+      <div class="control">
+        <a href="/tags#Architecture" class="tags">
+          <span class="tag is-primary">Architecture</span>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        
+          <span class="has-text-weight-semibold">Previous Post</span><br />
+          <a href="/2013/11/architectural-breakdown-buses-and">Architectural breakdown: Buses and Registers</a>
+                
+      </div>
+      <div class="column has-text-right">
+        
+          <span class="has-text-weight-semibold">Next Post</span><br />
+          <a href="/2013/11/architectural-breakdown-alu">Architectural breakdown: the ALU</a>
+                
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+      </section>
+          
+      <footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column">   
+                <h3>On this blog</h3>  
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/archive">Archive</a></p>
+                <p><a href="/tags">Tags</a></p>
+                <p><a href="/pages/progress">Progress</a></p>
+            </div>        
+            <div class="column">
+                <h3>Related sites</h3>
+                <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+                <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+                <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+            </div>
+            <div class="column">
+                <h3>Share on social media</h3>
+                <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
+                <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+            </div>
+        </div>                    
+    </div>
+</footer>
+
+      <script src="/assets/js/app.js" type="text/javascript"></script>
+  </body>
+
+</html>

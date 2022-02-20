@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>ALU Design: 1-bit Logic Unit | Relay Computer</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="ALU Design: 1-bit Logic Unit" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here’s a schematic of the 1-bit Logic Unit (based directly on the one used in the Harry Porter Relay Computer):" />
+<meta property="og:description" content="This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here’s a schematic of the 1-bit Logic Unit (based directly on the one used in the Harry Porter Relay Computer):" />
+<link rel="canonical" href="https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit" />
+<meta property="og:site_name" content="Relay Computer" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-11-11T23:32:00+00:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Paul Law"},"url":"https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit","description":"This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here’s a schematic of the 1-bit Logic Unit (based directly on the one used in the Harry Porter Relay Computer):","headline":"ALU Design: 1-bit Logic Unit","@type":"BlogPosting","datePublished":"2013-11-11T23:32:00+00:00","dateModified":"2013-11-11T23:32:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- Begin CSS Styles -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/app.css">
+<!-- End CSS Styles -->
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link type="application/atom+xml" rel="alternate" href="https://relaycomputer.co.uk/feed.xml" title="Relay Computer" />
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+})});
+</script>
+<!-- End EU Cookie Consent -->
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47484999-2', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', false);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+
+
+  <body>
+      <nav class="navbar is-primary" >
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    Relay Computer
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item ">Home</a>
+                    
+                    
+                        
+                        <a href="/pages/overview.html" class="navbar-item ">Overview</a>
+                        
+                    
+                        
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="/#" class="navbar-link ">Summaries</a>
+                            <div class="navbar-dropdown">
+                                
+                                <a href="/pages/progress.html" class="navbar-item ">Progress</a>
+                                
+                                <a href="/pages/instructions.html" class="navbar-item ">Instructions</a>
+                                
+                                <a href="/pages/alu.html" class="navbar-item ">ALU</a>
+                                
+                                <a href="/pages/control.html" class="navbar-item ">Control</a>
+                                
+                                <a href="/pages/enclosure.html" class="navbar-item ">Enclosure</a>
+                                
+                                <a href="/pages/registers.html" class="navbar-item ">Registers</a>
+                                
+                                <a href="/pages/ui.html" class="navbar-item ">UI</a>
+                                
+                            </div>
+                        </div>
+                        
+                    
+                        
+                        <a href="/archive.html" class="navbar-item ">Archive</a>
+                        
+                    
+                        
+                        <a href="/tags.html" class="navbar-item ">Tags</a>
+                        
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      
+        <section class="hero is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">                
+            <h1 class="title ">ALU Design: 1-bit Logic Unit</h1>
+            <h2 class="subtitle"></h2>
+        </div>
+    </div>
+</section>
+      
+
+      <section class="section">
+        <div class="container">
+              <div class="columns">
+  <div class="column is-three-quarters-widescreen">
+    <div class="content">
+
+      <p>This post covers the design of a 1-bit Logic Unit that can produce 
+AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. 
+Here’s a schematic of the 1-bit Logic Unit (based directly on the one used in 
+the <a rel="nofollow" href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay Computer</a>):</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0000.png" alt="" />
+  
+</figure>
+
+<p>The diagram shows two 4PDT (4 pole double toggle) relays with the coils of each shown as a striped box at the top. The four double toggle switches are also shown on each relay and the current position of each switch is as when the relay is off. When power is applied to the relay coil all four switches change over simultaneously. The two relays together with all the various connections form the 1-bit Logic Unit. Inputs to the unit are shown with ‘cupped’ line ends: B and C are the two 1-bit inputs; V is a permanent connection to the power supply. Outputs from the unit are shown with an arrowed line end: the outputs AND, OR, XOR, NOT and SHL. Wire joins are shown with a dot (otherwise the wire is passing over but not connecting to another wire) and unused switches on a relay are shown in grey.</p>
+
+<p>The design itself is pretty much self explanatory (hopefully) … just follow the wires through the switches to get to the result. For example, following the V (voltage/power) input on the right … if the B input is on then you can get through the top switch over to the left relay — if the C input is also on then you can get through to the AND output — therefore, if both B and C are on then power is supplied to the AND output. Note that SHL would be treated as the bit 2 output for the bit 1 input as essentially all this unit does is sets SHL on when input B is on and off when B is off. Another thing worth noting about this design is that it may appear, at first glance, to be using more relay switches than necessary but is designed this way to avoid any ‘backfeed’ on one of the outputs affecting one of the other results.</p>
+
+<p>As mentioned in my last post I’ll be using the smaller DPDT (double pole double toggle) relays in my computer and so I’ll need to double up the number of relays to counter the halving of the number of poles — I can therefore transform the above diagram to the following:</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0001.png" alt="" />
+  
+</figure>
+
+<p>This is the second diagram style I’ll be using on this blog. Each relay is a direct scaled representation of the DPDT TE Connectivity relay I specified in my last post and, again, the switch positions shown in each relay is for when the relay is off. The coils in this particular relay model are polarised and so have positive and negative pins — in this diagram the ground is shown on the left and the input (positive/power) is shown on the right of the coil.</p>
+
+<p>Now, diagrams are all very well but it’s now time to start thinking about how this translates into a physical form … and I’ve got a bit of an admission to make … this isn’t my first go at making an ALU … I constructed a fully working 8-bit ALU last year based on CMOS NAND gates so I’ve already pretty much got a construction method that suits me, one that’s tried and tested (albeit a bit unconventional). The base for my construction is pad board which I’ve used many times for prototyping in the past and found it works well for me. The one I use is from <a rel="nofollow" href="https://www.bitsbox.co.uk/hardware.html" target="blank">bitsbox</a> and is 160 x 115 mm featuring 55 x 40 holes on a 0.1 inch pitch. The challenge for me in this project is fitting everything around these boards … and with the 8-bit logic unit it’s going to be quite a squeeze (more on that later). Ideally I want to use a socket of some kind for the relays rather than solder them directly so it’s easier to switch out defective relays (removing anything that has multiple pins when it’s been soldered can be an absolute pain) but I’ll look into that later.</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0002.jpg" alt="" />
+  <img src="/assets/img/posts/2013/2013-11-11-0003.jpg" alt="" />
+  
+</figure>
+
+<p>I’ll be doing the same for the ground rails this time around but the power connections will go top side as they aren’t as regular as they are for supplying ICs. Speaking of the top side of the board I chose to use <a rel="nofollow" href="https://en.wikipedia.org/wiki/Wire_wrap" target="blank">wire wrap</a> as it allowed me to easily make modifications (or rather, to correct mistakes easily). However, I discovered that wire wrapping posts are really expensive so I tried using header pins and found they worked OK. This could definitely be considered as an unconventional construction technique again but seems to work well … the only problem is that due to the height of the header pins there’s a limit of two wire wraps per pin (my design always allows for this). The resulting wire wraps look like this:</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0004.jpg" alt="" />
+  <img src="/assets/img/posts/2013/2013-11-11-0005.jpg" alt="" />
+  
+</figure>
+
+<p>Quite pretty (well, at least I think so ;) Anyway, going back to the earlier diagram we can thereby convert:</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0006.png" alt="" />
+  
+</figure>
+
+<p>into:</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0007.png" alt="" />
+  
+</figure>
+
+<p>This diagram shows the header pins alongside each relay (black squares) linked with solder where appropriate to the relay pins (thick grey lines). The wire wrapped wire links are shown in various colours (light blue for inputs, dark blue for outputs, red for power supply and grey for internal links). Also shown immediately below each relay coil is a <a rel="nofollow" href="https://en.wikipedia.org/wiki/Flyback_diode">flyback diode</a> to handle the voltage spike created when the relay turns off and the coil’s magnetic field collapses. Here is the same diagram with relays and connections omitted and with partial ground rail shown:</p>
+
+<figure>
+  <img src="/assets/img/posts/2013/2013-11-11-0008.png" alt="" />
+  
+</figure>
+
+<p>… and that about wraps it up for the basic 1-bit Logic Unit. In 
+the next post I’ll cover taking 8 of these units and cramming them on to a 
+single pad board along with intermediate result LEDs and gating relays (to 
+place a selected result back on to the data bus).</p>
+
+
+
+    </div>
+
+    <div class="field is-grouped is-grouped-multiline">
+      <div class="control">
+        <a href="/archive#2013" class="tags has-addons">
+          <span class="tag is-link">Published</span>
+          <span class="tag is-info">Nov 11, 2013</span>
+        </a>
+      </div>
+      
+      <div class="control">
+        <a href="/tags#design" class="tags">
+          <span class="tag is-primary">design</span>
+        </a>
+      </div>
+      
+      <div class="control">
+        <a href="/tags#ALU" class="tags">
+          <span class="tag is-primary">ALU</span>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        
+          <span class="has-text-weight-semibold">Previous Post</span><br />
+          <a href="/2013/11/relay-rumination">Relay Rumination</a>
+                
+      </div>
+      <div class="column has-text-right">
+        
+          <span class="has-text-weight-semibold">Next Post</span><br />
+          <a href="/2013/11/design-8-bit-logic-unit">ALU Design: 8-bit Logic Unit</a>
+                
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+      </section>
+          
+      <footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column">   
+                <h3>On this blog</h3>  
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/archive">Archive</a></p>
+                <p><a href="/tags">Tags</a></p>
+                <p><a href="/pages/progress">Progress</a></p>
+            </div>        
+            <div class="column">
+                <h3>Related sites</h3>
+                <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+                <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+                <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+            </div>
+            <div class="column">
+                <h3>Share on social media</h3>
+                <p><a href="https://www.facebook.com/sharer/sharer.php?u=&amp;quote=" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
+                <p><a href="https://twitter.com/intent/tweet?source=&amp;text=" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
+                <p><a href="http://www.tumblr.com/share?v=3&amp;u=&amp;quote=&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p> 
+                <p><a href="http://pinterest.com/pin/create/button/?url=&amp;description=" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p> 
+                <p><a href="http://www.reddit.com/submit?url=&amp;title=" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>   
+                <p><a href="mailto:?subject=&amp;body=" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p> 
+            </div>
+        </div>                    
+    </div>
+</footer>
+
+      <script src="/assets/js/app.js" type="text/javascript"></script>
+  </body>
+
+</html>

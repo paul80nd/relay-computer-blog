@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://relaycomputer.co.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://relaycomputer.co.uk/" rel="alternate" type="text/html" /><updated>2020-02-01T10:49:16+00:00</updated><id>https://relaycomputer.co.uk/feed.xml</id><title type="html">Relay Computer</title><subtitle>My journey in constructing an 8 bit relay computer from scratch ...  made from of a ton of solder, wires, lights, relays, sweat, tears,  swearing and money.</subtitle><author><name>Paul Law</name></author><entry><title type="html">2020 Update</title><link href="https://relaycomputer.co.uk/2020/02/twenty-twenty-update" rel="alternate" type="text/html" title="2020 Update" /><published>2020-02-01T03:03:00+00:00</published><updated>2020-02-01T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2020/02/twenty-twenty-update</id><content type="html" xml:base="https://relaycomputer.co.uk/2020/02/twenty-twenty-update">&lt;p&gt;As the clock struck midnight at the very end of 2019 I decided, over a glass of something sparkling, that I’d set myself a
+challenge to put out a series of six YouTube videos within the space of one month. This, I thought, seemed timely as I’ve now
+got my relay computer to the point where it can perform branching operations and therefore run more interesting programs.&lt;/p&gt;
+
+&lt;p&gt;Well, somehow I managed to stick to my challenge and although it turned out to be a gruelling schedule below are the six
+videos I published. If you’ve been following me on YouTube you’ll no doubt have seen these by now but just for completness
+I’ve repeated them below.&lt;/p&gt;
+
+&lt;p&gt;In episode 1/6 I gave an overview of the underlying architecture of my relay computer and dipped in to some of the decisions
+that led to that architecture:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NfvgQCoFykE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In episode 2/6 I covered the instruction set (collection of opcodes) which can be used to tell the computer what to do:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/szvNLpovAGM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Given opcodes are made up of 8-bit binary values they’re not particularly user friendly and so in episode 3/6 I introduced an
+assembly language which makes it much easier to program the computer:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/IQW445iMnrc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In episode 4/6 I used the architecture diagram and  assembly language from the earlier videos to create a program that can
+calculate a portion of the Fibonacci series. I then used the list of opcodes to ‘hand assemble’ the program making it suitable
+for loading into the computer:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/_iBnu5HXscI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Episode 5/6 I took a visual tour around my relay computer as it stands today:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/B_U0LM3CCgA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the last video, arguably the main attraction, I take everything covered so far and put it all together to demonstrate
+running the Fibonacci program, for real, on my relay computer:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JZyFSrNyhy8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, all in all, there’s around 144 minutes of content in those videos above but I can assure you it took a lot longer than
+that to create them so I’m pretty much video’d out for the moment ;) That said though, in February I’m going to have a think
+about what comes next and what things I’d like to work on for my relay computer in the coming year … I’ll no doubt make a
+video covering what I come up with and I’ll be blogging, of course, about it here.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="completion" /><category term="video" /><summary type="html">As the clock struck midnight at the very end of 2019 I decided, over a glass of something sparkling, that I’d set myself a challenge to put out a series of six YouTube videos within the space of one month. This, I thought, seemed timely as I’ve now got my relay computer to the point where it can perform branching operations and therefore run more interesting programs.</summary></entry><entry><title type="html">Decoder Construction</title><link href="https://relaycomputer.co.uk/2020/01/decoder-construction" rel="alternate" type="text/html" title="Decoder Construction" /><published>2020-01-05T03:03:00+00:00</published><updated>2020-01-05T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2020/01/decoder-construction</id><content type="html" xml:base="https://relaycomputer.co.uk/2020/01/decoder-construction">&lt;p&gt;In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and
+tested. As before I’ve put a video together which covers the highlights:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/R2zvB_M4D-k&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;As you can see towards the end of the video that’s the basics of branching complete and finally my computer is capable of
+running more complicated programs that have loops and decision making points in them. As reaching this point has coincided
+nicely with the start of a new decade I’ll now pause construction for a moment whilst I create a series of ‘2020 update’
+videos. In these videos I’ll cover off:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Architecture&lt;/li&gt;
+  &lt;li&gt;Instruction Set&lt;/li&gt;
+  &lt;li&gt;Assembly Language&lt;/li&gt;
+  &lt;li&gt;Programming&lt;/li&gt;
+  &lt;li&gt;Computer Tour&lt;/li&gt;
+  &lt;li&gt;Computer Demo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keep an eye out on my &lt;a href=&quot;https://www.youtube.com/user/paul80nd&quot;&gt;YouTube channel&lt;/a&gt; for the videos being published throughout
+January 2020. I’ll also update this blog of course with links to the video plus any supporting docs etc. Happy new year one
+and all.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="decoder" /><category term="completion" /><category term="construction" /><category term="video" /><summary type="html">In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and tested. As before I’ve put a video together which covers the highlights:</summary></entry><entry><title type="html">Decoder Design: Schematic &amp;amp; PCBs</title><link href="https://relaycomputer.co.uk/2019/12/decoder-design-pcb" rel="alternate" type="text/html" title="Decoder Design: Schematic &amp; PCBs" /><published>2019-12-22T03:03:00+00:00</published><updated>2019-12-22T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/12/decoder-design-pcb</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/12/decoder-design-pcb">&lt;p&gt;I’ve almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing
+the sequencer and controller units is complete and both units can perform a GOTO operation. The only problem now is the
+decoder card doesn’t understand what a GOTO instruction looks like and so can’t tell the controller unit to perform a GOTO.
+That’s easily fixed though as the decoder is one of the simplest cards in my computer.&lt;/p&gt;
+
+&lt;p&gt;So far the existing decoder can understand ALU, MOV8 and SETAB instruction classes. Mapped out as a tree diagram it looks like
+this:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2015/2015-01-04-0000.png&quot; alt=&quot;Opcode binary tree for MOV-8, ALU and SETAB&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Given the GOTO instruction …&lt;/p&gt;
+
+&lt;article class=&quot;box&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;h4&gt;Branch/Call &amp;amp; 16-bit Load Immediate&lt;/h4&gt;
+        &lt;div class=&quot;field is-grouped is-grouped-multiline is-family-monospace&quot;&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot;&gt;
+                    &lt;span class=&quot;tag is-primary&quot;&gt;GOTO&lt;/span&gt;
+                    &lt;span class=&quot;tag is-success&quot;&gt;24&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;              
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;s&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;c&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;z&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;n&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;x&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;        
+        &lt;/div&gt;
+        &lt;pre class=&quot;is-size-7&quot;&gt;&lt;code&gt;d = destination register (0-M, 1-J)&lt;br /&gt;s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit&lt;br /&gt;c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit&lt;br /&gt;z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set&lt;br /&gt;n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear&lt;br /&gt;x = 1 = copy PC to XY; 0 = no copy&lt;br /&gt;hhhhhhhh = address high byte (to set in M2/J2)&lt;br /&gt;llllllll = address low byte (to set in M1/J1)&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt; 
+&lt;/article&gt;
+
+&lt;p&gt;… we can see that it will always start with ‘11’ and so updating the tree diagram is simple enough. However, as I want
+to design and build this card completely I’m going to add the other instruction classes I know my computer will be needing. I
+won’t cover these in too much detail yet (I’ll save those for another time) but suffice to say that the controller cards are
+already capable of performing these instruction classes - they’ll just need more relays soldering into the existing PCB.
+Anyho, here’s the complete decoder tree diagram:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-22-0000.png&quot; alt=&quot;Opcode binary tree all instruction classes&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;You can perhaps see that designing these opcodes requires quite a bit of thought. The MOV8 instruction, for example, starts
+with a ‘00’ because we want to reserve the following six bits as parameters to that instruction type - same goes for the GOTO
+instruction. However that means we’ve already used up half of the opcode permutations. The SETAB instruction (starting with
+‘01’) polishes off another quarter as it also needs six bits for its parameters.&lt;/p&gt;
+
+&lt;p&gt;So, that leaves us with a quarter of the possible opcode permutations for everything else. Fortunately most of the remaining
+instructions aren’t quite as parameter hungry … or rather, they’ve been designed that way. This is why sometimes an
+instruction is limited in what it can do. For example, SETAB can only load register A or B because otherwise we’d need to find
+an extra bit in the instruction at the cost of another instruction.&lt;/p&gt;
+
+&lt;p&gt;Another way of visualising the possible permutations of instructions is via a map which shows how much ‘space’ each
+instruction class takes up what’s available:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-22-0001.png&quot; alt=&quot;Opcode class map&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;You can see that we have several blank sections marked ‘NOP’ which stands for ‘No Operation’. These are areas where there’s
+potential space for adding more instruction types in the future.&lt;/p&gt;
+
+&lt;p&gt;Right, let’s move on to designing the relay logic for the decoder and all we need to do is wire out the tree map you see
+above:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-22-0002.png&quot; alt=&quot;Decoder relay logic&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;To that we just add the standard W1 backplane connectors which will bring in power, control/instruction bus, operation bus and the pulse bus. For this card the instruction bus is our input and the operation bus is the output. Finally the card needs
+a set of LEDs on the front to display the currently decoded instruction class. This all results in the final schematic
+which you &lt;a href=&quot;/assets/pdf/decoder.pdf&quot;&gt;can find here in PDF format&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the PCB design we follow the usual steps: place components that have to be in a certain location first; place other
+components in rough logical groups; lay tracks; build ground/power planes; add text labels etc. Being as this card is so
+straightforward let’s skip to the finished design - here’s a ‘realistic’ image of the final board design:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-22-0003.png&quot; alt=&quot;Upper Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-22-0004.png&quot; alt=&quot;Upper Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Decoder Card (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If you’d like to take a closer look at these you can find the full colour previews in
+&lt;a href=&quot;/assets/pdf/decoder-pcbp.pdf&quot;&gt;PDF format here&lt;/a&gt; and &lt;a href=&quot;/assets/pdf/decoder-pcb.pdf&quot;&gt;another version here&lt;/a&gt;
+which seperates the layers out.&lt;/p&gt;
+
+&lt;p&gt;That’s the decoder design fully complete and so all I’ve got to do now is solder it up and the computer should be ready
+to perform its very first branching program.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="decoder" /><category term="design" /><summary type="html">I’ve almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing the sequencer and controller units is complete and both units can perform a GOTO operation. The only problem now is the decoder card doesn’t understand what a GOTO instruction looks like and so can’t tell the controller unit to perform a GOTO. That’s easily fixed though as the decoder is one of the simplest cards in my computer.</summary></entry><entry><title type="html">Controller Construction</title><link href="https://relaycomputer.co.uk/2019/12/controller-construction" rel="alternate" type="text/html" title="Controller Construction" /><published>2019-12-21T03:03:00+00:00</published><updated>2019-12-21T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/12/controller-construction</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/12/controller-construction">&lt;p&gt;In my last couple of posts I covered off the full design for the controller unit. As the PCBs have now arrived I
+can get on with soldering up the cards and giving them a test. As mentioned in my last post, although the controller
+supports all the instruction classes the computer will eventually use I’m only soldering up the ALU, GOTO, MOV8 and
+SETAB instructions for now.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with the lower card and, as before, I’ve put together a video which covers the highlights:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/kMu4q65IUk8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Likewise, here’s a video covering the upper card construction;&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/iCu2DRJhtUc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Finally here’s a video which brings the two cards together and gives the whole controller unit a test (on its own to
+begin with and then installed as part of the computer):&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Z1RIFHWTGRo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, with the controller done I’m really close to getting branching working in the computer. However, as I covered in the last
+video above, the computer can’t currently identify a GOTO opcode even though the controller can perform one. What’s needed
+then is an update to the decoder card to fix that and then branching is finally possible. Fortunately the decoder is one of
+the simplest cards in the computer so it shouldn’t take long to do.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="control" /><category term="completion" /><category term="construction" /><category term="video" /><summary type="html">In my last couple of posts I covered off the full design for the controller unit. As the PCBs have now arrived I can get on with soldering up the cards and giving them a test. As mentioned in my last post, although the controller supports all the instruction classes the computer will eventually use I’m only soldering up the ALU, GOTO, MOV8 and SETAB instructions for now.</summary></entry><entry><title type="html">Controller Design: Schematic &amp;amp; PCBs</title><link href="https://relaycomputer.co.uk/2019/12/controller-design-pcb" rel="alternate" type="text/html" title="Controller Design: Schematic &amp; PCBs" /><published>2019-12-20T03:03:00+00:00</published><updated>2019-12-20T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/12/controller-design-pcb</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/12/controller-design-pcb">&lt;p&gt;In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of
+instructions. Now it’s time to bring all those schematics together and design the two controller PCBs. As with the sequencer,
+the controller is spread over two interconnected cards and I’ll need to decide what’s going on the upper card and what will go
+on the lower card.&lt;/p&gt;
+
+&lt;p&gt;It’s also worth mentioning at this point that the schematics and PCB designs I’m about to share will have some instruction
+classes laid out that I haven’t covered yet in this blog. This is because you can’t ‘half design’ a PCB. I’ll cover these
+new instructions in more detail in the future but suffice to say that they’ll definitely be needed. In choosing what will go
+on which card I follow a similar rule to what I did on the sequencer and go by the number of relays required in each
+functional group. In the end I’ve gone for putting GOTO and MOV8/MOV16/MISC on the lower card and everything else on the
+upper card.&lt;/p&gt;
+
+&lt;p&gt;Schematic wise then it’s just a case of splitting things out and working out which signals will need to be passed between the
+cards. Let’s cut to the chase then … you can find the consolidated
+&lt;a href=&quot;/assets/pdf/controller-hi.pdf&quot;&gt;upper controller schematic here&lt;/a&gt; and the
+&lt;a href=&quot;/assets/pdf/controller-lo.pdf&quot;&gt;lower controller schematic here&lt;/a&gt; (both in PDF format).
+In both cases the card is largely defined by the backplane connectors it uses … W1 for the upper card (made up of address, operation and pulse busses) and W2 for the lower card (made up of Control X, Y and Z busses).&lt;/p&gt;
+
+&lt;p&gt;For the PCB design we follow the same basic steps as before for the sequencer: place components that have to be in
+a certain location first; place other components in rough logical groups; lay tracks; build ground/power planes; add text
+labels etc. Again, we’ll also need to pass additional signals between the cards via an ‘interconnect’. Let’s start then
+with the backplane connectors as these pre-exist on the W backplane and have to be in a certain location:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0000.png&quot; alt=&quot;W1 Connectors (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0001.png&quot; alt=&quot;W2 Connectors (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;As before with the sequencer cards the ‘JLCJLCJLCJLC’ text in the top right corner is to let my PCB manufacture know where
+I’d like them to put their identification code so they can find my PCB amongst all the others they’ll be making. Again, 
+I’ll but it underneath a socket so they can see it but I wont. Next up is the LEDs:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0000.png&quot; alt=&quot;LEDs (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0001.png&quot; alt=&quot;LEDs (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;It’s not specified on the schematic or the PCB but I’ll stick with my usual convention for LED colours and use
+green for selecting registers and yellow for loading registers and other control actions.&lt;/p&gt;
+
+&lt;p&gt;I now need to place the relays, diodes and card interconnects. This often involves just moving things around until there’s a
+nice fit and the ratlines (showing the connections needed between components) are looking reasonably tidy.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0002.png&quot; alt=&quot;Basic layout (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0003.png&quot; alt=&quot;Basic layout (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I’ve also labeled the card now I’ve put everything in position. I find this just helps a little when moving
+on to the most time consuming part of PCB design … laying down the tracks. As with my previous cards I’ll stick with the
+strategy of laying vertical lines on the front of the card and horizontal lines on the rear. I’m quite tight for room this
+time as the boards are fairly densly populated with relays so it took a few attempts to get a routing that worked. Here’s
+what I ended up with:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0004.png&quot; alt=&quot;Upper Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0005.png&quot; alt=&quot;Upper Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Upper Card track routing (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0006.png&quot; alt=&quot;Lower Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0007.png&quot; alt=&quot;Lower Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Lower Card track routing (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Next I add a copper pour on the front and rear of both cards. As before I have a ground plane on both sides
+(to ensure ground can get around any areas where there’s a lot of tracks) and then route a ‘power river’ through the rear ground plane.&lt;/p&gt;
+
+&lt;p&gt;Finally then I just have a good close up inspection of the board to make sure everything is placed well and tracks are routed
+properly. There’s several built-in tools that help with this such as the DRC which’ll check that pad sizes, track widths,
+spaces between items and so on are within the abilities of your chosen manufacturer. In my case I’m well away from those
+minimum tolerances. Another good idea is to produce a ‘realistic’ image of the final board design to have a last
+visual check:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0008.png&quot; alt=&quot;Upper Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0009.png&quot; alt=&quot;Upper Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Upper Card (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0010.png&quot; alt=&quot;Lower Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-12-20-0011.png&quot; alt=&quot;Lower Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Lower Card (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If you’d like to take a closer look at any of these you can find the full colour previews in PDF format
+&lt;a href=&quot;/assets/pdf/controller-hi-pcbp.pdf&quot;&gt;here for the upper card&lt;/a&gt; and
+&lt;a href=&quot;/assets/pdf/controller-lo-pcbp.pdf&quot;&gt;here for the lower card&lt;/a&gt;.
+There’s also another version &lt;a href=&quot;/assets/pdf/controller-hi-pcb.pdf&quot;&gt;here for the upper card&lt;/a&gt; and
+&lt;a href=&quot;/assets/pdf/controller-lo-pcb.pdf&quot;&gt;here for the lower card&lt;/a&gt; which seperates the layers out.&lt;/p&gt;
+
+&lt;p&gt;That’s the controller design fully complete and all I need to do now is send it off to the manufacturer and wait for the
+PCBs to arrive in the post.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="control" /><category term="design" /><summary type="html">In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of instructions. Now it’s time to bring all those schematics together and design the two controller PCBs. As with the sequencer, the controller is spread over two interconnected cards and I’ll need to decide what’s going on the upper card and what will go on the lower card.</summary></entry><entry><title type="html">Controller Design: ALU, MOV8 &amp;amp; SETAB Instructions</title><link href="https://relaycomputer.co.uk/2019/12/controller-alu-mov8-setab-design" rel="alternate" type="text/html" title="Controller Design: ALU, MOV8 &amp; SETAB Instructions" /><published>2019-12-07T03:03:00+00:00</published><updated>2019-12-07T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/12/controller-alu-mov8-setab-design</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/12/controller-alu-mov8-setab-design">&lt;p&gt;In my last post I covered off the controller design for the GOTO instruction. Being as I’ve decided to implement the
+controller on a new set of PCB cards I need to transfer over the existing ALU, MOV8 &amp;amp; SETAB instructions to the new
+controller design. At the relay level nothing really changes so I’ll just quickly recap the timing and implementations here
+using the new schematic style and then in my next post I can move on to putting the full controller schematic and PCB design
+together.&lt;/p&gt;
+
+&lt;p&gt;Let’s cover the three instructions off in order of complexity:&lt;/p&gt;
+
+&lt;h3 id=&quot;setab-load-immediate&quot;&gt;SETAB: Load Immediate&lt;/h3&gt;
+
+&lt;p&gt;The SETAB instruction loads an immediate value in to either the A or B register. This is a really useful and quick way to get
+a value loaded in ready for performing further ALU calculations. The value to be loaded is limited though due to the number of
+available bits in the instruction opcode:&lt;/p&gt;
+
+&lt;article class=&quot;box&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;h4&gt;Load Immediate&lt;/h4&gt;
+        &lt;div class=&quot;field is-grouped is-grouped-multiline is-family-monospace&quot;&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot;&gt;
+                    &lt;span class=&quot;tag is-primary&quot;&gt;SETAB&lt;/span&gt;
+                    &lt;span class=&quot;tag is-success&quot;&gt;8&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;              
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;r&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;        
+        &lt;/div&gt;
+        &lt;pre class=&quot;is-size-7&quot;&gt;&lt;code&gt;    r = destination register (0-A, 1-B)&lt;br /&gt;ddddd = value (-16..15)&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt; 
+&lt;/article&gt;
+
+&lt;p&gt;Here’s the associated timing chart for the SETAB instruction:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-07-0000.png&quot; alt=&quot;SETAB opcode timing chart&quot; /&gt;
+  
+  &lt;figcaption&gt;SETAB opcode timing chart (&lt;a href=&quot;/assets/pdf/timing-setab.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This is all very straightforward to implement in relays:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-07-0003.png&quot; alt=&quot;SETAB schematic&quot; /&gt;
+  
+  &lt;figcaption&gt;SETAB schematic (&lt;a href=&quot;/assets/img/posts/2019/2019-12-07-1003.png&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The only thing that perhaps needs a brief explanation is the CHAT line on the right. This is activated early in the
+fetch/increment cycle to indicate that the sequencer can now have an abort line set if required. All of the instructions on
+this page are 8-cycle and each of the instruction schematics will set AT08 when the CHAT line is active.&lt;/p&gt;
+
+&lt;h3 id=&quot;alu-arithmeticlogic&quot;&gt;ALU: Arithmetic/Logic&lt;/h3&gt;
+
+&lt;p&gt;The ALU instruction can perform a number of arithmetic and logic operations on the B and C registers (or just the B register
+for operations that only work on one value). The result of the operation can be placed in either the A or D register.&lt;/p&gt;
+
+&lt;article class=&quot;box&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;h4&gt;ALU Operation&lt;/h4&gt;
+        &lt;div class=&quot;field is-grouped is-grouped-multiline is-family-monospace&quot;&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot;&gt;
+                    &lt;span class=&quot;tag is-primary&quot;&gt;ALU&lt;/span&gt;
+                    &lt;span class=&quot;tag is-success&quot;&gt;8&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;              
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;r&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;f&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;f&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;f&lt;/span&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;        
+        &lt;/div&gt;
+        &lt;pre class=&quot;is-size-7&quot;&gt;&lt;code&gt;  r = destination register (0-A, 1-D)&lt;br /&gt;fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL)&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt; 
+&lt;/article&gt;
+
+&lt;p&gt;The timing chart for the ALU instruction looks like this:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-07-0001.png&quot; alt=&quot;ALU opcode timing chart&quot; /&gt;
+  
+  &lt;figcaption&gt;ALU opcode timing chart (&lt;a href=&quot;/assets/pdf/timing-alu.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The relay schematic for ALU uses five relays over SETAB’s three but is still easy to understand:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-07-0004.png&quot; alt=&quot;ALU schematic&quot; /&gt;
+  
+  &lt;figcaption&gt;ALU schematic (&lt;a href=&quot;/assets/img/posts/2019/2019-12-07-1004.png&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;mov-8-8-bit-move&quot;&gt;MOV-8: 8-bit Move&lt;/h3&gt;
+
+&lt;p&gt;The ‘not so aptly’ named MOV8 instruction copies an 8-bit value from one register to another. If the source and destination
+register are the same then the value in that register is cleared:&lt;/p&gt;
+
+&lt;article class=&quot;box&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;h4&gt;8-Bit Move&lt;/h4&gt;
+        &lt;div class=&quot;field is-grouped is-grouped-multiline is-family-monospace&quot;&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot;&gt;
+                    &lt;span class=&quot;tag is-primary&quot;&gt;MOV8&lt;/span&gt;
+                    &lt;span class=&quot;tag is-success&quot;&gt;8&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;              
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;s&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;s&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;s&lt;/span&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;        
+        &lt;/div&gt;
+        &lt;pre class=&quot;is-size-7&quot;&gt;&lt;code&gt;ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)&lt;br /&gt;sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt; 
+&lt;/article&gt;
+
+&lt;p&gt;Here’s the MOV-8 timing chart:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-07-0002.png&quot; alt=&quot;MOV8 opcode timing chart&quot; /&gt;
+  
+  &lt;figcaption&gt;MOV8 opcode timing chart (&lt;a href=&quot;/assets/pdf/timing-mov8.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The schematic for MOV-8 has a lot more relays going on but mostly that’s around decoding the source and destination registers
+for the operation:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-12-07-0005.png&quot; alt=&quot;MOV8 schematic&quot; /&gt;
+  
+  &lt;figcaption&gt;MOV8 schematic (&lt;a href=&quot;/assets/img/posts/2019/2019-12-07-1005.png&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;You can see there’s quite a few bits of this schematic blanked out. I’ve done that for brevity here but effectively that’s
+where the M1, M2, X and Y registers can be selected as a source or destination. I won’t be implementing those for the moment
+although as you can probably tell they’re just a couple of relays away.&lt;/p&gt;
+
+&lt;p&gt;That it for these instructions. In my next post I’ll bring these together with the GOTO instruction and get the full
+controller schematic laid out and design the PCB lay out too and then I’m ready for some more board construction.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="control" /><category term="design" /><summary type="html">In my last post I covered off the controller design for the GOTO instruction. Being as I’ve decided to implement the controller on a new set of PCB cards I need to transfer over the existing ALU, MOV8 &amp;amp; SETAB instructions to the new controller design. At the relay level nothing really changes so I’ll just quickly recap the timing and implementations here using the new schematic style and then in my next post I can move on to putting the full controller schematic and PCB design together.</summary></entry><entry><title type="html">Controller Design: GOTO Instruction</title><link href="https://relaycomputer.co.uk/2019/11/controller-goto-design" rel="alternate" type="text/html" title="Controller Design: GOTO Instruction" /><published>2019-11-30T03:03:00+00:00</published><updated>2019-11-30T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/11/controller-goto-design</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/11/controller-goto-design">&lt;p&gt;With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next
+hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed
+by the sequencer pulses. As a reminder here’s the GOTO instruction itself:&lt;/p&gt;
+
+&lt;article class=&quot;box&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;h4&gt;Branch/Call &amp;amp; 16-bit Load Immediate&lt;/h4&gt;
+        &lt;div class=&quot;field is-grouped is-grouped-multiline is-family-monospace&quot;&gt;
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot;&gt;
+                    &lt;span class=&quot;tag is-primary&quot;&gt;GOTO&lt;/span&gt;
+                    &lt;span class=&quot;tag is-success&quot;&gt;24&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;              
+            &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;tag is-link&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;d&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;s&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;c&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;z&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;n&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;x&lt;/span&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;h&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;tags has-addons are-medium&quot; style=&quot;margin-bottom: 0;&quot;&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                    &lt;span class=&quot;tag is-info&quot;&gt;l&lt;/span&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;        
+        &lt;/div&gt;
+        &lt;pre class=&quot;is-size-7&quot;&gt;&lt;code&gt;d = destination register (0-M, 1-J)&lt;br /&gt;s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit&lt;br /&gt;c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit&lt;br /&gt;z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set&lt;br /&gt;n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear&lt;br /&gt;x = 1 = copy PC to XY; 0 = no copy&lt;br /&gt;hhhhhhhh = address high byte (to set in M2/J2)&lt;br /&gt;llllllll = address low byte (to set in M1/J1)&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt; 
+&lt;/article&gt;
+
+&lt;p&gt;… and here’s the associated timing chart to be implemented …&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-02-0003.png&quot; alt=&quot;GOTO opcode timing chart&quot; /&gt;
+  
+  &lt;figcaption&gt;GOTO opcode timing chart (&lt;a href=&quot;/assets/pdf/timing-goto.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The fetch/increment cycle is already catered for as it’s common to all instructions but here’s the schematic for that:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0006.png&quot; alt=&quot;Increment Cycle Schematic&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;So let’s start off with an easy part of the GOTO operation. The first two lines of the timing diagram select the program
+counter (SEL-PC) and read the memory (MEM-RD) which will put the second and third byte of the instruction on to the data bus.
+This happens at pulse J and N and is easily implemented with a couple of relays:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0000.png&quot; alt=&quot;SEL-PC and MEM-RD&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Note that there’s a diode in the SPC (SEL-PC) output as back-feeding could inadvertently drive the P-J or P-N line causing
+erratic behaviour. With the 2nd/3rd byte of the instruction available on the data bus we then need to load these into either
+the M or J register based on bit 5 of the opcode. Whilst that’s going on we also load the incrementer (LD-INC) ready to move
+the program counter on.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0001.png&quot; alt=&quot;LD-M/J and LD-INC&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Next we need to select the incrementer and put the value back in the program counter. Optionally at the last increment of
+the instruction we can also load the XY register effectively storing the address of the next instruction in memory. This is
+used as a ‘return address’ should we want to continue execution from where we initially took a jump from. Bit 0 of the
+instruction sets this option.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0002.png&quot; alt=&quot;SEL-INC, LD-PC and optional LD-XY&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Timing wise that’s the bulk of the chart done - we’re just left with the last two lines SEL-J and the optional LD-PC. This is
+where we’re gating the address held in the J register to the address bus and then if a jump is required we load the program
+counter. The SEL-J is easy enough:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0003.png&quot; alt=&quot;SEL-J&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;The decision to jump or not is based on the condition registers and bits 1, 2, 3 and 4 of the instruction and takes a bit more
+relay logic to wire out:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0004.png&quot; alt=&quot;optional LD-PC&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Again, we have to be careful not to back-feed to the condition registers so there’s a diode on each of the incoming lines but
+it’s not shown on this schematic.&lt;/p&gt;
+
+&lt;p&gt;That’s it. Here’s all of the above put together:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-30-0005.png&quot; alt=&quot;GOTO control circuit&quot; /&gt;
+  
+  &lt;figcaption&gt;GOTO control circuit (&lt;a href=&quot;/assets/img/posts/2019/2019-11-30-1005.png&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;As mentioned in my last post I’m going to rebuild the controller cards on PCBs which will mean also re-implementing the ALU,
+MOV8 and SETAB instruction classes. I’ll cover off the design of these in my next post then get them ordered in and
+constructed.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="control" /><category term="design" /><summary type="html">With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here’s the GOTO instruction itself:</summary></entry><entry><title type="html">Sequencer Construction</title><link href="https://relaycomputer.co.uk/2019/11/sequencer-construction" rel="alternate" type="text/html" title="Sequencer Construction" /><published>2019-11-20T03:03:00+00:00</published><updated>2019-11-20T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/11/sequencer-construction</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/11/sequencer-construction">&lt;p&gt;In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I
+can get on with soldering up the cards and giving them a test.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with the lower card and, as before, I’ve put together a video which covers the highlights:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/HBvL6sCmf1c&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Likewise, here’s a video covering the upper card construction which also includes giving the cards a test together and then testing the whole sequencer unit when placed in the computer:&lt;/p&gt;
+
+&lt;figure class=&quot;image is-16by9&quot;&gt;
+    &lt;iframe class=&quot;has-ratio&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/aIFWOAhqXLY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;One thing I didn’t cover in the video is just how much quicker it is constructing these cards compared to the wire wrap method
+I was using previously.&lt;/p&gt;
+
+&lt;p&gt;Just to finish off then here’s a couple of pictures of the cards:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-20-0000.jpg&quot; alt=&quot;Completed Lower Sequencer Card&quot; /&gt;
+  
+  &lt;figcaption&gt;Completed Lower Sequencer Card (&lt;a href=&quot;/assets/img/pages/sql-1002.jpg&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-20-0001.jpg&quot; alt=&quot;Completed Upper Sequencer Card&quot; /&gt;
+  
+  &lt;figcaption&gt;Completed Upper Sequencer Card (&lt;a href=&quot;/assets/img/pages/sqh-1002.jpg&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-20-0002.jpg&quot; alt=&quot;Completed Sequencer Cards (front view)&quot; /&gt;
+  
+  &lt;figcaption&gt;Completed Sequencer Cards (front view) (&lt;a href=&quot;/assets/img/posts/2019/2019-11-20-1002.jpg&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-20-0003.jpg&quot; alt=&quot;Completed Sequencer Cards&quot; /&gt;
+  
+  &lt;figcaption&gt;Completed Sequencer Cards (&lt;a href=&quot;/assets/img/posts/2019/2019-11-20-1003.jpg&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, with the sequencer complete we’re much nearer to getting branching working in the computer via the GOTO instruction. Next task is to update the controller to handle the relay logic for firing the appropriate control lines at the right time. As with the sequencer I’ll replace the existing controller cards with PCBs which technically means I’ll be designing cards that can handle all the possible instruction classes but in this blog we’ll focus on the existing SETAB, MOV8, ALU and GOTO instructions for now and then cover the other instructions later.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="completion" /><category term="construction" /><category term="video" /><summary type="html">In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I can get on with soldering up the cards and giving them a test.</summary></entry><entry><title type="html">Sequencer Design: Schematic &amp;amp; PCBs</title><link href="https://relaycomputer.co.uk/2019/11/sequencer-design-pcb" rel="alternate" type="text/html" title="Sequencer Design: Schematic &amp; PCBs" /><published>2019-11-11T03:03:00+00:00</published><updated>2019-11-11T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/11/sequencer-design-pcb">&lt;p&gt;I’ve got the designs for the 24-cycle FSM and pulse distribution in place so all that’s left for the sequencer is to bring
+the schematics together and then design the PCBs … and yup, that’s PCBs plural as this is going to be another part of the
+computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a ‘two card
+job’ is purely down to the number of relays I’ve used. In this case the total comes to 60 and if you’re really packing
+them in (6 rows of 8 relays) you can just about get away with a maximum of 48 per card.&lt;/p&gt;
+
+&lt;p&gt;So, two cards it is. The other choice is deciding where to split the design (i.e. what goes on the ‘upper’ card and what on
+the ‘lower’). In this case it seems sensible to place the 8, 10 and 12 cycles plus derived pulses on the lower card and
+then the remaining 14 and 24 cycles on the upper card. The other consideration is fitting the status LEDs on the front of
+the cards (and splitting this way fits nicely) and then what signals need to pass between upper and lower cards.&lt;/p&gt;
+
+&lt;p&gt;Given I’ve already introduced the FSM and pulse distribution schematics in my last posts I’ll cut straight to the chase and
+you can find the consolidated &lt;a href=&quot;/assets/pdf/sequencer-hi.pdf&quot;&gt;upper sequencer schematic here&lt;/a&gt; and the
+&lt;a href=&quot;/assets/pdf/sequencer-lo.pdf&quot;&gt;lower sequencer schematic here&lt;/a&gt; (both in PDF format). In both cases the card is largely
+defined by the backplane connectors it uses … W1 for the upper card (made up of address, operation and pulse busses) and W2
+for the lower card (made up of Control X, Y and Z busses). This is similar to the existing pair of controller cards which also
+talk to enough of the computer to need access to all the busses offered by the W1 and W2 type connectors.&lt;/p&gt;
+
+&lt;p&gt;For the PCB design we follow the same basic steps as before for the Y backplane register: place components that have to be in
+a certain location first; place other components in rough logical groups; lay tracks; build ground/power planes; add text
+labels etc. In this case we’ll also need to pass additional signals between the cards via an ‘interconnect’. Let’s start then
+with the backplane connectors as these pre-exist on the W backplane and have to be in a certain location:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0000.png&quot; alt=&quot;W1 Connectors (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0001.png&quot; alt=&quot;W2 Connectors (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Note that the ‘JLCJLCJLCJLC’ text in the top right corner is to let my PCB manufacture know where I’d like them to put their
+identification code so they can find my PCB amongst all the others they’ll be making. If I don’t specify the location then the
+manufacturer decides for me and invariably puts it somewhere annoying. In this case I want it underneath a socket so they
+can see it but I wont. Next up is the LEDs:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0002.png&quot; alt=&quot;LEDs (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0003.png&quot; alt=&quot;LEDs (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Although it’s not specified on the schematic or the PCB I’ll stick with my usual convention for LED colours and use
+green for the pulses (representing a ‘result’ output of the card), yellow for the abort signals (representing command/control
+inputs to the card) and red for everything else (the FSM stages in this case).&lt;/p&gt;
+
+&lt;p&gt;I now need to place the relays, diodes and card interconnects. This often involves just moving things around until there’s a
+nice fit and the ratlines (showing the connections needed between components) are looking reasonably tidy.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0004.png&quot; alt=&quot;Basic layout (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0005.png&quot; alt=&quot;Basic layout (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I’ve also labeled the card now I’ve put everything in position. I find this just helps a little when moving
+on to the most time consuming part of PCB design … laying down the tracks. A good place to start is routing groups of
+related signals that are heading in the same direction - busses are good examples of this:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0006.png&quot; alt=&quot;Upper card pulse bus&quot; /&gt;
+  
+  &lt;figcaption&gt;Upper card pulse bus&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0007.png&quot; alt=&quot;Upper card pulse LEDs&quot; /&gt;
+  
+  &lt;figcaption&gt;Upper card pulse LEDs&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0008.png&quot; alt=&quot;Lower card FSM outputs&quot; /&gt;
+  
+  &lt;figcaption&gt;Lower card FSM outputs&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0009.png&quot; alt=&quot;Lower card FSM LEDs&quot; /&gt;
+  
+  &lt;figcaption&gt;Lower card FSM LEDs&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It’s then just a case of laying down tracks between groups of relays and any other remaining signals. Another rule I tend to
+follow is to try and keep the tracks on the front of the card going vertical and then route horizontally on the rear of the
+card:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0010.png&quot; alt=&quot;vertical and horizontal routing (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Another good use of laying tracks on the rear of the card is if you’re squeezed for space on the front:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0011.png&quot; alt=&quot;squeezing tracks in (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;… this tends to work best when near the edge of the card so that it leaves plenty of space for the copper pours. The pours
+create a large area of copper that fills any space not used up by tracks. This also gives me somewhere to route the ground
+lines (which come off pretty much every active component) and also the power lines. It’s quite common to have a power plane
+on one side of the board and a ground on the other but I tend to have ground on both sides (to ensure ground can get around
+any areas where there’s a lot of tracks) and then route a ‘power river’ through the rear ground plane:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0012.png&quot; alt=&quot;Copper Pour (Upper Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0013.png&quot; alt=&quot;Copper Pour (Lower Card)&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;All that’s left then is just to have a good close up inspection of the board to make sure everything is placed well and
+tracks are routed properly. There’s several built-in tools that help with this such as the DRC which’ll check that pad sizes,
+track widths, spaces between items and so on are within the abilities of your chosen manufacturer. In my case I’m well outside
+of those minimum tolerances. Another good idea is to produce a ‘realistic’ image of the final board design to have a last
+visual check:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0014.png&quot; alt=&quot;Upper Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0015.png&quot; alt=&quot;Upper Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Upper Card (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0016.png&quot; alt=&quot;Lower Card (front)&quot; /&gt;
+  &lt;img src=&quot;/assets/img/posts/2019/2019-11-11-0017.png&quot; alt=&quot;Lower Card (rear)&quot; /&gt;
+  
+  &lt;figcaption&gt;Lower Card (front and rear)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If you’d like to take a closer look at any of these you can find the full colour previews in PDF format
+&lt;a href=&quot;/assets/pdf/sequencer-hi-pcbp.pdf&quot;&gt;here for the upper card&lt;/a&gt; and &lt;a href=&quot;/assets/pdf/sequencer-lo-pcbp.pdf&quot;&gt;here for the lower card&lt;/a&gt;.
+There’s also another version &lt;a href=&quot;/assets/pdf/sequencer-hi-pcb.pdf&quot;&gt;here for the upper card&lt;/a&gt; and
+&lt;a href=&quot;/assets/pdf/sequencer-lo-pcb.pdf&quot;&gt;here for the lower card&lt;/a&gt; which seperates the layers out.&lt;/p&gt;
+
+&lt;p&gt;That’s the sequencer design fully complete so all that’s left is to send it off to the manufacturer and wait for the
+PCBs to arrive in the post … once they arrive it’s soldering time.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="sequencing" /><category term="design" /><summary type="html">I’ve got the designs for the 24-cycle FSM and pulse distribution in place so all that’s left for the sequencer is to bring the schematics together and then design the PCBs … and yup, that’s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a ‘two card job’ is purely down to the number of relays I’ve used. In this case the total comes to 60 and if you’re really packing them in (6 rows of 8 relays) you can just about get away with a maximum of 48 per card.</summary></entry><entry><title type="html">Sequencer Design: Pulse Distribution</title><link href="https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist" rel="alternate" type="text/html" title="Sequencer Design: Pulse Distribution" /><published>2019-11-02T03:03:00+00:00</published><updated>2019-11-02T03:03:00+00:00</updated><id>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist</id><content type="html" xml:base="https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist">&lt;p&gt;In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run
+longer and more complicated instructions. In this case we’re looking to implement the GOTO instruction so that the
+computer can perform branching.&lt;/p&gt;
+
+&lt;p&gt;As a recap here’s the outputs from the newly designed FSM:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-01-0004.png&quot; alt=&quot;24-cycle FSM Outputs&quot; /&gt;
+  
+  &lt;figcaption&gt;24-cycle FSM Outputs (&lt;a href=&quot;/assets/pdf/sequencer-timing.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;… and here’s the timing chart that we’re trying to obtain:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-10-06-0004.png&quot; alt=&quot;GOTO opcode timing chart&quot; /&gt;
+  
+  &lt;figcaption&gt;GOTO opcode timing chart (&lt;a href=&quot;/assets/img/posts/2019/2019-10-06-1004.png&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;You might be able to spot that some of the outputs are exactly what we’re looking for … they’re the right pulse for the
+right duration of time. Some of the pulses we need though can be obtained by combining the outputs together. Jumping straight
+to it then here’s the pulses that can be derrived from the FSM outputs:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-02-0000.png&quot; alt=&quot;Sequencer Derrived Pulses&quot; /&gt;
+  
+  &lt;figcaption&gt;Sequencer Derrived Pulses (&lt;a href=&quot;/assets/pdf/sequencer-pulses.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Some of these pulses we already had, of course, in the 8-cycle sequencer … pulses like A, B, C and D which are used in the
+fetch/increment cycle (shown in the GOTO timing chart above) at the begining of every instruction. For the rest of the GOTO
+instruction we’ll make use of pulses H - K, N, O and Q - T. If you compare the GOTO timing chart with the pulse
+chart above hopefully you’ll be able to see the relationship between timing and pulses.&lt;/p&gt;
+
+&lt;p&gt;So, we know what pulses we want and how they are derived from the FSM outputs but how is that implemented in the schematic?
+Well, in the majority of cases we’re just taking a FSM output directly but where we’re combining outputs we can just use
+diodes as that will give us the ‘this OR that’ type logic we need:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-02-0001.png&quot; alt=&quot;Pulse Distribution 1&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-02-0002.png&quot; alt=&quot;Pulse Distribution 2&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;As before with the FSM there’s additional pulses here that we’re not using just yet but rest assured they’ll be needed when
+we add more instructions to the computer.&lt;/p&gt;
+
+&lt;p&gt;So, now we’ve got the required pulses I can update the GOTO timing diagram showing which pulse is used at each point:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/img/posts/2019/2019-11-02-0003.png&quot; alt=&quot;GOTO opcode timing chart&quot; /&gt;
+  
+  &lt;figcaption&gt;Updated GOTO opcode timing chart (&lt;a href=&quot;/assets/pdf/timing-goto.pdf&quot;&gt;larger&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It’ll be the controller, of course, that implements the behaviour shown in the timing diagram above (firing the appropriate
+control lines at the appropriate time) but we have everything we need now to finish the design of the sequencer in the
+meanwhile. In my next post I’ll cover the final design and PCB layout for the sequencer.&lt;/p&gt;</content><author><name>Paul Law</name></author><category term="sequencing" /><category term="design" /><summary type="html">In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions. In this case we’re looking to implement the GOTO instruction so that the computer can perform branching.</summary></entry></feed>
