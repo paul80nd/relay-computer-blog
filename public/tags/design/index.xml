@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/design.html</link>
+    <description>Recent content in design on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 22 Dec 2019 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decoder Design: Schematic &amp; PCBs</title>
+      <link>https://relaycomputer.co.uk/2019/12/decoder-design-pcb.html</link>
+      <pubDate>Sun, 22 Dec 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/12/decoder-design-pcb.html</guid>
+      <description>I&amp;rsquo;ve almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing the sequencer and controller units is complete and both units can perform a GOTO operation.</description>
+    </item>
+    
+    <item>
+      <title>Controller Design: Schematic &amp; PCBs</title>
+      <link>https://relaycomputer.co.uk/2019/12/controller-design-pcb.html</link>
+      <pubDate>Fri, 20 Dec 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/12/controller-design-pcb.html</guid>
+      <description>In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of instructions. Now it&amp;rsquo;s time to bring all those schematics together and design the two controller PCBs.</description>
+    </item>
+    
+    <item>
+      <title>Controller Design: ALU, MOV8 &amp; SETAB Instructions</title>
+      <link>https://relaycomputer.co.uk/2019/12/controller-alu-mov8-setab-design.html</link>
+      <pubDate>Sat, 07 Dec 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/12/controller-alu-mov8-setab-design.html</guid>
+      <description>In my last post I covered off the controller design for the GOTO instruction. Being as I&amp;rsquo;ve decided to implement the controller on a new set of PCB cards I need to transfer over the existing ALU, MOV8 &amp;amp; SETAB instructions to the new controller design.</description>
+    </item>
+    
+    <item>
+      <title>Controller Design: GOTO Instruction</title>
+      <link>https://relaycomputer.co.uk/2019/11/controller-goto-design.html</link>
+      <pubDate>Sat, 30 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/controller-goto-design.html</guid>
+      <description>With the sequencer now designed and constructed I&amp;rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: Schematic &amp; PCBs</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb.html</link>
+      <pubDate>Mon, 11 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb.html</guid>
+      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: Pulse Distribution</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist.html</link>
+      <pubDate>Sat, 02 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist.html</guid>
+      <description>In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: 24-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm.html</link>
+      <pubDate>Fri, 01 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm.html</guid>
+      <description>Recently I&amp;rsquo;ve been looking at what&amp;rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:</description>
+    </item>
+    
+    <item>
+      <title>Branching: Opcode Timing</title>
+      <link>https://relaycomputer.co.uk/2019/10/branching-opcode-timing.html</link>
+      <pubDate>Sun, 06 Oct 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/10/branching-opcode-timing.html</guid>
+      <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&amp;rsquo;s where I got to last time:</description>
+    </item>
+    
+    <item>
+      <title>Branching: Opcode Design</title>
+      <link>https://relaycomputer.co.uk/2019/09/branching-opcode-design.html</link>
+      <pubDate>Mon, 23 Sep 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/09/branching-opcode-design.html</guid>
+      <description>There&amp;rsquo;s been a common theme recently in the comments on my YouTube videos &amp;hellip; people are ready to see my relay computer gain the power of branching and become a &amp;lsquo;proper&amp;rsquo; computer &amp;hellip; and that&amp;rsquo;s fair enough because that&amp;rsquo;s the point where the computer can do way more interesting things and run more complicated programs.</description>
+    </item>
+    
+    <item>
+      <title>16-bit Register PCB Design</title>
+      <link>https://relaycomputer.co.uk/2019/08/16bit-register-pcb-design.html</link>
+      <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/08/16bit-register-pcb-design.html</guid>
+      <description>It&amp;rsquo;s time for the oddly therapeutic part of designing a PCB &amp;hellip; laying out the board. In my last post I covered the schematic design and so we now have all the components required for a 16-bit register captured in my design program of choice (EasyEDA) along with how each component is connected to everything else.</description>
+    </item>
+    
+    <item>
+      <title>16-bit Register Design</title>
+      <link>https://relaycomputer.co.uk/2019/07/16bit-register-design.html</link>
+      <pubDate>Mon, 15 Jul 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/07/16bit-register-design.html</guid>
+      <description>In my last couple of posts I&amp;rsquo;ve been building up to a change of approach in how I&amp;rsquo;m making the cards in my computer. This is mainly because I can&amp;rsquo;t face the monotony of hand building the upcoming register cards (which I&amp;rsquo;ll need three of so it&amp;rsquo;s triple the procrastination holding me back).</description>
+    </item>
+    
+    <item>
+      <title>A change of approach</title>
+      <link>https://relaycomputer.co.uk/2019/01/change-of-approach.html</link>
+      <pubDate>Mon, 14 Jan 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/01/change-of-approach.html</guid>
+      <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&amp;rsquo;ve followed my blog (over the years) you&amp;rsquo;ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Design (Part 3 of 3)</title>
+      <link>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3.html</link>
+      <pubDate>Wed, 07 Feb 2018 22:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3.html</guid>
+      <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Design (Part 2 of 3)</title>
+      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3.html</link>
+      <pubDate>Mon, 29 Jan 2018 22:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3.html</guid>
+      <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Design (Part 1 of 3)</title>
+      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3.html</link>
+      <pubDate>Wed, 24 Jan 2018 21:24:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3.html</guid>
+      <description>My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&amp;rsquo;s a bit of a pain.</description>
+    </item>
+    
+    <item>
+      <title>Control Design: Fetch and Increment</title>
+      <link>https://relaycomputer.co.uk/2017/09/control-design-fetch-and-increment.html</link>
+      <pubDate>Sun, 17 Sep 2017 12:57:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/09/control-design-fetch-and-increment.html</guid>
+      <description>The design of the computer&amp;rsquo;s memory, incrementer and program counter are now complete but there&amp;rsquo;s one last piece of the &amp;lsquo;puzzle&amp;rsquo; required to get the computer running a program.</description>
+    </item>
+    
+    <item>
+      <title>Memory Design (Part 2 of 2)</title>
+      <link>https://relaycomputer.co.uk/2017/09/memory-design-part-2-of-2.html</link>
+      <pubDate>Wed, 06 Sep 2017 22:55:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/09/memory-design-part-2-of-2.html</guid>
+      <description>In my last post I started the design for the computer&amp;rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.</description>
+    </item>
+    
+    <item>
+      <title>Memory Design (Part 1 of 2)</title>
+      <link>https://relaycomputer.co.uk/2017/09/memory-design-part-1-of-2.html</link>
+      <pubDate>Sun, 03 Sep 2017 22:35:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/09/memory-design-part-1-of-2.html</guid>
+      <description>In my last post I explained my decision to use a &amp;lsquo;modern&amp;rsquo; memory chip in my relay computer &amp;hellip; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip.</description>
+    </item>
+    
+    <item>
+      <title>The problem with memory</title>
+      <link>https://relaycomputer.co.uk/2017/08/the-problem-with-memory.html</link>
+      <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/08/the-problem-with-memory.html</guid>
+      <description>It&amp;rsquo;s time, at last, to start looking at the design for the computer&amp;rsquo;s memory and this is a bit of a game changer as it&amp;rsquo;s the final part of the jigsaw that lets the computer run a program.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Design</title>
+      <link>https://relaycomputer.co.uk/2017/07/incrementer-design.html</link>
+      <pubDate>Mon, 17 Jul 2017 21:34:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/07/incrementer-design.html</guid>
+      <description>In my last post I covered the design of the 16-bit half adder which takes whatever value is currently on the address bus and increments it by one.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Design: 16-bit Half Adder</title>
+      <link>https://relaycomputer.co.uk/2017/07/incrementer-design-16-bit-half-adder.html</link>
+      <pubDate>Sat, 15 Jul 2017 14:57:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/07/incrementer-design-16-bit-half-adder.html</guid>
+      <description>In the last post I introduced the design for the 1-bit Half Adder. This post covers connecting sixteen of these units together to make the 16-bit Half Adder.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Design: 1-bit Half Adder</title>
+      <link>https://relaycomputer.co.uk/2017/06/incrementer-design-1-bit-half-adder.html</link>
+      <pubDate>Sun, 04 Jun 2017 22:42:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/06/incrementer-design-1-bit-half-adder.html</guid>
+      <description>Typical isn&amp;rsquo;t it?! &amp;hellip; you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I move on to the design of the incrementer.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Program Counter</title>
+      <link>https://relaycomputer.co.uk/2017/05/register-design-program-counter.html</link>
+      <pubDate>Mon, 29 May 2017 17:13:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/05/register-design-program-counter.html</guid>
+      <description>It&amp;rsquo;s been a while since my last post &amp;hellip; pretty much 10 months in fact &amp;hellip; and I&amp;rsquo;d love to say I&amp;rsquo;ve been quietly working on my relay computer in the meantime but I haven&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>User Interface Design: Instruction, Clock and Sequencer</title>
+      <link>https://relaycomputer.co.uk/2015/04/user-interface-design-instruction-clock.html</link>
+      <pubDate>Wed, 08 Apr 2015 23:19:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/04/user-interface-design-instruction-clock.html</guid>
+      <description>Over my last seven posts I&amp;rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions.</description>
+    </item>
+    
+    <item>
+      <title>Control Design: MOV-8, ALU and SETAB (part 2 of 2)</title>
+      <link>https://relaycomputer.co.uk/2015/04/control-design-mov-8-alu-and-setab-part.html</link>
+      <pubDate>Sat, 04 Apr 2015 08:06:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/04/control-design-mov-8-alu-and-setab-part.html</guid>
+      <description>In part one of this two part post I introduced the design of the control relays for each of the MOV-8, ALU and SETAB instructions. With these in hand I can now move on to placing these on the control cards and wire everything together.</description>
+    </item>
+    
+    <item>
+      <title>Control Design: MOV-8, ALU and SETAB (part 1 of 2)</title>
+      <link>https://relaycomputer.co.uk/2015/03/control-design-mov-8-alu-and-setab-part.html</link>
+      <pubDate>Tue, 31 Mar 2015 22:26:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/03/control-design-mov-8-alu-and-setab-part.html</guid>
+      <description>Over the last five posts I&amp;rsquo;ve been building up the design of a set of cards so that the computer will be able to understand and perform the MOV-8, ALU and SETAB instructions.</description>
+    </item>
+    
+    <item>
+      <title>Pulse Distribution Design: Pulses C,D and E</title>
+      <link>https://relaycomputer.co.uk/2015/03/pulse-distribution-design-pulses-cd-and.html</link>
+      <pubDate>Sun, 22 Mar 2015 13:58:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/03/pulse-distribution-design-pulses-cd-and.html</guid>
+      <description>In my last post I covered the design of the 8-cycle finite state machine (FSM). In this post I&amp;rsquo;ll now take the outputs from that FSM and combine them to produce the timing pulses that will be needed to perform the MOV-8, ALU and SETAB instructions.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: 8-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm.html</link>
+      <pubDate>Mon, 26 Jan 2015 22:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm.html</guid>
+      <description>So far I&amp;rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&amp;rsquo;m well on the way to having the computer perform MOV-8, ALU and SETAB instructions.</description>
+    </item>
+    
+    <item>
+      <title>Decoder Design: MOV-8, ALU &amp; SETAB </title>
+      <link>https://relaycomputer.co.uk/2015/01/decoder-design-mov-8-alu-setab.html</link>
+      <pubDate>Sun, 04 Jan 2015 22:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/01/decoder-design-mov-8-alu-setab.html</guid>
+      <description>In my last post I introduced the design for the instruction register which holds the current 8-bit opcode that the computer is executing. The next card to design is the decoder which will take the 8-bit opcode and set either the MOV-8, ALU or SETAB control lines depending which class of instruction the opcode represents.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Instruction Register</title>
+      <link>https://relaycomputer.co.uk/2014/12/register-design-instruction-register.html</link>
+      <pubDate>Mon, 01 Dec 2014 21:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/12/register-design-instruction-register.html</guid>
+      <description>Well, it&amp;rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &amp;hellip; and that&amp;rsquo;s mainly because &amp;lsquo;decorating&amp;rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &amp;hellip; all before I got anywhere near choosing a tasteful shade of emulsion for the walls.</description>
+    </item>
+    
+    <item>
+      <title>Sequencing &amp; Control Design: Overview</title>
+      <link>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview.html</link>
+      <pubDate>Fri, 19 Sep 2014 23:27:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview.html</guid>
+      <description>I&amp;rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines.</description>
+    </item>
+    
+    <item>
+      <title>User Interface: Display B Initial Design and Construction</title>
+      <link>https://relaycomputer.co.uk/2014/07/user-interface-display-b-initial-design.html</link>
+      <pubDate>Sun, 20 Jul 2014 10:05:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/07/user-interface-display-b-initial-design.html</guid>
+      <description>In my last post I put together the beginnings of the first display card &amp;hellip; named in a brilliant flash of nomenclature as display card A.</description>
+    </item>
+    
+    <item>
+      <title>User Interface: Display A Initial Design and Construction</title>
+      <link>https://relaycomputer.co.uk/2014/07/user-interface-display-initial-design.html</link>
+      <pubDate>Sat, 12 Jul 2014 10:31:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/07/user-interface-display-initial-design.html</guid>
+      <description>Following on from working on the main data switches in my last post this time I&amp;rsquo;ve taken the first steps in designing and constructing the first of two display cards which will sit in the upper enclosure.</description>
+    </item>
+    
+    <item>
+      <title>User Interface: Data Switches</title>
+      <link>https://relaycomputer.co.uk/2014/07/user-interface-data-switches.html</link>
+      <pubDate>Sat, 05 Jul 2014 09:40:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/07/user-interface-data-switches.html</guid>
+      <description>Now I&amp;rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with the computer.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: B and C 8-bit Registers</title>
+      <link>https://relaycomputer.co.uk/2014/05/register-design-b-and-c-8-bit-registers.html</link>
+      <pubDate>Sun, 11 May 2014 10:08:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/register-design-b-and-c-8-bit-registers.html</guid>
+      <description>In a recent post I put up the design for the A and D 8-bit register card &amp;hellip; the B and C register card is very similar in design but has the additional complexity that it has to directly feed the ALU.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Dual Output 8-bit Register</title>
+      <link>https://relaycomputer.co.uk/2014/04/register-design-dual-output-8-bit.html</link>
+      <pubDate>Thu, 24 Apr 2014 22:56:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/register-design-dual-output-8-bit.html</guid>
+      <description>In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&amp;rsquo;m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there&amp;rsquo;s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: A and D 8-bit Registers</title>
+      <link>https://relaycomputer.co.uk/2014/04/register-design-and-d-8-bit-registers.html</link>
+      <pubDate>Sun, 20 Apr 2014 11:15:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/register-design-and-d-8-bit-registers.html</guid>
+      <description>In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: General Purpose 8-bit Register</title>
+      <link>https://relaycomputer.co.uk/2014/04/register-design-general-purpose-8-bit.html</link>
+      <pubDate>Wed, 16 Apr 2014 22:08:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/register-design-general-purpose-8-bit.html</guid>
+      <description>This post covers the design of a general purpose 8-bit register that can be loaded from the data bus and then selected back to the data bus at a later time.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Update: Laser Cutting</title>
+      <link>https://relaycomputer.co.uk/2014/04/enclosure-update-laser-cutting.html</link>
+      <pubDate>Thu, 10 Apr 2014 19:58:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/enclosure-update-laser-cutting.html</guid>
+      <description>I couldn&amp;rsquo;t resist it any longer &amp;hellip; I&amp;rsquo;ve ordered the laser cut parts for the case doors, sides and bay floor/ceilings. I did say I&amp;rsquo;d wait for my chosen laser cut website to put out a free delivery offer but I ended up crumbling under the weight of my own impatience.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Disclosure</title>
+      <link>https://relaycomputer.co.uk/2014/03/enclosure-disclosure.html</link>
+      <pubDate>Sat, 01 Mar 2014 10:55:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/enclosure-disclosure.html</guid>
+      <description>Sorry, I will try to rain in the terrible punning post titles.
+This time I wanted to share the thoughts and ideas I&amp;rsquo;ve been having around building a case to hold my computer when it&amp;rsquo;s eventually complete.</description>
+    </item>
+    
+    <item>
+      <title>Sketchy Diversion</title>
+      <link>https://relaycomputer.co.uk/2014/02/sketchy-diversion.html</link>
+      <pubDate>Tue, 04 Feb 2014 19:10:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/sketchy-diversion.html</guid>
+      <description>I&amp;rsquo;m taking a break &amp;hellip; just a short one.
+In between all the bouts of wire wrapping for the ALU arithmetic card I&amp;rsquo;m starting to think about enclosure options for the computer when it&amp;rsquo;s finally (finally!</description>
+    </item>
+    
+    <item>
+      <title>Backplane Design and Construction</title>
+      <link>https://relaycomputer.co.uk/2013/12/backplane-design-and-construction.html</link>
+      <pubDate>Tue, 03 Dec 2013 19:27:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/backplane-design-and-construction.html</guid>
+      <description>Originally when I was thinking about how I&amp;rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and physically flexible which would</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Control Unit</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-design-control-unit.html</link>
+      <pubDate>Sun, 01 Dec 2013 21:21:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-design-control-unit.html</guid>
+      <description>In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&amp;rsquo;ll put all three of these components together to make up the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Condition Registers</title>
+      <link>https://relaycomputer.co.uk/2013/11/alu-design-condition-registers.html</link>
+      <pubDate>Sat, 30 Nov 2013 10:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/alu-design-condition-registers.html</guid>
+      <description>This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Zero Detect</title>
+      <link>https://relaycomputer.co.uk/2013/11/alu-design-zero-detect.html</link>
+      <pubDate>Sat, 23 Nov 2013 08:57:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/alu-design-zero-detect.html</guid>
+      <description>This post covers the design of the Zero Detect circuit which along with the 3-to-8 Function Decoder (covered in my last post) and the Condition Registers (next post) make up the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Function Decoder</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-function-decoder.html</link>
+      <pubDate>Wed, 20 Nov 2013 22:18:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-function-decoder.html</guid>
+      <description>This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 8-bit Arithmetic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-8-bit-arithmetic-unit.html</link>
+      <pubDate>Sun, 17 Nov 2013 10:43:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-8-bit-arithmetic-unit.html</guid>
+      <description>In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 1-bit Arithmetic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-1-bit-arithmetic-unit.html</link>
+      <pubDate>Fri, 15 Nov 2013 22:33:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-1-bit-arithmetic-unit.html</guid>
+      <description>This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&amp;rsquo;s a schematic of the 1-bit Arithmetic Unit (based directly on the one used in the Harry Porter Relay Computer):</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 8-bit Logic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-8-bit-logic-unit.html</link>
+      <pubDate>Wed, 13 Nov 2013 22:42:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-8-bit-logic-unit.html</guid>
+      <description>In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, status LEDs and gating relays thereby forming a complete 8-bit Logic Unit.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 1-bit Logic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit.html</link>
+      <pubDate>Mon, 11 Nov 2013 23:32:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit.html</guid>
+      <description>This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C.</description>
+    </item>
+    
+    <item>
+      <title>Relay Rumination</title>
+      <link>https://relaycomputer.co.uk/2013/11/relay-rumination.html</link>
+      <pubDate>Sun, 10 Nov 2013 23:16:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/relay-rumination.html</guid>
+      <description>If there&amp;rsquo;s one thing a relay computer needs a lot of it&amp;rsquo;s &amp;hellip; erm &amp;hellip; relays (of course) &amp;hellip; which happens to be a bit unfortunate as relays, compared to the other parts of the computer, are rather expensive.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ALU on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/alu.html</link>
+    <description>Recent content in ALU on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 19 Aug 2014 18:22:00 +0100</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/alu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ALU &amp; Registers A-D Test with new Display Cards</title>
+      <link>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</link>
+      <pubDate>Tue, 19 Aug 2014 18:22:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</guid>
+      <description>Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&amp;rsquo;s time to fit them to the upper enclosure.</description>
+    </item>
+    
+    <item>
+      <title>Completed ALU</title>
+      <link>https://relaycomputer.co.uk/2014/03/completed-alu.html</link>
+      <pubDate>Sun, 30 Mar 2014 12:15:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/completed-alu.html</guid>
+      <description>Following my last post on the completed backplane I&amp;rsquo;m now in a position to connect all the other completed cards together to test the full ALU.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Backplane</title>
+      <link>https://relaycomputer.co.uk/2014/03/alu-construction-completed-backplane.html</link>
+      <pubDate>Wed, 26 Mar 2014 21:57:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/alu-construction-completed-backplane.html</guid>
+      <description>In my last post I mentioned I&amp;rsquo;d suffered a bit of a set back with the construction of the ALU backplane. Well, the short version of things is that I&amp;rsquo;ve admitted defeat and constructed a new backplane using a different design &amp;hellip; it looks like this:</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Control Card Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/03/alu-construction-completed-control-card.html</link>
+      <pubDate>Sun, 16 Mar 2014 08:59:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/alu-construction-completed-control-card.html</guid>
+      <description>The ALU Control Card is now complete and looks like this:
+{% figure %}{% endfigure %}
+This card was, on the whole, much simpler and quicker to put together than previous cards (despite me initially messing up the zero detection relay positions).</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Control Card Power Rails &amp; Wire Wrap</title>
+      <link>https://relaycomputer.co.uk/2014/03/alu-construction-control-card-power.html</link>
+      <pubDate>Fri, 14 Mar 2014 19:51:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/alu-construction-control-card-power.html</guid>
+      <description>I&amp;rsquo;ve been a bit short of time lately so I&amp;rsquo;ve been working on the ALU Control Card in little bursts &amp;hellip; but after lots of these little bursts I&amp;rsquo;ve now got all the power rails and wire wrap done for this card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Control Card Header Pins &amp; Relay Sockets</title>
+      <link>https://relaycomputer.co.uk/2014/03/alu-construction-control-card-header.html</link>
+      <pubDate>Tue, 04 Mar 2014 18:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/alu-construction-control-card-header.html</guid>
+      <description>Following on from the first two successfully completed ALU cards, for logic and arithmetic, it&amp;rsquo;s time to make a start on the control card (well, actually, the LEDs and connectors are already done from earlier but you get the gist).</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Arithmetic Card Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/02/alu-construction-completed-arithmetic.html</link>
+      <pubDate>Sun, 23 Feb 2014 17:31:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/alu-construction-completed-arithmetic.html</guid>
+      <description>The ALU arithmetic card is now complete! The final card looks like this:
+{% figure %} {% endfigure %}
+As I did for the ALU logic card before I&amp;rsquo;ve put the following YouTube video together which gives a walkthrough of the arithmetic card in operation &amp;hellip; and as before this one also has a narrative track delivered by my own fair gob.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Arithmetic Card Wire Wrap 2</title>
+      <link>https://relaycomputer.co.uk/2014/02/alu-construction-arithmetic-card-wire_19.html</link>
+      <pubDate>Wed, 19 Feb 2014 22:37:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/alu-construction-arithmetic-card-wire_19.html</guid>
+      <description>I&amp;rsquo;ve managed to squeeze in a couple more wire wrapping sessions this week so in this post there&amp;rsquo;s a few photos of progress so far.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Arithmetic Card Wire Wrap 1</title>
+      <link>https://relaycomputer.co.uk/2014/02/alu-construction-arithmetic-card-wire.html</link>
+      <pubDate>Sun, 16 Feb 2014 10:04:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/alu-construction-arithmetic-card-wire.html</guid>
+      <description>Fear not (just in case you were for some reason) all this talk of Sketchup and enclosures and so on hasn&amp;rsquo;t totally diverted me from the main task of constructing the ALU.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Arithmetic Card Power Rails</title>
+      <link>https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-power.html</link>
+      <pubDate>Sun, 26 Jan 2014 23:26:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-power.html</guid>
+      <description>Another round of soldering done &amp;hellip; this time putting down the power rails on the arithmetic card along with some soldered wire links. This is the last of the soldering for this card - it&amp;rsquo;s all wire wrapping form hereon in.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: 1-bit Arithmetic Full Construction</title>
+      <link>https://relaycomputer.co.uk/2014/01/alu-construction-1-bit-arithmetic-full.html</link>
+      <pubDate>Tue, 21 Jan 2014 18:25:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/01/alu-construction-1-bit-arithmetic-full.html</guid>
+      <description>So, as mentioned in my last post this time I&amp;rsquo;ve put in the wire links and wraps needed to test the first bit of the arithmetic card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Arithmetic Card Relay Sockets</title>
+      <link>https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-relay.html</link>
+      <pubDate>Fri, 17 Jan 2014 23:23:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-relay.html</guid>
+      <description>It&amp;rsquo;s always a fiddly job getting the relay sockets soldered in and the ALU arithmetic card proved no exception. With this in mind I&amp;rsquo;ve been spreading the work out over several mini sessions in accordance with my new post-Xmas lack of patience.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Arithmetic Card Header Pins</title>
+      <link>https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-header.html</link>
+      <pubDate>Mon, 06 Jan 2014 22:18:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-header.html</guid>
+      <description>Following on from the successful construction of the ALU logic card in my last post it&amp;rsquo;s time to start off the new year with the next ALU card (number 2 of 3 ALU cards in total) &amp;hellip; the arithmetic card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Logic Card Full Test</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-completed-logic-card.html</link>
+      <pubDate>Wed, 18 Dec 2013 08:26:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-completed-logic-card.html</guid>
+      <description>The ALU logic card is now finally complete! &amp;hellip; well, it is now I&amp;rsquo;ve popped the last few relays into their sockets. The final card looks like this:</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Wire Wrap 3</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-wrap-3.html</link>
+      <pubDate>Wed, 18 Dec 2013 08:01:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-wrap-3.html</guid>
+      <description>I&amp;rsquo;m now just one session of wire wrapping away from a completed ALU logic card. The final job is to wire up the gating relays that select one of the five logic results back on to the data bus.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: 8-bit Logic Unit Tests</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-8-bit-logic-unit-tests.html</link>
+      <pubDate>Thu, 12 Dec 2013 19:20:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-8-bit-logic-unit-tests.html</guid>
+      <description>There&amp;rsquo;s now enough sockets, solder and wires to test all eight bits of the ALU logic card. This isn&amp;rsquo;t quite a full test as the gating relays that apply one of the results produced by each bit unit haven&amp;rsquo;t been wired up yet but there&amp;rsquo;s enough there to be able to set an input and see the results displayed on the LEDs along the front of the card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Wire Wrap 2</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-wrap-2.html</link>
+      <pubDate>Thu, 12 Dec 2013 18:57:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-wrap-2.html</guid>
+      <description>Continuing on with the wire wrapping for the ALU logic card next up is the input and result links:
+{% figure %} {% endfigure %}</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Wire Wrap 1</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-wrap-1.html</link>
+      <pubDate>Thu, 12 Dec 2013 18:41:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-wrap-1.html</guid>
+      <description>Finally, with all the soldering now done, it&amp;rsquo;s time to set about wire wrapping the ALU logic card. First up is the internal connections within each logic bit:</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Power Rails</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-power-rails.html</link>
+      <pubDate>Tue, 10 Dec 2013 22:56:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-power-rails.html</guid>
+      <description>It seems that every time I move on to the next stage of construction on the ALU logic card it&amp;rsquo;s fiddlier than the stage before it &amp;hellip; this stage is no exception.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Relay Sockets</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-relay.html</link>
+      <pubDate>Mon, 09 Dec 2013 07:27:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-relay.html</guid>
+      <description>The construction of the ALU logic card is coming along nicely but there&amp;rsquo;s still a lot of soldering ahead to get all the relay sockets down &amp;hellip; and this part is the fiddliest bit yet.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Header Pins</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-header-pins.html</link>
+      <pubDate>Sun, 08 Dec 2013 09:57:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-header-pins.html</guid>
+      <description>Following on from the successful construction of the first bit on the ALU logic card in my last post it&amp;rsquo;s now time to start putting together the other 7 bits and the gating circuits (to place one of the logic results on to the data bus).</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: 1-bit Logic Full Construction</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-1-bit-logic-full.html</link>
+      <pubDate>Sat, 07 Dec 2013 01:54:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-1-bit-logic-full.html</guid>
+      <description>So, although I probably should construct the logic card methodically a full stage at a time (solder header pins then sockets then wire wrap) I can&amp;rsquo;t resist fully assembling a single bit alone to see if/how it works.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: LED Tests</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-led-tests.html</link>
+      <pubDate>Fri, 06 Dec 2013 20:55:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-led-tests.html</guid>
+      <description>Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control).</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Logic Card Wire Links</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-links.html</link>
+      <pubDate>Fri, 06 Dec 2013 20:51:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-logic-card-wire-links.html</guid>
+      <description>Before I can test all of the LEDs laid down so far (to make sure they survived the heat of the soldering iron) I need to add some wire links on the logic card between the LED anodes and the header pins.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: LED Header Pins</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-led-header-pins.html</link>
+      <pubDate>Thu, 05 Dec 2013 21:46:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-led-header-pins.html</guid>
+      <description>So far, in the construction of the three ALU cards (Logic, Arithmetic and Control) I&amp;rsquo;ve soldered down the connectors and LEDs. It&amp;rsquo;s now time to solder in some header pins and join them to the existing connectors and LEDs ready for wire-wrapping later.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Connectors and LEDs</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-connectors-and-leds.html</link>
+      <pubDate>Mon, 02 Dec 2013 18:05:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-connectors-and-leds.html</guid>
+      <description>As promised in my last post it&amp;rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Control Unit</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-design-control-unit.html</link>
+      <pubDate>Sun, 01 Dec 2013 21:21:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-design-control-unit.html</guid>
+      <description>In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&amp;rsquo;ll put all three of these components together to make up the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Condition Registers</title>
+      <link>https://relaycomputer.co.uk/2013/11/alu-design-condition-registers.html</link>
+      <pubDate>Sat, 30 Nov 2013 10:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/alu-design-condition-registers.html</guid>
+      <description>This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Zero Detect</title>
+      <link>https://relaycomputer.co.uk/2013/11/alu-design-zero-detect.html</link>
+      <pubDate>Sat, 23 Nov 2013 08:57:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/alu-design-zero-detect.html</guid>
+      <description>This post covers the design of the Zero Detect circuit which along with the 3-to-8 Function Decoder (covered in my last post) and the Condition Registers (next post) make up the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Function Decoder</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-function-decoder.html</link>
+      <pubDate>Wed, 20 Nov 2013 22:18:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-function-decoder.html</guid>
+      <description>This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 8-bit Arithmetic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-8-bit-arithmetic-unit.html</link>
+      <pubDate>Sun, 17 Nov 2013 10:43:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-8-bit-arithmetic-unit.html</guid>
+      <description>In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 1-bit Arithmetic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-1-bit-arithmetic-unit.html</link>
+      <pubDate>Fri, 15 Nov 2013 22:33:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-1-bit-arithmetic-unit.html</guid>
+      <description>This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&amp;rsquo;s a schematic of the 1-bit Arithmetic Unit (based directly on the one used in the Harry Porter Relay Computer):</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 8-bit Logic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-8-bit-logic-unit.html</link>
+      <pubDate>Wed, 13 Nov 2013 22:42:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-8-bit-logic-unit.html</guid>
+      <description>In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, status LEDs and gating relays thereby forming a complete 8-bit Logic Unit.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: 1-bit Logic Unit</title>
+      <link>https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit.html</link>
+      <pubDate>Mon, 11 Nov 2013 23:32:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/design-1-bit-logic-unit.html</guid>
+      <description>This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C.</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: the ALU</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-alu.html</link>
+      <pubDate>Thu, 07 Nov 2013 07:24:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-alu.html</guid>
+      <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s the Arithmetic Logic Unit (ALU).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>video on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/video.html</link>
+    <description>Recent content in video on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 01 Feb 2020 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/video/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2020 Update</title>
+      <link>https://relaycomputer.co.uk/2020/02/twenty-twenty-update.html</link>
+      <pubDate>Sat, 01 Feb 2020 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2020/02/twenty-twenty-update.html</guid>
+      <description>As the clock struck midnight at the very end of 2019 I decided, over a glass of something sparkling, that I&amp;rsquo;d set myself a challenge to put out a series of six YouTube videos within the space of one month.</description>
+    </item>
+    
+    <item>
+      <title>Decoder Construction</title>
+      <link>https://relaycomputer.co.uk/2020/01/decoder-construction.html</link>
+      <pubDate>Sun, 05 Jan 2020 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2020/01/decoder-construction.html</guid>
+      <description>In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and tested.</description>
+    </item>
+    
+    <item>
+      <title>Controller Construction</title>
+      <link>https://relaycomputer.co.uk/2019/12/controller-construction.html</link>
+      <pubDate>Sat, 21 Dec 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/12/controller-construction.html</guid>
+      <description>In my last couple of posts I covered off the full design for the controller unit. As the PCBs have now arrived I can get on with soldering up the cards and giving them a test.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Construction</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-construction.html</link>
+      <pubDate>Wed, 20 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-construction.html</guid>
+      <description>In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I can get on with soldering up the cards and giving them a test.</description>
+    </item>
+    
+    <item>
+      <title>Making a PCB</title>
+      <link>https://relaycomputer.co.uk/2019/03/making-a-pcb.html</link>
+      <pubDate>Mon, 04 Mar 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/03/making-a-pcb.html</guid>
+      <description>After years of using pad/prototyping boards to build my computer I&amp;rsquo;ve decided to switch things up a bit and have a go at making a custom PCB.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Construction</title>
+      <link>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction.html</link>
+      <pubDate>Tue, 27 Mar 2018 22:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction.html</guid>
+      <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …</description>
+    </item>
+    
+    <item>
+      <title>Fetch and Increment - Construction and Test</title>
+      <link>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and.html</link>
+      <pubDate>Tue, 16 Jan 2018 22:16:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and.html</guid>
+      <description>This is a bit of a landmark moment &amp;hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my computer will execute a program in memory without any further input from the user.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Test</title>
+      <link>https://relaycomputer.co.uk/2018/01/incrementer-test.html</link>
+      <pubDate>Sun, 07 Jan 2018 13:04:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/incrementer-test.html</guid>
+      <description>In my last two posts I covered the construction of the upper and lower incrementer cards. The lower card is a 16-bit half adder and the upper card is a 16-bit register.</description>
+    </item>
+    
+    <item>
+      <title>Memory Test</title>
+      <link>https://relaycomputer.co.uk/2017/11/memory-test.html</link>
+      <pubDate>Thu, 30 Nov 2017 21:15:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/11/memory-test.html</guid>
+      <description>I&amp;rsquo;ve covered the construction of the upper and lower memory cards in my last two posts &amp;hellip; it&amp;rsquo;s now time to bring those two cards together to form the memory unit proper and give it all a test.</description>
+    </item>
+    
+    <item>
+      <title>Program Counter Construction</title>
+      <link>https://relaycomputer.co.uk/2017/11/program-counter-construction.html</link>
+      <pubDate>Sat, 11 Nov 2017 10:25:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/11/program-counter-construction.html</guid>
+      <description>In my last couple of posts I&amp;rsquo;ve been slightly distracted by some &amp;lsquo;miscellany&amp;rsquo; but now I return to form and crack on with constructing the program counter.</description>
+    </item>
+    
+    <item>
+      <title>The problem with memory</title>
+      <link>https://relaycomputer.co.uk/2017/08/the-problem-with-memory.html</link>
+      <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/08/the-problem-with-memory.html</guid>
+      <description>It&amp;rsquo;s time, at last, to start looking at the design for the computer&amp;rsquo;s memory and this is a bit of a game changer as it&amp;rsquo;s the final part of the jigsaw that lets the computer run a program.</description>
+    </item>
+    
+    <item>
+      <title>More Laser Cut Parts</title>
+      <link>https://relaycomputer.co.uk/2017/08/more-laser-cut-parts.html</link>
+      <pubDate>Sun, 06 Aug 2017 13:13:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/08/more-laser-cut-parts.html</guid>
+      <description>I&amp;rsquo;ve nearly got the design for the memory cards done and ready to share but once that&amp;rsquo;s out the way it&amp;rsquo;ll be time to get on with some construction again.</description>
+    </item>
+    
+    <item>
+      <title>Sequencing &amp; Control Test</title>
+      <link>https://relaycomputer.co.uk/2016/05/sequencing-control-test.html</link>
+      <pubDate>Tue, 24 May 2016 21:12:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2016/05/sequencing-control-test.html</guid>
+      <description>It&amp;rsquo;s finally time to give all the cards created so far a test so I can check everything works together as expected. This represents quite a bit of a milestone as the computer can now perform a single ALU, SETAB or MOV-8 instruction.</description>
+    </item>
+    
+    <item>
+      <title>Controller Construction: MOV-8, ALU and SETAB</title>
+      <link>https://relaycomputer.co.uk/2016/01/controller-construction-mov-8-alu-and.html</link>
+      <pubDate>Fri, 01 Jan 2016 23:23:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2016/01/controller-construction-mov-8-alu-and.html</guid>
+      <description>So yea, it&amp;rsquo;s been a while since my last post &amp;hellip; in fact it&amp;rsquo;s been just over six months. For some reason I decided I didn&amp;rsquo;t have enough to do in the evenings so had a crack at becoming an actuary.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Construction: 8-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm.html</link>
+      <pubDate>Wed, 08 Jul 2015 09:27:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm.html</guid>
+      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones.</description>
+    </item>
+    
+    <item>
+      <title>Decoder Construction: MOV-8, ALU &amp; SETAB</title>
+      <link>https://relaycomputer.co.uk/2015/06/decoder-construction-mov-8-alu-setab.html</link>
+      <pubDate>Sun, 07 Jun 2015 21:43:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/06/decoder-construction-mov-8-alu-setab.html</guid>
+      <description>In a change from prior form I&amp;rsquo;m combining the construction and testing of the next card in to a single post this time. Partly because this card is a nice easy one but also because it&amp;rsquo;s the first card that I&amp;rsquo;ll be partially constructing to begin with and then I&amp;rsquo;ll return to it later to add further functionality.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Completed Instruction Register Full Test</title>
+      <link>https://relaycomputer.co.uk/2015/05/register-construction-completed.html</link>
+      <pubDate>Sat, 16 May 2015 10:19:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/05/register-construction-completed.html</guid>
+      <description>Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
+{% figure %} {% endfigure %}</description>
+    </item>
+    
+    <item>
+      <title>ALU &amp; Registers A-D Test with new Display Cards</title>
+      <link>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</link>
+      <pubDate>Tue, 19 Aug 2014 18:22:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</guid>
+      <description>Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&amp;rsquo;s time to fit them to the upper enclosure.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Completed A and D 8-bit Registers Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/06/register-construction-completed-and-d-8.html</link>
+      <pubDate>Sat, 28 Jun 2014 13:12:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/06/register-construction-completed-and-d-8.html</guid>
+      <description>The A/D Register card is now complete and looks like this:
+{% figure %} {% endfigure %}
+As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Completed B and C 8-bit Registers Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/05/register-construction-completed-b-and-c.html</link>
+      <pubDate>Mon, 26 May 2014 09:59:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/register-construction-completed-b-and-c.html</guid>
+      <description>The B/C Register card is now complete and looks like this:
+{% figure %} {% endfigure %}
+As usual I&amp;rsquo;ve put a video together which demonstrates this card in operation &amp;hellip; firstly on its own but then together with all the other cards constructed so far.</description>
+    </item>
+    
+    <item>
+      <title>Completed ALU</title>
+      <link>https://relaycomputer.co.uk/2014/03/completed-alu.html</link>
+      <pubDate>Sun, 30 Mar 2014 12:15:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/completed-alu.html</guid>
+      <description>Following my last post on the completed backplane I&amp;rsquo;m now in a position to connect all the other completed cards together to test the full ALU.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Control Card Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/03/alu-construction-completed-control-card.html</link>
+      <pubDate>Sun, 16 Mar 2014 08:59:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/alu-construction-completed-control-card.html</guid>
+      <description>The ALU Control Card is now complete and looks like this:
+{% figure %}{% endfigure %}
+This card was, on the whole, much simpler and quicker to put together than previous cards (despite me initially messing up the zero detection relay positions).</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Arithmetic Card Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/02/alu-construction-completed-arithmetic.html</link>
+      <pubDate>Sun, 23 Feb 2014 17:31:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/alu-construction-completed-arithmetic.html</guid>
+      <description>The ALU arithmetic card is now complete! The final card looks like this:
+{% figure %} {% endfigure %}
+As I did for the ALU logic card before I&amp;rsquo;ve put the following YouTube video together which gives a walkthrough of the arithmetic card in operation &amp;hellip; and as before this one also has a narrative track delivered by my own fair gob.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: 1-bit Arithmetic Full Construction</title>
+      <link>https://relaycomputer.co.uk/2014/01/alu-construction-1-bit-arithmetic-full.html</link>
+      <pubDate>Tue, 21 Jan 2014 18:25:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/01/alu-construction-1-bit-arithmetic-full.html</guid>
+      <description>So, as mentioned in my last post this time I&amp;rsquo;ve put in the wire links and wraps needed to test the first bit of the arithmetic card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Completed Logic Card Full Test</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-completed-logic-card.html</link>
+      <pubDate>Wed, 18 Dec 2013 08:26:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-completed-logic-card.html</guid>
+      <description>The ALU logic card is now finally complete! &amp;hellip; well, it is now I&amp;rsquo;ve popped the last few relays into their sockets. The final card looks like this:</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: 8-bit Logic Unit Tests</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-8-bit-logic-unit-tests.html</link>
+      <pubDate>Thu, 12 Dec 2013 19:20:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-8-bit-logic-unit-tests.html</guid>
+      <description>There&amp;rsquo;s now enough sockets, solder and wires to test all eight bits of the ALU logic card. This isn&amp;rsquo;t quite a full test as the gating relays that apply one of the results produced by each bit unit haven&amp;rsquo;t been wired up yet but there&amp;rsquo;s enough there to be able to set an input and see the results displayed on the LEDs along the front of the card.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: 1-bit Logic Full Construction</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-1-bit-logic-full.html</link>
+      <pubDate>Sat, 07 Dec 2013 01:54:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-1-bit-logic-full.html</guid>
+      <description>So, although I probably should construct the logic card methodically a full stage at a time (solder header pins then sockets then wire wrap) I can&amp;rsquo;t resist fully assembling a single bit alone to see if/how it works.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: LED Tests</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-led-tests.html</link>
+      <pubDate>Fri, 06 Dec 2013 20:55:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-led-tests.html</guid>
+      <description>Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control).</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Connectors and LEDs</title>
+      <link>https://relaycomputer.co.uk/2013/12/alu-construction-connectors-and-leds.html</link>
+      <pubDate>Mon, 02 Dec 2013 18:05:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/12/alu-construction-connectors-and-leds.html</guid>
+      <description>As promised in my last post it&amp;rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU.</description>
+    </item>
+    
+    <item>
+      <title>It begins</title>
+      <link>https://relaycomputer.co.uk/2013/10/it-begins.html</link>
+      <pubDate>Thu, 31 Oct 2013 22:21:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/10/it-begins.html</guid>
+      <description>&amp;hellip; although being as I&amp;rsquo;m already a couple of months in on my little project then perhaps that should be &amp;lsquo;it began&amp;rsquo;.
+If I do see this project all the way through to the end, and I&amp;rsquo;ve plenty of half finished projects littering the place by the way, then I&amp;rsquo;ll have created an 8 bit computer from scratch.</description>
+    </item>
+    
+  </channel>
+</rss>

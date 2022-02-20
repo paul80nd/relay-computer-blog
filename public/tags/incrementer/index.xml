@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>incrementer on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/incrementer.html</link>
+    <description>Recent content in incrementer on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 07 Jan 2018 13:04:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/incrementer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Incrementer Test</title>
+      <link>https://relaycomputer.co.uk/2018/01/incrementer-test.html</link>
+      <pubDate>Sun, 07 Jan 2018 13:04:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/incrementer-test.html</guid>
+      <description>In my last two posts I covered the construction of the upper and lower incrementer cards. The lower card is a 16-bit half adder and the upper card is a 16-bit register.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Construction (Part 1 of 2)</title>
+      <link>https://relaycomputer.co.uk/2017/12/incrementer-construction-part-1-of-2.html</link>
+      <pubDate>Sun, 10 Dec 2017 11:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/12/incrementer-construction-part-1-of-2.html</guid>
+      <description>We&amp;rsquo;re getting nearer and nearer to a computer that can run though a program in memory rather than just a single instruction &amp;hellip; we&amp;rsquo;ve got memory to hold the program and a program counter to point to the current instruction in memory.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Design</title>
+      <link>https://relaycomputer.co.uk/2017/07/incrementer-design.html</link>
+      <pubDate>Mon, 17 Jul 2017 21:34:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/07/incrementer-design.html</guid>
+      <description>In my last post I covered the design of the 16-bit half adder which takes whatever value is currently on the address bus and increments it by one.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Design: 16-bit Half Adder</title>
+      <link>https://relaycomputer.co.uk/2017/07/incrementer-design-16-bit-half-adder.html</link>
+      <pubDate>Sat, 15 Jul 2017 14:57:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/07/incrementer-design-16-bit-half-adder.html</guid>
+      <description>In the last post I introduced the design for the 1-bit Half Adder. This post covers connecting sixteen of these units together to make the 16-bit Half Adder.</description>
+    </item>
+    
+    <item>
+      <title>Incrementer Design: 1-bit Half Adder</title>
+      <link>https://relaycomputer.co.uk/2017/06/incrementer-design-1-bit-half-adder.html</link>
+      <pubDate>Sun, 04 Jun 2017 22:42:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/06/incrementer-design-1-bit-half-adder.html</guid>
+      <description>Typical isn&amp;rsquo;t it?! &amp;hellip; you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I move on to the design of the incrementer.</description>
+    </item>
+    
+  </channel>
+</rss>

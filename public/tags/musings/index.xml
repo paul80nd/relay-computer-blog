@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>musings on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/musings.html</link>
+    <description>Recent content in musings on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 14 Jan 2019 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/musings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A change of approach</title>
+      <link>https://relaycomputer.co.uk/2019/01/change-of-approach.html</link>
+      <pubDate>Mon, 14 Jan 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/01/change-of-approach.html</guid>
+      <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&amp;rsquo;ve followed my blog (over the years) you&amp;rsquo;ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter.</description>
+    </item>
+    
+    <item>
+      <title>Procrastination is the thief of time</title>
+      <link>https://relaycomputer.co.uk/2019/01/procrastination-is.html</link>
+      <pubDate>Sun, 06 Jan 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/01/procrastination-is.html</guid>
+      <description>&amp;hellip; or so the proverb goes &amp;hellip; and it&amp;rsquo;s fair to say I&amp;rsquo;ve been procrastinating quite a bit recently.
+I typically take a summer break from working on the relay computer so that I can service all the other hobbies I have on the go but also to enjoy the brief warm weather we get here in the UK.</description>
+    </item>
+    
+    <item>
+      <title>The problem with memory</title>
+      <link>https://relaycomputer.co.uk/2017/08/the-problem-with-memory.html</link>
+      <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/08/the-problem-with-memory.html</guid>
+      <description>It&amp;rsquo;s time, at last, to start looking at the design for the computer&amp;rsquo;s memory and this is a bit of a game changer as it&amp;rsquo;s the final part of the jigsaw that lets the computer run a program.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Disclosure</title>
+      <link>https://relaycomputer.co.uk/2014/03/enclosure-disclosure.html</link>
+      <pubDate>Sat, 01 Mar 2014 10:55:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/enclosure-disclosure.html</guid>
+      <description>Sorry, I will try to rain in the terrible punning post titles.
+This time I wanted to share the thoughts and ideas I&amp;rsquo;ve been having around building a case to hold my computer when it&amp;rsquo;s eventually complete.</description>
+    </item>
+    
+    <item>
+      <title>Sketchy Diversion</title>
+      <link>https://relaycomputer.co.uk/2014/02/sketchy-diversion.html</link>
+      <pubDate>Tue, 04 Feb 2014 19:10:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/sketchy-diversion.html</guid>
+      <description>I&amp;rsquo;m taking a break &amp;hellip; just a short one.
+In between all the bouts of wire wrapping for the ALU arithmetic card I&amp;rsquo;m starting to think about enclosure options for the computer when it&amp;rsquo;s finally (finally!</description>
+    </item>
+    
+    <item>
+      <title>Relay Rumination</title>
+      <link>https://relaycomputer.co.uk/2013/11/relay-rumination.html</link>
+      <pubDate>Sun, 10 Nov 2013 23:16:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/relay-rumination.html</guid>
+      <description>If there&amp;rsquo;s one thing a relay computer needs a lot of it&amp;rsquo;s &amp;hellip; erm &amp;hellip; relays (of course) &amp;hellip; which happens to be a bit unfortunate as relays, compared to the other parts of the computer, are rather expensive.</description>
+    </item>
+    
+    <item>
+      <title>The three Rs</title>
+      <link>https://relaycomputer.co.uk/2013/11/the-three-rs.html</link>
+      <pubDate>Sun, 03 Nov 2013 09:35:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/the-three-rs.html</guid>
+      <description>It strikes me that when embarking on a project like this there&amp;rsquo;s three things that are of uttermost importance, the three Rs if you will:</description>
+    </item>
+    
+    <item>
+      <title>Why?</title>
+      <link>https://relaycomputer.co.uk/2013/11/why.html</link>
+      <pubDate>Sat, 02 Nov 2013 10:46:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/why.html</guid>
+      <description>Whenever I tell people I&amp;rsquo;m building a relay computer the overwhelming response is &amp;hellip; why on Earth would you want to do that?! Or alternatively, as a work colleague delicately put it to me yesterday, if you go to the front of your house there&amp;rsquo;s a big block of wood that opens — it&amp;rsquo;s called a door — if you go through it you&amp;rsquo;ll discover pubs and things.</description>
+    </item>
+    
+    <item>
+      <title>It begins</title>
+      <link>https://relaycomputer.co.uk/2013/10/it-begins.html</link>
+      <pubDate>Thu, 31 Oct 2013 22:21:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/10/it-begins.html</guid>
+      <description>&amp;hellip; although being as I&amp;rsquo;m already a couple of months in on my little project then perhaps that should be &amp;lsquo;it began&amp;rsquo;.
+If I do see this project all the way through to the end, and I&amp;rsquo;ve plenty of half finished projects littering the place by the way, then I&amp;rsquo;ll have created an 8 bit computer from scratch.</description>
+    </item>
+    
+  </channel>
+</rss>

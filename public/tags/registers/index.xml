@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>registers on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/registers.html</link>
+    <description>Recent content in registers on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 09 Aug 2019 01:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/registers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>16-bit Register PCB Design</title>
+      <link>https://relaycomputer.co.uk/2019/08/16bit-register-pcb-design.html</link>
+      <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/08/16bit-register-pcb-design.html</guid>
+      <description>It&amp;rsquo;s time for the oddly therapeutic part of designing a PCB &amp;hellip; laying out the board. In my last post I covered the schematic design and so we now have all the components required for a 16-bit register captured in my design program of choice (EasyEDA) along with how each component is connected to everything else.</description>
+    </item>
+    
+    <item>
+      <title>16-bit Register Design</title>
+      <link>https://relaycomputer.co.uk/2019/07/16bit-register-design.html</link>
+      <pubDate>Mon, 15 Jul 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/07/16bit-register-design.html</guid>
+      <description>In my last couple of posts I&amp;rsquo;ve been building up to a change of approach in how I&amp;rsquo;m making the cards in my computer. This is mainly because I can&amp;rsquo;t face the monotony of hand building the upcoming register cards (which I&amp;rsquo;ll need three of so it&amp;rsquo;s triple the procrastination holding me back).</description>
+    </item>
+    
+    <item>
+      <title>Program Counter Construction</title>
+      <link>https://relaycomputer.co.uk/2017/11/program-counter-construction.html</link>
+      <pubDate>Sat, 11 Nov 2017 10:25:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/11/program-counter-construction.html</guid>
+      <description>In my last couple of posts I&amp;rsquo;ve been slightly distracted by some &amp;lsquo;miscellany&amp;rsquo; but now I return to form and crack on with constructing the program counter.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Program Counter</title>
+      <link>https://relaycomputer.co.uk/2017/05/register-design-program-counter.html</link>
+      <pubDate>Mon, 29 May 2017 17:13:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/05/register-design-program-counter.html</guid>
+      <description>It&amp;rsquo;s been a while since my last post &amp;hellip; pretty much 10 months in fact &amp;hellip; and I&amp;rsquo;d love to say I&amp;rsquo;ve been quietly working on my relay computer in the meantime but I haven&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Completed Instruction Register Full Test</title>
+      <link>https://relaycomputer.co.uk/2015/05/register-construction-completed.html</link>
+      <pubDate>Sat, 16 May 2015 10:19:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/05/register-construction-completed.html</guid>
+      <description>Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
+{% figure %} {% endfigure %}</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Instruction Register</title>
+      <link>https://relaycomputer.co.uk/2015/05/register-construction-instruction.html</link>
+      <pubDate>Sat, 09 May 2015 20:01:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/05/register-construction-instruction.html</guid>
+      <description>There&amp;rsquo;s been lots of theory going on in my recent posts but the time for design is over (for now) &amp;hellip; it&amp;rsquo;s time to get constructing.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Instruction Register</title>
+      <link>https://relaycomputer.co.uk/2014/12/register-design-instruction-register.html</link>
+      <pubDate>Mon, 01 Dec 2014 21:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/12/register-design-instruction-register.html</guid>
+      <description>Well, it&amp;rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &amp;hellip; and that&amp;rsquo;s mainly because &amp;lsquo;decorating&amp;rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &amp;hellip; all before I got anywhere near choosing a tasteful shade of emulsion for the walls.</description>
+    </item>
+    
+    <item>
+      <title>ALU &amp; Registers A-D Test with new Display Cards</title>
+      <link>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</link>
+      <pubDate>Tue, 19 Aug 2014 18:22:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</guid>
+      <description>Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&amp;rsquo;s time to fit them to the upper enclosure.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Completed A and D 8-bit Registers Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/06/register-construction-completed-and-d-8.html</link>
+      <pubDate>Sat, 28 Jun 2014 13:12:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/06/register-construction-completed-and-d-8.html</guid>
+      <description>The A/D Register card is now complete and looks like this:
+{% figure %} {% endfigure %}
+As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: A and D 8-bit Registers</title>
+      <link>https://relaycomputer.co.uk/2014/06/register-construction-and-d-8-bit.html</link>
+      <pubDate>Sun, 22 Jun 2014 18:35:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/06/register-construction-and-d-8-bit.html</guid>
+      <description>I haven&amp;rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&amp;rsquo;ve been plodding away at the A/D register card and it&amp;rsquo;s now finally ready for testing.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Completed B and C 8-bit Registers Full Test</title>
+      <link>https://relaycomputer.co.uk/2014/05/register-construction-completed-b-and-c.html</link>
+      <pubDate>Mon, 26 May 2014 09:59:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/register-construction-completed-b-and-c.html</guid>
+      <description>The B/C Register card is now complete and looks like this:
+{% figure %} {% endfigure %}
+As usual I&amp;rsquo;ve put a video together which demonstrates this card in operation &amp;hellip; firstly on its own but then together with all the other cards constructed so far.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: B and C 8-bit Registers</title>
+      <link>https://relaycomputer.co.uk/2014/05/register-construction-b-and-c-8-bit.html</link>
+      <pubDate>Sat, 24 May 2014 17:23:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/register-construction-b-and-c-8-bit.html</guid>
+      <description>As mentioned in my last post I decided this time around not to post after each stage of card construction (being as the construction steps are now pretty similar to those for previous cards).</description>
+    </item>
+    
+    <item>
+      <title>Register Design: B and C 8-bit Registers</title>
+      <link>https://relaycomputer.co.uk/2014/05/register-design-b-and-c-8-bit-registers.html</link>
+      <pubDate>Sun, 11 May 2014 10:08:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/register-design-b-and-c-8-bit-registers.html</guid>
+      <description>In a recent post I put up the design for the A and D 8-bit register card &amp;hellip; the B and C register card is very similar in design but has the additional complexity that it has to directly feed the ALU.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Dual Output 8-bit Register</title>
+      <link>https://relaycomputer.co.uk/2014/04/register-design-dual-output-8-bit.html</link>
+      <pubDate>Thu, 24 Apr 2014 22:56:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/register-design-dual-output-8-bit.html</guid>
+      <description>In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&amp;rsquo;m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there&amp;rsquo;s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: A and D 8-bit Registers</title>
+      <link>https://relaycomputer.co.uk/2014/04/register-design-and-d-8-bit-registers.html</link>
+      <pubDate>Sun, 20 Apr 2014 11:15:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/register-design-and-d-8-bit-registers.html</guid>
+      <description>In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: General Purpose 8-bit Register</title>
+      <link>https://relaycomputer.co.uk/2014/04/register-design-general-purpose-8-bit.html</link>
+      <pubDate>Wed, 16 Apr 2014 22:08:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/register-design-general-purpose-8-bit.html</guid>
+      <description>This post covers the design of a general purpose 8-bit register that can be loaded from the data bus and then selected back to the data bus at a later time.</description>
+    </item>
+    
+  </channel>
+</rss>

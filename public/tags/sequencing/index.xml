@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sequencing on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/sequencing.html</link>
+    <description>Recent content in sequencing on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 11 Nov 2019 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/sequencing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sequencer Design: Schematic &amp; PCBs</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb.html</link>
+      <pubDate>Mon, 11 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb.html</guid>
+      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: Pulse Distribution</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist.html</link>
+      <pubDate>Sat, 02 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist.html</guid>
+      <description>In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: 24-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm.html</link>
+      <pubDate>Fri, 01 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm.html</guid>
+      <description>Recently I&amp;rsquo;ve been looking at what&amp;rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:</description>
+    </item>
+    
+    <item>
+      <title>Branching: Opcode Timing</title>
+      <link>https://relaycomputer.co.uk/2019/10/branching-opcode-timing.html</link>
+      <pubDate>Sun, 06 Oct 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/10/branching-opcode-timing.html</guid>
+      <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&amp;rsquo;s where I got to last time:</description>
+    </item>
+    
+    <item>
+      <title>Branching: Opcode Design</title>
+      <link>https://relaycomputer.co.uk/2019/09/branching-opcode-design.html</link>
+      <pubDate>Mon, 23 Sep 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/09/branching-opcode-design.html</guid>
+      <description>There&amp;rsquo;s been a common theme recently in the comments on my YouTube videos &amp;hellip; people are ready to see my relay computer gain the power of branching and become a &amp;lsquo;proper&amp;rsquo; computer &amp;hellip; and that&amp;rsquo;s fair enough because that&amp;rsquo;s the point where the computer can do way more interesting things and run more complicated programs.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Construction</title>
+      <link>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction.html</link>
+      <pubDate>Tue, 27 Mar 2018 22:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction.html</guid>
+      <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Design (Part 3 of 3)</title>
+      <link>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3.html</link>
+      <pubDate>Wed, 07 Feb 2018 22:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3.html</guid>
+      <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Design (Part 2 of 3)</title>
+      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3.html</link>
+      <pubDate>Mon, 29 Jan 2018 22:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3.html</guid>
+      <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer.</description>
+    </item>
+    
+    <item>
+      <title>Auxiliary Control Design (Part 1 of 3)</title>
+      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3.html</link>
+      <pubDate>Wed, 24 Jan 2018 21:24:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3.html</guid>
+      <description>My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&amp;rsquo;s a bit of a pain.</description>
+    </item>
+    
+    <item>
+      <title>Fetch and Increment - Construction and Test</title>
+      <link>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and.html</link>
+      <pubDate>Tue, 16 Jan 2018 22:16:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and.html</guid>
+      <description>This is a bit of a landmark moment &amp;hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my computer will execute a program in memory without any further input from the user.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Construction: 8-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm.html</link>
+      <pubDate>Wed, 08 Jul 2015 09:27:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm.html</guid>
+      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: 8-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm.html</link>
+      <pubDate>Mon, 26 Jan 2015 22:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm.html</guid>
+      <description>So far I&amp;rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&amp;rsquo;m well on the way to having the computer perform MOV-8, ALU and SETAB instructions.</description>
+    </item>
+    
+    <item>
+      <title>Sequencing &amp; Control Design: Overview</title>
+      <link>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview.html</link>
+      <pubDate>Fri, 19 Sep 2014 23:27:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview.html</guid>
+      <description>I&amp;rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines.</description>
+    </item>
+    
+  </channel>
+</rss>

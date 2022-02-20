@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>decoder on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/decoder.html</link>
+    <description>Recent content in decoder on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 05 Jan 2020 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/decoder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decoder Construction</title>
+      <link>https://relaycomputer.co.uk/2020/01/decoder-construction.html</link>
+      <pubDate>Sun, 05 Jan 2020 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2020/01/decoder-construction.html</guid>
+      <description>In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and tested.</description>
+    </item>
+    
+    <item>
+      <title>Decoder Design: Schematic &amp; PCBs</title>
+      <link>https://relaycomputer.co.uk/2019/12/decoder-design-pcb.html</link>
+      <pubDate>Sun, 22 Dec 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2019/12/decoder-design-pcb.html</guid>
+      <description>I&amp;rsquo;ve almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing the sequencer and controller units is complete and both units can perform a GOTO operation.</description>
+    </item>
+    
+    <item>
+      <title>Decoder Construction: MOV-8, ALU &amp; SETAB</title>
+      <link>https://relaycomputer.co.uk/2015/06/decoder-construction-mov-8-alu-setab.html</link>
+      <pubDate>Sun, 07 Jun 2015 21:43:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/06/decoder-construction-mov-8-alu-setab.html</guid>
+      <description>In a change from prior form I&amp;rsquo;m combining the construction and testing of the next card in to a single post this time. Partly because this card is a nice easy one but also because it&amp;rsquo;s the first card that I&amp;rsquo;ll be partially constructing to begin with and then I&amp;rsquo;ll return to it later to add further functionality.</description>
+    </item>
+    
+    <item>
+      <title>Decoder Design: MOV-8, ALU &amp; SETAB </title>
+      <link>https://relaycomputer.co.uk/2015/01/decoder-design-mov-8-alu-setab.html</link>
+      <pubDate>Sun, 04 Jan 2015 22:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2015/01/decoder-design-mov-8-alu-setab.html</guid>
+      <description>In my last post I introduced the design for the instruction register which holds the current 8-bit opcode that the computer is executing. The next card to design is the decoder which will take the 8-bit opcode and set either the MOV-8, ALU or SETAB control lines depending which class of instruction the opcode represents.</description>
+    </item>
+    
+  </channel>
+</rss>

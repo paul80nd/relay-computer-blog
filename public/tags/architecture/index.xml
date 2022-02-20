@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/architecture.html</link>
+    <description>Recent content in Architecture on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 24 Jul 2016 22:13:00 +0100</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yet another diversion</title>
+      <link>https://relaycomputer.co.uk/2016/07/yet-another-diversion.html</link>
+      <pubDate>Sun, 24 Jul 2016 22:13:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2016/07/yet-another-diversion.html</guid>
+      <description>It&amp;rsquo;s been a bit quiet on the relay computer front again for a while &amp;hellip; well it is summer after all and there&amp;rsquo;s no point staying inside the house tending to my hobbies when I can be running around outside getting sunburnt.</description>
+    </item>
+    
+    <item>
+      <title>Instruction Set</title>
+      <link>https://relaycomputer.co.uk/2013/11/instruction-set.html</link>
+      <pubDate>Thu, 07 Nov 2013 23:47:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/instruction-set.html</guid>
+      <description>In the last post I promised to reveal the planned instruction set for the computer and [here it is]({% link /assets/pdf/instruction-set.pdf %}) (pdf file).
+This should be viewed alongside the architecture diagram which can be found in my previous architecture posts &amp;hellip; and to be fair if you&amp;rsquo;ve been following along through my recent posts then just close your eyes &amp;hellip; you&amp;rsquo;ll probably find it&amp;rsquo;s been burnt on to your eye balls given the amount of times I&amp;rsquo;ve posted it ;)</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: Programming and Control 2</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-programming-and_7.html</link>
+      <pubDate>Thu, 07 Nov 2013 23:22:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-programming-and_7.html</guid>
+      <description>So, the last post didn&amp;rsquo;t quite wrap up this &amp;lsquo;mini-series&amp;rsquo; but hopefully this one will. Continuing on with how the Programming and Control of the computer happens here again, for the last time (really last time), is the architecture I&amp;rsquo;ll be building against (from the Harry Porter Relay Computer)</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: Programming and Control</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-programming-and.html</link>
+      <pubDate>Thu, 07 Nov 2013 21:54:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-programming-and.html</guid>
+      <description>In this post I&amp;rsquo;ll wrap up this &amp;lsquo;mini-series&amp;rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — finally now we come on to Programming and Control of the computer.</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: the ALU</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-alu.html</link>
+      <pubDate>Thu, 07 Nov 2013 07:24:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-alu.html</guid>
+      <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s the Arithmetic Logic Unit (ALU).</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: Memory</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-memory.html</link>
+      <pubDate>Wed, 06 Nov 2013 20:14:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-memory.html</guid>
+      <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s the memory.</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: Buses and Registers</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-buses-and.html</link>
+      <pubDate>Tue, 05 Nov 2013 19:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-buses-and.html</guid>
+      <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s buses and registers.</description>
+    </item>
+    
+    <item>
+      <title>Architectural breakdown: Binary</title>
+      <link>https://relaycomputer.co.uk/2013/11/architectural-breakdown-binary.html</link>
+      <pubDate>Mon, 04 Nov 2013 10:35:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architectural-breakdown-binary.html</guid>
+      <description>&amp;hellip; and it all begins with binary. Binary is a &amp;lsquo;base 2&amp;rsquo; numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base 10) for their day-to-day numerical needs which, of course, uses the numbers 0 to 9.</description>
+    </item>
+    
+    <item>
+      <title>Architecture isn&#39;t just for houses</title>
+      <link>https://relaycomputer.co.uk/2013/11/architecture-isnt-just-for-houses.html</link>
+      <pubDate>Mon, 04 Nov 2013 08:51:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2013/11/architecture-isnt-just-for-houses.html</guid>
+      <description>So, with the scene now set (see previous posts) let&amp;rsquo;s dive right in and take a look at the system architecture I&amp;rsquo;ll be building my computer upon &amp;hellip; here it is &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

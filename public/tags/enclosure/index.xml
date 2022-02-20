@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>enclosure on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/tags/enclosure.html</link>
+    <description>Recent content in enclosure on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 05 Nov 2017 10:47:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/enclosure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Miscellany Special: Backplane X, Cable Routing and Address Bus</title>
+      <link>https://relaycomputer.co.uk/2017/11/miscellany-special-backplane-x-cable.html</link>
+      <pubDate>Sun, 05 Nov 2017 10:47:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/11/miscellany-special-backplane-x-cable.html</guid>
+      <description>Continuing on with the theme from my last post &amp;hellip; here is another &amp;lsquo;miscellany special&amp;rsquo; covering all the little &amp;lsquo;side jobs&amp;rsquo; I&amp;rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards.</description>
+    </item>
+    
+    <item>
+      <title>Miscellany Special: Power Distribution</title>
+      <link>https://relaycomputer.co.uk/2017/10/miscellany-special-power-distribution.html</link>
+      <pubDate>Sun, 29 Oct 2017 11:01:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/10/miscellany-special-power-distribution.html</guid>
+      <description>Having somehow forgotten to take time off work I&amp;rsquo;m now playing &amp;lsquo;annual leave catch up&amp;rsquo; which means lots of four day weeks but also, and more importantly for this blog, I&amp;rsquo;m getting time to crack on with construction of my relay computer.</description>
+    </item>
+    
+    <item>
+      <title>More Laser Cut Parts</title>
+      <link>https://relaycomputer.co.uk/2017/08/more-laser-cut-parts.html</link>
+      <pubDate>Sun, 06 Aug 2017 13:13:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2017/08/more-laser-cut-parts.html</guid>
+      <description>I&amp;rsquo;ve nearly got the design for the memory cards done and ready to share but once that&amp;rsquo;s out the way it&amp;rsquo;ll be time to get on with some construction again.</description>
+    </item>
+    
+    <item>
+      <title>ALU &amp; Registers A-D Test with new Display Cards</title>
+      <link>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</link>
+      <pubDate>Tue, 19 Aug 2014 18:22:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/08/alu-registers-d-test-with-new-display.html</guid>
+      <description>Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&amp;rsquo;s time to fit them to the upper enclosure.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Update: Magic Pen</title>
+      <link>https://relaycomputer.co.uk/2014/05/enclosure-update-magic-pen.html</link>
+      <pubDate>Sat, 10 May 2014 09:46:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/enclosure-update-magic-pen.html</guid>
+      <description>Just need to quickly share my experience with what I&amp;rsquo;m dubbing the &amp;lsquo;magic pen&amp;rsquo; before I put up the B/C register schematics (yup, they&amp;rsquo;re finally ready).</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Update: Fitting of Laser Cut Parts</title>
+      <link>https://relaycomputer.co.uk/2014/05/enclosure-update-fitting-of-laser-cut.html</link>
+      <pubDate>Mon, 05 May 2014 11:03:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/enclosure-update-fitting-of-laser-cut.html</guid>
+      <description>I was going to spread the fitting of the laser cut parts to the lower enclosure over a couple of evenings but in a fit of geeky excitement I ended up doing it all in one evening.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Update: Laser Cut Parts Arrived</title>
+      <link>https://relaycomputer.co.uk/2014/05/enclosure-update-laser-cut-parts-arrived.html</link>
+      <pubDate>Sat, 03 May 2014 09:49:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/05/enclosure-update-laser-cut-parts-arrived.html</guid>
+      <description>I&amp;rsquo;ve been looking forward to this moment for nearly a month &amp;hellip; the laser cut parts I ordered to move my enclosure construction forward have finally arrived.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Update: Laser Cutting</title>
+      <link>https://relaycomputer.co.uk/2014/04/enclosure-update-laser-cutting.html</link>
+      <pubDate>Thu, 10 Apr 2014 19:58:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/04/enclosure-update-laser-cutting.html</guid>
+      <description>I couldn&amp;rsquo;t resist it any longer &amp;hellip; I&amp;rsquo;ve ordered the laser cut parts for the case doors, sides and bay floor/ceilings. I did say I&amp;rsquo;d wait for my chosen laser cut website to put out a free delivery offer but I ended up crumbling under the weight of my own impatience.</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Initial Construction</title>
+      <link>https://relaycomputer.co.uk/2014/03/enclosure-initial-construction.html</link>
+      <pubDate>Sat, 22 Mar 2014 00:08:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/enclosure-initial-construction.html</guid>
+      <description>I&amp;rsquo;ve been promising this post for quite a while now &amp;hellip; an update on how the enclosure construction is going. Well, it&amp;rsquo;s very good thanks :)</description>
+    </item>
+    
+    <item>
+      <title>Enclosure Disclosure</title>
+      <link>https://relaycomputer.co.uk/2014/03/enclosure-disclosure.html</link>
+      <pubDate>Sat, 01 Mar 2014 10:55:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/03/enclosure-disclosure.html</guid>
+      <description>Sorry, I will try to rain in the terrible punning post titles.
+This time I wanted to share the thoughts and ideas I&amp;rsquo;ve been having around building a case to hold my computer when it&amp;rsquo;s eventually complete.</description>
+    </item>
+    
+    <item>
+      <title>Sketchy Diversion</title>
+      <link>https://relaycomputer.co.uk/2014/02/sketchy-diversion.html</link>
+      <pubDate>Tue, 04 Feb 2014 19:10:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/2014/02/sketchy-diversion.html</guid>
+      <description>I&amp;rsquo;m taking a break &amp;hellip; just a short one.
+In between all the bouts of wire wrapping for the ALU arithmetic card I&amp;rsquo;m starting to think about enclosure options for the computer when it&amp;rsquo;s finally (finally!</description>
+    </item>
+    
+  </channel>
+</rss>
