@@ -1,6 +1,22 @@
-// Import Main CSS file from theme
-@import 'bulma.sass';
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+$family-sans-serif: 'Montserrat', sans-serif;
+$primary: #296e01 !default;
 
+$tabs-link-active-color: $primary;
+$tabs-link-active-border-bottom-color: $primary;
+
+@import 'bulma.sass';
+@import 'bulma-badge.sass';
+
+@import "bulma-ribbon.sass";
+
+.bg-img {
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+    background-color: #ccc;
+}
 
 svg.railroad-diagram {
     background-color: hsl(30,20%,95%);
