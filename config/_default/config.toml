@@ -13,6 +13,8 @@ disableHugoGeneratorInject =  true
 # Temporary ugly urls until parity with old site
 uglyurls = true
 
+summaryLength = 25
+
 [permalinks]
   posts = '/:year/:month/:title'
 
