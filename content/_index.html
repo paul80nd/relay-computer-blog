@@ -3,7 +3,7 @@ layout: default
 title: A blog about a computer made from relays
 subtitle: My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.
 hero_image: /assets/img/header-bg.jpg
-pagination: 
+pagination:
   enabled: true
 ---
 
@@ -12,14 +12,14 @@ pagination:
   <div class="tile is-vertical">
     <div class="tile">
       <div class="tile is-parent is-4">
-        {% include home-welcome.html %}   
+        {% include home-welcome.html %}
       </div>
       <div class="tile is-parent">
-        {% include home-spotlight.html %}  
+        {% include home-spotlight.html %}
       </div>
-    </div>              
+    </div>
   </div>
-</div> 
+</div>
 {% endif %}
 
 <div class="columns is-multiline">
@@ -29,7 +29,7 @@ pagination:
       {% include home-postcard.html %}
   </div>
   {% endunless %}
-  {% endfor %} 
+  {% endfor %}
 
   {% if paginator.page == 1 %}
   <div class="column is-half is-one-third-widescreen">
@@ -37,5 +37,5 @@ pagination:
   </div>
   {% endif %}
 </div>
-  
-{% include home-pager.html %}  
+
+{% include home-pager.html %}
