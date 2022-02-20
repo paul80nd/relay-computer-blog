@@ -1,6 +1,7 @@
 ---
 layout: post
 title: W Backplane Construction & Power Distribution
+slug: w-backplane-construction-power
 date: '2016-04-11T21:07:00.000+01:00'
 author: Paul Law
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Register Construction: Instruction Register'
+slug: register-construction-instruction
 date: '2015-05-09T20:01:00.000+01:00'
 author: Paul Law
 tags:

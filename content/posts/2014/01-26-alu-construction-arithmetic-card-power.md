@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'ALU Construction: Arithmetic Card Power Rails'
-slug: alu-constuction-arithmetic-card-power
+slug: alu-construction-arithmetic-card-power
 date: '2014-01-26T23:26:00.002Z'
 author: Paul Law
 tags:
