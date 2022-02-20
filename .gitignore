@@ -7,4 +7,5 @@ node_modules/
 # Tracking generated html but not images and static resources etc
 public/img/
 public/pdf/
+public/skp/
 resources/

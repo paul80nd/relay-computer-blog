@@ -50,4 +50,4 @@ enclosure (easily pleased) but I'll endeavour to keep the rest of the
 construction going.
 
 Finally, in the spirit of sharing, the SketchUp 
-file for the above can be found [here]({% link /assets/skp/computer.skp %}). 
+file for the above can be found [here](/skp/computer.skp). 
