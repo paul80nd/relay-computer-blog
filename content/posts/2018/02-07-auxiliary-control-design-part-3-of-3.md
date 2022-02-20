@@ -58,6 +58,6 @@ With those last instructions implemented the schematic above is completed and we
 
 {{< fig caption="Auxiliary Control Card (after update) ([larger](/img/posts/2018/2018-02-07-1009.png))" >}}![Auxiliary Control Card (after update)](/img/posts/2018/2018-02-07-0010.png){{< /fig >}}
 
-The auxiliary clock relays are in the middle of the card and the control relays covered in this post are towards the top. As always, you can find a larger version of this card design [here in PDF format]({% link /assets/pdf/aux-switch-ctrl-3.pdf %}).
+The auxiliary clock relays are in the middle of the card and the control relays covered in this post are towards the top. As always, you can find a larger version of this card design [here in PDF format](/pdf/aux-switch-ctrl-3.pdf).
 
 So, with the auxiliary control card design in the bag it's time to whip out the soldering iron again and get constructing and I'll cover that in my next post.

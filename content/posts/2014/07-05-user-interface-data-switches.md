@@ -122,7 +122,7 @@ You might
 notice there's an enticing amount of space left on the upper part of this card 
 and of course there is something planned for this space but I'll hold that 
 back for a later post ... needless to say this card will be full when it's 
-finally complete. As with previous schematics you can find a version [here in PDF format]({% link /assets/pdf/aux-switch-ctrl-1.pdf %}) should you want to 
+finally complete. As with previous schematics you can find a version [here in PDF format](/pdf/aux-switch-ctrl-1.pdf) should you want to 
 take a very close up look at it.
 
 Construction of this circuit was 

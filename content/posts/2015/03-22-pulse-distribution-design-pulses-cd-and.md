@@ -155,7 +155,7 @@ On the W2 connectors the lines are as follows:
 As 
 always should you wish to take a much closer look at this design (and to be 
 fair, this is one of the more 'busier' cards visually so a close look is 
-advised) you can find the above [here in PDF format]({% link /assets/pdf/sequencer-1.pdf %}).
+advised) you can find the above [here in PDF format](/pdf/sequencer-1.pdf).
 
 
 So, I'm actually quite a good way through designing the cards 

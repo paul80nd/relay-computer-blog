@@ -126,7 +126,7 @@ following:
 This 
 diagram includes everything mentioned so far along with the power supply and 
 ground lines and all other internal wiring. As with previous cards, the 
-completed instruction register design can be found [here in PDF format]({% link /assets/pdf/register-in-1.pdf %}) (so you can zoom right in on the 
+completed instruction register design can be found [here in PDF format](/pdf/register-in-1.pdf) (so you can zoom right in on the 
 detail).
 
 So, that's the instruction register all designed and ready 

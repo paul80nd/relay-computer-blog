@@ -115,7 +115,7 @@ everything together we get the following assault on the eyes:
 {{< fig caption="ALU - Complete Logic Unit ([larger](/img/posts/2013/2013-11-13-1002.png))" >}}![ALU - Complete Logic Unit](/img/posts/2013/2013-11-13-0004.png){{< /fig >}}
 
 To make things a bit easier to 
-see the completed Logic Unit design can be found [here in PDF format]({% link /assets/pdf/logic-unit.pdf %}) (so you can zoom in/out to your 
+see the completed Logic Unit design can be found [here in PDF format](/pdf/logic-unit.pdf) (so you can zoom in/out to your 
 hearts content). Hopefully the diagram shouldn't need too much more 
 explanation (although let me know in the comments if that's not the case) as 
 it's just wires from connectors to relays, relays to connectors, relays to 

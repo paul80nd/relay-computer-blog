@@ -55,7 +55,7 @@ design:
 
 As usual if you'd like to 
 get an extreme close up of the above you'll find the incrementer design 
-available [here in PDF format]({% link /assets/pdf/incrementer.pdf %}).
+available [here in PDF format](/pdf/incrementer.pdf).
 
 With the incrementer 
 design done all that remains is to update Display A adding two extra buttons 
@@ -66,7 +66,7 @@ added buttons Display A now looks like this:
 {{< fig caption="Updated Display A design ([larger](/img/posts/2017/2017-07-17-1002.png))" >}}![Updated Display A design](/img/posts/2017/2017-07-17-0002.png){{< /fig >}}
 
 Again, you can find a 
-[PDF version of this design here]({% link /assets/pdf/display-a-4.pdf %}) and another [version without the buttons]({% link /assets/pdf/display-a-4a.pdf %}).
+[PDF version of this design here](/pdf/display-a-4.pdf) and another [version without the buttons](/pdf/display-a-4a.pdf).
 
 Finally, to wrap 
 things up, I've updated my relay computer simulator that now looks like 

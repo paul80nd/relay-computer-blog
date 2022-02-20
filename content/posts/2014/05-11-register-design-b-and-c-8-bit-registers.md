@@ -121,7 +121,7 @@ together we get the following:
 This diagram 
 includes everything mentioned so far along with the power supply and ground 
 lines and all other internal wiring. As with previous cards, the completed BC 
-Register design can be found [here in PDF format]({% link /assets/pdf/register-bc.pdf %}) (so you can zoom right in on the 
+Register design can be found [here in PDF format](/pdf/register-bc.pdf) (so you can zoom right in on the 
 detail). Hopefully the diagram reads OK but if not let me know in the 
 comments.
 

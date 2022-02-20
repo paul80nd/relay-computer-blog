@@ -80,12 +80,12 @@ computer.
 Updated PDF versions of the above designs are as follows:
 
 * Display A
-  * [Design with key caps shown]({% link /assets/pdf/display-a-2.pdf %})
-  * [Design without key caps]({% link /assets/pdf/display-a-2a.pdf %}) (showing internal LED wiring)
+  * [Design with key caps shown](/pdf/display-a-2.pdf)
+  * [Design without key caps](/pdf/display-a-2a.pdf) (showing internal LED wiring)
 * Display B
-  * [Design with indicator faces]({% link /assets/pdf/display-b-2.pdf %})
-  * [Design without indicator faces]({% link /assets/pdf/display-b-2a.pdf %}) (showing internal LED wiring)
-* [Aux Switch Control]({% link /assets/pdf/aux-switch-ctrl-2.pdf %})
+  * [Design with indicator faces](/pdf/display-b-2.pdf)
+  * [Design without indicator faces](/pdf/display-b-2a.pdf) (showing internal LED wiring)
+* [Aux Switch Control](/pdf/aux-switch-ctrl-2.pdf)
 
 ... and that's it ... all the 
 designs are in place so finally I can get the soldering iron out and start 

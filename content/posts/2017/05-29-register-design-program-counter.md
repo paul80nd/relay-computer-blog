@@ -63,7 +63,7 @@ loaded/selected at the same time. This is also shown down in the LEDs across
 the front of the card ... there's one load LED at the left, one select LED at 
 the right and then the 16 LEDs in the middle showing the current 16-bit value 
 held in the program counter register as a whole. You can click on the image 
-for a closer look but if you want to get in really close you can find a version [here in PDF format]({% link /assets/pdf/program-counter.pdf %}).
+for a closer look but if you want to get in really close you can find a version [here in PDF format](/pdf/program-counter.pdf).
 
 Whilst I'm 
 creating the program counter it makes sense to update the two display cards 
@@ -76,7 +76,7 @@ display B on which I'll add the address bus:
 The 
 address bus consists of red LED light bars similar to the data bus ones but 
 with each element half the width to fit the full 16 bits in. As with the 
-program counter you can find a [PDF version of the Display B card here]({% link /assets/pdf/display-b-3.pdf %}) and [another version showing the LED internals here]({% link /assets/pdf/display-b-3a.pdf %}). Next up is 
+program counter you can find a [PDF version of the Display B card here](/pdf/display-b-3.pdf) and [another version showing the LED internals here](/pdf/display-b-3a.pdf). Next up is 
 display A which gains two extra control switches:
 
 {{< fig caption="Display A with added Program Counter Load/Select ([larger](/img/posts/2017/2017-05-29-1002.png))" >}}![Display A with added Program Counter Load/Select](/img/posts/2017/2017-05-29-0002.png){{< /fig >}}
@@ -84,7 +84,7 @@ display A which gains two extra control switches:
 Looking towards the centre of the diagram above you can see the 
 new load and select control switches for the program counter (LD PC and SEL 
 PC). These allow the user to manually load or select the program counter 
-from/to the address bus when required. Again you can find a [PDF version of this diagram here]({% link /assets/pdf/display-a-3.pdf %}) and [one without the switch caps here]({% link /assets/pdf/display-a-3a.pdf %}).
+from/to the address bus when required. Again you can find a [PDF version of this diagram here](/pdf/display-a-3.pdf) and [one without the switch caps here](/pdf/display-a-3a.pdf).
 
 One thing to 
 note in the diagram above is the 'SEL AS' switch which was previously wired up 
@@ -103,7 +103,7 @@ usually be in the first half of the memory (and even more usually will start
 at the first memory location so that just clearing the PC will give you the 
 right starting address). The gating relays for the 'SEL AS' functionality can 
 be found on the auxiliary control card. The design for this has been done 
-previously and the [PDF version of that can be found here]({% link /assets/pdf/aux-switch-ctrl-2.pdf %}).
+previously and the [PDF version of that can be found here](/pdf/aux-switch-ctrl-2.pdf).
 
 Right, 
 so that's pretty much all the design complete for the program counter. The 

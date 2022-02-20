@@ -82,7 +82,7 @@ bright and actually a bit unpleasant to look at ... bringing them down with a
 1K resistor made them just about right).
 
 As always these schematics 
-are available in PDF format [here for the schematic with indicator faces]({% link /assets/pdf/display-b-1.pdf %}) and [here for the schematic without]({% link /assets/pdf/display-b-1a.pdf %}).
+are available in PDF format [here for the schematic with indicator faces](/pdf/display-b-1.pdf) and [here for the schematic without](/pdf/display-b-1a.pdf).
 
 So with the 
 design all done I can move on to making the card for real. Technique wise 

@@ -80,7 +80,7 @@ wiring, power supply and ground lines we get the following:
 {{< fig caption="Complete ALU Control Card ([larger](/img/posts/2013/2013-12-01-1001.png))" >}}![Complete ALU Control Card](/img/posts/2013/2013-12-01-0003.png){{< /fig >}}
 
 As before in 
-previous posts the completed Arithmetic Control Card design can be found [here in PDF format]({% link /assets/pdf/control-unit.pdf %}) (so you can zoom in for more 
+previous posts the completed Arithmetic Control Card design can be found [here in PDF format](/pdf/control-unit.pdf) (so you can zoom in for more 
 detail).
 
 With the three cards that make up the complete ALU all 

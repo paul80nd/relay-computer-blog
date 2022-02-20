@@ -119,4 +119,4 @@ specific. The simplest solution here is to have a jumper block that I can set a 
 {{< fig >}}![Configuration Jumpers](/img/posts/2019/2019-07-15-0009.png){{< /fig >}}
 
 ... and with that we have a complete design for a 16-bit register with independently controllable upper and lower 8-bit
-'sub-registers'. As usual there's a version of the full design [here in PDF format]({% link /assets/pdf/register-jmxy.pdf %}). In my next post I'll go through how this schematic becomes a PCB design that can be sent off to JLCPCB for manufacturing.
+'sub-registers'. As usual there's a version of the full design [here in PDF format](/pdf/register-jmxy.pdf). In my next post I'll go through how this schematic becomes a PCB design that can be sent off to JLCPCB for manufacturing.

@@ -122,7 +122,7 @@ everything together we get the following jumble:
 This 
 diagram includes everything mentioned so far along with the power supply and 
 ground lines and all other internal wiring. As before, the completed 
-Arithmetic Unit design can be found [here in PDF format]({% link /assets/pdf/arithmetic-unit.pdf %}) (so you can zoom in and out as you 
+Arithmetic Unit design can be found [here in PDF format](/pdf/arithmetic-unit.pdf) (so you can zoom in and out as you 
 wish). Hopefully the diagram reads OK but if not let me know in the 
 comments.
 

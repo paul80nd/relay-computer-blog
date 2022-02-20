@@ -88,7 +88,7 @@ it will light the LED regardless of switch position. When the switch is
 pressed however it will link the power supply (which is only active when the 
 computer is in the diagnostic mode) with the control line and the LED.
 
-As always these schematics are available in PDF format [here for the schematic with switches]({% link /assets/pdf/display-a-1.pdf %}) and [here without the switches]({% link /assets/pdf/display-a-1a.pdf %}).
+As always these schematics are available in PDF format [here for the schematic with switches](/pdf/display-a-1.pdf) and [here without the switches](/pdf/display-a-1a.pdf).
 
 So, with the design 
 ready to go I could get out the soldering iron and get stuck in. The only real 

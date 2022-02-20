@@ -123,7 +123,7 @@ at the final design as follows:
 
 As always 
 should you wish to take a much closer look at this design you can find the 
-above [here in PDF format]({% link /assets/pdf/control-1.pdf %}). 
+above [here in PDF format](/pdf/control-1.pdf). 
 
 Before I wrap up 
 this post there's one extra bit to sort out. The SETAB instruction needs a set 
@@ -138,7 +138,7 @@ this:
 In the above diagram I've faded out the existing 
 instruction register relays and wiring to highlight the new I2B relays added. 
 There's also the full version of the revised instruction register design 
-available as [here in PDF format]({% link /assets/pdf/register-in-2.pdf %}).
+available as [here in PDF format](/pdf/register-in-2.pdf).
 
 ... and that's the 
 control card design complete for the MOV-8, ALU and SETAB instructions. This 

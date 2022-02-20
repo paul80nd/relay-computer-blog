@@ -110,7 +110,7 @@ following:
 
 This diagram includes everything mentioned so far along 
 with the power supply and ground lines and all other internal wiring. As with 
-previous cards, the completed decoder design can be found [here in PDF format]({% link /assets/pdf/decoder-1.pdf %}).
+previous cards, the completed decoder design can be found [here in PDF format](/pdf/decoder-1.pdf).
 
 So, that's the decoder 
 all designed and ready for the first three instruction classes. The next card 

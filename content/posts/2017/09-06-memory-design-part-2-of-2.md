@@ -122,7 +122,7 @@ So,
 that's ended up as one of the 'busier' card designs in the computer and it's 
 one where I'll need to be careful with the wiring when constructing. 
 Nonetheless that's the memory unit design complete and ready to go and as 
-always you can find a version [here in PDF format]({% link /assets/pdf/memory.pdf %}).
+always you can find a version [here in PDF format](/pdf/memory.pdf).
  
 With the memory card, 
 program counter and incrementer design in the bag we're very close to having a 

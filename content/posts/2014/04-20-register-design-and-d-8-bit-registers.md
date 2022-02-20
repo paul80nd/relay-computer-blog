@@ -107,7 +107,7 @@ the following:
 This diagram 
 includes everything mentioned so far along with the power supply and ground 
 lines and all other internal wiring. As with previous cards, the completed AD 
-Register design can be found [here in PDF format]({% link /assets/pdf/register-ad.pdf %}) (so you can zoom in and out as you 
+Register design can be found [here in PDF format](/pdf/register-ad.pdf) (so you can zoom in and out as you 
 wish). Hopefully the diagram reads OK but if not let me know in the 
 comments.
 

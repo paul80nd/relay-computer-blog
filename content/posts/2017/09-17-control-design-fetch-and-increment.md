@@ -130,7 +130,7 @@ take odd routes around the cards and this is where future parts of the cards
 will utilise those passing lines.
 
 As always, if you'd like to see a 
-larger version of these designs you can find PDF versions of the [sequencer here]({% link /assets/pdf/control-2.pdf %}) and [controller here]({% link /assets/pdf/sequencer-2.pdf %}).
+larger version of these designs you can find PDF versions of the [sequencer here](/pdf/control-2.pdf ) and [controller here](/pdf/sequencer-2.pdf).
 
 That's it ... all the designs  
 are in place to be able to load a program in to the computer's memory and then 
