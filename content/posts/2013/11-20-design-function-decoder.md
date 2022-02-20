@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Design: Function Decoder'
+slug: design-function-decoder
 date: '2013-11-20T22:18:00.002Z'
 author: Paul Law
 tags:

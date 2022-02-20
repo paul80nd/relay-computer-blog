@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Construction: Completed Control Card Full Test'
+slug: alu-construction-completed-control-card
 date: '2014-03-16T08:59:00.005Z'
 author: Paul Law
 tags:

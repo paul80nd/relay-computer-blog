@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Design: 1-bit Logic Unit'
+slug: design-1-bit-logic-unit
 date: '2013-11-11T23:32:00.000Z'
 author: Paul Law
 tags:

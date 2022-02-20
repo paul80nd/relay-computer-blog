@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Register Design: Dual Output 8-bit Register'
+slug: register-design-dual-output-8-bit
 date: '2014-04-24T22:56:00.001+01:00'
 author: Paul Law
 tags:

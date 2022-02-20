@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Design: 8-bit Logic Unit'
+slug: design-8-bit-logic-unit
 date: '2013-11-13T22:42:00.005Z'
 author: Paul Law
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'User Interface: Display B Initial Design and Construction'
+slug: user-interface-display-b-initial-design
 date: '2014-07-20T10:05:00.001+01:00'
 author: Paul Law
 tags:

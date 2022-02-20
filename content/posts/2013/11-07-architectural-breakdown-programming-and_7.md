@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Architectural breakdown: Programming and Control 2'
+slug: architectural-breakdown-programming-and_7
 date: '2013-11-07T23:22:00.000Z'
 author: Paul Law
 tags:

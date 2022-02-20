@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Design: 8-bit Arithmetic Unit'
+slug: design-8-bit-arithmetic-unit
 date: '2013-11-17T10:43:00.001Z'
 author: Paul Law
 tags:

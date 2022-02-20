@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Architectural breakdown: Buses and Registers'
+slug: architectural-breakdown-buses-and
 date: '2013-11-05T19:07:00.000Z'
 author: Paul Law
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ALU & Registers A-D Test with new Display Cards
+slug: alu-registers-d-test-with-new-display
 date: '2014-08-19T18:22:00.001+01:00'
 author: Paul Law
 tags:

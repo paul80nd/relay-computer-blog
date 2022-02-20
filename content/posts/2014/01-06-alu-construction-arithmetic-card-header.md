@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Construction: Arithmetic Card Header Pins'
+slug: alu-construction-arithmetic-card-header
 date: '2014-01-06T22:18:00.001Z'
 author: Paul Law
 tags:

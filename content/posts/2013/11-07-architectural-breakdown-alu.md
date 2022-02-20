@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Architectural breakdown: the ALU'
+slug: architectural-breakdown-alu
 date: '2013-11-07T07:24:00.000Z'
 author: Paul Law
 tags:

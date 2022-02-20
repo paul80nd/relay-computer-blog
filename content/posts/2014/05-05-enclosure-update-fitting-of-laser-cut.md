@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Enclosure Update: Fitting of Laser Cut Parts'
+slug: enclosure-update-fitting-of-laser-cut
 date: '2014-05-05T11:03:00.000+01:00'
 author: Paul Law
 tags:

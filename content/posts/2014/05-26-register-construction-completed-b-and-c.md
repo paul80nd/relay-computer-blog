@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Register Construction: Completed B and C 8-bit Registers Full Test'
+slug: register-construction-completed-b-and-c
 date: '2014-05-26T09:59:00.003+01:00'
 author: Paul Law
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ALU Construction: Control Card Header Pins & Relay Sockets'
+slug: alu-construction-control-card-header
 date: '2014-03-04T18:03:00.002Z'
 author: Paul Law
 tags:
