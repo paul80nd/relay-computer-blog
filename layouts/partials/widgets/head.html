@@ -49,6 +49,10 @@
 <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
 {{ "<!-- Begin EU Cookie Consent -->" | safeHTML }}
 {{ partial "plugins/cookie-consent.html" -}}
 {{ "<!-- End EU Cookie Consent -->" | safeHTML }}
