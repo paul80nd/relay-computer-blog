@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Controller Design: ALU, MOV8 & SETAB Instructions'
+slug: controller-alu-mov8-setab-design
 date: '2019-12-07T03:03:00.004Z'
 author: Paul Law
 tags:

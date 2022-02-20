@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Decoder Design: Schematic & PCBs'
+slug: decoder-design-pcb
 date: '2019-12-22T03:03:00.004Z'
 author: Paul Law
 tags:

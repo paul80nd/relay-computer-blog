@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Controller Design: Schematic & PCBs'
+slug: controller-design-pcb
 date: '2019-12-20T03:03:00.004Z'
 author: Paul Law
 tags:
