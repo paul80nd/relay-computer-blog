@@ -58,7 +58,7 @@
       </div>
       {% endif %}
 
-      {% include home-pager.html %}
+      {{ partial "home-pager" .Paginator }}
 
     </div>
     {{ $page.Content }}

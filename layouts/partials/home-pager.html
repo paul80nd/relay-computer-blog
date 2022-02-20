@@ -1,0 +1,30 @@
+{{ $paginator := . }}
+{{ if gt $paginator.TotalPages 1 }}
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+   <!-- Previous page. -->
+   {{ if $paginator.HasPrev }}
+   <a href="{{ $paginator.Prev.URL }}" class="pagination-previous is-info">Previous</a>
+   {{ else }}
+   <p class="pagination-previous" disabled>Previous</p>
+   {{ end }}
+
+   <!-- Next page. -->
+   {{ if $paginator.HasNext }}
+   <a href="{{ $paginator.Next.URL }}" class="pagination-next is-info">Next</a>
+   {{ else }}
+   <p class="pagination-next" disabled >Next</p>
+   {{ end }}
+
+   <ul class="pagination-list">
+
+    <!-- Page numbers. -->
+    {{ range $paginator.Pagers }}
+
+    <li><a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a></li>
+
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}
