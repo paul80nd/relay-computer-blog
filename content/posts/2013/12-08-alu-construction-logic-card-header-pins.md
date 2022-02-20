@@ -25,9 +25,9 @@ components than it is to unsolder them. Here's the result of this evenings
 work:
 
 {% figure %}
-![ALU Logic Card](/assets/img/posts/2013/2013-12-08-0000.jpg)
-![ALU Logic Card (solder side)](/assets/img/posts/2013/2013-12-08-0001.jpg)
-![ALU Logic Card (close up)](/assets/img/posts/2013/2013-12-08-0002.jpg)
+![ALU Logic Card](/img/posts/2013/2013-12-08-0000.jpg)
+![ALU Logic Card (solder side)](/img/posts/2013/2013-12-08-0001.jpg)
+![ALU Logic Card (close up)](/img/posts/2013/2013-12-08-0002.jpg)
 {% endfigure %}
 
 The board is 

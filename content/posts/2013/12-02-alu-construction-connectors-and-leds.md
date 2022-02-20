@@ -42,8 +42,8 @@ I had a go at the simpler Arithmetic Card LEDs first and
 here's the result (with design diagram for reference):
 
 {% figure %}
-![ALU Arithmetic Card LEDs](/assets/img/posts/2013/2013-12-02-0000.png)
-![ALU Arithmetic Card LEDs](/assets/img/posts/2013/2013-12-02-0001.JPG)
+![ALU Arithmetic Card LEDs](/img/posts/2013/2013-12-02-0000.png)
+![ALU Arithmetic Card LEDs](/img/posts/2013/2013-12-02-0001.JPG)
 {% endfigure %}
 
 As you can see 
@@ -52,8 +52,8 @@ soldered down the connectors but they're fairly straightforward to do so there
 not much to say there. Moving on to the Control Card:
 
 {% figure %}
-![ALU Control Card LEDs](/assets/img/posts/2013/2013-12-02-0002.png)
-![ALU Control Card LEDs](/assets/img/posts/2013/2013-12-02-0003.JPG)
+![ALU Control Card LEDs](/img/posts/2013/2013-12-02-0002.png)
+![ALU Control Card LEDs](/img/posts/2013/2013-12-02-0003.JPG)
 {% endfigure %}
 
 I wasn't quite as 
@@ -66,8 +66,8 @@ bi-level so are a little more stable to work with but needs twice the amount
 of soldering:
 
 {% figure %}
-![ALU Logic Card LEDs](/assets/img/posts/2013/2013-12-02-0004.png)
-![ALU Logic Card LEDs](/assets/img/posts/2013/2013-12-02-0005.JPG)
+![ALU Logic Card LEDs](/img/posts/2013/2013-12-02-0004.png)
+![ALU Logic Card LEDs](/img/posts/2013/2013-12-02-0005.JPG)
 {% endfigure %}
 
 Again, not perfect 

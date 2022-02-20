@@ -29,11 +29,11 @@ available bits in the instruction opcode:
 
 Here's the associated timing chart for the SETAB instruction:
 
-{% figure caption:"SETAB opcode timing chart ([larger](/assets/pdf/timing-setab.pdf))" %}![SETAB opcode timing chart](/assets/img/posts/2019/2019-12-07-0000.png){% endfigure %}
+{% figure caption:"SETAB opcode timing chart ([larger](/assets/pdf/timing-setab.pdf))" %}![SETAB opcode timing chart](/img/posts/2019/2019-12-07-0000.png){% endfigure %}
 
 This is all very straightforward to implement in relays:
 
-{% figure caption:"SETAB schematic ([larger](/assets/img/posts/2019/2019-12-07-1003.png))" %}![SETAB schematic](/assets/img/posts/2019/2019-12-07-0003.png){% endfigure %}
+{% figure caption:"SETAB schematic ([larger](/img/posts/2019/2019-12-07-1003.png))" %}![SETAB schematic](/img/posts/2019/2019-12-07-0003.png){% endfigure %}
 
 The only thing that perhaps needs a brief explanation is the CHAT line on the right. This is activated early in the
 fetch/increment cycle to indicate that the sequencer can now have an abort line set if required. All of the instructions on
@@ -48,11 +48,11 @@ for operations that only work on one value). The result of the operation can be 
 
 The timing chart for the ALU instruction looks like this:
 
-{% figure caption:"ALU opcode timing chart ([larger](/assets/pdf/timing-alu.pdf))" %}![ALU opcode timing chart](/assets/img/posts/2019/2019-12-07-0001.png){% endfigure %}
+{% figure caption:"ALU opcode timing chart ([larger](/assets/pdf/timing-alu.pdf))" %}![ALU opcode timing chart](/img/posts/2019/2019-12-07-0001.png){% endfigure %}
 
 The relay schematic for ALU uses five relays over SETAB's three but is still easy to understand:
 
-{% figure caption:"ALU schematic ([larger](/assets/img/posts/2019/2019-12-07-1004.png))" %}![ALU schematic](/assets/img/posts/2019/2019-12-07-0004.png){% endfigure %}
+{% figure caption:"ALU schematic ([larger](/img/posts/2019/2019-12-07-1004.png))" %}![ALU schematic](/img/posts/2019/2019-12-07-0004.png){% endfigure %}
 
 ### MOV-8: 8-bit Move
 
@@ -63,12 +63,12 @@ register are the same then the value in that register is cleared:
 
 Here's the MOV-8 timing chart:
 
-{% figure caption:"MOV8 opcode timing chart ([larger](/assets/pdf/timing-mov8.pdf))" %}![MOV8 opcode timing chart](/assets/img/posts/2019/2019-12-07-0002.png){% endfigure %}
+{% figure caption:"MOV8 opcode timing chart ([larger](/assets/pdf/timing-mov8.pdf))" %}![MOV8 opcode timing chart](/img/posts/2019/2019-12-07-0002.png){% endfigure %}
 
 The schematic for MOV-8 has a lot more relays going on but mostly that's around decoding the source and destination registers
 for the operation:
 
-{% figure caption:"MOV8 schematic ([larger](/assets/img/posts/2019/2019-12-07-1005.png))" %}![MOV8 schematic](/assets/img/posts/2019/2019-12-07-0005.png){% endfigure %}
+{% figure caption:"MOV8 schematic ([larger](/img/posts/2019/2019-12-07-1005.png))" %}![MOV8 schematic](/img/posts/2019/2019-12-07-0005.png){% endfigure %}
 
 You can see there's quite a few bits of this schematic blanked out. I've done that for brevity here but effectively that's
 where the M1, M2, X and Y registers can be selected as a source or destination. I won't be implementing those for the moment

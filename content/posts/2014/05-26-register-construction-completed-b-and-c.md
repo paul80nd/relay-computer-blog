@@ -17,8 +17,8 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2014/05/register-constructio
 The B/C Register card is now complete and looks like this:
 
 {% figure %}
-![Completed B/C Register Card (front)](/assets/img/posts/2014/2014-05-26-0000.jpg)
-![Completed B/C Register Card (back)](/assets/img/posts/2014/2014-05-26-0001.jpg)
+![Completed B/C Register Card (front)](/img/posts/2014/2014-05-26-0000.jpg)
+![Completed B/C Register Card (back)](/img/posts/2014/2014-05-26-0001.jpg)
 {% endfigure %}
 
 As 

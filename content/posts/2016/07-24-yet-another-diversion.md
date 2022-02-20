@@ -38,7 +38,7 @@ should be fine. If it doesn't work for you then here's a picture of what it
 would have looked like had it worked:
 
 {% figure %}
-![Screenshot of the Relay Computer Simulator](/assets/img/posts/2016/2016-07-24-0000.png)
+![Screenshot of the Relay Computer Simulator](/img/posts/2016/2016-07-24-0000.png)
 {% endfigure %}
 
 Sorry, that was probably a bit of a tease if 

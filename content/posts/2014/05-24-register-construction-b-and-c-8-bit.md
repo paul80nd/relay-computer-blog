@@ -26,8 +26,8 @@ finally the wire wrapping posts. Here's some pictures, front and back, of the
 card following this round of soldering:
 
 {% figure %}
-![B/C Register Card with initial soldering completed (back)](/assets/img/posts/2014/2014-05-24-0000.jpg)
-![B/C Register Card with initial soldering completed (front)](/assets/img/posts/2014/2014-05-24-0001.jpg)
+![B/C Register Card with initial soldering completed (back)](/img/posts/2014/2014-05-24-0000.jpg)
+![B/C Register Card with initial soldering completed (front)](/img/posts/2014/2014-05-24-0001.jpg)
 {% endfigure %}
 
 I made a few tweaks to the construction method on this 
@@ -62,7 +62,7 @@ in place from one side whilst solder tacking the other side down.
 Here's a picture of the LEDs viewed from the front:
 
 {% figure %}
-![B/C Register Card LEDs](/assets/img/posts/2014/2014-05-24-0002.jpg){% endfigure %}
+![B/C Register Card LEDs](/img/posts/2014/2014-05-24-0002.jpg){% endfigure %}
 
 The left ten 
 LEDs are for register B and the right ten for register C. Each have the same 
@@ -74,7 +74,7 @@ The next stage of construction was soldering down the power and ground
 lines on the solder side of the board:
 
 {% figure %}
-![B/C Register Card with power and ground lines completed](/assets/img/posts/2014/2014-05-24-0003.jpg){% endfigure %}
+![B/C Register Card with power and ground lines completed](/img/posts/2014/2014-05-24-0003.jpg){% endfigure %}
 
 This stage was pretty much consistent with previous cards 
 so nothing new to mention here other than I had to skirt around the messy 
@@ -88,10 +88,10 @@ related connections then laying the next family on top of that. Here's four
 pictures of the wraps building up over time:
 
 {% figure %}
-![B/C Register Card wire wraps stage 1](/assets/img/posts/2014/2014-05-24-0004.jpg)
-![B/C Register Card wire wraps stage 2](/assets/img/posts/2014/2014-05-24-0005.jpg)
-![B/C Register Card wire wraps stage 3](/assets/img/posts/2014/2014-05-24-0006.jpg)
-![B/C Register Card wire wraps stage 4](/assets/img/posts/2014/2014-05-24-0007.jpg)
+![B/C Register Card wire wraps stage 1](/img/posts/2014/2014-05-24-0004.jpg)
+![B/C Register Card wire wraps stage 2](/img/posts/2014/2014-05-24-0005.jpg)
+![B/C Register Card wire wraps stage 3](/img/posts/2014/2014-05-24-0006.jpg)
+![B/C Register Card wire wraps stage 4](/img/posts/2014/2014-05-24-0007.jpg)
 {% endfigure %}
 
 The top left picture shows the first three wraps: the black 
@@ -106,9 +106,9 @@ Finally here is three close up pictures of the final
 wire wraps:
 
 {% figure %}
-![B/C Register Card (left)](/assets/img/posts/2014/2014-05-24-0008.jpg)
-![B/C Register Card (middle)](/assets/img/posts/2014/2014-05-24-0009.jpg)
-![B/C Register Card (right)](/assets/img/posts/2014/2014-05-24-0010.jpg)
+![B/C Register Card (left)](/img/posts/2014/2014-05-24-0008.jpg)
+![B/C Register Card (middle)](/img/posts/2014/2014-05-24-0009.jpg)
+![B/C Register Card (right)](/img/posts/2014/2014-05-24-0010.jpg)
 {% endfigure %}
 
 That's it for 

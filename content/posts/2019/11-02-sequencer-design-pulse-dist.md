@@ -17,17 +17,17 @@ computer can perform branching.
 
 As a recap here's the outputs from the newly designed FSM:
 
-{% figure caption:"24-cycle FSM Outputs ([larger](/assets/pdf/sequencer-timing.pdf))" %}![24-cycle FSM Outputs](/assets/img/posts/2019/2019-11-01-0004.png){% endfigure %}
+{% figure caption:"24-cycle FSM Outputs ([larger](/assets/pdf/sequencer-timing.pdf))" %}![24-cycle FSM Outputs](/img/posts/2019/2019-11-01-0004.png){% endfigure %}
 
 ... and here's the timing chart that we're trying to obtain:
 
-{% figure caption:"GOTO opcode timing chart ([larger](/assets/img/posts/2019/2019-10-06-1004.png))" %}![GOTO opcode timing chart](/assets/img/posts/2019/2019-10-06-0004.png){% endfigure %}
+{% figure caption:"GOTO opcode timing chart ([larger](/img/posts/2019/2019-10-06-1004.png))" %}![GOTO opcode timing chart](/img/posts/2019/2019-10-06-0004.png){% endfigure %}
 
 You might be able to spot that some of the outputs are exactly what we're looking for ... they're the right pulse for the
 right duration of time. Some of the pulses we need though can be obtained by combining the outputs together. Jumping straight
 to it then here's the pulses that can be derrived from the FSM outputs:
 
-{% figure caption:"Sequencer Derrived Pulses ([larger](/assets/pdf/sequencer-pulses.pdf))" %}![Sequencer Derrived Pulses](/assets/img/posts/2019/2019-11-02-0000.png){% endfigure %}
+{% figure caption:"Sequencer Derrived Pulses ([larger](/assets/pdf/sequencer-pulses.pdf))" %}![Sequencer Derrived Pulses](/img/posts/2019/2019-11-02-0000.png){% endfigure %}
 
 Some of these pulses we already had, of course, in the 8-cycle sequencer ... pulses like A, B, C and D which are used in the
 fetch/increment cycle (shown in the GOTO timing chart above) at the begining of every instruction. For the rest of the GOTO
@@ -38,16 +38,16 @@ So, we know what pulses we want and how they are derived from the FSM outputs bu
 Well, in the majority of cases we're just taking a FSM output directly but where we're combining outputs we can just use
 diodes as that will give us the 'this OR that' type logic we need:
 
-{% figure %}![Pulse Distribution 1](/assets/img/posts/2019/2019-11-02-0001.png){% endfigure %}
+{% figure %}![Pulse Distribution 1](/img/posts/2019/2019-11-02-0001.png){% endfigure %}
 
-{% figure %}![Pulse Distribution 2](/assets/img/posts/2019/2019-11-02-0002.png){% endfigure %}
+{% figure %}![Pulse Distribution 2](/img/posts/2019/2019-11-02-0002.png){% endfigure %}
 
 As before with the FSM there's additional pulses here that we're not using just yet but rest assured they'll be needed when
 we add more instructions to the computer.
 
 So, now we've got the required pulses I can update the GOTO timing diagram showing which pulse is used at each point:
 
-{% figure caption:"Updated GOTO opcode timing chart ([larger](/assets/pdf/timing-goto.pdf))" %}![GOTO opcode timing chart](/assets/img/posts/2019/2019-11-02-0003.png){% endfigure %}
+{% figure caption:"Updated GOTO opcode timing chart ([larger](/assets/pdf/timing-goto.pdf))" %}![GOTO opcode timing chart](/img/posts/2019/2019-11-02-0003.png){% endfigure %}
 
 It'll be the controller, of course, that implements the behaviour shown in the timing diagram above (firing the appropriate
 control lines at the appropriate time) but we have everything we need now to finish the design of the sequencer in the

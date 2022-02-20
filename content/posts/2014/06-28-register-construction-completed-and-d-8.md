@@ -17,8 +17,8 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2014/06/register-constructio
 The A/D Register card is now complete and looks like this:
 
 {% figure %}
-![Completed A/D Register Card (front)](/assets/img/posts/2014/2014-06-28-0000.jpg)
-![Completed A/D Register Card (back)](/assets/img/posts/2014/2014-06-28-0001.jpg)
+![Completed A/D Register Card (front)](/img/posts/2014/2014-06-28-0000.jpg)
+![Completed A/D Register Card (back)](/img/posts/2014/2014-06-28-0001.jpg)
 {% endfigure %}
 
 As 
@@ -32,7 +32,7 @@ demonstrate this in the video by performing a series of arithmetic operations
 by hand.
 
 {% figure %}
-![Measurement of temperature inside card pack (41 deg C)](/assets/img/posts/2014/2014-06-28-0002.jpg)
+![Measurement of temperature inside card pack (41 deg C)](/img/posts/2014/2014-06-28-0002.jpg)
 {% endfigure %}
 
 The temperature steadily climbed over a couple of minutes 
@@ -44,7 +44,7 @@ draw the air through. Also of note was how much current was being drawn in
 this state:
 
 {% figure %}
-![Measurement of current drawn by card pack (just under 2A)](/assets/img/posts/2014/2014-06-28-0003.jpg)
+![Measurement of current drawn by card pack (just under 2A)](/img/posts/2014/2014-06-28-0003.jpg)
 {% endfigure %}
 
 That's coming in just under 2A ... assuming the other 

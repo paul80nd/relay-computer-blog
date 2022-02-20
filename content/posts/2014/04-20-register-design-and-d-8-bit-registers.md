@@ -22,7 +22,7 @@ diving straight in, here is what the main bit relays look like for the two
 8-bit registers when placed on the usual 55 x 40 hole pad board (excluding 
 wire links):
 
-{% figure caption:"2 x 8 bit register relays ([larger](/assets/img/posts/2014/2014-04-20-1000.png))" %}![2 x 8 bit register relays](/assets/img/posts/2014/2014-04-20-0000.png){% endfigure %}
+{% figure caption:"2 x 8 bit register relays ([larger](/img/posts/2014/2014-04-20-1000.png))" %}![2 x 8 bit register relays](/img/posts/2014/2014-04-20-0000.png){% endfigure %}
 
 Each of the 
 relays above stores a single 1-bit value so there's 16-bits worth in total 
@@ -34,7 +34,7 @@ and gating relays added we get the following (this time including internal
 wire links in the 1-bit register relays and result links between the 1-bit 
 register relays and the gating relays):
 
-{% figure caption:"2 x 8 bit register relays + gating relays ([larger](/assets/img/posts/2014/2014-04-20-1001.png))" %}![2 x 8 bit register relays + gating relays](/assets/img/posts/2014/2014-04-20-0001.png){% endfigure %}
+{% figure caption:"2 x 8 bit register relays + gating relays ([larger](/img/posts/2014/2014-04-20-1001.png))" %}![2 x 8 bit register relays + gating relays](/img/posts/2014/2014-04-20-0001.png){% endfigure %}
 
 So, that's it for relays on this card. As with previous cards I'd 
 like to be able to display the current value being stored in the registers 
@@ -51,7 +51,7 @@ with the theme of red for a bit value, yellow for inputs or control signals
 and green for output control signals or state. Diagram wise then it looks like 
 this:
 
-{% figure caption:"AD Register LEDs ([larger](/assets/img/posts/2014/2014-04-20-1002.png))" %}![AD Register LEDs](/assets/img/posts/2014/2014-04-20-0002.png){% endfigure %}
+{% figure caption:"AD Register LEDs ([larger](/img/posts/2014/2014-04-20-1002.png))" %}![AD Register LEDs](/img/posts/2014/2014-04-20-0002.png){% endfigure %}
 
 Each block in the 
 diagram represents a single 3mm LED in a plastic holder. Each LEDs is pushed 
@@ -66,7 +66,7 @@ cable can be passed through all the sockets (or rather I can use the backplane
 card) to connect several cards together. The diagram of the connectors look 
 like this:
 
-{% figure caption:"AD Register Connectors ([larger](/assets/img/posts/2014/2014-04-20-1003.png))" %}![AD Register Connectors](/assets/img/posts/2014/2014-04-20-0003.png){% endfigure %}
+{% figure caption:"AD Register Connectors ([larger](/img/posts/2014/2014-04-20-1003.png))" %}![AD Register Connectors](/img/posts/2014/2014-04-20-0003.png){% endfigure %}
 
 This shows the 
 four right angled boxed headers (identical to the ones used on all the ALU 
@@ -102,7 +102,7 @@ as follows:
 So, finally, wiring everything together we get 
 the following:
 
-{% figure caption:"Complete AD Register ([larger](/assets/img/posts/2014/2014-04-20-1004.png))" %}![Complete AD Register](/assets/img/posts/2014/2014-04-20-0004.png){% endfigure %}
+{% figure caption:"Complete AD Register ([larger](/img/posts/2014/2014-04-20-1004.png))" %}![Complete AD Register](/img/posts/2014/2014-04-20-0004.png){% endfigure %}
 
 This diagram 
 includes everything mentioned so far along with the power supply and ground 

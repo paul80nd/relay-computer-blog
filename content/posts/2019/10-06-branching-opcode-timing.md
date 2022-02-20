@@ -18,14 +18,14 @@ In my last post I covered the design for the GOTO opcode which will enable my re
 
 The opcode can also be drawn in diagram form as follows:
 
-{% figure %}![GOTO opcode map](/assets/img/posts/2019/2019-10-06-0000.png){% endfigure %}
+{% figure %}![GOTO opcode map](/img/posts/2019/2019-10-06-0000.png){% endfigure %}
 
 As mentioned in my last post this is by far the most complicated opcode to date ... and in fact, this will be the most
 complicated opcode the computer is going to get. The next job is to take the design above and derive some timing diagrams to
 show which control lines will be operated at what time so that the opcode functions as desired. Before we get stuck in lets
 remind ourselves of what happens at the beginning of all opcodes:
 
-{% figure %}![fetch increment timing](/assets/img/posts/2019/2019-10-06-0001.png){% endfigure %}
+{% figure %}![fetch increment timing](/img/posts/2019/2019-10-06-0001.png){% endfigure %}
 
 This is the 'fetch/increment' cycle which loads the opcode in to the instruction register and then moves the program counter
 on to the next instruction in memory. In the case of GOTO we have three bytes ... the opcode itself followed by a 16-bit
@@ -38,7 +38,7 @@ one last time. That finally gets us in to the state where the program counter is
 any other opcode would. If we do decide to make the jump to the given address we'll re-point the program counter otherwise
 we'll continue as normal. Let's do a basic map of this:
 
-{% figure %}![loading M or J register](/assets/img/posts/2019/2019-10-06-0002.png){% endfigure %}
+{% figure %}![loading M or J register](/img/posts/2019/2019-10-06-0002.png){% endfigure %}
 
 All this, of course, needs to happen after the initial fetch/increment as the address and data busses will be busy during that
 time. We'll also leave a gap between those operations to ensure any required busses are clear.
@@ -49,11 +49,11 @@ will have been loaded in to the J register (jumps from M aren't supported) and a
 that value to the program counter meaning the computer will continue execution from the given address. Here's the timing with
 these last two steps added in.
 
-{% figure %}![loading, return address and jump](/assets/img/posts/2019/2019-10-06-0003.png){% endfigure %}
+{% figure %}![loading, return address and jump](/img/posts/2019/2019-10-06-0003.png){% endfigure %}
 
 Putting everything together we end up with the final GOTO timing chart:
 
-{% figure caption:"GOTO opcode timing chart ([larger](/assets/img/posts/2019/2019-10-06-1004.png))" %}![GOTO opcode timing chart](/assets/img/posts/2019/2019-10-06-0004.png){% endfigure %}
+{% figure caption:"GOTO opcode timing chart ([larger](/img/posts/2019/2019-10-06-1004.png))" %}![GOTO opcode timing chart](/img/posts/2019/2019-10-06-0004.png){% endfigure %}
 
 So, we now know what needs to happen and when but how does this get implemented in the computer? Well, just as with the other
 instructions, you look at the timing diagram and pick out the common pulse shapes which we can create in the sequencer. The

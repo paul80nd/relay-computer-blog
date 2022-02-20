@@ -28,7 +28,7 @@ of the floor and ceiling panels in my recent post but for the hard of
 searching here's the cut file for these panels (with cut lines beefed up so 
 you can see them better — the original file has the lines set to 0.01mm):
 
-{% figure caption:"Floor and Ceiling Panel Cut ([larger](/assets/img/posts/2014/2014-04-10-1000.png))" %}![Floor and Ceiling Panel Cut](/assets/img/posts/2014/2014-04-10-0000.png){% endfigure %}
+{% figure caption:"Floor and Ceiling Panel Cut ([larger](/img/posts/2014/2014-04-10-1000.png))" %}![Floor and Ceiling Panel Cut](/img/posts/2014/2014-04-10-0000.png){% endfigure %}
 
 As you can 
 probably see, there's eight identical panels which form the four sets of 
@@ -36,7 +36,7 @@ ceilings and floors that fit in to each of the card bays. Here's a SketchUp
 rendering again of how one of those bays will end up looking:
 
 {% figure %}
-![Card Bay Rendering](/assets/img/posts/2014/2014-04-10-0001.png)
+![Card Bay Rendering](/img/posts/2014/2014-04-10-0001.png)
 {% endfigure %}
 
 I've chosen to 
@@ -45,12 +45,12 @@ and has good strength. Before I ordered the cut I printed out a paper version
 first (always recommended when doing laser cutting) and set at it with the 
 scissors to check everything was OK:
 
-{% figure %}![Paper card bay floor with guides](/assets/img/posts/2014/2014-04-10-0002.JPG){% endfigure %}
+{% figure %}![Paper card bay floor with guides](/img/posts/2014/2014-04-10-0002.JPG){% endfigure %}
 
 ... 
 and this is the same sat in the enclosure as it currently stands:
 
-{% figure %}![Paper template sat in enclosure](/assets/img/posts/2014/2014-04-10-0003.JPG){% endfigure %}
+{% figure %}![Paper template sat in enclosure](/img/posts/2014/2014-04-10-0003.JPG){% endfigure %}
 
 I 
 should probably mention, for those of you who fancy lasering up some wood, I'm 
@@ -76,7 +76,7 @@ to the front and back door. These are going be made from
 so you'll be able to see the LEDs flashing away inside 
 when the doors are closed. This is the look I'm aiming for:
 
-{% figure %}![Full enclosure render](/assets/img/posts/2014/2014-04-10-0004.png){% endfigure %}
+{% figure %}![Full enclosure render](/img/posts/2014/2014-04-10-0004.png){% endfigure %}
 
 Fortunately the 
 front and back door panels fit within the P3 material size although there's 
@@ -84,14 +84,14 @@ quite a bit of wastage left over so I've cut some extra panels out (which I'll
 come back to later in this post). Here's the cut file (again with lines 
 fattened up):
 
-{% figure caption:"Cut file for front and back doors ([larger](/assets/img/posts/2014/2014-04-10-1001.png))" %}![Cut file for front and back doors](/assets/img/posts/2014/2014-04-10-0005.png){% endfigure %}
+{% figure caption:"Cut file for front and back doors ([larger](/img/posts/2014/2014-04-10-1001.png))" %}![Cut file for front and back doors](/img/posts/2014/2014-04-10-0005.png){% endfigure %}
 
 The 
 main panels above have a bit of a perculiarity on the corners due to the 
 corner brackets of the aluminium frame eating into the groove the panel sits 
 in. Close up it looks like this:
 
-{% figure %}![Front/Back panel corner detail](/assets/img/posts/2014/2014-04-10-0006.png){% endfigure %}
+{% figure %}![Front/Back panel corner detail](/img/posts/2014/2014-04-10-0006.png){% endfigure %}
 
 The other two smaller panels on 
 this cut file don't need this 'toothed' edge and so have simple rounded 
@@ -103,7 +103,7 @@ around a bit.
 For the sides of the enclosure there's one final cut 
 file designed for the P2 size:
 
-{% figure caption:"Panel sides cut file ([larger](/assets/img/posts/2014/2014-04-10-1002.png))" %}![Panel sides cut file](/assets/img/posts/2014/2014-04-10-0007.png){% endfigure %}
+{% figure caption:"Panel sides cut file ([larger](/img/posts/2014/2014-04-10-1002.png))" %}![Panel sides cut file](/img/posts/2014/2014-04-10-0007.png){% endfigure %}
 
 Oo - what's that 
 at the bottom ;) Well, again, the panel sides didn't quite use enough of the 
@@ -114,19 +114,19 @@ it was better to cut something and throw it away than to receive a useless
 piece of acrylic. Now, this bit is still very much in the design stage but 
 here's what I've got in SketchUp so far:
 
-{% figure %}![Full enclosure beta design](/assets/img/posts/2014/2014-04-10-0008.png){% endfigure %}
+{% figure %}![Full enclosure beta design](/img/posts/2014/2014-04-10-0008.png){% endfigure %}
 
 The 
 additional cut panels from the P3 will go in the sides of the upper enclosure 
 (assuming it stays the same size) and the extra from the P2 cut is for the 
 main switch panel ... here's a close up of the cut:
 
-{% figure %}![Switch panel cut file close up](/assets/img/posts/2014/2014-04-10-0009.png){% endfigure %}
+{% figure %}![Switch panel cut file close up](/img/posts/2014/2014-04-10-0009.png){% endfigure %}
 
 ... and 
 a close up of the panel in the rendering ...
 
-{% figure caption:"Switch panel rendering (close up) ([larger](/assets/img/posts/2014/2014-04-10-1003.png))" %}![Switch panel rendering (close up)](/assets/img/posts/2014/2014-04-10-0010.png){% endfigure %}
+{% figure caption:"Switch panel rendering (close up) ([larger](/img/posts/2014/2014-04-10-1003.png))" %}![Switch panel rendering (close up)](/img/posts/2014/2014-04-10-0010.png){% endfigure %}
 
 The 
 eagle eyed out there may notice the rendering and cut have the right hand 
@@ -137,7 +137,7 @@ method of controlling the computer. I'll run through what each of these
 switches does at a later point (unless anyone really, really wants to know now 
 of course ;) but in the meanwhile here's a picture of said switches:
 
-{% figure %}![Main switches](/assets/img/posts/2014/2014-04-10-0011.jpg){% endfigure %}
+{% figure %}![Main switches](/img/posts/2014/2014-04-10-0011.jpg){% endfigure %}
 
 ... and really nice 
 chunky things they are too with a great click sound and feel. For anyone who's 

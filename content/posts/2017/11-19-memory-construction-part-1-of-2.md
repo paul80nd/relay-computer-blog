@@ -18,9 +18,9 @@ registers' and so I'll split it over two posts. Let's dive in with the easy
 part - soldering down the LEDs and backplane connectors:
 
 {% figure %}
-![Memory cards with LEDs and type 'Y' connectors](/assets/img/posts/2017/2017-11-19-0000.jpg)
-![Close up of lower memory card LEDs](/assets/img/posts/2017/2017-11-19-0001.jpg)
-![Close up of upper memory card LEDs and switch](/assets/img/posts/2017/2017-11-19-0002.jpg)
+![Memory cards with LEDs and type 'Y' connectors](/img/posts/2017/2017-11-19-0000.jpg)
+![Close up of lower memory card LEDs](/img/posts/2017/2017-11-19-0001.jpg)
+![Close up of upper memory card LEDs and switch](/img/posts/2017/2017-11-19-0002.jpg)
 {% endfigure %}
 
 For the lower memory card there are 16 LEDs for the 16-bit 
@@ -41,8 +41,8 @@ comes in handy when debugging. Here's a close up of the cards from the
 rear:
 
 {% figure %}
-![Close up of memory card LEDs (solder side)](/assets/img/posts/2017/2017-11-19-0003.jpg)
-![Close up of memory card LEDs (solder side - from the left)](/assets/img/posts/2017/2017-11-19-0004.jpg)
+![Close up of memory card LEDs (solder side)](/img/posts/2017/2017-11-19-0003.jpg)
+![Close up of memory card LEDs (solder side - from the left)](/img/posts/2017/2017-11-19-0004.jpg)
 {% endfigure %}
 
 Right, I'll leave the upper card there for now and pick it 
@@ -50,8 +50,8 @@ up in my next post. Focussing on the lower card then let's add some sockets,
 board interconnects and wire wrap posts:
 
 {% figure %}
-![Lower memory card with added sockets, board interconnects and wire wrap posts](/assets/img/posts/2017/2017-11-19-0005.jpg)
-![Lower memory card with added sockets, board interconnects and wire wrap posts (rear view)](/assets/img/posts/2017/2017-11-19-0006.jpg)
+![Lower memory card with added sockets, board interconnects and wire wrap posts](/img/posts/2017/2017-11-19-0005.jpg)
+![Lower memory card with added sockets, board interconnects and wire wrap posts (rear view)](/img/posts/2017/2017-11-19-0006.jpg)
 {% endfigure %}
 
 Nothing too unusual there - 
@@ -69,8 +69,8 @@ diodes, resistors and caps:
 
 
 {% figure %}
-![Lower memory card with added diodes, resistors and capacitors](/assets/img/posts/2017/2017-11-19-0007.jpg)
-![Lower memory card with added diodes, resistors and capacitors (rear view)](/assets/img/posts/2017/2017-11-19-0008.jpg)
+![Lower memory card with added diodes, resistors and capacitors](/img/posts/2017/2017-11-19-0007.jpg)
+![Lower memory card with added diodes, resistors and capacitors (rear view)](/img/posts/2017/2017-11-19-0008.jpg)
 {% endfigure %}
 
 The diode is the usual 
@@ -87,15 +87,15 @@ out any noise on the circuit.
 Last bit of soldering to do is the 
 power rails:
 
-{% figure %}![Lower memory card with added power rails](/assets/img/posts/2017/2017-11-19-0009.jpg){% endfigure %}
+{% figure %}![Lower memory card with added power rails](/img/posts/2017/2017-11-19-0009.jpg){% endfigure %}
 
 ... and then it's on with the wire wrap ...
 
 {% figure %}
-![Lower memory card with power wire wrap added](/assets/img/posts/2017/2017-11-19-0010.jpg)
-![Lower memory card with power wire wrap added](/assets/img/posts/2017/2017-11-19-0011.jpg)
-![Lower memory card with data bus out wire wrap added](/assets/img/posts/2017/2017-11-19-0012.jpg)
-![Lower memory card with control wire wrap added](/assets/img/posts/2017/2017-11-19-0013.jpg)
+![Lower memory card with power wire wrap added](/img/posts/2017/2017-11-19-0010.jpg)
+![Lower memory card with power wire wrap added](/img/posts/2017/2017-11-19-0011.jpg)
+![Lower memory card with data bus out wire wrap added](/img/posts/2017/2017-11-19-0012.jpg)
+![Lower memory card with control wire wrap added](/img/posts/2017/2017-11-19-0013.jpg)
 {% endfigure %}
 
 Starting with the first picture the 5V power and ground 
@@ -112,8 +112,8 @@ Last job then is to pop in
 the ICs and the single relay and that's the lower card done:
 
 {% figure %}
-![Finished lower memory card (front)](/assets/img/posts/2017/2017-11-19-0014.jpg)
-![Finished lower memory card (rear)](/assets/img/posts/2017/2017-11-19-0015.jpg)
+![Finished lower memory card (front)](/img/posts/2017/2017-11-19-0014.jpg)
+![Finished lower memory card (rear)](/img/posts/2017/2017-11-19-0015.jpg)
 {% endfigure %}
 
 In the 

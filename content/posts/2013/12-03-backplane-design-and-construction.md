@@ -23,7 +23,7 @@ could test several cards together with the whole thing freestanding.
 
 Design-wise there's not much to it (also available [here in PDF format]({% link /assets/pdf/backplane-z.pdf %})):
 
-{% figure caption:"Backplane (Type-Z) ([larger](/assets/img/posts/2013/2013-12-03-1000.png))" %}![Backplane (Type-Z)](/assets/img/posts/2013/2013-12-03-0000.png){% endfigure %}
+{% figure caption:"Backplane (Type-Z) ([larger](/img/posts/2013/2013-12-03-1000.png))" %}![Backplane (Type-Z)](/img/posts/2013/2013-12-03-0000.png){% endfigure %}
 
 The connectors at 
 the top and bottom of the card are right-angled boxed headers and are the same 
@@ -70,7 +70,7 @@ construction of the backplane is fairly trivial ... just a case of soldering
 down all the connectors ... and it looks like this:
 
 {% figure %}
-![Backplane (Type-Z) Connectors](/assets/img/posts/2013/2013-12-03-0001.JPG)
+![Backplane (Type-Z) Connectors](/img/posts/2013/2013-12-03-0001.JPG)
 {% endfigure %}
 
 The 
@@ -81,7 +81,7 @@ need to test them all working together. Just for a quick reminder, the three
 ALU cards in their current state of construction look like this:
 
 {% figure %}
-![ALU Cards (Arithmetic, Control and Logic)](/assets/img/posts/2013/2013-12-03-0002.JPG)
+![ALU Cards (Arithmetic, Control and Logic)](/img/posts/2013/2013-12-03-0002.JPG)
 {% endfigure %}
 
 So, when plugging the ALU Cards into the backplane (along with the 
@@ -89,11 +89,11 @@ two register cards which currently only have the right-angled boxed headers on
 them for now) this is the result:
 
 {% figure %}
-![Backplane with Cards](/assets/img/posts/2013/2013-12-03-0003.JPG)
+![Backplane with Cards](/img/posts/2013/2013-12-03-0003.JPG)
 {% endfigure %}
 
 {% figure %}
-![Backplane with Cards](/assets/img/posts/2013/2013-12-03-0004.jpg)
+![Backplane with Cards](/img/posts/2013/2013-12-03-0004.jpg)
 {% endfigure %}
 
 Note that because 

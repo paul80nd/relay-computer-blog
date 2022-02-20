@@ -22,7 +22,7 @@ current value can be stored for future operations. The circuit itself is nice
 and simple:
 
 {% figure %}
-![Zero Detect Diagram](/assets/img/posts/2013/2013-11-23-0000.png)
+![Zero Detect Diagram](/img/posts/2013/2013-11-23-0000.png)
 {% endfigure %}
 
 If all inputs are 
@@ -32,7 +32,7 @@ translating the design to use DPDT relays doesn't increase the physical relay
 count:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-23-0001.png)
+![](/img/posts/2013/2013-11-23-0001.png)
 {% endfigure %}
 
 To save space and wire links this design places the relays in 
@@ -41,7 +41,7 @@ inter-relay connections are made on the solder side of the board. With the
 relays and inputs/outputs hidden it looks like this:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-23-0002.png)
+![](/img/posts/2013/2013-11-23-0002.png)
 {% endfigure %}
 
 ... and that's it for the Zero Detect circuit. In the next post I'll 

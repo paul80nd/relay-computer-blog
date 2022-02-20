@@ -21,7 +21,7 @@ last post but there's plenty more soldering to do. First up I can add the
 relay sockets, wire wrap posts and card interconnect wrap posts:
 
 {% figure %}
-![Upper incrementer card with added sockets and wire wrap posts](/assets/img/posts/2017/2017-12-17-0000.jpg)
+![Upper incrementer card with added sockets and wire wrap posts](/img/posts/2017/2017-12-17-0000.jpg)
 {% endfigure %}
 
 This time around I haven't soldered on the 
@@ -34,7 +34,7 @@ Next up I can solder down the ground
 and power rails on the back of the card:
 
 {% figure %}
-![Upper incrementer card with added ground and power rails](/assets/img/posts/2017/2017-12-17-0001.jpg)
+![Upper incrementer card with added ground and power rails](/img/posts/2017/2017-12-17-0001.jpg)
 {% endfigure %}
 
 Nothing too unusual here besides there being quite a lot of 
@@ -42,12 +42,12 @@ relays on this card and consequently a lot of ground rails. So, soldering done
 (for now) ... on to the wire wrap ...
 
 {% figure %}
-![Upper incrementer card with added internal wire wrap links](/assets/img/posts/2017/2017-12-17-0002.jpg)
-![Upper incrementer card with added power wrap](/assets/img/posts/2017/2017-12-17-0003.jpg)
-![Upper incrementer card with added diodes](/assets/img/posts/2017/2017-12-17-0004.jpg)
-![Upper incrementer card with added outgoing address bus wrap](/assets/img/posts/2017/2017-12-17-0005.jpg)
-![Upper incrementer card with added incoming incremented value wrap](/assets/img/posts/2017/2017-12-17-0006.jpg)
-![Upper incrementer card with added control wire wrap](/assets/img/posts/2017/2017-12-17-0007.jpg)
+![Upper incrementer card with added internal wire wrap links](/img/posts/2017/2017-12-17-0002.jpg)
+![Upper incrementer card with added power wrap](/img/posts/2017/2017-12-17-0003.jpg)
+![Upper incrementer card with added diodes](/img/posts/2017/2017-12-17-0004.jpg)
+![Upper incrementer card with added outgoing address bus wrap](/img/posts/2017/2017-12-17-0005.jpg)
+![Upper incrementer card with added incoming incremented value wrap](/img/posts/2017/2017-12-17-0006.jpg)
+![Upper incrementer card with added control wire wrap](/img/posts/2017/2017-12-17-0007.jpg)
 {% endfigure %}
 
 Going through the pictures in order (top left to bottom 
@@ -60,8 +60,8 @@ With the wire wrap done the card is pretty much
 complete - just needs the relays popping in ...
 
 {% figure %}
-![Completed upper incrementer card (front side)](/assets/img/posts/2017/2017-12-17-0008.jpg)
-![Completed upper incrementer card (rear side)](/assets/img/posts/2017/2017-12-17-0009.jpg)
+![Completed upper incrementer card (front side)](/img/posts/2017/2017-12-17-0008.jpg)
+![Completed upper incrementer card (rear side)](/img/posts/2017/2017-12-17-0009.jpg)
 {% endfigure %}
 
 ... and that's it for the upper incrementer card. You might 

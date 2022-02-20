@@ -35,7 +35,7 @@ start with a card schematic of what the main bit relays look like for the
 8-bit instruction register when placed on the usual 55 x 40 hole pad board 
 (excluding wire links):
 
-{% figure caption:"8 bit register relays ([larger](/assets/img/posts/2014/2014-12-01-1000.png))" %}![8 bit register relays](/assets/img/posts/2014/2014-12-01-0000.png){% endfigure %}
+{% figure caption:"8 bit register relays ([larger](/img/posts/2014/2014-12-01-1000.png))" %}![8 bit register relays](/img/posts/2014/2014-12-01-0000.png){% endfigure %}
 
 Each of the 
 relays above stores a single 1-bit value so there's 8-bits worth in total. 
@@ -45,7 +45,7 @@ get the following (this time including internal wire links in the 1-bit
 register relays and result links between the 1-bit register relays and the 
 gating relays):
 
-{% figure caption:"8-bit register relays + gating relays ([larger](/assets/img/posts/2014/2014-12-01-1001.png))" %}![8-bit register relays + gating relays](/assets/img/posts/2014/2014-12-01-0001.png){% endfigure %}
+{% figure caption:"8-bit register relays + gating relays ([larger](/img/posts/2014/2014-12-01-1001.png))" %}![8-bit register relays + gating relays](/img/posts/2014/2014-12-01-0001.png){% endfigure %}
 
 Additionally on the schematic above you can see there's an extra 
 diode per register bit relay — this is where the register bit permanently 
@@ -78,7 +78,7 @@ previous cards (with an integral resister). Colour wise I'm continuing with
 the theme of red for a bit value and yellow for control signals. Diagram wise 
 it looks like this:
 
-{% figure caption:"Register LEDs ([larger](/assets/img/posts/2014/2014-12-01-1002.png))" %}![Register LEDs](/assets/img/posts/2014/2014-12-01-0002.png){% endfigure %}
+{% figure caption:"Register LEDs ([larger](/img/posts/2014/2014-12-01-1002.png))" %}![Register LEDs](/img/posts/2014/2014-12-01-0002.png){% endfigure %}
 
 Each block in the diagram 
 represents a single 3mm LED in a plastic holder with each LED pushed into the 
@@ -101,7 +101,7 @@ used by future X cards), 8-bit instruction bus, power connections and finally
 the control signals to load this register. The diagram of the connectors look 
 like this:
 
-{% figure caption:"Instruction Register Connections ([larger](/assets/img/posts/2014/2014-12-01-1003.png))" %}![Instruction Register Connections](/assets/img/posts/2014/2014-12-01-0003.png){% endfigure %}
+{% figure caption:"Instruction Register Connections ([larger](/img/posts/2014/2014-12-01-1003.png))" %}![Instruction Register Connections](/img/posts/2014/2014-12-01-0003.png){% endfigure %}
 
 This shows the four right angled boxed headers — from left to 
 right these are: 10+10 control lines, 8+8 address bus, 8+8 data and 
@@ -121,7 +121,7 @@ follows:
 So, finally, wiring everything together we get the 
 following: 
 
-{% figure caption:"Complete Instruction Register ([larger](/assets/img/posts/2014/2014-12-01-1004.png))" %}![Complete Instruction Register](/assets/img/posts/2014/2014-12-01-0004.png){% endfigure %}
+{% figure caption:"Complete Instruction Register ([larger](/img/posts/2014/2014-12-01-1004.png))" %}![Complete Instruction Register](/img/posts/2014/2014-12-01-0004.png){% endfigure %}
 
 This 
 diagram includes everything mentioned so far along with the power supply and 

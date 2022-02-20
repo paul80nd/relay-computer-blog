@@ -24,16 +24,16 @@ theory it can be used to increment any value put on the address bus.
 Here are the two incrementer cards side-by-side:
 
 {% figure %}
-![Incrementer Cards (front side)](/assets/img/posts/2018/2018-01-07-0000.jpg)
-![Incrementer Cards (rear side)](/assets/img/posts/2018/2018-01-07-0001.jpg)
+![Incrementer Cards (front side)](/img/posts/2018/2018-01-07-0000.jpg)
+![Incrementer Cards (rear side)](/img/posts/2018/2018-01-07-0001.jpg)
 {% endfigure %}
 
 ... and 
 when stacked together they look like this ...
 
 {% figure %}
-![Incrementer Unit (viewed from front)](/assets/img/posts/2018/2018-01-07-0002.jpg)
-![Incrementer Unit (viewed from front right)](/assets/img/posts/2018/2018-01-07-0003.jpg)
+![Incrementer Unit (viewed from front)](/img/posts/2018/2018-01-07-0002.jpg)
+![Incrementer Unit (viewed from front right)](/img/posts/2018/2018-01-07-0003.jpg)
 {% endfigure %}
 
 As in my other 'completion' blog posts I've put together a video which gives 

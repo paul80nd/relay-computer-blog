@@ -27,7 +27,7 @@ a single 16-bit value which can be gated on to the address bus. The main
 difference here is that the register is loaded directly from the 16-bit half 
 adder via an inter-card connector. Here's the design for this register:
 
-{% figure caption:"Incrementer Register ([larger](/assets/img/posts/2017/2017-07-17-1000.png))" %}![Incrementer Register](/assets/img/posts/2017/2017-07-17-0000.png){% endfigure %}
+{% figure caption:"Incrementer Register ([larger](/img/posts/2017/2017-07-17-1000.png))" %}![Incrementer Register](/img/posts/2017/2017-07-17-0000.png){% endfigure %}
 
 As with other register 
 cards the relays that latch each bit value are on the bottom half of the card 
@@ -51,7 +51,7 @@ with the designs of the 16-bit half adder and 16-bit incrementer register
 ready to go we can bring the two cards together to form the final incrementer 
 design:
 
-{% figure caption:"Incrementer Design ([larger](/assets/img/posts/2017/2017-07-17-1001.png))" %}![Incrementer Design](/assets/img/posts/2017/2017-07-17-0001.png){% endfigure %}
+{% figure caption:"Incrementer Design ([larger](/img/posts/2017/2017-07-17-1001.png))" %}![Incrementer Design](/img/posts/2017/2017-07-17-0001.png){% endfigure %}
 
 As usual if you'd like to 
 get an extreme close up of the above you'll find the incrementer design 
@@ -63,7 +63,7 @@ design done all that remains is to update Display A adding two extra buttons
 to select the incrementer register on to the address bus (SEL INC). With the 
 added buttons Display A now looks like this:
 
-{% figure caption:"Updated Display A design ([larger](/assets/img/posts/2017/2017-07-17-1002.png))" %}![Updated Display A design](/assets/img/posts/2017/2017-07-17-0002.png){% endfigure %}
+{% figure caption:"Updated Display A design ([larger](/img/posts/2017/2017-07-17-1002.png))" %}![Updated Display A design](/img/posts/2017/2017-07-17-0002.png){% endfigure %}
 
 Again, you can find a 
 [PDF version of this design here]({% link /assets/pdf/display-a-4.pdf %}) and another [version without the buttons]({% link /assets/pdf/display-a-4a.pdf %}).
@@ -72,7 +72,7 @@ Finally, to wrap
 things up, I've updated my relay computer simulator that now looks like 
 this:
 
-{% figure %}![Relay Computer Simulator updated for Incrementer](/assets/img/posts/2017/2017-07-17-0003.png){% endfigure %}
+{% figure %}![Relay Computer Simulator updated for Incrementer](/img/posts/2017/2017-07-17-0003.png){% endfigure %}
 
 The [latest version of this can be found here](http://80nd.co.uk/relaycomputer/) (although note 
 that I only ever host the latest version so as this post gets older the 

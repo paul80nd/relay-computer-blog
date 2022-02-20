@@ -19,7 +19,7 @@ the soldering for this card - it's all wire wrapping form hereon in.
 
 The rear of the card now looks like this:
 
-{% figure %}![ALU Arithmetic Card (solder side)](/assets/img/posts/2014/2014-01-26-0000.jpg){% endfigure %}
+{% figure %}![ALU Arithmetic Card (solder side)](/img/posts/2014/2014-01-26-0000.jpg){% endfigure %}
 
 The 
 power rails are very similar to the ones of the logic card completed earlier 
@@ -38,7 +38,7 @@ difference from the last post is the additional set of header pins connected
 to the red power rail that will distribute power via wire wraps to where it's 
 needed. The top side of the card now looks like this:
 
-{% figure %}![ALU Arithmetic Card](/assets/img/posts/2014/2014-01-26-0001.jpg){% endfigure %}
+{% figure %}![ALU Arithmetic Card](/img/posts/2014/2014-01-26-0001.jpg){% endfigure %}
 
 So, as mentioned at 
 the top of this post, that's the last of the soldering for this card ... just 

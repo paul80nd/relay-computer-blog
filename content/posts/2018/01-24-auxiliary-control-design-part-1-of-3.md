@@ -64,7 +64,7 @@ been directly wired to other control lines for ease of use at the time). As a
 reminder this is what they look like (across the centre of the 
 picture):
 
-{% figure %}![Auxiliary Control / Primary Switches](/assets/img/posts/2018/2018-01-24-0000.jpg){% endfigure %}
+{% figure %}![Auxiliary Control / Primary Switches](/img/posts/2018/2018-01-24-0000.jpg){% endfigure %}
 
 As 
 you will hopefully have seen in one of my many videos on 
@@ -86,7 +86,7 @@ operations by hand when operating the computer via the control line buttons in
 the top left of the picture above. Effectively I just need to draw out a 
 timing diagram representing what I've been doing. Here that is:
 
-{% figure caption:"Auxiliary Control Timing Diagram ([larger](/assets/img/posts/2018/2018-01-24-1000.png))" %}![Auxiliary Control Timing Diagram](/assets/img/posts/2018/2018-01-24-0001.png){% endfigure %}
+{% figure caption:"Auxiliary Control Timing Diagram ([larger](/img/posts/2018/2018-01-24-1000.png))" %}![Auxiliary Control Timing Diagram](/img/posts/2018/2018-01-24-0001.png){% endfigure %}
 
 The load address operation is quite simple: gate the switches to 
 the address bus (SAS) and load the program counter (LPC). As always for the 
@@ -116,7 +116,7 @@ distinct pulses in use. Also of interest is that the first three operations
 only use two of those pulses whilst the 'next' operations make use of all 
 four. Effectively then we're looking at the following:
 
-{% figure %}![Operation Pulses](/assets/img/posts/2018/2018-01-24-0002.png){% endfigure %}
+{% figure %}![Operation Pulses](/img/posts/2018/2018-01-24-0002.png){% endfigure %}
 
 The four pulses are 
 named AP-A, AP-B, AP-C and AP-D. AP in this case stands for 'Auxiliary Pulse' 

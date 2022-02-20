@@ -19,7 +19,7 @@ the 1-bit Arithmetic Unit (based directly on the one used in the
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html)):
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-15-0000.png)
+![](/img/posts/2013/2013-11-15-0000.png)
 {% endfigure %}
 
 The diagram shows two 4PDT relays (just as before for the 1-bit Logic 
@@ -47,7 +47,7 @@ relays ... I'm using the smaller DPDT ones so I'll need to double up the relay
 count. I therefore transform the above diagram to the following:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-15-0001.png)
+![](/img/posts/2013/2013-11-15-0001.png)
 {% endfigure %}
 
 So, certainly not as nice to look at as the 4PDT version but with the 
@@ -62,7 +62,7 @@ All the other links will be wire wrap as usual. In summary then, it'll take
 the physical form as follows:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-15-0002.png)
+![](/img/posts/2013/2013-11-15-0002.png)
 {% endfigure %}
 
 ... and here's the same diagram with relays and wires (on the 
@@ -70,7 +70,7 @@ component side of the pad board) omitted and with partial ground rails added
 ...
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-15-0003.png)
+![](/img/posts/2013/2013-11-15-0003.png)
 {% endfigure %}
 
 That's it for the 1-bit Arithmetic Unit. In the next post I'll cover 

@@ -35,21 +35,21 @@ previous posts and shouldn't come as any surprise for my regular readers. So,
 the cards without relays look like this:
 
 {% figure %}
-![Controller Cards (front view without relays)](/assets/img/posts/2016/2016-01-01-0000.jpg)
-![Lower Controller Card (front view)](/assets/img/posts/2016/2016-01-01-0001.jpg)
-![Upper Controller Card (front view)](/assets/img/posts/2016/2016-01-01-0002.jpg)
+![Controller Cards (front view without relays)](/img/posts/2016/2016-01-01-0000.jpg)
+![Lower Controller Card (front view)](/img/posts/2016/2016-01-01-0001.jpg)
+![Upper Controller Card (front view)](/img/posts/2016/2016-01-01-0002.jpg)
 {% endfigure %}
 
 ... and from the back they look like this ...
 
 {% figure %}
-![Control Cards (rear view)](/assets/img/posts/2016/2016-01-01-0003.jpg)
+![Control Cards (rear view)](/img/posts/2016/2016-01-01-0003.jpg)
 {% endfigure %}
 
 ... and with relays like this ...
 
 {% figure %}
-![Control Cards (with relays)](/assets/img/posts/2016/2016-01-01-0004.jpg)
+![Control Cards (with relays)](/img/posts/2016/2016-01-01-0004.jpg)
 {% endfigure %}
 
 The left hand card above handles the MOV-8 instruction in the top 
@@ -69,9 +69,9 @@ Finally picture wise here's the two cards
 stacked together from different angles:
 
 {% figure %}
-![Stacked Controller Cards](/assets/img/posts/2016/2016-01-01-0005.jpg)
-![Stacked Controller Cards](/assets/img/posts/2016/2016-01-01-0006.jpg)
-![Stacked Controller Cards](/assets/img/posts/2016/2016-01-01-0007.jpg)
+![Stacked Controller Cards](/img/posts/2016/2016-01-01-0005.jpg)
+![Stacked Controller Cards](/img/posts/2016/2016-01-01-0006.jpg)
+![Stacked Controller Cards](/img/posts/2016/2016-01-01-0007.jpg)
 {% endfigure %}
 
 As 

@@ -18,12 +18,12 @@ how the enclosure construction is going. Well, it's very good thanks :)
 Firstly, here's a quick reminder of the SketchUp design showing how 
 the enclosure should look:
 
-{% figure %}![Enclosure Design in SketchUp](/assets/img/posts/2014/2014-03-22-0000.png){% endfigure %}
+{% figure %}![Enclosure Design in SketchUp](/img/posts/2014/2014-03-22-0000.png){% endfigure %}
 
 ... and 
 here's how it looks, so far, in reality ...
 
-{% figure %}![Enclosure Frame](/assets/img/posts/2014/2014-03-22-0001.JPG){% endfigure %}
+{% figure %}![Enclosure Frame](/img/posts/2014/2014-03-22-0001.JPG){% endfigure %}
 
 This is the main frame 
 of the card enclosure and you can see it forms four compartments that will 
@@ -52,9 +52,9 @@ to stop throbbing after trying to drive the screws in without lubrication.
 Here's some more pictures of the frame:
 
 {% figure %}
-![Enclosure Frame (close up middle front)](/assets/img/posts/2014/2014-03-22-0002.jpg)
-![Enclosure Frame (right hand side](/assets/img/posts/2014/2014-03-22-0003.jpg)
-![Enclosure Frame (left hand side)](/assets/img/posts/2014/2014-03-22-0004.jpg)
+![Enclosure Frame (close up middle front)](/img/posts/2014/2014-03-22-0002.jpg)
+![Enclosure Frame (right hand side](/img/posts/2014/2014-03-22-0003.jpg)
+![Enclosure Frame (left hand side)](/img/posts/2014/2014-03-22-0004.jpg)
 {% endfigure %}
 
 One 
@@ -71,8 +71,8 @@ For the enclosure doors four pieces of rounded
 profile are joined together using corner brackets which looks like this:
 
 {% figure %}
-![Door Frame](/assets/img/posts/2014/2014-03-22-0005.JPG)
-![Door Frame (corner close up)](/assets/img/posts/2014/2014-03-22-0006.JPG)
+![Door Frame](/img/posts/2014/2014-03-22-0005.JPG)
+![Door Frame (corner close up)](/img/posts/2014/2014-03-22-0006.JPG)
 {% endfigure %}
 
 The door 
@@ -99,8 +99,8 @@ get across its good looks   (this time with a corner cap installed on the door
 brackets):
 
 {% figure %}
-![Door Frame (corner close up with cap)](/assets/img/posts/2014/2014-03-22-0007.JPG)
-![Enclosure Frame (with partial front door)](/assets/img/posts/2014/2014-03-22-0008.JPG)
+![Door Frame (corner close up with cap)](/img/posts/2014/2014-03-22-0007.JPG)
+![Enclosure Frame (with partial front door)](/img/posts/2014/2014-03-22-0008.JPG)
 {% endfigure %}
 
 I keep mentioning the perspex that I'll need to complete the 
@@ -114,7 +114,7 @@ of an odd cut due to the corner brackets blocking out the corners. As such I
 actually need a perspex sheet that has corners cut like this:
 
 {% figure %}
-![Door Perspex Cutting Line](/assets/img/posts/2014/2014-03-22-0009.png)
+![Door Perspex Cutting Line](/img/posts/2014/2014-03-22-0009.png)
 {% endfigure %}
 
 This forms the 'tabs' that will sit 
@@ -128,7 +128,7 @@ There's also another reason for getting the perspex via the laser cut route
 the enclosure needs a floor and ceiling that will carry the card guides. 
 Here's a SketchUp drawing showing the floor and ceiling in place:
 
-{% figure %}![Card Bay Floor/Ceiling](/assets/img/posts/2014/2014-03-22-0010.png){% endfigure %}
+{% figure %}![Card Bay Floor/Ceiling](/img/posts/2014/2014-03-22-0010.png){% endfigure %}
 
 Although the 
 floor/ceilings are pictured here as a simple board the real thing will need to 
@@ -138,7 +138,7 @@ finally have ventilation slots. These floor/ceiling boards will be made from
 3mm thick plywood and these are definitely easier to get laser cut given what 
 a pain it'd be to hand cut eight of these. Here is the laser cut lines:
 
-{% figure %}![Floor/Ceiling Board Cut Lines](/assets/img/posts/2014/2014-03-22-0011.png){% endfigure %}
+{% figure %}![Floor/Ceiling Board Cut Lines](/img/posts/2014/2014-03-22-0011.png){% endfigure %}
 
 The four 
 holes in the corners are for bolting the board to the aluminium profile with 
@@ -147,7 +147,7 @@ ribbon cables though and the diagonal slots are for ventilation. As mentioned
 there are eight of these boards in total, all identical, and so the full cut 
 file is as follows:
 
-{% figure caption:"Floor/Ceiling Full Cut Lines ([larger](/assets/img/posts/2014/2014-03-22-1000.png))" %}![Floor/Ceiling Full Cut Lines](/assets/img/posts/2014/2014-03-22-0012.png){% endfigure %}
+{% figure caption:"Floor/Ceiling Full Cut Lines ([larger](/img/posts/2014/2014-03-22-1000.png))" %}![Floor/Ceiling Full Cut Lines](/img/posts/2014/2014-03-22-0012.png){% endfigure %}
 
 The orange 
 outline here defines the cuttable area from the preset sheet size. One thing 

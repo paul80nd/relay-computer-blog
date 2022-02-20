@@ -24,10 +24,10 @@ that though I'll get a head start and solder down the LEDs and backplane
 connectors for both cards:
 
 {% figure %}
-![Incrementer cards with LEDs and backplane connectors (type X)](/assets/img/posts/2017/2017-12-10-0000.jpg)
-![Lower incrementer card LEDs (close up)](/assets/img/posts/2017/2017-12-10-0001.jpg)
-![Upper incrementer card LEDs (close up)](/assets/img/posts/2017/2017-12-10-0002.jpg)
-![Incrementer cards solder side (lower card at top, upper card beneath)](/assets/img/posts/2017/2017-12-10-0003.jpg)
+![Incrementer cards with LEDs and backplane connectors (type X)](/img/posts/2017/2017-12-10-0000.jpg)
+![Lower incrementer card LEDs (close up)](/img/posts/2017/2017-12-10-0001.jpg)
+![Upper incrementer card LEDs (close up)](/img/posts/2017/2017-12-10-0002.jpg)
+![Incrementer cards solder side (lower card at top, upper card beneath)](/img/posts/2017/2017-12-10-0003.jpg)
 {% endfigure %}
 
 For the lower card there are 16 red 
@@ -42,7 +42,7 @@ Right, I'll leave the upper card there and pick it up again in my next
 post. Let's focus on the lower card ...
 
 {% figure %}
-![Lower incrementer card with added sockets and wire wrap posts](/assets/img/posts/2017/2017-12-10-0004.jpg)
+![Lower incrementer card with added sockets and wire wrap posts](/img/posts/2017/2017-12-10-0004.jpg)
 {% endfigure %}
 
 In the picture above I've soldered down 
@@ -54,14 +54,14 @@ the address bus. This card will also need some wire wrap posts connected to
 12V so I'll add those next:
 
 {% figure %}
-![Lower incrementer card with added 12V wire wrap posts](/assets/img/posts/2017/2017-12-10-0005.jpg)
+![Lower incrementer card with added 12V wire wrap posts](/img/posts/2017/2017-12-10-0005.jpg)
 {% endfigure %}
 
 ... and viewed from the solder side of 
 the card it now looks like this ...
 
 {% figure %}
-![Lower incrementer card (solder side) with added power/ground lines](/assets/img/posts/2017/2017-12-10-0006.jpg)
+![Lower incrementer card (solder side) with added power/ground lines](/img/posts/2017/2017-12-10-0006.jpg)
 {% endfigure %}
 
 As with other recent cards all the vast 
@@ -76,12 +76,12 @@ Right, soldering done. Let's pop the diodes in and get the
 card wire wrapped:
 
 {% figure %}
-![Lower incrementer card with added diodes](/assets/img/posts/2017/2017-12-10-0007.jpg)
-![Lower incrementer card with added internal wiring](/assets/img/posts/2017/2017-12-10-0008.jpg)
-![Lower incrementer card with added LED wiring](/assets/img/posts/2017/2017-12-10-0009.jpg)
-![Lower incrementer card with added power wiring](/assets/img/posts/2017/2017-12-10-0010.jpg)
-![Lower incrementer card with incoming address bus wiring](/assets/img/posts/2017/2017-12-10-0011.jpg)
-![Lower incrementer card with added outbound incremented value wiring](/assets/img/posts/2017/2017-12-10-0012.jpg)
+![Lower incrementer card with added diodes](/img/posts/2017/2017-12-10-0007.jpg)
+![Lower incrementer card with added internal wiring](/img/posts/2017/2017-12-10-0008.jpg)
+![Lower incrementer card with added LED wiring](/img/posts/2017/2017-12-10-0009.jpg)
+![Lower incrementer card with added power wiring](/img/posts/2017/2017-12-10-0010.jpg)
+![Lower incrementer card with incoming address bus wiring](/img/posts/2017/2017-12-10-0011.jpg)
+![Lower incrementer card with added outbound incremented value wiring](/img/posts/2017/2017-12-10-0012.jpg)
 {% endfigure %}
 
 Working through the images in order we 
@@ -94,8 +94,8 @@ With all the wiring complete the last job is to pop the
 relays in and the lower incrementer card is complete:
 
 {% figure %}
-![Completed lower incrementer card (top side)](/assets/img/posts/2017/2017-12-10-0013.jpg)
-![Completed lower incrementer card (solder side)](/assets/img/posts/2017/2017-12-10-0014.jpg)
+![Completed lower incrementer card (top side)](/img/posts/2017/2017-12-10-0013.jpg)
+![Completed lower incrementer card (solder side)](/img/posts/2017/2017-12-10-0014.jpg)
 {% endfigure %}
 
 Due to the way the card is designed 

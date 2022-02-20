@@ -18,8 +18,8 @@ Following on from my last post, and after popping in some relays, the
 instruction register is complete and looks like this:
 
 {% figure %}
-![Completed Instruction Register (front view)](/assets/img/posts/2015/2015-05-16-0000.jpg)
-![Completed Instruction Register (rear view)](/assets/img/posts/2015/2015-05-16-0001.jpg)
+![Completed Instruction Register (front view)](/img/posts/2015/2015-05-16-0000.jpg)
+![Completed Instruction Register (rear view)](/img/posts/2015/2015-05-16-0001.jpg)
 {% endfigure %}
 
 As usual I've put a video together that 

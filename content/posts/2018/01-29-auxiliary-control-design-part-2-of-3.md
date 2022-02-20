@@ -22,12 +22,12 @@ then it's definitely worth doing so as this post picks up where that
 one left off. As a reminder though we're looking to perform the following 
 operations:
 
-{% figure caption:"Auxiliary Control Operations Timing ([larger](/assets/img/posts/2018/2018-01-29-1000.png))" %}![Auxiliary Control Operations Timing](/assets/img/posts/2018/2018-01-29-0000.png){% endfigure %}
+{% figure caption:"Auxiliary Control Operations Timing ([larger](/img/posts/2018/2018-01-29-1000.png))" %}![Auxiliary Control Operations Timing](/img/posts/2018/2018-01-29-0000.png){% endfigure %}
 
 ... which 
 can be derived from the following pulses ...
 
-{% figure %}![Auxiliary Control Pulses ](/assets/img/posts/2018/2018-01-29-0001.png){% endfigure %}
+{% figure %}![Auxiliary Control Pulses ](/img/posts/2018/2018-01-29-0001.png){% endfigure %}
 
 To make those pulses 
 though we're going to need a clock signal (which is shown in red in the 
@@ -52,7 +52,7 @@ relay is receiving power and then discharge through the relay when the power
 is cut. Schematic wise it looks like this:
 
 {% figure %}
-![Relay with a capacitor to create a delay](/assets/img/posts/2018/2018-01-29-0002.png)
+![Relay with a capacitor to create a delay](/img/posts/2018/2018-01-29-0002.png)
 {% endfigure %}
 
 In 
@@ -66,7 +66,7 @@ we're going beyond power being either connected or disconnected. Let's first
 look at how capacitors behave when charging and discharging:
 
 {% figure %}
-![Behaviour of a charging/discharging relay over time](/assets/img/posts/2018/2018-01-29-0003.png)
+![Behaviour of a charging/discharging relay over time](/img/posts/2018/2018-01-29-0003.png)
 {% endfigure %}
 
 This graph tells us that after 5 time constants the 
@@ -82,7 +82,7 @@ circuit with 100 ohms resistance and a 470 micro-farad capacitor (
 range):
 
 {% figure %}
-![Calculating the time constant with 100 ohm resistance and 470 micro farad capacitance](/assets/img/posts/2018/2018-01-29-0004.png)
+![Calculating the time constant with 100 ohm resistance and 470 micro farad capacitance](/img/posts/2018/2018-01-29-0004.png)
 {% endfigure %}
 
 Therefore it would take 5x47 
@@ -95,7 +95,7 @@ internal resistance of 1029 ohms. Just as above we can pop that value in to
 the formula to get our time constant:
 
 {% figure %}
-![Calculating the time constant for a relay with a 470 micro farad capacitor](/assets/img/posts/2018/2018-01-29-0005.png)
+![Calculating the time constant for a relay with a 470 micro farad capacitor](/img/posts/2018/2018-01-29-0005.png)
 {% endfigure %}
 
 From this we can therefore calculate 
@@ -109,7 +109,7 @@ deactivates. So, next question is when would the capacitor reach this value?
 Well, that requires a slightly more complex formula:
 
 {% figure %}
-![Formula for the voltage of a discharging capacitor at a given moment in time](/assets/img/posts/2018/2018-01-29-0006.png)
+![Formula for the voltage of a discharging capacitor at a given moment in time](/img/posts/2018/2018-01-29-0006.png)
 {% endfigure %}
 
 Here Vc is the voltage across the 
@@ -119,7 +119,7 @@ circuit. Here we want to find t for a given Vc so we can rearrange the formula
 and solve it from there:
 
 {% figure %}
-![Calculating the time for the capacitor to discharge to 1.2 volts](/assets/img/posts/2018/2018-01-29-0007.png)
+![Calculating the time for the capacitor to discharge to 1.2 volts](/img/posts/2018/2018-01-29-0007.png)
 {% endfigure %}
 
 So, in theory, the relay would stay on for 1.1 
@@ -168,7 +168,7 @@ for 220 ohms at 12V we get 54.55 mA which is well within the diode limit. The
 updated relay circuit now looks like this:
 
 {% figure %}
-![Amended relay circuit with added resistor](/assets/img/posts/2018/2018-01-29-0008.png)
+![Amended relay circuit with added resistor](/img/posts/2018/2018-01-29-0008.png)
 {% endfigure %}
 
 Being as I've upped the resistance I've brought down the 
@@ -176,7 +176,7 @@ capacitance to 47 micro-farads to compensate a bit. So what does that do to
 the timings ...
 
 {% figure %}
-![Final calculation for charge and discharge timings](/assets/img/posts/2018/2018-01-29-0009.png)
+![Final calculation for charge and discharge timings](/img/posts/2018/2018-01-29-0009.png)
 {% endfigure %}
 
 Firstly we have the charging time constant which is 10.34ms 
@@ -193,13 +193,13 @@ upstream diodes). We can now string a chain of these relays together to form a
 ripple effect where each relay controls the next two relays in sequence. 
 Here's the updated schematic:
 
-{% figure caption:"Updated Clock Schematic ([larger](/assets/img/posts/2018/2018-01-29-1001.png))" %}![Updated Clock Schematic](/assets/img/posts/2018/2018-01-29-0010.png){% endfigure %}
+{% figure caption:"Updated Clock Schematic ([larger](/img/posts/2018/2018-01-29-1001.png))" %}![Updated Clock Schematic](/img/posts/2018/2018-01-29-0010.png){% endfigure %}
 
 Hopefully you can see the pattern but if not 
 here's a table of the sequence:
 
 {% figure %}
-![Table of clock sequence](/assets/img/posts/2018/2018-01-29-0011.png)
+![Table of clock sequence](/img/posts/2018/2018-01-29-0011.png)
 {% endfigure %}
 
 Which 
@@ -209,13 +209,13 @@ clock (changes at a steady rate). Looking at the table another way we now have
 the following timing diagram:
 
 {% figure %}
-![](/assets/img/posts/2018/2018-01-29-0012.png)
+![](/img/posts/2018/2018-01-29-0012.png)
 {% endfigure %}
 
 Let's take a look at the operation pulses we're 
 aiming to derive and see if we can spot any clock pulses we can use:
 
-{% figure %}![Short and long target pulses](/assets/img/posts/2018/2018-01-29-0013.png){% endfigure %}
+{% figure %}![Short and long target pulses](/img/posts/2018/2018-01-29-0013.png){% endfigure %}
 
 It looks like 
 we've got a match straight away: AP-A = ACL2 and AP-B = ACL1. Looks like 
@@ -225,7 +225,7 @@ probably more correct to say that the control pulses are a consequence of the
 nature of how the clock works. Here's the relay schematic with the pulses 
 wired out:
 
-{% figure caption:"Relay schematic with derived pulses ([larger](/assets/img/posts/2018/2018-01-29-1002.png))" %}![Relay schematic with derived pulses](/assets/img/posts/2018/2018-01-29-0014.png){% endfigure %}
+{% figure caption:"Relay schematic with derived pulses ([larger](/img/posts/2018/2018-01-29-1002.png))" %}![Relay schematic with derived pulses](/img/posts/2018/2018-01-29-0014.png){% endfigure %}
 
 But 
 what about AP-D though? There's no obvious match for that pulse but what we 
@@ -238,7 +238,7 @@ relay coil as the LED has an internal resistor which will change the delay
 timing so I'll need a fresh set of contacts for that too. OK, it's time to add 
 more relays:
 
-{% figure caption:"Relay schematic with added state LEDs and AP-D pulse ([larger](/assets/img/posts/2018/2018-01-29-1003.png))" %}![Relay schematic with added state LEDs and AP-D pulse](/assets/img/posts/2018/2018-01-29-0015.png){% endfigure %}
+{% figure caption:"Relay schematic with added state LEDs and AP-D pulse ([larger](/img/posts/2018/2018-01-29-1003.png))" %}![Relay schematic with added state LEDs and AP-D pulse](/img/posts/2018/2018-01-29-0015.png){% endfigure %}
 
 That's all four pulses now accounted for so all that's left 
 is to find a way of making a short operation which stops after AP-A and AP-B 
@@ -251,7 +251,7 @@ in series but then two 1029 ohm coils in parallel. Pocket calculators at the
 ready:
 
 {% figure %}
-![Delay time calculation with two relay coils present](/assets/img/posts/2018/2018-01-29-0016.png)
+![Delay time calculation with two relay coils present](/img/posts/2018/2018-01-29-0016.png)
 {% endfigure %}
 
 As we can see this brings the delay time down from 135.17ms 
@@ -267,7 +267,7 @@ Anyhoo, back to implementing the short operation. To make
 this work we need a way of disrupting the clock between ACL3 and ACL4. Let's 
 add that in now:
 
-{% figure caption:"Relay schematic with AUX ABORT relay ([larger](/assets/img/posts/2018/2018-01-29-1004.png))" %}![Relay schematic with AUX ABORT relay](/assets/img/posts/2018/2018-01-29-0017.png){% endfigure %}
+{% figure caption:"Relay schematic with AUX ABORT relay ([larger](/img/posts/2018/2018-01-29-1004.png))" %}![Relay schematic with AUX ABORT relay](/img/posts/2018/2018-01-29-0017.png){% endfigure %}
 
 As 
 long as the 'AUX-ABORT' line is held on then ACL3 is disconnected from ACL4 
@@ -279,7 +279,7 @@ once initially activated. I also therefore need to be able to release the line
 again once the sequence is finished. That's done easy enough with few more 
 relays:
 
-{% figure caption:"Final clock schematic ([larger](/assets/img/posts/2018/2018-01-29-1005.png))" %}![Final clock schematic](/assets/img/posts/2018/2018-01-29-0018.png){% endfigure %}
+{% figure caption:"Final clock schematic ([larger](/img/posts/2018/2018-01-29-1005.png))" %}![Final clock schematic](/img/posts/2018/2018-01-29-0018.png){% endfigure %}
 
 You'll be pleased 
 to know that at last we've reached the final schematic ... if the image above 
@@ -297,7 +297,7 @@ To wrap up then let's update the timing diagrams one
 last time to show how the abort and reset stages affect the short and long 
 operation timings:
 
-{% figure %}![Final clock timings](/assets/img/posts/2018/2018-01-29-0019.png){% endfigure %}
+{% figure %}![Final clock timings](/img/posts/2018/2018-01-29-0019.png){% endfigure %}
 
 Right, that was one 
 mahoosive post and it's taken ages to write but hopefully you can now see 

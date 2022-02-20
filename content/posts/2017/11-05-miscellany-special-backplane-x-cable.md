@@ -38,8 +38,8 @@ type X cards ... plus the Incrementer is built over two cards so we're looking
 at an additional three type X cards. Time to build another backplane:
 
 {% figure %}
-![X Backplane (front)](/assets/img/posts/2017/2017-11-05-0000.jpg)
-![X Backplane (back)](/assets/img/posts/2017/2017-11-05-0001.jpg){% endfigure %}
+![X Backplane (front)](/img/posts/2017/2017-11-05-0000.jpg)
+![X Backplane (back)](/img/posts/2017/2017-11-05-0001.jpg){% endfigure %}
 
 There's nothing 
 particularly unusual about this backplane compared to the two already 
@@ -72,7 +72,7 @@ had issues in the past with the ribbon cable sockets not making a sound
 electrical connection with the sockets on the board. Anyway, musing aside, 
 here's how the backplanes look in the computer viewed from the front:
 
-{% figure %}![Backplanes W, X and Z viewed from the front](/assets/img/posts/2017/2017-11-05-0002.jpg){% endfigure %}
+{% figure %}![Backplanes W, X and Z viewed from the front](/img/posts/2017/2017-11-05-0002.jpg){% endfigure %}
 
 If 
 you click the picture for the slightly larger version you can see I've had my 
@@ -88,7 +88,7 @@ overview video you'd have noticed that generally the cables running through
 the back of the computer can only really be described as 'an awful mess'. It's 
 time to do something about that:
 
-{% figure %}![Cable routing for X and Z busses](/assets/img/posts/2017/2017-11-05-0003.jpg){% endfigure %}
+{% figure %}![Cable routing for X and Z busses](/img/posts/2017/2017-11-05-0003.jpg){% endfigure %}
 
 For the X and 
 Z busses I've neatly routed, folded and labeled the cables and also put some 
@@ -109,7 +109,7 @@ aren't permanently routed at the moment it's a bit messy. Speaking of which,
 there's the usual mess of connectors in the upper display for the D/C/I 
 busses:
 
-{% figure %}![Mess of wires and connectors for the D, C and I busses](/assets/img/posts/2017/2017-11-05-0004.jpg){% endfigure %}
+{% figure %}![Mess of wires and connectors for the D, C and I busses](/img/posts/2017/2017-11-05-0004.jpg){% endfigure %}
 
 The mess of cables and connectors is due to needing to connect the 
 C's, D's and I's together of the D/C, C/I and D/I busses. All three busses 
@@ -126,8 +126,8 @@ While we're in the upper enclosure I'll quickly cover some minor
 fittings/fixtures changes:
 
 {% figure %}
-![Close up of securing brackets](/assets/img/posts/2017/2017-11-05-0005.jpg)
-![Close up of card brackets](/assets/img/posts/2017/2017-11-05-0006.jpg){% endfigure %}
+![Close up of securing brackets](/img/posts/2017/2017-11-05-0005.jpg)
+![Close up of card brackets](/img/posts/2017/2017-11-05-0006.jpg){% endfigure %}
 
 As the computer is 
 getting heavier and heavier I've decided to securely fasten the upper 
@@ -152,7 +152,7 @@ able to gate the front primary switches to the address bus. That's just a hand
 full of relays and a new Sel-AS button so that the front panel now looks like 
 this:
 
-{% figure %}![Display A with added Sel-AS button](/assets/img/posts/2017/2017-11-05-0007.jpg){% endfigure %}
+{% figure %}![Display A with added Sel-AS button](/img/posts/2017/2017-11-05-0007.jpg){% endfigure %}
 
 Whilst I 
 was at it I also soldered down all the remaining switches (to avoid repeatedly 
@@ -160,7 +160,7 @@ taking the display A card out of the enclosure) and popped on the ld-PC and
 sel-PC caps which will be used for the upcoming Program Counter. Next up, I 
 needed to add a display for the value on the address bus:
 
-{% figure %}![Display B with added Address Bus](/assets/img/posts/2017/2017-11-05-0008.jpg){% endfigure %}
+{% figure %}![Display B with added Address Bus](/img/posts/2017/2017-11-05-0008.jpg){% endfigure %}
 
 Here I've 
 added the 16 LED bars to show the address bus contents just above the data bus 
@@ -170,8 +170,8 @@ what you see above is the final version of that card. Last job for the address
 bus is to wire it out on the display distribution card:
 
 {% figure %}
-![Display Distribution Card (front)](/assets/img/posts/2017/2017-11-05-0009.jpg)
-![Display Distribution Card (rear)](/assets/img/posts/2017/2017-11-05-0010.jpg){% endfigure %}
+![Display Distribution Card (front)](/img/posts/2017/2017-11-05-0009.jpg)
+![Display Distribution Card (rear)](/img/posts/2017/2017-11-05-0010.jpg){% endfigure %}
 
 Nothing too 
 unusual here - just more of the same - although one thing of note is that I've 

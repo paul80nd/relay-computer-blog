@@ -17,7 +17,7 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2014/03/alu-construction-com
 
 The ALU Control Card is now complete and looks like this:
 
-{% figure %}![ALU Control Card](/assets/img/posts/2014/2014-03-16-0000.jpg){% endfigure %}
+{% figure %}![ALU Control Card](/img/posts/2014/2014-03-16-0000.jpg){% endfigure %}
 
 This card was, on the 
 whole, much simpler and quicker to put together than previous cards (despite 

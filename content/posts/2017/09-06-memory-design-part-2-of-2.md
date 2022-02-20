@@ -21,7 +21,7 @@ Let's
 dive straight in by bringing up the board interconnects from the lower 
 card:
 
-{% figure caption:"Memory Card A with initial interconnects ([larger](/assets/img/posts/2017/2017-09-06-1000.png))" %}![Memory Card A with initial interconnects](/assets/img/posts/2017/2017-09-06-0000.png){% endfigure %}
+{% figure caption:"Memory Card A with initial interconnects ([larger](/img/posts/2017/2017-09-06-1000.png))" %}![Memory Card A with initial interconnects](/img/posts/2017/2017-09-06-0000.png){% endfigure %}
 
 The 
 left two columns bring up the address bus for the memory chip which needs to 
@@ -40,7 +40,7 @@ data bus, which is 12V for a logic 1 and disconnected for a 0, and wire that
 out to 5V for 1 and ground for 0. That's not overly complicated and looks like 
 this:
 
-{% figure caption:"Memory Card A with added data bus in translation relays ([larger](/assets/img/posts/2017/2017-09-06-1001.png))" %}![Memory Card A with added data bus in translation relays](/assets/img/posts/2017/2017-09-06-0001.png){% endfigure %}
+{% figure caption:"Memory Card A with added data bus in translation relays ([larger](/img/posts/2017/2017-09-06-1001.png))" %}![Memory Card A with added data bus in translation relays](/img/posts/2017/2017-09-06-0001.png){% endfigure %}
 
 Note that although we now have the data bus converted to something 
 suitable for the memory chip we need to be able to gate this so it's only 
@@ -48,7 +48,7 @@ connected when we're storing a value to memory. This is because when we're
 reading a value it comes back in through the outbound data bus interconnects. 
 With the additional gating added the card looks like this:
 
-{% figure caption:"Memory Card A with added data bus in gating ([larger](/assets/img/posts/2017/2017-09-06-1002.png))" %}![Memory Card A with added data bus in gating](/assets/img/posts/2017/2017-09-06-0002.png){% endfigure %}
+{% figure caption:"Memory Card A with added data bus in gating ([larger](/img/posts/2017/2017-09-06-1002.png))" %}![Memory Card A with added data bus in gating](/img/posts/2017/2017-09-06-0002.png){% endfigure %}
 
 The line that controls the gating of the inbound data bus is named 
 'B2M' which stands for 'Bus To Memory' (because that's what it does). There's 
@@ -59,7 +59,7 @@ Let's turn now to the data bus feed coming
 back from the memory chip which will also need gating so that it only 
 influences the data bus of the computer when needed:
 
-{% figure caption:"Memory Card A with added data bus out gating ([larger](/assets/img/posts/2017/2017-09-06-1003.png))" %}![Memory Card A with added data bus out gating](/assets/img/posts/2017/2017-09-06-0003.png){% endfigure %}
+{% figure caption:"Memory Card A with added data bus out gating ([larger](/img/posts/2017/2017-09-06-1003.png))" %}![Memory Card A with added data bus out gating](/img/posts/2017/2017-09-06-0003.png){% endfigure %}
 
 The memory read (MR) line controls these particular gating relays 
 but also the B2M 'veto' relay to ensure that if we're reading a value from the 
@@ -75,7 +75,7 @@ hold at 12V (logically inverted). To make this work this is the only place in
 the computer where we play with the 'other' side of the relay coil (which is 
 usually soldered to ground):
 
-{% figure caption:"Memory Card A with added data bus out translation relays ([larger](/assets/img/posts/2017/2017-09-06-1004.png))" %}![Memory Card A with added data bus out translation relays](/assets/img/posts/2017/2017-09-06-0004.png){% endfigure %}
+{% figure caption:"Memory Card A with added data bus out translation relays ([larger](/img/posts/2017/2017-09-06-1004.png))" %}![Memory Card A with added data bus out translation relays](/img/posts/2017/2017-09-06-0004.png){% endfigure %}
 
 On the positive side of the relay coils we extend the MR control 
 line so that the relays only operate whilst MR is held high. The negative side 
@@ -91,7 +91,7 @@ lines of the memory chip which as mentioned earlier operate in reverse of what
 you'd expect: 5V to disable and ground to enable. Only one additional relay is 
 required:
 
-{% figure caption:"Memory Card A with added control relay ([larger](/assets/img/posts/2017/2017-09-06-1005.png))" %}![Memory Card A with added control relay](/assets/img/posts/2017/2017-09-06-0005.png){% endfigure %}
+{% figure caption:"Memory Card A with added control relay ([larger](/img/posts/2017/2017-09-06-1005.png))" %}![Memory Card A with added control relay](/img/posts/2017/2017-09-06-0005.png){% endfigure %}
 
 The OE line is grounded whilst the memory read (MR) 
 line is high but disconnected otherwise. That's fine in this case as the line 
@@ -106,7 +106,7 @@ That
 completes the data bus wiring but seems a shame not to fill the remaining 
 space of the card with yet more relays so let's go for that:
 
-{% figure caption:"Memory Card A with added address bus translation relays ([larger](/assets/img/posts/2017/2017-09-06-1006.png))" %}![Memory Card A with added address bus translation relays](/assets/img/posts/2017/2017-09-06-0006.png){% endfigure %}
+{% figure caption:"Memory Card A with added address bus translation relays ([larger](/img/posts/2017/2017-09-06-1006.png))" %}![Memory Card A with added address bus translation relays](/img/posts/2017/2017-09-06-0006.png){% endfigure %}
 
 The final relays above translate the incoming address bus, at 12V 
 for 1 and disconnected for 0, to the required 5V for 1 or ground for 0. In 

@@ -38,9 +38,9 @@ to start construction I soldered down the ribbon cable connectors and board
 interconnects ... once done it looked like this:
 
 {% figure %}
-![Sequencer Cards: Connectors and Interconnects (front view)](/assets/img/posts/2015/2015-07-08-0000.jpg)
-![Sequencer Cards: Connectors and Interconnects (rear view)](/assets/img/posts/2015/2015-07-08-0001.jpg)
-![Sequencer Cards: Connectors and Interconnects](/assets/img/posts/2015/2015-07-08-0002.jpg)
+![Sequencer Cards: Connectors and Interconnects (front view)](/img/posts/2015/2015-07-08-0000.jpg)
+![Sequencer Cards: Connectors and Interconnects (rear view)](/img/posts/2015/2015-07-08-0001.jpg)
+![Sequencer Cards: Connectors and Interconnects](/img/posts/2015/2015-07-08-0002.jpg)
 {% endfigure %}
 
 To keep the two cards stable I also added some PCB 
@@ -54,8 +54,8 @@ into the respective sockets on the lower card producing a unit that looks like
 this:
 
 {% figure %}
-![Sequencer Cards: Cards stacked together (top view)](/assets/img/posts/2015/2015-07-08-0003.jpg)
-![Sequencer Cards: Cards stacked together (side view)](/assets/img/posts/2015/2015-07-08-0004.jpg)
+![Sequencer Cards: Cards stacked together (top view)](/img/posts/2015/2015-07-08-0003.jpg)
+![Sequencer Cards: Cards stacked together (side view)](/img/posts/2015/2015-07-08-0004.jpg)
 {% endfigure %}
 
 With the basic connections in I moved on to soldering 
@@ -63,10 +63,10 @@ in the wire wrapping posts for the interconnects and LEDs along with the LEDs
 themselves.
 
 {% figure %}
-![Sequencer connector wire wrap posts and LEDs (top view)](/assets/img/posts/2015/2015-07-08-0005.jpg)
-![Sequencer connector wire wrap posts and LEDs (rear view)](/assets/img/posts/2015/2015-07-08-0006.jpg)
-![Sequencer LEDs (close up view)](/assets/img/posts/2015/2015-07-08-0007.jpg)
-![Sequencer LED underside soldering](/assets/img/posts/2015/2015-07-08-0008.jpg)
+![Sequencer connector wire wrap posts and LEDs (top view)](/img/posts/2015/2015-07-08-0005.jpg)
+![Sequencer connector wire wrap posts and LEDs (rear view)](/img/posts/2015/2015-07-08-0006.jpg)
+![Sequencer LEDs (close up view)](/img/posts/2015/2015-07-08-0007.jpg)
+![Sequencer LED underside soldering](/img/posts/2015/2015-07-08-0008.jpg)
 {% endfigure %}
 
 One problem with the board interconnects on the upper card is that 
@@ -87,8 +87,8 @@ Next up were the relay
 sockets and associated wire wrap posts:
 
 {% figure %}
-![Sequencer relay sockets and wire wrap pins (top view)](/assets/img/posts/2015/2015-07-08-0009.jpg)
-![Sequencer relay sockets and wire wrap pins (rear view)](/assets/img/posts/2015/2015-07-08-0010.jpg)
+![Sequencer relay sockets and wire wrap pins (top view)](/img/posts/2015/2015-07-08-0009.jpg)
+![Sequencer relay sockets and wire wrap pins (rear view)](/img/posts/2015/2015-07-08-0010.jpg)
 {% endfigure %}
 
 I've actually soldered down the relay sockets 
@@ -106,16 +106,16 @@ to solder in the flyback and feedback diodes (which ensure produced outputs
 don't feed back into parts of the sequencer's finite state machine):
 
 {% figure %}
-![Sequencer with added flyback/feedback diodes (top view)](/assets/img/posts/2015/2015-07-08-0011.jpg)
-![Sequencer with added flyback/feedback diodes (rear view)](/assets/img/posts/2015/2015-07-08-0012.jpg)
+![Sequencer with added flyback/feedback diodes (top view)](/img/posts/2015/2015-07-08-0011.jpg)
+![Sequencer with added flyback/feedback diodes (rear view)](/img/posts/2015/2015-07-08-0012.jpg)
 {% endfigure %}
 
 The final soldering job was to put in the 
 power and ground lines:
 
 {% figure %}
-![Sequencer with added power and ground lines (rear view)](/assets/img/posts/2015/2015-07-08-0013.jpg)
-![Sequencer with added power and ground lines (rear close up)](/assets/img/posts/2015/2015-07-08-0014.jpg)
+![Sequencer with added power and ground lines (rear view)](/img/posts/2015/2015-07-08-0013.jpg)
+![Sequencer with added power and ground lines (rear close up)](/img/posts/2015/2015-07-08-0014.jpg)
 {% endfigure %}
 
 This time around I finally got bored of 
@@ -137,17 +137,17 @@ the most complicated wiring yet (second only, maybe, to the ALU arithmetic
 unit).
 
 {% figure %}
-![Sequencer with added internal connection wire wraps](/assets/img/posts/2015/2015-07-08-0015.jpg)
-![Sequencer with added power wire wraps](/assets/img/posts/2015/2015-07-08-0016.jpg)
-![Sequencer with added result wire wraps](/assets/img/posts/2015/2015-07-08-0017.jpg)
-![Sequencer with added control wire wraps](/assets/img/posts/2015/2015-07-08-0018.jpg)
+![Sequencer with added internal connection wire wraps](/img/posts/2015/2015-07-08-0015.jpg)
+![Sequencer with added power wire wraps](/img/posts/2015/2015-07-08-0016.jpg)
+![Sequencer with added result wire wraps](/img/posts/2015/2015-07-08-0017.jpg)
+![Sequencer with added control wire wraps](/img/posts/2015/2015-07-08-0018.jpg)
 {% endfigure %}
 
 With the wire wrap done the relays can then be placed in their 
 sockets: 
 
 {% figure %}
-![Sequencer with relays inserted](/assets/img/posts/2015/2015-07-08-0019.jpg)
+![Sequencer with relays inserted](/img/posts/2015/2015-07-08-0019.jpg)
 {% endfigure %}
 
 This is almost the last step however to make the sequencer useable 
@@ -158,7 +158,7 @@ are implemented stage 9 and 10 will provide the required lines to keep stages
 job. With the temporary links in place the lower card looks like this:
 
 {% figure %}
-![Sequencer with added temporary wire links](/assets/img/posts/2015/2015-07-08-0020.jpg)
+![Sequencer with added temporary wire links](/img/posts/2015/2015-07-08-0020.jpg)
 {% endfigure %}
 
 So, finally, that's the sequencer complete for 8-cycle 
@@ -166,8 +166,8 @@ instructions. The card will be extended over time as longer cycle instructions
 are introduced but for now the sequencer as a whole looks like this:
 
 {% figure %}
-![Completed 8-Cycle Sequencer (front view)](/assets/img/posts/2015/2015-07-08-0021.jpg)
-![Completed 8-Cycle Sequencer (rear view)](/assets/img/posts/2015/2015-07-08-0022.jpg)
+![Completed 8-Cycle Sequencer (front view)](/img/posts/2015/2015-07-08-0021.jpg)
+![Completed 8-Cycle Sequencer (rear view)](/img/posts/2015/2015-07-08-0022.jpg)
 {% endfigure %}
 
 As usual I've put a video together that demonstrates the sequencer 

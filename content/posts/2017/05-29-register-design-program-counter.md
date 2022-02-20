@@ -51,7 +51,7 @@ code itself.
 Given the program counter is very similar to the other 
 8-bit registers the schematic doesn't need much introduction:
 
-{% figure caption:"Program Counter Schematic ([larger](/assets/img/posts/2017/2017-05-29-1000.png))" %}![Program Counter Schematic](/assets/img/posts/2017/2017-05-29-0000.png){% endfigure %}
+{% figure caption:"Program Counter Schematic ([larger](/img/posts/2017/2017-05-29-1000.png))" %}![Program Counter Schematic](/img/posts/2017/2017-05-29-0000.png){% endfigure %}
 
 This is a type 'X' 
 card (like the instruction register) and so has the same connectors along the 
@@ -71,7 +71,7 @@ and auxiliary control card so that the program counter can be accessed and
 observed when the computer is being operated manually. Let's start with 
 display B on which I'll add the address bus:
 
-{% figure caption:"Display B with added Address Bus display ([larger](/assets/img/posts/2017/2017-05-29-1001.png))" %}![Display B with added Address Bus display](/assets/img/posts/2017/2017-05-29-0001.png){% endfigure %}
+{% figure caption:"Display B with added Address Bus display ([larger](/img/posts/2017/2017-05-29-1001.png))" %}![Display B with added Address Bus display](/img/posts/2017/2017-05-29-0001.png){% endfigure %}
 
 The 
 address bus consists of red LED light bars similar to the data bus ones but 
@@ -79,7 +79,7 @@ with each element half the width to fit the full 16 bits in. As with the
 program counter you can find a [PDF version of the Display B card here]({% link /assets/pdf/display-b-3.pdf %}) and [another version showing the LED internals here]({% link /assets/pdf/display-b-3a.pdf %}). Next up is 
 display A which gains two extra control switches:
 
-{% figure caption:"Display A with added Program Counter Load/Select ([larger](/assets/img/posts/2017/2017-05-29-1002.png))" %}![Display A with added Program Counter Load/Select](/assets/img/posts/2017/2017-05-29-0002.png){% endfigure %}
+{% figure caption:"Display A with added Program Counter Load/Select ([larger](/img/posts/2017/2017-05-29-1002.png))" %}![Display A with added Program Counter Load/Select](/img/posts/2017/2017-05-29-0002.png){% endfigure %}
 
 Looking towards the centre of the diagram above you can see the 
 new load and select control switches for the program counter (LD PC and SEL 
@@ -115,7 +115,7 @@ any further detail.
 Finally to wrap up this post I've updated my 
 relay computer simulator which now looks like this:
 
-{% figure %}![Screenshot of Relay Computer Simulator](/assets/img/posts/2017/2017-05-29-0003.png){% endfigure %}
+{% figure %}![Screenshot of Relay Computer Simulator](/img/posts/2017/2017-05-29-0003.png){% endfigure %}
 
 The [latest version of this can be found here](http://80nd.co.uk/relaycomputer/) 
 (although note that I only ever host the latest version 

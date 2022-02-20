@@ -43,7 +43,7 @@ In the most basic terms we can store a single
 bit in a relay as follows:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-30-0000.png)
+![](/img/posts/2013/2013-11-30-0000.png)
 {% endfigure %}
 
 In its initial state the register is off and both the IN and HOLD 
@@ -62,7 +62,7 @@ accidentally). Adding these control and gating relays gives us the
 following:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-30-0001.png)
+![](/img/posts/2013/2013-11-30-0001.png)
 {% endfigure %}
 
 This may look a little over complicated at 
@@ -75,7 +75,7 @@ this design). Using this base design I can now modify it to use my DPDT relays
 and add the other two condition registers required:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-30-0002.png)
+![](/img/posts/2013/2013-11-30-0002.png)
 {% endfigure %}
 
 It's quite a 'busy' layout but breaking it down: the two relays at the 
@@ -90,7 +90,7 @@ and not Carry) in a similar fashion. With the relays, inputs/outputs and wire
 links hidden and partial ground rails added the design looks like this:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-30-0003.png)
+![](/img/posts/2013/2013-11-30-0003.png)
 {% endfigure %}
 
 With the design for the Condition Registers now complete we have 

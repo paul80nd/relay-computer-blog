@@ -22,7 +22,7 @@ added recently.
 Diving straight in here is the latest version of 
 the Display A design:
 
-{% figure caption:"Display A Card ([larger](/assets/img/posts/2015/2015-04-08-1000.png))" %}![Display A Card](/assets/img/posts/2015/2015-04-08-0000.png){% endfigure %}
+{% figure caption:"Display A Card ([larger](/img/posts/2015/2015-04-08-1000.png))" %}![Display A Card](/img/posts/2015/2015-04-08-0000.png){% endfigure %}
 
 This is the card that 
 sits in the upper left of the enclosure and doubles up as a display as well as 
@@ -49,7 +49,7 @@ testing/debugging purposes.
 The second display card (Display B) 
 sits in the upper right of the enclosure and will now look like this:
 
-{% figure caption:"Display B Card ([larger](/assets/img/posts/2015/2015-04-08-1001.png))" %}![Display B Card](/assets/img/posts/2015/2015-04-08-0001.png){% endfigure %}
+{% figure caption:"Display B Card ([larger](/img/posts/2015/2015-04-08-1001.png))" %}![Display B Card](/img/posts/2015/2015-04-08-0001.png){% endfigure %}
 
 All the blocks on this 
 card only display a value and are not interactive like the blocks on display 
@@ -65,7 +65,7 @@ the ALU display just below.
 Finally there's a small addition to do 
 on the front panel switch control card:
 
-{% figure caption:"Aux Switch Control Card ([larger](/assets/img/posts/2015/2015-04-08-1002.png))" %}![Aux Switch Control Card](/assets/img/posts/2015/2015-04-08-0002.png){% endfigure %}
+{% figure caption:"Aux Switch Control Card ([larger](/img/posts/2015/2015-04-08-1002.png))" %}![Aux Switch Control Card](/img/posts/2015/2015-04-08-0002.png){% endfigure %}
 
 The lower half 
 of the card shows the existing gating relays which pass the 8-bit value set on 

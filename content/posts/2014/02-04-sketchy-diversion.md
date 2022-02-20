@@ -30,12 +30,12 @@ So, cutting to the chase, after a couple of hours getting
 up to speed with the very usable SketchUp I've created 3D models of all the 
 cards I've constructed so far and it looks like this:
 
-{% figure %}![3D model of all cards constructed to date](/assets/img/posts/2014/2014-02-04-0000.png){% endfigure %}
+{% figure %}![3D model of all cards constructed to date](/img/posts/2014/2014-02-04-0000.png){% endfigure %}
 
 ... and with all the boards (virtually) plugged together it looks 
 like this ...
 
-{% figure %}![3D model of cards connected together](/assets/img/posts/2014/2014-02-04-0001.png){% endfigure %}
+{% figure %}![3D model of cards connected together](/img/posts/2014/2014-02-04-0001.png){% endfigure %}
 
 This probably doesn't look all that fancy for those gamers out 
 there who have become accustomed to slightly more complicated 3D scenes but 

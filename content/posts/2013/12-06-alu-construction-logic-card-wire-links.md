@@ -26,9 +26,9 @@ fiddly due to the size of the wire but not bad once you get the hang of it.
 With the links in place the logic card now looks like this:
 
 {% figure %}
-![ALU Logic Card (solder side)](/assets/img/posts/2013/2013-12-06-0000.jpg)
-![ALU Logic Card (solder side)](/assets/img/posts/2013/2013-12-06-0001.jpg)
-![ALU Logic Card (solder side)](/assets/img/posts/2013/2013-12-06-0002.JPG)
+![ALU Logic Card (solder side)](/img/posts/2013/2013-12-06-0000.jpg)
+![ALU Logic Card (solder side)](/img/posts/2013/2013-12-06-0001.jpg)
+![ALU Logic Card (solder side)](/img/posts/2013/2013-12-06-0002.JPG)
 {% endfigure %}
 
 I've also 

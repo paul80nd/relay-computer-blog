@@ -28,7 +28,7 @@ these machines can be). Here's a scaled diagram of the MY4 relay showing the
 coil and four sets of double toggle contacts.
 
 {% figure %}
-![Omron 4PDT Relay (0.1inch grid)](/assets/img/posts/2013/2013-11-10-0000.png)
+![Omron 4PDT Relay (0.1inch grid)](/img/posts/2013/2013-11-10-0000.png)
 {% endfigure %}
 
 Many of the constructors of 
@@ -68,7 +68,7 @@ Here's a diagram at the same scale with two relays to make up the same pole
 count as the Omron 4PDT:
 
 {% figure %}
-![GoodSky DPDT Relays (0.1 inch grid)](/assets/img/posts/2013/2013-11-10-0001.png)
+![GoodSky DPDT Relays (0.1 inch grid)](/img/posts/2013/2013-11-10-0001.png)
 {% endfigure %}
 
 Taking this all a 
@@ -82,7 +82,7 @@ industrial relays, require special mounting rails or similar). Here's a
 diagram at the same scale again for this relay:
 
 {% figure %}
-![TE DPDT Relays (0.1 inch grid)](/assets/img/posts/2013/2013-11-10-0002.png)
+![TE DPDT Relays (0.1 inch grid)](/img/posts/2013/2013-11-10-0002.png)
 {% endfigure %}
 
 Oh, by the way, the 

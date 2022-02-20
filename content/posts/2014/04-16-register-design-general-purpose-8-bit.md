@@ -24,7 +24,7 @@ In the
 most basic terms we can store a single bit in a relay as follows:
 
 {% figure %}
-![Basic design of a 1-bit register](/assets/img/posts/2014/2014-04-16-0000.png)
+![Basic design of a 1-bit register](/img/posts/2014/2014-04-16-0000.png)
 {% endfigure %}
 
 In its initial state the 
@@ -42,7 +42,7 @@ the hold line is off when 'loading' the relay (this also ensures that the hold
 line can't back-feed the input line accidentally). Adding these control and 
 gating relays gives us the following:
 
-{% figure %}![1-Bit general relay with select and load lines](/assets/img/posts/2014/2014-04-16-0001.png){% endfigure %}
+{% figure %}![1-Bit general relay with select and load lines](/img/posts/2014/2014-04-16-0001.png){% endfigure %}
 
 This may look a little over complicated at first but is designed 
 to avoid feedback and oscillation in the control lines (where the relay would 
@@ -65,7 +65,7 @@ it'll be something to watch out for.
 Using the base design above I 
 can modify it to use my DPDT relays and extend to 8 bits:
 
-{% figure caption:"General 8-bit register design ([larger](/assets/img/posts/2014/2014-04-16-1000.png))" %}![General 8-bit register design](/assets/img/posts/2014/2014-04-16-0002.png){% endfigure %}
+{% figure caption:"General 8-bit register design ([larger](/img/posts/2014/2014-04-16-1000.png))" %}![General 8-bit register design](/img/posts/2014/2014-04-16-0002.png){% endfigure %}
 
 At first 
 glance this looks quite 'busy' but breaking it down: the four relays at the 

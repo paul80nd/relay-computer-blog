@@ -51,7 +51,7 @@ register (set all bits to off). The 3-to-8 decoder is pretty
 straightforward:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-20-0000.png)
+![](/img/posts/2013/2013-11-20-0000.png)
 {% endfigure %}
 
 This design is taken directly from the 
@@ -59,14 +59,14 @@ This design is taken directly from the
 smaller DPDT relays. The physical layout diagram is therefore:
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-20-0001.png)
+![](/img/posts/2013/2013-11-20-0001.png)
 {% endfigure %}
 
 ... and here's the same diagram with relays and wires omitted and with 
 partial ground rails added ...
 
 {% figure %}
-![](/assets/img/posts/2013/2013-11-20-0002.png)
+![](/img/posts/2013/2013-11-20-0002.png)
 {% endfigure %}
 
 In the next couple of posts I'll cover the Zero Detect circuit and 

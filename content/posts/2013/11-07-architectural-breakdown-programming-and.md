@@ -20,7 +20,7 @@ for the last time, is the architecture I'll be building against (from the
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html))
 
 {% figure caption:"System Architecture for a Relay Computer[^1]" %}
-![System Architecture for a Relay Computer](/assets/img/posts/2013/2013-11-07-0000.png)
+![System Architecture for a Relay Computer](/img/posts/2013/2013-11-07-0000.png)
 {% endfigure %}
 
 With all the various parts of the 

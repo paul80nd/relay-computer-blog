@@ -24,7 +24,7 @@ because access to a wider range of busses is needed.
 Getting stuck 
 in, here is all the relays laid out across the two new control cards:
 
-{% figure caption:"Control Relays ([larger](/assets/img/posts/2015/2015-04-04-1000.png))" %}![Control Relays](/assets/img/posts/2015/2015-04-04-0000.png){% endfigure %}
+{% figure caption:"Control Relays ([larger](/img/posts/2015/2015-04-04-1000.png))" %}![Control Relays](/img/posts/2015/2015-04-04-0000.png){% endfigure %}
 
 On the left hand card 
 there is the CHAT relay floating at the top right then down from there are the 
@@ -35,7 +35,7 @@ relays added to these cards as further instructions are added.
 Adding in the wiring posts, internal links and diodes gives the 
 following:
 
-{% figure caption:"Control Cards with added internal wiring ([larger](/assets/img/posts/2015/2015-04-04-1001.png))" %}![Control Cards with added internal wiring](/assets/img/posts/2015/2015-04-04-0001.png){% endfigure %}
+{% figure caption:"Control Cards with added internal wiring ([larger](/img/posts/2015/2015-04-04-1001.png))" %}![Control Cards with added internal wiring](/img/posts/2015/2015-04-04-0001.png){% endfigure %}
 
 The next job is to add the connectors so the relays can be wired 
 up to their inputs and outputs as required. As these cards are W1 and W2 types 
@@ -43,9 +43,9 @@ they use the same connectors as the respective W1 and W2 cards of the
 sequencer. These are the connectors we'll need, firstly for the 'W1' card on 
 the left followed by the 'W2' card on the right:
 
-{% figure caption:"Control W1 Connectors ([larger](/assets/img/posts/2015/2015-04-04-1002.png))" %}![Control W1 Connectors](/assets/img/posts/2015/2015-04-04-0002.png){% endfigure %}
+{% figure caption:"Control W1 Connectors ([larger](/img/posts/2015/2015-04-04-1002.png))" %}![Control W1 Connectors](/img/posts/2015/2015-04-04-0002.png){% endfigure %}
 
-{% figure caption:"Control W2 Connectors ([larger](/assets/img/posts/2015/2015-04-04-1003.png))" %}![Control W2 Connectors](/assets/img/posts/2015/2015-04-04-0003.png){% endfigure %}
+{% figure caption:"Control W2 Connectors ([larger](/img/posts/2015/2015-04-04-1003.png))" %}![Control W2 Connectors](/img/posts/2015/2015-04-04-0003.png){% endfigure %}
 
 These are the 
 usual right angle boxed headers used on previous cards and as before lines 
@@ -85,7 +85,7 @@ interconnections are made between the two cards so that they act as one larger
 card. With the primary card connectors, internal interconnects and other 
 connector wiring added to the design we get the following:
 
-{% figure caption:"Control Cards with added connectors, interconnects and wiring ([larger](/assets/img/posts/2015/2015-04-04-1004.png))" %}![Control Cards with added connectors, interconnects and wiring](/assets/img/posts/2015/2015-04-04-0004.png){% endfigure %}
+{% figure caption:"Control Cards with added connectors, interconnects and wiring ([larger](/img/posts/2015/2015-04-04-1004.png))" %}![Control Cards with added connectors, interconnects and wiring](/img/posts/2015/2015-04-04-0004.png){% endfigure %}
 
 There's a couple of things that probably warrant 
 further explanation on the above diagram. Firstly you can see that some of the 
@@ -103,9 +103,9 @@ a line of LEDs down the front of each card to display what's going on within.
 Firstly for the W1 card on the left followed by the W2 card on the right we 
 have:
 
-{% figure caption:"Control W1 Card LEDs ([larger](/assets/img/posts/2015/2015-04-04-1005.png))" %}![Control W1 Card LEDs](/assets/img/posts/2015/2015-04-04-0005.png){% endfigure %}
+{% figure caption:"Control W1 Card LEDs ([larger](/img/posts/2015/2015-04-04-1005.png))" %}![Control W1 Card LEDs](/img/posts/2015/2015-04-04-0005.png){% endfigure %}
 
-{% figure caption:"Control W2 Card LEDs ([larger](/assets/img/posts/2015/2015-04-04-1006.png))" %}![Control W2 Card LEDs](/assets/img/posts/2015/2015-04-04-0006.png){% endfigure %}
+{% figure caption:"Control W2 Card LEDs ([larger](/img/posts/2015/2015-04-04-1006.png))" %}![Control W2 Card LEDs](/img/posts/2015/2015-04-04-0006.png){% endfigure %}
 
 The W1 card LEDs 
 show the ABT08 line status and that of the I2B line raised by the SETAB 
@@ -119,7 +119,7 @@ Adding the indicators above to the cards along with
 the power supply lines (which are soldered to the back of the card) we arrive 
 at the final design as follows:
 
-{% figure caption:"Final Control Cards Design ([larger](/assets/img/posts/2015/2015-04-04-1007.png))" %}![Final Control Cards Design](/assets/img/posts/2015/2015-04-04-0007.png){% endfigure %}
+{% figure caption:"Final Control Cards Design ([larger](/img/posts/2015/2015-04-04-1007.png))" %}![Final Control Cards Design](/img/posts/2015/2015-04-04-0007.png){% endfigure %}
 
 As always 
 should you wish to take a much closer look at this design you can find the 
@@ -133,7 +133,7 @@ data busses are required so instead they can live on the instruction register.
 With these added I2B relays the instruction register design now looks like 
 this:
 
-{% figure caption:"Update Instruction Register design including I2B relays ([larger](/assets/img/posts/2015/2015-04-04-1008.png))" %}![Update Instruction Register design including I2B relays](/assets/img/posts/2015/2015-04-04-0008.png){% endfigure %}
+{% figure caption:"Update Instruction Register design including I2B relays ([larger](/img/posts/2015/2015-04-04-1008.png))" %}![Update Instruction Register design including I2B relays](/img/posts/2015/2015-04-04-0008.png){% endfigure %}
 
 In the above diagram I've faded out the existing 
 instruction register relays and wiring to highlight the new I2B relays added. 

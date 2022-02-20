@@ -19,8 +19,8 @@ The ALU logic card is now finally complete! ... well, it is now I've popped
 the last few relays into their sockets. The final card looks like this:
 
 {% figure %}
-![ALU Logic Card](/assets/img/posts/2013/2013-12-18-0003.jpg)
-![ALU Logic Card (close up)](/assets/img/posts/2013/2013-12-18-0004.jpg)
+![ALU Logic Card](/img/posts/2013/2013-12-18-0003.jpg)
+![ALU Logic Card (close up)](/img/posts/2013/2013-12-18-0004.jpg)
 {% endfigure %}
 
 As the old 

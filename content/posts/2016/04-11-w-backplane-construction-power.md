@@ -22,7 +22,7 @@ control units are spread over two cards each requiring a different set of
 connectors. The upshot is that the backplane has three 'W1' card slots and two 
 'W2' card slots. A diagram explains it better:
 
-{% figure caption:"W Backplane Diagram ([larger](/assets/img/posts/2016/2016-04-11-1000.png))" %}![W Backplane Diagram](/assets/img/posts/2016/2016-04-11-0000.png){% endfigure %}
+{% figure caption:"W Backplane Diagram ([larger](/img/posts/2016/2016-04-11-1000.png))" %}![W Backplane Diagram](/img/posts/2016/2016-04-11-0000.png){% endfigure %}
 
 On the 
 Z backplane each individual connector is joined to it's siblings via a ribbon 
@@ -35,14 +35,14 @@ need to weave in and out to fit around the other connectors which are in the
 way. After much coaxing of wires I ended up with the following:
 
 {% figure %}
-![W Backplane Rear View](/assets/img/posts/2016/2016-04-11-0001.jpg)
+![W Backplane Rear View](/img/posts/2016/2016-04-11-0001.jpg)
 {% endfigure %}
 
 ... 
 and when viewed from the front the backplane looks like this:
 
 {% figure %}
-![W Backplane Front View](/assets/img/posts/2016/2016-04-11-0002.jpg)
+![W Backplane Front View](/img/posts/2016/2016-04-11-0002.jpg)
 {% endfigure %}
 
 ... 
@@ -59,9 +59,9 @@ backplanes and display cards. Here is the power distribution board I've put
 together:
 
 {% figure %}
-![Power Distribution Board (Front Top)](/assets/img/posts/2016/2016-04-11-0003.jpg)
-![Power Distribution Board (Front Rear)](/assets/img/posts/2016/2016-04-11-0004.jpg)
-![Power Distribution Board (Rear View)](/assets/img/posts/2016/2016-04-11-0005.jpg)
+![Power Distribution Board (Front Top)](/img/posts/2016/2016-04-11-0003.jpg)
+![Power Distribution Board (Front Rear)](/img/posts/2016/2016-04-11-0004.jpg)
+![Power Distribution Board (Rear View)](/img/posts/2016/2016-04-11-0005.jpg)
 {% endfigure %}
 
 The board has five independent channels each fed from a metal tab, 
@@ -85,7 +85,7 @@ be plugged in to the right angled 10 way IDC connector of each backplane/card.
 Here is a picture of the Z power cable:
 
 {% figure %}
-![Power Distribution Cable](/assets/img/posts/2016/2016-04-11-0006.jpg)
+![Power Distribution Cable](/img/posts/2016/2016-04-11-0006.jpg)
 {% endfigure %}
 
 That's it then, with the backplane and power distribution in place 

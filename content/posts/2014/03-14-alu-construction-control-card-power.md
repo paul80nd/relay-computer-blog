@@ -21,14 +21,14 @@ Here's the
 card as it currently stands:
 
 {% figure %}
-![ALU Control Card](/assets/img/posts/2014/2014-03-14-0000.jpg)
-![ALU Control Card (close up top half)](/assets/img/posts/2014/2014-03-14-0001.jpg)
-![ALU Control Card (close up bottom half)](/assets/img/posts/2014/2014-03-14-0002.jpg){% endfigure %}
+![ALU Control Card](/img/posts/2014/2014-03-14-0000.jpg)
+![ALU Control Card (close up top half)](/img/posts/2014/2014-03-14-0001.jpg)
+![ALU Control Card (close up bottom half)](/img/posts/2014/2014-03-14-0002.jpg){% endfigure %}
 
 ... and this is how the power rails look on the solder side of the 
 card ...
 
-{% figure %}![ALU Control Card (solder side)](/assets/img/posts/2014/2014-03-14-0003.jpg){% endfigure %}
+{% figure %}![ALU Control Card (solder side)](/img/posts/2014/2014-03-14-0003.jpg){% endfigure %}
 
 With the 
 rails and wire wrap all done the card just needs the relays popping in and it 

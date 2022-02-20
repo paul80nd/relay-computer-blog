@@ -28,8 +28,8 @@ pictures, front and back, of the card following this first round of
 soldering:
 
 {% figure %}
-![A/D Register Card with initial soldering completed (front)](/assets/img/posts/2014/2014-06-22-0000.jpg)
-![A/D Register Card with initial soldering completed (back)](/assets/img/posts/2014/2014-06-22-0001.jpg)
+![A/D Register Card with initial soldering completed (front)](/img/posts/2014/2014-06-22-0000.jpg)
+![A/D Register Card with initial soldering completed (back)](/img/posts/2014/2014-06-22-0001.jpg)
 {% endfigure %}
 
 I've continued the trend of applying a line of super glue 
@@ -43,8 +43,8 @@ always take that well to the wire so I've had to resolder a couple of the
 joints a few times. Close up it looks like this:
 
 {% figure %}
-![LED Cathode Soldering (close up)](/assets/img/posts/2014/2014-06-22-0002.jpg)
-![LED Cathode Soldering (close up 2)](/assets/img/posts/2014/2014-06-22-0003.jpg)
+![LED Cathode Soldering (close up)](/img/posts/2014/2014-06-22-0002.jpg)
+![LED Cathode Soldering (close up 2)](/img/posts/2014/2014-06-22-0003.jpg)
 {% endfigure %}
 
 Following on from that the next job was to solder down the relay 
@@ -52,24 +52,24 @@ sockets and again I've used the two rows of 5 pin sockets which proved
 successful on the B/C card. Front and back it looks like this:
 
 {% figure %}
-![Added Relay Sockets (front)](/assets/img/posts/2014/2014-06-22-0004.jpg)
-![Added Relay Sockets (back)](/assets/img/posts/2014/2014-06-22-0005.jpg)
+![Added Relay Sockets (front)](/img/posts/2014/2014-06-22-0004.jpg)
+![Added Relay Sockets (back)](/img/posts/2014/2014-06-22-0005.jpg)
 {% endfigure %}
 
 Next up is 
 the wiring wrapping header pins ...
 
 {% figure %}
-![Added Wire Wrap Posts (front)](/assets/img/posts/2014/2014-06-22-0006.jpg)
-![Added Wire Wrap Posts (back)](/assets/img/posts/2014/2014-06-22-0007.jpg)
+![Added Wire Wrap Posts (front)](/img/posts/2014/2014-06-22-0006.jpg)
+![Added Wire Wrap Posts (back)](/img/posts/2014/2014-06-22-0007.jpg)
 {% endfigure %}
 
 ... and 
 then the 'flyback' protection diodes come in next ...
 
 {% figure %}
-![Added Diodes (front)](/assets/img/posts/2014/2014-06-22-0008.jpg)
-![Added Diodes (back)](/assets/img/posts/2014/2014-06-22-0009.jpg)
+![Added Diodes (front)](/img/posts/2014/2014-06-22-0008.jpg)
+![Added Diodes (back)](/img/posts/2014/2014-06-22-0009.jpg)
 {% endfigure %}
 
 This final bit of 
@@ -77,7 +77,7 @@ soldering was to put down the power and ground lines on the solder side of the
 board:
 
 {% figure %}
-![A/D Register Card with power and ground lines completed](/assets/img/posts/2014/2014-06-22-0010.jpg)
+![A/D Register Card with power and ground lines completed](/img/posts/2014/2014-06-22-0010.jpg)
 {% endfigure %}
 
 This stage was pretty much consistent with previous cards 
@@ -91,10 +91,10 @@ related connections then laying the next family on top of that. Here's four
 pictures of the wraps building up over time:
 
 {% figure %}
-![A/D Register Card wire wraps stage 1](/assets/img/posts/2014/2014-06-22-0011.jpg)
-![A/D Register Card wire wraps stage 2](/assets/img/posts/2014/2014-06-22-0012.jpg)
-![A/D Register Card wire wraps stage 3](/assets/img/posts/2014/2014-06-22-0013.jpg)
-![A/D Register Card wire wraps stage 4](/assets/img/posts/2014/2014-06-22-0014.jpg)
+![A/D Register Card wire wraps stage 1](/img/posts/2014/2014-06-22-0011.jpg)
+![A/D Register Card wire wraps stage 2](/img/posts/2014/2014-06-22-0012.jpg)
+![A/D Register Card wire wraps stage 3](/img/posts/2014/2014-06-22-0013.jpg)
+![A/D Register Card wire wraps stage 4](/img/posts/2014/2014-06-22-0014.jpg)
 {% endfigure %}
 
 The top left picture shows the first two wraps: the black internal 
@@ -108,9 +108,9 @@ Finally here is three
 close up pictures of the final wire wraps:
 
 {% figure %}
-![A/D Register Card (left)](/assets/img/posts/2014/2014-06-22-0015.jpg)
-![A/D Register Card (middle)](/assets/img/posts/2014/2014-06-22-0016.jpg)
-![A/D Register Card (right)](/assets/img/posts/2014/2014-06-22-0017.jpg)
+![A/D Register Card (left)](/img/posts/2014/2014-06-22-0015.jpg)
+![A/D Register Card (middle)](/img/posts/2014/2014-06-22-0016.jpg)
+![A/D Register Card (right)](/img/posts/2014/2014-06-22-0017.jpg)
 {% endfigure %}
 
 That's it for 

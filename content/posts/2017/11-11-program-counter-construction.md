@@ -21,8 +21,8 @@ together and wired out slightly differently using the address bus rather than
 data bus. As usual I'll start with soldering down the LEDs:
 
 {% figure %}
-![Program Counter LEDs](/assets/img/posts/2017/2017-11-11-0000.jpg)
-![Reverse side of Program Counter LEDs](/assets/img/posts/2017/2017-11-11-0001.jpg)
+![Program Counter LEDs](/img/posts/2017/2017-11-11-0000.jpg)
+![Reverse side of Program Counter LEDs](/img/posts/2017/2017-11-11-0001.jpg)
 {% endfigure %}
 
 This 
@@ -32,8 +32,8 @@ compared to previous cards. I'm just about at the point now where I've
 previous cards. Next up is backplane connectors and relay sockets:
 
 {% figure %}
-![Program Counter with added sockets (front view)](/assets/img/posts/2017/2017-11-11-0002.jpg)
-![Program Counter with added sockets (rear view)](/assets/img/posts/2017/2017-11-11-0003.jpg)
+![Program Counter with added sockets (front view)](/img/posts/2017/2017-11-11-0002.jpg)
+![Program Counter with added sockets (rear view)](/img/posts/2017/2017-11-11-0003.jpg)
 {% endfigure %}
 
 Again, all very similar to previous cards. To be frank though I'm 
@@ -44,15 +44,15 @@ construction a bit quicker - I'll save that for next time though. Next up is
 the relay coil diodes:
 
 {% figure %}
-![Program Counter with added diodes (front view)](/assets/img/posts/2017/2017-11-11-0004.jpg)
-![Program Counter with added diodes (rear view)](/assets/img/posts/2017/2017-11-11-0005.jpg)
+![Program Counter with added diodes (front view)](/img/posts/2017/2017-11-11-0004.jpg)
+![Program Counter with added diodes (rear view)](/img/posts/2017/2017-11-11-0005.jpg)
 {% endfigure %}
 
 As with the relay sockets I've got something up my sleeve for the 
 diodes which I'll try out on the upcoming memory card. Next job is the power 
 rails:
 
-{% figure %}![Program Counter with added power rails (rear view)](/assets/img/posts/2017/2017-11-11-0006.jpg){% endfigure %}
+{% figure %}![Program Counter with added power rails (rear view)](/img/posts/2017/2017-11-11-0006.jpg){% endfigure %}
 
 This is another area where I'm increasingly getting 'a bit bored' 
 and so on the next card I'll do away with the individual ground wires and just 
@@ -62,7 +62,7 @@ time consuming. The power (+12V) rail will need to keep on using insulated
 wire as it'll often cross the path of ground rails and other components. 
 Flipping the card back over the next job is the wire wrap:
 
-{% figure %}![Program Counter with added wire wrap](/assets/img/posts/2017/2017-11-11-0007.jpg){% endfigure %}
+{% figure %}![Program Counter with added wire wrap](/img/posts/2017/2017-11-11-0007.jpg){% endfigure %}
 
 The wire 
 wrap is, again, pretty similar to the other completed registers. I always find 
@@ -72,15 +72,15 @@ upcoming upper memory card there's tons of wire wrap on a tightly packed card
 so that should look a bit nicer IMHO. Anyhoo, here's a close up of the 
 straggly wiring:
 
-{% figure %}![Close up of Program Counter wire wrap](/assets/img/posts/2017/2017-11-11-0008.jpg){% endfigure %}
+{% figure %}![Close up of Program Counter wire wrap](/img/posts/2017/2017-11-11-0008.jpg){% endfigure %}
 
 Final 
 job is to pop in the relays and then that's that for the program counter 
 construction:
 
 {% figure %}
-![Program Counter with added relays](/assets/img/posts/2017/2017-11-11-0009.jpg)
-![Program Counter with added relays (close up)](/assets/img/posts/2017/2017-11-11-0010.jpg)
+![Program Counter with added relays](/img/posts/2017/2017-11-11-0009.jpg)
+![Program Counter with added relays (close up)](/img/posts/2017/2017-11-11-0010.jpg)
 {% endfigure %}
 
 You might have picked up from the tone of my writing that I'm not 

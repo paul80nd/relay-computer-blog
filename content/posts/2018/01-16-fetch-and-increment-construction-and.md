@@ -29,8 +29,8 @@ off two new pulses (A and B) from the 8-cycle finite state machine and with
 the changes in place the sequencer now looks like this:
 
 {% figure %}
-![Sequencer cards (top side)](/assets/img/posts/2018/2018-01-16-0000.jpg)
-![Sequencer cards (rear side)](/assets/img/posts/2018/2018-01-16-0001.jpg)
+![Sequencer cards (top side)](/img/posts/2018/2018-01-16-0000.jpg)
+![Sequencer cards (rear side)](/img/posts/2018/2018-01-16-0001.jpg)
 {% endfigure %}
 
 You'll be 
@@ -40,8 +40,8 @@ been following my blog). The sequencer gains two LEDs to show the new pulses
 close up look like this:
 
 {% figure %}
-![Sequencer Upper Card LEDs](/assets/img/posts/2018/2018-01-16-0002.jpg)
-![Sequencer Lower Card LEDs](/assets/img/posts/2018/2018-01-16-0003.jpg)
+![Sequencer Upper Card LEDs](/img/posts/2018/2018-01-16-0002.jpg)
+![Sequencer Lower Card LEDs](/img/posts/2018/2018-01-16-0003.jpg)
 {% endfigure %}
 
 That's it for 
@@ -49,8 +49,8 @@ the sequencer ... the changes on the controller cards are a bit more
 involved:
 
 {% figure %}
-![Controller Cards (top side)](/assets/img/posts/2018/2018-01-16-0004.jpg)
-![Controller Cards (rear side)](/assets/img/posts/2018/2018-01-16-0005.jpg)
+![Controller Cards (top side)](/img/posts/2018/2018-01-16-0004.jpg)
+![Controller Cards (rear side)](/img/posts/2018/2018-01-16-0005.jpg)
 {% endfigure %}
 
 On the 
@@ -67,8 +67,8 @@ A close up photo of the front of the cards
 shows the newly added LEDs:
 
 {% figure %}
-![Upper Controller Card LEDs](/assets/img/posts/2018/2018-01-16-0006.jpg)
-![Lower Controller Card LEDs](/assets/img/posts/2018/2018-01-16-0007.jpg)
+![Upper Controller Card LEDs](/img/posts/2018/2018-01-16-0006.jpg)
+![Lower Controller Card LEDs](/img/posts/2018/2018-01-16-0007.jpg)
 {% endfigure %}
 
 The upper 
@@ -78,8 +78,8 @@ control lines are fired as part of the fetch and increment cycle. Here's a
 close up of the LEDs viewed from the rear side:
 
 {% figure %}
-![Upper Controller Card LEDs (rear view)](/assets/img/posts/2018/2018-01-16-0008.jpg)
-![Lower Controller Card LEDs (rear view)](/assets/img/posts/2018/2018-01-16-0009.jpg)
+![Upper Controller Card LEDs (rear view)](/img/posts/2018/2018-01-16-0008.jpg)
+![Lower Controller Card LEDs (rear view)](/img/posts/2018/2018-01-16-0009.jpg)
 {% endfigure %}
 
 You can see that much of the header strip is not soldered down yet and this 

@@ -33,8 +33,8 @@ Anyho, after lots more soldering (and the occasional burnt finger) the
 logic card now looks like this:
 
 {% figure %}
-![ALU Logic Card](/assets/img/posts/2013/2013-12-09-0000.jpg)
-![ALU Logic Card (solder side)](/assets/img/posts/2013/2013-12-09-0001.jpg)
+![ALU Logic Card](/img/posts/2013/2013-12-09-0000.jpg)
+![ALU Logic Card (solder side)](/img/posts/2013/2013-12-09-0001.jpg)
 {% endfigure %}
 
 Oh yea, 

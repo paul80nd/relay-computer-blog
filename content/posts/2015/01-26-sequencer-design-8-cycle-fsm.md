@@ -35,7 +35,7 @@ can perform up to 6 operations per second (6Hz). Each state produces a pulse
 Sx' that lasts one clock 'tick' and a pulse Sx that lasts two clock 'ticks' 
 (one clock cycle). Diagram wise the pulses look like this:
 
-{% figure %}![Finite State Machine pulses](/assets/img/posts/2015/2015-01-26-0000.png){% endfigure %}
+{% figure %}![Finite State Machine pulses](/img/posts/2015/2015-01-26-0000.png){% endfigure %}
 
 Eventually 
 further states will be needed as more complex instruction classes are 
@@ -47,12 +47,12 @@ FSM is to extract the 'ticks' and 'tocks' (like the noise an old pendulum
 clock makes) from the clock signal so that we obtain one pulse train that 
 matches the clock and one that is the inverse of the clock as follows:
 
-{% figure %}![Derived clock pulse trains](/assets/img/posts/2015/2015-01-26-0001.png){% endfigure %}
+{% figure %}![Derived clock pulse trains](/img/posts/2015/2015-01-26-0001.png){% endfigure %}
 
 This is very 
 straightforward with relays that contain SPDT switches as follows:
 
-{% figure %}![Derived clock pulses circuit](/assets/img/posts/2015/2015-01-26-0002.gif){% endfigure %}
+{% figure %}![Derived clock pulses circuit](/img/posts/2015/2015-01-26-0002.gif){% endfigure %}
 
 At its 
 heart the sequencer FSM consists of a 'ring counter' which will move through 
@@ -60,7 +60,7 @@ each state upon a clock transition and then resets following the final step.
 There's quite a bit of wiring in a ring counter so I'll start with a simpler 
 example ... here's the counter design for four stages:
 
-{% figure caption:"Four Stage Ring Counter / FSM ([larger](/assets/img/posts/2015/2015-01-26-1000.png))" %}![Four Stage Ring Counter / FSM](/assets/img/posts/2015/2015-01-26-0003.png){% endfigure %}
+{% figure caption:"Four Stage Ring Counter / FSM ([larger](/img/posts/2015/2015-01-26-1000.png))" %}![Four Stage Ring Counter / FSM](/img/posts/2015/2015-01-26-0003.png){% endfigure %}
 
 To get the 
 four stage FSM above going the first stage relay at the bottom left needs 
@@ -69,8 +69,8 @@ the first relay is activated it is held on by the feed it receives from the
 third stage relay.
 
 {% figure %}
-![4 Stage FSM: Starting State](/assets/img/posts/2015/2015-01-26-0004.gif)
-![4 Stage FSM: Reset/Ready State](/assets/img/posts/2015/2015-01-26-0005.gif)
+![4 Stage FSM: Starting State](/img/posts/2015/2015-01-26-0004.gif)
+![4 Stage FSM: Reset/Ready State](/img/posts/2015/2015-01-26-0005.gif)
 {% endfigure %}
 
 With the 
@@ -81,16 +81,16 @@ fourth relay is activated the second relay drops out and so on. This pattern
 of operation continues until the final relay is reached.
 
 {% figure %}
-![4 Stage FSM: State 1](/assets/img/posts/2015/2015-01-26-0006.gif)
-![4 Stage FSM: State 2](/assets/img/posts/2015/2015-01-26-0007.gif)
-![4 Stage FSM: State 3](/assets/img/posts/2015/2015-01-26-0008.gif)
-![4 Stage FSM: State 4](/assets/img/posts/2015/2015-01-26-0009.gif)
+![4 Stage FSM: State 1](/img/posts/2015/2015-01-26-0006.gif)
+![4 Stage FSM: State 2](/img/posts/2015/2015-01-26-0007.gif)
+![4 Stage FSM: State 3](/img/posts/2015/2015-01-26-0008.gif)
+![4 Stage FSM: State 4](/img/posts/2015/2015-01-26-0009.gif)
 {% endfigure %}
 
 When the final 
 relay is reached the RESET line is activated starting the cycle again.
 
-{% figure %}![4 Stage FSM: Reset State](/assets/img/posts/2015/2015-01-26-0010.gif){% endfigure %}
+{% figure %}![4 Stage FSM: Reset State](/img/posts/2015/2015-01-26-0010.gif){% endfigure %}
 
 Note that when 
 the FSM is resetting the fourth relay channels the active clock line to the 
@@ -105,7 +105,7 @@ put together the diagrams above into an animated gif below showing the four
 stage FSM in operation:
 
 {% figure %}
-![](/assets/img/posts/2015/2015-01-26-0011.gif)
+![](/img/posts/2015/2015-01-26-0011.gif)
 {% endfigure %}
 
 As mentioned above the FSM on the sequencer card will eventually 
@@ -117,7 +117,7 @@ Building
 on the simple 4 stage FSM here is an 8 stage version that can continue on to 
 further stages with ABORT8 line to end at stage 8:
 
-{% figure caption:"8-cycle finite state machine ([larger](/assets/img/posts/2015/2015-01-26-1001.png))" %}![8-cycle finite state machine](/assets/img/posts/2015/2015-01-26-0012.png){% endfigure %}
+{% figure caption:"8-cycle finite state machine ([larger](/img/posts/2015/2015-01-26-1001.png))" %}![8-cycle finite state machine](/img/posts/2015/2015-01-26-0012.png){% endfigure %}
 
 It is the 8 stage FSM above 
 that I'll be transferring now to the sequencer card design. As with all the 
@@ -125,7 +125,7 @@ other cards I'm using relays that have two SPDT switches and building on the
 usual 55 x 40 hole pad board. Here are the relays and internal wiring for the 
 8 stage FSM above:
 
-{% figure caption:"Sequencer FSM Relays &amp; Internal Links ([larger](/assets/img/posts/2015/2015-01-26-1002.png))" %}![Sequencer FSM Relays &amp; Internal Links](/assets/img/posts/2015/2015-01-26-0013.png){% endfigure %}
+{% figure caption:"Sequencer FSM Relays &amp; Internal Links ([larger](/img/posts/2015/2015-01-26-1002.png))" %}![Sequencer FSM Relays &amp; Internal Links](/img/posts/2015/2015-01-26-0013.png){% endfigure %}
 
 As usual I'll want the card to display the current state of the 
 FSM so I can see what the card is up to. 8 red LEDs show states S1' through to 
@@ -135,7 +135,7 @@ light that moves across the row of LEDs. Additionally there is a yellow LED
 above S8' which shows when the ABORT8 signal is set thereby marking the point 
 where the FSM will reset. Diagram wise it looks like this:
 
-{% figure %}![FSM LEDs](/assets/img/posts/2015/2015-01-26-0014.png){% endfigure %}
+{% figure %}![FSM LEDs](/img/posts/2015/2015-01-26-0014.png){% endfigure %}
 
 This pattern of LEDs will 
 continue when extra stages are added to the FSM in future for the instructions 
@@ -156,7 +156,7 @@ The 'W2' connections bring together the Ctrl-X, Ctrl-Y
 and Ctrl-Z busses that come in from the X, Y and Z type cards. The diagram of 
 the connectors look like this:
 
-{% figure caption:"Sequencer W2 Connectors ([larger](/assets/img/posts/2015/2015-01-26-1003.png))" %}![Sequencer W2 Connectors](/assets/img/posts/2015/2015-01-26-0015.png){% endfigure %}
+{% figure caption:"Sequencer W2 Connectors ([larger](/img/posts/2015/2015-01-26-1003.png))" %}![Sequencer W2 Connectors](/img/posts/2015/2015-01-26-0015.png){% endfigure %}
 
 This shows the 
 three right angled boxed headers — from left to right these are: 10+10 Ctrl-X 

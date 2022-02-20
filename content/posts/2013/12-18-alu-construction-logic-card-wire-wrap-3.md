@@ -19,9 +19,9 @@ case of routing the wires in the best way possible to keep things neat and out
 of the way of the relay sockets.
 
 {% figure %}
-![ALU Logic Card](/assets/img/posts/2013/2013-12-18-0000.jpg)
-![ALU Logic Card (close up 1)](/assets/img/posts/2013/2013-12-18-0001.jpg)
-![ALU Logic Card (close up 2)](/assets/img/posts/2013/2013-12-18-0002.jpg)
+![ALU Logic Card](/img/posts/2013/2013-12-18-0000.jpg)
+![ALU Logic Card (close up 1)](/img/posts/2013/2013-12-18-0001.jpg)
+![ALU Logic Card (close up 2)](/img/posts/2013/2013-12-18-0002.jpg)
 {% endfigure %}
 
 Keeping 

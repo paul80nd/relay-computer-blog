@@ -32,9 +32,9 @@ Diving straight in to the
 construction I start with soldering down the status LEDs: 
 
 {% figure %}
-![Decoder Card: Status LEDs (Top View)](/assets/img/posts/2015/2015-06-07-0000.jpg)
-![Decoder Card: Status LEDs (Rear View)](/assets/img/posts/2015/2015-06-07-0001.jpg)
-![Decoder Card: Status LEDs (Front View)](/assets/img/posts/2015/2015-06-07-0002.jpg)
+![Decoder Card: Status LEDs (Top View)](/img/posts/2015/2015-06-07-0000.jpg)
+![Decoder Card: Status LEDs (Rear View)](/img/posts/2015/2015-06-07-0001.jpg)
+![Decoder Card: Status LEDs (Front View)](/img/posts/2015/2015-06-07-0002.jpg)
 {% endfigure %}
 
 I've continued to use the same method of joining all the LED 
@@ -48,16 +48,16 @@ Next up are the
 card connectors: 
 
 {% figure %}
-![Decoder Card: Added Connectors (Card Side)](/assets/img/posts/2015/2015-06-07-0003.jpg)
-![Decoder Card: Added Connectors (Solder Side)](/assets/img/posts/2015/2015-06-07-0004.jpg)
+![Decoder Card: Added Connectors (Card Side)](/img/posts/2015/2015-06-07-0003.jpg)
+![Decoder Card: Added Connectors (Solder Side)](/img/posts/2015/2015-06-07-0004.jpg)
 {% endfigure %}
 
 Then fast forwarding a bit I add the relay sockets, 
 flyback diodes and power and ground lines: 
 
 {% figure %}
-![Decoder Card: Added Sockets and Diodes (Card Side)](/assets/img/posts/2015/2015-06-07-0005.jpg)
-![Decoder Card: Added Sockets and Diodes (Solder Side)](/assets/img/posts/2015/2015-06-07-0006.jpg)
+![Decoder Card: Added Sockets and Diodes (Card Side)](/img/posts/2015/2015-06-07-0005.jpg)
+![Decoder Card: Added Sockets and Diodes (Solder Side)](/img/posts/2015/2015-06-07-0006.jpg)
 {% endfigure %}
 
 Again, there's a temporary kynar wire linking 
@@ -70,15 +70,15 @@ LED links, 'decision tree' lines between the relays and then the inbound
 opcode bits and outbound instruction class lines: 
 
 {% figure %}
-![Decoder Card: Added LED and inter-relay wire wraps](/assets/img/posts/2015/2015-06-07-0007.jpg)
-![Decoder Card: Added Inbound and Outbound wire wraps](/assets/img/posts/2015/2015-06-07-0008.jpg)
+![Decoder Card: Added LED and inter-relay wire wraps](/img/posts/2015/2015-06-07-0007.jpg)
+![Decoder Card: Added Inbound and Outbound wire wraps](/img/posts/2015/2015-06-07-0008.jpg)
 {% endfigure %}
 
 ... and that's pretty much it. With the relays popped 
 in the card ends up looking like this: 
 
 {% figure %}
-![Decoder Card](/assets/img/posts/2015/2015-06-07-0009.jpg)
+![Decoder Card](/img/posts/2015/2015-06-07-0009.jpg)
 {% endfigure %}
 
 As usual I've 

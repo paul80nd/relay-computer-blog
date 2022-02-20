@@ -30,9 +30,9 @@ Additionally, I quite like the finished look you get with wire-wrap.
 With the header pins added the three ALU cards look like this:
 
 {% figure %}
-![ALU Logic Card](/assets/img/posts/2013/2013-12-05-0000.jpg)
-![ALU Arithmetic Card](/assets/img/posts/2013/2013-12-05-0001.jpg)
-![ALU Control Card](/assets/img/posts/2013/2013-12-05-0002.jpg)
+![ALU Logic Card](/img/posts/2013/2013-12-05-0000.jpg)
+![ALU Arithmetic Card](/img/posts/2013/2013-12-05-0001.jpg)
+![ALU Control Card](/img/posts/2013/2013-12-05-0002.jpg)
 {% endfigure %}
 
 Soldering the header 
@@ -47,7 +47,7 @@ things unconventionally so I can't moan too much. This is the underside of the
 logic card:
 
 {% figure %}
-![ALU Logic Card (solder side)](/assets/img/posts/2013/2013-12-05-0003.jpg)
+![ALU Logic Card (solder side)](/img/posts/2013/2013-12-05-0003.jpg)
 {% endfigure %}
 
 The 
@@ -60,7 +60,7 @@ but it actually just wicked away the soldering iron heat all the more. Here's
 the result:
 
 {% figure %}
-![ALU Arithmetic Card (solder side)](/assets/img/posts/2013/2013-12-05-0004.JPG)
+![ALU Arithmetic Card (solder side)](/img/posts/2013/2013-12-05-0004.JPG)
 {% endfigure %}
 
 For 

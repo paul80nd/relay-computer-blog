@@ -44,7 +44,7 @@ only be designing and implementing MOV-8 for registers A, B, C and D.
 
 Mapping the instruction out as a diagram we get the following:
 
-{% figure %}![MV8 Instruction Map](/assets/img/posts/2015/2015-03-31-0000.png){% endfigure %}
+{% figure %}![MV8 Instruction Map](/img/posts/2015/2015-03-31-0000.png){% endfigure %}
 
 The decoder handles 
 the first two bits of the instruction so it's just a case of hooking a 
@@ -53,8 +53,8 @@ register to select from / write to. In terms of timing we need the
 following:
 
 {% figure %}
-![MV8 Timing](/assets/img/posts/2015/2015-03-31-0001.png)
-![MV8 Timing Pulses](/assets/img/posts/2015/2015-03-31-0002.png)
+![MV8 Timing](/img/posts/2015/2015-03-31-0001.png)
+![MV8 Timing Pulses](/img/posts/2015/2015-03-31-0002.png)
 {% endfigure %}
 
 The first timing 
@@ -67,7 +67,7 @@ instruction.
 Taking the above three diagrams together the relay 
 design is as follows:
 
-{% figure caption:"MV8 Relays ([larger](/assets/img/posts/2015/2015-03-31-1000.png))" %}![MV8 Relays](/assets/img/posts/2015/2015-03-31-0003.png){% endfigure %}
+{% figure caption:"MV8 Relays ([larger](/img/posts/2015/2015-03-31-1000.png))" %}![MV8 Relays](/img/posts/2015/2015-03-31-0003.png){% endfigure %}
 
 The relays are made up of 
 three distinct areas of functionality:
@@ -109,7 +109,7 @@ Mapping the instruction
 out as a diagram we get the following:
 
 {% figure %}
-![ALU Instruction Map](/assets/img/posts/2015/2015-03-31-0004.png)
+![ALU Instruction Map](/img/posts/2015/2015-03-31-0004.png)
 {% endfigure %}
 
 The decoder handles 
@@ -119,8 +119,8 @@ function code) so the only combinatorial logic needed in the control relays is
 which register to write to. In terms of timing we need the following:
 
 {% figure %}
-![ALU Timing](/assets/img/posts/2015/2015-03-31-0005.png)
-![ALU Timing Pulses](/assets/img/posts/2015/2015-03-31-0006.png)
+![ALU Timing](/img/posts/2015/2015-03-31-0005.png)
+![ALU Timing Pulses](/img/posts/2015/2015-03-31-0006.png)
 {% endfigure %} 
 
 The first timing 
@@ -134,7 +134,7 @@ needed for this instruction.
 Taking the above three diagrams 
 together the relay design is as follows:
 
-{% figure caption:"ALU Relays ([larger](/assets/img/posts/2015/2015-03-31-1001.png))" %}![ALU Relays](/assets/img/posts/2015/2015-03-31-0007.png){% endfigure %}
+{% figure caption:"ALU Relays ([larger](/img/posts/2015/2015-03-31-1001.png))" %}![ALU Relays](/img/posts/2015/2015-03-31-0007.png){% endfigure %}
 
 The relays are made up of 
 four distinct areas of functionality:
@@ -174,7 +174,7 @@ value between -16 and 15 can be loaded up directly from the instruction.
 Mapping the instruction out as a diagram we get the following:
 
 {% figure %}
-![SET Instruction Map](/assets/img/posts/2015/2015-03-31-0008.png)
+![SET Instruction Map](/img/posts/2015/2015-03-31-0008.png)
 {% endfigure %}
 
 The decoder handles 
@@ -183,8 +183,8 @@ directly to the data bus there's only the combinatorial logic of which
 register to write to left to do. In terms of timing we need the following:
 
 {% figure %}
-![SET Timing](/assets/img/posts/2015/2015-03-31-0009.png)
-![SET Timing Pulses](/assets/img/posts/2015/2015-03-31-0010.png)
+![SET Timing](/img/posts/2015/2015-03-31-0009.png)
+![SET Timing Pulses](/img/posts/2015/2015-03-31-0010.png)
 {% endfigure %}
 
 The first timing 
@@ -196,7 +196,7 @@ pulses P-D and P-E provide everything needed for this instruction.
 
 Taking the above three diagrams together the relay design is as follows:
 
-{% figure caption:"SET Relays ([larger](/assets/img/posts/2015/2015-03-31-1002.png))" %}![SET Relays](/assets/img/posts/2015/2015-03-31-0011.png){% endfigure %}
+{% figure caption:"SET Relays ([larger](/img/posts/2015/2015-03-31-1002.png))" %}![SET Relays](/img/posts/2015/2015-03-31-0011.png){% endfigure %}
 
 The relays are made up of 
 three distinct areas of functionality:
@@ -238,7 +238,7 @@ The relay that
 controls the CHAT signal is very simple:
 
 {% figure %}
-![CHAT Relay](/assets/img/posts/2015/2015-03-31-0012.png){% endfigure %}
+![CHAT Relay](/img/posts/2015/2015-03-31-0012.png){% endfigure %}
 
 ... when pulse D is active 
 the power supply (V) is connected to the CHAT line.

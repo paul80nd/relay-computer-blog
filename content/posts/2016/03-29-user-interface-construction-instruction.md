@@ -28,7 +28,7 @@ to apply the legends to the new buttons and indicators that I'd be adding to
 the two display cards. Here's a close up picture:
 
 {% figure %}
-![Close up of additional buttons and indicators](/assets/img/posts/2016/2016-03-29-0000.jpg)
+![Close up of additional buttons and indicators](/img/posts/2016/2016-03-29-0000.jpg)
 {% endfigure %}
 
 The buttons at the top are (from left to right) 
@@ -42,8 +42,8 @@ With the additional buttons installed on
 Display A we get the following:
 
 {% figure %}
-![Display A Card (front)](/assets/img/posts/2016/2016-03-29-0001.jpg)
-![Display A Card (back)](/assets/img/posts/2016/2016-03-29-0002.jpg)
+![Display A Card (front)](/img/posts/2016/2016-03-29-0001.jpg)
+![Display A Card (back)](/img/posts/2016/2016-03-29-0002.jpg)
 {% endfigure %}
 
 Previously on this card the Address Switch Select (sel AS) 
@@ -54,8 +54,8 @@ Adding the new indicators to Display B we get the
 following:
 
 {% figure %}
-![Display B Card (front)](/assets/img/posts/2016/2016-03-29-0003.jpg)
-![Display B Card (back)](/assets/img/posts/2016/2016-03-29-0004.jpg)
+![Display B Card (front)](/img/posts/2016/2016-03-29-0003.jpg)
+![Display B Card (back)](/img/posts/2016/2016-03-29-0004.jpg)
 {% endfigure %}
 
 The instruction register op code is shown at the top right 
@@ -73,7 +73,7 @@ display cards installed back in the upper enclosure it looks like
 this:
 
 {% figure %}
-![Upper Enclosure with Display Cards](/assets/img/posts/2016/2016-03-29-0005.jpg)
+![Upper Enclosure with Display Cards](/img/posts/2016/2016-03-29-0005.jpg)
 {% endfigure %}
 
 With the display cards updated the next job was to hook up 
@@ -83,14 +83,14 @@ tested together. The switches are soldered up to some ribbon cable much the
 same way the left hand primary switches were:
 
 {% figure %}
-![Right hand Primary Switches (rear view)](/assets/img/posts/2016/2016-03-29-0006.jpg)
+![Right hand Primary Switches (rear view)](/img/posts/2016/2016-03-29-0006.jpg)
 {% endfigure %}
 
 The upper enclosure as a whole then looks like 
 this:
 
 {% figure %}
-![Upper Enclosure (rear)](/assets/img/posts/2016/2016-03-29-0007.jpg)
+![Upper Enclosure (rear)](/img/posts/2016/2016-03-29-0007.jpg)
 {% endfigure %}
 
 There's quite a lot of ribbon cables coming off the display 
@@ -98,7 +98,7 @@ cards now and these all need wiring out on the display distribution
 card:
 
 {% figure %}
-![Display Distribution Card](/assets/img/posts/2016/2016-03-29-0008.jpg)
+![Display Distribution Card](/img/posts/2016/2016-03-29-0008.jpg)
 {% endfigure %}
 
 There's quite a bit added to this card. Firstly, the 
@@ -117,7 +117,7 @@ operation (sel DS). Speaking of which ... here is the updated auxiliary
 control card:
 
 {% figure %}
-![Auxiliary Control Card](/assets/img/posts/2016/2016-03-29-0009.jpg)
+![Auxiliary Control Card](/img/posts/2016/2016-03-29-0009.jpg)
 {% endfigure %}
 
 Not too much has changed here ... the right hand primary 

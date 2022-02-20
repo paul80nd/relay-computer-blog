@@ -25,7 +25,7 @@ had to settle for workshop/guest room being as the house isn't solely mine.
 Anyway, with that back room now fully decorated I was keen to get a workbench 
 of some kind in there. The space I had to work with was as follows:
 
-{% figure %}![Back room space for workbench](/assets/img/posts/2015/2015-05-04-0000.jpg){% endfigure %}
+{% figure %}![Back room space for workbench](/img/posts/2015/2015-05-04-0000.jpg){% endfigure %}
 
 As you can see it's not the biggest space and to make things even 
 more complicated there's only slightly more than 30cm depth available on the 
@@ -62,7 +62,7 @@ The following day I put the IVAR
 shelves up (as IKEA intended) to see if my design will still be plausible. 
 This is what it looked like:
 
-{% figure %}![IKEA IVAR shelves](/assets/img/posts/2015/2015-05-04-0001.jpg){% endfigure %}
+{% figure %}![IKEA IVAR shelves](/img/posts/2015/2015-05-04-0001.jpg){% endfigure %}
 
 Generally 
 the shelves look to fit in OK although I had miscalculated the position of the 
@@ -76,7 +76,7 @@ With the basic
 frame in place it was time to get hacking ... and I can only apologise to 
 Ingvar Kamprad for what I did to his IVAR shelves ...
 
-{% figure %}![IVAR shelves post-modification](/assets/img/posts/2015/2015-05-04-0002.jpg){% endfigure %}
+{% figure %}![IVAR shelves post-modification](/img/posts/2015/2015-05-04-0002.jpg){% endfigure %}
 
 If you compare the two pictures before and after you can see that 
 I chopped down the side frames removing the front upper half and two cross 
@@ -96,7 +96,7 @@ bridging piece was just an IVAR shelf that I chopped down and sculpted a curve
 in to. With that all done and with a few accessories thrown in the bench ends 
 up looking like this:
 
-{% figure %}![Completed workbench](/assets/img/posts/2015/2015-05-04-0003.jpg){% endfigure %}
+{% figure %}![Completed workbench](/img/posts/2015/2015-05-04-0003.jpg){% endfigure %}
 
 The 
 relay computer as it currently stands sits snuggly (by accident rather than by 
@@ -112,7 +112,7 @@ happy with the resulting workbench. It's fairly sturdy, I didn't have to trash
 the walls to put it in and I've got enough room to work and store things. 
 Here's a final picture of the workbench 'in use':
 
-{% figure %}![Workbench in use](/assets/img/posts/2015/2015-05-04-0004.jpg){% endfigure %}
+{% figure %}![Workbench in use](/img/posts/2015/2015-05-04-0004.jpg){% endfigure %}
 
 ... and 
 yes, finally, what you see here are the beginnings of the instruction register 

@@ -31,9 +31,9 @@ Here's the result of this
 evenings work:
 
 {% figure %}
-![ALU Arithmetic Card](/assets/img/posts/2014/2014-01-06-0000.jpg)
-![ALU Arithmetic Card (closer up)](/assets/img/posts/2014/2014-01-06-0001.jpg)
-![ALU Arithmetic Card (solder side)](/assets/img/posts/2014/2014-01-06-0002.jpg)
+![ALU Arithmetic Card](/img/posts/2014/2014-01-06-0000.jpg)
+![ALU Arithmetic Card (closer up)](/img/posts/2014/2014-01-06-0001.jpg)
+![ALU Arithmetic Card (solder side)](/img/posts/2014/2014-01-06-0002.jpg)
 {% endfigure %}
 
 The 

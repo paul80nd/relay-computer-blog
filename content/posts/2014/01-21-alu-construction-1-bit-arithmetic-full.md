@@ -24,19 +24,19 @@ As a quick reminder here's the diagram for the 1-bit full
 adder:
 
 {% figure %}
-![](/assets/img/posts/2014/2014-01-21-0000.png)
+![](/img/posts/2014/2014-01-21-0000.png)
 {% endfigure %}
 
 Reproducing this on the arithmetic card gives the following (on the 
 front of the card):
 
 {% figure %}
-![ALU Arithmetic Card (1-bit close up)](/assets/img/posts/2014/2014-01-21-0001.jpg)
+![ALU Arithmetic Card (1-bit close up)](/img/posts/2014/2014-01-21-0001.jpg)
 {% endfigure %}
 
 and the following (on the back of the card):
 
-{% figure %}![ALU Arithmetic Card (1-bit close up solder side)](/assets/img/posts/2014/2014-01-21-0002.jpg){% endfigure %}
+{% figure %}![ALU Arithmetic Card (1-bit close up solder side)](/img/posts/2014/2014-01-21-0002.jpg){% endfigure %}
 
 To be able to test the circuit above I needed to temporarily hook 
 up the positive and ground power (through 'cunning' use of crocodile clips) 
@@ -48,12 +48,12 @@ works as intended.
 Here's a picture of the circuit with relays 
 inserted and inputs/power attached:
 
-{% figure %}![ALU Arithmetic Card (1-bit close up with relays)](/assets/img/posts/2014/2014-01-21-0003.jpg){% endfigure %}
+{% figure %}![ALU Arithmetic Card (1-bit close up with relays)](/img/posts/2014/2014-01-21-0003.jpg){% endfigure %}
 
 and another showing the whole arithmetic card along with the test 
 board which supplies the inputs the circuit requires:
 
-{% figure %}![ALU Arithmetic Card with Test Board](/assets/img/posts/2014/2014-01-21-0004.jpg){% endfigure %}
+{% figure %}![ALU Arithmetic Card with Test Board](/img/posts/2014/2014-01-21-0004.jpg){% endfigure %}
 
 This time around the first four red buttons are hooked up to (from 
 the left, in order): Input B, Input C, Carry In, ~Carry In. As usual, I've 

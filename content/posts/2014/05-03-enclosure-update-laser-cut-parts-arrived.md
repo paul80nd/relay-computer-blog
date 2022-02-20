@@ -16,9 +16,9 @@ parts I ordered to move my enclosure construction forward have finally
 arrived.
 
 {% figure %}
-![Laser cut parts in packaging](/assets/img/posts/2014/2014-05-03-0000.jpg)
-![Card bay floor/ceiling panel (top side)](/assets/img/posts/2014/2014-05-03-0001.JPG)
-![Card bay floor/ceiling panel (bottom side)](/assets/img/posts/2014/2014-05-03-0002.JPG)
+![Laser cut parts in packaging](/img/posts/2014/2014-05-03-0000.jpg)
+![Card bay floor/ceiling panel (top side)](/img/posts/2014/2014-05-03-0001.JPG)
+![Card bay floor/ceiling panel (bottom side)](/img/posts/2014/2014-05-03-0002.JPG)
 {% endfigure %}
 
 The picture on the left is viewing the part from the top side and 
@@ -33,15 +33,15 @@ like.
 There's eight of the card bay floor/ceiling parts so stacked 
 in a pile and fanned out they look like this:
 
-{% figure %}![8 x Card bay floor/ceiling parts](/assets/img/posts/2014/2014-05-03-0003.JPG){% endfigure %}
+{% figure %}![8 x Card bay floor/ceiling parts](/img/posts/2014/2014-05-03-0003.JPG){% endfigure %}
 
 That's 
 it for the plywood parts ... everything else is made of acrylic. First up on 
 the plastic parts are these:
 
 {% figure %}
-![Lower enclosure side panels](/assets/img/posts/2014/2014-05-03-0004.JPG)
-![Upper enclosure side panels](/assets/img/posts/2014/2014-05-03-0005.jpg)
+![Lower enclosure side panels](/img/posts/2014/2014-05-03-0004.JPG)
+![Upper enclosure side panels](/img/posts/2014/2014-05-03-0005.jpg)
 {% endfigure %}
 
 On the left 
@@ -61,7 +61,7 @@ In addition to the
 side panels above there are two similar parts which fit the front and back 
 doors of the lower enclosure:
 
-{% figure %}![Front/back door panels](/assets/img/posts/2014/2014-05-03-0006.jpg){% endfigure %}
+{% figure %}![Front/back door panels](/img/posts/2014/2014-05-03-0006.jpg){% endfigure %}
 
 As you can no 
 doubt see in this photo all the acrylic parts are covered in a lot of dust 
@@ -78,13 +78,13 @@ panels have some special detailing on the corners that allow them to fit
 around the brackets that hold the door together. Close up they look like 
 this:
 
-{% figure %}![Enclosure door panel (close up)](/assets/img/posts/2014/2014-05-03-0007.jpg){% endfigure %}
+{% figure %}![Enclosure door panel (close up)](/img/posts/2014/2014-05-03-0007.jpg){% endfigure %}
 
 Finally 
 I've got my 'special' panel which will be used on the upper enclosure to house 
 the main input switches:
 
-{% figure %}![Switch Panel](/assets/img/posts/2014/2014-05-03-0008.JPG){% endfigure %}
+{% figure %}![Switch Panel](/img/posts/2014/2014-05-03-0008.JPG){% endfigure %}
 
 This is probably the most exciting part for me and it put a big 
 smile on my face as I saw it for the first time (even though it's from the 
@@ -97,7 +97,7 @@ underside the same is true for engraving on acrylic parts on the top side
 (although they get more of a 'smudgy mark'). Here's a close up of the switch 
 panel:
 
-{% figure %}![Switch Panel (close up)](/assets/img/posts/2014/2014-05-03-0009.jpg){% endfigure %}
+{% figure %}![Switch Panel (close up)](/img/posts/2014/2014-05-03-0009.jpg){% endfigure %}
 
 You might have to click the picture above and take a look at the 
 larger version to see the smudge marks more clearly but it has the effect of 

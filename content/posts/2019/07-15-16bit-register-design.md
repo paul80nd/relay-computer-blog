@@ -44,7 +44,7 @@ So, a fair bit of preamble there then but that gets me to the point where I'm no
 My goal is to design a card that has two 8-bit registers that read and write from/to the data bus (much like the registers
 built so far) but that can also be paired up in to a 16-bit register that gates to/from the address bus. Looking back to the design of the 8-bit A/D register we ended up with this:
 
-{% figure caption:"Complete AD Register ([larger](/assets/img/posts/2014/2014-04-20-1004.png))" %}![Complete AD Register](/assets/img/posts/2014/2014-04-20-0004.png){% endfigure %}
+{% figure caption:"Complete AD Register ([larger](/img/posts/2014/2014-04-20-1004.png))" %}![Complete AD Register](/img/posts/2014/2014-04-20-0004.png){% endfigure %}
 
 This schematic was produced in OmniGraffle on my Mac and is, to all intents and purposes, just a picture. What makes EasyEDA
 such a leap forward is that doing the schematic design in that captures what the components actually are and how they connect
@@ -52,7 +52,7 @@ to each other. This makes it easy to produce lists of parts and ultimately to tr
 getting ahead of myself. I need to reproduce the OmniGraffle design in EasyEDA ... let's start with the most basic element ...
 a 1-bit register unit:
 
-{% figure %}![1-bit Register Unit](/assets/img/posts/2019/2019-07-15-0000.png){% endfigure %}
+{% figure %}![1-bit Register Unit](/img/posts/2019/2019-07-15-0000.png){% endfigure %}
 
 R0 in the schematic is the input/output to the unit. Supplying power to this line activates the relay and then as long as
 power is supplied to the Hold line that relay will be kept activated. Dropping the Hold line resets the relay. All the
@@ -62,37 +62,37 @@ relay coil to absorb the spike when the relay is deactivated.
 
 From this basic 1-bit register design it's fairly trivial to connect eight units together to make an 8-bit register:
 
-{% figure caption:"8-bit Register Unit ([larger](/assets/img/posts/2019/2019-07-15-1001.png))" %}![8-bit Register Unit](/assets/img/posts/2019/2019-07-15-0001.png){% endfigure %}
+{% figure caption:"8-bit Register Unit ([larger](/img/posts/2019/2019-07-15-1001.png))" %}![8-bit Register Unit](/img/posts/2019/2019-07-15-0001.png){% endfigure %}
 
 Note that the Hold line is shared across all the relay 'bits' so that the register can be held/cleared as one but that each
 individual 'bit' has its own input/output line R0-R7. To get two 8-bit registers we just double up the design:
 
-{% figure caption:"2 x 8-bit Register Units ([larger](/assets/img/posts/2019/2019-07-15-1002.png))" %}![2 x 8-bit Register Units](/assets/img/posts/2019/2019-07-15-0002.png){% endfigure %}
+{% figure caption:"2 x 8-bit Register Units ([larger](/img/posts/2019/2019-07-15-1002.png))" %}![2 x 8-bit Register Units](/img/posts/2019/2019-07-15-0002.png){% endfigure %}
 
 The data input/output lines continue on from R8 thru RF but note that the hold line is different. The first 8-bits use a HoldL line and the next 8-bits use a HoldH line. This refers to High and Low hold lines which allows either the high (R8-RF)
 or low (R0-R7) register to be held or cleared as required. Effectively each 8-bit register can be loaded/cleared independently
 as and where required. We'll come back to the control circuitry that drives this in a bit but let's look at the bus gating
 next:
 
-{% figure %}![1-bit Gating](/assets/img/posts/2019/2019-07-15-0003.png){% endfigure %}
+{% figure %}![1-bit Gating](/img/posts/2019/2019-07-15-0003.png){% endfigure %}
 
 In this case we're looking at the gating for register bits R6 and R7 (the highest bits of the low 8-bit register). R6 and R7
 connect to the register bits in the schematics above and the gating relays allow that input/output line to be gated to either
 D6 and D7 of the data bus or A6 and A7 of the address bus. EnL enables the gating to the data bus and the line at the bottom
 of this schematic (EnHL) gates to the address bus. Again, we can extend this design out to gate a full 8-bit register:
 
-{% figure caption:"8-bit Gating ([larger](/assets/img/posts/2019/2019-07-15-1004.png))" %}![8-bit Gating](/assets/img/posts/2019/2019-07-15-0004.png){% endfigure %}
+{% figure caption:"8-bit Gating ([larger](/img/posts/2019/2019-07-15-1004.png))" %}![8-bit Gating](/img/posts/2019/2019-07-15-0004.png){% endfigure %}
 
 ... and onwards to gate the two 8-bit registers as independant units or together as a single 16-bit register ...
 
-{% figure caption:"2 x 8-bit Gating ([larger](/assets/img/posts/2019/2019-07-15-1005.png))" %}![2 x 8-bit Gating](/assets/img/posts/2019/2019-07-15-0005.png){% endfigure %}
+{% figure caption:"2 x 8-bit Gating ([larger](/img/posts/2019/2019-07-15-1005.png))" %}![2 x 8-bit Gating](/img/posts/2019/2019-07-15-0005.png){% endfigure %}
 
 Note that EnL (lower 8-bit register) gates R0 - R7 to D0 - D7, as you'd expect, but EnH (upper 8-bit register) gates R8 - RF also to D0 - D7. This makes sense because there's only one 8-bit data bus and if you wanted to load the full 16-bit register
 from there you'd need to load the lower 8-bits first and then the upper 8-bits. Of course, there only needs to be one EnHL for
 the 16-bit address bus which gates A0-AF to R0-RF. Right, that's the register relays and the gating ... let's return to the
 control circuitry:
 
-{% figure %}![Low Register Control](/assets/img/posts/2019/2019-07-15-0006.png){% endfigure %}
+{% figure %}![Low Register Control](/img/posts/2019/2019-07-15-0006.png){% endfigure %}
 
 This handles the HoldL and EnL lines we've already seen for the lower 8-bit register. The inputs to this circuit are SelL to
 write to the data bus and LdL to load from the data bus. Selecting the register to write to the data bus is very easy ... we
@@ -102,13 +102,13 @@ bus. Interestingly here the HoldL comes in from HoldHL and this is so that by de
 value and if we want to load one independently we need to veto that hold. If both registers are being loaded together then the
 HoldHL line is dropped which achieves the same as far as holding is concerned. We can now repeat this design as you'd expect:
 
-{% figure caption:"Register Control ([larger](/assets/img/posts/2019/2019-07-15-1007.png))" %}![Register Control](/assets/img/posts/2019/2019-07-15-0007.png){% endfigure %}
+{% figure caption:"Register Control ([larger](/img/posts/2019/2019-07-15-1007.png))" %}![Register Control](/img/posts/2019/2019-07-15-0007.png){% endfigure %}
 
 So that gives us the three main components of a register: storage bits, gating and control. We finally need a way to connect
 the register to the outside World and that's where the card connectors come in. In the schematic they're represented as
 follows:
 
-{% figure caption:"Card Connectors ([larger](/assets/img/posts/2019/2019-07-15-1008.png))" %}![Card Connectors](/assets/img/posts/2019/2019-07-15-0008.png){% endfigure %}
+{% figure caption:"Card Connectors ([larger](/img/posts/2019/2019-07-15-1008.png))" %}![Card Connectors](/img/posts/2019/2019-07-15-0008.png){% endfigure %}
 
 This now brings us to one final minor problem. I want to make three 16-bit register cards however there's something stopping
 them from being created identically. The three registers will be M (M1 and M2), J (J1 and J2) and XY (X and Y). The difference
@@ -116,7 +116,7 @@ here is that each will respond to different control signals to ensure that if yo
 you don't impact to lower 8-bit X register. I need some way of 'configuring' each register card to make it M, J or XY
 specific. The simplest solution here is to have a jumper block that I can set a wirewrap link on:
 
-{% figure %}![Configuration Jumpers](/assets/img/posts/2019/2019-07-15-0009.png){% endfigure %}
+{% figure %}![Configuration Jumpers](/img/posts/2019/2019-07-15-0009.png){% endfigure %}
 
 ... and with that we have a complete design for a 16-bit register with independently controllable upper and lower 8-bit
 'sub-registers'. As usual there's a version of the full design [here in PDF format]({% link /assets/pdf/register-jmxy.pdf %}). In my next post I'll go through how this schematic becomes a PCB design that can be sent off to JLCPCB for manufacturing.

@@ -22,7 +22,7 @@ So, diving straight in, here is what eight of the
 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad 
 board (excluding wire lines):
 
-{% figure caption:"8 x 1-bit Arithmetic Unit Relays ([larger](/assets/img/posts/2013/2013-11-17-1000.png))" %}![8 x 1-bit Arithmetic Unit Relays](/assets/img/posts/2013/2013-11-17-0000.png){% endfigure %}
+{% figure caption:"8 x 1-bit Arithmetic Unit Relays ([larger](/img/posts/2013/2013-11-17-1000.png))" %}![8 x 1-bit Arithmetic Unit Relays](/img/posts/2013/2013-11-17-0000.png){% endfigure %}
 
 As 
 before (with the Logic Unit card) things are a bit on the tight side but 
@@ -34,7 +34,7 @@ Registers etc). With these additional relays added we get the following (this
 time including internal wire links in the 1-bit Arithmetic Units and result 
 links between the Arithmetic Units and the gating relays):
 
-{% figure caption:"8 x 1-bit Arithmetic + Gating Relays ([larger](/assets/img/posts/2013/2013-11-17-1001.png))" %}![8 x 1-bit Arithmetic + Gating Relays](/assets/img/posts/2013/2013-11-17-0001.png){% endfigure %}
+{% figure caption:"8 x 1-bit Arithmetic + Gating Relays ([larger](/img/posts/2013/2013-11-17-1001.png))" %}![8 x 1-bit Arithmetic + Gating Relays](/img/posts/2013/2013-11-17-0001.png){% endfigure %}
 
 This would now be enough relays to handle adding to 8-bit numbers 
 together however the Arithmetic Unit has two modes: Add and Increment. The 
@@ -43,7 +43,7 @@ existing design we need to disconnect the C input when incrementing and set
 the carry in bit (to act as the +1). With the C input gating relays and the 
 carry in relay we get the following:
 
-{% figure caption:"8 x 1-bit Arithmetic + Input/Output Gating Relays ([larger](/assets/img/posts/2013/2013-11-17-1002.png))" %}![8 x 1-bit Arithmetic + Input/Output Gating Relays](/assets/img/posts/2013/2013-11-17-0002.png){% endfigure %}
+{% figure caption:"8 x 1-bit Arithmetic + Input/Output Gating Relays ([larger](/img/posts/2013/2013-11-17-1002.png))" %}![8 x 1-bit Arithmetic + Input/Output Gating Relays](/img/posts/2013/2013-11-17-0002.png){% endfigure %}
 
 So, that's it for relays on this card — slightly less than on the 
 Logic Unit card but still quite densely packed in there (and all on a 0.1 inch 
@@ -62,7 +62,7 @@ yellow for inputs or control signals and green for output control signals or
 state. Diagram wise then it looks like this:
 
 {% figure %}
-![Result/Control Display LEDs](/assets/img/posts/2013/2013-11-17-0003.png)
+![Result/Control Display LEDs](/img/posts/2013/2013-11-17-0003.png)
 {% endfigure %}
 
 Each block in the diagram 
@@ -77,7 +77,7 @@ cable can be passed through all the sockets (or I can use another pad board as
 a backbone for connecting several cards together). The diagram of the 
 connectors look like this:
 
-{% figure %}![Arithmetic Unit Connectors](/assets/img/posts/2013/2013-11-17-0004.png){% endfigure %}
+{% figure %}![Arithmetic Unit Connectors](/img/posts/2013/2013-11-17-0004.png){% endfigure %}
 
 This shows the four right angled 
 boxed headers (identical to the ones used on the Logic Unit) - from left to 
@@ -117,7 +117,7 @@ from the Carry Condition Register itself.
 So, finally, wiring 
 everything together we get the following jumble:
 
-{% figure caption:"ALU - Complete Arithmetic Unit ([larger](/assets/img/posts/2013/2013-11-17-1003.png))" %}![ALU - Complete Arithmetic Unit](/assets/img/posts/2013/2013-11-17-0005.png){% endfigure %}
+{% figure caption:"ALU - Complete Arithmetic Unit ([larger](/img/posts/2013/2013-11-17-1003.png))" %}![ALU - Complete Arithmetic Unit](/img/posts/2013/2013-11-17-0005.png){% endfigure %}
 
 This 
 diagram includes everything mentioned so far along with the power supply and 

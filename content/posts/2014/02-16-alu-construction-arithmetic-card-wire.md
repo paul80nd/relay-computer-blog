@@ -23,8 +23,8 @@ Here's a couple of pictures showing
 the card in its current state of progress:
 
 {% figure %}
-![ALU Arithmetic Card](/assets/img/posts/2014/2014-02-16-0000.jpg)
-![ALU Arithmetic Card (close up)](/assets/img/posts/2014/2014-02-16-0001.jpg)
+![ALU Arithmetic Card](/img/posts/2014/2014-02-16-0000.jpg)
+![ALU Arithmetic Card (close up)](/img/posts/2014/2014-02-16-0001.jpg)
 {% endfigure %}
 
 All the 

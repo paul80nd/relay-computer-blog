@@ -76,7 +76,7 @@ between the XY, M, J and PC registers ... this'll also come later and will be ne
 Given what's already used in the above table we can prefix our GOTO class with `11` leaving room for other upcoming
 instructions starting with `10`. With all our instruction classes to-date we get the following decoder mapping:
 
-{% figure %}![Decoder Map](/assets/img/posts/2019/2019-09-23-0000.png){% endfigure %}
+{% figure %}![Decoder Map](/img/posts/2019/2019-09-23-0000.png){% endfigure %}
 
 Using the `11` prefix gives us 1-bit spare in the opcode which we can use to implement an additional useful operation. Following every GOTO opcode there'll need to be a 16-bit address which will be loaded in to the J register and then if a
 jump is required that value is copied into the program counter making execution carry on elsewhere in the program. What

@@ -24,7 +24,7 @@ Viewed from the front the computer now looks like
 this:
 
 {% figure %}
-![Relay Computer (front view)](/assets/img/posts/2016/2016-05-24-0000.jpg)
+![Relay Computer (front view)](/img/posts/2016/2016-05-24-0000.jpg)
 {% endfigure %}
 
 I've put together a new video to mark this construction milestone 

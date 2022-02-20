@@ -21,9 +21,9 @@ see if/how it works. Here of some pictures of that single bit all soldered in
 and wired up:
 
 {% figure %}
-![ALU Logic Card with first bit completed](/assets/img/posts/2013/2013-12-07-0000.jpg)
-![ALU Logic Card first bit close up](/assets/img/posts/2013/2013-12-07-0001.jpg)
-![ALU Logic Card first bit (solder side)](/assets/img/posts/2013/2013-12-07-0002.jpg)
+![ALU Logic Card with first bit completed](/img/posts/2013/2013-12-07-0000.jpg)
+![ALU Logic Card first bit close up](/img/posts/2013/2013-12-07-0001.jpg)
+![ALU Logic Card first bit (solder side)](/img/posts/2013/2013-12-07-0002.jpg)
 {% endfigure %}
 
 This is the first bit logic unit out of 8 in total and effectively 

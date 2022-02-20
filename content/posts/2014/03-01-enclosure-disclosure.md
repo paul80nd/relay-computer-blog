@@ -48,16 +48,16 @@ A cross section of the 20 profile along with a 20R profile which has a rounded
 edge looks like this:
 
 {% figure %}
-![20x20mm Aluminium Profile cross section](/assets/img/posts/2014/2014-03-01-0000.png)
-![20R Aluminium Profile cross section](/assets/img/posts/2014/2014-03-01-0001.png)
+![20x20mm Aluminium Profile cross section](/img/posts/2014/2014-03-01-0000.png)
+![20R Aluminium Profile cross section](/img/posts/2014/2014-03-01-0001.png)
 {% endfigure %}
 
 and when extruded to 100mm 
 looks like this (again, using the excellent SketchUp software):
 
 {% figure %}
-![20 and 20R aluminium profile at 100mm length](/assets/img/posts/2014/2014-03-01-0002.png)
-![20 and 20R aluminium profile at 100mm length (back view)](/assets/img/posts/2014/2014-03-01-0003.png)
+![20 and 20R aluminium profile at 100mm length](/img/posts/2014/2014-03-01-0002.png)
+![20 and 20R aluminium profile at 100mm length (back view)](/img/posts/2014/2014-03-01-0003.png)
 {% endfigure %}
  
 There's many ways of joining profile together but by far 
@@ -72,7 +72,7 @@ to five cards. Based on this the basic frame of the enclosure looks like
 this:
 
 {% figure %}
-![Enclosure basic frame](/assets/img/posts/2014/2014-03-01-0004.png){% endfigure %}
+![Enclosure basic frame](/img/posts/2014/2014-03-01-0004.png){% endfigure %}
 
 Each quarter of 
 the frame then has a board on the floor and ceiling (probably made of Diabond 
@@ -80,13 +80,13 @@ aluminium composite for strength and lightness) to which PCB guides are
 attached. The backplane is then secured at the back of the frame and the cards 
 are slotted in from the front. This is what it would look like:
 
-{% figure %}![Enclosure quarter with cards](/assets/img/posts/2014/2014-03-01-0005.png){% endfigure %}
+{% figure %}![Enclosure quarter with cards](/img/posts/2014/2014-03-01-0005.png){% endfigure %}
 
 With all 
 four quarters fitted with floor, ceiling, backplane and cards it would look 
 like this:
 
-{% figure %}![Enclosure with all cards fitted](/assets/img/posts/2014/2014-03-01-0006.png){% endfigure %}
+{% figure %}![Enclosure with all cards fitted](/img/posts/2014/2014-03-01-0006.png){% endfigure %}
 
 To 
 finish the enclosure off the sides are fitted with smoked acrylic panel. This 
@@ -97,14 +97,14 @@ along the joining faces. This allows easy access to the cards when needed
 whilst allowing the card LEDs to be visible when the panel is attached. Here 
 is a picture of that front panel detached:
 
-{% figure %}![Enclosure with removable panel](/assets/img/posts/2014/2014-03-01-0007.png){% endfigure %}
+{% figure %}![Enclosure with removable panel](/img/posts/2014/2014-03-01-0007.png){% endfigure %}
 
 and 
 finally here is the complete enclosure with front and rear panels attached:
 
 {% figure %}
-![Complete enclosure from front](/assets/img/posts/2014/2014-03-01-0008.png)
-![Complete enclosure from back](/assets/img/posts/2014/2014-03-01-0009.png)
+![Complete enclosure from front](/img/posts/2014/2014-03-01-0008.png)
+![Complete enclosure from back](/img/posts/2014/2014-03-01-0009.png)
 {% endfigure %}
 
 The 

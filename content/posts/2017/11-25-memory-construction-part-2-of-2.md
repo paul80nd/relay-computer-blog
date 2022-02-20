@@ -23,9 +23,9 @@ soldered down in my last post so we can jump straight to adding the card
 interconnects which pass the local address/data busses to the lower card:
 
 {% figure %}
-![Upper memory card with added card interconnects](/assets/img/posts/2017/2017-11-25-0000.jpg)
-![Upper memory card with added card interconnects (rear view)](/assets/img/posts/2017/2017-11-25-0001.jpg)
-![Upper memory card with added card interconnects (close up of rear)](/assets/img/posts/2017/2017-11-25-0002.jpg)
+![Upper memory card with added card interconnects](/img/posts/2017/2017-11-25-0000.jpg)
+![Upper memory card with added card interconnects (rear view)](/img/posts/2017/2017-11-25-0001.jpg)
+![Upper memory card with added card interconnects (close up of rear)](/img/posts/2017/2017-11-25-0002.jpg)
 {% endfigure %}
 
 These interconnects mate with the matching 
@@ -43,8 +43,8 @@ soldering down whole rows of connectors for a group of relays. Here's what
 that looks like:
 
 {% figure %}
-![New style of relay sockets (front view)](/assets/img/posts/2017/2017-11-25-0003.jpg)
-![New style of relay sockets (rear view)](/assets/img/posts/2017/2017-11-25-0004.jpg)
+![New style of relay sockets (front view)](/img/posts/2017/2017-11-25-0003.jpg)
+![New style of relay sockets (rear view)](/img/posts/2017/2017-11-25-0004.jpg)
 {% endfigure %}
 
 As you can probably see this is slightly wasteful in terms of unused sockets 
@@ -56,8 +56,8 @@ in. I can repeat this pattern to get the rest of the relay sockets soldered
 down:
 
 {% figure %}
-![Upper memory card with added sockets and wire wrap posts](/assets/img/posts/2017/2017-11-25-0005.jpg)
-![Upper memory card with added sockets and wire wrap posts (rear view)](/assets/img/posts/2017/2017-11-25-0006.jpg)
+![Upper memory card with added sockets and wire wrap posts](/img/posts/2017/2017-11-25-0005.jpg)
+![Upper memory card with added sockets and wire wrap posts (rear view)](/img/posts/2017/2017-11-25-0006.jpg)
 {% endfigure %}
 
 You may have noticed that there's no gaps left 
@@ -83,7 +83,7 @@ yellow 5V line.
 With all the soldering in place it's time to move 
 on to fitting the diodes and making a start on the wire wrap:
 
-{% figure %}![Upper memory card with added diodes and initial wire wrap](/assets/img/posts/2017/2017-11-25-0007.jpg){% endfigure %}
+{% figure %}![Upper memory card with added diodes and initial wire wrap](/img/posts/2017/2017-11-25-0007.jpg){% endfigure %}
 
 You can now see how the diodes fit in which would make 
 replacement easier in the (very) unlikely event of a component failure. The 
@@ -93,7 +93,7 @@ output to 5V and when a line of the bus is disconnected from 12V the relays
 connect the output to the 5V ground. Let's complete the incoming data bus wire 
 wrap:
 
-{% figure %}![Upper memory card with added inbound data bus gating wire wrap](/assets/img/posts/2017/2017-11-25-0008.jpg){% endfigure %}
+{% figure %}![Upper memory card with added inbound data bus gating wire wrap](/img/posts/2017/2017-11-25-0008.jpg){% endfigure %}
 
 The converted inbound data bus lines are now 
 routed through a set of gating relays so that it's only connected to the 
@@ -102,8 +102,8 @@ the 'Bus To Memory' (B2M) control line seen here in yellow. Similarly we can
 now wire up the output data bus:
 
 {% figure %}
-![Upper memory card with added data bus out gating wire wrap](/assets/img/posts/2017/2017-11-25-0009.jpg)
-![Upper memory card with added data bus out wire wrap](/assets/img/posts/2017/2017-11-25-0010.jpg)
+![Upper memory card with added data bus out gating wire wrap](/img/posts/2017/2017-11-25-0009.jpg)
+![Upper memory card with added data bus out wire wrap](/img/posts/2017/2017-11-25-0010.jpg)
 {% endfigure %}
 
 This time the green wire wrap comes off the card 
@@ -121,7 +121,7 @@ Last wire wrap
 job is to hook up the computer's address bus to the local memory address 
 bus:
 
-{% figure %}![Upper memory card with added address bus wire wrap](/assets/img/posts/2017/2017-11-25-0011.jpg){% endfigure %}
+{% figure %}![Upper memory card with added address bus wire wrap](/img/posts/2017/2017-11-25-0011.jpg){% endfigure %}
 
 This is very similar to the incoming data bus wire wrap in 
 that we convert the connected/disconnected 12V to 5V power/ground. This time 
@@ -137,7 +137,7 @@ by the way ... it could be a display unit or similar.
 Right, let's 
 pop the relays in and the upper memory card is complete:
 
-{% figure %}![Upper memory card with added relays](/assets/img/posts/2017/2017-11-25-0012.jpg){% endfigure %}
+{% figure %}![Upper memory card with added relays](/img/posts/2017/2017-11-25-0012.jpg){% endfigure %}
 
 In 
 my next post I'll connect the upper and lower cards together thereby forming 

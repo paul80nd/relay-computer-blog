@@ -29,7 +29,7 @@ just grabbed the bits from my parts box and set off soldering (sometimes it's
 nice just to get stuck in rather than planning everything ;) The result looks 
 like this:
 
-{% figure %}![Test Board](/assets/img/posts/2013/2013-12-10-0000.jpg){% endfigure %}
+{% figure %}![Test Board](/img/posts/2013/2013-12-10-0000.jpg){% endfigure %}
 
 The three rows of buttons 
 have no fixed purpose and a wire link is used to configure/connect the buttons 
@@ -39,7 +39,7 @@ notice that this picture is a bit brighter than my usual ones as it's taken in
 the daytime for a change ... quite a rate thing being as this hobby tends to 
 be a weekday evening thing. The solder side looks like this:
 
-{% figure %}![Test Board (solder side)](/assets/img/posts/2013/2013-12-10-0001.jpg){% endfigure %}
+{% figure %}![Test Board (solder side)](/img/posts/2013/2013-12-10-0001.jpg){% endfigure %}
 
 Following this 
 I later added two extra boxed headers to run the power and ground through the 
@@ -48,8 +48,8 @@ initial wire links between the buttons and the header pins. Front and back end
 up like this:
 
 {% figure %}
-![Test Board (solder side)](/assets/img/posts/2013/2013-12-10-0002.jpg)
-![Test Board](/assets/img/posts/2013/2013-12-10-0003.jpg)
+![Test Board (solder side)](/img/posts/2013/2013-12-10-0002.jpg)
+![Test Board](/img/posts/2013/2013-12-10-0003.jpg)
 {% endfigure %}
 
 Next post I'll get back to 

@@ -36,10 +36,10 @@ So, on
 with the pictures:
 
 {% figure %}
-![ALU Arithmetic Card](/assets/img/posts/2014/2014-01-17-0000.jpg)
-![ALU Arithmetic Card (close up)](/assets/img/posts/2014/2014-01-17-0001.jpg)
-![ALU Arithmetic Card (closer up)](/assets/img/posts/2014/2014-01-17-0002.jpg)
-![ALU Arithmetic Card (solder side)](/assets/img/posts/2014/2014-01-17-0003.jpg)
+![ALU Arithmetic Card](/img/posts/2014/2014-01-17-0000.jpg)
+![ALU Arithmetic Card (close up)](/img/posts/2014/2014-01-17-0001.jpg)
+![ALU Arithmetic Card (closer up)](/img/posts/2014/2014-01-17-0002.jpg)
+![ALU Arithmetic Card (solder side)](/img/posts/2014/2014-01-17-0003.jpg)
 {% endfigure %}
 
 Next 

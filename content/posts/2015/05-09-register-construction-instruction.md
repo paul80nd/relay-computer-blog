@@ -22,9 +22,9 @@ The first step is to solder down the LEDs. Here's some pictures, front
 and back, of the card following this first round of soldering:
 
 {% figure %}
-![Instruction Register card with LEDs added](/assets/img/posts/2015/2015-05-09-0000.jpg)
-![Instruction Register card with LEDs added (solder side)](/assets/img/posts/2015/2015-05-09-0001.jpg)
-![Instruction Register card with LEDs added (close up)](/assets/img/posts/2015/2015-05-09-0002.jpg)
+![Instruction Register card with LEDs added](/img/posts/2015/2015-05-09-0000.jpg)
+![Instruction Register card with LEDs added (solder side)](/img/posts/2015/2015-05-09-0001.jpg)
+![Instruction Register card with LEDs added (close up)](/img/posts/2015/2015-05-09-0002.jpg)
 {% endfigure %}
 
 I've continued the trend of removing the negative 
@@ -42,23 +42,23 @@ next job is to solder down the connectors, relay sockets and wire wrap posts.
 Front and back it looks like this:
 
 {% figure %}
-![Instruction Register card with connectors added](/assets/img/posts/2015/2015-05-09-0003.jpg)
-![Instruction Register card with connectors added (solder side)](/assets/img/posts/2015/2015-05-09-0004.jpg)
+![Instruction Register card with connectors added](/img/posts/2015/2015-05-09-0003.jpg)
+![Instruction Register card with connectors added (solder side)](/img/posts/2015/2015-05-09-0004.jpg)
 {% endfigure %}
 
 ... and then the 'flyback' and feedback protection 
 diodes come in next ...
 
 {% figure %}
-![Instruction Register card with diodes added](/assets/img/posts/2015/2015-05-09-0005.jpg)
-![Instruction Register card with diodes added (solder side)](/assets/img/posts/2015/2015-05-09-0006.jpg)
+![Instruction Register card with diodes added](/img/posts/2015/2015-05-09-0005.jpg)
+![Instruction Register card with diodes added (solder side)](/img/posts/2015/2015-05-09-0006.jpg)
 {% endfigure %}
 
 The final bit of soldering is to put down the power and 
 ground lines on the solder side of the board:
 
 {% figure %}
-![Instruction Register card with power lines added (solder side)](/assets/img/posts/2015/2015-05-09-0007.jpg)
+![Instruction Register card with power lines added (solder side)](/img/posts/2015/2015-05-09-0007.jpg)
 {% endfigure %}
 
 I've still not got around to buying in some black 
@@ -70,10 +70,10 @@ connections then laying the next family on top of that. Here's four pictures
 of the wraps building up over time:
 
 {% figure %}
-![Instruction Register wire wraps stage 1](/assets/img/posts/2015/2015-05-09-0008.jpg)
-![Instruction Register wire wraps stage 2](/assets/img/posts/2015/2015-05-09-0009.jpg)
-![Instruction Register wire wraps stage 3](/assets/img/posts/2015/2015-05-09-0010.jpg)
-![Instruction Register wire wraps stage 4](/assets/img/posts/2015/2015-05-09-0011.jpg)
+![Instruction Register wire wraps stage 1](/img/posts/2015/2015-05-09-0008.jpg)
+![Instruction Register wire wraps stage 2](/img/posts/2015/2015-05-09-0009.jpg)
+![Instruction Register wire wraps stage 3](/img/posts/2015/2015-05-09-0010.jpg)
+![Instruction Register wire wraps stage 4](/img/posts/2015/2015-05-09-0011.jpg)
 {% endfigure %}
 
 The top left picture shows the first three wraps: the black 

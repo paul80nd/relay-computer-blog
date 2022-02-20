@@ -19,8 +19,8 @@ I've admitted defeat and constructed a new backplane using a different design
 ... it looks like this:
 
 {% figure %}
-![Backplane (rear view)](/assets/img/posts/2014/2014-03-26-0000.jpg)
-![Backplane (front view)](/assets/img/posts/2014/2014-03-26-0001.jpg){% endfigure %}
+![Backplane (rear view)](/img/posts/2014/2014-03-26-0000.jpg)
+![Backplane (front view)](/img/posts/2014/2014-03-26-0001.jpg){% endfigure %}
 
 This design uses 
 stackable headers instead of regular sockets so that the pins extend out of 
@@ -34,8 +34,8 @@ fine on paper and in my head but not quite so in reality. This is where the
 original card ended up:
 
 {% figure %}
-![Old backplane](/assets/img/posts/2014/2014-03-26-0002.jpg)
-![Original backplane (close up)](/assets/img/posts/2014/2014-03-26-0003.jpg){% endfigure %}
+![Old backplane](/img/posts/2014/2014-03-26-0002.jpg)
+![Original backplane (close up)](/img/posts/2014/2014-03-26-0003.jpg){% endfigure %}
 
 In this 
 design the regular sockets have header pins soldered alongside on the back of 
@@ -55,7 +55,7 @@ salvaging the backplane but in the end decided the quickest and easiest route
 was to start a new backplane with a new design that circumvented all that 
 soldering. Here's a close up picture of the new backplane:
 
-{% figure %}![New backplane (close up)](/assets/img/posts/2014/2014-03-26-0004.jpg){% endfigure %}
+{% figure %}![New backplane (close up)](/img/posts/2014/2014-03-26-0004.jpg){% endfigure %}
 
 The power 
 connectors are simply connected with soldered wire links but everything else 
@@ -63,7 +63,7 @@ is connected with ribbon cable. These were reasonably simple to construct ...
 the main thing to watch out for was getting the spacing between the connectors 
 right. Here's another close up from the other end of the card.
 
-{% figure %}![New backplane (close up 2)](/assets/img/posts/2014/2014-03-26-0005.jpg){% endfigure %}
+{% figure %}![New backplane (close up 2)](/img/posts/2014/2014-03-26-0005.jpg){% endfigure %}
 
 There's a 
 slight oddity down this end which is due to another design anomaly. The 

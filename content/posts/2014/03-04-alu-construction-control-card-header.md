@@ -25,9 +25,9 @@ So, I'll start with some
 pictures of progress so far:
 
 {% figure %}
-![ALU Control Card](/assets/img/posts/2014/2014-03-04-0000.jpg)
-![ALU Control Card (close up)](/assets/img/posts/2014/2014-03-04-0001.jpg)
-![ALU Control Card (solder side)](/assets/img/posts/2014/2014-03-04-0002.jpg)
+![ALU Control Card](/img/posts/2014/2014-03-04-0000.jpg)
+![ALU Control Card (close up)](/img/posts/2014/2014-03-04-0001.jpg)
+![ALU Control Card (solder side)](/img/posts/2014/2014-03-04-0002.jpg)
 {% endfigure %}
 
 Looking 

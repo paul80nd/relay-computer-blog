@@ -23,7 +23,7 @@ diagram style I introduced in the last post here is what 8 of the 1-bit Logic
 Units look like all crammed on to the 55 x 40 hole pad board (excluding wire 
 links):
 
-{% figure caption:"8 x 1-bit Logic Unit Relays ([larger](/assets/img/posts/2013/2013-11-13-1000.png))" %}![8 x 1-bit Logic Unit Relays](/assets/img/posts/2013/2013-11-13-0000.png){% endfigure %}
+{% figure caption:"8 x 1-bit Logic Unit Relays ([larger](/img/posts/2013/2013-11-13-1000.png))" %}![8 x 1-bit Logic Unit Relays](/img/posts/2013/2013-11-13-0000.png){% endfigure %}
 
 Things are 
 a bit tight but as I often find when using these pad boards things magically 
@@ -39,7 +39,7 @@ relays added we get the following (this time including internal wire links in
 the 1-bit Logic Units and result links between the Logic Units and the gating 
 relays):
 
-{% figure caption:"8 x 1-bit Logic + Gating Relays ([larger](/assets/img/posts/2013/2013-11-13-1001.png))" %}![8 x 1-bit Logic + Gating Relays](/assets/img/posts/2013/2013-11-13-0001.png){% endfigure %}
+{% figure caption:"8 x 1-bit Logic + Gating Relays ([larger](/img/posts/2013/2013-11-13-1001.png))" %}![8 x 1-bit Logic + Gating Relays](/img/posts/2013/2013-11-13-0001.png){% endfigure %}
 
 Things 
 are getting a little busier now but that's it, thankfully, for relays on this 
@@ -62,7 +62,7 @@ to cram the LEDs in I'll split the bottom row of 20 in to five sets of the
 lowest bits from each result and the top 20 in to five sets of the highest 
 bits. Diagram wise it looks like this:
 
-{% figure %}![Result Display LEDs](/assets/img/posts/2013/2013-11-13-0002.png){% endfigure %}
+{% figure %}![Result Display LEDs](/img/posts/2013/2013-11-13-0002.png){% endfigure %}
 
 Each block in the diagram represents two 
 3mm LEDs stacked vertically in a plastic holder. The LEDs are pushed into the 
@@ -78,7 +78,7 @@ backbone for connecting several cards together (more on this in a later post).
 The diagram of the connectors look like this:
 
 {% figure %}
-![Logic Unit Connectors](/assets/img/posts/2013/2013-11-13-0003.png)
+![Logic Unit Connectors](/img/posts/2013/2013-11-13-0003.png)
 {% endfigure %}
 
 This shows four right angled boxed 
@@ -112,7 +112,7 @@ the pins are as follows:
 So, wiring 
 everything together we get the following assault on the eyes:
 
-{% figure caption:"ALU - Complete Logic Unit ([larger](/assets/img/posts/2013/2013-11-13-1002.png))" %}![ALU - Complete Logic Unit](/assets/img/posts/2013/2013-11-13-0004.png){% endfigure %}
+{% figure caption:"ALU - Complete Logic Unit ([larger](/img/posts/2013/2013-11-13-1002.png))" %}![ALU - Complete Logic Unit](/img/posts/2013/2013-11-13-0004.png){% endfigure %}
 
 To make things a bit easier to 
 see the completed Logic Unit design can be found [here in PDF format]({% link /assets/pdf/logic-unit.pdf %}) (so you can zoom in/out to your 

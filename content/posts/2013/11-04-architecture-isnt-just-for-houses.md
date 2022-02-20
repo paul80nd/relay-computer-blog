@@ -16,7 +16,7 @@ look at the system architecture I'll be building my computer upon ... here it
 is ...
 
 {% figure caption:"System Architecture for a Relay Computer[^1]" %}
-![System Architecture for a Relay Computer](/assets/img/posts/2013/2013-11-04-0000.png)
+![System Architecture for a Relay Computer](/img/posts/2013/2013-11-04-0000.png)
 {% endfigure %}
 
 This is a direct copy of the architecture Dr Harry Porter designed when creating 

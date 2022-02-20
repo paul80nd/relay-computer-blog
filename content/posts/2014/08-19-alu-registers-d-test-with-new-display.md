@@ -28,7 +28,7 @@ aluminium profile. Here's a Sketchup image of how the upper enclosure should
 look when sat on top of the lower enclosure:
 
 {% figure %}
-![Upper Enclosure and Lower Enclosure together](/assets/img/posts/2014/2014-08-19-0000.png)
+![Upper Enclosure and Lower Enclosure together](/img/posts/2014/2014-08-19-0000.png)
 {% endfigure %}
 
 The two blank 
@@ -43,7 +43,7 @@ Here's a
 picture of the upper enclosure powered up and working with the lower enclosure 
 sat behind it:
 
-{% figure %}![Upper Enclosure powered up](/assets/img/posts/2014/2014-08-19-0001.JPG){% endfigure %}
+{% figure %}![Upper Enclosure powered up](/img/posts/2014/2014-08-19-0001.JPG){% endfigure %}
 
 As usual 
 I've put together a video which shows everything built so far working together 

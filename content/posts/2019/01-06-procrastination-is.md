@@ -22,7 +22,7 @@ What's missing from the computer at the moment is the ability to branch and loop
 
 So, what's required to get looping and branching? There's certainly some more control circuitry required and the sequencer will need to be able to handle more complex instructions (i.e. ones that take more clock cycles to complete) but what we really need is more registers. Another six of them in fact ... M1, M2, J1, J2, X and Y. Each of these registers holds an 8-bit value just like their A, B, C and D register siblings which are already built. These six new registers form pairs (M, J and XY) creating a 16-bit value from the two 8-bits (one for the upper 8-bits and one for the lower 8-bits of the 16-bit value) which is then gated to the address bus. To help visualise this a bit better here's the overall architecture diagram taken from the video above:
 
-{% figure caption:"Architecture Diagram %}![Architecture Diagram](/assets/img/posts/2019/2019-01-06-0000.png){% endfigure %}
+{% figure caption:"Architecture Diagram %}![Architecture Diagram](/img/posts/2019/2019-01-06-0000.png){% endfigure %}
 
 To make a program loop, branch or similar we perform what's known as a 'jump'. This involves loading the address of the program line we should 'jump' to into the J register. We can then decide whether or not we need to take that jump depending on the outcome of a recent ALU operation. This where the condition registers come in (Z, Cy and S) so that we can jump if the ALU operation was zero, had the sign bit set or caused an arithmetic overflow (carry). If the jump is wanted we copy the value in the J register over to the program counter (PC) which then means the next instruction will be loaded from this new address.
 
@@ -34,6 +34,6 @@ So, back to that procrastination ... and it comes down to the repetitive nature 
 
 ... and that's where I'll pick up at my next post. In the meanwhile though I'll give you a teaser ... it involves using a technique not dissimilar to the one I used to make a friend his birthday card a couple of days ago:
 
-{% figure %}![Friend's birthday card](/assets/img/posts/2019/2019-01-06-0001.jpg){% endfigure %}
+{% figure %}![Friend's birthday card](/img/posts/2019/2019-01-06-0001.jpg){% endfigure %}
 
 Happy new year everyone :)
