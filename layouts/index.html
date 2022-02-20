@@ -42,14 +42,12 @@
     </div>
     {{ end }}
     <div class="columns is-multiline">
-      {{ range $paginator.Pages }}
-
-  {% unless post == site.posts.first %}
+      {{ range $index, $element := $paginator.Pages }}
+      {{ if or (ne $paginator.PageNumber 1) (ne $index 0) }}
       <div class="column is-half is-one-third-widescreen">
         {{ partial "home-postcard" . }}
       </div>
-  {% endunless %}
-
+      {{ end }}
       {{ end }}
 
       {% if paginator.page == 1 %}

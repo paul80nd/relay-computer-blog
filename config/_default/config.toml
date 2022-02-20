@@ -14,6 +14,7 @@ disableHugoGeneratorInject =  true
 uglyurls = true
 
 summaryLength = 25
+paginate = 12
 
 [permalinks]
   posts = '/:year/:month/:title'
