@@ -17,7 +17,7 @@ summaryLength = 25
 paginate = 12
 
 [permalinks]
-  posts = '/:year/:month/:title'
+  posts = '/:year/:month/:slug'
 
 [params]
   author = 'Paul Law'
