@@ -6,7 +6,7 @@
 
 {{ $page := .context }}
 {{ $size := .size }}
-{{ $path := $page.Site.Params.design.favicon.path | default "img/favicon/favicon.png" }}
+{{ $path := "img/icon.png" }}
 {{ $extension := lower (path.Ext $path) }}
 {{ $fullPath := printf "assets/%s" $path }}
 

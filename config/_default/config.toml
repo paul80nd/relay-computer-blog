@@ -1,5 +1,4 @@
 # The URL of the site
-# Hostname (and path) to the root, e.g. https://bep.is/
 baseURL = "https://relaycomputer.co.uk/"
 
  # The title of site
