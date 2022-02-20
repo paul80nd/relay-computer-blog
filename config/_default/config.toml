@@ -14,7 +14,6 @@ disableHugoGeneratorInject =  true
 uglyurls = true
 
 enableRobotsTXT = true
-summaryLength = 25
 paginate = 12
 
 [permalinks]
