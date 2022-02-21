@@ -49,7 +49,7 @@ the left followed by the 'W2' card on the right:
 
 These are the 
 usual right angle boxed headers used on previous cards and as before lines 
-marked '***' (or '****') are reserved for future use with lines marked '---' 
+marked '\*\*\*' (or '\*\*\*\*') are reserved for future use with lines marked '\-\-\-' 
 (or variants of) are unused.
 
 The lines on the W1 connectors are as 
