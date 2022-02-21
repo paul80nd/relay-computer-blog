@@ -17,7 +17,7 @@ blogger_orig_url: http://relaycomputer.blogspot.com/2018/01/auxiliary-control-de
 In my last post I made a start on the auxiliary control design which once 
 completed will make it much easier to load instructions in to memory - 
 effectively it's a computer within a computer. If you haven't read my 
-[previous post]({% post_url 2018-01-24-auxiliary-control-design-part-1-of-3 %}) 
+[previous post]({{< relref "/posts/2018/01-24-auxiliary-control-design-part-1-of-3" >}}) 
 then it's definitely worth doing so as this post picks up where that 
 one left off. As a reminder though we're looking to perform the following 
 operations:

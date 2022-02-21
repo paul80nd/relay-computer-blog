@@ -22,7 +22,7 @@ input from the user. Well, it's this post where that finally happens and all
 that stands in the way is a tweak to the sequencer and an addition to the 
 controller unit. Here I'll just stick to the pictures (and a video of course) 
 but the design of the sequencer/controller changes is covered in this 
-[previous post]({% post_url 2017-09-17-control-design-fetch-and-increment %}).
+[previous post]({{< relref "/posts/2017/09-17-control-design-fetch-and-increment" >}}).
 
 Right, let's start with the sequencer. We need to pull 
 off two new pulses (A and B) from the 8-cycle finite state machine and with 

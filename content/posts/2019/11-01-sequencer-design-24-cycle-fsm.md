@@ -18,7 +18,7 @@ In my last post I covered the timing chart for the GOTO class which is repeated 
 To achieve this timing I'll need a sequencer that can 'count' up to 24 (currently it only goes up to 8). Actually none of this
 is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays. If you're not familiar with how the
 current 8 cycle sequencer works then it's well worth reading
-[the post on that]({% post_url 2015-01-26-sequencer-design-8-cycle-fsm %})
+[the post on that]({{< relref "/posts/2015/01-26-sequencer-design-8-cycle-fsm" >}})
 which goes in to more detail around how the FSM (finite state machine) works.
 
 As mentioned I've already got an 8-cycle sequencer which is built using wire-wrap, sockets and the matrix boards. Given I've
