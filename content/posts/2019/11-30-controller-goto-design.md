@@ -15,7 +15,7 @@ With the sequencer now designed and constructed I'm much closer to getting branc
 hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed
 by the sequencer pulses. As a reminder here's the GOTO instruction itself:
 
-{% include pages-instruction.html instruction="GOTO" %}
+{{< instruction GOTO >}}
 
 ... and here's the associated timing chart to be implemented ...
 

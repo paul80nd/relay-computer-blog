@@ -73,9 +73,9 @@ instruction) that the computer understands and can operate from. The mnemonics
 introduced so far fall in to three broad classes: ALU, SETAB (Load Immediate) 
 and 8-bit MOVE operations. The opcodes are as follows:
 
-{% include pages-instruction.html instruction="ALU" %}
-{% include pages-instruction.html instruction="MOV8" %}
-{% include pages-instruction.html instruction="SETAB" %}
+{{< instruction ALU >}}
+{{< instruction MOV8 >}}
+{{< instruction SETAB >}}
 
 Designing these opcodes is 
 all about fitting enough options in to the bits available whilst still being 

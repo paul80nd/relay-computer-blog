@@ -25,7 +25,7 @@ The SETAB instruction loads an immediate value in to either the A or B register.
 a value loaded in ready for performing further ALU calculations. The value to be loaded is limited though due to the number of
 available bits in the instruction opcode:
 
-{% include pages-instruction.html instruction="SETAB" %}
+{{< instruction SETAB >}}
 
 Here's the associated timing chart for the SETAB instruction:
 
@@ -44,7 +44,7 @@ this page are 8-cycle and each of the instruction schematics will set AT08 when 
 The ALU instruction can perform a number of arithmetic and logic operations on the B and C registers (or just the B register
 for operations that only work on one value). The result of the operation can be placed in either the A or D register.
 
-{% include pages-instruction.html instruction="ALU" %}
+{{< instruction ALU >}}
 
 The timing chart for the ALU instruction looks like this:
 
@@ -59,7 +59,7 @@ The relay schematic for ALU uses five relays over SETAB's three but is still eas
 The 'not so aptly' named MOV8 instruction copies an 8-bit value from one register to another. If the source and destination
 register are the same then the value in that register is cleared:
 
-{% include pages-instruction.html instruction="MOV8" %}
+{{< instruction MOV8 >}}
 
 Here's the MOV-8 timing chart:
 

@@ -65,9 +65,9 @@ In designing our GOTO opcode we need to prefix it with a sequence of bits that a
 instruction it's currently dealing with. Given we've already used up 5-bits we'll need to keep the prefix breif ... here's the
 classes we have so far:
 
-{% include pages-instruction.html instruction="ALU" %}
-{% include pages-instruction.html instruction="MOV8" %}
-{% include pages-instruction.html instruction="SETAB" %}
+{{< instruction ALU >}}
+{{< instruction MOV8 >}}
+{{< instruction SETAB >}}
 
 Note that I haven't implemented the MOVE-8 class ability to use the M1/M2/X/Y registers yet ... that'll need wiring out now
 the new register cards are complete. It's also worth noting that we're missing a MOVE-16 instruction class to move values
@@ -84,7 +84,7 @@ would also be useful is to be to load the M register in a similar way (but witho
 unknown state). As it happens the sequencing and control for both these instructions are very similar so by adding a
 destination flag to specify if we load J or M with the given address we get our final opcode form:
 
-{% include pages-instruction.html instruction="GOTO" %}
+{{< instruction GOTO >}}
 
 To put that in to context here's some example GOTO opcodes:
 

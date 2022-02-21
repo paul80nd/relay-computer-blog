@@ -22,9 +22,9 @@ relays to handle the logic.
 Firstly though lets quickly recap the 
 form of those three instruction classes:
 
-{% include pages-instruction.html instruction="ALU" %}
-{% include pages-instruction.html instruction="MOV8" %}
-{% include pages-instruction.html instruction="SETAB" %}
+{{< instruction ALU >}}
+{{< instruction MOV8 >}}
+{{< instruction SETAB >}}
 
 Mapping this out as a binary tree using the highest 4 bits 
 of the opcode we get the following:

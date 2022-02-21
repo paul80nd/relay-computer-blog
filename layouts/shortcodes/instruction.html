@@ -1,0 +1,50 @@
+{{ range where $.Site.Data.instructions "class" (index .Params 0) }}
+<article class="box">
+  <div class="content">
+    <h4>{{ .title }}</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">{{ .class }}</span>
+          <span class="tag is-success">{{ .cycles }}</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-{{ if gt .prefix 0 }}link{{ else }}info{{ end }}">{{ substr .opcode 0 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 1 }}link{{ else }}info{{ end }}">{{ substr .opcode 1 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 2 }}link{{ else }}info{{ end }}">{{ substr .opcode 2 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 3 }}link{{ else }}info{{ end }}">{{ substr .opcode 3 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 4 }}link{{ else }}info{{ end }}">{{ substr .opcode 4 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 5 }}link{{ else }}info{{ end }}">{{ substr .opcode 5 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 6 }}link{{ else }}info{{ end }}">{{ substr .opcode 6 1 }}</span>
+          <span class="tag is-{{ if gt .prefix 7 }}link{{ else }}info{{ end }}">{{ substr .opcode 7 1 }}</span>
+        </div>
+        {{ if eq .class "GOTO" }}
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+        </div>
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    <pre class="is-size-7"><code>{{ .arguments | safeHTML }}</code></pre>
+  </div>
+</article>
+{{ end }}

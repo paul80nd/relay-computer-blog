@@ -23,7 +23,7 @@ this:
 
 Given the GOTO instruction ...
 
-{% include pages-instruction.html instruction="GOTO" %}
+{{< instruction GOTO >}}
 
 ... we can see that it will always start with '11' and so updating the tree diagram is simple enough. However, as I want
 to design and build this card completely I'm going to add the other instruction classes I know my computer will be needing. I

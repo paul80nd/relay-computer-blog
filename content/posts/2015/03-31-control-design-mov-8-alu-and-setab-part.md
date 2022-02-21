@@ -34,7 +34,7 @@ bus and then loads another register with that value. The instruction has the
 code 'MOV-8' but you'll often see the shorter 'MV8' used in the control
 design. The instruction takes the following form:
 
-{% include pages-instruction.html instruction="MOV8" %}
+{{< instruction MOV8 >}}
 
 So for  
 example the instruction 00010011 would copy the value contained in the C
@@ -98,7 +98,7 @@ optionally register C for operations with two inputs) placing the result on
 the data bus. The result is then placed in to either register A or D as 
 required. The instruction takes the following form:
 
-{% include pages-instruction.html instruction="ALU" %}
+{{< instruction ALU >}}
 
 So for example the instruction 10001011 would 
 perform the logic AND of the values in register B and C and place the result 
@@ -163,7 +163,7 @@ register. The instruction has the code 'SETAB' but you'll often see the
 shorter 'SET' used in the control design. The instruction takes the following 
 form:
 
-{% include pages-instruction.html instruction="SETAB" %}
+{{< instruction SETAB >}}
 
 So for example the instruction 01101101 
 would load register B with a value of 00001101 (13); the instruction 01011111 

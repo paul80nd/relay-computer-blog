@@ -14,7 +14,7 @@ thumbnail: /img/posts/2019/2019-10-06-4000.png
 
 In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here's where I got to last time:
 
-{% include pages-instruction.html instruction="GOTO" %}
+{{< instruction GOTO >}}
 
 The opcode can also be drawn in diagram form as follows:
 
