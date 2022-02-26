@@ -27,9 +27,9 @@ I was using previously.
 
 Just to finish off then here's a couple of pictures of the cards:
 
-{{< fig caption="Completed Lower Sequencer Card ([larger](/assets/img/pages/sql-1002.jpg))" >}}![Completed Lower Sequencer Card](/img/posts/2019/2019-11-20-0000.jpg){{< /fig >}}
+{{< fig caption="Completed Lower Sequencer Card ([larger](/img/pages/sql-1002.jpg))" >}}![Completed Lower Sequencer Card](/img/posts/2019/2019-11-20-0000.jpg){{< /fig >}}
 
-{{< fig caption="Completed Upper Sequencer Card ([larger](/assets/img/pages/sqh-1002.jpg))" >}}![Completed Upper Sequencer Card](/img/posts/2019/2019-11-20-0001.jpg){{< /fig >}}
+{{< fig caption="Completed Upper Sequencer Card ([larger](/img/pages/sqh-1002.jpg))" >}}![Completed Upper Sequencer Card](/img/posts/2019/2019-11-20-0001.jpg){{< /fig >}}
 
 {{< fig caption="Completed Sequencer Cards (front view) ([larger](/img/posts/2019/2019-11-20-1002.jpg))" >}}![Completed Sequencer Cards (front view)](/img/posts/2019/2019-11-20-0002.jpg){{< /fig >}}
 

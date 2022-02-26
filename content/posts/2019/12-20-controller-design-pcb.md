@@ -25,8 +25,8 @@ upper card.
 
 Schematic wise then it's just a case of splitting things out and working out which signals will need to be passed between the
 cards. Let's cut to the chase then ... you can find the consolidated
-[upper controller schematic here](/assets/pdf/controller-hi.pdf) and the
-[lower controller schematic here](/assets/pdf/controller-lo.pdf) (both in PDF format).
+[upper controller schematic here](/pdf/controller-hi.pdf) and the
+[lower controller schematic here](/pdf/controller-lo.pdf) (both in PDF format).
 In both cases the card is largely defined by the backplane connectors it uses ... W1 for the upper card (made up of address, operation and pulse busses) and W2 for the lower card (made up of Control X, Y and Z busses).
 
 For the PCB design we follow the same basic steps as before for the sequencer: place components that have to be in
@@ -92,10 +92,10 @@ visual check:
 {{< /fig >}}
 
 If you'd like to take a closer look at any of these you can find the full colour previews in PDF format
-[here for the upper card](/assets/pdf/controller-hi-pcbp.pdf) and
-[here for the lower card](/assets/pdf/controller-lo-pcbp.pdf).
-There's also another version [here for the upper card](/assets/pdf/controller-hi-pcb.pdf) and
-[here for the lower card](/assets/pdf/controller-lo-pcb.pdf) which seperates the layers out.
+[here for the upper card](/pdf/controller-hi-pcbp.pdf) and
+[here for the lower card](/pdf/controller-lo-pcbp.pdf).
+There's also another version [here for the upper card](/pdf/controller-hi-pcb.pdf) and
+[here for the lower card](/pdf/controller-lo-pcb.pdf) which seperates the layers out.
 
 That's the controller design fully complete and all I need to do now is send it off to the manufacturer and wait for the
 PCBs to arrive in the post.

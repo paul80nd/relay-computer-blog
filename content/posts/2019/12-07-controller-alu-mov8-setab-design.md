@@ -29,7 +29,7 @@ available bits in the instruction opcode:
 
 Here's the associated timing chart for the SETAB instruction:
 
-{{< fig caption="SETAB opcode timing chart ([larger](/assets/pdf/timing-setab.pdf))" >}}![SETAB opcode timing chart](/img/posts/2019/2019-12-07-0000.png){{< /fig >}}
+{{< fig caption="SETAB opcode timing chart ([larger](/pdf/timing-setab.pdf))" >}}![SETAB opcode timing chart](/img/posts/2019/2019-12-07-0000.png){{< /fig >}}
 
 This is all very straightforward to implement in relays:
 
@@ -48,7 +48,7 @@ for operations that only work on one value). The result of the operation can be 
 
 The timing chart for the ALU instruction looks like this:
 
-{{< fig caption="ALU opcode timing chart ([larger](/assets/pdf/timing-alu.pdf))" >}}![ALU opcode timing chart](/img/posts/2019/2019-12-07-0001.png){{< /fig >}}
+{{< fig caption="ALU opcode timing chart ([larger](/pdf/timing-alu.pdf))" >}}![ALU opcode timing chart](/img/posts/2019/2019-12-07-0001.png){{< /fig >}}
 
 The relay schematic for ALU uses five relays over SETAB's three but is still easy to understand:
 
@@ -63,7 +63,7 @@ register are the same then the value in that register is cleared:
 
 Here's the MOV-8 timing chart:
 
-{{< fig caption="MOV8 opcode timing chart ([larger](/assets/pdf/timing-mov8.pdf))" >}}![MOV8 opcode timing chart](/img/posts/2019/2019-12-07-0002.png){{< /fig >}}
+{{< fig caption="MOV8 opcode timing chart ([larger](/pdf/timing-mov8.pdf))" >}}![MOV8 opcode timing chart](/img/posts/2019/2019-12-07-0002.png){{< /fig >}}
 
 The schematic for MOV-8 has a lot more relays going on but mostly that's around decoding the source and destination registers
 for the operation:

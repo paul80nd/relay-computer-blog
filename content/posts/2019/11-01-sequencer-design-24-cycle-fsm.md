@@ -56,7 +56,7 @@ As mentioned above you can find a [PDF version of these schematics here](/img/po
 So, that gives us something that can count to 24 but how does that help us get the timing pulses for the GOTO instruction?
 Well, lets take a look at the outputs of the 24-cycle FSM:
 
-{{< fig caption="24-cycle FSM Outputs ([larger](/assets/pdf/sequencer-timing.pdf))" >}}![24-cycle FSM Outputs](/img/posts/2019/2019-11-01-0004.png){{< /fig >}}
+{{< fig caption="24-cycle FSM Outputs ([larger](/sequencer-timing.pdf))" >}}![24-cycle FSM Outputs](/img/posts/2019/2019-11-01-0004.png){{< /fig >}}
 
 You might be able to spot that some of the outputs are exactly what we're looking for ... they're the right pulse for the
 right duration of time. Some of the pulses we need though can be obtained by combining the outputs together. This is what I

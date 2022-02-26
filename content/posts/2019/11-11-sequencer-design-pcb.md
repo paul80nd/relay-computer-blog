@@ -23,8 +23,8 @@ then the remaining 14 and 24 cycles on the upper card. The other consideration i
 the cards (and splitting this way fits nicely) and then what signals need to pass between upper and lower cards.
 
 Given I've already introduced the FSM and pulse distribution schematics in my last posts I'll cut straight to the chase and
-you can find the consolidated [upper sequencer schematic here](/assets/pdf/sequencer-hi.pdf) and the
-[lower sequencer schematic here](/assets/pdf/sequencer-lo.pdf) (both in PDF format). In both cases the card is largely
+you can find the consolidated [upper sequencer schematic here](/pdf/sequencer-hi.pdf) and the
+[lower sequencer schematic here](/pdf/sequencer-lo.pdf) (both in PDF format). In both cases the card is largely
 defined by the backplane connectors it uses ... W1 for the upper card (made up of address, operation and pulse busses) and W2
 for the lower card (made up of Control X, Y and Z busses). This is similar to the existing pair of controller cards which also
 talk to enough of the computer to need access to all the busses offered by the W1 and W2 type connectors.
@@ -107,9 +107,9 @@ visual check:
 {{< /fig >}}
 
 If you'd like to take a closer look at any of these you can find the full colour previews in PDF format
-[here for the upper card](/assets/pdf/sequencer-hi-pcbp.pdf) and [here for the lower card](/assets/pdf/sequencer-lo-pcbp.pdf).
-There's also another version [here for the upper card](/assets/pdf/sequencer-hi-pcb.pdf) and
-[here for the lower card](/assets/pdf/sequencer-lo-pcb.pdf) which seperates the layers out.
+[here for the upper card](/pdf/sequencer-hi-pcbp.pdf) and [here for the lower card](/pdf/sequencer-lo-pcbp.pdf).
+There's also another version [here for the upper card](/pdf/sequencer-hi-pcb.pdf) and
+[here for the lower card](/pdf/sequencer-lo-pcb.pdf) which seperates the layers out.
 
 That's the sequencer design fully complete so all that's left is to send it off to the manufacturer and wait for the
 PCBs to arrive in the post ... once they arrive it's soldering time.

@@ -19,7 +19,7 @@ by the sequencer pulses. As a reminder here's the GOTO instruction itself:
 
 ... and here's the associated timing chart to be implemented ...
 
-{{< fig caption="GOTO opcode timing chart ([larger](/assets/pdf/timing-goto.pdf))" >}}![GOTO opcode timing chart](/img/posts/2019/2019-11-02-0003.png){{< /fig >}}
+{{< fig caption="GOTO opcode timing chart ([larger](/pdf/timing-goto.pdf))" >}}![GOTO opcode timing chart](/img/posts/2019/2019-11-02-0003.png){{< /fig >}}
 
 The fetch/increment cycle is already catered for as it's common to all instructions but here's the schematic for that:
 

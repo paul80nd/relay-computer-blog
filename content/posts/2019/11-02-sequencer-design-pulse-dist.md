@@ -17,7 +17,7 @@ computer can perform branching.
 
 As a recap here's the outputs from the newly designed FSM:
 
-{{< fig caption="24-cycle FSM Outputs ([larger](/assets/pdf/sequencer-timing.pdf))" >}}![24-cycle FSM Outputs](/img/posts/2019/2019-11-01-0004.png){{< /fig >}}
+{{< fig caption="24-cycle FSM Outputs ([larger](/pdf/sequencer-timing.pdf))" >}}![24-cycle FSM Outputs](/img/posts/2019/2019-11-01-0004.png){{< /fig >}}
 
 ... and here's the timing chart that we're trying to obtain:
 
@@ -27,7 +27,7 @@ You might be able to spot that some of the outputs are exactly what we're lookin
 right duration of time. Some of the pulses we need though can be obtained by combining the outputs together. Jumping straight
 to it then here's the pulses that can be derrived from the FSM outputs:
 
-{{< fig caption="Sequencer Derrived Pulses ([larger](/assets/pdf/sequencer-pulses.pdf))" >}}![Sequencer Derrived Pulses](/img/posts/2019/2019-11-02-0000.png){{< /fig >}}
+{{< fig caption="Sequencer Derrived Pulses ([larger](/pdf/sequencer-pulses.pdf))" >}}![Sequencer Derrived Pulses](/img/posts/2019/2019-11-02-0000.png){{< /fig >}}
 
 Some of these pulses we already had, of course, in the 8-cycle sequencer ... pulses like A, B, C and D which are used in the
 fetch/increment cycle (shown in the GOTO timing chart above) at the begining of every instruction. For the rest of the GOTO
@@ -47,7 +47,7 @@ we add more instructions to the computer.
 
 So, now we've got the required pulses I can update the GOTO timing diagram showing which pulse is used at each point:
 
-{{< fig caption="Updated GOTO opcode timing chart ([larger](/assets/pdf/timing-goto.pdf))" >}}![GOTO opcode timing chart](/img/posts/2019/2019-11-02-0003.png){{< /fig >}}
+{{< fig caption="Updated GOTO opcode timing chart ([larger](/pdf/timing-goto.pdf))" >}}![GOTO opcode timing chart](/img/posts/2019/2019-11-02-0003.png){{< /fig >}}
 
 It'll be the controller, of course, that implements the behaviour shown in the timing diagram above (firing the appropriate
 control lines at the appropriate time) but we have everything we need now to finish the design of the sequencer in the

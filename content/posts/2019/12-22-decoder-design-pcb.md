@@ -58,7 +58,7 @@ above:
 
 To that we just add the standard W1 backplane connectors which will bring in power, control/instruction bus, operation bus and the pulse bus. For this card the instruction bus is our input and the operation bus is the output. Finally the card needs
 a set of LEDs on the front to display the currently decoded instruction class. This all results in the final schematic
-which you [can find here in PDF format](/assets/pdf/decoder.pdf).
+which you [can find here in PDF format](/pdf/decoder.pdf).
 
 For the PCB design we follow the usual steps: place components that have to be in a certain location first; place other
 components in rough logical groups; lay tracks; build ground/power planes; add text labels etc. Being as this card is so
@@ -70,7 +70,7 @@ straightforward let's skip to the finished design - here's a 'realistic' image o
 {{< /fig >}}
 
 If you'd like to take a closer look at these you can find the full colour previews in
-[PDF format here](/assets/pdf/decoder-pcbp.pdf) and [another version here](/assets/pdf/decoder-pcb.pdf)
+[PDF format here](/pdf/decoder-pcbp.pdf) and [another version here](/pdf/decoder-pcb.pdf)
 which seperates the layers out.
 
 That's the decoder design fully complete and so all I've got to do now is solder it up and the computer should be ready
