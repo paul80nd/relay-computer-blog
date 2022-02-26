@@ -1,0 +1,316 @@
+- section: W
+  title: Bay W
+  cards:
+
+  - title: Backplane W
+    state: Complete
+    summary: enclosure
+    tmbsch: alu-0006.png
+    flssch: alu-1006.png
+    tmbpto: alu-0007.jpg
+    flspto: alu-1007.jpg
+
+  - title: Decoder
+    version: 2
+    state: Complete
+    summary: control
+    video: R2zvB_M4D-k
+    eda: decoder
+    tmbsch: dcr-0000.png
+    pdfsch: decoder.pdf
+    tmbpcb: dcr-0001.png
+    pdfpcb: decoder-pcbp.pdf
+    tmbpto: dcr-0002.jpg
+    flspto: dcr-1002.jpg
+
+  - title: Controller
+    version: 2
+    derv: upper
+    state: PartComplete
+    summary: control
+    video: iCu2DRJhtUc
+    eda: controller-upper
+    tmbsch: cth-0000.png
+    pdfsch: controller-hi.pdf
+    tmbpcb: cth-0001.png
+    pdfpcb: sequencer-hi-pcbp.pdf
+
+  - title: Controller
+    version: 2
+    derv: lower
+    state: PartComplete
+    summary: control
+    video: kMu4q65IUk8
+    eda: controller-upper
+    tmbsch: ctl-0000.png
+    pdfsch: controller-lo.pdf
+    tmbpcb: ctl-0001.png
+    pdfpcb: sequencer-lo-pcbp.pdf
+
+  - title: Sequencer
+    version: 2
+    derv: upper
+    state: Complete
+    summary: control
+    video: aIFWOAhqXLY
+    eda: sequencer-upper
+    tmbsch: sqh-0000.png
+    pdfsch: sequencer-lo.pdf
+    tmbpcb: sqh-0001.png
+    pdfpcb: sequencer-lo-pcbp.pdf
+    tmbpto: sqh-0002.jpg
+    flspto: sqh-1002.jpg
+
+  - title: Sequencer
+    version: 2
+    derv: lower
+    state: Complete
+    summary: control
+    video: HBvL6sCmf1c
+    eda: sequencer-lower
+    tmbsch: sql-0000.png
+    pdfsch: sequencer-hi.pdf
+    tmbpcb: sql-0001.png
+    pdfpcb: sequencer-lo-pcbp.pdf
+    tmbpto: sql-0002.jpg
+    flspto: sql-1002.jpg
+
+- section: X
+  title: Bay X
+  cards:
+
+  - title: Backplane X
+    state: Complete
+    summary: enclosure
+
+  - title: Clock
+    state: NotStarted
+    summary: control
+
+  - title: Incrementer
+    state: Complete
+    summary: control
+    video: GfK5cpXfPv8
+    tmbsch: alu-0020.png
+    flssch: alu-1020.png
+    tmbpto: alu-0021.jpg
+    flspto: alu-1021.jpg
+
+  - title: Instruction Register
+    state: Complete
+    summary: registers
+    video: 42g6BejUVUA
+    tmbsch: alu-0028.png
+    flssch: alu-1028.png
+    tmbpto: alu-0029.jpg
+    flspto: alu-1029.jpg
+
+  - title: Program Counter
+    state: Complete
+    summary: registers
+    video: geT5kJOs29c
+    tmbsch: alu-0030.png
+    flssch: alu-1030.png
+    tmbpto: alu-0031.jpg
+    flspto: alu-1031.jpg
+
+- section: Y
+  title: Bay Y
+  cards:
+
+  - title: Backplane Y
+    state: Complete
+    summary: enclosure
+    video: GT0gxIFDWqc
+    tmbsch: bpy-0000.png
+    flssch: bpy-1000.pdf
+    tmbpcb: bpy-0001.png
+    flspcb: bpy-1001.pdf
+
+  - title: Memory
+    state: Complete
+    summary: control
+    video: s0lELXLXHPY
+    tmbsch: alu-0022.png
+    flssch: alu-1022.png
+    tmbpto: alu-0023.png
+    flspto: alu-1023.png
+
+  - title: Register J
+    state: Complete
+    summary: registers
+    video: hhMye5aeCRQ
+    eda: register-xymj
+    tmbsch: rey-0000.png
+    flssch: rey-1000.pdf
+    tmbpcb: rey-0001.png
+    flspcb: rey-1001.pdf
+    tmbpto: rey-0002.jpg
+    flspto: rey-1002.jpg
+
+  - title: Register M
+    state: Complete
+    summary: registers
+    video: hhMye5aeCRQ
+    eda: register-xymj
+    tmbsch: rey-0000.png
+    flssch: rey-1000.pdf
+    tmbpcb: rey-0001.png
+    flspcb: rey-1001.pdf
+    tmbpto: rey-0002.jpg
+    flspto: rey-1002.jpg
+
+  - title: Register XY
+    state: Complete
+    summary: registers
+    video: hhMye5aeCRQ
+    eda: register-xymj
+    tmbsch: rey-0000.png
+    flssch: rey-1000.pdf
+    tmbpcb: rey-0001.png
+    flspcb: rey-1001.pdf
+    tmbpto: rey-0002.jpg
+    flspto: rey-1002.jpg
+
+- section: Z
+  title:  Bay Z
+  cards:
+
+  - title: Backplane Z
+    state: Complete
+    summary: enclosure
+    tmbsch: alu-0008.png
+    flssch: alu-1008.png
+    tmbpto: alu-0009.jpg
+    flspto: alu-1009.jpg
+
+  - title: ALU Arithmetic Unit
+    state: Complete
+    summary: alu
+    video: PXoxrAFgzKs
+    tmbsch: alu-0000.png
+    flssch: alu-1000.png
+    tmbpto: alu-0001.jpg
+    flspto: alu-1001.jpg
+
+  - title: ALU Control Unit
+    state: Complete
+    summary: alu
+    video: ZmQDZCt3m10
+    tmbsch: alu-0002.png
+    flssch: alu-1002.png
+    tmbpto: alu-0003.jpg
+    flspto: alu-1003.jpg
+
+  - title: ALU Logic Unit
+    state: Complete
+    summary: alu
+    video: pVNtRphZdQI
+    tmbsch: alu-0004.png
+    flssch: alu-1004.png
+    tmbpto: alu-0005.jpg
+    flspto: alu-1005.jpg
+
+  - title: Register A/D
+    state: Complete
+    summary: registers
+    video: 3ckqsQZIBtc
+    tmbsch: alu-0024.png
+    flssch: alu-1024.png
+    tmbpto: alu-0025.jpg
+    flspto: alu-1025.jpg
+
+  - title: Register B/C
+    state: Complete
+    summary: registers
+    video: JyeZpZLaZNQ
+    tmbsch: alu-0026.png
+    flssch: alu-1026.png
+    tmbpto: alu-0027.jpg
+    flspto: alu-1027.jpg
+
+- section: O
+  title: Others
+  cards:
+
+  - title: Auxiliary Control
+    state: Complete
+    summary: ui
+    video: Jqr_2ryiy2c
+    tmbsch: axc-0000.png
+    flssch: axc-1000.png
+    tmbpto: axc-0001.jpg
+    flspto: axc-1001.jpg
+
+  - title: Display A
+    state: PartComplete
+    summary: ui
+    video: -nCNhBx65u0
+    tmbsch: alu-0014.png
+    flssch: alu-1014.png
+    tmbpto: alu-0015.jpg
+    flspto: alu-1015.jpg
+
+  - title: Display B
+    state: PartComplete
+    summary: ui
+    video: -nCNhBx65u0
+    tmbsch: alu-0016.png
+    flssch: alu-1016.png
+    tmbpto: alu-0017.jpg
+    flspto: alu-1017.jpg
+
+  - title: Enclosure
+    state: PartComplete
+    summary: enclosure
+    tmbsch: alu-0018.png
+    flssch: alu-1018.png
+    tmbpto: alu-0019.jpg
+    flspto: alu-1019.jpg
+
+  - title: Test Board
+    state: Complete
+    summary: ui
+    tmbpto: alu-0034.jpg
+    flspto: alu-1034.jpg
+
+- section: D
+  title: Depreciated Cards
+  cards:
+
+  - title: Controller
+    version: 1
+    state: Abandoned
+    summary: control
+    video: fJzvwv28CEE
+    tmbsch: alu-0010.png
+    flssch: alu-1010.png
+    tmbpto: alu-0011.jpg
+    flspto: alu-1011.jpg
+
+  - title: Decoder
+    version: 1
+    state: Abandoned
+    summary: control
+    video: pYF2HUBwMp4
+    tmbsch: alu-0012.png
+    flssch: alu-1012.png
+    tmbpto: alu-0013.jpg
+    flspto: alu-1013.jpg
+
+  - title: Sequencer
+    version: 1
+    state: Abandoned
+    summary: control
+    video: P2G8LHeWb80
+    tmbsch: alu-0032.png
+    flssch: alu-1032.png
+    tmbpto: alu-0033.jpg
+    flspto: alu-1033.jpg
+
+
+
+
+
+
+

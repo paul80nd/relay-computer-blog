@@ -1,0 +1,96 @@
+<div class="column is-half">
+  <article class="box has-ribbon">
+
+    {{ if eq .state "NotStarted" }}
+    <div class="ribbon is-danger is-small"><span class="fas fa-circle fa-fw"></span>&nbsp;Not Started</div>
+    {{ end }}
+    {{ if eq .state "Designed" }}
+    <div class="ribbon is-warning is-small"><span class="fas fa-play-circle fa-fw"></span>&nbsp;Designed</div>
+    {{ end }}
+    {{ if eq .state "PartComplete" }}
+    <div class="ribbon is-warning is-small"><span class="fas fa-play-circle fa-fw"></span>&nbsp;Part-Complete</div>
+    {{ end }}
+    {{ if eq .state "Abandoned" }}
+    <div class="ribbon is-danger is-small"><span class="fas fa-times-circle fa-fw"></span>&nbsp;Abandoned</div>
+    {{ end }}
+    {{ if eq .state "Complete" }}
+    <div class="ribbon is-success is-small"><span class="fas fa-check-circle fa-fw"></span>&nbsp;Complete</div>
+    {{ end }}
+
+    <div class="columns is-mobile">
+      <div class="column">
+        <div class="content">
+          {{ if isset . "version" }}
+          <h4>
+            <span class="has-badge-rounded has-badge-{{ if eq .state " Abandoned" }}danger{{ else }}success{{ end }}"
+              data-badge="v{{ .version }}">
+              {{ .title }}
+            </span>
+          </h4>
+          {{ else }}
+          <h4>{{ .title }}</h4>
+          {{ end }}
+
+          <div class="tags has-addons">
+            {{ if isset . "derv" }} <span class="tag is-info is-light">{{ .derv }}</span>{{ end }}
+            &nbsp;
+          </div>
+
+          <div style="margin-top: 2.2em;">
+            <a href="/pages/{{.summary}}.html#{{ replace .title " " ""}}{{ if isset . " version" }}-v{{ .version }}{{
+              end }}{{ if isset . "derv" }}-{{ .derv }}{{ end }}">More
+              Info</a>
+
+            {{ if isset . "video" }}
+            | <a href="https://youtu.be/{{.video}}" title="View construction video on YouTube">
+              <span class="icon"><i class="fab fa-youtube fa-fw"></i></span>
+            </a>
+            {{ end }}
+
+            {{ if isset . "eda" }}
+            | <a href="https://easyeda.com/paul_6392/rc-{{.eda}}" title="View schematics & PCB on EasyEDA">
+              <span class="icon"><i class="fas fa-code-branch fa-fw"></i></span>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      {{ if not (isset . "tmbsch")}}
+      {{ partial "progress-blockimg" }}
+      {{ end }}
+      {{ if not (isset . "tmbpcb")}}
+      {{ partial "progress-blockimg" }}
+      {{ end }}
+
+      {{ if isset . "tmbsch"}}
+      {{ $schlink := printf "/img/pages/%s" .flssch }}
+      {{ if isset . "pdfsch" }}
+      {{ $schlink := printf "/pdf/%s" .pdfsch }}
+      {{ end }}
+      {{ partial "progress-blockimg" (dict "isDouble" .isDouble "link" $schlink "img" .tmbsch "title" .title "type"
+      "Schematic") }}
+      {{ end }}
+
+      {{ if isset . "tmbpcb"}}
+      {{ $pcblink := printf "/img/pages/%s" .flspcb }}
+      {{ if isset . "pdfpcb" }}
+      {{ $pcblink := printf "/pdf/%s" .pdfpcb }}
+      {{ end }}
+      {{ partial "progress-blockimg" (dict "isDouble" .isDouble "link" $pcblink "img" .tmbpcb "title" .title "type"
+      "PCB Design") }}
+      {{ end }}
+
+      {{ if isset . "tmbpto"}}
+      {{ $ptolink := printf "/img/pages/%s" .flspto }}
+      {{ partial "progress-blockimg" (dict "isDouble" .isDouble "link" $ptolink "img" .tmbpto "title" .title "type"
+      "Photo") }}
+      {{ end }}
+
+      {{ if not (isset . "tmbpto")}}
+      {{ partial "progress-blockimg" }}
+      {{ end }}
+
+    </div>
+  </article>
+</div>

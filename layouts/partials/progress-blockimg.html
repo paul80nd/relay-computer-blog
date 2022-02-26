@@ -1,0 +1,9 @@
+<div class="column is-2 is-paddingless" style="border: solid 1px white;">
+  {{ if isset . "img" }}
+      <a title="{{ .title }} ({{ .type }})"  href="{{.link}}">
+          <figure class="image bg-img" style="height: 9em; background-image: url(/img/pages/{{.img}})"></figure>
+      </a>
+  {{ else }}
+      <figure class="image bg-img has-background-light" style="height: 9em;"></figure>
+  {{ end }}
+</div>

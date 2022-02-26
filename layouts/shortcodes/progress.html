@@ -1,0 +1,13 @@
+<div class="columns is-multiline">
+
+  {{ range $.Site.Data.progress }}
+  <div class="column is-12">
+    <div class="box has-background-grey-lighter" style="padding: .5rem 1.25rem;">
+      <p class="title is-5">{{ .title }}</p>
+    </div>
+  </div>
+  {{ range .cards }}
+  {{ partial "progress-block" . }}
+  {{ end }}
+  {{ end }}
+</div>
