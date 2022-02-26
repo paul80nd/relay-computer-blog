@@ -1,30 +1,33 @@
 <footer class="footer">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <h3>On this blog</h3>
-                <p><a href="{{ relref . "/" }}">Home</a></p>
-                 {{/*
-                <p><a href="{{ relref . "archive" }}">Archive</a></p>
-                */}}
-                <p><a href="{{ relref . "tags" }}">Tags</a></p>
-                <p><a href="{{ relref . "pages/progress" }}">Progress</a></p>
-            </div>
-            <div class="column">
-                <h3>Related sites</h3>
-                <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
-                <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
-                <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
-            </div>
-            <div class="column">
-                <h3>Share on social media</h3>
-                <p><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&amp;quote={{ .Page.Title }}" target="_blank"><span class="fab fa-facebook fa-lg fa-fw"></span> Share on Facebook</a></p>
-                <p><a href="https://twitter.com/intent/tweet?source={{ .Permalink }}&amp;text={{ .Page.Title }}" target="_blank"><span class="fab fa-twitter fa-lg fa-fw"></span> Tweet</a></p>
-                <p><a href="http://www.tumblr.com/share?v=3&amp;u={{ .Permalink }}&amp;quote={{ .Page.Title }}&amp;s=" target="_blank"><span class="fab fa-tumblr fa-lg fa-fw"></span> Post to Tumblr</a></p>
-                <p><a href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}&amp;description={{ .Page.Title }}" target="_blank"><span class="fab fa-pinterest fa-lg fa-fw"></span> Pin it</a></p>
-                <p><a href="http://www.reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Page.Title }}" target="_blank"><span class="fab fa-reddit fa-lg fa-fw"></span> Submit to Reddit</a></p>
-                <p><a href="mailto:?subject={{ .Page.Title }}&amp;body={{ .Permalink }}" target="_blank"><span class="fas fa-envelope fa-lg fa-fw"></span> Send email</a></p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="{{ ref . "/" }}">Home</a></p>
+        {{/*
+        <p><a href="{{ ref . " archive" }}">Archive</a></p>
+        */}}
+        <p><a href="{{ ref . "/tags" }}">Tags</a></p>
+        <p><a href="{{ ref . "/pages/progress" }}">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&quote={{ .Title }}" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source={{ .Permalink }}&text={{ .Title }}:{{ .Permalink }}" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}&description={{ .Title }}" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&source={{ .Permalink }}" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
     </div>
+  </div>
 </footer>
