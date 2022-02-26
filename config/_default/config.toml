@@ -26,3 +26,29 @@ paginate = 12
 # Allow html in markdown (typically <br> and the like)
 [markup.goldmark.renderer]
   unsafe = true
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Overview'
+  url = '/pages/overview.html'
+  weight = 2
+
+[[menu.main]]
+  name = 'Progress'
+  url = '/pages/progress.html'
+  weight = 3
+
+[[menu.main]]
+  name = 'Archive'
+  url = '/archive.html'
+  weight = 4
+
+[[menu.main]]
+  name = 'Tags'
+  url = '/tags.html'
+  weight = 3

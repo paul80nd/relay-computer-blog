@@ -1,35 +1,20 @@
-<nav class="navbar is-primary">
+{{ $plink := .RelPermalink }}
+<div class="theme-bg">
   <div class="container">
-    <div class="navbar-brand">
-      <a href="/" class="navbar-item">
-        {{ .Site.Title}}
+    <header class="d-flex flex-wrap justify-content-center py-3">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none">
+        <img class="me-2" src="/img/favicon/favicon-96x96.png" width="32">
+        <span class="fs-4">{{ .Site.Title}}</span>
       </a>
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-start">
-        <a href="/" class="navbar-item {{ if eq .RelPermalink " /"}}is-active{{ end }}">Home</a>
-
-        {{ range $.Site.Data.navigation }}
-        {{ if isset . "dropdown" }}
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a href="{{ .link }}" class="navbar-link {{ if eq .link .RelPermalink }}is-active{{ end }}">{{ .name }}</a>
-          <div class="navbar-dropdown">
-            {{ range .dropdown }}
-            <a href="{{ .link }}" class="navbar-item {{ if eq .link .RelPermalink }}is-active{{ end }}">{{ .name }}</a>
-            {{ end }}
-          </div>
-        </div>
-        {{ else }}
-        <a href="{{ .link }}" class="navbar-item {{ if eq .link .RelPermalink }}is-active{{ end }}">{{ .name }}</a>
+      <ul class="nav">
+        {{ range $.Site.Menus.main }}
+        <li class="nav-item">
+          <a href="{{ .URL }}" class="nav-link link-{{ if eq .URL $plink }}warning{{ else }}light{{ end }}">
+            {{ .Name }}
+          </a>
+        </li>
         {{ end }}
-        {{ end }}
-
-      </div>
-    </div>
+      </ul>
+    </header>
   </div>
-</nav>
+</div>
