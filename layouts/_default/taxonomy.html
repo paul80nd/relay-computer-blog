@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+
+<head>
+  {{ partial "widgets/head.html" . }}
+</head>
+
+<body>
+  {{ partial "widgets/header.html" . }}
+
+  <section class="hero is-bold is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title ">Tags</h1>
+        <h2 class="subtitle"></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-three-quarters-widescreen">
+          <div class="content">
+
+            <h3>Tags in Blog</h3>
+
+            <div class="field is-grouped is-grouped-multiline">
+
+              <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
+
+              {{ range sort .Site.Taxonomies.tags }}
+              <div class="control">
+                <a href="#{{ .Page.Title }}" class="tags has-addons are-medium">
+                  <span class="tag is-primary">{{ .Page.Title }}</span>
+                  <span class="tag is-dark">{{ .Count }}</span>
+                </a>
+              </div>
+              {{ end }}
+
+            </div>
+
+            <!--cycles through tag list and creates subheader for each tag name...-->
+
+            {{ range sort .Site.Taxonomies.tags }}
+            <h3 id="{{ .Page.Title }}">{{ .Page.Title }}</h3>
+
+            <!--  lists all posts corresponding to specific tag...-->
+            <table class="table">
+              {{ range (sort .Pages "Date" "desc") }}
+              <tr>
+                <td style="width: 8em"><a href="{{ .RelPermalink}}"><span>{{ .Date.Format "02 Jan 2006" }}</span></a>
+                </td>
+                <td><a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a></td>
+              </tr>
+              {{ end }}
+            </table>
+
+            {{ end }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "widgets/footer.html" . }}
+
+</body>
+
+</html>
