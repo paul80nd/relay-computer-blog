@@ -2,9 +2,7 @@
   "name": "relay-computer-blog",
   "description": "Relay Computer Blog",
   "version": "2.0.0",
-  "devDependencies": {},
   "dependencies": {
-    "bulma": "^0.9.0",
-    "bulma-badge": "^3.0.1"
+    "bootstrap": "^5.1.3"
   }
 }
