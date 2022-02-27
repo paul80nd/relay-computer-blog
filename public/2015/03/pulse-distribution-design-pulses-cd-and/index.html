@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Pulse Distribution Design: Pulses C,D and E | Relay Computer</title>
+
+<meta property="og:title" content="Pulse Distribution Design: Pulses C,D and E" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In my last post I covered the design of the 8-cycle finite state machine (FSM). In this post I&rsquo;ll now take the outputs from that FSM and combine them to produce the timing pulses that will be needed to perform the MOV-8, ALU and SETAB instructions. The sequencer and pulse distribution share a &lsquo;double&rsquo; card and so I&rsquo;ll also cover the resulting design when these two systems are combined.
+To quickly recap &hellip; the 8-cycle FSM will produce the following states given a clock signal as an input:" />
+<meta property="og:description" content="In my last post I covered the design of the 8-cycle finite state machine (FSM). In this post I&rsquo;ll now take the outputs from that FSM and combine them to produce the timing pulses that will be needed to perform the MOV-8, ALU and SETAB instructions. The sequencer and pulse distribution share a &lsquo;double&rsquo; card and so I&rsquo;ll also cover the resulting design when these two systems are combined.
+To quickly recap &hellip; the 8-cycle FSM will produce the following states given a clock signal as an input:" />
+<link rel="canonical" href="https://relaycomputer.co.uk/2015/03/pulse-distribution-design-pulses-cd-and/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2015/03/pulse-distribution-design-pulses-cd-and/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In my last post I covered the design of the 8-cycle finite state
+machine (FSM). In this post I&rsquo;ll now take the outputs from that FSM and
+combine them to produce the timing pulses that will be needed to perform the
+MOV-8, ALU and SETAB instructions. The sequencer and pulse distribution share
+a &lsquo;double&rsquo; card and so I&rsquo;ll also cover the resulting design when these two
+systems are combined.</p>
+<p>To quickly recap &hellip; the 8-cycle FSM will
+produce the following states given a clock signal as an input:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0000.png" alt="Output from 8-cycle FSM">
+  
+</figure>
+
+
+<p>Producing the
+instruction timing pulses is very straightforward and is just a case of either
+taking the FSM states directly or combining them together so that we get the
+following:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0001.png" alt="Instruction timing pulses">
+  
+</figure>
+
+
+<p>It really is
+as simple as that &hellip; all the hard work has been done in the design of the
+FSM. Where two or more FSM states are combined I&rsquo;ll use diodes to stop any
+feedback upsetting the FSM - effectively the didoes act as a logic OR gate.
+Later on I&rsquo;ll cover the control board design which will take these timing
+pulses and use them to operate the control lines thus:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0002.png" alt="Pulses required for each instruction type">
+  
+</figure>
+
+
+<p>With the theory in hand we can take the sequencer design from my
+last post and wire up the timing pulses. I&rsquo;ll start off with the basic relays
+on the usual 55 x 40 hole pad board:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0003.png" alt="Sequencer Relays">
+  
+  <figcaption markdown="span">Sequencer Relays (<a href="/img/posts/2015/2015-03-22-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>The only slight
+difference from the design in my last post is that the relays are now further
+down the second card than before. I ended up moving them around so that when
+additional functionality is added to the sequencer and pulse distribution
+things fit in better. If I add on all the internal wiring for the 8-cycle FSM
+we then get the following:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0004.png" alt="8-stage FSM Relays and wiring">
+  
+  <figcaption markdown="span">8-stage FSM Relays and wiring (<a href="/img/posts/2015/2015-03-22-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>The FSM
+takes the clock and reset signal as inputs (shown as the yellow lines above).
+The FSM outputs are labelled on the lowest row of relays with the one clock
+&lsquo;tick&rsquo; Sx' state outputs to the left of each relay and the two clock &lsquo;tick&rsquo; Sx
+outputs to the right. To recap again from my last post &hellip; the top left pair
+of relays take the clock signal and repeat out for when the clock is both high
+and low — this drives the FSM ring counter on the two rows of relays below.
+The top right relay is the 8-cycle abort relay — this is used to restart the
+FSM when the 8th state is reached. Eventually the FSM will be extended to
+allow for longer cycle instructions and for these the 8-cycle abort relay will
+be deactivated allowing the FSM to continue on.</p>
+<p>With the FSM in
+place I can now tap the state outputs to create the timing pulses:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0005.png" alt="FSM with added pulse distribution">
+  
+  <figcaption markdown="span">FSM with added pulse distribution (<a href="/img/posts/2015/2015-03-22-1002.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>I&rsquo;ve
+decided that even where multiple FSM states don&rsquo;t need to be combined, that
+is, where a single state is mapped directly to a timing pulse, that I&rsquo;ll still
+use a diode to stop any back-feed.</p>
+<p>As with every card designed to
+date I&rsquo;ll want to add the all important &lsquo;flashing lights&rsquo; so I can see what
+the card is up to. As there&rsquo;s nothing on the left hand &lsquo;W1&rsquo; card it&rsquo;s only the
+&lsquo;W2&rsquo; card that&rsquo;ll need indicators on it &hellip; for now at least. Here&rsquo;s what they
+look like:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0006.png" alt="W2 card indicators">
+  
+  <figcaption markdown="span">W2 card indicators (<a href="/img/posts/2015/2015-03-22-1003.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>On the left are the
+outputs from the FSM. Each of the Sx' outputs are shown (although they&rsquo;re
+labeled as though they are the Sx outputs). The Sx' output is used so that
+each lights up in turn rather than having two light up together as would be
+the case if the Sx states we used. All the LEDs are the usual 12V 3mm LEDs
+used on every other card so far and are placed in a two row holder. Note that
+the first 8 holders will have the top hole vacant with only the last holder
+having the yellow &lsquo;ABT08&rsquo; LED present — this will make more sense
+aesthetically when longer FSM cycles are added. At the far right are the final
+timing pulses (labelled SEQ here for SEQuencer output). Again the LED holders
+are double row and is generally laid out so that the longer pulses are on the
+bottom row with the shorter ones on top.</p>
+<p>Here is a diagram of how
+the indicators would look when stepping through the states of the 8-cycle
+FSM:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0007.png" alt="States of indicators whilst FSM running">
+  
+</figure>
+
+
+<p>With the indicators added to the design so far we get the
+following:</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0008.png" alt="Sequencer with added indicators">
+  
+  <figcaption markdown="span">Sequencer with added indicators (<a href="/img/posts/2015/2015-03-22-1004.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>The
+next job is to add to the connectors so that the cards can talk to the rest of
+the computer. These are the connectors we&rsquo;ll need, firstly for the &lsquo;W1&rsquo; card
+on the left followed by the &lsquo;W2&rsquo; card on the right:
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0009.png" alt="W1 Connectors">
+  
+  <figcaption markdown="span">W1 Connectors (<a href="/img/posts/2015/2015-03-22-1005.png">larger</a>)</figcaption>
+  
+</figure>
+
+</p>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0010.png" alt="W2 Connectors">
+  
+  <figcaption markdown="span">W2 Connectors (<a href="/img/posts/2015/2015-03-22-1006.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>These are the usual right
+angle boxed headers used on previous cards and as before lines marked &lsquo;<em><strong>&rsquo;
+(or &lsquo;</strong></em>*') are reserved for future use with lines marked &lsquo;&mdash;&rsquo; (or variants
+of) are unused.</p>
+<p>The lines on the W1 connectors are as follows:</p>
+<ul>
+<li>C/I-Bus (Control Bus + Instruction Bus)
+<ul>
+<li>I0-I7 &hellip; 8-bit Instruction Bus</li>
+<li>F0-F2 &hellip; 3-bit ALU Function Code</li>
+<li>CL &hellip; Condition Register Load</li>
+<li>SN/CY/EZ/NZ &hellip; Condition Flags (Sign, Carry, Zero, Non-Zero)</li>
+</ul>
+</li>
+<li>OP-Bus (Operation Bus)
+<ul>
+<li>AT08 &hellip; Abort-8 Signal (Tells the FSM to reset at stage 8)</li>
+<li>ISET/IMV8/IALU &hellip; Instruction Class (SETAB, MOV-8, ALU)</li>
+</ul>
+</li>
+<li>Pulse Bus
+<ul>
+<li>P-C/P-D/P-E &hellip; Timing pulses C, D and E</li>
+</ul>
+</li>
+</ul>
+<p>On the W2 connectors the lines are as follows:</p>
+<ul>
+<li>Ctrl-X (Control Line Bus)
+<ul>
+<li>LIN &hellip; Instruction Register Load</li>
+<li>RES &hellip; Sequencer Reset</li>
+<li>CLK &hellip; Clock Signal</li>
+</ul>
+</li>
+<li>Ctrl-Y (Control Line Bus)</li>
+<li>Ctrl-Z (Control Line Bus)
+<ul>
+<li>RLA/RLB/RLC/RLD &hellip; Register Load A, B, C, and D</li>
+<li>RSA/RSB/RSC/RSD &hellip; Register Select A, B, C and D</li>
+<li>ADD/INC/AND/ORR/XOR/NOT/SHL/ICY &hellip; Internal ALU control lines</li>
+</ul>
+</li>
+</ul>
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0011.png" alt="Sequencer with added connectors and interconnects">
+  
+  <figcaption markdown="span">Sequencer with added connectors and interconnects (<a href="/img/posts/2015/2015-03-22-1007.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<figure>
+  <img src="/img/posts/2015/2015-03-22-0012.png" alt="8-cycle sequencer final design">
+  
+  <figcaption markdown="span">8-cycle sequencer final design (<a href="/img/posts/2015/2015-03-22-1008.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>As
+always should you wish to take a much closer look at this design (and to be
+fair, this is one of the more &lsquo;busier&rsquo; cards visually so a close look is
+advised) you can find the above <a href="/pdf/sequencer-1.pdf">here in PDF format</a>.</p>
+<p>So, I&rsquo;m actually quite a good way through designing the cards
+that will allow the computer to operate a full instruction given an opcode.
+I&rsquo;ve got the designs all done for the instruction register, instruction
+decoder and now the sequencer (including FSM and pulse distribution). Next up
+comes the control card &hellip; this will take the decoded instruction along with
+the timing pulses generated by the FSM and use both to operate the various
+control lines of the computer at the right time as needed. Last job after that
+will be to add a few more items to the front switch control card and the two
+display cards to reflect the functionality I&rsquo;ve added in this batch of cards
+and then it&rsquo;ll be on to construction.</p>
+<p>Once I&rsquo;ve built all the cards
+above I&rsquo;ll be able to manually load an instruction into the register and then
+watch it be executed as I manually operate the clock line. The good news from
+there is that I only need to add the clock card to get to the next level
+towards having a fully working computer.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2015" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Mar 22, 2015</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#pulse%20distribution" class="tags">
+              <span class="tag is-primary">pulse distribution</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2015/01/sequencer-design-8-cycle-fsm/">Sequencer Design: 8-cycle FSM</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2015/03/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 1 of 2)</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f&quote=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f&text=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f&description=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f&title=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E&source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E&body=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ALU Construction: Arithmetic Card Header Pins | Relay Computer</title>
+
+<meta property="og:title" content="ALU Construction: Arithmetic Card Header Pins" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Following on from the successful construction of the ALU logic card in my last post it&rsquo;s time to start off the new year with the next ALU card (number 2 of 3 ALU cards in total) &hellip; the arithmetic card. As for the logic card I&rsquo;ll begin by soldering down all the header pins that will be wire wrapped to later on (the LEDs and connectors were already added to this card earlier)." />
+<meta property="og:description" content="Following on from the successful construction of the ALU logic card in my last post it&rsquo;s time to start off the new year with the next ALU card (number 2 of 3 ALU cards in total) &hellip; the arithmetic card. As for the logic card I&rsquo;ll begin by soldering down all the header pins that will be wire wrapped to later on (the LEDs and connectors were already added to this card earlier)." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-header/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2014/01/alu-construction-arithmetic-card-header/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Following on from the successful construction of the ALU logic card in my last
+post it&rsquo;s time to start off the new year with the next ALU card (number 2 of 3
+ALU cards in total) &hellip; the arithmetic card. As for the logic card I&rsquo;ll begin
+by soldering down all the header pins that will be wire wrapped to later on
+(the LEDs and connectors were already added to this card earlier).</p>
+<p>The construction method is pretty much the same as was used on the logic
+card although one oddity with this card is that the relays are placed in an
+offset back-to-back pattern to make some of the later wiring line up better. I
+soldered enough of these down on the logic card to get reasonably good at it
+and for the headers that don&rsquo;t sit still I&rsquo;ve settled on soldering down one
+pin then adjusting (by re-melting the joint up and moving the header) and then
+finally soldering the rest of the pins.</p>
+<p>Here&rsquo;s the result of this
+evenings work:</p>
+<figure>
+  <img src="/img/posts/2014/2014-01-06-0000.jpg" alt="ALU Arithmetic Card">
+<img src="/img/posts/2014/2014-01-06-0001.jpg" alt="ALU Arithmetic Card (closer up)">
+<img src="/img/posts/2014/2014-01-06-0002.jpg" alt="ALU Arithmetic Card (solder side)">
+  
+</figure>
+
+
+<p>The
+next job &hellip; which isn&rsquo;t all that much fun based on doing it on the logic card
+&hellip; will be to solder down all the sockets for the relays. There&rsquo;s 3 x 3 pin
+sockets required for each relay and at 41 relays in total for this card that&rsquo;s
+a total of 123 sockets to solder &hellip; might leave that until later in the week.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2014" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jan 06, 2014</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#ALU" class="tags">
+              <span class="tag is-primary">ALU</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2013/12/alu-construction-completed-logic-card/">ALU Construction: Completed Logic Card Full Test</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2014/01/alu-construction-arithmetic-card-relay/">ALU Construction: Arithmetic Card Relay Sockets</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f&quote=ALU%20Construction%3a%20Arithmetic%20Card%20Header%20Pins" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f&text=ALU%20Construction%3a%20Arithmetic%20Card%20Header%20Pins:https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f&description=ALU%20Construction%3a%20Arithmetic%20Card%20Header%20Pins" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f&title=ALU%20Construction%3a%20Arithmetic%20Card%20Header%20Pins&source=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=ALU%20Construction%3a%20Arithmetic%20Card%20Header%20Pins&body=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f01%2falu-construction-arithmetic-card-header%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

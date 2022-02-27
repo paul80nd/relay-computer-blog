@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Auxiliary Control Design (Part 2 of 3) | Relay Computer</title>
+
+<meta property="og:title" content="Auxiliary Control Design (Part 2 of 3)" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&rsquo;s a computer within a computer. If you haven&rsquo;t read my previous post then it&rsquo;s definitely worth doing so as this post picks up where that one left off. As a reminder though we&rsquo;re looking to perform the following operations:
+ Auxiliary Control Operations Timing (larger)  &hellip; which can be derived from the following pulses &hellip;" />
+<meta property="og:description" content="In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&rsquo;s a computer within a computer. If you haven&rsquo;t read my previous post then it&rsquo;s definitely worth doing so as this post picks up where that one left off. As a reminder though we&rsquo;re looking to perform the following operations:
+ Auxiliary Control Operations Timing (larger)  &hellip; which can be derived from the following pulses &hellip;" />
+<link rel="canonical" href="https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In my last post I made a start on the auxiliary control design which once
+completed will make it much easier to load instructions in to memory -
+effectively it&rsquo;s a computer within a computer. If you haven&rsquo;t read my
+<a href="/2018/01/auxiliary-control-design-part-1-of-3/">previous post</a>
+then it&rsquo;s definitely worth doing so as this post picks up where that
+one left off. As a reminder though we&rsquo;re looking to perform the following
+operations:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0000.png" alt="Auxiliary Control Operations Timing">
+  
+  <figcaption markdown="span">Auxiliary Control Operations Timing (<a href="/img/posts/2018/2018-01-29-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>&hellip; which
+can be derived from the following pulses &hellip;</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0001.png" alt="Auxiliary Control Pulses ">
+  
+</figure>
+
+
+<p>To make those pulses
+though we&rsquo;re going to need a clock signal (which is shown in red in the
+diagrams above). In the main computer the timing signal drives the sequencer
+and it&rsquo;s from there where the pulses are then derived. As mentioned in my last
+post it turns out that we can take a shortcut and do without a sequencer in
+this case but to explain why I&rsquo;ll need to start with how you make a clock
+signal out of relays &hellip; well, relays and a few other components. Be warned
+though, this is going to be one of my longest posts yet as there&rsquo;s a lot to
+get though.</p>
+<p>So far all of the relays in the computer react directly
+to the signal feeding them &hellip; if power comes down the line then the relay
+switches on and if the power gets cut then the relay switches off. The lines
+coming out of that relay then typically go on to drive other relays and it&rsquo;s
+the combinations of these relays that make up the various units of the
+computer. You can probably see that if you could hold a relay on for a short
+period after the power is cut then you could string a chain of these &lsquo;delay&rsquo;
+relays together and you&rsquo;ve got a basic clock circuit. An easy way of creating
+this delay is by the use of a capacitor which can store a charge when the
+relay is receiving power and then discharge through the relay when the power
+is cut. Schematic wise it looks like this:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0002.png" alt="Relay with a capacitor to create a delay">
+  
+</figure>
+
+
+<p>In
+this circuit when the power is applied the relay switches on and the capacitor
+charges up. Although not shown in the diagram the other side of the relay coil
+also goes back to ground. When the power is removed the capacitor will
+discharge through the relay and off to ground which will keep the relay
+switched on until the capacitor is drained. Unsurprisingly however that&rsquo;s a
+lot more to it than that and this is the first place in the computer where
+we&rsquo;re going beyond power being either connected or disconnected. Let&rsquo;s first
+look at how capacitors behave when charging and discharging:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0003.png" alt="Behaviour of a charging/discharging relay over time">
+  
+</figure>
+
+
+<p>This graph tells us that after 5 time constants the
+capacitor would be 99.2% charged and in the specific case where we&rsquo;re working
+with 12V it would have reached 11.92V. When discharging the curve is flipped
+and after 5 time constants the capacitor would have reached 0.08V. So, how
+long is one time constant? Well, it depends on the capacitor and the
+resistance of the circuit the capacitor is charging in. One time constant is
+defined as R times C &hellip; that is, the resistance measured in ohms times the
+capacitance measured in farads. So let&rsquo;s take the example where we have a
+circuit with 100 ohms resistance and a 470 micro-farad capacitor (
+<a href="https://www.quora.com/Why-the-capacitor-value-starts-from-micro-farad-or-nano-farad">a farad is a very big unit</a> so capacitors are typically in the micro-farad
+range):</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0004.png" alt="Calculating the time constant with 100 ohm resistance and 470 micro farad capacitance">
+  
+</figure>
+
+
+<p>Therefore it would take 5x47
+= 235ms for the capacitor to reach 99.2% charge in this case. Discharge works
+similarly and with a fully charged capacitor it would reach 0.08V after 235ms
+of discharging through a circuit with a 100 ohm resistance. So what about our
+simple relay circuit above? Well, looking at the
+<a href="http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=108-98002&amp;DocType=SS&amp;DocLang=EN">data sheet</a> for the 12V relays I&rsquo;m using we can see that the coil has an
+internal resistance of 1029 ohms. Just as above we can pop that value in to
+the formula to get our time constant:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0005.png" alt="Calculating the time constant for a relay with a 470 micro farad capacitor">
+  
+</figure>
+
+
+<p>From this we can therefore calculate
+that it would take 5x0.48363 = 2.42s for the capacitor to drain down to 0.08V.
+It&rsquo;s worth stating here that the real time value would differ slightly as the
+coil won&rsquo;t be exactly that resistance and the capacitor won&rsquo;t be exact either
+but it&rsquo;s good enough for our purposes. Taking another look at that data sheet
+we can see that the release voltage is 1.2V, that is, if the relay is already
+activated the voltage could drop all the way down to 1.2V before the relay
+deactivates. So, next question is when would the capacitor reach this value?
+Well, that requires a slightly more complex formula:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0006.png" alt="Formula for the voltage of a discharging capacitor at a given moment in time">
+  
+</figure>
+
+
+<p>Here Vc is the voltage across the
+capacitor, Vs is the supply voltage, t is the elapsed time since the removal
+of the supply voltage and finally RC is the time constant of the discharging
+circuit. Here we want to find t for a given Vc so we can rearrange the formula
+and solve it from there:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0007.png" alt="Calculating the time for the capacitor to discharge to 1.2 volts">
+  
+</figure>
+
+
+<p>So, in theory, the relay would stay on for 1.1
+seconds after the power supply is disconnected. Given everything else is a
+fixed value you can see that by altering the value of the capacitor we can
+increase or decrease the length of time that the relay is held on for.</p>
+<p>So, we&rsquo;ve now got the relay delay we were looking for however we need
+the capacitor to charge up as soon as possible when the user operates one of
+the front panel switches. The user isn&rsquo;t going to want to hold it on for a few
+seconds while the capacitor charges &hellip; they&rsquo;ll just want to give it a flick.
+You may have spotted that there&rsquo;s no resistance between the capacitor and the
+power supply (or rather there is resistance in the connectors and wires and so
+on but it&rsquo;s really really small). A very small resistance will result in a
+very small time constant and so as it stands the relay will charge pretty much
+instantly &hellip; but that presents us with a problem. By ohms law a circuit with
+a resistance of say 0.01 ohms at 12V will cause an initial current of 1200
+amps! In reality we&rsquo;d be dealing with an even smaller resistance and therefore
+an even higher current. That said though the power supply can only provide so
+much current but that greedy capacitor will consume as much as it can get.
+Why is that a problem then? Well, it&rsquo;s not unusual to have larger
+capacitors wired directly over a power supply and these act to &lsquo;smoothe out&rsquo;
+any dips in voltage but as explained above initially they&rsquo;ll consume a lot of
+current whilst there is little resistance. The problem for us in the auxiliary
+controller is diodes. When the user flicks a primary switch on the front of
+the computer it&rsquo;ll need to start the clock however we don&rsquo;t want a signal
+coming in from one switch to back feed another as we&rsquo;ll also be using the
+switches to know if it&rsquo;s a long or short operation and also which operation to
+perform &hellip; diodes fix the problem nicely for us here. Throughout the computer
+I&rsquo;ve been using 1N4148 signal diodes being as they&rsquo;re cheap and work well for
+what I need but if you take a look at the
+<a href="https://www.vishay.com/docs/81857/1n4148.pdf">data sheet</a> you can see
+they can only withstand a maximum continuous forward current of 300mA &hellip;
+quite a bit less than the 2A that the capacitor could in theory draw. As it
+stands when the user flicks any of the primary switches the operation will run
+but that&rsquo;s the last time it&rsquo;ll ever run as the diode will have burnt out
+forming a permanent open circuit.</p>
+<p>What&rsquo;s the fix then? Well we need
+to bring down the current drawn by the capacitor to less than 300mA. If we
+build in a safety margin of say 50mA then by ohms law again we&rsquo;ll need a 48
+ohm resistor to limit current to 250mA. Now, resistors only come in standard
+values but it also depends what you have laying around and I&rsquo;ve got a load of
+220 ohm resistors for some reason so let&rsquo;s try those &hellip; again via ohms law
+for 220 ohms at 12V we get 54.55 mA which is well within the diode limit. The
+updated relay circuit now looks like this:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0008.png" alt="Amended relay circuit with added resistor">
+  
+</figure>
+
+
+<p>Being as I&rsquo;ve upped the resistance I&rsquo;ve brought down the
+capacitance to 47 micro-farads to compensate a bit. So what does that do to
+the timings &hellip;</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0009.png" alt="Final calculation for charge and discharge timings">
+  
+</figure>
+
+
+<p>Firstly we have the charging time constant which is 10.34ms
+and therefore it&rsquo;d take 51.7ms to get the capacitor up to 99.2% of the supply
+voltage. This is well within the time it takes to flick one of those primary
+switches so we&rsquo;re all good there. For the discharge side we&rsquo;ve now got the 220
+ohm resistor as well as the internal resistance of the relay coil so we now
+have a discharge time constant of 58.7ms which means that it&rsquo;d take 135.17ms
+to discharge from 12V down to 1.2V at which point the relay would turn off.</p>
+<p>Right then, we&rsquo;ve finally got a relay that will stay activated for a
+fixed duration of time following activation (and without destroying any
+upstream diodes). We can now string a chain of these relays together to form a
+ripple effect where each relay controls the next two relays in sequence.
+Here&rsquo;s the updated schematic:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0010.png" alt="Updated Clock Schematic">
+  
+  <figcaption markdown="span">Updated Clock Schematic (<a href="/img/posts/2018/2018-01-29-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>Hopefully you can see the pattern but if not
+here&rsquo;s a table of the sequence:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0011.png" alt="Table of clock sequence">
+  
+</figure>
+
+
+<p>Which
+interestingly enough behaves a bit like the main sequencer in the computer
+(moving from one stage to another in sequence) but also behaves a bit like a
+clock (changes at a steady rate). Looking at the table another way we now have
+the following timing diagram:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0012.png" alt="">
+  
+</figure>
+
+
+<p>Let&rsquo;s take a look at the operation pulses we&rsquo;re
+aiming to derive and see if we can spot any clock pulses we can use:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0013.png" alt="Short and long target pulses">
+  
+</figure>
+
+
+<p>It looks like
+we&rsquo;ve got a match straight away: AP-A = ACL2 and AP-B = ACL1. Looks like
+there&rsquo;s also a match for AP-C on ACL5. I say all this like it&rsquo;s a happy
+coincidence but of course it&rsquo;s all planned in the design although it&rsquo;s
+probably more correct to say that the control pulses are a consequence of the
+nature of how the clock works. Here&rsquo;s the relay schematic with the pulses
+wired out:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0014.png" alt="Relay schematic with derived pulses">
+  
+  <figcaption markdown="span">Relay schematic with derived pulses (<a href="/img/posts/2018/2018-01-29-1002.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>But
+what about AP-D though? There&rsquo;s no obvious match for that pulse but what we
+could do is take AP-D when both ACL4 and ACL5 are active at the same time
+which will give a pulse lasting half the length of AP-C. There&rsquo;s a bit of a
+problem with that though as I&rsquo;m out of contacts on the relays &hellip; I need
+another set on ACL5. Come to think of it I&rsquo;ll also want to have an LED showing
+the state of each relay for debugging purposes but I can&rsquo;t connect this to the
+relay coil as the LED has an internal resistor which will change the delay
+timing so I&rsquo;ll need a fresh set of contacts for that too. OK, it&rsquo;s time to add
+more relays:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0015.png" alt="Relay schematic with added state LEDs and AP-D pulse">
+  
+  <figcaption markdown="span">Relay schematic with added state LEDs and AP-D pulse (<a href="/img/posts/2018/2018-01-29-1003.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>That&rsquo;s all four pulses now accounted for so all that&rsquo;s left
+is to find a way of making a short operation which stops after AP-A and AP-B
+to go alongside the long operation which carries on through to AP-C and AP-D.
+Ah, and I&rsquo;ve inadvertantly introduced a change to the relay delay timing &hellip;
+can you see why (no prizes for guessing)? There&rsquo;s now two relays / two coils /
+two sets of coil resistance on each clock stage. We&rsquo;ll need to recalculate the
+timings accordingly taking special note that we&rsquo;ve now got a 220 ohm resistor
+in series but then two 1029 ohm coils in parallel. Pocket calculators at the
+ready:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0016.png" alt="Delay time calculation with two relay coils present">
+  
+</figure>
+
+
+<p>As we can see this brings the delay time down from 135.17ms
+to 79.95ms which makes sense as there&rsquo;s now two discharge paths through each
+coil so the capacitor drains quicker than before. This also means that even if
+we found we only needed one relay and not two at any stage in this clock we&rsquo;d
+need to put in a 1029 ohm resistor to &lsquo;simulate&rsquo; the missing relay&rsquo;s coil in
+order to keep the timing consistent at each stage. ACL6 is one such example
+where we could reduce down to one relay as we&rsquo;re only using two sets of
+contacts.</p>
+<p>Anyhoo, back to implementing the short operation. To make
+this work we need a way of disrupting the clock between ACL3 and ACL4. Let&rsquo;s
+add that in now:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0017.png" alt="Relay schematic with AUX ABORT relay">
+  
+  <figcaption markdown="span">Relay schematic with AUX ABORT relay (<a href="/img/posts/2018/2018-01-29-1004.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>As
+long as the &lsquo;AUX-ABORT&rsquo; line is held on then ACL3 is disconnected from ACL4
+and the clock will die off when it reaches that point. I need to make one
+final tweak to this schematic though due to the way the AUX-ABORT line is
+activated &hellip; it&rsquo;ll be driven when the user flicks any of the short operation
+switches which means it&rsquo;s only on for a short time. I need to lock the line on
+once initially activated. I also therefore need to be able to release the line
+again once the sequence is finished. That&rsquo;s done easy enough with few more
+relays:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0018.png" alt="Final clock schematic">
+  
+  <figcaption markdown="span">Final clock schematic (<a href="/img/posts/2018/2018-01-29-1005.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>You&rsquo;ll be pleased
+to know that at last we&rsquo;ve reached the final schematic &hellip; if the image above
+is a bit small you should be able to click on it for a larger version. So, at
+ACLR we channel voltage out and back to the AUX-ABORT relays which will mean
+that once AUX-ABORT is activated it&rsquo;ll connect itself to this supply and stick
+on until ACLR is activated at which point the supply is cut and AUX-ABORT
+turns off when the capacitor drains down. ACLR is activated by either ACL3 or
+ACL6 depending on what state AUX-ABORT is in. Finally we take an LED off ACLR
+when it&rsquo;s active and the &lsquo;~AUX-RESET&rsquo; line when it&rsquo;s not. The control relays
+will make use of this &lsquo;NOT AUX-RESET&rsquo; line as we&rsquo;ll see in the third post of
+this series.</p>
+<p>To wrap up then let&rsquo;s update the timing diagrams one
+last time to show how the abort and reset stages affect the short and long
+operation timings:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-29-0019.png" alt="Final clock timings">
+  
+</figure>
+
+
+<p>Right, that was one
+mahoosive post and it&rsquo;s taken ages to write but hopefully you can now see
+what&rsquo;s behind the auxiliary clock. In the next post I&rsquo;ll round off the
+auxiliary control design by putting together the groups of relays that operate
+the various control lines and I&rsquo;ll put everything together from all three
+posts to produce the final auxiliary control board design.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2018" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jan 29, 2018</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#control" class="tags">
+              <span class="tag is-primary">control</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#sequencing" class="tags">
+              <span class="tag is-primary">sequencing</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#UI" class="tags">
+              <span class="tag is-primary">UI</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2018/01/auxiliary-control-design-part-1-of-3/">Auxiliary Control Design (Part 1 of 3)</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2018/02/auxiliary-control-design-part-3-of-3/">Auxiliary Control Design (Part 3 of 3)</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f&quote=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f&text=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29:https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f&description=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f&title=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29&source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29&body=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

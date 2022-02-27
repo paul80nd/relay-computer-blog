@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Architectural breakdown: the ALU | Relay Computer</title>
+
+<meta property="og:title" content="Architectural breakdown: the ALU" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
+ System Architecture for a Relay Computer[^1]  The Arithmetic Logic Unit (ALU) sits at the very heart of the computer and without it you wouldn&rsquo;t be able to do much at all &hellip; you could certainly move data back and forth between the memory and registers but that&rsquo;d be about it." />
+<meta property="og:description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
+ System Architecture for a Relay Computer[^1]  The Arithmetic Logic Unit (ALU) sits at the very heart of the computer and without it you wouldn&rsquo;t be able to do much at all &hellip; you could certainly move data back and forth between the memory and registers but that&rsquo;d be about it." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2013/11/architectural-breakdown-alu/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2013/11/architectural-breakdown-alu/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In this post I&rsquo;ll continue to try and explain away the various bits of the
+architecture that will make up my relay computer project — this time it&rsquo;s the
+Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I&rsquo;ll be
+building against (from the
+<a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay Computer</a>)</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-07-0000.png" alt="System Architecture for a Relay Computer">
+  
+  <figcaption markdown="span">System Architecture for a Relay Computer[^1]</figcaption>
+  
+</figure>
+
+
+<p>The Arithmetic Logic Unit (ALU) sits at the
+very heart of the computer and without it you wouldn&rsquo;t be able to do much at
+all &hellip; you could certainly move data back and forth between the memory and
+registers but that&rsquo;d be about it. As you might have guessed from the name it
+allows the computer to perform arithmetic and logic functions. Some ALUs have
+a myriad of functionality available but this architecture takes a good balance
+between simplicity and functionality — the idea being that you can perform
+more complex functions by using a combination of simpler ones (subtraction can
+be performed by negating a number then adding it and multiplication can be
+performed by repeated adding). This does mean that the computer takes longer
+to do some things, like subtraction and multiplication, but it&rsquo;s much simpler
+to construct as a result.</p>
+<p>The ALU takes its inputs from the B and C
+registers (although for some operations C is ignored). The result the ALU
+produces goes back on to data bus. In theory you could physically store the
+result in any of the writable 8-bit registers (except B and C which are used
+as inputs) however in practice the result would be placed in A or D.</p>
+<p>For the arithmetic side of things the ALU can perform two operations: Add
+and Increment. Add takes the values in B and C and produces the sum B + C.
+Increment takes the value in B (ignoring C) and produces the sum B + 1. There
+are five logic functions: AND (and), OR (inclusive or), XOR (exclusive or),
+NOT (not) and SHL (shift left). AND, OR and XOR operate on B and C inputs as
+follows:</p>
+<pre><code>B    10101010
+C    11001100
+-------------
+AND  10001000
+OR   11101110
+XOR  01100110
+</code></pre>
+<p>So AND for a given bit is 1 when both B and
+C are 1. OR for a given bit is 1 when either B or C (or both) are 1. XOR for a
+given bit is 1 when either B or C (but not both) are 1. When we use &lsquo;or&rsquo; in
+everyday speech, of course, we are usually using the exclusive or (you can
+have tea or coffee &hellip; not a steaming hybrid of teffee). The NOT function
+works on the B input only and operates as follows:</p>
+<pre><code>B    10101100
+-------------
+NOT  01010011
+</code></pre>
+<p>That is, NOT for a given bit is 1 when B is
+0 and 0 when B is 1. Finally we have SHL (shift left) which operates on the B
+input only as follows:</p>
+<pre><code>B    10101100
+-------------
+SHL  01011001
+</code></pre>
+<p>This moves each bit in B one place to the
+left with the left/highest bit rotated back to the right/lowest bit.</p>
+<p>In order to be even more use to a programmer the ALU contains three special
+1-bit &lsquo;condition registers&rsquo;. These are set following each ALU operation as
+follows:</p>
+<ul>
+<li>Z - Zero. Set when the ALU result is zero (all bits are 0).</li>
+<li>Cy - Carry. Set when an ALU addition or increment resulted in a
+bit being carried. An example of where this would be set is when adding 1 to
+the number 255 (11111111) &hellip; the 1 would ripple through the result creating
+00000000 with 1 carried. The carry condition shows in this case that we&rsquo;ve
+added one more than we could hold in an 8-bit value (what&rsquo;s known as an
+overflow). Actually, the ALU can use this flag to pull off 16-bit addition -
+you would add the lower 8-bit numbers together then add the upper 8-bit
+numbers along with an extra 1 if the carry condition was set on the first
+addition (just as you would when doing long addition by hand with decimal
+numbers).</li>
+<li>S - Sign. Set when the ALU result has the left/highest bit
+set. This would mean the value is negative when we&rsquo;re treating the results as
+signed numbers. If we&rsquo;re treating the numbers as unsigned then this condition
+has no meaning &hellip; effectively it will be set when the number is 128 or
+more.</li>
+</ul>
+<p>Usually the condition registers are used to make
+decisions/jumps in a program so for example if I wanted to check if two signed
+numbers added together produce a negative result I would load one in to
+register B and the other in register C then perform the add and check the sign
+condition &hellip; if the sign condition is set then the result was negative and I
+can jump to a different line in the program, if not I can carry on with the
+next line as normal. This actually leads quite nicely on to my final
+instalment on the architecture &hellip; how a program actually executes and
+controls the computer.</p>
+<hr>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2013" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Nov 07, 2013</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#ALU" class="tags">
+              <span class="tag is-primary">ALU</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#Architecture" class="tags">
+              <span class="tag is-primary">Architecture</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#theory" class="tags">
+              <span class="tag is-primary">theory</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2013/11/architectural-breakdown-memory/">Architectural breakdown: Memory</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2013/11/architectural-breakdown-programming-and/">Architectural breakdown: Programming and Control</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f&quote=Architectural%20breakdown%3a%20the%20ALU" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f&text=Architectural%20breakdown%3a%20the%20ALU:https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f&description=Architectural%20breakdown%3a%20the%20ALU" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f&title=Architectural%20breakdown%3a%20the%20ALU&source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Architectural%20breakdown%3a%20the%20ALU&body=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-alu%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

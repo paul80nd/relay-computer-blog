@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Fetch and Increment - Construction and Test | Relay Computer</title>
+
+<meta property="og:title" content="Fetch and Increment - Construction and Test" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="This is a bit of a landmark moment &hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my computer will execute a program in memory without any further input from the user. Well, it&rsquo;s this post where that finally happens and all that stands in the way is a tweak to the sequencer and an addition to the controller unit." />
+<meta property="og:description" content="This is a bit of a landmark moment &hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my computer will execute a program in memory without any further input from the user. Well, it&rsquo;s this post where that finally happens and all that stands in the way is a tweak to the sequencer and an addition to the controller unit." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>This is a bit of a landmark moment &hellip; at least for the construction of my
+relay computer. For a long time now my blog posts have been leading up to the
+point where my computer will execute a program in memory without any further
+input from the user. Well, it&rsquo;s this post where that finally happens and all
+that stands in the way is a tweak to the sequencer and an addition to the
+controller unit. Here I&rsquo;ll just stick to the pictures (and a video of course)
+but the design of the sequencer/controller changes is covered in this
+<a href="/2017/09/control-design-fetch-and-increment/">previous post</a>.</p>
+<p>Right, let&rsquo;s start with the sequencer. We need to pull
+off two new pulses (A and B) from the 8-cycle finite state machine and with
+the changes in place the sequencer now looks like this:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-16-0000.jpg" alt="Sequencer cards (top side)">
+<img src="/img/posts/2018/2018-01-16-0001.jpg" alt="Sequencer cards (rear side)">
+  
+</figure>
+
+
+<p>You&rsquo;ll be
+forgiven for not spotting the changes straight away (doubly so if you&rsquo;ve not
+been following my blog). The sequencer gains two LEDs to show the new pulses
+(on the lower card) but other than that it&rsquo;s just wire links. The two cards
+close up look like this:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-16-0002.jpg" alt="Sequencer Upper Card LEDs">
+<img src="/img/posts/2018/2018-01-16-0003.jpg" alt="Sequencer Lower Card LEDs">
+  
+</figure>
+
+
+<p>That&rsquo;s it for
+the sequencer &hellip; the changes on the controller cards are a bit more
+involved:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-16-0004.jpg" alt="Controller Cards (top side)">
+<img src="/img/posts/2018/2018-01-16-0005.jpg" alt="Controller Cards (rear side)">
+  
+</figure>
+
+
+<p>On the
+upper card (shown on the left when viewed from the front) there is a group of
+four relays in the top right of the card &hellip; although for some reason I took
+the photo before popping the relays in their sockets. These four relays take
+the pulses A, B, C and D and use them to fire the control lines at the right
+time to implement the fetch and increment cycle. As it happens some of these
+control lines leave the controller on the upper card and some on the lower
+card. This means more card interconnects are needed which are added in the
+middle of the card.</p>
+<p>A close up photo of the front of the cards
+shows the newly added LEDs:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-16-0006.jpg" alt="Upper Controller Card LEDs">
+<img src="/img/posts/2018/2018-01-16-0007.jpg" alt="Lower Controller Card LEDs">
+  
+</figure>
+
+
+<p>The upper
+card gains the Memory Read LED whilst the lower card gains Load Instruction,
+Program Counter Select/Load and Incrementer Select/Load. All five of these
+control lines are fired as part of the fetch and increment cycle. Here&rsquo;s a
+close up of the LEDs viewed from the rear side:</p>
+<figure>
+  <img src="/img/posts/2018/2018-01-16-0008.jpg" alt="Upper Controller Card LEDs (rear view)">
+<img src="/img/posts/2018/2018-01-16-0009.jpg" alt="Lower Controller Card LEDs (rear view)">
+  
+</figure>
+
+
+<p>You can see that much of the header strip is not soldered down yet and this
+is because as the controller gains more functionality there&rsquo;ll be more LEDs
+added. Actually, the photos of the LEDs viewed front on give the game away a
+bit as the legend strip shows what the upcoming LEDs will be for.</p>
+<p>So, I&rsquo;ve been deliberately brief in this post sticking mainly to some close
+up photos and that&rsquo;s because I&rsquo;ve gone to the time and effort of making a
+&lsquo;lovely&rsquo; video. The video covers the changes to the sequencer and controller
+but more importantly shows the computer running through a program - the
+&lsquo;landmark moment&rsquo; mentioned at the top of this post. Here&rsquo;s that video:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/yx3dHbjkvEM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>As I mention at the end of the video there&rsquo;s a lingering question of what&rsquo;s
+next. Well, as I said, it&rsquo;s a pain to enter a program in to the computer at
+the moment so it&rsquo;s time to make use of the remaining primary switches to
+automate the &lsquo;store instruction cycle&rsquo; effectively doing something similar to
+what the fetch/increment cycle does but loading the memory from the primary
+switches rather than loading the instruction register from memory. One&rsquo;s
+that&rsquo;s all done (and I&rsquo;ve blogged about it and made another &lsquo;lovely&rsquo; video)
+then I&rsquo;ll cover the instruction set as it currently stands and then I think
+it&rsquo;s time to have a review of the progress on the computer to date and reflect
+on what&rsquo;s been achieved so far.</p>
+<p>In the meanwhile though I think a
+small celebratory drink is in order.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2018" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jan 16, 2018</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#completion" class="tags">
+              <span class="tag is-primary">completion</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#control" class="tags">
+              <span class="tag is-primary">control</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#sequencing" class="tags">
+              <span class="tag is-primary">sequencing</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#video" class="tags">
+              <span class="tag is-primary">video</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2018/01/incrementer-test/">Incrementer Test</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2018/01/auxiliary-control-design-part-1-of-3/">Auxiliary Control Design (Part 1 of 3)</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f&quote=Fetch%20and%20Increment%20-%20Construction%20and%20Test" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f&text=Fetch%20and%20Increment%20-%20Construction%20and%20Test:https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f&description=Fetch%20and%20Increment%20-%20Construction%20and%20Test" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f&title=Fetch%20and%20Increment%20-%20Construction%20and%20Test&source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Fetch%20and%20Increment%20-%20Construction%20and%20Test&body=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

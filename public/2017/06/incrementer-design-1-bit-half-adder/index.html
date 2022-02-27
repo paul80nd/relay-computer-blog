@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Incrementer Design: 1-bit Half Adder | Relay Computer</title>
+
+<meta property="og:title" content="Incrementer Design: 1-bit Half Adder" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Typical isn&rsquo;t it?! &hellip; you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I move on to the design of the incrementer.
+The incrementer takes any value currently on the 16-bit address bus and adds one to it, or rather, it increments it (clue is in the name of course)." />
+<meta property="og:description" content="Typical isn&rsquo;t it?! &hellip; you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I move on to the design of the incrementer.
+The incrementer takes any value currently on the 16-bit address bus and adds one to it, or rather, it increments it (clue is in the name of course)." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2017/06/incrementer-design-1-bit-half-adder/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2017/06/incrementer-design-1-bit-half-adder/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Typical isn&rsquo;t it?! &hellip; you wait 10 months for a post and then two come
+along at once. Well, all being well, this should be the first of a short
+flurry of posts as I move on to the design of the incrementer.</p>
+<p>The
+incrementer takes any value currently on the 16-bit address bus and adds one
+to it, or rather, it increments it (clue is in the name of course). Typically
+that value on the address bus is going to come from the program counter (in
+order to point it at the next instruction in memory) but it&rsquo;ll also be
+possible to bump the upcoming XY register eventually too.</p>
+<p>One
+complication in the incrementer is that because the address bus can only hold
+one value at a time it&rsquo;s necessary to have a built-in 16-bit register which
+can hold the result of the incrementation ready to be gated back on the
+address bus and off into the destination register. So, for example, the PC
+register is selected and the incrementer register loaded with the PC value +1.
+Once that&rsquo;s done the incrementer register can be selected and the PC loaded
+with the new value.</p>
+<p>Effectively then the incrementer consists of
+two halves &hellip; the 16-bit increment register and a 16-bit half adder that
+feeds it. Half adder? Well that&rsquo;s the part I&rsquo;ll cover first by taking a look
+back at the half adder&rsquo;s bigger sibling, the full adder, which appeared in the
+design of the ALU arithmetic card. Here&rsquo;s the 1-bit full adder relay wiring
+diagram again:</p>
+<figure>
+  <img src="/img/posts/2017/2017-06-04-0000.png" alt="1-bit full adder relay diagram">
+  
+</figure>
+
+
+<p>This takes two
+1-bit inputs (B and C) and adds them together to produce a 1-bit result. Any
+carry (when B and C are both set) is passed on to the next adder circuit and
+likewise any carry coming in from a prior adder circuit is taken in to
+consideration. Effectively the circuit implements the following &lsquo;truth
+table&rsquo;:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Carry In</th>
+<th style="text-align:center">Input B</th>
+<th style="text-align:center">Input C</th>
+<th></th>
+<th style="text-align:center">Carry Out</th>
+<th style="text-align:center">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p>As you may have guessed a half adder only needs to deal with one input
+rather than two and has the following truth table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Carry In</th>
+<th style="text-align:center">Input</th>
+<th></th>
+<th style="text-align:center">Carry Out</th>
+<th style="text-align:center">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Likewise this simplifies the relay wiring diagram to the following:</p>
+<figure>
+  <img src="/img/posts/2017/2017-06-04-0001.png" alt="1-bit half adder relay diagram">
+  
+</figure>
+
+
+<p>This layout
+focusses on lining up the carry in and outs so that each unit can be stacked
+horizontally alongside the next one. To fit the full 16 half adders on the
+card I&rsquo;m going to take this design and rotate it 90 degrees so I can stack the
+units vertically. Doing that, and using the schematic style used for other
+cards in this computer, we have the following:</p>
+<figure>
+  <img src="/img/posts/2017/2017-06-04-0002.png" alt="1-bit half adder rotated relay diagram">
+  
+</figure>
+
+
+<p>&hellip; and
+that&rsquo;s all there is to a 1-bit half adder. In the next post I&rsquo;ll cover linking
+16 of these units together to make the full 16-bit half adder.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2017" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jun 04, 2017</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#incrementer" class="tags">
+              <span class="tag is-primary">incrementer</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2017/05/register-design-program-counter/">Register Design: Program Counter</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2017/07/incrementer-design-16-bit-half-adder/">Incrementer Design: 16-bit Half Adder</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f&quote=Incrementer%20Design%3a%201-bit%20Half%20Adder" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f&text=Incrementer%20Design%3a%201-bit%20Half%20Adder:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f&description=Incrementer%20Design%3a%201-bit%20Half%20Adder" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f&title=Incrementer%20Design%3a%201-bit%20Half%20Adder&source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Incrementer%20Design%3a%201-bit%20Half%20Adder&body=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f06%2fincrementer-design-1-bit-half-adder%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

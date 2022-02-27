@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>User Interface: Display B Initial Design and Construction | Relay Computer</title>
+
+<meta property="og:title" content="User Interface: Display B Initial Design and Construction" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In my last post I put together the beginnings of the first display card &hellip; named in a brilliant flash of nomenclature as display card A. This time I&rsquo;m turning my attention to the second display card &hellip; named (can you guess) display card B.
+Whereas display A is dual purpose allowing a user to view and initiate control signals the second display card is read-only and displays the primary state of the computer." />
+<meta property="og:description" content="In my last post I put together the beginnings of the first display card &hellip; named in a brilliant flash of nomenclature as display card A. This time I&rsquo;m turning my attention to the second display card &hellip; named (can you guess) display card B.
+Whereas display A is dual purpose allowing a user to view and initiate control signals the second display card is read-only and displays the primary state of the computer." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2014/07/user-interface-display-b-initial-design/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2014/07/user-interface-display-b-initial-design/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In my last post I put together the beginnings of the first display
+card &hellip; named in a brilliant flash of nomenclature as display card A. This
+time I&rsquo;m turning my attention to the second display card &hellip; named (can you
+guess) display card B.</p>
+<p>Whereas display A is dual purpose allowing a
+user to view and initiate control signals the second display card is read-only
+and displays the primary state of the computer. Initially this &lsquo;primary state&rsquo;
+comprises of the data bus contents, condition register status and ALU function
+code / operation. I also had a rectangular gap spare on the card that looked
+like it&rsquo;d fit an ammeter so that also now forms part of the second display
+too.</p>
+<p>As with the display A buttons and the primary input switches
+I&rsquo;ve known what kind of display elements I wanted to use right from the
+beginning. Taking inspiration from a visit to the
+<a href="http://www.tnmoc.org/">National Museum of Computing</a>
+in the UK I fell for the big chunky buttons/indicators on the ICL 2966&rsquo;s
+&lsquo;washing machines&rsquo; / storage units. Here&rsquo;s an example of my interpretation of
+that retro look:</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0000.JPG" alt="Indicator unit close up">
+  
+</figure>
+
+
+<p>Here I&rsquo;ve
+applied a nice chunky letraset font directly to the faces of an Avago light
+bar unit. These units come in a variety of bar shapes so that within the same
+package outline the face area is divided in to one, two or four discrete lit
+segments. Each package lights up green, yellow or red (all segments within a
+package the same colour) and although the ones above are red they appear the
+same milky white colour until actually lit. Finally, these units are also X-Y
+stackable so it&rsquo;s quite easy to build up complex displays.</p>
+<p>With the
+selection of display units in hand I&rsquo;m now able to design the display card
+itself. As with display card A I&rsquo;m only sharing a partial design for this card
+&hellip; effectively as much as I&rsquo;ll actually be constructing. Eventually the gaps
+on this card will be filled by yet more indicators for the various bits of the
+computer I&rsquo;ll add in the future. This is more about constructing the bits I
+need when I need them and saving money on parts until I&rsquo;m ready for them
+rather than teasing my audience (if anyone really, really would like to see
+the complete design for any of these partial cards drop me a line in the
+comments and I&rsquo;ll be happy to share). Anyho, here is the design with indicator
+faces shown:</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0001.png" alt="Display B Schematic">
+  
+  <figcaption markdown="span">Display B Schematic (<a href="/img/posts/2014/2014-07-20-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>The lower left
+indicators show the condition register status (Sign, Carry and Zero). The
+lower right indicators show the current value on the data bus. The upper right
+indicators show the ALU function code along with the decoded ALU operation and
+also the Condition Register Load line. Finally there&rsquo;s the rectangle in the
+upper left of the card that marks the outline of the ammeter. The same diagram
+with the indicator faces removed looks like this:</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0002.png" alt="Display B Schematic (indicator faces removed)">
+  
+  <figcaption markdown="span">Display B Schematic (indicator faces removed) (<a href="/img/posts/2014/2014-07-20-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+
+<p>If you look at this diagram close up (you can click the picture
+above to view a larger version) you can see that each of the indicator units
+has the same internal layout of LEDs which makes wiring up much easier. Each
+LED anode is connected to the appropriate header pin bringing in the signal
+from the rest of the computer. On the cathode side of each LED is a single 1K
+resistor packaged up in an array of eight resistors. This is higher than the
+560 ohm resistor used on the display A buttons to try and match the light
+levels a little better (running these units at their rated current was way too
+bright and actually a bit unpleasant to look at &hellip; bringing them down with a
+1K resistor made them just about right).</p>
+<p>As always these schematics
+are available in PDF format <a href="/pdf/display-b-1.pdf">here for the schematic with indicator faces</a> and <a href="/pdf/display-b-1a.pdf">here for the schematic without</a>.</p>
+<p>So with the
+design all done I can move on to making the card for real. Technique wise
+there&rsquo;s nothing really new compared to constructing display card A although I
+have put in some DIL sockets to carry the display units just in case I ever
+need to replace them or tweak anything. To fit the ammeter I made  a paper
+template first and then marked out the area on the card / pad board and
+drilled some pilot holes. From there I attempted to cut out the hole with a
+junior hacksaw but didn&rsquo;t get very far so I resorted to nibbling away at the
+board with a pair of pliers which actually worked very well. Here&rsquo;s the card
+as it currently stands from the front:</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0003.JPG" alt="Display B (front)">
+  
+</figure>
+
+
+<p>The condition
+register display units aren&rsquo;t shown here on this picture as they were out of
+stock when I ordered them so arrived after this picture was taken (originally
+these were going to be red indicators but it was a 6 week wait for those so I
+switched out for the green equivalent which actually ended up looking better).
+The four spacers with screws in each corner of the card are a temporary
+addition which allows me to work on the back of the card without scratching
+the front of the card to bits. Speaking of the back of the card &hellip; that looks
+like this:</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0004.JPG" alt="Display B (back)">
+  
+</figure>
+
+
+<p>Here&rsquo;s a couple of
+close up pictures of the card back:</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0005.JPG" alt="Close up of the ALU display connections">
+<img src="/img/posts/2014/2014-07-20-0006.jpg" alt="Close up of the data bus display connections">
+  
+</figure>
+
+
+<p>&hellip; and here&rsquo;s a couple of close ups on the indicator units &hellip;</p>
+<figure>
+  <img src="/img/posts/2014/2014-07-20-0007.JPG" alt="Data Bus Indicators">
+<img src="/img/posts/2014/2014-07-20-0008.JPG" alt="ALU Indicator Units">
+  
+</figure>
+
+
+<p>&hellip; and that&rsquo;s it
+for now on this card. I&rsquo;ve tested everything lights up correctly but I&rsquo;m not
+posting any photos of that just yet - I&rsquo;ll leave that for the next post when I
+hook up the primary switches and display A and B to the rest of the computer
+and give it a whirl. I&rsquo;ll also produce another video (don&rsquo;t groan) showing
+everything built so far working fully.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2014" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jul 20, 2014</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#UI" class="tags">
+              <span class="tag is-primary">UI</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2014/07/user-interface-display-initial-design/">User Interface: Display A Initial Design and Construction</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2014/08/alu-registers-d-test-with-new-display/">ALU &amp; Registers A-D Test with new Display Cards</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f&quote=User%20Interface%3a%20Display%20B%20Initial%20Design%20and%20Construction" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f&text=User%20Interface%3a%20Display%20B%20Initial%20Design%20and%20Construction:https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f&description=User%20Interface%3a%20Display%20B%20Initial%20Design%20and%20Construction" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f&title=User%20Interface%3a%20Display%20B%20Initial%20Design%20and%20Construction&source=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=User%20Interface%3a%20Display%20B%20Initial%20Design%20and%20Construction&body=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f07%2fuser-interface-display-b-initial-design%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

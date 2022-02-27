@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Architectural breakdown: Programming and Control | Relay Computer</title>
+
+<meta property="og:title" content="Architectural breakdown: Programming and Control" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In this post I&rsquo;ll wrap up this &lsquo;mini-series&rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — finally now we come on to Programming and Control of the computer. Here again, for the last time, is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
+ System Architecture for a Relay Computer[^1]  With all the various parts of the architecture I&rsquo;ve discussed so far — the busses, registers, memory and ALU — we have a computer that could be manually operated, albeit laboriously, to perform various tasks." />
+<meta property="og:description" content="In this post I&rsquo;ll wrap up this &lsquo;mini-series&rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — finally now we come on to Programming and Control of the computer. Here again, for the last time, is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
+ System Architecture for a Relay Computer[^1]  With all the various parts of the architecture I&rsquo;ve discussed so far — the busses, registers, memory and ALU — we have a computer that could be manually operated, albeit laboriously, to perform various tasks." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2013/11/architectural-breakdown-programming-and/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2013/11/architectural-breakdown-programming-and/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In this post I&rsquo;ll wrap up this &lsquo;mini-series&rsquo; of trying to explain away the
+various bits of the architecture that will make up my relay computer project —
+finally now we come on to Programming and Control of the computer. Here again,
+for the last time, is the architecture I&rsquo;ll be building against (from the
+<a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay Computer</a>)</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-07-0000.png" alt="System Architecture for a Relay Computer">
+  
+  <figcaption markdown="span">System Architecture for a Relay Computer[^1]</figcaption>
+  
+</figure>
+
+
+<p>With all the various parts of the
+architecture I&rsquo;ve discussed so far — the busses, registers, memory and ALU —
+we have a computer that could be manually operated, albeit laboriously, to
+perform various tasks. Actually, in fact, this will be the first milestone in
+the construction of my computer &hellip; that I can manually operate what I have
+built so far just as the computer will itself when it is able to execute
+programs. Just to give you a feel for exactly how labour intensive even a
+simple task would be here are the manual steps to subtract 6 from 10:</p>
+<ol>
+<li>Enter the value 10 (in binary as 00001010) on to the data bus (there
+will be physical toggle switches to allow the user to do this).</li>
+<li>Turn the load switch on then back off again on the C register. This will store the
+value 10 on this register.</li>
+<li>Enter the value 6 (in binary as 00000110) on to the data bus.</li>
+<li>Turn the load switch on then back off again on the
+B register. This will store the value 6 on this register.</li>
+<li>We are now
+in our starting state for performing the subtraction. However, the ALU doesn&rsquo;t
+have a subtract function so we&rsquo;re going to have to do a little more work
+ourselves.</li>
+<li>Set the ALU to the NOT function. Load register A (toggle
+the load switch on then off). Turn off the ALU.</li>
+<li>Select register A
+(turn on the select switch so that its value is placed on the data bus) and
+load register B then turn off the select switch on register A. The value NOT-6
+is now copied in to register B (replacing the original 6 value).</li>
+<li>Set
+the ALU to the Increment function, load register A then turn off the ALU. We
+now have the value (NOT-6)+1 &hellip; the <a href="http://simple.wikipedia.org/wiki/Signed_number_representations">two&rsquo;s complement</a>
+of 6 which represents -6 in binary.</li>
+<li>Again, select register A, load register B then unselect
+register A. We now have -6 in register B and 10 still in register C. Finally
+now we can add the numbers together.</li>
+<li>Set the ALU to the Add function,
+load register A then turn off the ALU. We now have the value 4 in register A
+(-6 + 10) as expected.</li>
+</ol>
+<p>Phew, all that just to subtract two numbers
+and we didn&rsquo;t even include taking the starting values from somewhere in memory
+and then putting the result back in memory afterwards. Now of course, in a
+modern computer the ALU will likely have a subtract function built in so the
+above operation is much simpler (but at the expense of the ALU being more
+complex) but even in a computer that does perform all the above operations all
+of this happens in the blink of an eye. Well, that is, a blink of an eye for a
+modern wholly electronic computer but what I&rsquo;m building here is a relay
+computer which is electromechanical so it&rsquo;s not the fastest thing in the world
+and so the above would take a fair bit of time to complete (depending
+ultimately on how fast the relays can reliably switch before we get data
+corruption creeping in).</p>
+<p>You can probably see now that although
+operating a computer manually to perform a task is certainly possible it&rsquo;s not
+all that much fun (well, at least not after the first couple of times of doing
+it). What&rsquo;s really needed is the ability to give the computer a set of
+instructions/steps to follow that it can work through in its own time and then
+get back to us when it&rsquo;s finished with the result. This is where the computer
+program comes in &hellip; it&rsquo;s a set of sequential steps telling the computer what
+action to perform. Sequential steps alone would be enough to perform our
+subtraction routine above but where the real power comes is when the program
+can take differing actions based on a result the computer is generating so for
+example we could subtract the two numbers and then skip to a different part of
+the program depending on whether the result was positive or negative (or zero,
+or caused a carry — all driven by the ALU condition registers).</p>
+<p>If
+we look at the subtraction steps above we can break them down in to the
+following operations (after placing the values 10 and 6 in the registers):</p>
+<ol>
+<li>ALU:NOT, Load A</li>
+<li>Select A, Load B, Unselect A</li>
+<li>ALU:Increment, Load A</li>
+<li>Select A, Load B, Unselect A</li>
+<li>ALU:Add, Load A</li>
+</ol>
+<p>If you imagine that each part of the
+computer that can be manipulated has switches to control each operation (so
+load/set registers, operate the ALU, load/store in memory, etc &hellip; basically a
+big pile of switches). These steps are the switches that need to be toggled
+for each step. You can maybe see a pattern developing here &hellip; some of the
+steps are very similar. If we make things more concise again:</p>
+<ol>
+<li>ALU:NOT to A</li>
+<li>Copy A to B</li>
+<li>ALU:Increment to A</li>
+<li>Copy A to B</li>
+<li>ALU:Add to A</li>
+</ol>
+<p>There&rsquo;s actually two
+classes of step here: one is to perform an ALU operation (placing the value in
+A) and the other is to copy a value (from A to B). Equally we could perform
+any of the ALU operations using the same &lsquo;class&rsquo; of step (and place the value
+in a different register [but not B or C]) and we could move a value from any
+register to any register. So, if we give the computer an instruction/step of a
+certain &lsquo;class&rsquo; it will then know which switches to toggle and in which order
+which means we can get on with the job of just telling it, at a higher level,
+which steps to perform without worrying about what the computer will actually
+have to do to complete that step. Equally, the computer can just concern
+itself with performing the step exactly as requested without worrying about
+the overall task. We now need somewhere to store the current step so that the
+computer can work out which switches to throw and that&rsquo;s where the instruction
+register comes in — we simply place an 8-bit value in here and that then tells
+the computer what step to perform. Simply place?! Well, we need someway of
+encoding all the possible task &lsquo;classes&rsquo; that the computer can perform along
+with extra details (the copy command needs to know which register to copy from
+and to for example) in to a single 8-bit value that the computer can then
+decode. This encoded value is called an opcode (operation code) and the copy
+instruction (or move as it&rsquo;s commonly known) and the ALU instruction work like
+this:</p>
+<ul>
+<li>Move/Copy (MOV) : 00sssddd
+<ul>
+<li>sss = source register (000:A, 001:B, 010:C, 011:D, 100:M1, 101:M2, 110:X, 111:Y)</li>
+<li>ddd = destination register (000:A, 001:B, 010:C, 011:D, 100:M1, 101:M2, 110:X, 111:Y)</li>
+</ul>
+</li>
+<li>ALU (ALU) : 1000dfff
+<ul>
+<li>d = destination register (0:A, 1:D)</li>
+<li>fff = function (000:not used, 001:ADD, 010:INC, 011:AND, 100:OR, 101:XOR, 110:NOT, 111:SHL)</li>
+</ul>
+</li>
+</ul>
+<p>So, for
+example: 00000001 is the opcode for MOV A to B; 10000110 is the opcode for ALU
+NOT to A. You can see here now that although in theory you could store the ALU
+result in any register other than B or C there&rsquo;s only room in the opcode for a
+single bit &hellip; that&rsquo;s why we restrict ourselves to only allowing A or D as a
+destination for ALU operations. There are several more opcode classes and I&rsquo;ll
+put a post up a bit later which lists the full set. Hopefully now though you
+can now see that by using the opcodes we can give the computer the following
+instructions to perform the same subtraction program:</p>
+<pre><code>10000110    (ALU:NOT to A)
+00000001    (MOV A to B)
+10000010    (ALU:INC to A)
+00000001    (MOV A to B)
+10000001    (ALU:Add to A)
+</code></pre>
+<p>As a quick aside
+you can probably see that programming the computer is quite intense for the
+person writing the program (the programer). To make things easier we can use
+mnemonics to make the opcodes easier to remember and work with — one
+particular set of these mnemonics is called assembly language and would look a
+bit like the following:</p>
+<pre><code>not a
+mov b, a
+inc a
+mov b, a
+add a
+</code></pre>
+<p>Much easier
+to remember :) Note that each mnemonic has a matching opcode so effectively
+before we can enter the program into the computer we need to convert the
+mnemonics back into to opcodes. Incidentally, the sharp eyed out there might
+have noticed that the move command is &lsquo;mov b, a&rsquo; rather than &lsquo;mov a, b&rsquo; as you
+might otherwise expect &hellip; it does actually mean copy value a in to b but
+convention dictates the move command has the destination followed by the
+source in assembly language.</p>
+<p>Wow, this post is getting quite big
+and we&rsquo;re not quite there yet — we need to cover how we actually execute the
+program now we&rsquo;ve created it. Let me give you, and I, a breather and I&rsquo;ll
+continue in the next post.</p>
+<hr>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2013" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Nov 07, 2013</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#Architecture" class="tags">
+              <span class="tag is-primary">Architecture</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#theory" class="tags">
+              <span class="tag is-primary">theory</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2013/11/architectural-breakdown-alu/">Architectural breakdown: the ALU</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2013/11/architectural-breakdown-programming-and_7/">Architectural breakdown: Programming and Control 2</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f&quote=Architectural%20breakdown%3a%20Programming%20and%20Control" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f&text=Architectural%20breakdown%3a%20Programming%20and%20Control:https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f&description=Architectural%20breakdown%3a%20Programming%20and%20Control" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f&title=Architectural%20breakdown%3a%20Programming%20and%20Control&source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Architectural%20breakdown%3a%20Programming%20and%20Control&body=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2farchitectural-breakdown-programming-and%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

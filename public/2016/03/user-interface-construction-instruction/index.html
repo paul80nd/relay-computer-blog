@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>User Interface Construction: Instruction, Clock and Sequencer | Relay Computer</title>
+
+<meta property="og:title" content="User Interface Construction: Instruction, Clock and Sequencer" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Well, the good news is I&rsquo;ve just passed a major milestone in constructing this relay computer &hellip; it can now perform a single instruction in full firing the various control lines as needed. The bad news &hellip; I&rsquo;m rather behind in blogging about it so this will be the first of a couple of &lsquo;catch up&rsquo; posts which will culminate in a video showing off the computer as it currently stands." />
+<meta property="og:description" content="Well, the good news is I&rsquo;ve just passed a major milestone in constructing this relay computer &hellip; it can now perform a single instruction in full firing the various control lines as needed. The bad news &hellip; I&rsquo;m rather behind in blogging about it so this will be the first of a couple of &lsquo;catch up&rsquo; posts which will culminate in a video showing off the computer as it currently stands." />
+<link rel="canonical" href="https://relaycomputer.co.uk/2016/03/user-interface-construction-instruction/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2016/03/user-interface-construction-instruction/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Well, the good news is I&rsquo;ve just passed a major milestone in
+constructing this relay computer &hellip; it can now perform a single instruction
+in full firing the various control lines as needed. The bad news &hellip; I&rsquo;m
+rather behind in blogging about it so this will be the first of a couple of
+&lsquo;catch up&rsquo; posts which will culminate in a video showing off the computer as
+it currently stands.</p>
+<p>The last outstanding item from
+the MOV-8, ALU and SETAB series of construction is updating the computer&rsquo;s
+user interface so that the contents of the instruction register and the
+actions of the control and sequencer cards can be observed. The first job was
+to apply the legends to the new buttons and indicators that I&rsquo;d be adding to
+the two display cards. Here&rsquo;s a close up picture:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0000.jpg" alt="Close up of additional buttons and indicators">
+  
+</figure>
+
+
+<p>The buttons at the top are (from left to right)
+clock, instruction to bus (I2B), instruction load and condition load. Below
+that are the instruction class indicators: MOV8 and SETAB. The ALU instruction
+class isn&rsquo;t indicated as the specific ALU operation is shown in the ALU
+indicator group. Next is the instruction opcode byte and finally the clock
+indicator.</p>
+<p>With the additional buttons installed on
+Display A we get the following:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0001.jpg" alt="Display A Card (front)">
+<img src="/img/posts/2016/2016-03-29-0002.jpg" alt="Display A Card (back)">
+  
+</figure>
+
+
+<p>Previously on this card the Address Switch Select (sel AS)
+was wired up to the Load Condition register line but now it has its own
+dedicated button (ld COND) I&rsquo;ve removed the temporary wire link.</p>
+<p>Adding the new indicators to Display B we get the
+following:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0003.jpg" alt="Display B Card (front)">
+<img src="/img/posts/2016/2016-03-29-0004.jpg" alt="Display B Card (back)">
+  
+</figure>
+
+
+<p>The instruction register op code is shown at the top right
+and around that is the decoded instruction class that op code represents
+(excluding ALU which is shown separately in the block below). I decided to add
+the labelling for all the other instruction classes that the computer will
+eventually support as I didn&rsquo;t want to risk damaging the indicators when I&rsquo;d
+later have to remove them to add the additional legends. Similarly on the rear
+of the card I&rsquo;ve soldered up all of the instruction class indicators to save
+things getting messy later on. Lastly on this card the clock indicator sits
+above the three condition registers.</p>
+<p>With both
+display cards installed back in the upper enclosure it looks like
+this:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0005.jpg" alt="Upper Enclosure with Display Cards">
+  
+</figure>
+
+
+<p>With the display cards updated the next job was to hook up
+the right hand primary switches as I&rsquo;ll need the clock step and reset (RSET)
+switches to help operate the computer when everything constructed so far is
+tested together. The switches are soldered up to some ribbon cable much the
+same way the left hand primary switches were:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0006.jpg" alt="Right hand Primary Switches (rear view)">
+  
+</figure>
+
+
+<p>The upper enclosure as a whole then looks like
+this:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0007.jpg" alt="Upper Enclosure (rear)">
+  
+</figure>
+
+
+<p>There&rsquo;s quite a lot of ribbon cables coming off the display
+cards now and these all need wiring out on the display distribution
+card:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0008.jpg" alt="Display Distribution Card">
+  
+</figure>
+
+
+<p>There&rsquo;s quite a bit added to this card. Firstly, the
+instruction op code is brought in on the new 16 pin straight IDC socket on the
+right. This is the C/I bus (control and instruction) and sits next to the D/C
+bus (data and control) on the far right. The other 16 pin straight IDC socket
+on the left is the OP bus which brings in the current decoded instruction
+class. This sits to the right of the X and Y control busses. Both these new
+sockets are wired out to the display cards as appropriate.</p>
+<p>To aid wiring out I&rsquo;ve added a sticky label and written on which
+display cables go where and I&rsquo;ve also written on the edge connectors in white
+pen. The yellow &lsquo;flying&rsquo; lead seen heading off the photo to the right connects
+to the auxiliary control card for activating the Select Data Switches
+operation (sel DS). Speaking of which &hellip; here is the updated auxiliary
+control card:</p>
+<figure>
+  <img src="/img/posts/2016/2016-03-29-0009.jpg" alt="Auxiliary Control Card">
+  
+</figure>
+
+
+<p>Not too much has changed here &hellip; the right hand primary
+switches are wired out to the X control bus and then I&rsquo;ve marked up the
+connectors in white pen again.</p>
+<p>That&rsquo;s it for now on
+the upper enclosure &hellip; the computer is getting very close to the point where
+I&rsquo;ll be able to test all the cards constructed so far together. One missing
+piece is the backplane that the new &lsquo;W&rsquo; cards will sit on. Unfortunately this
+one won&rsquo;t be straightforward as the &lsquo;W&rsquo; backplane has W1 and W2 style
+connectors which will make wiring up the backplane challenging - anyho, I&rsquo;ll
+leave that for my next post.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2016" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Mar 29, 2016</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#UI" class="tags">
+              <span class="tag is-primary">UI</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/2016/01/controller-construction-mov-8-alu-and/">Controller Construction: MOV-8, ALU and SETAB</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/2016/04/w-backplane-construction-power/">W Backplane Construction &amp; Power Distribution</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3>On this blog</h3>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <h3>Related sites</h3>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <h3>Share on social media</h3>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f&quote=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f&text=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer:https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f&description=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f&title=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer&source=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer&body=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
