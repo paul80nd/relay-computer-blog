@@ -23,7 +23,7 @@
 
 {{ "<!-- Begin CSS Styles -->" | safeHTML }}
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-{{ $cssOpts := (dict "includePaths" (slice "node_modules/bootstrap/scss" "assets/css")) }}
+{{ $cssOpts := (dict "includePaths" (slice "node_modules/bulma"  "node_modules/bulma-badge/dist/css" "assets/css")) }}
 {{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
