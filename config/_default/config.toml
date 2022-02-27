@@ -10,9 +10,6 @@ googleAnalytics = 'UA-47484999-2'
 # Disable Hugo generator meta tag in the HTML head.
 disableHugoGeneratorInject =  true
 
-# Temporary ugly urls until parity with old site
-uglyurls = true
-
 enableRobotsTXT = true
 paginate = 12
 
@@ -35,20 +32,20 @@ paginate = 12
 
 [[menu.main]]
   name = 'Overview'
-  url = '/pages/overview.html'
+  url = '/pages/overview/'
   weight = 2
 
 [[menu.main]]
   name = 'Progress'
-  url = '/pages/progress.html'
+  url = '/pages/progress/'
   weight = 3
 
 [[menu.main]]
   name = 'Archive'
-  url = '/archive.html'
+  url = '/archive/'
   weight = 4
 
 [[menu.main]]
   name = 'Tags'
-  url = '/tags.html'
+  url = '/tags/'
   weight = 3
