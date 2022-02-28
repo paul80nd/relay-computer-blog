@@ -8,14 +8,7 @@
 <body>
   {{ partial "widgets/header.html" . }}
 
-  <section class="hero is-bold is-primary">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title ">Tags</h1>
-        <h2 class="subtitle"></h2>
-      </div>
-    </div>
-  </section>
+  {{ partial "widgets/hero.html" . }}
 
   <section class="section">
     <div class="container">
@@ -31,9 +24,9 @@
 
               {{ range sort .Site.Taxonomies.tags }}
               <div class="control">
-                <a href="#{{ .Page.Title }}" class="tags has-addons are-medium">
+                <a href="#{{ .Page.Title }}" class="tags has-addons">
                   <span class="tag is-primary">{{ .Page.Title }}</span>
-                  <span class="tag is-dark">{{ .Count }}</span>
+                  <span class="tag is-success">{{ .Count }}</span>
                 </a>
               </div>
               {{ end }}
