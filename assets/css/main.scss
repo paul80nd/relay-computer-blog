@@ -11,6 +11,10 @@ $tabs-link-active-border-bottom-color: $primary;
 
 @import "bulma-ribbon.sass";
 
+body {
+  background-color: #F0F2F4;
+}
+
 .bg-img {
     background-position: center center;
     background-repeat:  no-repeat;
