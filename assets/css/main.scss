@@ -11,6 +11,12 @@ $tabs-link-active-border-bottom-color: $primary;
 
 @import "bulma-ribbon.sass";
 
+@include tablet {
+  .pull-up {
+    margin-top: -10rem !important;
+  }
+}
+
 body {
   background-color: #F0F2F4;
 }
