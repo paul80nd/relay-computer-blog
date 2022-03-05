@@ -1,16 +1,28 @@
 {{ $image := .Params.thumbnail }}
-<article class="card bg-img" style="display: flex; flex-flow: column-reverse; height:100%;{{ with $image }} background-image: url('{{ $image }}'){{end}}" >
-  <div class="card-content" style="background-color: rgba(255,255,255,0.95); flex-basis:0; margin-top: 8em;">
-      <div class="content">
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p>{{ .Summary | truncate 125 }}</p>
-          <p>
-            <small>
-              {{.Date.Format "02 Jan 2006"}}&nbsp;&nbsp;&nbsp;—&nbsp;
-              {{ div (add (.Content | countwords) 250) 250 }} minute read
-            </small>
-          </p>
-          <a href="{{ .RelPermalink }}" class="button">Read More</a>
+<article class="card bg-img"
+  style="display: flex; flex-flow: column-reverse; height:100%;{{ with $image }} background-image: url('{{ $image }}'){{end}}">
+  <div class="card-content has-background-white"
+    style="flex-basis:0; margin-top: 8em; border-top-left-radius: 0; border-top-right-radius: 0; border-top: 1px solid lightgrey">
+    <div class="content">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Summary | truncate 110 }}</p>
+      <p>
+        <a href="{{ .RelPermalink }}" class="button is-small">Read More</a>
+      </p>
+      <hr class="my-4" />
+      <div class="tags mb-1">
+        <span class="tag is-link is-light">Published {{.Date.Format "02 Jan 2006"}} </span>
+        <span class="tag is-link is-light">{{ div (add (.Content | countwords) 250) 250 }} minute read</span>
       </div>
+      {{ with .Param "tags" }}
+      <div class="tags">
+        {{ range (. | sort) }}
+        <a href="/tags#{{ . }}" class="tag is-success is-light is-rounded">
+          {{ . }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
   </div>
 </article>
