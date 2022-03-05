@@ -42,7 +42,8 @@
       </div>
     </div>
     {{ end }}
-    <div class="columns is-multiline">
+
+    <div class="columns is-multiline {{ if ne $paginator.PageNumber 1}}pull-up{{ end }}">
       {{ range $index, $element := $paginator.Pages }}
       {{ if or (ne $paginator.PageNumber 1) (ne $index 0) }}
       <div class="column is-half is-one-third-widescreen">
@@ -58,7 +59,11 @@
       {{ end }}
 
     </div>
-    {{ partial "home-pager" .Paginator }}
+    <div class="card">
+      <div class="card-content py-3">
+        {{ partial "home-pager" .Paginator }}
+      </div>
+    </div>
   </div>
 </section>
 {{ end }}

@@ -3,27 +3,60 @@
 
 <nav class="pagination is-centered" role="navigation" aria-label="pagination">
 
-   <!-- Previous page. -->
-   {{ if $paginator.HasPrev }}
-   <a href="{{ $paginator.Prev.URL }}" class="pagination-previous is-info">Previous</a>
-   {{ else }}
-   <p class="pagination-previous" disabled>Previous</p>
-   {{ end }}
+  <!-- Previous page. -->
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}" class="pagination-previous is-info">Previous</a>
+  {{ else }}
+  <p class="pagination-previous" disabled>Previous</p>
+  {{ end }}
 
-   <!-- Next page. -->
-   {{ if $paginator.HasNext }}
-   <a href="{{ $paginator.Next.URL }}" class="pagination-next is-info">Next</a>
-   {{ else }}
-   <p class="pagination-next" disabled >Next</p>
-   {{ end }}
+  <!-- Next page. -->
+  {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}" class="pagination-next is-info">Next</a>
+  {{ else }}
+  <p class="pagination-next" disabled>Next</p>
+  {{ end }}
 
-   <ul class="pagination-list">
+  <ul class="pagination-list">
+    {{ $showAllNumbers := lt $paginator.TotalPages 5 }}
+    {{ $left := 0 }}
+    {{ $right := add $paginator.TotalPages 1 }}
+    {{ if not $showAllNumbers }}
+    {{ $left = sub $paginator.PageNumber 2 }}
+    {{ $right = add $paginator.PageNumber 2 }}
+
+    {{ if le $left 1 }}
+    {{ $left = 0}}
+    {{ $right = 5}}
+    {{ end }}
+    {{ if gt $right $paginator.TotalPages }}
+    {{ $left = sub $paginator.TotalPages 4 }}
+    {{ $right = add $paginator.TotalPages 1 }}
+    {{ end }}
+    {{ end }}
+
+    {{ $shouldEllipse := false }}
+    {{ $ellipsed := false }}
 
     <!-- Page numbers. -->
     {{ range $paginator.Pagers }}
-
+    {{ if eq .PageNumber $paginator.PageNumber }}
+    <li><a class="pagination-link is-current">{{ .PageNumber }}</a></li>
+    {{ else }}
+    {{ $showNumber := or $showAllNumbers (or (or (eq .PageNumber 1) (eq .PageNumber $paginator.TotalPages)) (and (gt .PageNumber $left) (gt $right .PageNumber))) }}
+    {{ if $showNumber }}
+        {{ $ellipsed = false }}
+        {{ $shouldEllipse = false }}
+    {{ else }}
+        {{ $shouldEllipse = not $ellipsed }}
+        {{ $ellipsed = true }}
+    {{ end }}
+    {{ if $showNumber }}
     <li><a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a></li>
-
+    {{ else if $shouldEllipse }}
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    {{ end }}
+    {{ end }}
     {{ end }}
   </ul>
 </nav>
