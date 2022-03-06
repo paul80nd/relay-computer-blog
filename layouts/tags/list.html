@@ -1,14 +1,24 @@
 {{ define "main" }}
+{{ if .Parent.Section }}
+{{ partial "hero" (dict "title" (printf "#%s" .Title) "subtitle" (printf "List of articles tagged with '%s'" .Title)) }}
+{{ else }}
 {{ partial "hero" (dict "title" .Title "subtitle" "List of tags appearing in articles") }}
+{{ end }}
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
+      {{ if .Parent.Section }}
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="column is-half">
+        {{ .Render "summary" }}
+      </div>
+      {{ end }}
+      {{ else }}
       {{ range .Pages.ByTitle }}
       <div class="column is-half is-one-third-desktop">
-        <div class="content">
-          {{ .Render "summary" }}
-        </div>
+        {{ .Render "summary" }}
       </div>
+      {{ end }}
       {{ end }}
     </div>
   </div>

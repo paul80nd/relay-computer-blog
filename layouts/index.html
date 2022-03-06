@@ -48,7 +48,7 @@
       {{ range $index, $element := $paginator.Pages }}
       {{ if or (ne $paginator.PageNumber 1) (ne $index 0) }}
       <div class="column is-half">
-        {{ partial "home-postcard" . }}
+        {{ .Render "summary" }}
       </div>
       {{ end }}
       {{ end }}
