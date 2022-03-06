@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ALU Summary | Relay Computer</title>
+
+<meta property="og:title" content="ALU Summary" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="The Arithmetic Logic Unit (ALU) is split into three units (and also three physical cards): the logic unit, the arithmetic unit and the control unit. The logic and arithmetic cards handle 8-bit logic and arithmetic functions respectively. The control unit handles function decoding, zero detection and holds the condition registers.
+Details of the design, construction and testing of each unit can be found in the following posts:
+    Design Construction Testing     Arithmetic Unit 1-bit Arithmetic Unit" />
+<meta property="og:description" content="The Arithmetic Logic Unit (ALU) is split into three units (and also three physical cards): the logic unit, the arithmetic unit and the control unit. The logic and arithmetic cards handle 8-bit logic and arithmetic functions respectively. The control unit handles function decoding, zero detection and holds the condition registers.
+Details of the design, construction and testing of each unit can be found in the following posts:
+    Design Construction Testing     Arithmetic Unit 1-bit Arithmetic Unit" />
+<link rel="canonical" href="https://relaycomputer.co.uk/pages/alu/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/pages/alu/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">ALU Summary</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>The Arithmetic Logic Unit (ALU) is split into three units (and also three physical cards): the logic unit, the arithmetic unit and the control unit. The logic and arithmetic cards handle 8-bit logic and arithmetic functions respectively. The control unit handles function decoding, zero detection and holds the condition registers.</p>
+<p>Details of the design, construction and testing of each unit can be found in the following posts:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Design</th>
+<th>Construction</th>
+<th>Testing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arithmetic Unit</strong></td>
+<td><a href="/2013/11/design-1-bit-arithmetic-unit/">1-bit Arithmetic Unit</a><br /><a href="/2013/11/design-8-bit-arithmetic-unit/">8-bit Arithmetic Unit</a></td>
+<td><a href="/2013/12/alu-construction-connectors-and-leds/">Connectors and LEDs</a><br /><a href="/2013/12/alu-construction-led-header-pins/">LED Header Pins</a><br /><a href="/2014/01/alu-construction-arithmetic-card-header/">Header Pins</a><br /><a href="/2014/01/alu-construction-arithmetic-card-relay/">Relay Sockets</a><br /><a href="/2014/01/alu-construction-1-bit-arithmetic-full/">1-bit Full Construction</a><br /><a href="/2014/01/alu-construction-arithmetic-card-power/">Power Rails</a><br />Wire Wrap (<a href="/2014/02/alu-construction-arithmetic-card-wire/">Part 1</a>, <a href="/2014/02/alu-construction-arithmetic-card-wire_19/">Part 2</a>)</td>
+<td><a href="/2013/12/alu-construction-led-tests/">LED Tests</a><br /><a href="/2014/01/alu-construction-1-bit-arithmetic-full/">1-bit Test</a><br /><a href="/2014/02/alu-construction-completed-arithmetic/">Full Test</a></td>
+</tr>
+<tr>
+<td><strong>Control Unit</strong></td>
+<td><a href="/2013/11/design-function-decoder/">Function Decoder</a><br /><a href="/2013/11/alu-design-zero-detect/">Zero Detect</a><br /><a href="/2013/11/alu-design-condition-registers/">Condition Registers</a><br /><a href="/2013/12/alu-design-control-unit/">Control Unit</a></td>
+<td><a href="/2013/12/alu-construction-connectors-and-leds/">Connectors and LEDs</a><br /><a href="/2013/12/alu-construction-led-header-pins/">LED Header Pins</a><br /><a href="/2014/03/alu-construction-control-card-header/">Header Pins</a><br /><a href="/2014/03/alu-construction-control-card-header/">Relay Sockets</a><br /><a href="/2014/03/alu-construction-control-card-power/">Power Rails</a><br /><a href="/2014/03/alu-construction-control-card-power/">Wire Wrap</a></td>
+<td><a href="/2013/12/alu-construction-led-tests/">LED Tests</a><br /><a href="/2014/03/alu-construction-completed-control-card/">Full Test</a></td>
+</tr>
+<tr>
+<td><strong>Logic Unit</strong></td>
+<td><a href="/2013/11/design-1-bit-logic-unit/">1-bit Logic Unit</a><br /><a href="/2013/11/design-8-bit-logic-unit/">8-bit Logic Unit</a></td>
+<td><a href="/2013/12/alu-construction-connectors-and-leds/">Connectors and LEDs</a><br /><a href="/2013/12/alu-construction-led-header-pins/">LED Header Pins</a><br /><a href="/2013/12/alu-construction-logic-card-wire-links/">LED Wire Links</a><br /><a href="/2013/12/alu-construction-1-bit-logic-full/">1-bit Full Construction</a><br /><a href="/2013/12/alu-construction-logic-card-header-pins/">Header Pins</a><br /><a href="/2013/12/alu-construction-logic-card-relay/">Relay Sockets</a><br /><a href="/2013/12/alu-construction-logic-card-power-rails/">Power Rails</a><br />Wire Wrap (<a href="/2013/12/alu-construction-logic-card-wire-wrap-1/">Part 1</a>, <a href="/2013/12/alu-construction-logic-card-wire-wrap-2/">Part 2</a>, <a href="/2013/12/alu-construction-logic-card-wire-wrap-3/">Part 3</a>)</td>
+<td><a href="/2013/12/alu-construction-led-tests/">LED Tests</a><br /><a href="/2013/12/alu-construction-1-bit-logic-full/">1-bit Test</a><br /><a href="/2013/12/alu-construction-8-bit-logic-unit-tests/">8-bit Test</a><br /><a href="/2013/12/alu-construction-completed-logic-card/">Full Test</a></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f&quote=ALU%20Summary" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f&text=ALU%20Summary:https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f&description=ALU%20Summary" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f&title=ALU%20Summary&source=https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=ALU%20Summary&body=https%3a%2f%2frelaycomputer.co.uk%2fpages%2falu%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

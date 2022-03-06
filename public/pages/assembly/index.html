@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Assembly | Relay Computer</title>
+
+<meta property="og:title" content="Assembly" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Although the computer is primarily controlled by a set of 8-bit opcodes these can be tricky to work with when designing more complicated programs. As with many computers we can use a higher-level language which is more readable for a human but then will need converting into 8-bit opcodes for the computer to understand.
+I have designed an assembly style language which is made up of a series of mnemonics that each map directly to an equivalent opcode." />
+<meta property="og:description" content="Although the computer is primarily controlled by a set of 8-bit opcodes these can be tricky to work with when designing more complicated programs. As with many computers we can use a higher-level language which is more readable for a human but then will need converting into 8-bit opcodes for the computer to understand.
+I have designed an assembly style language which is made up of a series of mnemonics that each map directly to an equivalent opcode." />
+<link rel="canonical" href="https://relaycomputer.co.uk/pages/assembly/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/pages/assembly/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Assembly</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Although the computer is primarily controlled by a set of 8-bit opcodes these can be tricky to work with when designing
+more complicated programs. As with many computers we can use a higher-level language which is more readable for a human but
+then will need converting into 8-bit opcodes for the computer to understand.</p>
+<p>I have designed an assembly style language which is made up of a series of mnemonics that each map directly to an equivalent
+opcode. This makes it easier to create and maintain programs for the computer but still works at the basic hardware level of
+the computer. This is in contrast to a modern high-level language such as C# where each statement might compile down to a
+series of opcodes required to perform that action.</p>
+<p>The list of available instructions is as follows:</p>
+<p>{% include pages-mnemonic.html mnemonic=&ldquo;mov&rdquo; %}
+{% include pages-mnemonic.html mnemonic=&ldquo;clr&rdquo; %}
+{% include pages-mnemonic.html mnemonic=&ldquo;ldi&rdquo; %}
+{% include pages-mnemonic.html mnemonic=&ldquo;arith&rdquo; %}
+{% include pages-mnemonic.html mnemonic=&ldquo;logic&rdquo; %}
+{% include pages-mnemonic.html mnemonic=&ldquo;branch&rdquo; %}
+{% include pages-mnemonic.html mnemonic=&ldquo;opc&rdquo; %}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f&quote=Assembly" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f&text=Assembly:https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f&description=Assembly" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f&title=Assembly&source=https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Assembly&body=https%3a%2f%2frelaycomputer.co.uk%2fpages%2fassembly%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
