@@ -6,24 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
-  {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+  {{- $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") -}}
   {{ if $production }}
-    <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
   {{ else }}
-    <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow">
   {{ end }}
 
-  {{ "<!-- Begin CSS Styles -->" | safeHTML }}
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  {{ $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "node_modules/bulma-badge/dist/css" "assets/css")) }}
+  {{- $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "node_modules/bulma-badge/dist/css" "assets/css")) -}}
   {{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
   {{ end }}
-  {{ "<!-- End CSS Styles -->" | safeHTML }}
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
@@ -50,15 +47,10 @@
 
   {{- template "_internal/opengraph.html" . -}}
   {{- template "_internal/schema.html" . -}}
-  {{- template "_internal/twitter_cards.html" . -}}
+  {{- template "_internal/twitter_cards.html" . }}
 
-  {{ "<!-- Begin EU Cookie Consent -->" | safeHTML }}
-  {{ partial "plugins/cookie-consent.html" -}}
-  {{ "<!-- End EU Cookie Consent -->" | safeHTML }}
-
-  {{ "<!-- Begin Google Analytics -->" | safeHTML }}
+  {{- partial "plugins/cookie-consent.html" }}
   {{ template "_internal/google_analytics.html" . }}
-  {{ "<!-- End Google Analytics -->" | safeHTML }}
 
 </head>
 
