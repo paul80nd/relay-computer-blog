@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">16-bit Register Design</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -164,7 +175,6 @@ built so far) but that can also be paired up in to a 16-bit register that gates 
   
 </figure>
 
-
 <p>This schematic was produced in OmniGraffle on my Mac and is, to all intents and purposes, just a picture. What makes EasyEDA
 such a leap forward is that doing the schematic design in that captures what the components actually are and how they connect
 to each other. This makes it easy to produce lists of parts and ultimately to transform the schematic into a PCB. Anyho, I&rsquo;m
@@ -174,7 +184,6 @@ a 1-bit register unit:</p>
   <img src="/img/posts/2019/2019-07-15-0000.png" alt="1-bit Register Unit">
   
 </figure>
-
 
 <p>R0 in the schematic is the input/output to the unit. Supplying power to this line activates the relay and then as long as
 power is supplied to the Hold line that relay will be kept activated. Dropping the Hold line resets the relay. All the
@@ -189,7 +198,6 @@ relay coil to absorb the spike when the relay is deactivated.</p>
   
 </figure>
 
-
 <p>Note that the Hold line is shared across all the relay &lsquo;bits&rsquo; so that the register can be held/cleared as one but that each
 individual &lsquo;bit&rsquo; has its own input/output line R0-R7. To get two 8-bit registers we just double up the design:</p>
 <figure>
@@ -199,7 +207,6 @@ individual &lsquo;bit&rsquo; has its own input/output line R0-R7. To get two 8-b
   
 </figure>
 
-
 <p>The data input/output lines continue on from R8 thru RF but note that the hold line is different. The first 8-bits use a HoldL line and the next 8-bits use a HoldH line. This refers to High and Low hold lines which allows either the high (R8-RF)
 or low (R0-R7) register to be held or cleared as required. Effectively each 8-bit register can be loaded/cleared independently
 as and where required. We&rsquo;ll come back to the control circuitry that drives this in a bit but let&rsquo;s look at the bus gating
@@ -208,7 +215,6 @@ next:</p>
   <img src="/img/posts/2019/2019-07-15-0003.png" alt="1-bit Gating">
   
 </figure>
-
 
 <p>In this case we&rsquo;re looking at the gating for register bits R6 and R7 (the highest bits of the low 8-bit register). R6 and R7
 connect to the register bits in the schematics above and the gating relays allow that input/output line to be gated to either
@@ -221,7 +227,6 @@ of this schematic (EnHL) gates to the address bus. Again, we can extend this des
   
 </figure>
 
-
 <p>&hellip; and onwards to gate the two 8-bit registers as independant units or together as a single 16-bit register &hellip;</p>
 <figure>
   <img src="/img/posts/2019/2019-07-15-0005.png" alt="2 x 8-bit Gating">
@@ -229,7 +234,6 @@ of this schematic (EnHL) gates to the address bus. Again, we can extend this des
   <figcaption markdown="span">2 x 8-bit Gating (<a href="/img/posts/2019/2019-07-15-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>Note that EnL (lower 8-bit register) gates R0 - R7 to D0 - D7, as you&rsquo;d expect, but EnH (upper 8-bit register) gates R8 - RF also to D0 - D7. This makes sense because there&rsquo;s only one 8-bit data bus and if you wanted to load the full 16-bit register
 from there you&rsquo;d need to load the lower 8-bits first and then the upper 8-bits. Of course, there only needs to be one EnHL for
@@ -239,7 +243,6 @@ control circuitry:</p>
   <img src="/img/posts/2019/2019-07-15-0006.png" alt="Low Register Control">
   
 </figure>
-
 
 <p>This handles the HoldL and EnL lines we&rsquo;ve already seen for the lower 8-bit register. The inputs to this circuit are SelL to
 write to the data bus and LdL to load from the data bus. Selecting the register to write to the data bus is very easy &hellip; we
@@ -255,7 +258,6 @@ HoldHL line is dropped which achieves the same as far as holding is concerned. W
   
 </figure>
 
-
 <p>So that gives us the three main components of a register: storage bits, gating and control. We finally need a way to connect
 the register to the outside World and that&rsquo;s where the card connectors come in. In the schematic they&rsquo;re represented as
 follows:</p>
@@ -266,7 +268,6 @@ follows:</p>
   
 </figure>
 
-
 <p>This now brings us to one final minor problem. I want to make three 16-bit register cards however there&rsquo;s something stopping
 them from being created identically. The three registers will be M (M1 and M2), J (J1 and J2) and XY (X and Y). The difference
 here is that each will respond to different control signals to ensure that if you&rsquo;re loading, say, the lower 8-bit M1 register
@@ -276,7 +277,6 @@ specific. The simplest solution here is to have a jumper block that I can set a 
   <img src="/img/posts/2019/2019-07-15-0009.png" alt="Configuration Jumpers">
   
 </figure>
-
 
 <p>&hellip; and with that we have a complete design for a 16-bit register with independently controllable upper and lower 8-bit
 &lsquo;sub-registers&rsquo;. As usual there&rsquo;s a version of the full design <a href="/pdf/register-jmxy.pdf">here in PDF format</a>. In my next post I&rsquo;ll go through how this schematic becomes a PCB design that can be sent off to JLCPCB for manufacturing.</p>
@@ -324,18 +324,22 @@ specific. The simplest solution here is to have a jumper block that I can set a 
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -343,7 +347,7 @@ specific. The simplest solution here is to have a jumper block that I can set a 
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f07%2f16bit-register-design%2f&quote=16-bit%20Register%20Design" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f07%2f16bit-register-design%2f&text=16-bit%20Register%20Design:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f07%2f16bit-register-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

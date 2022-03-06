@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Register Design: Program Counter</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -171,7 +182,6 @@ code itself.</p>
   
 </figure>
 
-
 <p>This is a type &lsquo;X&rsquo;
 card (like the instruction register) and so has the same connectors along the
 back of the card (X control bus, address bus, data/instruction bus and power
@@ -195,7 +205,6 @@ display B on which I&rsquo;ll add the address bus:</p>
   
 </figure>
 
-
 <p>The
 address bus consists of red LED light bars similar to the data bus ones but
 with each element half the width to fit the full 16 bits in. As with the
@@ -207,7 +216,6 @@ display A which gains two extra control switches:</p>
   <figcaption markdown="span">Display A with added Program Counter Load/Select (<a href="/img/posts/2017/2017-05-29-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>Looking towards the centre of the diagram above you can see the
 new load and select control switches for the program counter (LD PC and SEL
@@ -243,7 +251,6 @@ relay computer simulator which now looks like this:</p>
   <img src="/img/posts/2017/2017-05-29-0003.png" alt="Screenshot of Relay Computer Simulator">
   
 </figure>
-
 
 <p>The <a href="http://80nd.co.uk/relaycomputer/">latest version of this can be found here</a>
 (although note that I only ever host the latest version
@@ -298,18 +305,22 @@ effectively moving it on to the next position in memory.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -317,7 +328,7 @@ effectively moving it on to the next position in memory.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f05%2fregister-design-program-counter%2f&quote=Register%20Design%3a%20Program%20Counter" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f05%2fregister-design-program-counter%2f&text=Register%20Design%3a%20Program%20Counter:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f05%2fregister-design-program-counter%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

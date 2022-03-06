@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">User Interface Construction: Instruction, Clock and Sequencer</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -146,7 +157,6 @@ the two display cards. Here&rsquo;s a close up picture:</p>
   
 </figure>
 
-
 <p>The buttons at the top are (from left to right)
 clock, instruction to bus (I2B), instruction load and condition load. Below
 that are the instruction class indicators: MOV8 and SETAB. The ALU instruction
@@ -161,7 +171,6 @@ Display A we get the following:</p>
   
 </figure>
 
-
 <p>Previously on this card the Address Switch Select (sel AS)
 was wired up to the Load Condition register line but now it has its own
 dedicated button (ld COND) I&rsquo;ve removed the temporary wire link.</p>
@@ -172,7 +181,6 @@ following:</p>
 <img src="/img/posts/2016/2016-03-29-0004.jpg" alt="Display B Card (back)">
   
 </figure>
-
 
 <p>The instruction register op code is shown at the top right
 and around that is the decoded instruction class that op code represents
@@ -191,7 +199,6 @@ this:</p>
   
 </figure>
 
-
 <p>With the display cards updated the next job was to hook up
 the right hand primary switches as I&rsquo;ll need the clock step and reset (RSET)
 switches to help operate the computer when everything constructed so far is
@@ -202,14 +209,12 @@ same way the left hand primary switches were:</p>
   
 </figure>
 
-
 <p>The upper enclosure as a whole then looks like
 this:</p>
 <figure>
   <img src="/img/posts/2016/2016-03-29-0007.jpg" alt="Upper Enclosure (rear)">
   
 </figure>
-
 
 <p>There&rsquo;s quite a lot of ribbon cables coming off the display
 cards now and these all need wiring out on the display distribution
@@ -218,7 +223,6 @@ card:</p>
   <img src="/img/posts/2016/2016-03-29-0008.jpg" alt="Display Distribution Card">
   
 </figure>
-
 
 <p>There&rsquo;s quite a bit added to this card. Firstly, the
 instruction op code is brought in on the new 16 pin straight IDC socket on the
@@ -237,7 +241,6 @@ control card:</p>
   <img src="/img/posts/2016/2016-03-29-0009.jpg" alt="Auxiliary Control Card">
   
 </figure>
-
 
 <p>Not too much has changed here &hellip; the right hand primary
 switches are wired out to the X control bus and then I&rsquo;ve marked up the
@@ -293,18 +296,22 @@ leave that for my next post.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -312,7 +319,7 @@ leave that for my next post.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f&quote=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f&text=User%20Interface%20Construction%3a%20Instruction%2c%20Clock%20and%20Sequencer:https%3a%2f%2frelaycomputer.co.uk%2f2016%2f03%2fuser-interface-construction-instruction%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

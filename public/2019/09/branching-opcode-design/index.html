@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Branching: Opcode Design</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -366,7 +377,6 @@ instructions starting with <code>10</code>. With all our instruction classes to-
   
 </figure>
 
-
 <p>Using the <code>11</code> prefix gives us 1-bit spare in the opcode which we can use to implement an additional useful operation. Following every GOTO opcode there&rsquo;ll need to be a 16-bit address which will be loaded in to the J register and then if a
 jump is required that value is copied into the program counter making execution carry on elsewhere in the program. What
 would also be useful is to be to load the M register in a similar way (but without taking any jumps as J would be in an
@@ -525,18 +535,22 @@ subsequent posts too.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -544,7 +558,7 @@ subsequent posts too.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f09%2fbranching-opcode-design%2f&quote=Branching%3a%20Opcode%20Design" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f09%2fbranching-opcode-design%2f&text=Branching%3a%20Opcode%20Design:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f09%2fbranching-opcode-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

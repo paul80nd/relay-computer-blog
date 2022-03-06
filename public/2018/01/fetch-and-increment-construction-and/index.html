@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Fetch and Increment - Construction and Test</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -146,7 +157,6 @@ the changes in place the sequencer now looks like this:</p>
   
 </figure>
 
-
 <p>You&rsquo;ll be
 forgiven for not spotting the changes straight away (doubly so if you&rsquo;ve not
 been following my blog). The sequencer gains two LEDs to show the new pulses
@@ -158,7 +168,6 @@ close up look like this:</p>
   
 </figure>
 
-
 <p>That&rsquo;s it for
 the sequencer &hellip; the changes on the controller cards are a bit more
 involved:</p>
@@ -167,7 +176,6 @@ involved:</p>
 <img src="/img/posts/2018/2018-01-16-0005.jpg" alt="Controller Cards (rear side)">
   
 </figure>
-
 
 <p>On the
 upper card (shown on the left when viewed from the front) there is a group of
@@ -186,7 +194,6 @@ shows the newly added LEDs:</p>
   
 </figure>
 
-
 <p>The upper
 card gains the Memory Read LED whilst the lower card gains Load Instruction,
 Program Counter Select/Load and Incrementer Select/Load. All five of these
@@ -198,7 +205,6 @@ close up of the LEDs viewed from the rear side:</p>
   
 </figure>
 
-
 <p>You can see that much of the header strip is not soldered down yet and this
 is because as the controller gains more functionality there&rsquo;ll be more LEDs
 added. Actually, the photos of the LEDs viewed front on give the game away a
@@ -208,10 +214,9 @@ up photos and that&rsquo;s because I&rsquo;ve gone to the time and effort of mak
 &lsquo;lovely&rsquo; video. The video covers the changes to the sequencer and controller
 but more importantly shows the computer running through a program - the
 &lsquo;landmark moment&rsquo; mentioned at the top of this post. Here&rsquo;s that video:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/yx3dHbjkvEM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/yx3dHbjkvEM" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>As I mention at the end of the video there&rsquo;s a lingering question of what&rsquo;s
 next. Well, as I said, it&rsquo;s a pain to enter a program in to the computer at
@@ -281,18 +286,22 @@ small celebratory drink is in order.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -300,7 +309,7 @@ small celebratory drink is in order.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f&quote=Fetch%20and%20Increment%20-%20Construction%20and%20Test" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f&text=Fetch%20and%20Increment%20-%20Construction%20and%20Test:https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2ffetch-and-increment-construction-and%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

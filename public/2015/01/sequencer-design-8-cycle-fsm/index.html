@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Sequencer Design: 8-cycle FSM</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -154,7 +165,6 @@ Sx' that lasts one clock &lsquo;tick&rsquo; and a pulse Sx that lasts two clock 
   
 </figure>
 
-
 <p>Eventually
 further states will be needed as more complex instruction classes are
 introduced but for now the MOV-8, ALU and SETAB instructions are all operable
@@ -168,14 +178,12 @@ matches the clock and one that is the inverse of the clock as follows:</p>
   
 </figure>
 
-
 <p>This is very
 straightforward with relays that contain SPDT switches as follows:</p>
 <figure>
   <img src="/img/posts/2015/2015-01-26-0002.gif" alt="Derived clock pulses circuit">
   
 </figure>
-
 
 <p>At its
 heart the sequencer FSM consists of a &lsquo;ring counter&rsquo; which will move through
@@ -189,7 +197,6 @@ example &hellip; here&rsquo;s the counter design for four stages:</p>
   
 </figure>
 
-
 <p>To get the
 four stage FSM above going the first stage relay at the bottom left needs
 activating &hellip; this can be done by temporarily activating the RESET line. Once
@@ -200,7 +207,6 @@ third stage relay.</p>
 <img src="/img/posts/2015/2015-01-26-0005.gif" alt="4 Stage FSM: Reset/Ready State">
   
 </figure>
-
 
 <p>With the
 first relay activated and the state machine ready to go the clock can be
@@ -216,14 +222,12 @@ of operation continues until the final relay is reached.</p>
   
 </figure>
 
-
 <p>When the final
 relay is reached the RESET line is activated starting the cycle again.</p>
 <figure>
   <img src="/img/posts/2015/2015-01-26-0010.gif" alt="4 Stage FSM: Reset State">
   
 </figure>
-
 
 <p>Note that when
 the FSM is resetting the fourth relay channels the active clock line to the
@@ -240,7 +244,6 @@ stage FSM in operation:</p>
   
 </figure>
 
-
 <p>As mentioned above the FSM on the sequencer card will eventually
 have many more states so for the 8-cycle instructions we need a way of
 reseting the FSM early and the abort relays will make this happen when set.
@@ -255,7 +258,6 @@ further stages with ABORT8 line to end at stage 8:</p>
   
 </figure>
 
-
 <p>It is the 8 stage FSM above
 that I&rsquo;ll be transferring now to the sequencer card design. As with all the
 other cards I&rsquo;m using relays that have two SPDT switches and building on the
@@ -268,7 +270,6 @@ usual 55 x 40 hole pad board. Here are the relays and internal wiring for the
   
 </figure>
 
-
 <p>As usual I&rsquo;ll want the card to display the current state of the
 FSM so I can see what the card is up to. 8 red LEDs show states S1' through to
 S8' using the usual 12V LEDs with integral resistor. Note that only the Sx'
@@ -280,7 +281,6 @@ where the FSM will reset. Diagram wise it looks like this:</p>
   <img src="/img/posts/2015/2015-01-26-0014.png" alt="FSM LEDs">
   
 </figure>
-
 
 <p>This pattern of LEDs will
 continue when extra stages are added to the FSM in future for the instructions
@@ -304,7 +304,6 @@ the connectors look like this:</p>
   <figcaption markdown="span">Sequencer W2 Connectors (<a href="/img/posts/2015/2015-01-26-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>This shows the
 three right angled boxed headers — from left to right these are: 10+10 Ctrl-X
@@ -382,18 +381,22 @@ design of the two cards together.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -401,7 +404,7 @@ design of the two cards together.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f01%2fsequencer-design-8-cycle-fsm%2f&quote=Sequencer%20Design%3a%208-cycle%20FSM" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f01%2fsequencer-design-8-cycle-fsm%2f&text=Sequencer%20Design%3a%208-cycle%20FSM:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f01%2fsequencer-design-8-cycle-fsm%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

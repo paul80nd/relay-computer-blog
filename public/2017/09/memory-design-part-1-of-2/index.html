@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Memory Design (Part 1 of 2)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -197,7 +208,6 @@ needs:</p>
   
 </figure>
 
-
 <p>At the bottom of the card there are board interconnects for the 5V
 and ground coming out of the DC/DC convertor which will pass through to the
 other memory card and are used as needed (which will be discussed in my next
@@ -214,7 +224,6 @@ and I&rsquo;ll start with a easy one &hellip; the address bus:</p>
   
 </figure>
 
-
 <p>As
 mentioned earlier these bus lines must be connected to either +5V or ground
 representing a binary 0 or 1 respectively. The responsibility for this is
@@ -227,7 +236,6 @@ on to the data bus:</p>
   <figcaption markdown="span">Memory Card B with data bus lines added (<a href="/img/posts/2017/2017-09-03-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>As
 with the address bus these data bus lines must be connected to either +5V or
@@ -242,7 +250,6 @@ some LEDs:</p>
   <figcaption markdown="span">Memory Card B with LEDs added (<a href="/img/posts/2017/2017-09-03-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>There&rsquo;s nothing
 too surprising there &hellip; the usual LEDs &hellip; however it&rsquo;s worth noting that
@@ -263,7 +270,6 @@ bus however so there&rsquo;s an extra bit of wizardry required:</p>
   
 </figure>
 
-
 <p>Here
 I&rsquo;ve added a ULN2803 darlington transistor array (<a href="https://www.sparkfun.com/datasheets/IC/uln2803a.pdf">data sheet here</a>)
 to react to the 5V data bus and drive out
@@ -281,7 +287,6 @@ start adding some control lines:</p>
   <figcaption markdown="span">Memory Card B with first control lines added (<a href="/img/posts/2017/2017-09-03-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>First of all there are three pull up resistors which keep the
 inputs high on WE (write enable), OE (output enable) and CS (chip select).
@@ -302,7 +307,6 @@ remaining control lines:</p>
   <figcaption markdown="span">Memory Card B with final control lines added (<a href="/img/posts/2017/2017-09-03-1006.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>There&rsquo;s a little more going on this time. Starting at the address
 bus connector at the top left of the card we pick up the most
@@ -362,18 +366,22 @@ inverted data bus outputs.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -381,7 +389,7 @@ inverted data bus outputs.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fmemory-design-part-1-of-2%2f&quote=Memory%20Design%20%28Part%201%20of%202%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fmemory-design-part-1-of-2%2f&text=Memory%20Design%20%28Part%201%20of%202%29:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fmemory-design-part-1-of-2%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

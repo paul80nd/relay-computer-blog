@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">ALU Design: Condition Registers</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -164,7 +175,6 @@ bit in a relay as follows:</p>
   
 </figure>
 
-
 <p>In its initial state the register is off and both the IN and HOLD
 inputs are off. A value is applied to the IN output and then the HOLD input is
 set on and the value at IN removed. If the value was set then the relay would
@@ -183,7 +193,6 @@ following:</p>
   
 </figure>
 
-
 <p>This may look a little over complicated at
 first but is designed to avoid feedback and oscillation in the control lines
 (where the relay would turn on and off rapidly turning it into a buzzer &hellip;
@@ -196,7 +205,6 @@ and add the other two condition registers required:</p>
   <img src="/img/posts/2013/2013-11-30-0002.png" alt="">
   
 </figure>
-
 
 <p>It&rsquo;s quite a &lsquo;busy&rsquo; layout but breaking it down: the two relays at the
 top right are the Load circuit supplying the input gate enable and register
@@ -212,7 +220,6 @@ links hidden and partial ground rails added the design looks like this:</p>
   <img src="/img/posts/2013/2013-11-30-0003.png" alt="">
   
 </figure>
-
 
 <p>With the design for the Condition Registers now complete we have
 everything needed to put the ALU Control Card together and that&rsquo;ll be covered
@@ -261,18 +268,22 @@ in the next post.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -280,7 +291,7 @@ in the next post.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2falu-design-condition-registers%2f&quote=ALU%20Design%3a%20Condition%20Registers" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2falu-design-condition-registers%2f&text=ALU%20Design%3a%20Condition%20Registers:https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2falu-design-condition-registers%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

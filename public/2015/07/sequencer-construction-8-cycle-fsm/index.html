@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Sequencer Construction: 8-cycle FSM</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -156,7 +167,6 @@ interconnects &hellip; once done it looked like this:</p>
   
 </figure>
 
-
 <p>To keep the two cards stable I also added some PCB
 stand-offs in the front corners. Thankfully the distance between cards in the
 enclosure can be made up using standard stand-off lengths. I&rsquo;d like to say I
@@ -171,7 +181,6 @@ this:</p>
   
 </figure>
 
-
 <p>With the basic connections in I moved on to soldering
 in the wire wrapping posts for the interconnects and LEDs along with the LEDs
 themselves.</p>
@@ -182,7 +191,6 @@ themselves.</p>
 <img src="/img/posts/2015/2015-07-08-0008.jpg" alt="Sequencer LED underside soldering">
   
 </figure>
-
 
 <p>One problem with the board interconnects on the upper card is that
 it does make soldering a little fiddly as you have something protruding up
@@ -204,7 +212,6 @@ sockets and associated wire wrap posts:</p>
   
 </figure>
 
-
 <p>I&rsquo;ve actually soldered down the relay sockets
 for the upcoming 10 and 12-cycle relays on the lower card in addition to the
 required 8-cycle relay sockets. This is because soldering these sockets down
@@ -223,7 +230,6 @@ don&rsquo;t feed back into parts of the sequencer&rsquo;s finite state machine):
   
 </figure>
 
-
 <p>The final soldering job was to put in the
 power and ground lines:</p>
 <figure>
@@ -231,7 +237,6 @@ power and ground lines:</p>
 <img src="/img/posts/2015/2015-07-08-0014.jpg" alt="Sequencer with added power and ground lines (rear close up)">
   
 </figure>
-
 
 <p>This time around I finally got bored of
 cutting and stripping all those short bits of coated wire for the ground lines
@@ -256,14 +261,12 @@ unit).</p>
   
 </figure>
 
-
 <p>With the wire wrap done the relays can then be placed in their
 sockets:</p>
 <figure>
   <img src="/img/posts/2015/2015-07-08-0019.jpg" alt="Sequencer with relays inserted">
   
 </figure>
-
 
 <p>This is almost the last step however to make the sequencer useable
 up to the 8th cycle I need to add a couple of extra temporary Kynar links that
@@ -276,7 +279,6 @@ job. With the temporary links in place the lower card looks like this:</p>
   
 </figure>
 
-
 <p>So, finally, that&rsquo;s the sequencer complete for 8-cycle
 instructions. The card will be extended over time as longer cycle instructions
 are introduced but for now the sequencer as a whole looks like this:</p>
@@ -286,15 +288,13 @@ are introduced but for now the sequencer as a whole looks like this:</p>
   
 </figure>
 
-
 <p>As usual I&rsquo;ve put a video together that demonstrates the sequencer
 in operation. In this video I give a quick overview of the cards and then
 demonstrate running through the 8 stages of the finite state machine and
 producing the three derived pulses C, D and E.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/P2G8LHeWb80" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/P2G8LHeWb80" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>That&rsquo;s it for the sequencer &hellip; at least for
 now. It produces all the pulses that will be needed for the computer to
@@ -360,18 +360,22 @@ will be quite a lot simpler as most of it is just combinatorial logic.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -379,7 +383,7 @@ will be quite a lot simpler as most of it is just combinatorial logic.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f07%2fsequencer-construction-8-cycle-fsm%2f&quote=Sequencer%20Construction%3a%208-cycle%20FSM" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f07%2fsequencer-construction-8-cycle-fsm%2f&text=Sequencer%20Construction%3a%208-cycle%20FSM:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f07%2fsequencer-construction-8-cycle-fsm%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Decoder Design: MOV-8, ALU &amp; SETAB </h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -234,7 +245,6 @@ of the opcode we get the following:</p>
   
 </figure>
 
-
 <p>There will be further branches to this tree in the future as more
 instruction classes are added to the computer but for now I&rsquo;m keeping to the
 three above as that will be enough to perform some simple programs. The tree
@@ -243,7 +253,6 @@ above can now be easily mapped to the relays used by this computer:</p>
   <img src="/img/posts/2015/2015-01-04-0001.png" alt="Decoder Relay Tree">
   
 </figure>
-
 
 <p>With the basic relay
 connections designed it&rsquo;s time to transfer this over to a 55 x 40 hole pad
@@ -255,7 +264,6 @@ board as used on all the computer cards so far.</p>
   
 </figure>
 
-
 <p>As
 usual I&rsquo;ll want the card to display the current instruction class being
 decoded so I can confirm correct operation and test/debug the card
@@ -266,7 +274,6 @@ resistor. Diagram wise it looks like this:</p>
   <img src="/img/posts/2015/2015-01-04-0003.png" alt="Decoder LEDs">
   
 </figure>
-
 
 <p>The mysterious gap between
 the MOV8 and ALU LEDs above is where a later instruction class LED will go
@@ -296,7 +303,6 @@ connections. The diagram of the connectors look like this:</p>
   <figcaption markdown="span">Decoder W1 Connectors (<a href="/img/posts/2015/2015-01-04-1001.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>This shows the
 four right angled boxed headers — from left to right these are: 5+5 power
@@ -335,7 +341,6 @@ following:</p>
   <figcaption markdown="span">Completed Decoder Card (for SETAB, MOV-8 and ALU classes) (<a href="/img/posts/2015/2015-01-04-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>This diagram includes everything mentioned so far along
 with the power supply and ground lines and all other internal wiring. As with
@@ -393,18 +398,22 @@ instruction can be performed fully by manually pulsing the clock line.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -412,7 +421,7 @@ instruction can be performed fully by manually pulsing the clock line.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f01%2fdecoder-design-mov-8-alu-setab%2f&quote=Decoder%20Design%3a%20MOV-8%2c%20ALU%20%26%20SETAB%20" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f01%2fdecoder-design-mov-8-alu-setab%2f&text=Decoder%20Design%3a%20MOV-8%2c%20ALU%20%26%20SETAB%20:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f01%2fdecoder-design-mov-8-alu-setab%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

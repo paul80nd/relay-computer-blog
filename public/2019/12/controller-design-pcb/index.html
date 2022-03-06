@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Controller Design: Schematic &amp; PCBs</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -155,12 +166,10 @@ with the backplane connectors as these pre-exist on the W backplane and have to 
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0001.png" alt="W2 Connectors (Lower Card)">
   
 </figure>
-
 
 <p>As before with the sequencer cards the &lsquo;JLCJLCJLCJLC&rsquo; text in the top right corner is to let my PCB manufacture know where
 I&rsquo;d like them to put their identification code so they can find my PCB amongst all the others they&rsquo;ll be making. Again,
@@ -170,12 +179,10 @@ I&rsquo;ll but it underneath a socket so they can see it but I wont. Next up is 
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-12-20-0001.png" alt="LEDs (Lower Card)">
   
 </figure>
-
 
 <p>It&rsquo;s not specified on the schematic or the PCB but I&rsquo;ll stick with my usual convention for LED colours and use
 green for selecting registers and yellow for loading registers and other control actions.</p>
@@ -186,12 +193,10 @@ nice fit and the ratlines (showing the connections needed between components) ar
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-12-20-0003.png" alt="Basic layout (Lower Card)">
   
 </figure>
-
 
 <p>I&rsquo;ve also labeled the card now I&rsquo;ve put everything in position. I find this just helps a little when moving
 on to the most time consuming part of PCB design &hellip; laying down the tracks. As with my previous cards I&rsquo;ll stick with the
@@ -206,7 +211,6 @@ what I ended up with:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-12-20-0006.png" alt="Lower Card (front)">
 <img src="/img/posts/2019/2019-12-20-0007.png" alt="Lower Card (rear)">
@@ -214,7 +218,6 @@ what I ended up with:</p>
   <figcaption markdown="span">Lower Card track routing (front and rear)</figcaption>
   
 </figure>
-
 
 <p>Next I add a copper pour on the front and rear of both cards. As before I have a ground plane on both sides
 (to ensure ground can get around any areas where there&rsquo;s a lot of tracks) and then route a &lsquo;power river&rsquo; through the rear ground plane.</p>
@@ -231,7 +234,6 @@ visual check:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-12-20-0010.png" alt="Lower Card (front)">
 <img src="/img/posts/2019/2019-12-20-0011.png" alt="Lower Card (rear)">
@@ -239,7 +241,6 @@ visual check:</p>
   <figcaption markdown="span">Lower Card (front and rear)</figcaption>
   
 </figure>
-
 
 <p>If you&rsquo;d like to take a closer look at any of these you can find the full colour previews in PDF format
 <a href="/pdf/controller-hi-pcbp.pdf">here for the upper card</a> and
@@ -292,18 +293,22 @@ PCBs to arrive in the post.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -311,7 +316,7 @@ PCBs to arrive in the post.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fcontroller-design-pcb%2f&quote=Controller%20Design%3a%20Schematic%20%26%20PCBs" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fcontroller-design-pcb%2f&text=Controller%20Design%3a%20Schematic%20%26%20PCBs:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fcontroller-design-pcb%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Auxiliary Control Design (Part 2 of 3)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -145,14 +156,12 @@ operations:</p>
   
 </figure>
 
-
 <p>&hellip; which
 can be derived from the following pulses &hellip;</p>
 <figure>
   <img src="/img/posts/2018/2018-01-29-0001.png" alt="Auxiliary Control Pulses ">
   
 </figure>
-
 
 <p>To make those pulses
 though we&rsquo;re going to need a clock signal (which is shown in red in the
@@ -179,7 +188,6 @@ is cut. Schematic wise it looks like this:</p>
   
 </figure>
 
-
 <p>In
 this circuit when the power is applied the relay switches on and the capacitor
 charges up. Although not shown in the diagram the other side of the relay coil
@@ -193,7 +201,6 @@ look at how capacitors behave when charging and discharging:</p>
   <img src="/img/posts/2018/2018-01-29-0003.png" alt="Behaviour of a charging/discharging relay over time">
   
 </figure>
-
 
 <p>This graph tells us that after 5 time constants the
 capacitor would be 99.2% charged and in the specific case where we&rsquo;re working
@@ -211,7 +218,6 @@ range):</p>
   
 </figure>
 
-
 <p>Therefore it would take 5x47
 = 235ms for the capacitor to reach 99.2% charge in this case. Discharge works
 similarly and with a fully charged capacitor it would reach 0.08V after 235ms
@@ -224,7 +230,6 @@ the formula to get our time constant:</p>
   <img src="/img/posts/2018/2018-01-29-0005.png" alt="Calculating the time constant for a relay with a 470 micro farad capacitor">
   
 </figure>
-
 
 <p>From this we can therefore calculate
 that it would take 5x0.48363 = 2.42s for the capacitor to drain down to 0.08V.
@@ -240,7 +245,6 @@ Well, that requires a slightly more complex formula:</p>
   
 </figure>
 
-
 <p>Here Vc is the voltage across the
 capacitor, Vs is the supply voltage, t is the elapsed time since the removal
 of the supply voltage and finally RC is the time constant of the discharging
@@ -250,7 +254,6 @@ and solve it from there:</p>
   <img src="/img/posts/2018/2018-01-29-0007.png" alt="Calculating the time for the capacitor to discharge to 1.2 volts">
   
 </figure>
-
 
 <p>So, in theory, the relay would stay on for 1.1
 seconds after the power supply is disconnected. Given everything else is a
@@ -299,7 +302,6 @@ updated relay circuit now looks like this:</p>
   
 </figure>
 
-
 <p>Being as I&rsquo;ve upped the resistance I&rsquo;ve brought down the
 capacitance to 47 micro-farads to compensate a bit. So what does that do to
 the timings &hellip;</p>
@@ -307,7 +309,6 @@ the timings &hellip;</p>
   <img src="/img/posts/2018/2018-01-29-0009.png" alt="Final calculation for charge and discharge timings">
   
 </figure>
-
 
 <p>Firstly we have the charging time constant which is 10.34ms
 and therefore it&rsquo;d take 51.7ms to get the capacitor up to 99.2% of the supply
@@ -328,14 +329,12 @@ Here&rsquo;s the updated schematic:</p>
   
 </figure>
 
-
 <p>Hopefully you can see the pattern but if not
 here&rsquo;s a table of the sequence:</p>
 <figure>
   <img src="/img/posts/2018/2018-01-29-0011.png" alt="Table of clock sequence">
   
 </figure>
-
 
 <p>Which
 interestingly enough behaves a bit like the main sequencer in the computer
@@ -347,14 +346,12 @@ the following timing diagram:</p>
   
 </figure>
 
-
 <p>Let&rsquo;s take a look at the operation pulses we&rsquo;re
 aiming to derive and see if we can spot any clock pulses we can use:</p>
 <figure>
   <img src="/img/posts/2018/2018-01-29-0013.png" alt="Short and long target pulses">
   
 </figure>
-
 
 <p>It looks like
 we&rsquo;ve got a match straight away: AP-A = ACL2 and AP-B = ACL1. Looks like
@@ -369,7 +366,6 @@ wired out:</p>
   <figcaption markdown="span">Relay schematic with derived pulses (<a href="/img/posts/2018/2018-01-29-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>But
 what about AP-D though? There&rsquo;s no obvious match for that pulse but what we
@@ -388,7 +384,6 @@ more relays:</p>
   
 </figure>
 
-
 <p>That&rsquo;s all four pulses now accounted for so all that&rsquo;s left
 is to find a way of making a short operation which stops after AP-A and AP-B
 to go alongside the long operation which carries on through to AP-C and AP-D.
@@ -402,7 +397,6 @@ ready:</p>
   <img src="/img/posts/2018/2018-01-29-0016.png" alt="Delay time calculation with two relay coils present">
   
 </figure>
-
 
 <p>As we can see this brings the delay time down from 135.17ms
 to 79.95ms which makes sense as there&rsquo;s now two discharge paths through each
@@ -422,7 +416,6 @@ add that in now:</p>
   
 </figure>
 
-
 <p>As
 long as the &lsquo;AUX-ABORT&rsquo; line is held on then ACL3 is disconnected from ACL4
 and the clock will die off when it reaches that point. I need to make one
@@ -438,7 +431,6 @@ relays:</p>
   <figcaption markdown="span">Final clock schematic (<a href="/img/posts/2018/2018-01-29-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>You&rsquo;ll be pleased
 to know that at last we&rsquo;ve reached the final schematic &hellip; if the image above
@@ -458,7 +450,6 @@ operation timings:</p>
   <img src="/img/posts/2018/2018-01-29-0019.png" alt="Final clock timings">
   
 </figure>
-
 
 <p>Right, that was one
 mahoosive post and it&rsquo;s taken ages to write but hopefully you can now see
@@ -522,18 +513,22 @@ posts to produce the final auxiliary control board design.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -541,7 +536,7 @@ posts to produce the final auxiliary control board design.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f&quote=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f&text=Auxiliary%20Control%20Design%20%28Part%202%20of%203%29:https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-2-of-3%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

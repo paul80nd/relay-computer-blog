@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Pulse Distribution Design: Pulses C,D and E</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -144,7 +155,6 @@ produce the following states given a clock signal as an input:</p>
   
 </figure>
 
-
 <p>Producing the
 instruction timing pulses is very straightforward and is just a case of either
 taking the FSM states directly or combining them together so that we get the
@@ -153,7 +163,6 @@ following:</p>
   <img src="/img/posts/2015/2015-03-22-0001.png" alt="Instruction timing pulses">
   
 </figure>
-
 
 <p>It really is
 as simple as that &hellip; all the hard work has been done in the design of the
@@ -166,7 +175,6 @@ pulses and use them to operate the control lines thus:</p>
   
 </figure>
 
-
 <p>With the theory in hand we can take the sequencer design from my
 last post and wire up the timing pulses. I&rsquo;ll start off with the basic relays
 on the usual 55 x 40 hole pad board:</p>
@@ -176,7 +184,6 @@ on the usual 55 x 40 hole pad board:</p>
   <figcaption markdown="span">Sequencer Relays (<a href="/img/posts/2015/2015-03-22-1000.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The only slight
 difference from the design in my last post is that the relays are now further
@@ -190,7 +197,6 @@ we then get the following:</p>
   <figcaption markdown="span">8-stage FSM Relays and wiring (<a href="/img/posts/2015/2015-03-22-1001.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The FSM
 takes the clock and reset signal as inputs (shown as the yellow lines above).
@@ -212,7 +218,6 @@ place I can now tap the state outputs to create the timing pulses:</p>
   
 </figure>
 
-
 <p>I&rsquo;ve
 decided that even where multiple FSM states don&rsquo;t need to be combined, that
 is, where a single state is mapped directly to a timing pulse, that I&rsquo;ll still
@@ -228,7 +233,6 @@ look like:</p>
   <figcaption markdown="span">W2 card indicators (<a href="/img/posts/2015/2015-03-22-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>On the left are the
 outputs from the FSM. Each of the Sx' outputs are shown (although they&rsquo;re
@@ -250,7 +254,6 @@ FSM:</p>
   
 </figure>
 
-
 <p>With the indicators added to the design so far we get the
 following:</p>
 <figure>
@@ -259,7 +262,6 @@ following:</p>
   <figcaption markdown="span">Sequencer with added indicators (<a href="/img/posts/2015/2015-03-22-1004.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The
 next job is to add to the connectors so that the cards can talk to the rest of
@@ -271,7 +273,6 @@ on the left followed by the &lsquo;W2&rsquo; card on the right:
   <figcaption markdown="span">W1 Connectors (<a href="/img/posts/2015/2015-03-22-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 </p>
 <figure>
   <img src="/img/posts/2015/2015-03-22-0010.png" alt="W2 Connectors">
@@ -279,7 +280,6 @@ on the left followed by the &lsquo;W2&rsquo; card on the right:
   <figcaption markdown="span">W2 Connectors (<a href="/img/posts/2015/2015-03-22-1006.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>These are the usual right
 angle boxed headers used on previous cards and as before lines marked &lsquo;<em><strong>&rsquo;
@@ -332,14 +332,12 @@ of) are unused.</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2015/2015-03-22-0012.png" alt="8-cycle sequencer final design">
   
   <figcaption markdown="span">8-cycle sequencer final design (<a href="/img/posts/2015/2015-03-22-1008.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>As
 always should you wish to take a much closer look at this design (and to be
@@ -404,18 +402,22 @@ towards having a fully working computer.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -423,7 +425,7 @@ towards having a fully working computer.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f&quote=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f&text=Pulse%20Distribution%20Design%3a%20Pulses%20C%2cD%20and%20E:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fpulse-distribution-design-pulses-cd-and%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

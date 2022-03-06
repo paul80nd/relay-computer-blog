@@ -128,7 +128,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Memory Design (Part 2 of 2)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -146,7 +157,6 @@ card:</p>
   <figcaption markdown="span">Memory Card A with initial interconnects (<a href="/img/posts/2017/2017-09-06-1000.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The
 left two columns bring up the address bus for the memory chip which needs to
@@ -170,7 +180,6 @@ this:</p>
   
 </figure>
 
-
 <p>Note that although we now have the data bus converted to something
 suitable for the memory chip we need to be able to gate this so it&rsquo;s only
 connected when we&rsquo;re storing a value to memory. This is because when we&rsquo;re
@@ -182,7 +191,6 @@ With the additional gating added the card looks like this:</p>
   <figcaption markdown="span">Memory Card A with added data bus in gating (<a href="/img/posts/2017/2017-09-06-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The line that controls the gating of the inbound data bus is named
 &lsquo;B2M&rsquo; which stands for &lsquo;Bus To Memory&rsquo; (because that&rsquo;s what it does). There&rsquo;s
@@ -197,7 +205,6 @@ influences the data bus of the computer when needed:</p>
   <figcaption markdown="span">Memory Card A with added data bus out gating (<a href="/img/posts/2017/2017-09-06-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The memory read (MR) line controls these particular gating relays
 but also the B2M &lsquo;veto&rsquo; relay to ensure that if we&rsquo;re reading a value from the
@@ -218,7 +225,6 @@ usually soldered to ground):</p>
   
 </figure>
 
-
 <p>On the positive side of the relay coils we extend the MR control
 line so that the relays only operate whilst MR is held high. The negative side
 of the relay coils are connected, via the gating relays, to the relay driver
@@ -238,7 +244,6 @@ required:</p>
   
 </figure>
 
-
 <p>The OE line is grounded whilst the memory read (MR)
 line is high but disconnected otherwise. That&rsquo;s fine in this case as the line
 is pulled to high via a resistor on the lower memory card. In other words the
@@ -256,7 +261,6 @@ space of the card with yet more relays so let&rsquo;s go for that:</p>
   <figcaption markdown="span">Memory Card A with added address bus translation relays (<a href="/img/posts/2017/2017-09-06-1006.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The final relays above translate the incoming address bus, at 12V
 for 1 and disconnected for 0, to the required 5V for 1 or ground for 0. In
@@ -321,18 +325,22 @@ orchestrate using these three units together.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -340,7 +348,7 @@ orchestrate using these three units together.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fmemory-design-part-2-of-2%2f&quote=Memory%20Design%20%28Part%202%20of%202%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fmemory-design-part-2-of-2%2f&text=Memory%20Design%20%28Part%202%20of%202%29:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fmemory-design-part-2-of-2%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

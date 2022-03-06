@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Controller Design: ALU, MOV8 &amp; SETAB Instructions</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -177,7 +188,6 @@ available bits in the instruction opcode:</p>
   
 </figure>
 
-
 <p>This is all very straightforward to implement in relays:</p>
 <figure>
   <img src="/img/posts/2019/2019-12-07-0003.png" alt="SETAB schematic">
@@ -185,7 +195,6 @@ available bits in the instruction opcode:</p>
   <figcaption markdown="span">SETAB schematic (<a href="/img/posts/2019/2019-12-07-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The only thing that perhaps needs a brief explanation is the CHAT line on the right. This is activated early in the
 fetch/increment cycle to indicate that the sequencer can now have an abort line set if required. All of the instructions on
@@ -231,7 +240,6 @@ for operations that only work on one value). The result of the operation can be 
   
 </figure>
 
-
 <p>The relay schematic for ALU uses five relays over SETAB&rsquo;s three but is still easy to understand:</p>
 <figure>
   <img src="/img/posts/2019/2019-12-07-0004.png" alt="ALU schematic">
@@ -239,7 +247,6 @@ for operations that only work on one value). The result of the operation can be 
   <figcaption markdown="span">ALU schematic (<a href="/img/posts/2019/2019-12-07-1004.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <h3 id="mov-8-8-bit-move">MOV-8: 8-bit Move</h3>
 <p>The &lsquo;not so aptly&rsquo; named MOV8 instruction copies an 8-bit value from one register to another. If the source and destination
@@ -282,7 +289,6 @@ register are the same then the value in that register is cleared:</p>
   
 </figure>
 
-
 <p>The schematic for MOV-8 has a lot more relays going on but mostly that&rsquo;s around decoding the source and destination registers
 for the operation:</p>
 <figure>
@@ -291,7 +297,6 @@ for the operation:</p>
   <figcaption markdown="span">MOV8 schematic (<a href="/img/posts/2019/2019-12-07-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>You can see there&rsquo;s quite a few bits of this schematic blanked out. I&rsquo;ve done that for brevity here but effectively that&rsquo;s
 where the M1, M2, X and Y registers can be selected as a source or destination. I won&rsquo;t be implementing those for the moment
@@ -342,18 +347,22 @@ controller schematic laid out and design the PCB lay out too and then I&rsquo;m 
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -361,7 +370,7 @@ controller schematic laid out and design the PCB lay out too and then I&rsquo;m 
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fcontroller-alu-mov8-setab-design%2f&quote=Controller%20Design%3a%20ALU%2c%20MOV8%20%26%20SETAB%20Instructions" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fcontroller-alu-mov8-setab-design%2f&text=Controller%20Design%3a%20ALU%2c%20MOV8%20%26%20SETAB%20Instructions:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fcontroller-alu-mov8-setab-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

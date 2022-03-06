@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Register Design: Instruction Register</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -156,7 +167,6 @@ start with a card schematic of what the main bit relays look like for the
   
 </figure>
 
-
 <p>Each of the
 relays above stores a single 1-bit value so there&rsquo;s 8-bits worth in total.
 Each of the bit relays need gating from the data bus so the register can be
@@ -170,7 +180,6 @@ gating relays):</p>
   <figcaption markdown="span">8-bit register relays + gating relays (<a href="/img/posts/2014/2014-12-01-1001.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>Additionally on the schematic above you can see there&rsquo;s an extra
 diode per register bit relay — this is where the register bit permanently
@@ -208,7 +217,6 @@ it looks like this:</p>
   
 </figure>
 
-
 <p>Each block in the diagram
 represents a single 3mm LED in a plastic holder with each LED pushed into the
 holder from the front and the pair of LED legs then bent at 90 degrees.</p>
@@ -233,7 +241,6 @@ like this:</p>
   <figcaption markdown="span">Instruction Register Connections (<a href="/img/posts/2014/2014-12-01-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>This shows the four right angled boxed headers — from left to
 right these are: 10+10 control lines, 8+8 address bus, 8+8 data and
@@ -267,7 +274,6 @@ following:</p>
   <figcaption markdown="span">Complete Instruction Register (<a href="/img/posts/2014/2014-12-01-1004.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>This
 diagram includes everything mentioned so far along with the power supply and
@@ -328,18 +334,22 @@ be performed fully by manually pulsing the clock line.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -347,7 +357,7 @@ be performed fully by manually pulsing the clock line.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f12%2fregister-design-instruction-register%2f&quote=Register%20Design%3a%20Instruction%20Register" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f12%2fregister-design-instruction-register%2f&text=Register%20Design%3a%20Instruction%20Register:https%3a%2f%2frelaycomputer.co.uk%2f2014%2f12%2fregister-design-instruction-register%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

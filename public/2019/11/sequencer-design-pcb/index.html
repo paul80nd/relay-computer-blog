@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Sequencer Design: Schematic &amp; PCBs</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -153,12 +164,10 @@ with the backplane connectors as these pre-exist on the W backplane and have to 
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0001.png" alt="W2 Connectors (Lower Card)">
   
 </figure>
-
 
 <p>Note that the &lsquo;JLCJLCJLCJLC&rsquo; text in the top right corner is to let my PCB manufacture know where I&rsquo;d like them to put their
 identification code so they can find my PCB amongst all the others they&rsquo;ll be making. If I don&rsquo;t specify the location then the
@@ -169,12 +178,10 @@ can see it but I wont. Next up is the LEDs:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0003.png" alt="LEDs (Lower Card)">
   
 </figure>
-
 
 <p>Although it&rsquo;s not specified on the schematic or the PCB I&rsquo;ll stick with my usual convention for LED colours and use
 green for the pulses (representing a &lsquo;result&rsquo; output of the card), yellow for the abort signals (representing command/control
@@ -186,12 +193,10 @@ nice fit and the ratlines (showing the connections needed between components) ar
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0005.png" alt="Basic layout (Lower Card)">
   
 </figure>
-
 
 <p>I&rsquo;ve also labeled the card now I&rsquo;ve put everything in position. I find this just helps a little when moving
 on to the most time consuming part of PCB design &hellip; laying down the tracks. A good place to start is routing groups of
@@ -203,14 +208,12 @@ related signals that are heading in the same direction - busses are good example
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0007.png" alt="Upper card pulse LEDs">
   
   <figcaption markdown="span">Upper card pulse LEDs</figcaption>
   
 </figure>
-
 
 <figure>
   <img src="/img/posts/2019/2019-11-11-0008.png" alt="Lower card FSM outputs">
@@ -219,14 +222,12 @@ related signals that are heading in the same direction - busses are good example
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0009.png" alt="Lower card FSM LEDs">
   
   <figcaption markdown="span">Lower card FSM LEDs</figcaption>
   
 </figure>
-
 
 <p>It&rsquo;s then just a case of laying down tracks between groups of relays and any other remaining signals. Another rule I tend to
 follow is to try and keep the tracks on the front of the card going vertical and then route horizontally on the rear of the
@@ -236,13 +237,11 @@ card:</p>
   
 </figure>
 
-
 <p>Another good use of laying tracks on the rear of the card is if you&rsquo;re squeezed for space on the front:</p>
 <figure>
   <img src="/img/posts/2019/2019-11-11-0011.png" alt="squeezing tracks in (Lower Card)">
   
 </figure>
-
 
 <p>&hellip; this tends to work best when near the edge of the card so that it leaves plenty of space for the copper pours. The pours
 create a large area of copper that fills any space not used up by tracks. This also gives me somewhere to route the ground
@@ -254,12 +253,10 @@ any areas where there&rsquo;s a lot of tracks) and then route a &lsquo;power riv
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0013.png" alt="Copper Pour (Lower Card)">
   
 </figure>
-
 
 <p>All that&rsquo;s left then is just to have a good close up inspection of the board to make sure everything is placed well and
 tracks are routed properly. There&rsquo;s several built-in tools that help with this such as the DRC which&rsquo;ll check that pad sizes,
@@ -274,7 +271,6 @@ visual check:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-11-11-0016.png" alt="Lower Card (front)">
 <img src="/img/posts/2019/2019-11-11-0017.png" alt="Lower Card (rear)">
@@ -282,7 +278,6 @@ visual check:</p>
   <figcaption markdown="span">Lower Card (front and rear)</figcaption>
   
 </figure>
-
 
 <p>If you&rsquo;d like to take a closer look at any of these you can find the full colour previews in PDF format
 <a href="/pdf/sequencer-hi-pcbp.pdf">here for the upper card</a> and <a href="/pdf/sequencer-lo-pcbp.pdf">here for the lower card</a>.
@@ -334,18 +329,22 @@ PCBs to arrive in the post &hellip; once they arrive it&rsquo;s soldering time.<
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -353,7 +352,7 @@ PCBs to arrive in the post &hellip; once they arrive it&rsquo;s soldering time.<
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fsequencer-design-pcb%2f&quote=Sequencer%20Design%3a%20Schematic%20%26%20PCBs" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fsequencer-design-pcb%2f&text=Sequencer%20Design%3a%20Schematic%20%26%20PCBs:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fsequencer-design-pcb%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

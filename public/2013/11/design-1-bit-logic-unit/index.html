@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">ALU Design: 1-bit Logic Unit</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -140,7 +151,6 @@ the <a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay
   
 </figure>
 
-
 <p>The diagram shows two 4PDT (4 pole double toggle) relays with the coils of each shown as a striped box at the top. The four double toggle switches are also shown on each relay and the current position of each switch is as when the relay is off. When power is applied to the relay coil all four switches change over simultaneously. The two relays together with all the various connections form the 1-bit Logic Unit. Inputs to the unit are shown with &lsquo;cupped&rsquo; line ends: B and C are the two 1-bit inputs; V is a permanent connection to the power supply. Outputs from the unit are shown with an arrowed line end: the outputs AND, OR, XOR, NOT and SHL. Wire joins are shown with a dot (otherwise the wire is passing over but not connecting to another wire) and unused switches on a relay are shown in grey.</p>
 <p>The design itself is pretty much self explanatory (hopefully) &hellip; just follow the wires through the switches to get to the result. For example, following the V (voltage/power) input on the right &hellip; if the B input is on then you can get through the top switch over to the left relay — if the C input is also on then you can get through to the AND output — therefore, if both B and C are on then power is supplied to the AND output. Note that SHL would be treated as the bit 2 output for the bit 1 input as essentially all this unit does is sets SHL on when input B is on and off when B is off. Another thing worth noting about this design is that it may appear, at first glance, to be using more relay switches than necessary but is designed this way to avoid any &lsquo;backfeed&rsquo; on one of the outputs affecting one of the other results.</p>
 <p>As mentioned in my last post I&rsquo;ll be using the smaller DPDT (double pole double toggle) relays in my computer and so I&rsquo;ll need to double up the number of relays to counter the halving of the number of poles — I can therefore transform the above diagram to the following:</p>
@@ -148,7 +158,6 @@ the <a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay
   <img src="/img/posts/2013/2013-11-11-0001.png" alt="">
   
 </figure>
-
 
 <p>This is the second diagram style I&rsquo;ll be using on this blog. Each relay is a direct scaled representation of the DPDT TE Connectivity relay I specified in my last post and, again, the switch positions shown in each relay is for when the relay is off. The coils in this particular relay model are polarised and so have positive and negative pins — in this diagram the ground is shown on the left and the input (positive/power) is shown on the right of the coil.</p>
 <p>Now, diagrams are all very well but it&rsquo;s now time to start thinking about how this translates into a physical form &hellip; and I&rsquo;ve got a bit of an admission to make &hellip; this isn&rsquo;t my first go at making an ALU &hellip; I constructed a fully working 8-bit ALU last year based on CMOS NAND gates so I&rsquo;ve already pretty much got a construction method that suits me, one that&rsquo;s tried and tested (albeit a bit unconventional). The base for my construction is pad board which I&rsquo;ve used many times for prototyping in the past and found it works well for me. The one I use is from <a href="https://www.bitsbox.co.uk/hardware.html">bitsbox</a> and is 160 x 115 mm featuring 55 x 40 holes on a 0.1 inch pitch. The challenge for me in this project is fitting everything around these boards &hellip; and with the 8-bit logic unit it&rsquo;s going to be quite a squeeze (more on that later). Ideally I want to use a socket of some kind for the relays rather than solder them directly so it&rsquo;s easier to switch out defective relays (removing anything that has multiple pins when it&rsquo;s been soldered can be an absolute pain) but I&rsquo;ll look into that later.</p>
@@ -158,7 +167,6 @@ the <a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay
   
 </figure>
 
-
 <p>I&rsquo;ll be doing the same for the ground rails this time around but the power connections will go top side as they aren&rsquo;t as regular as they are for supplying ICs. Speaking of the top side of the board I chose to use <a href="https://en.wikipedia.org/wiki/Wire_wrap">wire wrap</a> as it allowed me to easily make modifications (or rather, to correct mistakes easily). However, I discovered that wire wrapping posts are really expensive so I tried using header pins and found they worked OK. This could definitely be considered as an unconventional construction technique again but seems to work well &hellip; the only problem is that due to the height of the header pins there&rsquo;s a limit of two wire wraps per pin (my design always allows for this). The resulting wire wraps look like this:</p>
 <figure>
   <img src="/img/posts/2013/2013-11-11-0004.jpg" alt="">
@@ -166,13 +174,11 @@ the <a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay
   
 </figure>
 
-
 <p>Quite pretty (well, at least I think so ;) Anyway, going back to the earlier diagram we can thereby convert:</p>
 <figure>
   <img src="/img/posts/2013/2013-11-11-0006.png" alt="">
   
 </figure>
-
 
 <p>into:</p>
 <figure>
@@ -180,13 +186,11 @@ the <a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay
   
 </figure>
 
-
 <p>This diagram shows the header pins alongside each relay (black squares) linked with solder where appropriate to the relay pins (thick grey lines). The wire wrapped wire links are shown in various colours (light blue for inputs, dark blue for outputs, red for power supply and grey for internal links). Also shown immediately below each relay coil is a <a href="https://en.wikipedia.org/wiki/Flyback_diode">flyback diode</a> to handle the voltage spike created when the relay turns off and the coil&rsquo;s magnetic field collapses. Here is the same diagram with relays and connections omitted and with partial ground rail shown:</p>
 <figure>
   <img src="/img/posts/2013/2013-11-11-0008.png" alt="">
   
 </figure>
-
 
 <p>&hellip; and that about wraps it up for the basic 1-bit Logic Unit. In
 the next post I&rsquo;ll cover taking 8 of these units and cramming them on to a
@@ -236,18 +240,22 @@ place a selected result back on to the data bus).</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -255,7 +263,7 @@ place a selected result back on to the data bus).</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2fdesign-1-bit-logic-unit%2f&quote=ALU%20Design%3a%201-bit%20Logic%20Unit" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2fdesign-1-bit-logic-unit%2f&text=ALU%20Design%3a%201-bit%20Logic%20Unit:https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2fdesign-1-bit-logic-unit%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

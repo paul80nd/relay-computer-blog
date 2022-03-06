@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">ALU Design: 1-bit Arithmetic Unit</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -139,7 +150,6 @@ the 1-bit Arithmetic Unit (based directly on the one used in the
   <img src="/img/posts/2013/2013-11-15-0000.png" alt="">
   
 </figure>
-
 
 <p>The diagram shows two 4PDT relays (just as before for the 1-bit Logic
 Unit) but this time the second relay has been rotated 180 degrees to make the
@@ -167,7 +177,6 @@ count. I therefore transform the above diagram to the following:</p>
   
 </figure>
 
-
 <p>So, certainly not as nice to look at as the 4PDT version but with the
 equivalent functionality nonetheless. This layout focusses on lining up the
 carry in and outs so that each unit can be stacked alongside the next one but
@@ -183,7 +192,6 @@ the physical form as follows:</p>
   
 </figure>
 
-
 <p>&hellip; and here&rsquo;s the same diagram with relays and wires (on the
 component side of the pad board) omitted and with partial ground rails added
 &hellip;</p>
@@ -191,7 +199,6 @@ component side of the pad board) omitted and with partial ground rails added
   <img src="/img/posts/2013/2013-11-15-0003.png" alt="">
   
 </figure>
-
 
 <p>That&rsquo;s it for the 1-bit Arithmetic Unit. In the next post I&rsquo;ll cover
 linking 8 of these units together, gating the result and handling the
@@ -240,18 +247,22 @@ increment function.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -259,7 +270,7 @@ increment function.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2fdesign-1-bit-arithmetic-unit%2f&quote=ALU%20Design%3a%201-bit%20Arithmetic%20Unit" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2fdesign-1-bit-arithmetic-unit%2f&text=ALU%20Design%3a%201-bit%20Arithmetic%20Unit:https%3a%2f%2frelaycomputer.co.uk%2f2013%2f11%2fdesign-1-bit-arithmetic-unit%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Sequencing &amp; Control Design: Overview</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -147,7 +158,6 @@ mnemonics/instructions to perform the calculation of (((2 + 4 + 1) x 3) -
   <img src="/img/posts/2014/2014-09-19-0000.png" alt="Arithmetic Sequence Mnemonics">
   
 </figure>
-
 
 <p>Here&rsquo;s a
 description of the mnemonics used in this calculation:</p>
@@ -436,7 +446,6 @@ we get the following:</p>
   
 </figure>
 
-
 <p>As can be seen in the diagram above the value being copied (or
 calculated for the ALU) is kept on the data bus longer than it is loaded in to
 the destination registers. This is to allow the value to &lsquo;settle&rsquo; on the data
@@ -473,7 +482,6 @@ selection:</p>
   
 </figure>
 
-
 <p>The first step in using
 these clock pulses is to achieve a sense of state in the computer. Effectively
 we need to count the clock pulses so we can tell if we&rsquo;re at the beginning,
@@ -494,7 +502,6 @@ the first eight steps is as follows:</p>
   <img src="/img/posts/2014/2014-09-19-0003.png" alt="Finite State Machine pulses">
   
 </figure>
-
 
 <p>Given these
 outputs from the FSM we can now apply the following logic to derive those
@@ -522,7 +529,6 @@ this:
   <img src="/img/posts/2014/2014-09-19-0004.png" alt="Sequenced Pulses">
   
 </figure>
-
 </p>
 <p>Now, this diagram
 probably raises more questions than it answers. Firstly, why is the first
@@ -636,18 +642,22 @@ somewhere to actually get on with constructing the cards.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -655,7 +665,7 @@ somewhere to actually get on with constructing the cards.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f09%2fsequencing-control-design-overview%2f&quote=Sequencing%20%26%20Control%20Design%3a%20Overview" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2014%2f09%2fsequencing-control-design-overview%2f&text=Sequencing%20%26%20Control%20Design%3a%20Overview:https%3a%2f%2frelaycomputer.co.uk%2f2014%2f09%2fsequencing-control-design-overview%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

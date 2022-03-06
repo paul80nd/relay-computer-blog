@@ -128,7 +128,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Auxiliary Control Design (Part 3 of 3)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -141,13 +152,11 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>&hellip; which generates the following timing pulses &hellip;</p>
 <figure>
   <img src="/img/posts/2018/2018-02-07-0001.png" alt="Auxiliary Clock Timing Pulses">
   
 </figure>
-
 
 <p>This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</p>
 <figure>
@@ -157,7 +166,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>OK, let&rsquo;s get started &hellip; first thing I want to do is start the auxiliary clock whenever an instruction is requested via the user flicking one of the primary switches. That&rsquo;s easy enough &hellip; just activate the AUX-START line shown in the schematic above &hellip; but &hellip; we mustn&rsquo;t back-feed any of the other instruction types so some diodes are needed:</p>
 <figure>
   <img src="/img/posts/2018/2018-02-07-0003.png" alt="AUX-START Anit-feedback Diodes">
@@ -166,7 +174,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>Next we can add the control logic for &lsquo;LOAD ADDRESS&rsquo; which is a relatively easy one as it only hits two control lines: Select Address Switches (SAS) and Load Program Counter (LPC):</p>
 <figure>
   <img src="/img/posts/2018/2018-02-07-0004.png" alt="Control Relays for Load Address">
@@ -174,7 +181,6 @@ if (!doNotTrack) {
   <figcaption markdown="span">Control Relays for Load Address (<a href="/img/posts/2018/2018-02-07-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>One thing worthy of mention here is the presence of the AUX-RESET which latches the control relays on following the activation of the &lsquo;LOAD ADDRESS&rsquo; line which is momentary as the switch is spring loaded to return to it&rsquo;s neutral position. When the auxiliary clock finishes its sequence the AUX-RESET line is dropped which in turn un-latches the control relays ready for the next instruction.</p>
 <p>Before continuing on with the other instructions let&rsquo;s pick off the &lsquo;NEXT&rsquo; handling which will load the program counter (LPC) from the incrementer (SIC) on timing pulses C and D:</p>
@@ -185,7 +191,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>The pattern is very similar to the &lsquo;LOAD ADDRESS&rsquo; operation although note that on the LPC and SIC lines we don&rsquo;t need to stop the &lsquo;DEPOSIT&rsquo; relays back-feeding the &lsquo;EXAMINE&rsquo; relays as they&rsquo;ll never be active at the same time but we do want to stop the rest of the computer back-feeding these lines and so the diodes are placed at the point the lines leave this unit. Note also that all of the remaining functions are activating their set of relays whether they&rsquo;re &lsquo;NEXT&rsquo; functions or not. This is fine as AP-C and AP-D only fire on a long instruction &hellip; however &hellip; we haven&rsquo;t told the auxiliary clock yet whether it is in fact a short or a long instruction we&rsquo;re doing. We can fix that though by setting the AUX-ABORT line:</p>
 <figure>
   <img src="/img/posts/2018/2018-02-07-0006.png" alt="Control Relays with added AUX-ABORT">
@@ -193,7 +198,6 @@ if (!doNotTrack) {
   <figcaption markdown="span">Control Relays with added AUX-ABORT (<a href="/img/posts/2018/2018-02-07-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>All of the short instructions will now activate the AUX-ABORT line meaning the auxiliary clock will only produce pulses A and B. We can now move on to implementing the &lsquo;EXAMINE&rsquo; and &lsquo;EXAMINE NEXT&rsquo; instruction handling:</p>
 <figure>
@@ -203,7 +207,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>You might have spotted there that we&rsquo;re firing the LIC line for both &lsquo;EXAMINE&rsquo; and &lsquo;EXAMINE NEXT&rsquo; even though it shouldn&rsquo;t be fired for &lsquo;EXAMINE&rsquo; function. This has been done to simplify the circuitry here at the expense of performing an unnecessary action. Let&rsquo;s finish off with implementing the &lsquo;DEPOSIT&rsquo; and &lsquo;DEPOSIT NEXT&rsquo; instruction handling:</p>
 <figure>
   <img src="/img/posts/2018/2018-02-07-0008.png" alt="Final Control Relays with all instructions implemented">
@@ -211,7 +214,6 @@ if (!doNotTrack) {
   <figcaption markdown="span">Final Control Relays with all instructions implemented (<a href="/img/posts/2018/2018-02-07-1007.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>With those last instructions implemented the schematic above is completed and we can now combine that with the auxiliary clock schematic shown at the top of this post. Returning to my usual diagram style here is the auxiliary card as it currently stands:</p>
 <figure>
@@ -221,7 +223,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>&hellip; and here it is with the auxiliary clock and control relays added:</p>
 <figure>
   <img src="/img/posts/2018/2018-02-07-0010.png" alt="Auxiliary Control Card (after update)">
@@ -229,7 +230,6 @@ if (!doNotTrack) {
   <figcaption markdown="span">Auxiliary Control Card (after update) (<a href="/img/posts/2018/2018-02-07-1009.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The auxiliary clock relays are in the middle of the card and the control relays covered in this post are towards the top. As always, you can find a larger version of this card design <a href="/pdf/aux-switch-ctrl-3.pdf">here in PDF format</a>.</p>
 <p>So, with the auxiliary control card design in the bag it&rsquo;s time to whip out the soldering iron again and get constructing and I&rsquo;ll cover that in my next post.</p>
@@ -289,18 +289,22 @@ if (!doNotTrack) {
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -308,7 +312,7 @@ if (!doNotTrack) {
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f02%2fauxiliary-control-design-part-3-of-3%2f&quote=Auxiliary%20Control%20Design%20%28Part%203%20of%203%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f02%2fauxiliary-control-design-part-3-of-3%2f&text=Auxiliary%20Control%20Design%20%28Part%203%20of%203%29:https%3a%2f%2frelaycomputer.co.uk%2f2018%2f02%2fauxiliary-control-design-part-3-of-3%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

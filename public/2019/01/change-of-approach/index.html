@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">A change of approach</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -140,13 +151,11 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>What?! OK, so I should probably have warmed you up for that. One of the other problems I created for myself a long time ago was designing all the schematics by hand using OmniGraffle on the Mac. Obviously I used the magic of copy/paste to make things a bit easier but still, I&rsquo;ve spent a lot of time drafting the schematics so far. If I&rsquo;m going to get slightly more &lsquo;grown up&rsquo; and make PCBs then I should probably use more appropriate software &hellip; and my software of choice this time has been <a href="http://kicad-pcb.org">KiCad</a>. This open source cross platform package is specifically designed for the production of schematics and PCB layouts and it&rsquo;s the schematic for the Y backplane that you&rsquo;re seeing above. Here&rsquo;s a close up:</p>
 <figure>
   <img src="/img/posts/2019/2019-01-14-0001.png" alt="Backplane Y Schematic Closeup">
   
 </figure>
-
 
 <p>Backplane Y seemed a good place to start off my PCB experimentation phase as it&rsquo;s relatively simple &hellip; just connect all the sockets together. Previously I&rsquo;ve made the other backplanes by &lsquo;daisy chaining&rsquo; a ribbon cable over the back of stackable header sockets and whilst this has sufficed I have had some flaky connections on the Z backplane. Here&rsquo;s what the Z backplane looks like:</p>
 <figure>
@@ -155,7 +164,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>Given that a PCB version of the above does away with the &lsquo;daisy-chain&rsquo; we should get a much more robust/simpler card that&rsquo;s, in theory, easier to construct. Looking back to the schematic above (for the Y backplane) you can see there are four busses that run horizontally across the schematic. Top down these are the power bus, data/control bus, control Y bus and finally the address bus. Going vertically left to right you first have the incoming busses to the backplane followed by five columns for each of the five cards and then the outgoing busses at the end. If you look at the picture of the Z backplane above you&rsquo;ll hopefully see the similarities.</p>
 <p>Each connector in the schematic has each individual pin labeled and this tells KiCad that all pins with the same label are meant to be wired together. The wires themselves are not drawn in the schematic as it&rsquo;d make it far too busy/confusing to look at. One thing that maybe needs a special mention is the connectors at the far right and far left. These are right angle IDC connectors that because of the way I orient them when soldering down they end up with odd pin numbers. When the schematic is transferred to the PCB designer it all works out. Speaking of which:</p>
 <figure>
@@ -163,14 +171,12 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>There&rsquo;s a bit of an art to laying out a PCB and when you first open the PCB editor you&rsquo;ll find a massive jumble of component pads and connection lines. I personally quite enjoyed moving all the bits around and laying down the tracks but your own milage might vary. You may have noticed the image above is mirrored and that&rsquo;s because you design the board from the front. In this case all my copper tracks are on the back of the board but you might also have tracks on the front too (a double sided board). Incidentally, that&rsquo;s the other reason I&rsquo;m starting with the backplane as all the copper is on one side &hellip; making a double sided board is far more challenging but will likely be required for the register cards.</p>
 <p>Here&rsquo;s a close up on the PCB &hellip;</p>
 <figure>
   <img src="/img/posts/2019/2019-01-14-0003.png" alt="Backplane Y PCB Closeup">
   
 </figure>
-
 
 <p>Once you have a PCB designed to your liking there&rsquo;s a couple of routes onwards. You can either farm out the construction to a PCB house or make it yourself. Needless to say the best quality PCB is going to be professionally made but I&rsquo;ve found that ordering one board can cost not far off the price for five or ten boards &hellip; economies of scale. Every board I need however is unique (often similar but still unique) so DIY PCB is the way for me. Again, using KiCad I can output each of the PCB layers giving me a copper track layer, silk-screen/legend layer, solder mask layer and even drilling layers.</p>
 <p>I&rsquo;ve uploaded <a href="/pdf/backplane-y.pdf">the schematics</a> and <a href="/pdf/backplane-y-pcb.pdf">PCB layers</a> in PDF format so you can have a closer look if you like but I&rsquo;ll leave this post there for now. Next time I&rsquo;ll have a go at actually making this PCB and so that you can witness the disaster/success unfold I&rsquo;ll record a video covering the whole process.</p>
@@ -218,18 +224,22 @@ if (!doNotTrack) {
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -237,7 +247,7 @@ if (!doNotTrack) {
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f01%2fchange-of-approach%2f&quote=A%20change%20of%20approach" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f01%2fchange-of-approach%2f&text=A%20change%20of%20approach:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f01%2fchange-of-approach%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

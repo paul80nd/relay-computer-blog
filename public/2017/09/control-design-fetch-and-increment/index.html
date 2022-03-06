@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Control Design: Fetch and Increment</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -165,7 +176,6 @@ following:</p>
   
 </figure>
 
-
 <p>As with the ALU, SETAB
 and MOV-8 instruction classes implemented so far we need to make sure any
 value selected on to a bus is stable before using it. You can see this above
@@ -184,7 +194,6 @@ the sequencer as it currently stands:</p>
   
 </figure>
 
-
 <p>The ALU, SETAB and
 MOV-8 instructions all start operating from S4 onwards using derived pulses C,
 D and E as follows:</p>
@@ -193,7 +202,6 @@ D and E as follows:</p>
   
 </figure>
 
-
 <p>Similarly to get the
 instruction timings we need for the fetch and increment cycles we can derive
 additional pulses A and B as follows:</p>
@@ -201,7 +209,6 @@ additional pulses A and B as follows:</p>
   <img src="/img/posts/2017/2017-09-17-0003.png" alt="Additional A and B pulses">
   
 </figure>
-
 
 <p>Effectively we&rsquo;re
 using pulses C, D and E to run the loaded instruction at the same time as the
@@ -215,7 +222,6 @@ timing would look like for an ALU instruction loaded from memory:</p>
   
 </figure>
 
-
 <p>OK, so we know what we want to achieve so it&rsquo;s time to
 update the sequencer and control card designs. Starting with the sequencer the
 design currently looks like this:</p>
@@ -225,7 +231,6 @@ design currently looks like this:</p>
   <figcaption markdown="span">Sequencer design before pulses A and B added (<a href="/img/posts/2017/2017-09-17-1000.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>We have all the states we need in the existing 8 cycle finite
 state machine so adding pulses A and B is simply a case of pulling off the
@@ -237,7 +242,6 @@ appropriate states and routing them out through the upper card as follows:</p>
   
 </figure>
 
-
 <p>This
 gives us the derived pulses we&rsquo;ll need so it&rsquo;s on to the control card. We can
 implement the fetch/increment cycle with just four relays as follows:</p>
@@ -245,7 +249,6 @@ implement the fetch/increment cycle with just four relays as follows:</p>
   <img src="/img/posts/2017/2017-09-17-0007.png" alt="Fetch/Increment control relays">
   
 </figure>
-
 
 <p>Each relay
 reacts to the four derived pulses P-A thru P-D and activates the corresponding
@@ -268,7 +271,6 @@ as it currently stands:</p>
   
 </figure>
 
-
 <p>&hellip; and here&rsquo;s how the design looks after adding the
 fetch/increment relays &hellip;</p>
 <figure>
@@ -277,7 +279,6 @@ fetch/increment relays &hellip;</p>
   <figcaption markdown="span">Controller design with fetch/increment relays added (<a href="/img/posts/2017/2017-09-17-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The four new relays are added in the top right of the upper
 control card (CTRL:a) and pick up the passing P-C and P-D lines alongside the
@@ -346,18 +347,22 @@ likely do an updated &lsquo;overview&rsquo; video on YouTube).</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -365,7 +370,7 @@ likely do an updated &lsquo;overview&rsquo; video on YouTube).</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fcontrol-design-fetch-and-increment%2f&quote=Control%20Design%3a%20Fetch%20and%20Increment" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fcontrol-design-fetch-and-increment%2f&text=Control%20Design%3a%20Fetch%20and%20Increment:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f09%2fcontrol-design-fetch-and-increment%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

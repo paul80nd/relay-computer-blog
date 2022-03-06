@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Decoder Design: Schematic &amp; PCBs</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -139,7 +150,6 @@ this:</p>
   <img src="/img/posts/2015/2015-01-04-0000.png" alt="Opcode binary tree for MOV-8, ALU and SETAB">
   
 </figure>
-
 
 <p>Given the GOTO instruction &hellip;</p>
 
@@ -203,7 +213,6 @@ Anyho, here&rsquo;s the complete decoder tree diagram:</p>
   
 </figure>
 
-
 <p>You can perhaps see that designing these opcodes requires quite a bit of thought. The MOV8 instruction, for example, starts
 with a &lsquo;00&rsquo; because we want to reserve the following six bits as parameters to that instruction type - same goes for the GOTO
 instruction. However that means we&rsquo;ve already used up half of the opcode permutations. The SETAB instruction (starting with
@@ -219,7 +228,6 @@ instruction class takes up what&rsquo;s available:</p>
   
 </figure>
 
-
 <p>You can see that we have several blank sections marked &lsquo;NOP&rsquo; which stands for &lsquo;No Operation&rsquo;. These are areas where there&rsquo;s
 potential space for adding more instruction types in the future.</p>
 <p>Right, let&rsquo;s move on to designing the relay logic for the decoder and all we need to do is wire out the tree map you see
@@ -228,7 +236,6 @@ above:</p>
   <img src="/img/posts/2019/2019-12-22-0002.png" alt="Decoder relay logic">
   
 </figure>
-
 
 <p>To that we just add the standard W1 backplane connectors which will bring in power, control/instruction bus, operation bus and the pulse bus. For this card the instruction bus is our input and the operation bus is the output. Finally the card needs
 a set of LEDs on the front to display the currently decoded instruction class. This all results in the final schematic
@@ -243,7 +250,6 @@ straightforward let&rsquo;s skip to the finished design - here&rsquo;s a &lsquo;
   <figcaption markdown="span">Decoder Card (front and rear)</figcaption>
   
 </figure>
-
 
 <p>If you&rsquo;d like to take a closer look at these you can find the full colour previews in
 <a href="/pdf/decoder-pcbp.pdf">PDF format here</a> and <a href="/pdf/decoder-pcb.pdf">another version here</a>
@@ -294,18 +300,22 @@ to perform its very first branching program.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -313,7 +323,7 @@ to perform its very first branching program.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fdecoder-design-pcb%2f&quote=Decoder%20Design%3a%20Schematic%20%26%20PCBs" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fdecoder-design-pcb%2f&text=Decoder%20Design%3a%20Schematic%20%26%20PCBs:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f12%2fdecoder-design-pcb%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

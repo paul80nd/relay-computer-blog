@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">2020 Update</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -139,44 +150,38 @@ videos I published. If you&rsquo;ve been following me on YouTube you&rsquo;ll no
 I&rsquo;ve repeated them below.</p>
 <p>In episode 1/6 I gave an overview of the underlying architecture of my relay computer and dipped in to some of the decisions
 that led to that architecture:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/NfvgQCoFykE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/NfvgQCoFykE" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>In episode 2/6 I covered the instruction set (collection of opcodes) which can be used to tell the computer what to do:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/szvNLpovAGM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/szvNLpovAGM" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>Given opcodes are made up of 8-bit binary values they&rsquo;re not particularly user friendly and so in episode 3/6 I introduced an
 assembly language which makes it much easier to program the computer:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/IQW445iMnrc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/IQW445iMnrc" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>In episode 4/6 I used the architecture diagram and  assembly language from the earlier videos to create a program that can
 calculate a portion of the Fibonacci series. I then used the list of opcodes to &lsquo;hand assemble&rsquo; the program making it suitable
 for loading into the computer:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_iBnu5HXscI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/_iBnu5HXscI" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>Episode 5/6 I took a visual tour around my relay computer as it stands today:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/B_U0LM3CCgA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/B_U0LM3CCgA" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>In the last video, arguably the main attraction, I take everything covered so far and put it all together to demonstrate
 running the Fibonacci program, for real, on my relay computer:</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/JZyFSrNyhy8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/JZyFSrNyhy8" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>So, all in all, there&rsquo;s around 144 minutes of content in those videos above but I can assure you it took a lot longer than
 that to create them so I&rsquo;m pretty much video&rsquo;d out for the moment ;) That said though, in February I&rsquo;m going to have a think
@@ -223,18 +228,22 @@ video covering what I come up with and I&rsquo;ll be blogging, of course, about 
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -242,7 +251,7 @@ video covering what I come up with and I&rsquo;ll be blogging, of course, about 
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2020%2f02%2ftwenty-twenty-update%2f&quote=2020%20Update" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2020%2f02%2ftwenty-twenty-update%2f&text=2020%20Update:https%3a%2f%2frelaycomputer.co.uk%2f2020%2f02%2ftwenty-twenty-update%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

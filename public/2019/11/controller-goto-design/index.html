@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Controller Design: GOTO Instruction</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -193,13 +204,11 @@ by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
   
 </figure>
 
-
 <p>The fetch/increment cycle is already catered for as it&rsquo;s common to all instructions but here&rsquo;s the schematic for that:</p>
 <figure>
   <img src="/img/posts/2019/2019-11-30-0006.png" alt="Increment Cycle Schematic">
   
 </figure>
-
 
 <p>So let&rsquo;s start off with an easy part of the GOTO operation. The first two lines of the timing diagram select the program
 counter (SEL-PC) and read the memory (MEM-RD) which will put the second and third byte of the instruction on to the data bus.
@@ -208,7 +217,6 @@ This happens at pulse J and N and is easily implemented with a couple of relays:
   <img src="/img/posts/2019/2019-11-30-0000.png" alt="SEL-PC and MEM-RD">
   
 </figure>
-
 
 <p>Note that there&rsquo;s a diode in the SPC (SEL-PC) output as back-feeding could inadvertently drive the P-J or P-N line causing
 erratic behaviour. With the 2nd/3rd byte of the instruction available on the data bus we then need to load these into either
@@ -219,7 +227,6 @@ the program counter on.</p>
   
 </figure>
 
-
 <p>Next we need to select the incrementer and put the value back in the program counter. Optionally at the last increment of
 the instruction we can also load the XY register effectively storing the address of the next instruction in memory. This is
 used as a &lsquo;return address&rsquo; should we want to continue execution from where we initially took a jump from. Bit 0 of the
@@ -229,7 +236,6 @@ instruction sets this option.</p>
   
 </figure>
 
-
 <p>Timing wise that&rsquo;s the bulk of the chart done - we&rsquo;re just left with the last two lines SEL-J and the optional LD-PC. This is
 where we&rsquo;re gating the address held in the J register to the address bus and then if a jump is required we load the program
 counter. The SEL-J is easy enough:</p>
@@ -238,14 +244,12 @@ counter. The SEL-J is easy enough:</p>
   
 </figure>
 
-
 <p>The decision to jump or not is based on the condition registers and bits 1, 2, 3 and 4 of the instruction and takes a bit more
 relay logic to wire out:</p>
 <figure>
   <img src="/img/posts/2019/2019-11-30-0004.png" alt="optional LD-PC">
   
 </figure>
-
 
 <p>Again, we have to be careful not to back-feed to the condition registers so there&rsquo;s a diode on each of the incoming lines but
 it&rsquo;s not shown on this schematic.</p>
@@ -256,7 +260,6 @@ it&rsquo;s not shown on this schematic.</p>
   <figcaption markdown="span">GOTO control circuit (<a href="/img/posts/2019/2019-11-30-1005.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>As mentioned in my last post I&rsquo;m going to rebuild the controller cards on PCBs which will mean also re-implementing the ALU,
 MOV8 and SETAB instruction classes. I&rsquo;ll cover off the design of these in my next post then get them ordered in and
@@ -305,18 +308,22 @@ constructed.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -324,7 +331,7 @@ constructed.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fcontroller-goto-design%2f&quote=Controller%20Design%3a%20GOTO%20Instruction" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fcontroller-goto-design%2f&text=Controller%20Design%3a%20GOTO%20Instruction:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fcontroller-goto-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Sequencer Design: 24-cycle FSM</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -139,7 +150,6 @@ In my last post I covered the timing chart for the GOTO class which is repeated 
   <figcaption markdown="span">GOTO opcode timing chart (<a href="/img/posts/2019/2019-10-06-1004.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>To achieve this timing I&rsquo;ll need a sequencer that can &lsquo;count&rsquo; up to 24 (currently it only goes up to 8). Actually none of this
 is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays. If you&rsquo;re not familiar with how the
@@ -154,7 +164,6 @@ from scratch. Transferring the existing 8-cycle design in to EasyEDA we get the 
   
 </figure>
 
-
 <p>I&rsquo;ll add a link later in this post to a nice PDF version of these diagrams so you can take a closer look should you wish to.
 Note though that this is the exact same circuit as before &hellip; it&rsquo;s just laid out differently. To keep the diagram cleaner I&rsquo;ve
 put the clock divider at the top left and the abort-8 relay at the bottom left. You can then see the main ring counter is to
@@ -165,14 +174,12 @@ counter continues on to 10-cycles and 12-cycles as follows:</p>
   
 </figure>
 
-
 <p>So, this is another 4 stages of the ring counter with abort relays at the 10 and 12 cycle mark. Similarly we can add another
 4 stages to get to the 16 cycle mark:</p>
 <figure>
   <img src="/img/posts/2019/2019-11-01-0002.png" alt="14-cycle FSM">
   
 </figure>
-
 
 <p>Here we&rsquo;re adding an abort relay at stage 14. These aborts at 8/10/12/14-cycles aren&rsquo;t placed arbitrarily of course &hellip; these
 are the exact lengths of the various instruction classes I&rsquo;ll be implementing in the computer. So far we only have 8-cycle
@@ -182,7 +189,6 @@ instructions implemented but there will be 10, 12 and 14 cycle ones coming up.</
   <img src="/img/posts/2019/2019-11-01-0003.png" alt="24-cycle FSM">
   
 </figure>
-
 
 <p>Note that no abort relay is required in this portion of the FSM as at the end of the chain we just active the RESET line
 directly which will restart the sequencer back from stage 0.</p>
@@ -195,7 +201,6 @@ Well, lets take a look at the outputs of the 24-cycle FSM:</p>
   <figcaption markdown="span">24-cycle FSM Outputs (<a href="/sequencer-timing.pdf">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>You might be able to spot that some of the outputs are exactly what we&rsquo;re looking for &hellip; they&rsquo;re the right pulse for the
 right duration of time. Some of the pulses we need though can be obtained by combining the outputs together. This is what I
@@ -245,18 +250,22 @@ gives us the sequencer as a complete unit.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -264,7 +273,7 @@ gives us the sequencer as a complete unit.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fsequencer-design-24-cycle-fsm%2f&quote=Sequencer%20Design%3a%2024-cycle%20FSM" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fsequencer-design-24-cycle-fsm%2f&text=Sequencer%20Design%3a%2024-cycle%20FSM:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f11%2fsequencer-design-24-cycle-fsm%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

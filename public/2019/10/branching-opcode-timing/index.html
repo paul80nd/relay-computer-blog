@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Branching: Opcode Timing</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -189,7 +200,6 @@ if (!doNotTrack) {
   
 </figure>
 
-
 <p>As mentioned in my last post this is by far the most complicated opcode to date &hellip; and in fact, this will be the most
 complicated opcode the computer is going to get. The next job is to take the design above and derive some timing diagrams to
 show which control lines will be operated at what time so that the opcode functions as desired. Before we get stuck in lets
@@ -198,7 +208,6 @@ remind ourselves of what happens at the beginning of all opcodes:</p>
   <img src="/img/posts/2019/2019-10-06-0001.png" alt="fetch increment timing">
   
 </figure>
-
 
 <p>This is the &lsquo;fetch/increment&rsquo; cycle which loads the opcode in to the instruction register and then moves the program counter
 on to the next instruction in memory. In the case of GOTO we have three bytes &hellip; the opcode itself followed by a 16-bit
@@ -214,7 +223,6 @@ we&rsquo;ll continue as normal. Let&rsquo;s do a basic map of this:</p>
   
 </figure>
 
-
 <p>All this, of course, needs to happen after the initial fetch/increment as the address and data busses will be busy during that
 time. We&rsquo;ll also leave a gap between those operations to ensure any required busses are clear.</p>
 <p>Timing wise that covers most of the heavy lifting for this opcode. With the program counter pointing to the next instruction in memory we can optionally load the XY register from that so we can return back from a jump (the last bit of the opcode
@@ -227,7 +235,6 @@ these last two steps added in.</p>
   
 </figure>
 
-
 <p>Putting everything together we end up with the final GOTO timing chart:</p>
 <figure>
   <img src="/img/posts/2019/2019-10-06-0004.png" alt="GOTO opcode timing chart">
@@ -235,7 +242,6 @@ these last two steps added in.</p>
   <figcaption markdown="span">GOTO opcode timing chart (<a href="/img/posts/2019/2019-10-06-1004.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>So, we now know what needs to happen and when but how does this get implemented in the computer? Well, just as with the other
 instructions, you look at the timing diagram and pick out the common pulse shapes which we can create in the sequencer. The
@@ -304,18 +310,22 @@ cover that off next time.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -323,7 +333,7 @@ cover that off next time.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f10%2fbranching-opcode-timing%2f&quote=Branching%3a%20Opcode%20Timing" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f10%2fbranching-opcode-timing%2f&text=Branching%3a%20Opcode%20Timing:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f10%2fbranching-opcode-timing%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

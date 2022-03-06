@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Control Design: MOV-8, ALU and SETAB (part 1 of 2)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -187,7 +198,6 @@ only be designing and implementing MOV-8 for registers A, B, C and D.</p>
   
 </figure>
 
-
 <p>The decoder handles
 the first two bits of the instruction so it&rsquo;s just a case of hooking a
 collection of relays together to handle the combinatorial logic of which
@@ -198,7 +208,6 @@ following:</p>
 <img src="/img/posts/2015/2015-03-31-0002.png" alt="MV8 Timing Pulses">
   
 </figure>
-
 
 <p>The first timing
 diagram shows how the source register is selected on to the data bus at the
@@ -214,7 +223,6 @@ design is as follows:</p>
   <figcaption markdown="span">MV8 Relays (<a href="/img/posts/2015/2015-03-31-1000.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The relays are made up of
 three distinct areas of functionality:</p>
@@ -283,7 +291,6 @@ out as a diagram we get the following:</p>
   
 </figure>
 
-
 <p>The decoder handles
 the first four bits of the instruction and in this case the ALU itself does
 most of the hard work (the last three bits are mapped directly to the ALU
@@ -294,7 +301,6 @@ which register to write to. In terms of timing we need the following:</p>
 <img src="/img/posts/2015/2015-03-31-0006.png" alt="ALU Timing Pulses">
   
 </figure>
-
 
 <p>The first timing
 diagram shows how the ALU is commanded which places the result on to the data
@@ -311,7 +317,6 @@ together the relay design is as follows:</p>
   <figcaption markdown="span">ALU Relays (<a href="/img/posts/2015/2015-03-31-1001.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The relays are made up of
 four distinct areas of functionality:</p>
@@ -378,7 +383,6 @@ value between -16 and 15 can be loaded up directly from the instruction.</p>
   
 </figure>
 
-
 <p>The decoder handles
 the first two bits of the instruction and with bits 0 through to 4 being gated
 directly to the data bus there&rsquo;s only the combinatorial logic of which
@@ -388,7 +392,6 @@ register to write to left to do. In terms of timing we need the following:</p>
 <img src="/img/posts/2015/2015-03-31-0010.png" alt="SET Timing Pulses">
   
 </figure>
-
 
 <p>The first timing
 diagram shows how the value encoded within the instruction register is
@@ -403,7 +406,6 @@ pulses P-D and P-E provide everything needed for this instruction.</p>
   <figcaption markdown="span">SET Relays (<a href="/img/posts/2015/2015-03-31-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The relays are made up of
 three distinct areas of functionality:</p>
@@ -444,7 +446,6 @@ controls the CHAT signal is very simple:</p>
   <img src="/img/posts/2015/2015-03-31-0012.png" alt="CHAT Relay">
   
 </figure>
-
 
 <p>&hellip; when pulse D is active
 the power supply (V) is connected to the CHAT line.</p>
@@ -497,18 +498,22 @@ register card design.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -516,7 +521,7 @@ register card design.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fcontrol-design-mov-8-alu-and-setab-part%2f&quote=Control%20Design%3a%20MOV-8%2c%20ALU%20and%20SETAB%20%28part%201%20of%202%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fcontrol-design-mov-8-alu-and-setab-part%2f&text=Control%20Design%3a%20MOV-8%2c%20ALU%20and%20SETAB%20%28part%201%20of%202%29:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f03%2fcontrol-design-mov-8-alu-and-setab-part%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">16-bit Register PCB Design</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -139,7 +150,6 @@ button&rsquo; type thing &hellip; well, clicking the &lsquo;create PCB&rsquo; bu
   
 </figure>
 
-
 <p>As the schematic doesn&rsquo;t define any sort of physical location for each component the PCB designer starts off by placing all
 the components in neat rows by the side of the board. The blue lines you can see are called &lsquo;air wires&rsquo; &hellip; these are the
 required connections between components that we&rsquo;ll have to lay down as tracks on the PCB. The &lsquo;game&rsquo; at hand then is to fit
@@ -152,7 +162,6 @@ you&rsquo;d likely come out with 10 different PCB layouts - it can be quite an i
   
 </figure>
 
-
 <p>Each of the components that appeared in the schematic has an equivalent &lsquo;footprint&rsquo; that defines it&rsquo;s physical dimensions,
 outline and the shape/position of the holes. You can find footprints available in online libraries for most common
 components but if needed you can create your own or tweak an existing one. In the case of the relays here I&rsquo;ve used a
@@ -162,7 +171,6 @@ pads, hole sizes and solder mask reveal:</p>
   <img src="/img/posts/2019/2019-08-09-0002.png" alt="Footprint tweaking">
   
 </figure>
-
 
 <p>Note the unit of measurement here is &lsquo;mil&rsquo; which is a thousandth of an inch. You can change this if preferred but most
 manufacturers will list their manufacturing tolerances/abilities in mil. In particular you need to keep an eye out for
@@ -176,7 +184,6 @@ the copper. It&rsquo;s worth spending some time on getting all the pads right be
   <img src="/img/posts/2019/2019-08-09-0003.png" alt="Grid and board outline">
   
 </figure>
-
 
 <p>Here I&rsquo;ve set the grid size to 100mil which is 0.1inch as this matches the hole pitch on the matrix/pad prototyping boards
 I&rsquo;ve been using so far and this&rsquo;ll make it much easier to place the connectors and LEDs to match the other cards. I&rsquo;ve set
@@ -196,7 +203,6 @@ and the connectors at the back.</p>
   
 </figure>
 
-
 <p>I&rsquo;ve also added some of the silk-screen legend too at this point which will appear in white text on the final product. This
 step is often left until the end of the card design process but being as these LEDs aren&rsquo;t going anywhere it makes sense to
 get this bit out of the way (and it&rsquo;ll help me identify what&rsquo;s what when I start laying down tracks). You can also see the
@@ -205,7 +211,6 @@ two non-plated drill holes at the front of the card to match the matrix/pad boar
   <img src="/img/posts/2019/2019-08-09-0005.png" alt="Connectors placement">
   
 </figure>
-
 
 <p>It&rsquo;s worth printing the design out at this point at 1:1 scale and comparing it to the components and to other cards to make
 sure the dimensions are coming out well. The more checking you can do before laying down tracks then the more time and
@@ -222,14 +227,12 @@ of laying down the required tracks.</p>
   
 </figure>
 
-
 <p>Again, I&rsquo;ve got ahead of myself and added some of the silk-screen legend just to help keep track of what&rsquo;s what. With the
 components now laid out we can have a go at laying down some tracks:</p>
 <figure>
   <img src="/img/posts/2019/2019-08-09-0007.png" alt="Relay tracks">
   
 </figure>
-
 
 <p>Here the red lines are tracks laid down on the top of the board which is where the majority of my signal tracks will be
 placed. As each track is laid down the blue air wire will disappear and we&rsquo;re one step nearer to a completed design. A
@@ -240,7 +243,6 @@ other. Here I can generally go vertically on the top as most signals are passing
   
 </figure>
 
-
 <p>We can keep going in the same way laying down as many tracks as possible. Eventually, if there&rsquo;s enough air wires hanging
 around, you&rsquo;ll need to have tracks cross over each other. This is where we&rsquo;ll need to drop a signal to the other side of
 the board using a &lsquo;via&rsquo;.</p>
@@ -248,7 +250,6 @@ the board using a &lsquo;via&rsquo;.</p>
   <img src="/img/posts/2019/2019-08-09-0010.png" alt="Relay tracks">
   
 </figure>
-
 
 <p>A via is a tiny solder filled hole that goes through the board and connects a track on one side of the board to the other.
 Here the blue lines are on the bottom of the board and used to get the tracks coming down the right half over to the left
@@ -261,7 +262,6 @@ we have our upper and lower signal tracks all routed. Here&rsquo;s all the upper
   
 </figure>
 
-
 <p>With all signal tracks routed we&rsquo;ve now got to turn our attention to the power and ground lines. Each relay needs its coil
 grounding and a lot of them take power to some of their contacts to be able to create the outgoing signal lines. A typical
 solution to routing these power and ground lines is to create copper planes. In a four layer board you&rsquo;d have signals on
@@ -272,7 +272,6 @@ the same as the power lines:</p>
   <img src="/img/posts/2019/2019-08-09-0011.png" alt="Plane connections">
   
 </figure>
-
 
 <p>Note the connections between the planes and the power connector pads &hellip; these appear as &lsquo;crosses&rsquo; and this is for thermal
 relief. Without these soldering would be a nightmare as the heat of the iron would be wicked away by what is, in effect, a
@@ -287,7 +286,6 @@ general you also need to work out how much copper area is between components and
   
 </figure>
 
-
 <p>Here you can see the ground plane coming in from the top and the power plane coming in from the right. As I&rsquo;ve got signal
 tracks running through this area too I have to be careful to make sure I&rsquo;m not cutting off any power/ground connections or
 making the copper too thin/narrow. Again, each pad connection to a plane has thermal relief on it. Here&rsquo;s the completed
@@ -298,7 +296,6 @@ planes for power and grounding:</p>
   <figcaption markdown="span">Completed planes (<a href="/img/posts/2019/2019-08-09-1013.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>&hellip; and with that we&rsquo;re pretty much there. All that&rsquo;s needed now is a close check of absolutely everything &hellip; check, check
 and check again. Although minor mistakes or errors can be patched up after the card has been manufactured it&rsquo;s not ideal and
@@ -312,14 +309,12 @@ colour:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2019/2019-08-09-0015.png" alt="Photo view (bottom)">
   
   <figcaption markdown="span">Photo view (bottom) (<a href="/img/posts/2019/2019-08-09-1015.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>&hellip; and if that&rsquo;s not enough you can even view your card in the 3D viewer &hellip;</p>
 <figure>
@@ -328,7 +323,6 @@ colour:</p>
   <figcaption markdown="span">3D view (<a href="/img/posts/2019/2019-08-09-1016.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>Once you&rsquo;re happy with your design (and you&rsquo;ve given it a thorough check) then you can push it to your chosen manufacturer. In
 my case it&rsquo;s <a href="https://jlcpcb.com">JLCPCB</a> who have a five board minimum order but given how cheap they are it&rsquo;s not a problem.</p>
@@ -380,18 +374,22 @@ there which will be used as a mounting plate for the LEDs along the front of the
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -399,7 +397,7 @@ there which will be used as a mounting plate for the LEDs along the front of the
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f08%2f16bit-register-pcb-design%2f&quote=16-bit%20Register%20PCB%20Design" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2019%2f08%2f16bit-register-pcb-design%2f&text=16-bit%20Register%20PCB%20Design:https%3a%2f%2frelaycomputer.co.uk%2f2019%2f08%2f16bit-register-pcb-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

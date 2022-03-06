@@ -128,7 +128,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Incrementer Design: 16-bit Half Adder</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -146,7 +157,6 @@ on the usual 55 x 40 hole pad board:</p>
   
 </figure>
 
-
 <p>Each half adder
 bit is made up of two relays (as seen in the previous blog post) and starting
 at the bottom right of the diagram above the bit stages run upwards from 0 to
@@ -163,7 +173,6 @@ half adder as follows:</p>
   <figcaption markdown="span">16-bit half adder with input and output connections (<a href="/img/posts/2017/2017-07-15-1001.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>Each bit of the half adder is directly connected to the address
 bus meaning that the adder is always active even when the output isn&rsquo;t needed.
@@ -183,7 +192,6 @@ LEDs across the front of the card:</p>
   <figcaption markdown="span">Final half adder (<a href="/img/posts/2017/2017-07-15-1002.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>With this design we can now
 take a value on the address bus and increment it by one. This is only half the
@@ -235,18 +243,22 @@ next post.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -254,7 +266,7 @@ next post.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f07%2fincrementer-design-16-bit-half-adder%2f&quote=Incrementer%20Design%3a%2016-bit%20Half%20Adder" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f07%2fincrementer-design-16-bit-half-adder%2f&text=Incrementer%20Design%3a%2016-bit%20Half%20Adder:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f07%2fincrementer-design-16-bit-half-adder%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

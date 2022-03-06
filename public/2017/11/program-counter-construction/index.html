@@ -126,7 +126,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Program Counter Construction</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -142,7 +153,6 @@ data bus. As usual I&rsquo;ll start with soldering down the LEDs:</p>
   
 </figure>
 
-
 <p>This
 should all be very familiar now and there&rsquo;s nothing unusual about these LEDs
 compared to previous cards. I&rsquo;m just about at the point now where I&rsquo;ve
@@ -153,7 +163,6 @@ previous cards. Next up is backplane connectors and relay sockets:</p>
 <img src="/img/posts/2017/2017-11-11-0003.jpg" alt="Program Counter with added sockets (rear view)">
   
 </figure>
-
 
 <p>Again, all very similar to previous cards. To be frank though I&rsquo;m
 starting to find fitting the individual relay sockets a bit tedious which
@@ -167,7 +176,6 @@ the relay coil diodes:</p>
   
 </figure>
 
-
 <p>As with the relay sockets I&rsquo;ve got something up my sleeve for the
 diodes which I&rsquo;ll try out on the upcoming memory card. Next job is the power
 rails:</p>
@@ -175,7 +183,6 @@ rails:</p>
   <img src="/img/posts/2017/2017-11-11-0006.jpg" alt="Program Counter with added power rails (rear view)">
   
 </figure>
-
 
 <p>This is another area where I&rsquo;m increasingly getting &lsquo;a bit bored&rsquo;
 and so on the next card I&rsquo;ll do away with the individual ground wires and just
@@ -189,7 +196,6 @@ Flipping the card back over the next job is the wire wrap:</p>
   
 </figure>
 
-
 <p>The wire
 wrap is, again, pretty similar to the other completed registers. I always find
 the wire wrap on sparsely populated cards such as this less aesthetically
@@ -202,7 +208,6 @@ straggly wiring:</p>
   
 </figure>
 
-
 <p>Final
 job is to pop in the relays and then that&rsquo;s that for the program counter
 construction:</p>
@@ -211,7 +216,6 @@ construction:</p>
 <img src="/img/posts/2017/2017-11-11-0010.jpg" alt="Program Counter with added relays (close up)">
   
 </figure>
-
 
 <p>You might have picked up from the tone of my writing that I&rsquo;m not
 a fan of constructing registers. It&rsquo;s not the register&rsquo;s fault - it&rsquo;s just
@@ -224,10 +228,9 @@ of relays.</p>
 <p>As always I&rsquo;ve created a video which gives an overview
 of the card and shows it working in isolation of the computer as well as when
 plugged in to the computer.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/geT5kJOs29c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/geT5kJOs29c" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 <p>Next up will be the memory card construction which
 is far more interesting than boring old registers. More interesting and more
@@ -289,18 +292,22 @@ two posts as there&rsquo;ll be lots to talk about.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -308,7 +315,7 @@ two posts as there&rsquo;ll be lots to talk about.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f11%2fprogram-counter-construction%2f&quote=Program%20Counter%20Construction" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2017%2f11%2fprogram-counter-construction%2f&text=Program%20Counter%20Construction:https%3a%2f%2frelaycomputer.co.uk%2f2017%2f11%2fprogram-counter-construction%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Control Design: MOV-8, ALU and SETAB (part 2 of 2)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -145,7 +156,6 @@ in, here is all the relays laid out across the two new control cards:</p>
   
 </figure>
 
-
 <p>On the left hand card
 there is the CHAT relay floating at the top right then down from there are the
 three SETAB relays and below that the five ALU relays. On the right hand card
@@ -160,7 +170,6 @@ following:</p>
   
 </figure>
 
-
 <p>The next job is to add the connectors so the relays can be wired
 up to their inputs and outputs as required. As these cards are W1 and W2 types
 they use the same connectors as the respective W1 and W2 cards of the
@@ -173,14 +182,12 @@ the left followed by the &lsquo;W2&rsquo; card on the right:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2015/2015-04-04-0003.png" alt="Control W2 Connectors">
   
   <figcaption markdown="span">Control W2 Connectors (<a href="/img/posts/2015/2015-04-04-1003.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>These are the
 usual right angle boxed headers used on previous cards and as before lines
@@ -240,7 +247,6 @@ connector wiring added to the design we get the following:</p>
   
 </figure>
 
-
 <p>There&rsquo;s a couple of things that probably warrant
 further explanation on the above diagram. Firstly you can see that some of the
 lines going to and from the instruction relays don&rsquo;t run a direct route and
@@ -262,14 +268,12 @@ have:</p>
   
 </figure>
 
-
 <figure>
   <img src="/img/posts/2015/2015-04-04-0006.png" alt="Control W2 Card LEDs">
   
   <figcaption markdown="span">Control W2 Card LEDs (<a href="/img/posts/2015/2015-04-04-1006.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The W1 card LEDs
 show the ABT08 line status and that of the I2B line raised by the SETAB
@@ -288,7 +292,6 @@ at the final design as follows:</p>
   
 </figure>
 
-
 <p>As always
 should you wish to take a much closer look at this design you can find the
 above <a href="/pdf/control-1.pdf">here in PDF format</a>.</p>
@@ -305,7 +308,6 @@ this:</p>
   <figcaption markdown="span">Update Instruction Register design including I2B relays (<a href="/img/posts/2015/2015-04-04-1008.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>In the above diagram I&rsquo;ve faded out the existing
 instruction register relays and wiring to highlight the new I2B relays added.
@@ -366,18 +368,22 @@ working computer.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -385,7 +391,7 @@ working computer.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f04%2fcontrol-design-mov-8-alu-and-setab-part%2f&quote=Control%20Design%3a%20MOV-8%2c%20ALU%20and%20SETAB%20%28part%202%20of%202%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2015%2f04%2fcontrol-design-mov-8-alu-and-setab-part%2f&text=Control%20Design%3a%20MOV-8%2c%20ALU%20and%20SETAB%20%28part%202%20of%202%29:https%3a%2f%2frelaycomputer.co.uk%2f2015%2f04%2fcontrol-design-mov-8-alu-and-setab-part%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>

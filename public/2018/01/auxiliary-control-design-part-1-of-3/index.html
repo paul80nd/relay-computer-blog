@@ -124,7 +124,18 @@ if (!doNotTrack) {
 </nav>
 
   
-<section class="section">
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Auxiliary Control Design (Part 1 of 3)</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section has-background-white">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -182,7 +193,6 @@ picture):</p>
   
 </figure>
 
-
 <p>As
 you will hopefully have seen in one of my many videos on
 <a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA?view_as=subscriber">YouTube</a> all
@@ -207,7 +217,6 @@ timing diagram representing what I&rsquo;ve been doing. Here that is:</p>
   <figcaption markdown="span">Auxiliary Control Timing Diagram (<a href="/img/posts/2018/2018-01-24-1000.png">larger</a>)</figcaption>
   
 </figure>
-
 
 <p>The load address operation is quite simple: gate the switches to
 the address bus (SAS) and load the program counter (LPC). As always for the
@@ -238,7 +247,6 @@ four. Effectively then we&rsquo;re looking at the following:</p>
   <img src="/img/posts/2018/2018-01-24-0002.png" alt="Operation Pulses">
   
 </figure>
-
 
 <p>The four pulses are
 named AP-A, AP-B, AP-C and AP-D. AP in this case stands for &lsquo;Auxiliary Pulse&rsquo;
@@ -307,18 +315,22 @@ in my next post.</p>
   </div>
 </section>
 
-  <footer class="footer">
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h3>On this blog</h3>
+        <p class="has-text-weight-semibold">On this blog</p>
         <p><a href="https://relaycomputer.co.uk/">Home</a></p>
         
         <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
         <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
-        <h3>Related sites</h3>
+        <p class="has-text-weight-semibold">Related sites</p>
         <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
               class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
@@ -326,7 +338,7 @@ in my next post.</p>
             Simulator</a></p>
       </div>
       <div class="column">
-        <h3>Share on social media</h3>
+        <p class="has-text-weight-semibold">Share this page</p>
         <p>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f&quote=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
             <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f&text=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29:https%3a%2f%2frelaycomputer.co.uk%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
