@@ -34,7 +34,7 @@
       </div>
       <div class="tags">
         <span class="tag is-link is-light">Published {{.Date.Format "02 Jan 2006"}} </span>
-        <span class="tag is-link is-light">{{ div (add (.Content | countwords) 250) 250 }} min read</span>
+        <span class="tag is-link is-light">{{ .ReadingTime }} min read</span>
       </div>
     </div>
   </div>
