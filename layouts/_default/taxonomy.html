@@ -1,10 +1,29 @@
 {{ define "main" }}
-
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      {{ if .Parent.Section }}
+      <h1 class="title is-size-4">#{{ .Title }}</h1>
+      <h2 class="subtitle">List of articles tagged with '{{ .Title }}'</h2>
+      {{ else }}
+      <h1 class="title is-size-4">{{ .Title }}</h1>
+      <h2 class="subtitle">List of tags appearing in articles</h2>
+      {{ end }}
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
         <div class="content">
+
+          {{ range  .Pages }}
+          {{ . }}
+          <div class="relative w-100  mb4 bg-white">
+            {{ .Render "summary" }}
+          </div>
+        {{ end }}
 
           <h3>Tags in Blog</h3>
 
