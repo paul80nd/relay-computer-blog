@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>theory | Relay Computer</title>
+  <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link href="/tags/theory/index.xml" rel="alternate" type="application/rss+xml" title="Relay Computer" />
+  <link href="/tags/theory/index.xml" rel="feed" type="application/rss+xml" title="Relay Computer" />
+  
+  <meta property="og:title" content="theory" />
+<meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://relaycomputer.co.uk/tags/theory/" />
+
+<meta itemprop="name" content="theory">
+<meta itemprop="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="theory"/>
+<meta name="twitter:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item is-active">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">#theory</h1>
+      <h2 class="subtitle">List of articles tagged with &#39;theory&#39;</h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/10/branching-opcode-timing/">Branching: Opcode Timing</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&rsquo;s where I got to last time: …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/10/branching-opcode-timing/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-10-06-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 06 Oct 2019 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/09/branching-opcode-design/">Branching: Opcode Design</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/09/branching-opcode-design/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-09-23-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 23 Sep 2019 </span>
+        <span class="tag is-link is-light">6 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2017/08/the-problem-with-memory/">The problem with memory</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              It&rsquo;s time, at last, to start looking at the design for the computer&rsquo;s memory and this is a bit of a game changer as it&rsquo;s the final part of the jigsaw that …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#memory">
+                  #memory
+                </a>
+                
+                <a href="/tags#musings">
+                  #musings
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2017/08/the-problem-with-memory/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2017/2017-08-18-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 18 Aug 2017 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/09/sequencing-control-design-overview/">Sequencing &amp; Control Design: Overview</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              I&rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/09/sequencing-control-design-overview/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-09-19-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 19 Sep 2014 </span>
+        <span class="tag is-link is-light">10 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-programming-and_7/">Architectural breakdown: Programming and Control 2</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              So, the last post didn&rsquo;t quite wrap up this &lsquo;mini-series&rsquo; but hopefully this one will. Continuing on with how the Programming and Control of the computer …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-programming-and_7/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-programming-and/">Architectural breakdown: Programming and Control</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll wrap up this &lsquo;mini-series&rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-programming-and/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">7 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-alu/">Architectural breakdown: the ALU</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#ALU">
+                  #ALU
+                </a>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-alu/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-memory/">Architectural breakdown: Memory</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the memory. …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-memory/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-06-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 06 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-buses-and/">Architectural breakdown: Buses and Registers</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-buses-and/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-05-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 05 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-binary/">Architectural breakdown: Binary</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              &hellip; and it all begins with binary. Binary is a &lsquo;base 2&rsquo; numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-binary/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 04 Nov 2013 </span>
+        <span class="tag is-link is-light">6 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f&quote=theory" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f&text=theory:https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f&description=theory" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f&title=theory&source=https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=theory&body=https%3a%2f%2frelaycomputer.co.uk%2ftags%2ftheory%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

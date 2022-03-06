@@ -2,126 +2,134 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sequencing on Relay Computer</title>
-    <link>https://relaycomputer.co.uk/tags/sequencing.html</link>
+    <link>https://relaycomputer.co.uk/tags/sequencing/</link>
     <description>Recent content in sequencing on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 11 Nov 2019 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/sequencing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sequencer Design: Schematic &amp; PCBs</title>
-      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb.html</link>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb/</link>
       <pubDate>Mon, 11 Nov 2019 03:03:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb.html</guid>
-      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards.</description>
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pcb/</guid>
+      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &amp;lsquo;two card job&amp;rsquo; is purely down to the number of relays I&amp;rsquo;ve used.</description>
     </item>
     
     <item>
       <title>Sequencer Design: Pulse Distribution</title>
-      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist.html</link>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist/</link>
       <pubDate>Sat, 02 Nov 2019 03:03:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist.html</guid>
-      <description>In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions.</description>
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-pulse-dist/</guid>
+      <description>In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions. In this case we&amp;rsquo;re looking to implement the GOTO instruction so that the computer can perform branching.
+As a recap here&amp;rsquo;s the outputs from the newly designed FSM:
+ 24-cycle FSM Outputs (larger)  &amp;hellip; and here&amp;rsquo;s the timing chart that we&amp;rsquo;re trying to obtain:</description>
     </item>
     
     <item>
       <title>Sequencer Design: 24-cycle FSM</title>
-      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm.html</link>
+      <link>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm/</link>
       <pubDate>Fri, 01 Nov 2019 03:03:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm.html</guid>
-      <description>Recently I&amp;rsquo;ve been looking at what&amp;rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:</description>
+      <guid>https://relaycomputer.co.uk/2019/11/sequencer-design-24-cycle-fsm/</guid>
+      <description>Recently I&amp;rsquo;ve been looking at what&amp;rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:
+ GOTO opcode timing chart (larger)  To achieve this timing I&amp;rsquo;ll need a sequencer that can &amp;lsquo;count&amp;rsquo; up to 24 (currently it only goes up to 8). Actually none of this is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays.</description>
     </item>
     
     <item>
       <title>Branching: Opcode Timing</title>
-      <link>https://relaycomputer.co.uk/2019/10/branching-opcode-timing.html</link>
+      <link>https://relaycomputer.co.uk/2019/10/branching-opcode-timing/</link>
       <pubDate>Sun, 06 Oct 2019 01:00:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2019/10/branching-opcode-timing.html</guid>
-      <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&amp;rsquo;s where I got to last time:</description>
+      <guid>https://relaycomputer.co.uk/2019/10/branching-opcode-timing/</guid>
+      <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&amp;rsquo;s where I got to last time:
+Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h h  l l l l l l l l    d = destination register (0-M, 1-J)</description>
     </item>
     
     <item>
       <title>Branching: Opcode Design</title>
-      <link>https://relaycomputer.co.uk/2019/09/branching-opcode-design.html</link>
+      <link>https://relaycomputer.co.uk/2019/09/branching-opcode-design/</link>
       <pubDate>Mon, 23 Sep 2019 01:00:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2019/09/branching-opcode-design.html</guid>
-      <description>There&amp;rsquo;s been a common theme recently in the comments on my YouTube videos &amp;hellip; people are ready to see my relay computer gain the power of branching and become a &amp;lsquo;proper&amp;rsquo; computer &amp;hellip; and that&amp;rsquo;s fair enough because that&amp;rsquo;s the point where the computer can do way more interesting things and run more complicated programs.</description>
+      <guid>https://relaycomputer.co.uk/2019/09/branching-opcode-design/</guid>
+      <description>There&amp;rsquo;s been a common theme recently in the comments on my YouTube videos &amp;hellip; people are ready to see my relay computer gain the power of branching and become a &amp;lsquo;proper&amp;rsquo; computer &amp;hellip; and that&amp;rsquo;s fair enough because that&amp;rsquo;s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don&amp;rsquo;t want to keep you (or I) waiting for the &amp;lsquo;main event&amp;rsquo; any longer so it&amp;rsquo;s time to start designing the most complicated of all instruction classes &amp;hellip; the &amp;lsquo;GOTO&amp;rsquo;.</description>
     </item>
     
     <item>
       <title>Auxiliary Control Construction</title>
-      <link>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction.html</link>
+      <link>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction/</link>
       <pubDate>Tue, 27 Mar 2018 22:07:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction.html</guid>
-      <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …</description>
+      <guid>https://relaycomputer.co.uk/2018/03/auxiliary-control-construction/</guid>
+      <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …
+  Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
     </item>
     
     <item>
       <title>Auxiliary Control Design (Part 3 of 3)</title>
-      <link>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3.html</link>
+      <link>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3/</link>
       <pubDate>Wed, 07 Feb 2018 22:07:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3.html</guid>
-      <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory.</description>
+      <guid>https://relaycomputer.co.uk/2018/02/auxiliary-control-design-part-3-of-3/</guid>
+      <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory. In my last post I covered the design of the auxiliary clock which resulted in the following schematic:
+ Auxiliary Clock Schematic (larger)  &amp;hellip; which generates the following timing pulses &amp;hellip;
+  This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
     </item>
     
     <item>
       <title>Auxiliary Control Design (Part 2 of 3)</title>
-      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3.html</link>
+      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3/</link>
       <pubDate>Mon, 29 Jan 2018 22:12:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3.html</guid>
-      <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer.</description>
+      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-2-of-3/</guid>
+      <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer. If you haven&amp;rsquo;t read my previous post then it&amp;rsquo;s definitely worth doing so as this post picks up where that one left off. As a reminder though we&amp;rsquo;re looking to perform the following operations:
+ Auxiliary Control Operations Timing (larger)  &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
     </item>
     
     <item>
       <title>Auxiliary Control Design (Part 1 of 3)</title>
-      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3.html</link>
+      <link>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3/</link>
       <pubDate>Wed, 24 Jan 2018 21:24:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3.html</guid>
-      <description>My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&amp;rsquo;s a bit of a pain.</description>
+      <guid>https://relaycomputer.co.uk/2018/01/auxiliary-control-design-part-1-of-3/</guid>
+      <description>My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&amp;rsquo;s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired &amp;lsquo;opcode&amp;rsquo;, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that&amp;rsquo;s four buttons to press simultaneously.</description>
     </item>
     
     <item>
       <title>Fetch and Increment - Construction and Test</title>
-      <link>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and.html</link>
+      <link>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and/</link>
       <pubDate>Tue, 16 Jan 2018 22:16:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and.html</guid>
-      <description>This is a bit of a landmark moment &amp;hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my computer will execute a program in memory without any further input from the user.</description>
+      <guid>https://relaycomputer.co.uk/2018/01/fetch-and-increment-construction-and/</guid>
+      <description>This is a bit of a landmark moment &amp;hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my computer will execute a program in memory without any further input from the user. Well, it&amp;rsquo;s this post where that finally happens and all that stands in the way is a tweak to the sequencer and an addition to the controller unit.</description>
     </item>
     
     <item>
       <title>Sequencer Construction: 8-cycle FSM</title>
-      <link>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm.html</link>
+      <link>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm/</link>
       <pubDate>Wed, 08 Jul 2015 09:27:00 +0100</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm.html</guid>
-      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones.</description>
+      <guid>https://relaycomputer.co.uk/2015/07/sequencer-construction-8-cycle-fsm/</guid>
+      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones. In this post it&amp;rsquo;s the sequencer cards which will deal with the &amp;lsquo;when&amp;rsquo; of instructions by sending out timing pulses which the upcoming control cards will then use to operate the various control lines of the computer at the right time.</description>
     </item>
     
     <item>
       <title>Sequencer Design: 8-cycle FSM</title>
-      <link>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm.html</link>
+      <link>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm/</link>
       <pubDate>Mon, 26 Jan 2015 22:03:00 +0000</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm.html</guid>
-      <description>So far I&amp;rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&amp;rsquo;m well on the way to having the computer perform MOV-8, ALU and SETAB instructions.</description>
+      <guid>https://relaycomputer.co.uk/2015/01/sequencer-design-8-cycle-fsm/</guid>
+      <description>So far I&amp;rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&amp;rsquo;m well on the way to having the computer perform MOV-8, ALU and SETAB instructions. Later I&amp;rsquo;ll get on to the control card design where the computer will operate the control lines according to the 8-bit opcode stored in the instruction register. Before that though there&amp;rsquo;s the sequencer card which will generate the pulses that drive the control card.</description>
     </item>
     
     <item>
       <title>Sequencing &amp; Control Design: Overview</title>
-      <link>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview.html</link>
+      <link>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview/</link>
       <pubDate>Fri, 19 Sep 2014 23:27:00 +0100</pubDate>
       
-      <guid>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview.html</guid>
-      <description>I&amp;rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines.</description>
+      <guid>https://relaycomputer.co.uk/2014/09/sequencing-control-design-overview/</guid>
+      <description>I&amp;rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. It&amp;rsquo;s time to move things on a bit now and work towards getting the computer to the point where given a specific instruction/op-code it can operate the control lines itself without further input from the user. Eventually the computer will be given a list of instructions to perform which it&amp;rsquo;ll work through step by step but for now the next milestone is to automate the operation of a single instruction.</description>
     </item>
     
   </channel>

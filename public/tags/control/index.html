@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>control | Relay Computer</title>
+  <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link href="/tags/control/index.xml" rel="alternate" type="application/rss+xml" title="Relay Computer" />
+  <link href="/tags/control/index.xml" rel="feed" type="application/rss+xml" title="Relay Computer" />
+  
+  <meta property="og:title" content="control" />
+<meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://relaycomputer.co.uk/tags/control/" />
+
+<meta itemprop="name" content="control">
+<meta itemprop="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="control"/>
+<meta name="twitter:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item is-active">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">#control</h1>
+      <h2 class="subtitle">List of articles tagged with &#39;control&#39;</h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/12/controller-construction/">Controller Construction</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last couple of posts I covered off the full design for the controller unit. As the PCBs have now arrived I can get on with soldering up the cards and giving them a test. …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#completion">
+                  #completion
+                </a>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/12/controller-construction/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-12-21-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 21 Dec 2019 </span>
+        <span class="tag is-link is-light">1 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/12/controller-design-pcb/">Controller Design: Schematic &amp; PCBs</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of instructions. Now it&rsquo;s time to bring all those …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/12/controller-design-pcb/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-12-20-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 20 Dec 2019 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/12/controller-alu-mov8-setab-design/">Controller Design: ALU, MOV8 &amp; SETAB Instructions</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last post I covered off the controller design for the GOTO instruction. Being as I&rsquo;ve decided to implement the controller on a new set of PCB cards I need to …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/12/controller-alu-mov8-setab-design/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-12-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Dec 2019 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/11/controller-goto-design/">Controller Design: GOTO Instruction</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/11/controller-goto-design/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-11-30-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 30 Nov 2019 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/10/branching-opcode-timing/">Branching: Opcode Timing</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&rsquo;s where I got to last time: …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/10/branching-opcode-timing/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-10-06-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 06 Oct 2019 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2019/09/branching-opcode-design/">Branching: Opcode Design</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2019/09/branching-opcode-design/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2019/2019-09-23-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 23 Sep 2019 </span>
+        <span class="tag is-link is-light">6 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2018/03/auxiliary-control-construction/">Auxiliary Control Construction</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2018/03/auxiliary-control-construction/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2018/2018-03-27-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 27 Mar 2018 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2018/02/auxiliary-control-design-part-3-of-3/">Auxiliary Control Design (Part 3 of 3)</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&rsquo;s …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2018/02/auxiliary-control-design-part-3-of-3/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2018/2018-02-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Feb 2018 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2018/01/auxiliary-control-design-part-2-of-3/">Auxiliary Control Design (Part 2 of 3)</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&rsquo;s a …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2018/01/auxiliary-control-design-part-2-of-3/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2018/2018-01-29-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 29 Jan 2018 </span>
+        <span class="tag is-link is-light">10 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2018/01/auxiliary-control-design-part-1-of-3/">Auxiliary Control Design (Part 1 of 3)</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2018/01/auxiliary-control-design-part-1-of-3/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2018/2018-01-24-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 24 Jan 2018 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2018/01/fetch-and-increment-construction-and/">Fetch and Increment - Construction and Test</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              This is a bit of a landmark moment &hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#completion">
+                  #completion
+                </a>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2018/01/fetch-and-increment-construction-and/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2018/2018-01-16-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 16 Jan 2018 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2017/09/control-design-fetch-and-increment/">Control Design: Fetch and Increment</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              The design of the computer&rsquo;s memory, incrementer and program counter are now complete but there&rsquo;s one last piece of the &lsquo;puzzle&rsquo; required to get the …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#pulse%20distribution">
+                  #pulse distribution
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2017/09/control-design-fetch-and-increment/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2017/2017-09-17-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 17 Sep 2017 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2016/01/controller-construction-mov-8-alu-and/">Controller Construction: MOV-8, ALU and SETAB</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2016/01/controller-construction-mov-8-alu-and/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2016/2016-01-01-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 01 Jan 2016 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2015/04/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 2 of 2)</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In part one of this two part post I introduced the design of the control relays for each of the MOV-8, ALU and SETAB instructions. With these in hand I can now move on to …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2015/04/control-design-mov-8-alu-and-setab-part/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2015/2015-04-04-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 04 Apr 2015 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2015/03/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 1 of 2)</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              Over the last five posts I&rsquo;ve been building up the design of a set of cards so that the computer will be able to understand and perform the MOV-8, ALU and SETAB …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2015/03/control-design-mov-8-alu-and-setab-part/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2015/2015-03-31-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 31 Mar 2015 </span>
+        <span class="tag is-link is-light">8 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/09/sequencing-control-design-overview/">Sequencing &amp; Control Design: Overview</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              I&rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#control">
+                  #control
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#sequencing">
+                  #sequencing
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/09/sequencing-control-design-overview/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-09-19-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 19 Sep 2014 </span>
+        <span class="tag is-link is-light">10 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f&quote=control" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f&text=control:https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f&description=control" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f&title=control&source=https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=control&body=https%3a%2f%2frelaycomputer.co.uk%2ftags%2fcontrol%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
