@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ partial "hero" (dict "title" .Title "subtitle" "List of tags appearing in articles") }}
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      {{ range .Pages.ByTitle }}
+      <div class="column is-half is-one-third-desktop">
+        <div class="content">
+          {{ .Render "summary" }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
