@@ -12,7 +12,7 @@
               <br />
               <small>
                 {{ range (. | sort) }}
-                <a href="/tags#{{ . }}">
+                <a href="/tags/{{ . | urlize }}">
                   #{{ . }}
                 </a>
                 {{ end }}
