@@ -1,20 +1,25 @@
 {{ $plink := .RelPermalink }}
-<div class="theme-bg">
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none">
-        <img class="me-2" src="/img/favicon/favicon-96x96.png" width="32">
-        <span class="fs-4">{{ .Site.Title}}</span>
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        {{ .Site.Title}}
       </a>
-      <ul class="nav">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
         {{ range $.Site.Menus.main }}
-        <li class="nav-item">
-          <a href="{{ .URL }}" class="nav-link link-{{ if eq .URL $plink }}warning{{ else }}light{{ end }}">
+          <a href="{{ .URL }}" class="navbar-item {{ if eq .URL $plink }}is-active{{ end }}">
             {{ .Name }}
           </a>
-        </li>
         {{ end }}
-      </ul>
-    </header>
+      </div>
+    </div>
   </div>
-</div>
+</nav>
