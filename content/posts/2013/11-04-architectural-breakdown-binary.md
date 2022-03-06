@@ -5,7 +5,7 @@ date: '2013-11-04T10:35:00.001Z'
 author: Paul Law
 tags:
 - theory
-- Architecture
+- architecture
 modified_time: '2013-11-20T23:03:22.828Z'
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6346513942404318337
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/11/architectural-breakdown-binary.html

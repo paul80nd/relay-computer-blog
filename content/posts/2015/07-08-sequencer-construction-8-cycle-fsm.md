@@ -5,7 +5,7 @@ date: '2015-07-08T09:27:00.000+01:00'
 author: Paul Law
 tags:
 - sequencing
-- pulse distribution
+- pulse-distribution
 - construction
 - video
 modified_time: '2015-07-08T09:27:57.110+01:00'

@@ -5,7 +5,7 @@ slug: pulse-distribution-design-pulses-cd-and
 date: '2015-03-22T13:58:00.003Z'
 author: Paul Law
 tags:
-- pulse distribution
+- pulse-distribution
 - design
 modified_time: '2015-03-22T13:58:46.653Z'
 thumbnail: /img/posts/2015/2015-03-22-4000.png

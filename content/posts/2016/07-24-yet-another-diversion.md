@@ -5,7 +5,7 @@ date: '2016-07-24T22:13:00.001+01:00'
 author: Paul Law
 tags:
 - simulation
-- Architecture
+- architecture
 - coding
 modified_time: '2016-07-24T22:13:07.953+01:00'
 thumbnail: /img/posts/2016/2016-07-24-4000.png

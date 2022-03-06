@@ -4,7 +4,7 @@ title: Instruction Set
 date: '2013-11-07T23:47:00.001Z'
 author: Paul Law
 tags:
-- Architecture
+- architecture
 - coding
 modified_time: '2013-11-07T23:58:50.034Z'
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5809114771518344356

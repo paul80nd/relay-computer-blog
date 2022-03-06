@@ -6,7 +6,7 @@ date: '2013-11-07T07:24:00.000Z'
 author: Paul Law
 tags:
 - theory
-- Architecture
+- architecture
 - ALU
 modified_time: '2014-01-26T10:55:55.601Z'
 thumbnail: /img/posts/2013/2013-11-07-4000.png

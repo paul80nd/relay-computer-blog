@@ -5,7 +5,7 @@ date: '2013-11-06T20:14:00.002Z'
 author: Paul Law
 tags:
 - theory
-- Architecture
+- architecture
 modified_time: '2014-01-26T10:56:22.890Z'
 thumbnail: /img/posts/2013/2013-11-06-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-4186572423607847021

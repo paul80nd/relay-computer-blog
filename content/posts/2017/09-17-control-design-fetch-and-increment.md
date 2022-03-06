@@ -4,7 +4,7 @@ title: 'Control Design: Fetch and Increment'
 date: '2017-09-17T12:57:00.000+01:00'
 author: Paul Law
 tags:
-- pulse distribution
+- pulse-distribution
 - design
 - control
 modified_time: '2017-09-17T12:57:13.497+01:00'
