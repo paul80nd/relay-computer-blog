@@ -24,6 +24,9 @@ paginate = 12
 [markup.goldmark.renderer]
   unsafe = true
 
+[taxonomies]
+    tag = "tags"
+
 [menu]
 [[menu.main]]
   name = 'Home'
