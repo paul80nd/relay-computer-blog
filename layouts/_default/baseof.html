@@ -3,29 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{ $title := printf "%s | %s" .Title .Site.Title -}}
-  {{ $title = strings.TrimLeft " | " $title -}}
-  {{ with $title }}<title>{{ $title }}</title>{{ end }}
+  {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
-  {{ $author := .Params.author | default .Site.Params.author -}}
-  {{ $description := .Description | default .Params.summary | default .Summary | default .Site.Params.description -}}
-  {{ $keywords := (delimit .Keywords ",") | default .Site.Params.keywords -}}
-  <meta property="og:title" content="{{ .Title }}" />
-  {{ with $author }}
-  <meta name="author" content="{{ . }}" />{{ end }}
-  <meta property="og:locale" content="{{ .Language.Lang }}" />
-  {{ with $description -}}
-  <meta name="description" content="{{ . }}" />
-  <meta property="og:description" content="{{ . }}" />
-  {{ end -}}
-  <link rel="canonical" href="{{ .Params.canonical | default .Permalink }}" />
-  <meta property="og:url" content="{{ .Params.canonical | default .Permalink }}" />
-  <meta property="og:site_name" content="{{ .Site.Title }}" />
-  {{ with $keywords }}
-  <meta name="keywords" content="{{ . }}">{{ end }}
+  {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+  {{ if $production }}
+    <meta name="robots" content="index, follow">
+  {{ else }}
+    <meta name="robots" content="noindex, nofollow">
+  {{ end }}
 
   {{ "<!-- Begin CSS Styles -->" | safeHTML }}
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
@@ -57,6 +47,10 @@
   {{ printf `
   <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
+
+  {{- template "_internal/opengraph.html" . -}}
+  {{- template "_internal/schema.html" . -}}
+  {{- template "_internal/twitter_cards.html" . -}}
 
   {{ "<!-- Begin EU Cookie Consent -->" | safeHTML }}
   {{ partial "plugins/cookie-consent.html" -}}
