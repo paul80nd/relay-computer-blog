@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-gb">
 
 <head>
   <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Architectural breakdown: Buses and Registers | Relay Computer</title>
+  
+  <title>Architectural breakdown: Buses and Registers | Relay Computer</title>
+  <meta name="description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and registers. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer):
+ System Architecture for a Relay Computer[^1]  Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits.">
 
-<meta property="og:title" content="Architectural breakdown: Buses and Registers" />
-<meta name="author" content="Paul Law" />
-<meta property="og:locale" content="en" />
-<meta name="description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and registers. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer):
- System Architecture for a Relay Computer[^1]  Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits." />
+  
+  
+    <meta name="robots" content="index, follow">
+  
+
+  <!-- Begin CSS Styles -->
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- End CSS Styles -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Architectural breakdown: Buses and Registers" />
 <meta property="og:description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and registers. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer):
  System Architecture for a Relay Computer[^1]  Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits." />
-<link rel="canonical" href="https://relaycomputer.co.uk/2013/11/architectural-breakdown-buses-and/" />
-<meta property="og:url" content="https://relaycomputer.co.uk/2013/11/architectural-breakdown-buses-and/" />
-<meta property="og:site_name" content="Relay Computer" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2013/11/architectural-breakdown-buses-and/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-11-05T19:07:00+00:00" />
+<meta property="article:modified_time" content="2013-11-05T19:07:00+00:00" />
 
-
-<!-- Begin CSS Styles -->
-<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/main.css">
-
-<!-- End CSS Styles -->
-
-<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-<link rel="manifest" href="/img/favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
+<meta itemprop="name" content="Architectural breakdown: Buses and Registers">
+<meta itemprop="description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and registers. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer):
+ System Architecture for a Relay Computer[^1]  Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits."><meta itemprop="datePublished" content="2013-11-05T19:07:00+00:00" />
+<meta itemprop="dateModified" content="2013-11-05T19:07:00+00:00" />
+<meta itemprop="wordCount" content="788">
+<meta itemprop="keywords" content="theory,Architecture," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Architectural breakdown: Buses and Registers"/>
+<meta name="twitter:description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and registers. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer):
+ System Architecture for a Relay Computer[^1]  Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits."/>
 <!-- Begin EU Cookie Consent -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
 window.cookieconsent.initialise({
@@ -64,8 +77,8 @@ window.cookieconsent.initialise({
 </script>
 <!-- End EU Cookie Consent -->
 
-<!-- Begin Google Analytics -->
-
+  <!-- Begin Google Analytics -->
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -78,7 +91,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<!-- End Google Analytics -->
+  <!-- End Google Analytics -->
 
 </head>
 

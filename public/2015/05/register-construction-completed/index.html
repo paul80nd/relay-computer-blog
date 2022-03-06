@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-gb">
 
 <head>
   <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Register Construction: Completed Instruction Register Full Test | Relay Computer</title>
+  
+  <title>Register Construction: Completed Instruction Register Full Test | Relay Computer</title>
+  <meta name="description" content="Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
+  As usual I&rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality.">
 
-<meta property="og:title" content="Register Construction: Completed Instruction Register Full Test" />
-<meta name="author" content="Paul Law" />
-<meta property="og:locale" content="en" />
-<meta name="description" content="Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
-  As usual I&rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality." />
+  
+  
+    <meta name="robots" content="index, follow">
+  
+
+  <!-- Begin CSS Styles -->
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- End CSS Styles -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Register Construction: Completed Instruction Register Full Test" />
 <meta property="og:description" content="Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
   As usual I&rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality." />
-<link rel="canonical" href="https://relaycomputer.co.uk/2015/05/register-construction-completed/" />
-<meta property="og:url" content="https://relaycomputer.co.uk/2015/05/register-construction-completed/" />
-<meta property="og:site_name" content="Relay Computer" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/2015/05/register-construction-completed/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-05-16T10:19:00+01:00" />
+<meta property="article:modified_time" content="2015-05-16T10:19:00+01:00" />
 
-
-<!-- Begin CSS Styles -->
-<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/main.css">
-
-<!-- End CSS Styles -->
-
-<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-<link rel="manifest" href="/img/favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
+<meta itemprop="name" content="Register Construction: Completed Instruction Register Full Test">
+<meta itemprop="description" content="Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
+  As usual I&rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality."><meta itemprop="datePublished" content="2015-05-16T10:19:00+01:00" />
+<meta itemprop="dateModified" content="2015-05-16T10:19:00+01:00" />
+<meta itemprop="wordCount" content="161">
+<meta itemprop="keywords" content="completion,registers,video," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Register Construction: Completed Instruction Register Full Test"/>
+<meta name="twitter:description" content="Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
+  As usual I&rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality."/>
 <!-- Begin EU Cookie Consent -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
 window.cookieconsent.initialise({
@@ -64,8 +77,8 @@ window.cookieconsent.initialise({
 </script>
 <!-- End EU Cookie Consent -->
 
-<!-- Begin Google Analytics -->
-
+  <!-- Begin Google Analytics -->
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -78,7 +91,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<!-- End Google Analytics -->
+  <!-- End Google Analytics -->
 
 </head>
 
