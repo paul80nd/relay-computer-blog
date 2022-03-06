@@ -57,10 +57,10 @@
 </head>
 
 <body>
-  {{ partial "widgets/header.html" . }}
-  {{ partial "widgets/hero.html" . }}
+  {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+  {{ partial "site-hero.html" . }}
   {{ block "main" . }}{{ end }}
-  {{ partial "widgets/footer.html" . }}
+  {{ partial "site-footer.html" . }}
 </body>
 
 </html>
