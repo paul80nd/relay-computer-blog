@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>A blog about a computer made from relays | Relay Computer</title>
+
+<meta property="og:title" content="A blog about a computer made from relays" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<link rel="canonical" href="https://relaycomputer.co.uk/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="alternate" type="application/rss+xml" href="https://relaycomputer.co.uk/index.xml" title="Relay Computer" />
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item is-active">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="hero is-bold is-primary is-medium" 
+  style="background: url('/img/header-bg.jpg') no-repeat center center; background-size: cover;" >
+  <div class="hero-body pt-6"
+    style="background-image: linear-gradient(to left, rgba(25,52,0,0), rgba(25,52,0,1),rgba(25,52,0,1));">
+    <div class="container pr-6">
+      <h1 class="title is-italic">A blog about a computer made from relays</h1>
+      <h2 class="subtitle">My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.</h2>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<section class="section">
+  <div class="container">
+    
+
+    <div class="columns is-multiline pull-up">
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-binary/">Architectural breakdown: Binary</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              &hellip; and it all begins with binary. Binary is a &lsquo;base 2&rsquo; numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+                <a href="/tags#theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-binary/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 04 Nov 2013 </span>
+        <span class="tag is-link is-light">6 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architecture-isnt-just-for-houses/">Architecture isn&#39;t just for houses</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              So, with the scene now set (see previous posts) let&rsquo;s dive right in and take a look at the system architecture I&rsquo;ll be building my computer upon &hellip; here it …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#Architecture">
+                  #Architecture
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architecture-isnt-just-for-houses/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-04-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 04 Nov 2013 </span>
+        <span class="tag is-link is-light">2 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/the-three-rs/">The three Rs</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              It strikes me that when embarking on a project like this there&rsquo;s three things that are of uttermost importance, the three Rs if you will:
+Research, research and …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#musings">
+                  #musings
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/the-three-rs/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 03 Nov 2013 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/why/">Why?</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              Whenever I tell people I&rsquo;m building a relay computer the overwhelming response is &hellip; why on Earth would you want to do that?! Or alternatively, as a work colleague …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#musings">
+                  #musings
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/why/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 02 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/10/it-begins/">It begins</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              &hellip; although being as I&rsquo;m already a couple of months in on my little project then perhaps that should be &lsquo;it began&rsquo;.
+If I do see this project all the …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#musings">
+                  #musings
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/10/it-begins/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 31 Oct 2013 </span>
+        <span class="tag is-link is-light">1 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+
+      
+
+    </div>
+    <div class="card">
+      <div class="card-content py-3">
+        
+
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+  
+  
+  <a href="/page/10/" class="pagination-previous is-info">Previous</a>
+  
+
+  
+  
+  <p class="pagination-next" disabled>Next</p>
+  
+
+  <ul class="pagination-list">
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/" class="pagination-link">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/page/8/" class="pagination-link">8</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/page/9/" class="pagination-link">9</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/page/10/" class="pagination-link">10</a></li>
+    
+    
+    
+    
+    <li><a class="pagination-link is-current">11</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f&quote=A%20blog%20about%20a%20computer%20made%20from%20relays" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f&text=A%20blog%20about%20a%20computer%20made%20from%20relays:https%3a%2f%2frelaycomputer.co.uk%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f&description=A%20blog%20about%20a%20computer%20made%20from%20relays" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f&title=A%20blog%20about%20a%20computer%20made%20from%20relays&source=https%3a%2f%2frelaycomputer.co.uk%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=A%20blog%20about%20a%20computer%20made%20from%20relays&body=https%3a%2f%2frelaycomputer.co.uk%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

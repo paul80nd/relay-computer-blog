@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>A blog about a computer made from relays | Relay Computer</title>
+
+<meta property="og:title" content="A blog about a computer made from relays" />
+<meta name="author" content="Paul Law" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<link rel="canonical" href="https://relaycomputer.co.uk/" />
+<meta property="og:url" content="https://relaycomputer.co.uk/" />
+<meta property="og:site_name" content="Relay Computer" />
+
+
+<!-- Begin CSS Styles -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- End CSS Styles -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="alternate" type="application/rss+xml" href="https://relaycomputer.co.uk/index.xml" title="Relay Computer" />
+<!-- Begin EU Cookie Consent -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<!-- End EU Cookie Consent -->
+
+<!-- Begin Google Analytics -->
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item is-active">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="hero is-bold is-primary is-medium" 
+  style="background: url('/img/header-bg.jpg') no-repeat center center; background-size: cover;" >
+  <div class="hero-body pt-6"
+    style="background-image: linear-gradient(to left, rgba(25,52,0,0), rgba(25,52,0,1),rgba(25,52,0,1));">
+    <div class="container pr-6">
+      <h1 class="title is-italic">A blog about a computer made from relays</h1>
+      <h2 class="subtitle">My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.</h2>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<section class="section">
+  <div class="container">
+    
+
+    <div class="columns is-multiline pull-up">
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/07/user-interface-display-b-initial-design/">User Interface: Display B Initial Design and Construction</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In my last post I put together the beginnings of the first display card &hellip; named in a brilliant flash of nomenclature as display card A. This time I&rsquo;m turning my …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/07/user-interface-display-b-initial-design/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-07-20-4000.JPG" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 20 Jul 2014 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/07/user-interface-display-initial-design/">User Interface: Display A Initial Design and Construction</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              Following on from working on the main data switches in my last post this time I&rsquo;ve taken the first steps in designing and constructing the first of two display cards …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/07/user-interface-display-initial-design/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-07-12-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 12 Jul 2014 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/07/user-interface-data-switches/">User Interface: Data Switches</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#UI">
+                  #UI
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/07/user-interface-data-switches/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-07-05-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 05 Jul 2014 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/06/register-construction-completed-and-d-8/">Register Construction: Completed A and D 8-bit Registers Full Test</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              The A/D Register card is now complete and looks like this:
+  As usual I&rsquo;ve put a video together that demonstrates this card in operation. This time I don&rsquo;t show …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#completion">
+                  #completion
+                </a>
+                
+                <a href="/tags#registers">
+                  #registers
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/06/register-construction-completed-and-d-8/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-06-28-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 28 Jun 2014 </span>
+        <span class="tag is-link is-light">2 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/06/register-construction-and-d-8-bit/">Register Construction: A and D 8-bit Registers</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              I haven&rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&rsquo;ve been plodding away at the A/D register card and it&rsquo;s now …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#registers">
+                  #registers
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/06/register-construction-and-d-8-bit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-06-22-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 22 Jun 2014 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/05/register-construction-completed-b-and-c/">Register Construction: Completed B and C 8-bit Registers Full Test</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              The B/C Register card is now complete and looks like this:
+  As usual I&rsquo;ve put a video together which demonstrates this card in operation &hellip; firstly on its own but …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#completion">
+                  #completion
+                </a>
+                
+                <a href="/tags#registers">
+                  #registers
+                </a>
+                
+                <a href="/tags#video">
+                  #video
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/05/register-construction-completed-b-and-c/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-05-26-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 26 May 2014 </span>
+        <span class="tag is-link is-light">2 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/05/register-construction-b-and-c-8-bit/">Register Construction: B and C 8-bit Registers</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              As mentioned in my last post I decided this time around not to post after each stage of card construction (being as the construction steps are now pretty similar to those for …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#construction">
+                  #construction
+                </a>
+                
+                <a href="/tags#registers">
+                  #registers
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/05/register-construction-b-and-c-8-bit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-05-24-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 24 May 2014 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/05/register-design-b-and-c-8-bit-registers/">Register Design: B and C 8-bit Registers</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In a recent post I put up the design for the A and D 8-bit register card &hellip; the B and C register card is very similar in design but has the additional complexity that it …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#registers">
+                  #registers
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/05/register-design-b-and-c-8-bit-registers/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-05-11-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 11 May 2014 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/05/enclosure-update-magic-pen/">Enclosure Update: Magic Pen</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              Just need to quickly share my experience with what I&rsquo;m dubbing the &lsquo;magic pen&rsquo; before I put up the B/C register schematics (yup, they&rsquo;re finally …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#enclosure">
+                  #enclosure
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/05/enclosure-update-magic-pen/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-05-10-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 10 May 2014 </span>
+        <span class="tag is-link is-light">1 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/05/enclosure-update-fitting-of-laser-cut/">Enclosure Update: Fitting of Laser Cut Parts</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              I was going to spread the fitting of the laser cut parts to the lower enclosure over a couple of evenings but in a fit of geeky excitement I ended up doing it all in one …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#enclosure">
+                  #enclosure
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/05/enclosure-update-fitting-of-laser-cut/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-05-05-4000.JPG" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 05 May 2014 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/05/enclosure-update-laser-cut-parts-arrived/">Enclosure Update: Laser Cut Parts Arrived</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              I&rsquo;ve been looking forward to this moment for nearly a month &hellip; the laser cut parts I ordered to move my enclosure construction forward have finally arrived.
+  The …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#enclosure">
+                  #enclosure
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/05/enclosure-update-laser-cut-parts-arrived/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-05-03-4000.jpg" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 03 May 2014 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2014/04/register-design-dual-output-8-bit/">Register Design: Dual Output 8-bit Register</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the …
+              
+              <br />
+              <small>
+                
+                <a href="/tags#design">
+                  #design
+                </a>
+                
+                <a href="/tags#registers">
+                  #registers
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2014/04/register-design-dual-output-8-bit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2014/2014-04-24-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 24 Apr 2014 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      
+
+      
+
+    </div>
+    <div class="card">
+      <div class="card-content py-3">
+        
+
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+  
+  
+  <a href="/page/5/" class="pagination-previous is-info">Previous</a>
+  
+
+  
+  
+  <a href="/page/7/" class="pagination-next is-info">Next</a>
+  
+
+  <ul class="pagination-list">
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/" class="pagination-link">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/page/5/" class="pagination-link">5</a></li>
+    
+    
+    
+    
+    <li><a class="pagination-link is-current">6</a></li>
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/page/7/" class="pagination-link">7</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/page/11/" class="pagination-link">11</a></li>
+    
+    
+    
+  </ul>
+</nav>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2f&quote=A%20blog%20about%20a%20computer%20made%20from%20relays" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2f&text=A%20blog%20about%20a%20computer%20made%20from%20relays:https%3a%2f%2frelaycomputer.co.uk%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2f&description=A%20blog%20about%20a%20computer%20made%20from%20relays" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2f&title=A%20blog%20about%20a%20computer%20made%20from%20relays&source=https%3a%2f%2frelaycomputer.co.uk%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=A%20blog%20about%20a%20computer%20made%20from%20relays&body=https%3a%2f%2frelaycomputer.co.uk%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
