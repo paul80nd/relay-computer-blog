@@ -46,14 +46,14 @@
     <div class="columns is-multiline {{ if ne $paginator.PageNumber 1}}pull-up{{ end }}">
       {{ range $index, $element := $paginator.Pages }}
       {{ if or (ne $paginator.PageNumber 1) (ne $index 0) }}
-      <div class="column is-half is-one-third-widescreen">
+      <div class="column is-half">
         {{ partial "home-postcard" . }}
       </div>
       {{ end }}
       {{ end }}
 
       {{ if eq $paginator.PageNumber 1 }}
-      <div class="column is-half is-one-third-widescreen">
+      <div class="column is-half">
         {{ partial "home-find-me" . }}
       </div>
       {{ end }}

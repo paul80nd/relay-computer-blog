@@ -11,9 +11,28 @@ $tabs-link-active-border-bottom-color: $primary;
 
 @import "bulma-ribbon.sass";
 
+.hpc-image {
+  width: 10rem !important;
+}
+
 @include tablet {
   .pull-up {
     margin-top: -10rem !important;
+  }
+  .hpc-image {
+    width: 8rem !important;
+  }
+}
+
+@include desktop {
+  .hpc-image {
+    width: 10rem !important;
+  }
+}
+
+@include widescreen {
+  .hpc-image {
+    width: 12rem !important;
   }
 }
 
