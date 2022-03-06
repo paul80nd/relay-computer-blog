@@ -1,64 +1,50 @@
-<!DOCTYPE html>
-<html lang="{{ .Language.Lang }}">
+{{ define "main" }}
 
-<head>
-  {{ partial "widgets/head.html" . }}
-</head>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
 
-<body>
-  {{ partial "widgets/header.html" . }}
+          <h3>Tags in Blog</h3>
 
-  {{ partial "widgets/hero.html" . }}
+          <div class="field is-grouped is-grouped-multiline">
 
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-three-quarters-widescreen">
-          <div class="content">
-
-            <h3>Tags in Blog</h3>
-
-            <div class="field is-grouped is-grouped-multiline">
-
-              <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
-
-              {{ range sort .Site.Taxonomies.tags }}
-              <div class="control">
-                <a href="#{{ .Page.Title }}" class="tags has-addons">
-                  <span class="tag is-primary">{{ .Page.Title }}</span>
-                  <span class="tag is-success">{{ .Count }}</span>
-                </a>
-              </div>
-              {{ end }}
-
-            </div>
-
-            <!--cycles through tag list and creates subheader for each tag name...-->
+            <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
 
             {{ range sort .Site.Taxonomies.tags }}
-            <h3 id="{{ .Page.Title }}">{{ .Page.Title }}</h3>
-
-            <!--  lists all posts corresponding to specific tag...-->
-            <table class="table">
-              {{ range (sort .Pages "Date" "desc") }}
-              <tr>
-                <td style="width: 8em"><a href="{{ .RelPermalink}}"><span>{{ .Date.Format "02 Jan 2006" }}</span></a>
-                </td>
-                <td><a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a></td>
-              </tr>
-              {{ end }}
-            </table>
-
+            <div class="control">
+              <a href="#{{ .Page.Title }}" class="tags has-addons">
+                <span class="tag is-primary">{{ .Page.Title }}</span>
+                <span class="tag is-success">{{ .Count }}</span>
+              </a>
+            </div>
             {{ end }}
 
           </div>
+
+          <!--cycles through tag list and creates subheader for each tag name...-->
+
+          {{ range sort .Site.Taxonomies.tags }}
+          <h3 id="{{ .Page.Title }}">{{ .Page.Title }}</h3>
+
+          <!--  lists all posts corresponding to specific tag...-->
+          <table class="table">
+            {{ range (sort .Pages "Date" "desc") }}
+            <tr>
+              <td style="width: 8em"><a href="{{ .RelPermalink}}"><span>{{ .Date.Format "02 Jan 2006" }}</span></a>
+              </td>
+              <td><a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a></td>
+            </tr>
+            {{ end }}
+          </table>
+
+          {{ end }}
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  {{ partial "widgets/footer.html" . }}
-
-</body>
-
-</html>
+{{ end }}
