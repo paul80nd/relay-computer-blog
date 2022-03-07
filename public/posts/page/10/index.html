@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Relay Computer</title>
+  <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Relay Computer" />
+  <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Relay Computer" />
+  
+  <meta property="og:title" content="Posts" />
+<meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/" />
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Blog Posts</h1>
+      <h2 class="subtitle">List of all articles (page 10 of 11)</h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/design-function-decoder/">ALU Design: Function Decoder</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card. The Decoder …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/alu">
+                  #ALU
+                </a>
+                
+                <a href="/tags/design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/design-function-decoder/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-20-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 20 Nov 2013 </span>
+        <span class="tag is-link is-light">2 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/design-8-bit-arithmetic-unit/">ALU Design: 8-bit Arithmetic Unit</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/alu">
+                  #ALU
+                </a>
+                
+                <a href="/tags/design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/design-8-bit-arithmetic-unit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-17-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 17 Nov 2013 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/design-1-bit-arithmetic-unit/">ALU Design: 1-bit Arithmetic Unit</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&rsquo;s a schematic of the 1-bit Arithmetic …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/alu">
+                  #ALU
+                </a>
+                
+                <a href="/tags/design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/design-1-bit-arithmetic-unit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-15-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 15 Nov 2013 </span>
+        <span class="tag is-link is-light">3 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/design-8-bit-logic-unit/">ALU Design: 8-bit Logic Unit</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/alu">
+                  #ALU
+                </a>
+                
+                <a href="/tags/design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/design-8-bit-logic-unit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-13-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 13 Nov 2013 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/design-1-bit-logic-unit/">ALU Design: 1-bit Logic Unit</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here&rsquo;s a schematic of the …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/alu">
+                  #ALU
+                </a>
+                
+                <a href="/tags/design">
+                  #design
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/design-1-bit-logic-unit/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-11-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 11 Nov 2013 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/relay-rumination/">Relay Rumination</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              If there&rsquo;s one thing a relay computer needs a lot of it&rsquo;s &hellip; erm &hellip; relays (of course) &hellip; which happens to be a bit unfortunate as relays, …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/design">
+                  #design
+                </a>
+                
+                <a href="/tags/musings">
+                  #musings
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/relay-rumination/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-10-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 10 Nov 2013 </span>
+        <span class="tag is-link is-light">6 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/instruction-set/">Instruction Set</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In the last post I promised to reveal the planned instruction set for the computer and here it is (pdf file).
+This should be viewed alongside the architecture diagram which …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/architecture">
+                  #architecture
+                </a>
+                
+                <a href="/tags/coding">
+                  #coding
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/instruction-set/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">1 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-programming-and_7/">Architectural breakdown: Programming and Control 2</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              So, the last post didn&rsquo;t quite wrap up this &lsquo;mini-series&rsquo; but hopefully this one will. Continuing on with how the Programming and Control of the computer …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/architecture">
+                  #architecture
+                </a>
+                
+                <a href="/tags/theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-programming-and_7/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-programming-and/">Architectural breakdown: Programming and Control</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll wrap up this &lsquo;mini-series&rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/architecture">
+                  #architecture
+                </a>
+                
+                <a href="/tags/theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-programming-and/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">8 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-alu/">Architectural breakdown: the ALU</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/alu">
+                  #ALU
+                </a>
+                
+                <a href="/tags/architecture">
+                  #architecture
+                </a>
+                
+                <a href="/tags/theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-alu/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-07-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 07 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-memory/">Architectural breakdown: Memory</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the memory. …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/architecture">
+                  #architecture
+                </a>
+                
+                <a href="/tags/theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-memory/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-06-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 06 Nov 2013 </span>
+        <span class="tag is-link is-light">5 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="column is-half">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-content has-background-white">
+    <div class="content">
+      <p class="title is-4 mb-3"><a href="/2013/11/architectural-breakdown-buses-and/">Architectural breakdown: Buses and Registers</a></p>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and …
+              
+              <br />
+              <small>
+                
+                <a href="/tags/architecture">
+                  #architecture
+                </a>
+                
+                <a href="/tags/theory">
+                  #theory
+                </a>
+                
+              </small>
+              
+            </p>
+            <p>
+              <a href="/2013/11/architectural-breakdown-buses-and/" class="button is-small">Read More</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="media-right">
+          <figure class="image m-0">
+            <img src="/img/posts/2013/2013-11-05-4000.png" class="hpc-image">
+          </figure>
+        </div>
+        
+      </div>
+      <div class="tags">
+        <span class="tag is-link is-light">Published 05 Nov 2013 </span>
+        <span class="tag is-link is-light">4 min read</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+    </div>
+    <div class="card">
+      <div class="card-content py-3">
+        
+
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+  
+  
+  <a href="/posts/page/9/" class="pagination-previous is-info">Previous</a>
+  
+
+  
+  
+  <a href="/posts/page/11/" class="pagination-next is-info">Next</a>
+  
+
+  <ul class="pagination-list">
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/" class="pagination-link">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/page/8/" class="pagination-link">8</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/page/9/" class="pagination-link">9</a></li>
+    
+    
+    
+    
+    <li><a class="pagination-link is-current">10</a></li>
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/page/11/" class="pagination-link">11</a></li>
+    
+    
+    
+  </ul>
+</nav>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&quote=Posts" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&text=Posts:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&description=Posts" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&title=Posts&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Posts&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
