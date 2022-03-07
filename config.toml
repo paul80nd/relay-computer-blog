@@ -44,11 +44,11 @@ paginate = 12
   weight = 3
 
 [[menu.main]]
-  name = 'Archive'
-  url = '/archive/'
+  name = 'Posts'
+  url = '/posts/'
   weight = 4
 
 [[menu.main]]
   name = 'Tags'
   url = '/tags/'
-  weight = 3
+  weight = 5
