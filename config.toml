@@ -14,7 +14,7 @@ enableRobotsTXT = true
 paginate = 12
 
 [permalinks]
-  posts = '/:year/:month/:slug'
+  posts = '/posts/:year/:month/:slug'
 
 [params]
   author = 'Paul Law'
