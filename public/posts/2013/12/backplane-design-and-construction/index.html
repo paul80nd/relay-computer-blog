@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Backplane Design and Construction | Relay Computer</title>
+  <meta name="description" content="Originally when I was thinking about how I&rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and physically flexible which would
+allow me to work out how I&rsquo;d physically arrange the cards later on. However, the more I thought about it the more I liked the idea of using a backplane that the cards would slot in to — a bit like those 19 inch server racks that take CPU cards.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Backplane Design and Construction" />
+<meta property="og:description" content="Originally when I was thinking about how I&rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and physically flexible which would
+allow me to work out how I&rsquo;d physically arrange the cards later on. However, the more I thought about it the more I liked the idea of using a backplane that the cards would slot in to — a bit like those 19 inch server racks that take CPU cards." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2013/12/backplane-design-and-construction/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-12-03T19:27:00+00:00" />
+<meta property="article:modified_time" content="2013-12-03T19:27:00+00:00" />
+
+<meta itemprop="name" content="Backplane Design and Construction">
+<meta itemprop="description" content="Originally when I was thinking about how I&rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and physically flexible which would
+allow me to work out how I&rsquo;d physically arrange the cards later on. However, the more I thought about it the more I liked the idea of using a backplane that the cards would slot in to — a bit like those 19 inch server racks that take CPU cards."><meta itemprop="datePublished" content="2013-12-03T19:27:00+00:00" />
+<meta itemprop="dateModified" content="2013-12-03T19:27:00+00:00" />
+<meta itemprop="wordCount" content="820">
+<meta itemprop="keywords" content="design,construction," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Backplane Design and Construction"/>
+<meta name="twitter:description" content="Originally when I was thinking about how I&rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and physically flexible which would
+allow me to work out how I&rsquo;d physically arrange the cards later on. However, the more I thought about it the more I liked the idea of using a backplane that the cards would slot in to — a bit like those 19 inch server racks that take CPU cards."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Backplane Design and Construction</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Originally when I was thinking about how I&rsquo;d
+connect up the various cards of this computer I had ribbon cables in mind.
+Ribbon cables are straightforward to use and physically flexible which would<br>
+allow me to work out how I&rsquo;d physically arrange the cards later on. However,
+the more I thought about it the more I liked the idea of using a backplane
+that the cards would slot in to — a bit like those 19 inch server racks that
+take CPU cards. This would also give the cards some physical support so I
+could test several cards together with the whole thing freestanding.</p>
+<p>Design-wise there&rsquo;s not much to it (also available <a href="/pdf/backplane-z.pdf">here in PDF format</a>):</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-03-0000.png" alt="Backplane (Type-Z)">
+  
+  <figcaption markdown="span">Backplane (Type-Z) (<a href="/img/posts/2013/2013-12-03-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>The connectors at
+the top and bottom of the card are right-angled boxed headers and are the same
+as used on the three ALU cards (Logic, Arithmetic and Control). The connectors
+running up the middle of the board are header pin sockets that match the size
+and position of the boxes headers on each of the cards. These carry the same
+signals through the board as a bus so that any card plugged in to the
+backplane receives the expected signals. The idea is then that multiple
+backplanes can be connected together by ribbon cables using the boxed headers.
+This then means that when I finally put everything together in a case I can
+either have two backplanes side by side or stack them vertically.</p>
+<p>Something you might have noticed on this diagram and on other cards is the
+label &lsquo;Type:Z&rsquo;. This refers to the type of Control bus (which is the third
+connector from the left) which is the 20 pin connector that carries the
+various control signals that pass between the cards. So far all the control
+signals required by the ALU cards fit within the 20 pin connector. What hasn&rsquo;t
+been covered in this blog yet are the general purpose registers A, B, C and D
+which use most of the remaining pins on this connector. The other cards that
+make up the computer will need other control signals but won&rsquo;t necessarily
+need to talk directly to the &lsquo;Type:Z&rsquo; cards and so will have their own
+&lsquo;Type:Y&rsquo; or &lsquo;Type:X&rsquo; connectors. The new control lines, additional to the ones
+already introduced on the ALU cards, are:</p>
+<ul>
+<li>RLA &hellip; Register Load A</li>
+<li>RLB &hellip; Register Load B</li>
+<li>RLC &hellip; Register Load C</li>
+<li>RLD &hellip; Register Load D</li>
+<li>RSA &hellip; Register Select A</li>
+<li>RSB &hellip; Register Select B</li>
+<li>RSC &hellip; Register Select C</li>
+<li>RSD &hellip; Register Select D</li>
+</ul>
+<p>It turns out that that
+everything therefore works out quite nicely as the five cards (ALU Logic, ALU
+Arithmetic, ALU Control, Register AD, Register BC) all use the same connectors
+but also fit nicely if slotted into the backplane side by side with plenty of
+head room on each card for the relays. This seems to be yet another one of
+those happy coincidences that I keep coming across with these pad board cards
+where everything comes together and just fits.</p>
+<p>The initial
+construction of the backplane is fairly trivial &hellip; just a case of soldering
+down all the connectors &hellip; and it looks like this:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-03-0001.JPG" alt="Backplane (Type-Z) Connectors">
+  
+</figure>
+
+<p>The
+wiring between the connectors will be done on the solder side of the board to
+keep this side free of anything that could obstruct the other cards. I&rsquo;ll add
+the wiring later &hellip; probably after constructing the three ALU cards when I
+need to test them all working together. Just for a quick reminder, the three
+ALU cards in their current state of construction look like this:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-03-0002.JPG" alt="ALU Cards (Arithmetic, Control and Logic)">
+  
+</figure>
+
+<p>So, when plugging the ALU Cards into the backplane (along with the
+two register cards which currently only have the right-angled boxed headers on
+them for now) this is the result:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-03-0003.JPG" alt="Backplane with Cards">
+  
+</figure>
+
+<figure>
+  <img src="/img/posts/2013/2013-12-03-0004.jpg" alt="Backplane with Cards">
+  
+</figure>
+
+<p>Note that because
+the connectors are identical all the way up the backplane the cards can go in
+any order desired. I think it&rsquo;s fair to say that whoever came up with the
+boxed header connectors probably didn&rsquo;t envisage them getting used in quite
+this way but it does the job and it&rsquo;s certainly a &lsquo;positive connection&rsquo; &hellip; in
+fact it&rsquo;s such a positive connection that once the cards are in they take a
+fair amount of force to remove again. The key thing when removing the cards is
+to apply even pressure to avoid breaking the card or connectors (or both). I&rsquo;m
+thinking that when I eventually put all this in a case I could put some
+plastic tabs at the two front corners of the card that can be lifted and
+levered against the case to pull the card out steadily and straight. In the
+meanwhile &hellip; I&rsquo;ll try to organise my construction so that I&rsquo;ll only plug them
+in to the backplane when each card is complete.</p>
+<p>Right, with that
+small diversion out of the way I can get back to constructing the ALU cards.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2013" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Dec 03, 2013</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2013/12/alu-construction-connectors-and-leds/">ALU Construction: Connectors and LEDs</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2013/12/alu-construction-led-header-pins/">ALU Construction: LED Header Pins</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f&quote=Backplane%20Design%20and%20Construction" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f&text=Backplane%20Design%20and%20Construction:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f&description=Backplane%20Design%20and%20Construction" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f&title=Backplane%20Design%20and%20Construction&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Backplane%20Design%20and%20Construction&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2fbackplane-design-and-construction%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Miscellany Special: Backplane X, Cable Routing and Address Bus | Relay Computer</title>
+  <meta name="description" content="Continuing on with the theme from my last post &hellip; here is another &lsquo;miscellany special&rsquo; covering all the little &lsquo;side jobs&rsquo; I&rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There&rsquo;s three things worth covering (plus an additional minor mention) &hellip; let&rsquo;s start with backplanes.
+The computer is designed with four backplanes (W, X, Y and Z) each taking five cards.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Miscellany Special: Backplane X, Cable Routing and Address Bus" />
+<meta property="og:description" content="Continuing on with the theme from my last post &hellip; here is another &lsquo;miscellany special&rsquo; covering all the little &lsquo;side jobs&rsquo; I&rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There&rsquo;s three things worth covering (plus an additional minor mention) &hellip; let&rsquo;s start with backplanes.
+The computer is designed with four backplanes (W, X, Y and Z) each taking five cards." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2017/11/miscellany-special-backplane-x-cable/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-11-05T10:47:00+00:00" />
+<meta property="article:modified_time" content="2017-11-05T10:47:00+00:00" />
+
+<meta itemprop="name" content="Miscellany Special: Backplane X, Cable Routing and Address Bus">
+<meta itemprop="description" content="Continuing on with the theme from my last post &hellip; here is another &lsquo;miscellany special&rsquo; covering all the little &lsquo;side jobs&rsquo; I&rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There&rsquo;s three things worth covering (plus an additional minor mention) &hellip; let&rsquo;s start with backplanes.
+The computer is designed with four backplanes (W, X, Y and Z) each taking five cards."><meta itemprop="datePublished" content="2017-11-05T10:47:00+00:00" />
+<meta itemprop="dateModified" content="2017-11-05T10:47:00+00:00" />
+<meta itemprop="wordCount" content="1623">
+<meta itemprop="keywords" content="construction,enclosure," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Miscellany Special: Backplane X, Cable Routing and Address Bus"/>
+<meta name="twitter:description" content="Continuing on with the theme from my last post &hellip; here is another &lsquo;miscellany special&rsquo; covering all the little &lsquo;side jobs&rsquo; I&rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There&rsquo;s three things worth covering (plus an additional minor mention) &hellip; let&rsquo;s start with backplanes.
+The computer is designed with four backplanes (W, X, Y and Z) each taking five cards."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Miscellany Special: Backplane X, Cable Routing and Address Bus</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Continuing on with the theme from my last post &hellip; here is another
+&lsquo;miscellany special&rsquo; covering all the little &lsquo;side jobs&rsquo; I&rsquo;ve been doing on my
+relay computer alongside the primary work of constructing the Program Counter,
+Memory and Incrementer cards. There&rsquo;s three things worth covering (plus an
+additional minor mention) &hellip; let&rsquo;s start with backplanes.</p>
+<p>The
+computer is designed with four backplanes (W, X, Y and Z) each taking five
+cards. Each card of the computer is designed to fit in a specific backplane as
+each backplane offers a unique selection of busses and connections. Generally
+you can put a card designated for a given backplane in to any of the five
+backplane slots (position mainly being an aesthetic thing) however the W
+backplane is the notable exception having slots W1 - W2 - W1 - W2 - W1 taking
+two double cards (with W1 and W2 connectors) and one single card (W1
+connectors).</p>
+<p>Anyhoo, the computer might well be designed to have
+four backplanes but currently it&rsquo;s only got two constructed (W and Z). The
+instruction register card is type X but as it&rsquo;s on its own at the moment the
+busses are plugged directly in to the card. This soon becomes unworkable
+however when the Program Counter and Incremeter are built as they are also
+type X cards &hellip; plus the Incrementer is built over two cards so we&rsquo;re looking
+at an additional three type X cards. Time to build another backplane:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0000.jpg" alt="X Backplane (front)">
+<img src="/img/posts/2017/2017-11-05-0001.jpg" alt="X Backplane (back)">
+  
+</figure>
+
+<p>There&rsquo;s nothing
+particularly unusual about this backplane compared to the two already
+constructed although those of you out there with a good eye for detail (for
+whom my work must eternally frustrate) will notice this backplane has a dirty
+great capacitor stuck across the power rails. This is something that should
+have been on the other backplanes (and will be added later) to smooth out the
+power supply. With so many relays switching on and off there is a danger of
+the power supply getting really noisy which the relays themselves can likely
+tolerate but the memory chip or similar wouldn&rsquo;t be pleased at all. In this
+case &lsquo;dirty great&rsquo; is defined as 4700uF. Given there&rsquo;ll be four of these it&rsquo;ll
+have a slightly odd effect on the computer when turning it off at the mains
+&hellip; the computer will keep going for a couple of seconds as it drains the
+reserve in the capacitors then when the voltage dips below the relay release
+limit any relays that are on will start dropping out. It&rsquo;s an interesting
+effect and you&rsquo;ll be able to see it in my next demo video.</p>
+<p>These
+backplanes are fairly repetitive to build and fortunately there&rsquo;s only one
+more to go after this one &hellip; the Y backplane. Unfortunately the Memory cards
+are type &lsquo;Y&rsquo; &hellip; and yep, that&rsquo;s cards plural again as the Memory unit is
+spread over two cards &hellip; so it won&rsquo;t be long before I&rsquo;ll be building the
+fourth and final backplane. If for any reason I did have to rebuild any of
+these backplanes I think this is the point where I&rsquo;d switch to etching PCBs
+&hellip; something I considered for the cards of the computer in general rather
+than wire wrap. It&rsquo;d certainly be quicker but is harder to change if there&rsquo;s a
+design fault somewhere. The worry with the backplane is that there&rsquo;s lots of
+connecting parts so there&rsquo;s many more places faults could happen and I have
+had issues in the past with the ribbon cable sockets not making a sound
+electrical connection with the sockets on the board. Anyway, musing aside,
+here&rsquo;s how the backplanes look in the computer viewed from the front:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0002.jpg" alt="Backplanes W, X and Z viewed from the front">
+  
+</figure>
+
+<p>If
+you click the picture for the slightly larger version you can see I&rsquo;ve had my
+little white pen out again and I&rsquo;ve marked up the connectors at the left and
+right of the backplanes to make it easier when identifying which ribbon cables
+go where. Speaking of which, that brings me nicely on to the second subject -
+ribbon cable routing.</p>
+<p>With the three backplanes in place I&rsquo;m now at
+the point where everything that&rsquo;ll need the X and Z control busses exists and
+is sat in its final resting place in the computer. If you&rsquo;ve seen my last
+overview video you&rsquo;d have noticed that generally the cables running through
+the back of the computer can only really be described as &lsquo;an awful mess&rsquo;. It&rsquo;s
+time to do something about that:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0003.jpg" alt="Cable routing for X and Z busses">
+  
+</figure>
+
+<p>For the X and
+Z busses I&rsquo;ve neatly routed, folded and labeled the cables and also put some
+cable tie restraints together to keep them in place. I&rsquo;ll continue this way of
+routing the cables as busses become more permanent. Note therefore that in the
+case of the D/C bus (which comes off the Z backplane at the bottom right) it
+loosely weaves its way up past the W backplane &hellip; eventually this will be
+nicely routed and labeled.</p>
+<p>The three control busses (X, Y and Z)
+all head up to the upper enclosure via the left hand slot. It&rsquo;s quite hard to
+see in the picture but the Z bus goes up behind the X cable having visited the
+W backplane on its journey from the Z backplane. When the Y backplane is added
+the Y control bus will similarly visit the W backplane on it&rsquo;s journey to the
+upper enclosure and also leave via the left hand slot. The D/C, C/I and D/I
+busses go up to the upper enclosure via the right hand slot. Again, as these
+aren&rsquo;t permanently routed at the moment it&rsquo;s a bit messy. Speaking of which,
+there&rsquo;s the usual mess of connectors in the upper display for the D/C/I
+busses:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0004.jpg" alt="Mess of wires and connectors for the D, C and I busses">
+  
+</figure>
+
+<p>The mess of cables and connectors is due to needing to connect the
+C&rsquo;s, D&rsquo;s and I&rsquo;s together of the D/C, C/I and D/I busses. All three busses
+come up from the lower enclosure but only two go off to the upper enclosure
+cards (D/C and C/I). Later on I&rsquo;ll create a small &lsquo;break out card&rsquo; where each
+bus can plug in to and each line of each bus will be wired out. This should
+massively neaten things up in this area. Eventually there&rsquo;ll be another
+perspex/acrylic panel where the cables are currently spilling out and not only
+will this be where the mains cable will plug in but also all of those busses
+that have come in to the upper enclosure will also be exposed via sockets so
+that it&rsquo;s possible to plug in extensions and add-ons to the computer.</p>
+<p>While we&rsquo;re in the upper enclosure I&rsquo;ll quickly cover some minor
+fittings/fixtures changes:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0005.jpg" alt="Close up of securing brackets">
+<img src="/img/posts/2017/2017-11-05-0006.jpg" alt="Close up of card brackets">
+  
+</figure>
+
+<p>As the computer is
+getting heavier and heavier I&rsquo;ve decided to securely fasten the upper
+enclosure to the lower. Originally I wanted to have it so that the two halves
+could be split to make carrying around easier but it really complicated the
+busses as I&rsquo;d have to have some quick way of disconnecting them. In the end I
+just gave up and bolted the two halves together. There&rsquo;s four of these
+brackets, one in each corner, and they&rsquo;re very strong but also electrically
+conductive which means the whole case goes back to the power supply earth just
+in case something nasty were to happen. Whilst I was fixing things to other
+things I also put some brackets in to sit the upper cards on. These were
+previously floating around inside the case so this is a much better
+alternative. The cards are only secured at one side due to the holes in the
+right hand brackets not quite lining up. Gravity works in my favour on this
+one so the brackets are effectively just taking some of the weight.</p>
+<p>Right, last subject &hellip; the address bus. With the new type &lsquo;X&rsquo; cards I&rsquo;ll be
+creating it&rsquo;s now time to implement the address bus. As far as the backplanes
+are concerned that&rsquo;s an easy one - just a 16 way ribbon cable - but it&rsquo;s at
+the upper enclosure where a little more work is required. Firstly I need to be
+able to gate the front primary switches to the address bus. That&rsquo;s just a hand
+full of relays and a new Sel-AS button so that the front panel now looks like
+this:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0007.jpg" alt="Display A with added Sel-AS button">
+  
+</figure>
+
+<p>Whilst I
+was at it I also soldered down all the remaining switches (to avoid repeatedly
+taking the display A card out of the enclosure) and popped on the ld-PC and
+sel-PC caps which will be used for the upcoming Program Counter. Next up, I
+needed to add a display for the value on the address bus:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0008.jpg" alt="Display B with added Address Bus">
+  
+</figure>
+
+<p>Here I&rsquo;ve
+added the 16 LED bars to show the address bus contents just above the data bus
+display. Again, to avoid taking the card in and out of the enclosure, I&rsquo;ve
+added all remaining display units. Effectively that completes Display B so
+what you see above is the final version of that card. Last job for the address
+bus is to wire it out on the display distribution card:</p>
+<figure>
+  <img src="/img/posts/2017/2017-11-05-0009.jpg" alt="Display Distribution Card (front)">
+<img src="/img/posts/2017/2017-11-05-0010.jpg" alt="Display Distribution Card (rear)">
+  
+</figure>
+
+<p>Nothing too
+unusual here - just more of the same - although one thing of note is that I&rsquo;ve
+started making little cable ties out of Kynar wire to bunch groups of wires
+together. I quite like the way this looks so expect to see them more often in
+future cards.</p>
+<p>Right then, that&rsquo;s enough for this post and for my
+duo of &lsquo;miscellany specials&rsquo;. The next post will, finally, get on with the job
+of constructing the Program Counter and giving it a test (both on its own and
+inside the computer as a whole). After that there&rsquo;s the Memory and
+Incrementers cards and then we&rsquo;re getting close to having a computer that can
+run a simple program.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2017" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Nov 05, 2017</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#enclosure" class="tags">
+              <span class="tag is-primary">enclosure</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2017/10/miscellany-special-power-distribution/">Miscellany Special: Power Distribution</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2017/11/program-counter-construction/">Program Counter Construction</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f&quote=Miscellany%20Special%3a%20Backplane%20X%2c%20Cable%20Routing%20and%20Address%20Bus" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f&text=Miscellany%20Special%3a%20Backplane%20X%2c%20Cable%20Routing%20and%20Address%20Bus:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f&description=Miscellany%20Special%3a%20Backplane%20X%2c%20Cable%20Routing%20and%20Address%20Bus" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f&title=Miscellany%20Special%3a%20Backplane%20X%2c%20Cable%20Routing%20and%20Address%20Bus&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Miscellany%20Special%3a%20Backplane%20X%2c%20Cable%20Routing%20and%20Address%20Bus&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmiscellany-special-backplane-x-cable%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

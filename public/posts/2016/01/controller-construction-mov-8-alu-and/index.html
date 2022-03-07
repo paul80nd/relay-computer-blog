@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Controller Construction: MOV-8, ALU and SETAB | Relay Computer</title>
+  <meta name="description" content="So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the evenings so had a crack at becoming an actuary. Needless to say I&rsquo;ve been busy studying for my entry exams and so the computer took a back seat for a while. Exams are done for now though so the computer is back on and I&rsquo;m back constructing to get the MOV8, ALU and SETAB instructions running.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Controller Construction: MOV-8, ALU and SETAB" />
+<meta property="og:description" content="So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the evenings so had a crack at becoming an actuary. Needless to say I&rsquo;ve been busy studying for my entry exams and so the computer took a back seat for a while. Exams are done for now though so the computer is back on and I&rsquo;m back constructing to get the MOV8, ALU and SETAB instructions running." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2016/01/controller-construction-mov-8-alu-and/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-01-01T23:23:00+00:00" />
+<meta property="article:modified_time" content="2016-01-01T23:23:00+00:00" />
+
+<meta itemprop="name" content="Controller Construction: MOV-8, ALU and SETAB">
+<meta itemprop="description" content="So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the evenings so had a crack at becoming an actuary. Needless to say I&rsquo;ve been busy studying for my entry exams and so the computer took a back seat for a while. Exams are done for now though so the computer is back on and I&rsquo;m back constructing to get the MOV8, ALU and SETAB instructions running."><meta itemprop="datePublished" content="2016-01-01T23:23:00+00:00" />
+<meta itemprop="dateModified" content="2016-01-01T23:23:00+00:00" />
+<meta itemprop="wordCount" content="516">
+<meta itemprop="keywords" content="construction,control,video," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Controller Construction: MOV-8, ALU and SETAB"/>
+<meta name="twitter:description" content="So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the evenings so had a crack at becoming an actuary. Needless to say I&rsquo;ve been busy studying for my entry exams and so the computer took a back seat for a while. Exams are done for now though so the computer is back on and I&rsquo;m back constructing to get the MOV8, ALU and SETAB instructions running."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Controller Construction: MOV-8, ALU and SETAB</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over
+six months. For some reason I decided I didn&rsquo;t have enough to do in the
+evenings so had a crack at becoming an actuary. Needless to say I&rsquo;ve been busy
+studying for my entry exams and so the computer took a back seat for a while.
+Exams are done for now though so the computer is back on and I&rsquo;m back
+constructing to get the MOV8, ALU and SETAB instructions running.</p>
+<p>Following on from the sequencer cards in my last post it&rsquo;s now the turn of
+the control cards. These take the sequenced pulses and operate the various
+control lines of the computer at the appropriate time to perform the active
+instruction. As with the sequencer the controller is spread over two cards so
+it can access the full set of busses needed and to make room for all the
+relays that&rsquo;ll eventually be squeezed in to operate the full range of
+instructions.</p>
+<p>I&rsquo;m going to skip the usual pictures of the cards
+being built up over time as all the techniques I use have been covered in
+previous posts and shouldn&rsquo;t come as any surprise for my regular readers. So,
+the cards without relays look like this:</p>
+<figure>
+  <img src="/img/posts/2016/2016-01-01-0000.jpg" alt="Controller Cards (front view without relays)">
+<img src="/img/posts/2016/2016-01-01-0001.jpg" alt="Lower Controller Card (front view)">
+<img src="/img/posts/2016/2016-01-01-0002.jpg" alt="Upper Controller Card (front view)">
+  
+</figure>
+
+<p>&hellip; and from the back they look like this &hellip;</p>
+<figure>
+  <img src="/img/posts/2016/2016-01-01-0003.jpg" alt="Control Cards (rear view)">
+  
+</figure>
+
+<p>&hellip; and with relays like this &hellip;</p>
+<figure>
+  <img src="/img/posts/2016/2016-01-01-0004.jpg" alt="Control Cards (with relays)">
+  
+</figure>
+
+<p>The left hand card above handles the MOV-8 instruction in the top
+left cluster of relays and the right hand card handles the ALU instruction on
+the lower row of relays and finally the SETAB instruction is handled on the
+row of 3 relays above. Finally on this card at the top right is a singe relay
+which handles the signal which tells each instruction relay cluster to issue
+its abort signal to the sequencer. As all of these instructions are 8-cycle
+they&rsquo;ll issue the Abort-8 signal to make the sequencer reset at stage 8.</p>
+<p>There&rsquo;s quite a lot of longer/looser wire wraps on these cards and
+this is where further sockets and relays will be added later on for future
+instructions. The slack in these lines will allow me to cut in and/or reroute
+the lines as necessary.</p>
+<p>Finally picture wise here&rsquo;s the two cards
+stacked together from different angles:</p>
+<figure>
+  <img src="/img/posts/2016/2016-01-01-0005.jpg" alt="Stacked Controller Cards">
+<img src="/img/posts/2016/2016-01-01-0006.jpg" alt="Stacked Controller Cards">
+<img src="/img/posts/2016/2016-01-01-0007.jpg" alt="Stacked Controller Cards">
+  
+</figure>
+
+<p>As
+always I&rsquo;ve put a video together that demonstrates the controller in operation
+along with the sequencer. In this video I give a quick overview of the cards
+and then demonstrate running through the three instructions MOV-8, ALU and
+SETAB.</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/fJzvwv28CEE" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>That&rsquo;s it for now on the controller &hellip;
+when combined with the sequencer it&rsquo;s operating the required control lines to
+run the first three instructions. With these in place the computer will be
+able to perform copying values between registers, loading values from the
+opcode and performing ALU operations. The last thing to do now is to update
+the computer UI cards and to add a backplane for the sequencer, controller and
+decoder cards. Once those are done it should be possible to demonstrate
+running complete single instructions by hand cranking the clock.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2016" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jan 01, 2016</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#control" class="tags">
+              <span class="tag is-primary">control</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#video" class="tags">
+              <span class="tag is-primary">video</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2015/07/sequencer-construction-8-cycle-fsm/">Sequencer Construction: 8-cycle FSM</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2016/03/user-interface-construction-instruction/">User Interface Construction: Instruction, Clock and Sequencer</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f&quote=Controller%20Construction%3a%20MOV-8%2c%20ALU%20and%20SETAB" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f&text=Controller%20Construction%3a%20MOV-8%2c%20ALU%20and%20SETAB:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f&description=Controller%20Construction%3a%20MOV-8%2c%20ALU%20and%20SETAB" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f&title=Controller%20Construction%3a%20MOV-8%2c%20ALU%20and%20SETAB&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Controller%20Construction%3a%20MOV-8%2c%20ALU%20and%20SETAB&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2016%2f01%2fcontroller-construction-mov-8-alu-and%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

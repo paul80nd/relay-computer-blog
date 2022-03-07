@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Register Design: Dual Output 8-bit Register | Relay Computer</title>
+  <meta name="description" content="In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there&rsquo;s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.
+For the A and D registers I ended up with the following circuit per 8-bit register:">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Register Design: Dual Output 8-bit Register" />
+<meta property="og:description" content="In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there&rsquo;s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.
+For the A and D registers I ended up with the following circuit per 8-bit register:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2014/04/register-design-dual-output-8-bit/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-04-24T22:56:00+01:00" />
+<meta property="article:modified_time" content="2014-04-24T22:56:00+01:00" />
+
+<meta itemprop="name" content="Register Design: Dual Output 8-bit Register">
+<meta itemprop="description" content="In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there&rsquo;s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.
+For the A and D registers I ended up with the following circuit per 8-bit register:"><meta itemprop="datePublished" content="2014-04-24T22:56:00+01:00" />
+<meta itemprop="dateModified" content="2014-04-24T22:56:00+01:00" />
+<meta itemprop="wordCount" content="923">
+<meta itemprop="keywords" content="design,registers," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Register Design: Dual Output 8-bit Register"/>
+<meta name="twitter:description" content="In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there&rsquo;s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.
+For the A and D registers I ended up with the following circuit per 8-bit register:"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Register Design: Dual Output 8-bit Register</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In the last post I introduced the design for the A/D register card (which as
+its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a
+start on the design for the B/C register card and although its pretty much the
+same as the A/D card there&rsquo;s an extra complexity because the B/C registers
+additionally feed the ALU B and C inputs.</p>
+<p>For the A and D registers
+I ended up with the following circuit per 8-bit register:</p>
+<figure>
+  <img src="/img/posts/2014/2014-04-24-0000.png" alt="8-bit Register Design">
+  
+  <figcaption markdown="span">8-bit Register Design (<a href="/img/posts/2014/2014-04-24-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>In this design
+the spare pad on the left of each of the lower relays feeds an LED to show the
+status of each register bit. This pad is isolated from the register bit
+circuitry itself by making use of the second DPDT switch on each bit relay.
+The B and C registers will also need this LED feed but additionally need to
+provide a permanent feed of the current value in each register bit to the ALU.
+However, I can&rsquo;t just piggyback on the pad used to light the LED because
+there&rsquo;s a risk that the LEDs could light up in error if anything back feeds up
+the B or C ALU lines (thereby obscuring the actual value held in the
+register). A better solution is to isolate the LED feed from the ALU feed
+however this then requires an extra relay per bit because I&rsquo;ll then need three
+DPDT switches rather than the two used above. Diagram wise it&rsquo;d look like
+this:</p>
+<figure>
+  <img src="/img/posts/2014/2014-04-24-0001.png" alt="8-bit Register Design with additional output">
+  
+  <figcaption markdown="span">8-bit Register Design with additional output (<a href="/img/posts/2014/2014-04-24-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>In this design there is now the required two pads available per
+relay &hellip; one for the LED and one for the ALU feed. However, doubling the
+number of relays also means double the current consumption for each bit that&rsquo;s
+holding a value &hellip; double the cost in relays &hellip; double the soldering &hellip;
+double the frustration etc etc. One way around this would be to stick with the
+single pad design (with one relay per bit) and place a diode in the feed to
+the ALU so that back feed cannot occur. This doesn&rsquo;t come for &lsquo;free&rsquo; though
+and needs some consideration to the effect the diode will have on the ALU feed
+itself.</p>
+<p>The first concern would be the voltage drop across a diode.
+Assuming a silicon diode is used the voltage drop would typically be 0.7V and
+so based on a supply of 12V the voltage downstream of the diode would reduce
+to 11.3V. According to the data sheets for the relays I&rsquo;m using (the TE/Axicom
+V23079-A2003-B301) they&rsquo;ll be happy with anything down to 9V before they&rsquo;ll
+refuse to operate so things should be OK here. In fact I could get away with
+three diodes in series (maybe even four at a push) before I&rsquo;d run in to
+problems.</p>
+<p>With the first concern ticked off the next one would be
+over the current flowing through the diode. Each of the relays I&rsquo;m using
+consumes around 11mA whilst the coil is energised (based on a 12V supply and a
+coil resistance of 1029 ohms &hellip; assuming I&rsquo;ve followed ohms law correctly of
+course ;). A typical signal diode like the 1N4001 can pass up to 100mA before
+it&rsquo;ll get a sweat on so in theory I could feed 9 relays through the diode
+without problems. This point actually raises a greater issue which I always
+have in the back of mind when designing the various parts of this computer &hellip;
+fan out.</p>
+<p>Fan out (in the design of this computer at least) is a
+measure of how many relays I can drive from a single output of a single relay
+switch (assuming that switch is fed directly by the power source as it is in
+the above diagrams). The voltage in this case isn&rsquo;t so much of a concern
+because relays in parallel will receive the same voltage but the current of
+multiple relays will add up and could cause issues. Actually, my worry about
+the max diode current is actually second place to the amount of current the
+wire wrap wire itself is happy passing. This &lsquo;Kynar&rsquo; wire is gauged at 30AWG
+and I&rsquo;m working on the basis that it can carry around 100mA (as a conservative
+estimate). Converting that 100mA to my preferred currency comes out at 9
+relays. Because of this limit I&rsquo;ve always got a 9 relay fan out limit in my
+head to keep things within limits and in practice most individual outputs
+wouldn&rsquo;t feed more than a couple of outputs at a time. When manually operating
+the computer it could be possible to do something silly (like load multiple
+registers off the data bus simultaneously) but even then I&rsquo;m pretty sure
+things would be within limits. Fortunately if I do find anywhere is getting a
+bit &lsquo;hot&rsquo; design wise I can always lay down multiple wire wraps between two
+points to increase the current carrying capacity.</p>
+<p>Anyho, that&rsquo;s
+settled, I&rsquo;ll use a diode to keep the feeds isolated and therefore I can use
+the same &lsquo;one relay per bit&rsquo; design used in the A and D registers. I&rsquo;ll put
+together a full schematic for the B and C registers now and then post them up
+here in due course. Incidentally, in other news my laser cutting has been
+dispatched so should be with me in the next couple of days so I&rsquo;m not going to
+be able to resist putting that together and posting about it so it&rsquo;ll probably
+be an enclosure post next followed by a register post.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2014" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Apr 24, 2014</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#registers" class="tags">
+              <span class="tag is-primary">registers</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2014/04/register-design-and-d-8-bit-registers/">Register Design: A and D 8-bit Registers</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2014/05/enclosure-update-laser-cut-parts-arrived/">Enclosure Update: Laser Cut Parts Arrived</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f&quote=Register%20Design%3a%20Dual%20Output%208-bit%20Register" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f&text=Register%20Design%3a%20Dual%20Output%208-bit%20Register:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f&description=Register%20Design%3a%20Dual%20Output%208-bit%20Register" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f&title=Register%20Design%3a%20Dual%20Output%208-bit%20Register&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Register%20Design%3a%20Dual%20Output%208-bit%20Register&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f04%2fregister-design-dual-output-8-bit%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

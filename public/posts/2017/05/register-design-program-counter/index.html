@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Register Design: Program Counter | Relay Computer</title>
+  <meta name="description" content="It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in the meantime but I haven&rsquo;t. Designing, building and blogging about the various parts of the computer is really time consuming and unfortunately I&rsquo;m just one of those people who has way too many hobbies. Anyway, after picking up some subscribers on YouTube I thought it was high time (or maybe I felt guilty enough) to focus back on the computer and get it through to the next milestone &hellip; where it can step through a simple program stored in its memory without any human intervention (beyond entering the program itself and setting the computer running).">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Register Design: Program Counter" />
+<meta property="og:description" content="It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in the meantime but I haven&rsquo;t. Designing, building and blogging about the various parts of the computer is really time consuming and unfortunately I&rsquo;m just one of those people who has way too many hobbies. Anyway, after picking up some subscribers on YouTube I thought it was high time (or maybe I felt guilty enough) to focus back on the computer and get it through to the next milestone &hellip; where it can step through a simple program stored in its memory without any human intervention (beyond entering the program itself and setting the computer running)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2017/05/register-design-program-counter/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-05-29T17:13:00+01:00" />
+<meta property="article:modified_time" content="2017-05-29T17:13:00+01:00" />
+
+<meta itemprop="name" content="Register Design: Program Counter">
+<meta itemprop="description" content="It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in the meantime but I haven&rsquo;t. Designing, building and blogging about the various parts of the computer is really time consuming and unfortunately I&rsquo;m just one of those people who has way too many hobbies. Anyway, after picking up some subscribers on YouTube I thought it was high time (or maybe I felt guilty enough) to focus back on the computer and get it through to the next milestone &hellip; where it can step through a simple program stored in its memory without any human intervention (beyond entering the program itself and setting the computer running)."><meta itemprop="datePublished" content="2017-05-29T17:13:00+01:00" />
+<meta itemprop="dateModified" content="2017-05-29T17:13:00+01:00" />
+<meta itemprop="wordCount" content="1189">
+<meta itemprop="keywords" content="design,registers," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Register Design: Program Counter"/>
+<meta name="twitter:description" content="It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in the meantime but I haven&rsquo;t. Designing, building and blogging about the various parts of the computer is really time consuming and unfortunately I&rsquo;m just one of those people who has way too many hobbies. Anyway, after picking up some subscribers on YouTube I thought it was high time (or maybe I felt guilty enough) to focus back on the computer and get it through to the next milestone &hellip; where it can step through a simple program stored in its memory without any human intervention (beyond entering the program itself and setting the computer running)."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Register Design: Program Counter</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and
+I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in the meantime
+but I haven&rsquo;t. Designing, building and blogging about the various parts of the
+computer is really time consuming and unfortunately I&rsquo;m just one of those
+people who has way too many hobbies. Anyway, after picking up some subscribers
+on YouTube I thought it was high time (or maybe I felt guilty enough) to focus
+back on the computer and get it through to the next milestone &hellip; where it can
+step through a simple program stored in its memory without any human
+intervention (beyond entering the program itself and setting the computer
+running).</p>
+<p>So where to begin? The three units that&rsquo;ll need building
+are the program counter, incrementer and memory. To recap: the memory holds
+the instructions that make up the program to be executed; the program counter
+points to the current instruction (line of program) in the memory; and the
+incrementer adds one to the program counter to move it on to the next
+instruction. Using those three units you can step through the program in
+memory and for each instruction load it in to the instruction register, move
+the program counter on and then execute that given instruction. The cycle is
+repeated until the end of the program is reached.</p>
+<p>I&rsquo;m going to
+start with the easiest of the three units described above &hellip; the program
+counter. Essentially this is just another register card similar the A/D and
+B/C registers created so far. The first difference is that the two 8-bit
+registers on the card are combined to make a single 16-bit register (bits 0-7
+in the first register and bits 8-15 in the second). The second difference is
+that whereas the registers created so far can be loaded and selected on the
+8-bit data bus the program counter is loaded and selected on to the new 16-bit
+address bus. The address bus is generally used to control which slot in the
+memory is required but later on there&rsquo;ll be some other 16-bit registers which
+can pass values around on the address bus and be used for handling things like
+jumps within a program (for loops and branching based on the ALU condition
+register) and for storing and loading values in memory outside of the program
+code itself.</p>
+<p>Given the program counter is very similar to the other
+8-bit registers the schematic doesn&rsquo;t need much introduction:</p>
+<figure>
+  <img src="/img/posts/2017/2017-05-29-0000.png" alt="Program Counter Schematic">
+  
+  <figcaption markdown="span">Program Counter Schematic (<a href="/img/posts/2017/2017-05-29-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>This is a type &lsquo;X&rsquo;
+card (like the instruction register) and so has the same connectors along the
+back of the card (X control bus, address bus, data/instruction bus and power
+connector). Comparing it with the A/D register the main bit register relays
+are the same but notice that towards the top of the card there&rsquo;s only one set
+of load/select registers and that&rsquo;s because both 8-bit registers are
+loaded/selected at the same time. This is also shown down in the LEDs across
+the front of the card &hellip; there&rsquo;s one load LED at the left, one select LED at
+the right and then the 16 LEDs in the middle showing the current 16-bit value
+held in the program counter register as a whole. You can click on the image
+for a closer look but if you want to get in really close you can find a version <a href="/pdf/program-counter.pdf">here in PDF format</a>.</p>
+<p>Whilst I&rsquo;m
+creating the program counter it makes sense to update the two display cards
+and auxiliary control card so that the program counter can be accessed and
+observed when the computer is being operated manually. Let&rsquo;s start with
+display B on which I&rsquo;ll add the address bus:</p>
+<figure>
+  <img src="/img/posts/2017/2017-05-29-0001.png" alt="Display B with added Address Bus display">
+  
+  <figcaption markdown="span">Display B with added Address Bus display (<a href="/img/posts/2017/2017-05-29-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>The
+address bus consists of red LED light bars similar to the data bus ones but
+with each element half the width to fit the full 16 bits in. As with the
+program counter you can find a <a href="/pdf/display-b-3.pdf">PDF version of the Display B card here</a> and <a href="/pdf/display-b-3a.pdf">another version showing the LED internals here</a>. Next up is
+display A which gains two extra control switches:</p>
+<figure>
+  <img src="/img/posts/2017/2017-05-29-0002.png" alt="Display A with added Program Counter Load/Select">
+  
+  <figcaption markdown="span">Display A with added Program Counter Load/Select (<a href="/img/posts/2017/2017-05-29-1002.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>Looking towards the centre of the diagram above you can see the
+new load and select control switches for the program counter (LD PC and SEL
+PC). These allow the user to manually load or select the program counter
+from/to the address bus when required. Again you can find a <a href="/pdf/display-a-3.pdf">PDF version of this diagram here</a> and <a href="/pdf/display-a-3a.pdf">one without the switch caps here</a>.</p>
+<p>One thing to
+note in the diagram above is the &lsquo;SEL AS&rsquo; switch which was previously wired up
+to the Load Condition Register line (before the LD COND switch was added).
+This now gets to take on its true purpose which is to gate the primary
+switches on to the address bus (in a similar way to how &lsquo;SEL DS&rsquo; gates the
+same primary switches on to the data bus). You may have noticed that gives us
+a small problem as the primary switches allow the user to enter an 8-bit value
+but the address bus holds, of course, a 16-bit value. Consequently the &lsquo;SEL
+AS&rsquo; switch will only gate to the lower 8-bits of the address bus. There&rsquo;ll be
+a work around for this later where you could load the upcoming M1 and M2
+registers one at a time which combine to make a full 16-bit M register which
+can then be selected on to the address bus. Typically the primary switches are
+used to load the PC with a starting address for a program and this will
+usually be in the first half of the memory (and even more usually will start
+at the first memory location so that just clearing the PC will give you the
+right starting address). The gating relays for the &lsquo;SEL AS&rsquo; functionality can
+be found on the auxiliary control card. The design for this has been done
+previously and the <a href="/pdf/aux-switch-ctrl-2.pdf">PDF version of that can be found here</a>.</p>
+<p>Right,
+so that&rsquo;s pretty much all the design complete for the program counter. The
+only other thing worth noting is that I&rsquo;ll need to create a type &lsquo;X&rsquo; backplane
+as I&rsquo;ll now have two X cards (the program counter and instruction register).
+This is very similar in design to the &lsquo;Z&rsquo; backplane so not really worthy of
+any further detail.</p>
+<p>Finally to wrap up this post I&rsquo;ve updated my
+relay computer simulator which now looks like this:</p>
+<figure>
+  <img src="/img/posts/2017/2017-05-29-0003.png" alt="Screenshot of Relay Computer Simulator">
+  
+</figure>
+
+<p>The <a href="http://80nd.co.uk/relaycomputer/">latest version of this can be found here</a>
+(although note that I only ever host the latest version
+so as this post gets older the simulator might be newer than you&rsquo;d expect).
+Feel free to fire this up and have a play with the program counter. If you&rsquo;re
+interested in what&rsquo;s behind the simulator you can see all the
+<a href="https://github.com/paul80nd/relay-computer">source code on my GitHub page</a>.</p>
+<p>Next time I&rsquo;ll cover the design of the
+incrementer which allows you to add one to the value of the program counter
+effectively moving it on to the next position in memory.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2017" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">May 29, 2017</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#registers" class="tags">
+              <span class="tag is-primary">registers</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2016/07/yet-another-diversion/">Yet another diversion</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2017/06/incrementer-design-1-bit-half-adder/">Incrementer Design: 1-bit Half Adder</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f&quote=Register%20Design%3a%20Program%20Counter" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f&text=Register%20Design%3a%20Program%20Counter:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f&description=Register%20Design%3a%20Program%20Counter" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f&title=Register%20Design%3a%20Program%20Counter&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Register%20Design%3a%20Program%20Counter&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f05%2fregister-design-program-counter%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ALU Design: Control Unit | Relay Computer</title>
+  <meta name="description" content="In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of these components together to make up the ALU Control Card. So, placing the relays from the three components onto the card (excluding wire links) we get the following:
+ ALU Control Card Relays (larger)  Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&rsquo;t quite so tightly packed in this time.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="ALU Design: Control Unit" />
+<meta property="og:description" content="In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of these components together to make up the ALU Control Card. So, placing the relays from the three components onto the card (excluding wire links) we get the following:
+ ALU Control Card Relays (larger)  Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&rsquo;t quite so tightly packed in this time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2013/12/alu-design-control-unit/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-12-01T21:21:00+00:00" />
+<meta property="article:modified_time" content="2013-12-01T21:21:00+00:00" />
+
+<meta itemprop="name" content="ALU Design: Control Unit">
+<meta itemprop="description" content="In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of these components together to make up the ALU Control Card. So, placing the relays from the three components onto the card (excluding wire links) we get the following:
+ ALU Control Card Relays (larger)  Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&rsquo;t quite so tightly packed in this time."><meta itemprop="datePublished" content="2013-12-01T21:21:00+00:00" />
+<meta itemprop="dateModified" content="2013-12-01T21:21:00+00:00" />
+<meta itemprop="wordCount" content="665">
+<meta itemprop="keywords" content="design,ALU," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ALU Design: Control Unit"/>
+<meta name="twitter:description" content="In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of these components together to make up the ALU Control Card. So, placing the relays from the three components onto the card (excluding wire links) we get the following:
+ ALU Control Card Relays (larger)  Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&rsquo;t quite so tightly packed in this time."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">ALU Design: Control Unit</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In the last three posts I introduced the
+design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition
+Registers. In this post I&rsquo;ll put all three of these components together to
+make up the ALU Control Card. So, placing the relays from the three components
+onto the card (excluding wire links) we get the following:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-01-0000.png" alt="ALU Control Card Relays">
+  
+  <figcaption markdown="span">ALU Control Card Relays (<a href="/img/posts/2013/2013-12-01-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>Unlike the
+other cards that make up the full ALU (the logic and arithmetic cards) things
+aren&rsquo;t quite so tightly packed in this time. Despite this I&rsquo;ve pushed the
+relays out towards the edges of the card to leave room for any future ALU
+control expansion or modifications without requiring an extra card. I&rsquo;ll be
+displaying the current state of the 3-to-8 Decoder and Condition Registers
+with LEDs along the front of the card as with the other cards designed so far.
+The LEDs are the same 12V ones as before (to save space that would be used by
+the additional resistors) and follow the same colour code of red for results,
+yellow for inputs and green for output control signals. Diagram wise the
+display looks like this:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-01-0001.png" alt="Result/Control Display LEDs">
+  
+</figure>
+
+<p>Each block in the diagram
+represents the same 3mm LED in a plastic holder as before (with the LED pushed
+into the holder from the front and the LED legs bent at 90 degrees). The left
+hand LEDs relate to the 3-to-8 Decoder (3-bit function code followed by the
+derived 8 control lines) and the right hand ones to the Condition Registers
+(Register Load and Enable followed by Sign, Carry and Zero Register
+values).</p>
+<p>Connector wise things are similar to the Logic and
+Arithmetic card: there is the 8-bit data bus, power connections and control
+signals but the 8-bit inputs B and C are not required for this card. The
+diagram of the connectors look like this:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-01-0002.png" alt="ALU Control Card Connections">
+  
+</figure>
+
+<p>This shows the three right angled
+boxed headers (as per the Logic and Arithmetic card) — from left to right
+these are: 8+8 data bus plus control lines, 10+10 control lines and finally
+5+5 power lines. Again, some of these connection lines are used by other cards
+that share the same ribbon cable / back plane slots but for the sake of
+completeness each of the pins are as follows:</p>
+<ul>
+<li>D-Bus (Data Bus + Control Lines)
+<ul>
+<li>D0-D7 &hellip; 8-bit Data Bus</li>
+<li>F0-F2 &hellip; ALU Function Code (used by the 3-to-8 Function Decoder on this card)</li>
+<li>SN &hellip; Sign Condition Register (produced by this card)</li>
+<li>CY &hellip; Carry Condition Register (as above)</li>
+<li>EZ &hellip; Zero Condition Register (as above)</li>
+<li>NZ &hellip; Non-Zero Condition Register (as above)</li>
+<li>CL &hellip; Condition Register Load (as above)</li>
+</ul>
+</li>
+<li>Ctrl-Z (Control Line Bus)
+<ul>
+<li>ADD &hellip; ALU Add Output Enable (produced by this card)</li>
+<li>INC &hellip; ALU Increment Output Enable (as above)</li>
+<li>AND &hellip; ALU AND Output Enable (as above)</li>
+<li>ORR &hellip; ALU OR Output Enable (as above)</li>
+<li>XOR &hellip; ALU XOR Output Enable (as above)</li>
+<li>NOT &hellip; ALU NOT Output Enable (as above)</li>
+<li>SHL &hellip; ALU Shift Left Output Enable (as above)</li>
+<li>ICY &hellip; ALU Internal Carry Result (used by this card)</li>
+</ul>
+</li>
+</ul>
+<p>So, with everything together including all the
+wiring, power supply and ground lines we get the following:</p>
+<figure>
+  <img src="/img/posts/2013/2013-12-01-0003.png" alt="Complete ALU Control Card">
+  
+  <figcaption markdown="span">Complete ALU Control Card (<a href="/img/posts/2013/2013-12-01-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>As before in
+previous posts the completed Arithmetic Control Card design can be found <a href="/pdf/control-unit.pdf">here in PDF format</a> (so you can zoom in for more
+detail).</p>
+<p>With the three cards that make up the complete ALU all
+designed and ready to go I think it&rsquo;s finally time to actually start some
+construction and take a break from creating all these diagrams. This will
+allow me to actually try out some of the theory and to refine the construction
+methods but does carry the risk that I make something that&rsquo;s incompatible with
+the rest of the computer design. However, I&rsquo;ve got the registers worked out in
+my head and, of course, I&rsquo;m basing my design on the <a href="http://web.cecs.pdx.edu/~harry/Relay/index.html">Harry Porter Relay Computer</a> so I&rsquo;m confident enough now to get the soldering
+iron out.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2013" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Dec 01, 2013</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#ALU" class="tags">
+              <span class="tag is-primary">ALU</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2013/11/alu-design-condition-registers/">ALU Design: Condition Registers</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2013/12/alu-construction-connectors-and-leds/">ALU Construction: Connectors and LEDs</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f&quote=ALU%20Design%3a%20Control%20Unit" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f&text=ALU%20Design%3a%20Control%20Unit:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f&description=ALU%20Design%3a%20Control%20Unit" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f&title=ALU%20Design%3a%20Control%20Unit&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=ALU%20Design%3a%20Control%20Unit&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f12%2falu-design-control-unit%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

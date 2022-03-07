@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>User Interface Design: Instruction, Clock and Sequencer | Relay Computer</title>
+  <meta name="description" content="Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final step in this series is to update the designs for the two display cards along with the main switches to work with the new cards added recently.
+Diving straight in here is the latest version of the Display A design:">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="User Interface Design: Instruction, Clock and Sequencer" />
+<meta property="og:description" content="Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final step in this series is to update the designs for the two display cards along with the main switches to work with the new cards added recently.
+Diving straight in here is the latest version of the Display A design:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2015/04/user-interface-design-instruction-clock/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-04-08T23:19:00+01:00" />
+<meta property="article:modified_time" content="2015-04-08T23:19:00+01:00" />
+
+<meta itemprop="name" content="User Interface Design: Instruction, Clock and Sequencer">
+<meta itemprop="description" content="Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final step in this series is to update the designs for the two display cards along with the main switches to work with the new cards added recently.
+Diving straight in here is the latest version of the Display A design:"><meta itemprop="datePublished" content="2015-04-08T23:19:00+01:00" />
+<meta itemprop="dateModified" content="2015-04-08T23:19:00+01:00" />
+<meta itemprop="wordCount" content="663">
+<meta itemprop="keywords" content="design,UI," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="User Interface Design: Instruction, Clock and Sequencer"/>
+<meta name="twitter:description" content="Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final step in this series is to update the designs for the two display cards along with the main switches to work with the new cards added recently.
+Diving straight in here is the latest version of the Display A design:"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">User Interface Design: Instruction, Clock and Sequencer</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Over my last seven posts I&rsquo;ve been slowly putting together the card designs so
+that the computer will be able to operate the MOV-8, ALU and SETAB
+instructions. The final step in this series is to update the designs for the
+two display cards along with the main switches to work with the new cards
+added recently.</p>
+<p>Diving straight in here is the latest version of
+the Display A design:</p>
+<figure>
+  <img src="/img/posts/2015/2015-04-08-0000.png" alt="Display A Card">
+  
+  <figcaption markdown="span">Display A Card (<a href="/img/posts/2015/2015-04-08-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>This is the card that
+sits in the upper left of the enclosure and doubles up as a display as well as
+a means of directly operating some of the control lines. Each block on the
+diagram is an illuminated tactile switch that directly displays and operates
+an individual control line. I&rsquo;ve faded out all of the existing switches so
+that the new ones are highlighted.</p>
+<p>The two new yellow switches in
+the middle drive the Load Instruction Register and Load Condition Register
+lines. Previously I&rsquo;d temporarily wired up the &lsquo;Sel AS&rsquo; switch up to the load
+condition register line but now it&rsquo;ll have its own dedicated switch and the
+&lsquo;Sel AS&rsquo; will be used later on to load the address bus with a value from the
+front switches.</p>
+<p>At the bottom left of the card is the new red &lsquo;CLK&rsquo;
+and green &lsquo;I2B&rsquo; switches. The &lsquo;CLK&rsquo; switch directly operates the clock line so
+repeated pressing of this will drive the sequencer when activated. The I2B
+drives the Immediate To Bus line that gates a value held on the instruction
+bus over to the data bus. This is usually operated during the SETAB
+instruction but can be operated directly from this switch for
+testing/debugging purposes.</p>
+<p>The second display card (Display B)
+sits in the upper right of the enclosure and will now look like this:</p>
+<figure>
+  <img src="/img/posts/2015/2015-04-08-0001.png" alt="Display B Card">
+  
+  <figcaption markdown="span">Display B Card (<a href="/img/posts/2015/2015-04-08-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>All the blocks on this
+card only display a value and are not interactive like the blocks on display
+A. At the lower left of the card is the new &lsquo;CLK&rsquo; display which repeats the
+clock line value also shown on display A.</p>
+<p>The main addition to
+Display A is at the top right which shows the current 8-bit instruction
+bus/register value and below that the derived instruction class. Only SETAB
+and MOV-8 instruction classes are shown as any ALU operation will show up on
+the ALU display just below.</p>
+<p>Finally there&rsquo;s a small addition to do
+on the front panel switch control card:</p>
+<figure>
+  <img src="/img/posts/2015/2015-04-08-0002.png" alt="Aux Switch Control Card">
+  
+  <figcaption markdown="span">Aux Switch Control Card (<a href="/img/posts/2015/2015-04-08-1002.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>The lower half
+of the card shows the existing gating relays which pass the 8-bit value set on
+the front switches to either the data or lower 8-bits of the address bus. The
+small addition is at the top of the card where the reset switch is hooked up
+to the Ctrl-X bus so that the sequencer can be reset when needed. Of
+particular note here is that the reset switch is only powered when the
+start/stop switch is in the &lsquo;stop&rsquo; position. This ensures that when the
+computer is running the user can&rsquo;t accidentally interfere with the
+computer.</p>
+<p>Updated PDF versions of the above designs are as follows:</p>
+<ul>
+<li>Display A
+<ul>
+<li><a href="/pdf/display-a-2.pdf">Design with key caps shown</a></li>
+<li><a href="/pdf/display-a-2a.pdf">Design without key caps</a> (showing internal LED wiring)</li>
+</ul>
+</li>
+<li>Display B
+<ul>
+<li><a href="/pdf/display-b-2.pdf">Design with indicator faces</a></li>
+<li><a href="/pdf/display-b-2a.pdf">Design without indicator faces</a> (showing internal LED wiring)</li>
+</ul>
+</li>
+<li><a href="/pdf/aux-switch-ctrl-2.pdf">Aux Switch Control</a></li>
+</ul>
+<p>&hellip; and that&rsquo;s it &hellip; all the
+designs are in place so finally I can get the soldering iron out and start
+doing some construction. I&rsquo;ll work in pretty much the same order I did the
+designs so it&rsquo;ll be the instruction register first followed by the decoder.
+Both these are fairly straightforward cards so these should come together
+quite quickly and then it&rsquo;ll be on to the more involved sequencer and control
+cards. Just before I do get stuck in to the construction though I&rsquo;ll probably
+do a very quick post showing the terrible things I&rsquo;ve done to a set of IKEA
+Ivar shelves to make my new workbench.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2015" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Apr 08, 2015</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#UI" class="tags">
+              <span class="tag is-primary">UI</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2015/04/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 2 of 2)</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2015/05/new-workbench/">New Workbench</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f&quote=User%20Interface%20Design%3a%20Instruction%2c%20Clock%20and%20Sequencer" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f&text=User%20Interface%20Design%3a%20Instruction%2c%20Clock%20and%20Sequencer:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f&description=User%20Interface%20Design%3a%20Instruction%2c%20Clock%20and%20Sequencer" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f&title=User%20Interface%20Design%3a%20Instruction%2c%20Clock%20and%20Sequencer&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=User%20Interface%20Design%3a%20Instruction%2c%20Clock%20and%20Sequencer&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2015%2f04%2fuser-interface-design-instruction-clock%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ALU Design: 8-bit Arithmetic Unit | Relay Computer</title>
+  <meta name="description" content="In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.
+So, diving straight in, here is what eight of the 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad board (excluding wire lines):
+ 8 x 1-bit Arithmetic Unit Relays (larger)  As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic).">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="ALU Design: 8-bit Arithmetic Unit" />
+<meta property="og:description" content="In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.
+So, diving straight in, here is what eight of the 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad board (excluding wire lines):
+ 8 x 1-bit Arithmetic Unit Relays (larger)  As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2013/11/design-8-bit-arithmetic-unit/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-11-17T10:43:00+00:00" />
+<meta property="article:modified_time" content="2013-11-17T10:43:00+00:00" />
+
+<meta itemprop="name" content="ALU Design: 8-bit Arithmetic Unit">
+<meta itemprop="description" content="In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.
+So, diving straight in, here is what eight of the 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad board (excluding wire lines):
+ 8 x 1-bit Arithmetic Unit Relays (larger)  As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic)."><meta itemprop="datePublished" content="2013-11-17T10:43:00+00:00" />
+<meta itemprop="dateModified" content="2013-11-17T10:43:00+00:00" />
+<meta itemprop="wordCount" content="997">
+<meta itemprop="keywords" content="design,ALU," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ALU Design: 8-bit Arithmetic Unit"/>
+<meta name="twitter:description" content="In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.
+So, diving straight in, here is what eight of the 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad board (excluding wire lines):
+ 8 x 1-bit Arithmetic Unit Relays (larger)  As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic)."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">ALU Design: 8-bit Arithmetic Unit</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>In the last post I introduced the design for the 1-bit
+Arithmetic Unit. This post covers connecting eight of these units together to
+make an 8-bit Arithmetic Unit along with result gating and increment
+functionality.</p>
+<p>So, diving straight in, here is what eight of the
+1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad
+board (excluding wire lines):</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-17-0000.png" alt="8 x 1-bit Arithmetic Unit Relays">
+  
+  <figcaption markdown="span">8 x 1-bit Arithmetic Unit Relays (<a href="/img/posts/2013/2013-11-17-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>As
+before (with the Logic Unit card) things are a bit on the tight side but
+everything fits within the 40 hole horizontal confines of the pad board (as if
+by magic). Each of the 1-bit Arithmetic Units produces a 1-bit output and
+these need gating back on to the data bus so that the result doesn&rsquo;t conflict
+with any other Logic Unit output (or any future outputs from places like the
+Registers etc). With these additional relays added we get the following (this
+time including internal wire links in the 1-bit Arithmetic Units and result
+links between the Arithmetic Units and the gating relays):</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-17-0001.png" alt="8 x 1-bit Arithmetic + Gating Relays">
+  
+  <figcaption markdown="span">8 x 1-bit Arithmetic + Gating Relays (<a href="/img/posts/2013/2013-11-17-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>This would now be enough relays to handle adding to 8-bit numbers
+together however the Arithmetic Unit has two modes: Add and Increment. The
+increment function adds one to the B input and so to make this work with the
+existing design we need to disconnect the C input when incrementing and set
+the carry in bit (to act as the +1). With the C input gating relays and the
+carry in relay we get the following:</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-17-0002.png" alt="8 x 1-bit Arithmetic + Input/Output Gating Relays">
+  
+  <figcaption markdown="span">8 x 1-bit Arithmetic + Input/Output Gating Relays (<a href="/img/posts/2013/2013-11-17-1002.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>So, that&rsquo;s it for relays on this card — slightly less than on the
+Logic Unit card but still quite densely packed in there (and all on a 0.1 inch
+pitch so it&rsquo;ll still be a fiddly construction too). As with the Logic Card I&rsquo;d
+like to be able to display the current result being generated regardless of
+the whether that result is being gated on to the data bus — again, this allows
+me to confirm correct operation and test/debug the card independently. This
+time around only 10 LEDs are needed &hellip; 8 for the 8-bit result, 1 for the
+carry in line and 1 for the carry out line. As there&rsquo;s a lot more room to play
+with than before I can get away with using single row LED holders and so this
+also simplifies the wiring behind the LEDs as there&rsquo;s only two legs rather
+than four per holder. The LEDs are the same 12V ones used in the Logic Unit
+Card (to spare the need for a separate resistor) but I introduce green and
+yellow ones this time. Generally I&rsquo;ve decided to use red for a bit result,
+yellow for inputs or control signals and green for output control signals or
+state. Diagram wise then it looks like this:</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-17-0003.png" alt="Result/Control Display LEDs">
+  
+</figure>
+
+<p>Each block in the diagram
+represents a single 3mm LED in a plastic holder. A LEDs is pushed into the
+holder from the front and the pair of LED legs are bent at 90 degrees.</p>
+<p>Next up is the connections to other parts of the computer. There is
+the two 8-bit inputs B and C, the 8-bit data bus, power connections and
+finally the control signals to select whether the unit is adding or
+incrementing. This is the same layout that the Logic Unit uses so that ribbon
+cable can be passed through all the sockets (or I can use another pad board as
+a backbone for connecting several cards together). The diagram of the
+connectors look like this:</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-17-0004.png" alt="Arithmetic Unit Connectors">
+  
+</figure>
+
+<p>This shows the four right angled
+boxed headers (identical to the ones used on the Logic Unit) - from left to
+right these are: 8+8 B/C input, 8+8 data bus plus control lines, 10+10 control
+lines and finally 5+5 power lines. There are some values here that will be
+used by other cards in the computer that share the same ribbon cable / back
+plane slots but for the sake of completeness each of the pins are as
+follows:</p>
+<ul>
+<li>B/C Connector (B + C ALU Input)
+<ul>
+<li>B0-B7 &hellip; 8-bit B ALU Input</li>
+<li>C0-C7 &hellip; 8-bit C ALU Input</li>
+</ul>
+</li>
+<li>D-Bus (Data Bus + Control Lines)
+<ul>
+<li>D0-D7 &hellip; 8-bit Data Bus</li>
+<li>F0-F2 &hellip; ALU Function Code (ALU Control Card [to be covered in a later post])</li>
+<li>SN &hellip; Sign Condition Register (ALU Control Card [to be covered in a later post])</li>
+<li>CY &hellip; Carry Condition Register (as above)</li>
+<li>EZ &hellip; Zero Condition Register (as above)</li>
+<li>NZ &hellip; Non-Zero Condition Register (as above)</li>
+<li>CL &hellip; Condition Register Load (as above)</li>
+</ul>
+</li>
+<li>Ctrl-Z (Control Line Bus)
+<ul>
+<li>ADD &hellip; ALU Add Output Enable</li>
+<li>INC &hellip; ALU Increment Output Enable</li>
+<li>AND &hellip; ALU AND Output Enable</li>
+<li>ORR &hellip; ALU OR Output Enable</li>
+<li>XOR &hellip; ALU XOR Output Enable</li>
+<li>NOT &hellip; ALU NOT Output Enable</li>
+<li>SHL &hellip; ALU Shift Left Output Enable</li>
+<li>ICY &hellip; ALU Internal Carry Result (produced by this card)</li>
+</ul>
+</li>
+</ul>
+<p>The last signal there (ICY) is produced by the last
+1-bit Arithmetic Unit&rsquo;s Carry Out signal and is passed down the Control Bus
+back to the Control Card where it can be used to set the Carry Condition
+Register. This differs to the CY signal on the Data Bus which is the output
+from the Carry Condition Register itself.</p>
+<p>So, finally, wiring
+everything together we get the following jumble:</p>
+<figure>
+  <img src="/img/posts/2013/2013-11-17-0005.png" alt="ALU - Complete Arithmetic Unit">
+  
+  <figcaption markdown="span">ALU - Complete Arithmetic Unit (<a href="/img/posts/2013/2013-11-17-1003.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>This
+diagram includes everything mentioned so far along with the power supply and
+ground lines and all other internal wiring. As before, the completed
+Arithmetic Unit design can be found <a href="/pdf/arithmetic-unit.pdf">here in PDF format</a> (so you can zoom in and out as you
+wish). Hopefully the diagram reads OK but if not let me know in the
+comments.</p>
+<p>In the next post I&rsquo;ll cover the final parts of the ALU:
+the zero detect circuit, the function decoder and the condition registers &hellip;
+the three of these combining to form the final ALU Card: the Control Unit.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2013" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Nov 17, 2013</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#ALU" class="tags">
+              <span class="tag is-primary">ALU</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#design" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2013/11/design-1-bit-arithmetic-unit/">ALU Design: 1-bit Arithmetic Unit</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2013/11/design-function-decoder/">ALU Design: Function Decoder</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f&quote=ALU%20Design%3a%208-bit%20Arithmetic%20Unit" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f&text=ALU%20Design%3a%208-bit%20Arithmetic%20Unit:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f&description=ALU%20Design%3a%208-bit%20Arithmetic%20Unit" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f&title=ALU%20Design%3a%208-bit%20Arithmetic%20Unit&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=ALU%20Design%3a%208-bit%20Arithmetic%20Unit&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2013%2f11%2fdesign-8-bit-arithmetic-unit%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

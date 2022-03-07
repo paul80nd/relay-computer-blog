@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Making a PCB | Relay Computer</title>
+  <meta name="description" content="After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire wrapping which will come in handy as I&rsquo;ll soon be constructing three fairly-identical register cards and my patience is notoriously short. That said though it probably makes sense that my first PCB should be something a bit simpler.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Making a PCB" />
+<meta property="og:description" content="After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire wrapping which will come in handy as I&rsquo;ll soon be constructing three fairly-identical register cards and my patience is notoriously short. That said though it probably makes sense that my first PCB should be something a bit simpler." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2019/03/making-a-pcb/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-03-04T11:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-04T11:00:00+00:00" />
+
+<meta itemprop="name" content="Making a PCB">
+<meta itemprop="description" content="After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire wrapping which will come in handy as I&rsquo;ll soon be constructing three fairly-identical register cards and my patience is notoriously short. That said though it probably makes sense that my first PCB should be something a bit simpler."><meta itemprop="datePublished" content="2019-03-04T11:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-04T11:00:00+00:00" />
+<meta itemprop="wordCount" content="2399">
+<meta itemprop="keywords" content="construction,video," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Making a PCB"/>
+<meta name="twitter:description" content="After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire wrapping which will come in handy as I&rsquo;ll soon be constructing three fairly-identical register cards and my patience is notoriously short. That said though it probably makes sense that my first PCB should be something a bit simpler."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Making a PCB</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and
+have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire
+wrapping which will come in handy as I&rsquo;ll soon be constructing three fairly-identical register cards and my
+patience is notoriously short. That said though it probably makes sense that my first PCB should be something a
+bit simpler. As it happens I do need to construct the Y backplane (which the 5 &lsquo;Y&rsquo; type cards connect in to)
+which is a much simpler design and therefore an excellent &lsquo;first PCB&rsquo; candidate.</p>
+<p>I covered the basic design of the backplane in my last post so this one is all about how I got on making the
+PCB. Those who follow me on YouTube will have, by now, seen the series of videos I&rsquo;ve been uploading
+covering my adventures in this area. Rather than just re-iterate what&rsquo;s in those videos I&rsquo;ll link them here
+but I&rsquo;ll also try and add some additional thoughts now I&rsquo;m writing this post and effectively looking back
+over how it all went.</p>
+<p>So, let&rsquo;s start at the beginning where I prepare the copper clad board and print out the PCB design:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/c-LOiyI5N-g" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>One thing that does strike me watching this video (apart from cringing at hearing my own voice) is just how
+uncertain and unsure I am of everything I&rsquo;m doing. It&rsquo;s fair to say that my previous videos have been pretty
+heavily edited affairs with voice-overs added at the very end of the editing process. This time I decided to
+just video as I went along &hellip; no script, no editing &hellip; just me and a camera. All this effectively means
+you&rsquo;re witnessing the disaster/success unfold the same time I am. The uncertainty you&rsquo;re seeing is because I
+have no idea how it&rsquo;ll turn out.</p>
+<p>In part 2 I give the printed design a check and attempt to transfer it to the copper clad board:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/RouOhDSAcRA" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>This video&rsquo;s featured disaster-du-jour is toner transfer, well, not transferring. In hindsight I think using an
+iron does introduce plenty of scope for the transfer not working &hellip; especially when it&rsquo;s an iron as tiny as
+the one I&rsquo;ve been using. It does seem to be all about getting a sweet spot of temperature and pressure and in
+the end I just &lsquo;got a feel for it&rsquo;. I have seen better results in other YouTube videos using a laminator so
+that the pressure/temperature is better controlled but I&rsquo;m not wholly convinced I can be bothered to buy one
+at the moment. I did look but I&rsquo;d have to make sure it can take the thickness of a PCB (or modify it so it
+can).</p>
+<p>One thing I&rsquo;ve definitely learnt is that if there&rsquo;s any issues in the toner transfer it&rsquo;s better just to wipe
+the board clean with acetone and start again. There&rsquo;s always a temptation to just plough ahead given the time
+invested up to that point but this really is the one opportunity where you can (literally) wipe the slate
+clean.</p>
+<p>In part 3 I finally manage to get the design transferred to the board and move on to etching:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/Su1j4IVEBzw" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>I think it&rsquo;ll be worth me investing in some decent etch resist pens so I can touch up any small issues in the
+toner transfer. As this is the point of no return for the board it&rsquo;s definitely worth getting it as tidy and
+accurate as I can. I tried to do this with a Sharpie pen and then with a white ink pen &hellip; neither of which
+were particularly suitable for the job at hand and the results show post-etch.</p>
+<p>Whilst touching up the board I did notice how the toner doesn&rsquo;t perfectly cover the copper &hellip; especially in
+larger areas. You can see lots of tiny pin-holes in the toner which let the etchant though and this results in
+a &lsquo;dirty&rsquo; looking etch. I think the way around this is to use the UV resist method where you laser print the
+design twice on clear sheets and then layer them on top of each other creating a nice solid mask. With that
+mask you can then expose a specially coated board under a UV light which, after chemically developing, gives
+you the design ready for etching. It looks like this method is generally preferred (and I think it&rsquo;s used in
+professional PCB production) but, again, it&rsquo;s extra equipment and cost. No doubt if I start making more and
+more PCBs it&rsquo;ll be worth the investment but in the meanwhile the toner transfer method is cheap, relatively
+easy and gives good enough results.</p>
+<p>Speaking of etching &hellip; that wasn&rsquo;t without problems either. In this case though it&rsquo;s totally down to my own
+impatience. I should have just left the etchant alone to do its thing and just occasionally agitated the tub
+to keep the etchant moving around. The other thing that didn&rsquo;t help was the temperature &hellip; this was all done
+in late January and it was really cold outside &hellip; combine that with not having any radiators in the kitchen
+and you&rsquo;ve got very cold etchant. I think in future I&rsquo;ll make a little bain-marie just to get the temperature
+up a little bit and that should help. One thing I definitely won&rsquo;t do again is paw at the board with a sponge
+removing not only the copper but also the etch resist in places.</p>
+<p>By part 4 the board is etched and it&rsquo;s on to tin plating, inspecting the board and attempting (in vain) to fix
+some of the broken tracks:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/bNQbhyC7etU" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>The tin plating actually went quite well although admittedly it&rsquo;s not a cheap product but it does make the PCB
+look good and protects the copper. I could probably have done with leaving the board in a bit longer than I
+actually did as the tin will thicken up the longer you leave it (to a point) but I was happy enough with the
+result.</p>
+<p>Later on in the video I get the multimeter out and give the traces on the PCB a test. As expected
+there&rsquo;s quite a few tracks broken either where the toner didn&rsquo;t transfer properly or where I scrubbed the
+resist away with my manic sponging. I always remember the &lsquo;measure twice cut once&rsquo; adage when working with
+wood and there&rsquo;s a parallel in making PCBs &hellip; you can always etch more copper away but you can&rsquo;t put it back
+on the board. That&rsquo;s painfully apparent as I try &lsquo;repairing&rsquo; some of the tracks &hellip; even on this simple board.
+I think in future I&rsquo;ll try and focus on getting a good toner transfer and etch and then if there are any issues
+post-etch I&rsquo;ll just use Kynar wire to fix things up.</p>
+<p>I think at this point in the video you can probably hear in my voice that I was getting a bit
+depressed/frustrated. When things are going wrong like this you can either plough forward or start again and
+at this point I was feeling that starting again might be the best option. That&rsquo;s a difficult choice when you
+know just how much time it took to get to that point. It was around this time that I was seriously thinking
+about giving up and farming the whole thing out to a professional PCB manufacturer.</p>
+<p>I didn&rsquo;t give up though and in part 5 I move on to drilling lots and lots of tiny holes in the PCB:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/GqdT_CnAjHU" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>Actually, this part went a lot better than I was expecting especially given how wobbly my Dremel drill stand
+seemed and how notorious those tiny drill bits are for snapping. In the end I only broke one drill bit and
+given there&rsquo;s over 350 holes in that board that&rsquo;s pretty impressive. I think what really did make a difference
+here was using a centre punch so the drill would &lsquo;walk&rsquo; in to right place as it&rsquo;s really difficult to line up
+the drill bit by eye when you&rsquo;re using a 1mm drill bit. One thing that I did edit out here in the video was
+the noise the Dremel produced &hellip; I ended up popping ear plugs in after the first couple of holes as it
+really was unbearably loud.</p>
+<p>Nearly there then and at part 6 it&rsquo;s time to get soldering:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/HQw2D_RnhKk" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>In this video I use a product that I&rsquo;ve not previously heard much about &hellip; Green Coating by Bungard. It comes
+in a spray can and effectively acts as a protective layer once dry but whilst it&rsquo;s drying you can solder
+through it. That does mean you get a &lsquo;window of opportunity&rsquo; to do all your soldering and in practice I found
+it a bit sticky to work with intially. It&rsquo;s fair to say that it&rsquo;s nowhere near as good a finish as a
+professional solder resist but then again a &lsquo;proper&rsquo; solder resist doesn&rsquo;t come in a can. Actually, it is
+possible to make a descent resist at home by using the same UV technique for creating an etch resist. You can
+use either a dry film or a special paint and then you lay over a clear sheet with a laser printed design that
+blocks out UV over the pads. Once exposed you can then wash away the resist over the pads and it&rsquo;s done. I
+think if I ever use the UV method for the etch resist then it makes perfect sense to re-use that equipment and
+use the UV method for the solder resist.</p>
+<p>Something that doesn&rsquo;t go too well in this soldering video is the, erm, soldering. I end up having so many
+problems that all seem to point back to having a iron tip that&rsquo;s, frankly, beyond saving and then I notice
+I&rsquo;ve probably been working at too low a temperature. Actually, it turned out a couple of weeks later that I
+had a much bigger problem which was down to a broken wire in the soldering iron cable that&rsquo;d cause the iron
+temperature to mis-report back to the base unit. This resulted in the iron going well over/under temperature
+at any point depending how I held the iron. In the end I gave up and bought a decent soldering iron unit which
+will no doubt appear in my future videos. Soldering is now a pleasure again and my solder joints are coming
+out much better. In the video I do start blaming the Green Coat for the bad soldering but chances are it&rsquo;s all
+down to a broken soldering iron.</p>
+<p>This all leads us to the final video &hellip; part 7 &hellip; which covers testing the PCB and making some final fixes:</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/xIuX-k8bzhM" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+<p>So, with the PCB completed what have I learnt? Well, I know how to make a PCB at home and, perhaps more
+importantly, I know how not to make a PCB at home. Being fair to myself I&rsquo;m pretty sure my next DIY PCB will
+be a much tidier affair and if I&rsquo;m going to start making lots of PCBs then I&rsquo;ll likely invest in some better
+equipment which will also help. The thing is though is any of this even worth it given how cheaply you can
+get a PCB made from one of the China manufacturers? Well, it depends what your goal is. This time I really
+wanted to see if I could make a PCB from scratch and I guess that I could probably knock one out quicker than
+it&rsquo;d take one to be made professionally and shipped to me. That said though could I make a PCB that&rsquo;s more
+complex and perhaps double sided? Probably not. Could I make one that looks as good as a professionally
+produced one? Definitely not.</p>
+<p>One thing I have quite enjoyed this time was the videoing in real time, lightly editing and then pushing more
+regular content out to YouTube. I&rsquo;m hoping to continue doing this going forward letting you get a bit more of
+an insight in how I&rsquo;m building my relay computer (assuming that&rsquo;s what you were after of course). As a result
+of doing more videos I&rsquo;m also learning a bit more about video production and as I&rsquo;ve gone through the videos
+in this series you can hopefully see the camera work getting a bit less wobbly and the audio getting a bit
+more consistent. I&rsquo;ve bought some tripods and learnt not to mount the tripod on the surface that I&rsquo;m drilling
+on and I&rsquo;ve also bought a lapel mic and tried to master the volume controls in iMovie. Speaking of which, my
+next videos will likely be produced in DaVinci Resolve as I&rsquo;m getting bored of the various limitations in
+iMovie.</p>
+<p>So, what&rsquo;s next then. Well, the video series does rather abruptly end before the backplane is prepared for
+installing in the computer. I felt that being as this series was &lsquo;touted&rsquo; as being all about making a PCB
+then what I was about to move on to didn&rsquo;t really qualify as being about the PCB any more &hellip; it was back
+to &lsquo;business as usual&rsquo; in constructing my computer. As such, my next post will cover fitting the backplane
+in to the computer and I&rsquo;ll do an accompaning video that&rsquo;s under the banner of &lsquo;making my relay computer&rsquo;.</p>
+<p>Behind the scenes I&rsquo;ve also completed the design for the upcoming register cards and had them manufactured.
+Yup, you heard me right, I&rsquo;ve farmed it out to the professionals being as those cards are much more complicated
+and given I need three of them the five board minimum order works well for me. As you&rsquo;d no doubt expect I&rsquo;ll
+make sure I cover the design and construction of those cards in upcoming posts and videos.</p>
+<p>Finally then I should probably thank you, dear viewer, for either reading this far or watching the videos in
+this PCB series. That&rsquo;s 166 minutes over 7 videos and so if you have watched them end-to-end that&rsquo;s quite a
+comitment on your part &hellip; and if you&rsquo;ve skipped your way through them &hellip; well I can&rsquo;t say I blame you &hellip;
+I&rsquo;ve just had to watch them to write this post and I&rsquo;m thoroughly bored of my own voice now &hellip; I&rsquo;m off to
+watch some YouTube videos on kittens doing crazy things or somesuch to give my eyes/ears/mind a rest.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2019" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Mar 04, 2019</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#video" class="tags">
+              <span class="tag is-primary">video</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2019/01/change-of-approach/">A change of approach</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2019/07/16bit-register-design/">16-bit Register Design</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f&quote=Making%20a%20PCB" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f&text=Making%20a%20PCB:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f&description=Making%20a%20PCB" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f&title=Making%20a%20PCB&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Making%20a%20PCB&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2019%2f03%2fmaking-a-pcb%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

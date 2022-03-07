@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Register Construction: A and D 8-bit Registers | Relay Computer</title>
+  <meta name="description" content="I haven&rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&rsquo;ve been plodding away at the A/D register card and it&rsquo;s now finally ready for testing. The A/D register card is effectively a slightly simplified version of the previously covered B/C card and so a lot of the content in this post is going to be pretty similar. Despite this though I&rsquo;ll go through all the steps taken to construct the A/D register card for the sake of completness &hellip; primarily in photos and then with extra text where anything odd or different came up compared with the B/C card.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Register Construction: A and D 8-bit Registers" />
+<meta property="og:description" content="I haven&rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&rsquo;ve been plodding away at the A/D register card and it&rsquo;s now finally ready for testing. The A/D register card is effectively a slightly simplified version of the previously covered B/C card and so a lot of the content in this post is going to be pretty similar. Despite this though I&rsquo;ll go through all the steps taken to construct the A/D register card for the sake of completness &hellip; primarily in photos and then with extra text where anything odd or different came up compared with the B/C card." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2014/06/register-construction-and-d-8-bit/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-06-22T18:35:00+01:00" />
+<meta property="article:modified_time" content="2014-06-22T18:35:00+01:00" />
+
+<meta itemprop="name" content="Register Construction: A and D 8-bit Registers">
+<meta itemprop="description" content="I haven&rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&rsquo;ve been plodding away at the A/D register card and it&rsquo;s now finally ready for testing. The A/D register card is effectively a slightly simplified version of the previously covered B/C card and so a lot of the content in this post is going to be pretty similar. Despite this though I&rsquo;ll go through all the steps taken to construct the A/D register card for the sake of completness &hellip; primarily in photos and then with extra text where anything odd or different came up compared with the B/C card."><meta itemprop="datePublished" content="2014-06-22T18:35:00+01:00" />
+<meta itemprop="dateModified" content="2014-06-22T18:35:00+01:00" />
+<meta itemprop="wordCount" content="592">
+<meta itemprop="keywords" content="construction,registers," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Register Construction: A and D 8-bit Registers"/>
+<meta name="twitter:description" content="I haven&rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&rsquo;ve been plodding away at the A/D register card and it&rsquo;s now finally ready for testing. The A/D register card is effectively a slightly simplified version of the previously covered B/C card and so a lot of the content in this post is going to be pretty similar. Despite this though I&rsquo;ll go through all the steps taken to construct the A/D register card for the sake of completness &hellip; primarily in photos and then with extra text where anything odd or different came up compared with the B/C card."/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+<body>
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2"  src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        
+          <a href="/" class="navbar-item ">
+            Home
+          </a>
+        
+          <a href="/pages/overview/" class="navbar-item ">
+            Overview
+          </a>
+        
+          <a href="/pages/progress/" class="navbar-item ">
+            Progress
+          </a>
+        
+          <a href="/tags/" class="navbar-item ">
+            Tags
+          </a>
+        
+          <a href="/archive/" class="navbar-item ">
+            Archive
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Register Construction: A and D 8-bit Registers</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>I haven&rsquo;t posted in nearly a month but in between bouts of enjoying
+the rare British sunshine I&rsquo;ve been  plodding away at the A/D register card
+and it&rsquo;s now finally ready for testing. The A/D register card is effectively a
+slightly simplified version of the previously covered B/C card and so a lot of
+the content in this post is going to be pretty similar. Despite this though
+I&rsquo;ll go through all the steps taken to construct the A/D register card for the
+sake of completness &hellip; primarily in photos and then with extra text where
+anything odd or different came up compared with the B/C card.</p>
+<p>The
+first step was to solder down the LEDs and ribbon cable sockets. Here&rsquo;s some
+pictures, front and back, of the card following this first round of
+soldering:</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0000.jpg" alt="A/D Register Card with initial soldering completed (front)">
+<img src="/img/posts/2014/2014-06-22-0001.jpg" alt="A/D Register Card with initial soldering completed (back)">
+  
+</figure>
+
+<p>I&rsquo;ve continued the trend of applying a line of super glue
+to the board when placing the LEDs (to stop them moving about while soldering)
+and I&rsquo;ve also removed the negative wrapping post behind each LED again to make
+wiring up easier later on. Continuing the usual theme of mishaps in this area
+I&rsquo;ve had yet another go at trying to find a nice neat way of soldering up the
+cathodes on the LEDs &hellip; this time I&rsquo;ve folded the cathode leg over a piece of
+wire and then soldered it down. This seems a bit better but the solder doesn&rsquo;t
+always take that well to the wire so I&rsquo;ve had to resolder a couple of the
+joints a few times. Close up it looks like this:</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0002.jpg" alt="LED Cathode Soldering (close up)">
+<img src="/img/posts/2014/2014-06-22-0003.jpg" alt="LED Cathode Soldering (close up 2)">
+  
+</figure>
+
+<p>Following on from that the next job was to solder down the relay
+sockets and again I&rsquo;ve used the two rows of 5 pin sockets which proved
+successful on the B/C card. Front and back it looks like this:</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0004.jpg" alt="Added Relay Sockets (front)">
+<img src="/img/posts/2014/2014-06-22-0005.jpg" alt="Added Relay Sockets (back)">
+  
+</figure>
+
+<p>Next up is
+the wiring wrapping header pins &hellip;</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0006.jpg" alt="Added Wire Wrap Posts (front)">
+<img src="/img/posts/2014/2014-06-22-0007.jpg" alt="Added Wire Wrap Posts (back)">
+  
+</figure>
+
+<p>&hellip; and
+then the &lsquo;flyback&rsquo; protection diodes come in next &hellip;</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0008.jpg" alt="Added Diodes (front)">
+<img src="/img/posts/2014/2014-06-22-0009.jpg" alt="Added Diodes (back)">
+  
+</figure>
+
+<p>This final bit of
+soldering was to put down the power and ground lines on the solder side of the
+board:</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0010.jpg" alt="A/D Register Card with power and ground lines completed">
+  
+</figure>
+
+<p>This stage was pretty much consistent with previous cards
+so nothing new to mention here other than I&rsquo;d run out of black wire for the
+negative lines so I&rsquo;ve moved on to my stash of grey wire (it&rsquo;s a kind of black
+after all).</p>
+<p>With all the soldering done the final steps are to lay
+down all the wire wraps. This is done in stages by laying down each family of
+related connections then laying the next family on top of that. Here&rsquo;s four
+pictures of the wraps building up over time:</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0011.jpg" alt="A/D Register Card wire wraps stage 1">
+<img src="/img/posts/2014/2014-06-22-0012.jpg" alt="A/D Register Card wire wraps stage 2">
+<img src="/img/posts/2014/2014-06-22-0013.jpg" alt="A/D Register Card wire wraps stage 3">
+<img src="/img/posts/2014/2014-06-22-0014.jpg" alt="A/D Register Card wire wraps stage 4">
+  
+</figure>
+
+<p>The top left picture shows the first two wraps: the black internal
+connections and the red power connections. The top right picture shows the
+next two wraps: the blue data bus in/out connections and the black LED
+connections. The bottom left picture shows the green internal result
+connections wrap added and the last wrap is shown in the bottom right picture
+which is the yellow control connections.</p>
+<p>Finally here is three
+close up pictures of the final wire wraps:</p>
+<figure>
+  <img src="/img/posts/2014/2014-06-22-0015.jpg" alt="A/D Register Card (left)">
+<img src="/img/posts/2014/2014-06-22-0016.jpg" alt="A/D Register Card (middle)">
+<img src="/img/posts/2014/2014-06-22-0017.jpg" alt="A/D Register Card (right)">
+  
+</figure>
+
+<p>That&rsquo;s it for
+the main construction of this card &hellip; all I need to do now is pop in the
+relays and then give it a try. I&rsquo;ll cover testing the card in my next post and
+as usual I&rsquo;ll put up a video showing the card working although this time I&rsquo;ll
+probably just skip (in the video) to testing in the enclosure alongside the
+other cards being as the A/D register is so similar to the B/C register.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2014" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Jun 22, 2014</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#construction" class="tags">
+              <span class="tag is-primary">construction</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags#registers" class="tags">
+              <span class="tag is-primary">registers</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2014/05/register-construction-completed-b-and-c/">Register Construction: Completed B and C 8-bit Registers Full Test</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+            <span class="has-text-weight-semibold">Next Post</span><br />
+            <a href="/posts/2014/06/register-construction-completed-and-d-8/">Register Construction: Completed A and D 8-bit Registers Full Test</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
+              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="http://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+            Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f&quote=Register%20Construction%3a%20A%20and%20D%208-bit%20Registers" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f&text=Register%20Construction%3a%20A%20and%20D%208-bit%20Registers:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f&description=Register%20Construction%3a%20A%20and%20D%208-bit%20Registers" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f&title=Register%20Construction%3a%20A%20and%20D%208-bit%20Registers&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+            <a href="mailto:?subject=Register%20Construction%3a%20A%20and%20D%208-bit%20Registers&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f06%2fregister-construction-and-d-8-bit%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
