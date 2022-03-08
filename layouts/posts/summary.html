@@ -1,41 +1,36 @@
 {{ $image := .Params.thumbnail }}
 <article class="card" style="height: 100%;">
-  <div class="card-content has-background-white">
+  <div class="card-image">
+    <figure class="image" style="height:8rem; overflow:hidden;">
+      {{ with $image }}
+      <img src="{{ . }}" alt="Placeholder image">
+      {{ end }}
+    </figure>
+  </div>
+  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
     <div class="content">
-      <p class="title is-4 mb-3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
-      <div class="media">
-        <div class="media-content">
-          <div class="content">
-            <p>
-              {{ .Summary | truncate 175 }}
-              {{ with .Param "tags" }}
-              <br />
-              <small>
-                {{ range (. | sort) }}
-                <a href="/tags/{{ . | urlize }}">
-                  #{{ . }}
-                </a>
-                {{ end }}
-              </small>
-              {{ end }}
-            </p>
-            <p>
-              <a href="{{ .RelPermalink }}" class="button is-small">Read More</a>
-            </p>
-          </div>
+      <p class="subtitle is-7 mb-5">{{.Date.Format "02 Jan 2006"}} - {{ .ReadingTime }} min read</p>
+      <p class="title is-5 mb-3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+      <p>
+        {{ .Summary | truncate 175 }}
+      </p>
+      <div class="columns is-vcentered is-mobile">
+        <div class="column is-narrow">
+          <a href="{{ .RelPermalink }}" class="button is-small">Read More</a>
         </div>
-        {{ with $image }}
-        <div class="media-right">
-          <figure class="image m-0">
-            <img src="{{ $image }}" class="hpc-image">
-          </figure>
+        {{ with .Param "tags" }}
+        <div class="column" style="line-height: 1rem;">
+          <small>
+            {{ range (. | sort) }}
+            <a href="/tags/{{ . | urlize }}">
+              #{{ . }}
+            </a>
+            {{ end }}
+          </small>
         </div>
         {{ end }}
       </div>
-      <div class="tags">
-        <span class="tag is-link is-light">Published {{.Date.Format "02 Jan 2006"}} </span>
-        <span class="tag is-link is-light">{{ .ReadingTime }} min read</span>
-      </div>
+
     </div>
   </div>
 </article>

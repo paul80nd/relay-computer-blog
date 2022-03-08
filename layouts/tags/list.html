@@ -9,7 +9,7 @@
     <div class="columns is-multiline">
       {{ if .Parent.Section }}
       {{ range .Pages.ByDate.Reverse }}
-      <div class="column is-half">
+      <div class="column is-half is-one-third-widescreen">
         {{ .Render "summary" }}
       </div>
       {{ end }}
