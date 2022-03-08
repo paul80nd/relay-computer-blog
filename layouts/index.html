@@ -1,118 +1,51 @@
 {{ define "main" }}
 {{ partial "site-hero.html" . }}
 <section class="section">
-  <div class="container">
-    <div class="tile is-ancestor pull-up">
-      <div class="tile is-vertical">
-        <div class="tile">
-          <div class="tile is-parent is-4">
-            <!-- home welcome begin -->
-            <article class="card">
-              <div class="card-content">
-                <div class="content">
-                  <h3>Welcome</h3>
-                  <p>
-                    This is my blog covering the design and construction of a computer made from relays.
-                    If you're new here then a good place to start is the
-                    <a href="{{ relref . " pages/overview" }}">overview page</a>.
-                  </p>
-                  <p>
-                    The summaries also give more detail on the various aspects of the computer:
-                    <a href="{{ relref . " pages/alu" }}">ALU</a>,
-                    <a href="{{ relref . " pages/control" }}">Control</a>,
-                    <a href="{{ relref . " pages/enclosure" }}">Enclosure</a>,
-                    <a href="{{ relref . " pages/instructions" }}">Instructions</a>,
-                    <a href="{{ relref . " pages/registers" }}">Registers</a> &amp;
-                    <a href="{{ relref . " pages/ui" }}">UI</a>
-                  </p>
-                  <p>
-                    To see how far I've got check out the <a href="{{ relref . " pages/progress" }}">Progress</a> page.
-                  </p>
-                </div>
-              </div>
-            </article>
-            <!-- home welcome end -->
+  <div class="container pull-up">
+    <div class="columns">
+      <div class="column is-flex is-5 is-4-widescreen">
+        <!-- home welcome begin -->
+        <article class="card">
+          <div class="card-content">
+            <div class="content">
+              <h3>Welcome</h3>
+              <p>
+                This is my blog covering the design and construction of a computer made from relays.
+                If you're new here then a good place to start is the
+                <a href="{{ relref . " pages/overview" }}">overview page</a>.
+              </p>
+              <p>
+                The summaries also give more detail on the various aspects of the computer:
+                <a href="{{ relref . " pages/alu" }}">ALU</a>,
+                <a href="{{ relref . " pages/control" }}">Control</a>,
+                <a href="{{ relref . " pages/enclosure" }}">Enclosure</a>,
+                <a href="{{ relref . " pages/instructions" }}">Instructions</a>,
+                <a href="{{ relref . " pages/registers" }}">Registers</a> &amp;
+                <a href="{{ relref . " pages/ui" }}">UI</a>
+              </p>
+              <p>
+                To see how far I've got check out the <a href="{{ relref . " pages/progress" }}">Progress</a> page.
+              </p>
+            </div>
           </div>
-          <div class="tile is-parent">
-            {{ partial "home-spotlight" . }}
-          </div>
-        </div>
+        </article>
+        <!-- home welcome end -->
+      </div>
+      <div class="column is-flex">
+        {{ partial "home-spotlight" . }}
       </div>
     </div>
 
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical">
-        <div class="tile">
-          <div class="tile is-parent is-vertical is-7">
-            <section class="tile is-child box is-primary">
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <div class="level-item">
-                    <p class="title is-size-4">Recent posts</p>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <p class="level-item"><a href="/posts" class="button is-small is-outlined">See all posts</a>
-                  </p>
-                </div>
-              </nav>
-              <div class="columns is-multiline">
-                {{ range first 3 (after 1 .Site.RegularPages) }}
-                <div class="column is-full">
-                  {{ .Render "summary"}}
-                </div>
-                {{ end }}
-              </div>
-            </section>
-          </div>
-          <div class="tile is-parent is-vertical">
-            <div class="tile is-child box">
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <div class="level-item">
-                    <p class="title is-size-4">Common tags</p>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <p class="level-item"><a href="/tags" class="button is-small is-outlined">See all tags</a>
-                  </p>
-                </div>
-              </nav>
-              <div class="container tagcloud">
-                {{ if ne (len $.Site.Taxonomies.tags) 0 }}
-                {{ $largestFontSize := 1.4 }}
-                {{ $smallestFontSize := 1.0 }}
-                {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
-                {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
-                {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-                {{ $spread := sub $max $min }}
-                {{ $fontStep := div $fontSpread $spread }}
-                {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-                {{ $tagCount := len $taxonomy.Pages }}
-                {{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
-                {{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
-                {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
-                <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" class="tagcloud-item"
-                  style="font-size: {{ $currentFontSize }}rem;">
-                  {{ $name }}<sup>{{ $tagCount }}</sup>
-                </a>
-                {{ end }}
-                {{ end }}
-              </div>
-            </div>
-
-
-
-            <div class="tile is-child">
-
-              {{ partial "home-find-me" . }}
-            </div>
-
-          </div>
-        </div>
+    <div class="columns is-multiline">
+      {{ range first 5 (after 1 .Site.RegularPages) }}
+      <div class="column is-half is-one-third-widescreen">
+        {{ .Render "summary" }}
+      </div>
+      {{ end }}
+      <div class="column is-half is-one-third-widescreen">
+        {{ partial "home-find-me" . }}
       </div>
     </div>
-
 
   </div>
 </section>

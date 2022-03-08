@@ -1,38 +1,42 @@
 {{ range first 1 (where .Site.RegularPages "Type" "posts") }}
 {{ $image := .Params.thumbnail }}
-<article class="tile is-child card bg-img"
-  style="display: flex; flex-flow: column-reverse; {{ with $image }} background-image: url('{{ $image }}'){{end}}">
-  <div class="card-content has-background-white"
-    style="flex-basis:0; margin-top: 10em; border-top-left-radius: 0; border-top-right-radius: 0; border-top: 1px solid lightgrey">
-    <p class="subtitle">Latest Post:</p>
-    <p class="title">
+<article class="tile is-child card">
+  <div class="card-image">
+    <figure class="image" style="height:8rem; overflow:hidden;">
+      {{ with $image }}
+      <img src="{{ . }}" alt="Placeholder image">
+      {{ end }}
+    </figure>
+  </div>
+  <div class="card-content has-background-white">
+    <p class="subtitle is-7 mb-5"><b>Latest Post</b> - {{.Date.Format "02 Jan 2006"}}</p>
+    <p class="title is-4 mb-3">
       <a href="{{ .RelPermalink }}">{{.Title}}</a>
     </p>
     <div class="content">
       <p>{{ .Summary | truncate 250 }}</p>
     </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          <div class="tags">
-            <span class="tag is-link is-light">Published {{.Date.Format "02 Jan 2006"}} </span>
-            <span class="tag is-link is-light">{{ .ReadingTime }} min read</span>
-            {{ with .Param "tags" }}
-            {{ range (. | sort) }}
-            <a href="/tags#{{ . }}" class="tag is-success is-light is-rounded">
-              {{ . }}
-            </a>
-            {{ end }}
-          </div>
+    <div class="columns is-vcentered is-mobile">
+      <div class="column is-narrow">
+        <a href="{{ .RelPermalink }}" class="button">Read More</a>
+      </div>
+      <div class="column is-narrow">
+        <small class="has-text-dark">
+          {{ .ReadingTime }} min read
+        </small>
+      </div>
+      {{ with .Param "tags" }}
+      <div class="column" style="line-height: 1rem;">
+        <small>
+          {{ range (. | sort) }}
+          <a href="/tags/{{ . | urlize }}">
+            #{{ . }}
+          </a>
           {{ end }}
-        </div>
+        </small>
       </div>
-      <div class="level-right">
-        <div class="level-item has-text-right">
-          <a href="{{ .RelPermalink }}" class="button">Read More</a>
-        </div>
-      </div>
-    </nav>
+      {{ end }}
+    </div>
   </div>
 </article>
 {{ end }}
