@@ -37,7 +37,7 @@
           </div>
 
           <div style="margin-top: 2.2em;">
-            <a href="/pages/{{.summary}}.html#{{ replace .title " " ""}}{{ if isset . " version" }}-v{{ .version }}{{
+            <a href="/pages/{{.summary}}/#{{ replace .title " " ""}}{{ if isset . " version" }}-v{{ .version }}{{
               end }}{{ if isset . "derv" }}-{{ .derv }}{{ end }}">More
               Info</a>
 
