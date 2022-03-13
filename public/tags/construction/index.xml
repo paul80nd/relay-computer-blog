@@ -488,7 +488,7 @@ This part of the construction is certainly repetitive and it&amp;rsquo;s easy to
       <pubDate>Fri, 06 Dec 2013 20:51:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-wire-links/</guid>
-      <description>Before I can test all of the LEDs laid down so far (to make sure they survived the heat of the soldering iron) I need to add some wire links on the logic card between the LED anodes and the header pins. This isn&amp;rsquo;t needed on the arithmetic and control cards as they only have a single row of LEDs and so are soldered directly to the header pins but on the logic card, which has two rows of LEDs, the &amp;lsquo;negative rail&amp;rsquo; sits between the LED anodes and header pins.</description>
+      <description>Before I can test all of the LEDs laid down so far (to make sure they survived the heat of the soldering iron) I need to add some wire links on the logic card between the LED anodes and the header pins. This isn&amp;rsquo;t needed on the arithmetic and control cards as they only have a single row of LEDs and so are soldered directly to the header pins but on the logic card, which has two rows of LEDs, the &amp;rsquo;negative rail&amp;rsquo; sits between the LED anodes and header pins.</description>
     </item>
     
     <item>

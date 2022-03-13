@@ -157,7 +157,7 @@ the clock line goes high-to-low or low-to-high. Because the sequencer operates
 on each clock transition the operating speed of the computer is twice that of
 the clock &hellip; so if the clock cycles 3 times a second (3Hz) then the computer
 can perform up to 6 operations per second (6Hz). Each state produces a pulse
-Sx' that lasts one clock &lsquo;tick&rsquo; and a pulse Sx that lasts two clock &lsquo;ticks&rsquo;
+Sx&rsquo; that lasts one clock &rsquo;tick&rsquo; and a pulse Sx that lasts two clock &rsquo;ticks&rsquo;
 (one clock cycle). Diagram wise the pulses look like this:</p>
 <figure>
   <img src="/img/posts/2015/2015-01-26-0000.png" alt="Finite State Machine pulses">
@@ -169,7 +169,7 @@ further states will be needed as more complex instruction classes are
 introduced but for now the MOV-8, ALU and SETAB instructions are all operable
 under an 8-cycle FSM.</p>
 <p>The first step in designing the sequencer&rsquo;s
-FSM is to extract the &lsquo;ticks&rsquo; and &lsquo;tocks&rsquo; (like the noise an old pendulum
+FSM is to extract the &rsquo;ticks&rsquo; and &rsquo;tocks&rsquo; (like the noise an old pendulum
 clock makes) from the clock signal so that we obtain one pulse train that
 matches the clock and one that is the inverse of the clock as follows:</p>
 <figure>
@@ -263,18 +263,18 @@ other cards I&rsquo;m using relays that have two SPDT switches and building on t
 usual 55 x 40 hole pad board. Here are the relays and internal wiring for the
 8 stage FSM above:</p>
 <figure>
-  <img src="/img/posts/2015/2015-01-26-0013.png" alt="Sequencer FSM Relays &amp; Internal Links">
+  <img src="/img/posts/2015/2015-01-26-0013.png" alt="Sequencer FSM Relays &amp;amp; Internal Links">
   
   <figcaption markdown="span">Sequencer FSM Relays &amp; Internal Links (<a href="/img/posts/2015/2015-01-26-1002.png">larger</a>)</figcaption>
   
 </figure>
 
 <p>As usual I&rsquo;ll want the card to display the current state of the
-FSM so I can see what the card is up to. 8 red LEDs show states S1' through to
-S8' using the usual 12V LEDs with integral resistor. Note that only the Sx'
+FSM so I can see what the card is up to. 8 red LEDs show states S1&rsquo; through to
+S8&rsquo; using the usual 12V LEDs with integral resistor. Note that only the Sx&rsquo;
 states are shown and not the longer Sx states effectively creating a single
 light that moves across the row of LEDs. Additionally there is a yellow LED
-above S8' which shows when the ABORT8 signal is set thereby marking the point
+above S8&rsquo; which shows when the ABORT8 signal is set thereby marking the point
 where the FSM will reset. Diagram wise it looks like this:</p>
 <figure>
   <img src="/img/posts/2015/2015-01-26-0014.png" alt="FSM LEDs">

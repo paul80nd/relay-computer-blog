@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Sequencer Design: Schematic &amp; PCBs | Relay Computer</title>
-  <meta name="description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &lsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used.">
+  <meta name="description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &rsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used.">
   <meta name="robots" content="index, follow">
   
 
@@ -34,19 +34,19 @@
   <meta name="theme-color" content="#ffffff">
 
   <meta property="og:title" content="Sequencer Design: Schematic &amp; PCBs" />
-<meta property="og:description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &lsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used." />
+<meta property="og:description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &rsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pcb/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-11-11T03:03:00+00:00" />
 <meta property="article:modified_time" content="2019-11-11T03:03:00+00:00" />
 
 <meta itemprop="name" content="Sequencer Design: Schematic &amp; PCBs">
-<meta itemprop="description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &lsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used."><meta itemprop="datePublished" content="2019-11-11T03:03:00+00:00" />
+<meta itemprop="description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &rsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used."><meta itemprop="datePublished" content="2019-11-11T03:03:00+00:00" />
 <meta itemprop="dateModified" content="2019-11-11T03:03:00+00:00" />
 <meta itemprop="wordCount" content="1025">
 <meta itemprop="keywords" content="sequencing,design," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sequencer Design: Schematic &amp; PCBs"/>
-<meta name="twitter:description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &lsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used."/>
+<meta name="twitter:description" content="I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &rsquo;two card job&rsquo; is purely down to the number of relays I&rsquo;ve used."/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
@@ -141,11 +141,11 @@ if (!doNotTrack) {
         <div class="content">
           <p>I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring
 the schematics together and then design the PCBs &hellip; and yup, that&rsquo;s PCBs plural as this is going to be another part of the
-computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &lsquo;two card
+computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &rsquo;two card
 job&rsquo; is purely down to the number of relays I&rsquo;ve used. In this case the total comes to 60 and if you&rsquo;re really packing
 them in (6 rows of 8 relays) you can just about get away with a maximum of 48 per card.</p>
 <p>So, two cards it is. The other choice is deciding where to split the design (i.e. what goes on the &lsquo;upper&rsquo; card and what on
-the &lsquo;lower&rsquo;). In this case it seems sensible to place the 8, 10 and 12 cycles plus derived pulses on the lower card and
+the &rsquo;lower&rsquo;). In this case it seems sensible to place the 8, 10 and 12 cycles plus derived pulses on the lower card and
 then the remaining 14 and 24 cycles on the upper card. The other consideration is fitting the status LEDs on the front of
 the cards (and splitting this way fits nicely) and then what signals need to pass between upper and lower cards.</p>
 <p>Given I&rsquo;ve already introduced the FSM and pulse distribution schematics in my last posts I&rsquo;ll cut straight to the chase and

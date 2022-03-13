@@ -197,9 +197,9 @@ you will hopefully have seen in one of my many videos on
 <a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA?view_as=subscriber">YouTube</a> all
 of the blue and grey switches above are momentary and return to their
 positions pictured above. It&rsquo;s the blue switches we&rsquo;re concentrating on in
-this post and the first two can be pressed up or down to get the &lsquo;next&rsquo; and
-&lsquo;normal&rsquo; versions respectively of the &lsquo;deposit&rsquo; and &lsquo;exam&rsquo; operations. That
-just leaves the third blue switch which is flicked up to run the &lsquo;load
+this post and the first two can be pressed up or down to get the &rsquo;next&rsquo; and
+&rsquo;normal&rsquo; versions respectively of the &lsquo;deposit&rsquo; and &rsquo;exam&rsquo; operations. That
+just leaves the third blue switch which is flicked up to run the &rsquo;load
 address&rsquo; operation. The switches are laid out so that the more common
 operations like loading a program are nearer physically to the black primary
 switches.</p>
@@ -227,7 +227,7 @@ PC (SPC), reads the memory (MER) and then loads the instruction register
 deposit operation goes one step further and uses four control lines: select PC
 (SPC), gate switches to the data bus (SDS), gate the data bus to memory (B2M)
 and finally write to the memory (MEW).</p>
-<p>The &lsquo;next&rsquo; operations mirror
+<p>The &rsquo;next&rsquo; operations mirror
 their examine/deposit equivalents but with incrementing the program counter
 bolted on. Firstly they hit the load incrementer (LIC) whilst doing their
 operation and this makes use of the fact that the PC is already selected
@@ -240,7 +240,7 @@ designing the auxiliary controller is to look for patterns in the timing
 diagrams above and just as in the main controller we&rsquo;re looking to define
 re-usable pulses. If you look closely you can see there&rsquo;s four different and
 distinct pulses in use. Also of interest is that the first three operations
-only use two of those pulses whilst the &lsquo;next&rsquo; operations make use of all
+only use two of those pulses whilst the &rsquo;next&rsquo; operations make use of all
 four. Effectively then we&rsquo;re looking at the following:</p>
 <figure>
   <img src="/img/posts/2018/2018-01-24-0002.png" alt="Operation Pulses">

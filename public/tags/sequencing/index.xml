@@ -13,7 +13,7 @@
       <pubDate>Mon, 11 Nov 2019 03:03:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pcb/</guid>
-      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &amp;lsquo;two card job&amp;rsquo; is purely down to the number of relays I&amp;rsquo;ve used.</description>
+      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &amp;rsquo;two card job&amp;rsquo; is purely down to the number of relays I&amp;rsquo;ve used.</description>
     </item>
     
     <item>
