@@ -1,0 +1,107 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><title>User Interface: Data Switches | Relay Computer</title><meta name=description content="Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with the computer. Currently I&rsquo;m controlling the computer via a set of DIP switches which is incredibly fiddly so it&rsquo;s time to construct something &lsquo;chunkier&rsquo;.
+The switches I&rsquo;m going to concentrate on first are the primary data switches which permit values to be placed on the data bus."><meta name=robots content="noindex, nofollow"><link href=https://use.fontawesome.com/releases/v5.0.8/css/all.css rel=stylesheet><link rel=stylesheet href=/css/main.css><link rel=apple-touch-icon sizes=57x57 href=/img/favicon/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/img/favicon/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/img/favicon/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/img/favicon/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/img/favicon/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/img/favicon/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/img/favicon/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/img/favicon/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/img/favicon/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/img/favicon/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/img/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/img/favicon/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/img/favicon/favicon-16x16.png><link rel=manifest href=/img/favicon/manifest.json><meta name=msapplication-TileColor content="#ffffff"><meta name=msapplication-TileImage content="/img/favicon/ms-icon-144x144.png"><meta name=theme-color content="#ffffff"><meta property="og:title" content="User Interface: Data Switches"><meta property="og:description" content="Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with the computer. Currently I&rsquo;m controlling the computer via a set of DIP switches which is incredibly fiddly so it&rsquo;s time to construct something &lsquo;chunkier&rsquo;.
+The switches I&rsquo;m going to concentrate on first are the primary data switches which permit values to be placed on the data bus."><meta property="og:type" content="article"><meta property="og:url" content="https://relaycomputer.co.uk/posts/2014/07/user-interface-data-switches/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-07-05T09:40:00+01:00"><meta property="article:modified_time" content="2014-07-05T09:40:00+01:00"><meta itemprop=name content="User Interface: Data Switches"><meta itemprop=description content="Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with the computer. Currently I&rsquo;m controlling the computer via a set of DIP switches which is incredibly fiddly so it&rsquo;s time to construct something &lsquo;chunkier&rsquo;.
+The switches I&rsquo;m going to concentrate on first are the primary data switches which permit values to be placed on the data bus."><meta itemprop=datePublished content="2014-07-05T09:40:00+01:00"><meta itemprop=dateModified content="2014-07-05T09:40:00+01:00"><meta itemprop=wordCount content="1168"><meta itemprop=keywords content="design,construction,UI,"><meta name=twitter:card content="summary"><meta name=twitter:title content="User Interface: Data Switches"><meta name=twitter:description content="Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with the computer. Currently I&rsquo;m controlling the computer via a set of DIP switches which is incredibly fiddly so it&rsquo;s time to construct something &lsquo;chunkier&rsquo;.
+The switches I&rsquo;m going to concentrate on first are the primary data switches which permit values to be placed on the data bus."><link rel=stylesheet type=text/css href=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css><script src=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js data-cfasync=false></script>
+<script>window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},theme:"edgeless"})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-47484999-2","auto"),ga("send","pageview"))</script></head><body><nav class="navbar is-primary" role=navigation aria-label="main navigation"><div class=container><div class=navbar-brand><a href=/ class="navbar-item has-text-weight-semibold"><img class=mr-2 src=/img/favicon/favicon-96x96.png width=32>
+Relay Computer</a>
+<a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarBasicExample><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu><div class=navbar-end><a href=/ class=navbar-item>Home</a>
+<a href=/pages/overview/ class=navbar-item>Overview</a>
+<a href=/pages/progress/ class=navbar-item>Progress</a>
+<a href=/posts/ class="navbar-item is-active">Posts</a>
+<a href=/tags/ class=navbar-item>Tags</a></div></div></div></nav><section class="hero is-bold is-small is-primary"><div class="hero-body pb-3 pt-4"><div class=container><h1 class="title is-size-4">User Interface: Data Switches</h1><h2 class=subtitle></h2></div></div></section><section class="section has-background-white"><div class=container><div class=columns><div class="column is-three-quarters-widescreen"><div class=content><p>Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a
+short break from card building and turn my attention to making it easier to
+interact with the computer. Currently I&rsquo;m controlling the computer via a set
+of DIP switches which is incredibly fiddly so it&rsquo;s time to construct something
+&lsquo;chunkier&rsquo;.</p><p>The switches I&rsquo;m going to concentrate on first are the
+primary data switches which permit values to be placed on the data bus. These
+switches won&rsquo;t be directly connected to the data however because as a user
+you&rsquo;d have to keep turning them all off so the computer can use the bus &mldr;
+instead I&rsquo;ll build a gating circuit so the value on the switches can be placed
+on and off the bus as needed. Additionally the gating circuit will also allow
+the values on the switches to be gated over to the lower 8 bits of the 16 bit
+address bus. This will allow the quick setting of addresses once the computer
+gains its memory card and register. I was originally thinking of having a
+separate set of 16 switches for setting the address bus but decided in the end
+that I didn&rsquo;t want to use the space up for something I didn&rsquo;t think would get
+used that much. The upshot of this is that to set the upper 8 bits of the
+address bus requires gating the switches to the data bus and then loading the
+higher 8 bits on one of the 16 bit registers (like the upcoming M2, Y and J2
+registers). That said, at the moment everything is manual until I build the
+data and address load circuitry so for now gating the switches on to the data
+bus would always be followed by a manual register load operation.</p><p>As for the style of switch I&rsquo;m going to use &mldr; I&rsquo;ve known exactly what I&rsquo;m
+after ever since seeing the control panel of a
+<a href=http://en.wikipedia.org/wiki/PDP-11>PDP-11</a> &mldr; the
+biggest, chunkiest paddle switches. Although &lsquo;other manufacturers are
+available&rsquo; I&rsquo;ve settled on using switches from NKK in this computer and these
+in particular are from their &lsquo;M&rsquo; series:</p><figure><img src=/img/posts/2014/2014-07-05-0000.jpg alt="Switch Bar (from above)">
+<img src=/img/posts/2014/2014-07-05-0001.jpg alt="Switch Bar (side view)"></figure><p>The data
+switches are on the left in the top picture &mldr; the set of eight black
+switches. I&rsquo;ll leave the remaining switches for a later post but in summary
+these will control run/stop/reset/restart/clock-step and operate the
+load/deposit/examine functions. Each data switch is a SPDT and is stable in
+either the up or down position. I&rsquo;ll be wiring these up so that when the
+paddle is down it represents a 0 and when up a 1 (which is fairly standard for
+&lsquo;flicky-switchy&rsquo; computers).</p><p>I&rsquo;ve mounted all the switches on two
+aluminium channels which are strong, lightweight and allegedly easy to
+machine/drill. On that point it took me several attempts and lots wasted
+channel and bleeding fingers before I attained knowledge of how to drill
+aluminium properly &mldr; which has also led to my favourite purchase of the year
+so far &mldr; (don&rsquo;t laugh) &mldr; an automatic centre punch. Drilling is so much
+easier when the drill bit doesn&rsquo;t go wandering around. Other than the
+essential centre punch I&rsquo;d highly recommend lots of lubrication, a clamp/vice
+and not using a Dremel (it&rsquo;s too fast even on the lowest setting) (in the end
+a cheap drill I got from Homebase for £15 has been perfect for the job). After
+several attempts I managed to drill some clean and precise holes so I could
+then install the switches:</p><figure><img src=/img/posts/2014/2014-07-05-0002.jpg alt="Switch Bar (back view)"></figure><p>Each switch is
+held in place with an M3 screw and matching nut. I intentionally positioned
+the channel facing outwards so that it&rsquo;s easier to hold the nut when doing up
+the screw. Additionally visible here are the two M4 holes which will connect
+this switch bar to an upright channel and then to the enclosure from there.
+With the switches in place I can now drop over the laser cut acrylic panel and
+surprisingly (see, no confidence in my machining skills) it fits nicely and
+doesn&rsquo;t snag any of the switches:</p><figure><img src=/img/posts/2014/2014-07-05-0003.jpg alt="Switch Bar with Panel"></figure><p>With the switches
+all securely fixed in place I then moved on to wiring them up. Embarrassingly
+(I&rsquo;m too honest on here) I wired them upside down to begin with so on was off
+and off was on &mldr; my own fault for not testing how the switches work with the
+multimeter first. Rather than unpick the soldering I just turned the whole set
+of eight switches 180 degrees and refastened them to the aluminium channel. In
+the end it looks like this:</p><figure><img src=/img/posts/2014/2014-07-05-0004.jpg alt="Switch Bar with wiring"></figure><p>The switches
+have a common power supply and then each feeds back down the ribbon cable to
+the header pin socket at the end. These are crimp sockets and are another
+fiddly tedious job to endure.</p><p>As mentioned at the top of this post
+I can&rsquo;t just connect these switches directly to the data bus as it would block
+it from use by the computer itself so what is needed is some gating circuitry.
+This is relatively simple and very similar to the gating circuitry used
+elsewhere in the computer. Here&rsquo;s the schematic for it:</p><figure><img src=/img/posts/2014/2014-07-05-0005.png alt="Switch Control circuit"><figcaption markdown=span>Switch Control circuit (<a href=/img/posts/2014/2014-07-05-1000.png>larger</a>)</figcaption></figure><p>Most of this is
+hopefully self explanatory (if you&rsquo;re accustomed to my schematic style) but
+effectively the switches are routed through two sets of relays. The top set
+gate on to the lower eight bits of the address bus and the lower set of relays
+gate on to the data bus. For testing purposes there&rsquo;s two tactile switches to
+operate each set of relays. Something new is the Vd line on the power supply
+which only supplies power when the computer is in a &lsquo;diagnostic&rsquo; mode. This
+mode enables functions that are only used for debugging and in this particular
+case the computer will eventually be able to gate these switches itself when
+it wants what&rsquo;s on them but for now it&rsquo;s all manual.</p><p>You might
+notice there&rsquo;s an enticing amount of space left on the upper part of this card
+and of course there is something planned for this space but I&rsquo;ll hold that
+back for a later post &mldr; needless to say this card will be full when it&rsquo;s
+finally complete. As with previous schematics you can find a version <a href=/pdf/aux-switch-ctrl-1.pdf>here in PDF format</a> should you want to
+take a very close up look at it.</p><p>Construction of this circuit was
+fairly quick and done more or less in a single evening. There&rsquo;s nothing
+special to mention here so I&rsquo;ll move swiftly on to some pictures of it in it&rsquo;s
+almost finished state (just needs the relays popping in):</p><figure><img src=/img/posts/2014/2014-07-05-0006.jpg alt="Aux Switch Control Card">
+<img src=/img/posts/2014/2014-07-05-0007.jpg alt="Aux Switch Control Card (close up)"></figure><p>I&rsquo;ll
+give the control card and switches a whirl at some point over the weekend and
+then I&rsquo;ll mount them in to the upper enclosure which I&rsquo;m now ready to start
+building as I&rsquo;ve received all the cut aluminium profile. Following that I want
+to take the first steps on constructing the two display boards which also sit
+in the upper enclosure. As always I&rsquo;ll post progress on here in due course.</p></div><div class="field is-grouped is-grouped-multiline"><div class=control><a href=/archive#2014 class="tags has-addons"><span class="tag is-link">Published</span>
+<span class="tag is-info">Jul 05, 2014</span></a></div><div class=control><a href=/tags#construction class=tags><span class="tag is-primary">construction</span></a></div><div class=control><a href=/tags#design class=tags><span class="tag is-primary">design</span></a></div><div class=control><a href=/tags#UI class=tags><span class="tag is-primary">UI</span></a></div></div><div class=columns><div class=column><span class=has-text-weight-semibold>Previous Post</span><br><a href=/posts/2014/06/register-construction-completed-and-d-8/>Register Construction: Completed A and D 8-bit Registers Full Test</a></div><div class="column has-text-right"><span class=has-text-weight-semibold>Next Post</span><br><a href=/posts/2014/07/user-interface-display-initial-design/>User Interface: Display A Initial Design and Construction</a></div></div></div></div></div></section><section class="hero is-small is-success"><div class="hero-body py-1"></div></section><footer class="footer pt-5"><div class=container><div class=columns><div class=column><p class=has-text-weight-semibold>On this blog</p><p><a href=https://relaycomputer.co.uk/>Home</a></p><p><a href=https://relaycomputer.co.uk/posts/>Posts</a></p><p><a href=https://relaycomputer.co.uk/tags/>Tags</a></p><p><a href=https://relaycomputer.co.uk/pages/progress/>Progress</a></p></div><div class=column><p class=has-text-weight-semibold>Related sites</p><p><a href=https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p><p><a href=https://github.com/paul80nd><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p><p><a href=http://simulator.relaycomputer.co.uk><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+Simulator</a></p></div><div class=column><p class=has-text-weight-semibold>Share this page</p><p><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f&quote=User%20Interface%3a%20Data%20Switches" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden=true></i><span class=sr-only>Share on Facebook</span></a>
+<a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f&text=User%20Interface%3a%20Data%20Switches:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f" target=_blank title=Tweet><i class="fab fa-twitter-square fa-2x" aria-hidden=true></i><span class=sr-only>Tweet</span></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f&description=User%20Interface%3a%20Data%20Switches" target=_blank title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden=true></i><span class=sr-only>Pin it</span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f&title=User%20Interface%3a%20Data%20Switches&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden=true></i><span class=sr-only>Share on LinkedIn</span></a>
+<a href="mailto:?subject=User%20Interface%3a%20Data%20Switches&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f07%2fuser-interface-data-switches%2f" target=_blank title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden=true></i><span class=sr-only>Send email</span></a></p></div></div></div></footer></body></html>

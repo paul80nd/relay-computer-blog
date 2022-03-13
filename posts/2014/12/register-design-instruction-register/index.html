@@ -1,0 +1,100 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><title>Register Design: Instruction Register | Relay Computer</title><meta name=description content="Well, it&rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &mldr; and that&rsquo;s mainly because &lsquo;decorating&rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &mldr; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer."><meta name=robots content="noindex, nofollow"><link href=https://use.fontawesome.com/releases/v5.0.8/css/all.css rel=stylesheet><link rel=stylesheet href=/css/main.css><link rel=apple-touch-icon sizes=57x57 href=/img/favicon/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/img/favicon/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/img/favicon/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/img/favicon/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/img/favicon/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/img/favicon/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/img/favicon/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/img/favicon/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/img/favicon/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/img/favicon/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/img/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/img/favicon/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/img/favicon/favicon-16x16.png><link rel=manifest href=/img/favicon/manifest.json><meta name=msapplication-TileColor content="#ffffff"><meta name=msapplication-TileImage content="/img/favicon/ms-icon-144x144.png"><meta name=theme-color content="#ffffff"><meta property="og:title" content="Register Design: Instruction Register"><meta property="og:description" content="Well, it&rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &mldr; and that&rsquo;s mainly because &lsquo;decorating&rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &mldr; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer."><meta property="og:type" content="article"><meta property="og:url" content="https://relaycomputer.co.uk/posts/2014/12/register-design-instruction-register/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-12-01T21:00:00+00:00"><meta property="article:modified_time" content="2014-12-01T21:00:00+00:00"><meta itemprop=name content="Register Design: Instruction Register"><meta itemprop=description content="Well, it&rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &mldr; and that&rsquo;s mainly because &lsquo;decorating&rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &mldr; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer."><meta itemprop=datePublished content="2014-12-01T21:00:00+00:00"><meta itemprop=dateModified content="2014-12-01T21:00:00+00:00"><meta itemprop=wordCount content="1199"><meta itemprop=keywords content="design,registers,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Register Design: Instruction Register"><meta name=twitter:description content="Well, it&rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &mldr; and that&rsquo;s mainly because &lsquo;decorating&rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &mldr; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer."><link rel=stylesheet type=text/css href=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css><script src=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js data-cfasync=false></script>
+<script>window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},theme:"edgeless"})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-47484999-2","auto"),ga("send","pageview"))</script></head><body><nav class="navbar is-primary" role=navigation aria-label="main navigation"><div class=container><div class=navbar-brand><a href=/ class="navbar-item has-text-weight-semibold"><img class=mr-2 src=/img/favicon/favicon-96x96.png width=32>
+Relay Computer</a>
+<a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarBasicExample><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu><div class=navbar-end><a href=/ class=navbar-item>Home</a>
+<a href=/pages/overview/ class=navbar-item>Overview</a>
+<a href=/pages/progress/ class=navbar-item>Progress</a>
+<a href=/posts/ class="navbar-item is-active">Posts</a>
+<a href=/tags/ class=navbar-item>Tags</a></div></div></div></nav><section class="hero is-bold is-small is-primary"><div class="hero-body pb-3 pt-4"><div class=container><h1 class="title is-size-4">Register Design: Instruction Register</h1><h2 class=subtitle></h2></div></div></section><section class="section has-background-white"><div class=container><div class=columns><div class="column is-three-quarters-widescreen"><div class=content><p>Well, it&rsquo;s fair to say that I rather underestimated just how much time
+decorating the new house would take up &mldr; and that&rsquo;s mainly because
+&lsquo;decorating&rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &mldr;
+all before I got anywhere near choosing a tasteful shade of emulsion for the
+walls. Needless to say then that spending time on my relay computer has
+suffered quite a bit. However, things are starting to calm down (now that
+there&rsquo;s two rooms in the house that are semi-habitable) so I can get back to
+designing the next bits for the computer.</p><p>The next card up for
+design is the (mercifully straightforward) 8-bit instruction register. I say
+straightforward as this card shares much of its design with the B/C register
+card already constructed. The instruction register is permanently connected to
+the instruction bus just as the B/C registers are permanently connected to the
+ALU. However where the B/C registers are general purpose, and so can be set
+from and selected to the data bus, the instruction register can only be read
+from the data bus.</p><p>So, as I&rsquo;ve done in previous design posts, I&rsquo;ll
+start with a card schematic of what the main bit relays look like for the
+8-bit instruction register when placed on the usual 55 x 40 hole pad board
+(excluding wire links):</p><figure><img src=/img/posts/2014/2014-12-01-0000.png alt="8 bit register relays"><figcaption markdown=span>8 bit register relays (<a href=/img/posts/2014/2014-12-01-1000.png>larger</a>)</figcaption></figure><p>Each of the
+relays above stores a single 1-bit value so there&rsquo;s 8-bits worth in total.
+Each of the bit relays need gating from the data bus so the register can be
+loaded when required. With these additional control and gating relays added we
+get the following (this time including internal wire links in the 1-bit
+register relays and result links between the 1-bit register relays and the
+gating relays):</p><figure><img src=/img/posts/2014/2014-12-01-0001.png alt="8-bit register relays + gating relays"><figcaption markdown=span>8-bit register relays + gating relays (<a href=/img/posts/2014/2014-12-01-1001.png>larger</a>)</figcaption></figure><p>Additionally on the schematic above you can see there&rsquo;s an extra
+diode per register bit relay — this is where the register bit permanently
+feeds the instruction bus and the diode ensures that the bus can&rsquo;t
+accidentally back-feed into a bit relay. Actually, in this case, if the diodes
+weren&rsquo;t there and back-feed did occur then the only effect would be a garbled
+LED display due to display of the real register value combined with the
+back-fed value. As things currently stand the instruction bus is only driven
+by this register and would never be in a position to back-feed anyway but the
+diode ensures this register card protects itself from any outside influences.
+There is, of course, a voltage drop across the diode to keep an eye on when I
+get to the design of the control card which will use further diodes to make up
+some of the combinatorial logic &mldr; the risk being that if the voltage drops
+too low any target relays may fail to switch properly. The relays I&rsquo;m using
+(TE Connectivity <a href=http://www.mouser.com/ds/2/418/NG_SS_108-98002_W_P2-196265.pdf>V23079A2003B301</a>) are 12V but the coil can operate as low
+as 9V so given the 1V drop of the 1N4148 diodes I&rsquo;m using I should be able to
+safely get 2 diodes in line before things get dicey. If I do get in trouble
+later I can either pop in a &lsquo;relay&rsquo; relay downstream to pass the signal on and
+get the voltage back up to 12V or I can wire link over the diodes on this card
+and accept the risk of back-feed.</p><p>Relay wise that&rsquo;s it for this
+card. As with all the register cards designed so far I&rsquo;d like to display the
+current value being stored in the register (even though the same value is
+always present on the instruction bus). This allows me to confirm correct
+operation and test/debug the card independently. For this 9 LEDs are needed
+&mldr; 8 for the bit register values and 1 to show when the register is being
+loaded from the data bus. The LEDs are the same 12V ones used in all the
+previous cards (with an integral resister). Colour wise I&rsquo;m continuing with
+the theme of red for a bit value and yellow for control signals. Diagram wise
+it looks like this:</p><figure><img src=/img/posts/2014/2014-12-01-0002.png alt="Register LEDs"><figcaption markdown=span>Register LEDs (<a href=/img/posts/2014/2014-12-01-1002.png>larger</a>)</figcaption></figure><p>Each block in the diagram
+represents a single 3mm LED in a plastic holder with each LED pushed into the
+holder from the front and the pair of LED legs then bent at 90 degrees.</p><p>Next up is the connections to other parts of the computer and there&rsquo;s
+something new this time. All the cards designed so far have been marked &rsquo;type
+Z&rsquo; and they share a common set of connectors on the back of the card such that
+Z cards can talk to each other directly as needed. There are five Z cards
+which fit in to the corresponding Z backplane that sits in the lower left bay
+of the enclosure. The instruction register card requires slightly different
+connections (like the instruction bus) and doesn&rsquo;t need some of the Z
+connections (like the B/C bus) so this card will be a new &rsquo;type X&rsquo; card. As
+you might expect X cards can talk directly to other X cards via a new X
+backplane and the X and Z backplanes have their common connections (like the
+data bus) hooked up together to allow them to talk to each other.</p><p>The &lsquo;X&rsquo; connections consist of the 8-bit data bus, 16-bit address bus (to be
+used by future X cards), 8-bit instruction bus, power connections and finally
+the control signals to load this register. The diagram of the connectors look
+like this:</p><figure><img src=/img/posts/2014/2014-12-01-0003.png alt="Instruction Register Connections"><figcaption markdown=span>Instruction Register Connections (<a href=/img/posts/2014/2014-12-01-1003.png>larger</a>)</figcaption></figure><p>This shows the four right angled boxed headers — from left to
+right these are: 10+10 control lines, 8+8 address bus, 8+8 data and
+instruction bus and finally 5+5 power lines. On the control connector the
+lines marked &lsquo;***&rsquo; are lines that will be used by future &lsquo;X type&rsquo; cards and
+the lines marked &lsquo;&mdash;&rsquo; are unused/spare. The lines on each connector are as
+follows:</p><ul><li>Ctrl-X (Control Line Bus)<ul><li>LIN &mldr; Instruction Register Load</li></ul></li><li>A-Bus<ul><li>A0-AF &mldr; 16-bit Address Bus</li></ul></li><li>D/I-Bus (Data Bus + Instruction Bus)<ul><li>D0-D7 &mldr; 8-bit Data Bus</li><li>I0-I7 &mldr; 8-bit Instruction Bus</li></ul></li></ul><p>So, finally, wiring everything together we get the
+following:</p><figure><img src=/img/posts/2014/2014-12-01-0004.png alt="Complete Instruction Register"><figcaption markdown=span>Complete Instruction Register (<a href=/img/posts/2014/2014-12-01-1004.png>larger</a>)</figcaption></figure><p>This
+diagram includes everything mentioned so far along with the power supply and
+ground lines and all other internal wiring. As with previous cards, the
+completed instruction register design can be found <a href=/pdf/register-in-1.pdf>here in PDF format</a> (so you can zoom right in on the
+detail).</p><p>So, that&rsquo;s the instruction register all designed and ready
+for construction however as I&rsquo;ve still not got anywhere suitable for soldering
+in the house just yet that&rsquo;ll be on hold for a bit. In the meanwhile though
+there&rsquo;s plenty more cards to design and the next one in line is the decoder.
+This card will take the value on the instruction bus and decode what class of
+instruction that value represents. Following that card I&rsquo;ll design the
+sequencer and control cards introduced in my last post. When all of that is
+done it&rsquo;ll finally be time to get constructing and put together these four
+cards which will get the computer to the stage where a single instruction can
+be performed fully by manually pulsing the clock line.</p></div><div class="field is-grouped is-grouped-multiline"><div class=control><a href=/archive#2014 class="tags has-addons"><span class="tag is-link">Published</span>
+<span class="tag is-info">Dec 01, 2014</span></a></div><div class=control><a href=/tags#design class=tags><span class="tag is-primary">design</span></a></div><div class=control><a href=/tags#registers class=tags><span class="tag is-primary">registers</span></a></div></div><div class=columns><div class=column><span class=has-text-weight-semibold>Previous Post</span><br><a href=/posts/2014/09/sequencing-control-design-overview/>Sequencing & Control Design: Overview</a></div><div class="column has-text-right"><span class=has-text-weight-semibold>Next Post</span><br><a href=/posts/2015/01/decoder-design-mov-8-alu-setab/>Decoder Design: MOV-8, ALU & SETAB</a></div></div></div></div></div></section><section class="hero is-small is-success"><div class="hero-body py-1"></div></section><footer class="footer pt-5"><div class=container><div class=columns><div class=column><p class=has-text-weight-semibold>On this blog</p><p><a href=https://relaycomputer.co.uk/>Home</a></p><p><a href=https://relaycomputer.co.uk/posts/>Posts</a></p><p><a href=https://relaycomputer.co.uk/tags/>Tags</a></p><p><a href=https://relaycomputer.co.uk/pages/progress/>Progress</a></p></div><div class=column><p class=has-text-weight-semibold>Related sites</p><p><a href=https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p><p><a href=https://github.com/paul80nd><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p><p><a href=http://simulator.relaycomputer.co.uk><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+Simulator</a></p></div><div class=column><p class=has-text-weight-semibold>Share this page</p><p><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f&quote=Register%20Design%3a%20Instruction%20Register" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden=true></i><span class=sr-only>Share on Facebook</span></a>
+<a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f&text=Register%20Design%3a%20Instruction%20Register:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f" target=_blank title=Tweet><i class="fab fa-twitter-square fa-2x" aria-hidden=true></i><span class=sr-only>Tweet</span></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f&description=Register%20Design%3a%20Instruction%20Register" target=_blank title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden=true></i><span class=sr-only>Pin it</span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f&title=Register%20Design%3a%20Instruction%20Register&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden=true></i><span class=sr-only>Share on LinkedIn</span></a>
+<a href="mailto:?subject=Register%20Design%3a%20Instruction%20Register&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2014%2f12%2fregister-design-instruction-register%2f" target=_blank title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden=true></i><span class=sr-only>Send email</span></a></p></div></div></div></footer></body></html>

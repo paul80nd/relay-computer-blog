@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://relaycomputer.co.uk/sitemap.xml

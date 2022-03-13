@@ -1,0 +1,101 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><title>Auxiliary Control Design (Part 1 of 3) | Relay Computer</title><meta name=description content="My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&rsquo;s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired &lsquo;opcode&rsquo;, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that&rsquo;s four buttons to press simultaneously."><meta name=robots content="noindex, nofollow"><link href=https://use.fontawesome.com/releases/v5.0.8/css/all.css rel=stylesheet><link rel=stylesheet href=/css/main.css><link rel=apple-touch-icon sizes=57x57 href=/img/favicon/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/img/favicon/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/img/favicon/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/img/favicon/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/img/favicon/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/img/favicon/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/img/favicon/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/img/favicon/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/img/favicon/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/img/favicon/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/img/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/img/favicon/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/img/favicon/favicon-16x16.png><link rel=manifest href=/img/favicon/manifest.json><meta name=msapplication-TileColor content="#ffffff"><meta name=msapplication-TileImage content="/img/favicon/ms-icon-144x144.png"><meta name=theme-color content="#ffffff"><meta property="og:title" content="Auxiliary Control Design (Part 1 of 3)"><meta property="og:description" content="My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&rsquo;s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired &lsquo;opcode&rsquo;, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that&rsquo;s four buttons to press simultaneously."><meta property="og:type" content="article"><meta property="og:url" content="https://relaycomputer.co.uk/posts/2018/01/auxiliary-control-design-part-1-of-3/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2018-01-24T21:24:00+00:00"><meta property="article:modified_time" content="2018-01-24T21:24:00+00:00"><meta itemprop=name content="Auxiliary Control Design (Part 1 of 3)"><meta itemprop=description content="My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&rsquo;s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired &lsquo;opcode&rsquo;, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that&rsquo;s four buttons to press simultaneously."><meta itemprop=datePublished content="2018-01-24T21:24:00+00:00"><meta itemprop=dateModified content="2018-01-24T21:24:00+00:00"><meta itemprop=wordCount content="1097"><meta itemprop=keywords content="sequencing,design,control,UI,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Auxiliary Control Design (Part 1 of 3)"><meta name=twitter:description content="My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&rsquo;s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired &lsquo;opcode&rsquo;, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that&rsquo;s four buttons to press simultaneously."><link rel=stylesheet type=text/css href=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css><script src=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js data-cfasync=false></script>
+<script>window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},theme:"edgeless"})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-47484999-2","auto"),ga("send","pageview"))</script></head><body><nav class="navbar is-primary" role=navigation aria-label="main navigation"><div class=container><div class=navbar-brand><a href=/ class="navbar-item has-text-weight-semibold"><img class=mr-2 src=/img/favicon/favicon-96x96.png width=32>
+Relay Computer</a>
+<a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarBasicExample><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu><div class=navbar-end><a href=/ class=navbar-item>Home</a>
+<a href=/pages/overview/ class=navbar-item>Overview</a>
+<a href=/pages/progress/ class=navbar-item>Progress</a>
+<a href=/posts/ class="navbar-item is-active">Posts</a>
+<a href=/tags/ class=navbar-item>Tags</a></div></div></div></nav><section class="hero is-bold is-small is-primary"><div class="hero-body pb-3 pt-4"><div class=container><h1 class="title is-size-4">Auxiliary Control Design (Part 1 of 3)</h1><h2 class=subtitle></h2></div></div></section><section class="section has-background-white"><div class=container><div class=columns><div class="column is-three-quarters-widescreen"><div class=content><p>My relay computer is now at the point where it can execute a program in memory
+without assistance. In order to do that though, of course, the program needs
+to be loaded into memory in the first place and at the moment that&rsquo;s a bit of
+a pain. For each line of the program you need to set the primary data switches
+to match the desired &lsquo;opcode&rsquo;, gate the switches to the data bus, gate the
+program counter to the address bus, gate the data bus to the memory and then
+write to the memory - that&rsquo;s four buttons to press simultaneously. Once that&rsquo;s
+done the program counter needs advancing ready for the next line of the
+program via holding the select PC and load INC buttons followed by select INC
+and load PC. This cycle is repeated for each line of the program until it&rsquo;s
+all loaded into memory. Like I said, it&rsquo;s a pain and there must be a better
+way to do this.</p><p>Fortunately I don&rsquo;t have to
+look too far for inspiration of how to simplify loading programs. Effectively
+I need to fire certain control lines in a certain order. Sound familiar? Well
+it should as it&rsquo;s effectively at the heart of how the relay computer itself
+works - the controller unit does just that. So, what&rsquo;s needed is a secondary
+controller that operates independently of the main computer which handles
+these specific operations - effectively an auxiliary controller. Below are the
+operations that would be useful and therefore the ones the auxiliary
+controller should implement:</p><ul><li>Load Address: Sets
+the the program counter from the value currently on the primary switches. Note
+though that it&rsquo;s only possible to set the lower 8-bits of the PC &mldr; the upper
+8-bits would always be zeroed out. This was an early design choice around
+having 16 switches solely for loading values to the address bus or sharing 8
+switches between the data and address bus &mldr; I opted for the more compact
+option.</li><li>Examine: Loads the instruction register from the value
+held in memory at the address pointed to by the program
+counter.</li><li>Deposit: Loads the value currently on the primary
+switches into memory at the address pointed to by the program
+counter.</li><li>Examine Next: As &lsquo;Examine&rsquo; but advances the program
+counter afterwards. By repeatedly selecting this operation you could view a
+whole program to ensure it&rsquo;s been entered correctly.</li><li>Deposit Next: As &lsquo;Deposit&rsquo; but advances the program counter afterwards. By repeatedly
+selecting this operation (and changing the value on the primary switches) you
+can load a whole program in to memory ready for
+execution.</li></ul><p>The switches for these operations have actually
+been part of the computer for some time now but haven&rsquo;t been used (or they&rsquo;ve
+been directly wired to other control lines for ease of use at the time). As a
+reminder this is what they look like (across the centre of the
+picture):</p><figure><img src=/img/posts/2018/2018-01-24-0000.jpg alt="Auxiliary Control / Primary Switches"></figure><p>As
+you will hopefully have seen in one of my many videos on
+<a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA?view_as=subscriber">YouTube</a> all
+of the blue and grey switches above are momentary and return to their
+positions pictured above. It&rsquo;s the blue switches we&rsquo;re concentrating on in
+this post and the first two can be pressed up or down to get the &rsquo;next&rsquo; and
+&rsquo;normal&rsquo; versions respectively of the &lsquo;deposit&rsquo; and &rsquo;exam&rsquo; operations. That
+just leaves the third blue switch which is flicked up to run the &rsquo;load
+address&rsquo; operation. The switches are laid out so that the more common
+operations like loading a program are nearer physically to the black primary
+switches.</p><p>So, we have our switches laid out and we
+know what operations we want to perform. The next job is to decide what
+control lines we have to fire, and in what order, to implement each of the
+five desired operations. Well, on the whole, I&rsquo;ve already been doing these
+operations by hand when operating the computer via the control line buttons in
+the top left of the picture above. Effectively I just need to draw out a
+timing diagram representing what I&rsquo;ve been doing. Here that is:</p><figure><img src=/img/posts/2018/2018-01-24-0001.png alt="Auxiliary Control Timing Diagram"><figcaption markdown=span>Auxiliary Control Timing Diagram (<a href=/img/posts/2018/2018-01-24-1000.png>larger</a>)</figcaption></figure><p>The load address operation is quite simple: gate the switches to
+the address bus (SAS) and load the program counter (LPC). As always for the
+relay computer it&rsquo;s necessary to stop loading the PC (or indeed any register)
+before taking the switches off the address bus to ensure the value latches in
+to the PCs register. The examine operation is roughly similar but selects the
+PC (SPC), reads the memory (MER) and then loads the instruction register
+(LIN) - ultimately just transferring a value from one place to another. Next up the
+deposit operation goes one step further and uses four control lines: select PC
+(SPC), gate switches to the data bus (SDS), gate the data bus to memory (B2M)
+and finally write to the memory (MEW).</p><p>The &rsquo;next&rsquo; operations mirror
+their examine/deposit equivalents but with incrementing the program counter
+bolted on. Firstly they hit the load incrementer (LIC) whilst doing their
+operation and this makes use of the fact that the PC is already selected
+(SPC). With this done the incrementer register is now holding the PC value
+plus one. To get that value back in to the PC we need to select the
+incrementer (SIC) and load the PC (LPC). This is done after the main operation
+ensuring the address bus is free and available.</p><p>The next step in
+designing the auxiliary controller is to look for patterns in the timing
+diagrams above and just as in the main controller we&rsquo;re looking to define
+re-usable pulses. If you look closely you can see there&rsquo;s four different and
+distinct pulses in use. Also of interest is that the first three operations
+only use two of those pulses whilst the &rsquo;next&rsquo; operations make use of all
+four. Effectively then we&rsquo;re looking at the following:</p><figure><img src=/img/posts/2018/2018-01-24-0002.png alt="Operation Pulses"></figure><p>The four pulses are
+named AP-A, AP-B, AP-C and AP-D. AP in this case stands for &lsquo;Auxiliary Pulse&rsquo;
+in order to differentiate them from the main controller&rsquo;s pulses P-A, P-B, P-C
+and so on.</p><p>Now, in the computer itself the controller card receives
+its pulses from the sequencer which itself is then driven by the clock. It
+would probably therefore make sense to duplicate that set up here but we can
+actually simplify things a little and as it turns out we can actually take the
+pulses straight off what will become the auxiliary clock. That though is
+probably a subject in its own right and so I&rsquo;ll pick up on the auxiliary clock
+in my next post.</p></div><div class="field is-grouped is-grouped-multiline"><div class=control><a href=/archive#2018 class="tags has-addons"><span class="tag is-link">Published</span>
+<span class="tag is-info">Jan 24, 2018</span></a></div><div class=control><a href=/tags#control class=tags><span class="tag is-primary">control</span></a></div><div class=control><a href=/tags#design class=tags><span class="tag is-primary">design</span></a></div><div class=control><a href=/tags#sequencing class=tags><span class="tag is-primary">sequencing</span></a></div><div class=control><a href=/tags#UI class=tags><span class="tag is-primary">UI</span></a></div></div><div class=columns><div class=column><span class=has-text-weight-semibold>Previous Post</span><br><a href=/posts/2018/01/fetch-and-increment-construction-and/>Fetch and Increment - Construction and Test</a></div><div class="column has-text-right"><span class=has-text-weight-semibold>Next Post</span><br><a href=/posts/2018/01/auxiliary-control-design-part-2-of-3/>Auxiliary Control Design (Part 2 of 3)</a></div></div></div></div></div></section><section class="hero is-small is-success"><div class="hero-body py-1"></div></section><footer class="footer pt-5"><div class=container><div class=columns><div class=column><p class=has-text-weight-semibold>On this blog</p><p><a href=https://relaycomputer.co.uk/>Home</a></p><p><a href=https://relaycomputer.co.uk/posts/>Posts</a></p><p><a href=https://relaycomputer.co.uk/tags/>Tags</a></p><p><a href=https://relaycomputer.co.uk/pages/progress/>Progress</a></p></div><div class=column><p class=has-text-weight-semibold>Related sites</p><p><a href=https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p><p><a href=https://github.com/paul80nd><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p><p><a href=http://simulator.relaycomputer.co.uk><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+Simulator</a></p></div><div class=column><p class=has-text-weight-semibold>Share this page</p><p><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f&quote=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden=true></i><span class=sr-only>Share on Facebook</span></a>
+<a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f&text=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f" target=_blank title=Tweet><i class="fab fa-twitter-square fa-2x" aria-hidden=true></i><span class=sr-only>Tweet</span></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f&description=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29" target=_blank title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden=true></i><span class=sr-only>Pin it</span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f&title=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden=true></i><span class=sr-only>Share on LinkedIn</span></a>
+<a href="mailto:?subject=Auxiliary%20Control%20Design%20%28Part%201%20of%203%29&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2018%2f01%2fauxiliary-control-design-part-1-of-3%2f" target=_blank title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden=true></i><span class=sr-only>Send email</span></a></p></div></div></div></footer></body></html>

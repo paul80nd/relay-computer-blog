@@ -1,0 +1,97 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><title>Memory Construction (Part 2 of 2) | Relay Computer</title><meta name=description content="In my last post I made a start on the memory unit construction with the lower memory card. The lower card centres around the memory IC which runs at 5V. The upper memory card picks up the task of converting the data and address bus coming in from the rest of the computer (running at 12V) to the 5V needed by the memory IC.
+The LEDs and backplane connectors were soldered down in my last post so we can jump straight to adding the card interconnects which pass the local address/data busses to the lower card:"><meta name=robots content="noindex, nofollow"><link href=https://use.fontawesome.com/releases/v5.0.8/css/all.css rel=stylesheet><link rel=stylesheet href=/css/main.css><link rel=apple-touch-icon sizes=57x57 href=/img/favicon/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/img/favicon/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/img/favicon/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/img/favicon/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/img/favicon/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/img/favicon/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/img/favicon/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/img/favicon/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/img/favicon/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/img/favicon/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/img/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/img/favicon/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/img/favicon/favicon-16x16.png><link rel=manifest href=/img/favicon/manifest.json><meta name=msapplication-TileColor content="#ffffff"><meta name=msapplication-TileImage content="/img/favicon/ms-icon-144x144.png"><meta name=theme-color content="#ffffff"><meta property="og:title" content="Memory Construction (Part 2 of 2)"><meta property="og:description" content="In my last post I made a start on the memory unit construction with the lower memory card. The lower card centres around the memory IC which runs at 5V. The upper memory card picks up the task of converting the data and address bus coming in from the rest of the computer (running at 12V) to the 5V needed by the memory IC.
+The LEDs and backplane connectors were soldered down in my last post so we can jump straight to adding the card interconnects which pass the local address/data busses to the lower card:"><meta property="og:type" content="article"><meta property="og:url" content="https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-2-of-2/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-11-25T16:52:00+00:00"><meta property="article:modified_time" content="2017-11-25T16:52:00+00:00"><meta itemprop=name content="Memory Construction (Part 2 of 2)"><meta itemprop=description content="In my last post I made a start on the memory unit construction with the lower memory card. The lower card centres around the memory IC which runs at 5V. The upper memory card picks up the task of converting the data and address bus coming in from the rest of the computer (running at 12V) to the 5V needed by the memory IC.
+The LEDs and backplane connectors were soldered down in my last post so we can jump straight to adding the card interconnects which pass the local address/data busses to the lower card:"><meta itemprop=datePublished content="2017-11-25T16:52:00+00:00"><meta itemprop=dateModified content="2017-11-25T16:52:00+00:00"><meta itemprop=wordCount content="1017"><meta itemprop=keywords content="construction,memory,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Memory Construction (Part 2 of 2)"><meta name=twitter:description content="In my last post I made a start on the memory unit construction with the lower memory card. The lower card centres around the memory IC which runs at 5V. The upper memory card picks up the task of converting the data and address bus coming in from the rest of the computer (running at 12V) to the 5V needed by the memory IC.
+The LEDs and backplane connectors were soldered down in my last post so we can jump straight to adding the card interconnects which pass the local address/data busses to the lower card:"><link rel=stylesheet type=text/css href=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css><script src=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js data-cfasync=false></script>
+<script>window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},theme:"edgeless"})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-47484999-2","auto"),ga("send","pageview"))</script></head><body><nav class="navbar is-primary" role=navigation aria-label="main navigation"><div class=container><div class=navbar-brand><a href=/ class="navbar-item has-text-weight-semibold"><img class=mr-2 src=/img/favicon/favicon-96x96.png width=32>
+Relay Computer</a>
+<a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarBasicExample><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu><div class=navbar-end><a href=/ class=navbar-item>Home</a>
+<a href=/pages/overview/ class=navbar-item>Overview</a>
+<a href=/pages/progress/ class=navbar-item>Progress</a>
+<a href=/posts/ class="navbar-item is-active">Posts</a>
+<a href=/tags/ class=navbar-item>Tags</a></div></div></div></nav><section class="hero is-bold is-small is-primary"><div class="hero-body pb-3 pt-4"><div class=container><h1 class="title is-size-4">Memory Construction (Part 2 of 2)</h1><h2 class=subtitle></h2></div></div></section><section class="section has-background-white"><div class=container><div class=columns><div class="column is-three-quarters-widescreen"><div class=content><p>In my last post I made a start on the memory unit construction with
+the lower memory card. The lower card centres around the memory IC which runs
+at 5V. The upper memory card picks up the task of converting the data and
+address bus coming in from the rest of the computer (running at 12V) to the 5V
+needed by the memory IC.</p><p>The LEDs and backplane connectors were
+soldered down in my last post so we can jump straight to adding the card
+interconnects which pass the local address/data busses to the lower card:</p><figure><img src=/img/posts/2017/2017-11-25-0000.jpg alt="Upper memory card with added card interconnects">
+<img src=/img/posts/2017/2017-11-25-0001.jpg alt="Upper memory card with added card interconnects (rear view)">
+<img src=/img/posts/2017/2017-11-25-0002.jpg alt="Upper memory card with added card interconnects (close up of rear)"></figure><p>These interconnects mate with the matching
+sockets on the lower card and when sandwiched together the two cards form the
+memory unit.</p><p>Next job is to solder down all the relay sockets and
+wire wrap posts. In my last post I mentioned that the upper memory card is
+quite densely populated as a large number of relays are required to handle all
+the data and address bus conversion. On previous cards I&rsquo;ve soldered down two
+rows of turned pin sockets with the wire wrap posts alongside for each and
+every relay. On cards such as this it does become a bit of a fiddly and
+tedious job and so I&rsquo;m changing approach this time and having a go at
+soldering down whole rows of connectors for a group of relays. Here&rsquo;s what
+that looks like:</p><figure><img src=/img/posts/2017/2017-11-25-0003.jpg alt="New style of relay sockets (front view)">
+<img src=/img/posts/2017/2017-11-25-0004.jpg alt="New style of relay sockets (rear view)"></figure><p>As you can probably see this is slightly wasteful in terms of unused sockets
+and pins (and therefore increases the cost slightly) but I&rsquo;ve offset that
+against the time it takes to construct. In theory my time is free but my
+patience isn&rsquo;t and given this is ultimately a hobby it&rsquo;s quite right that I
+should look for more efficient ways of doing things to save boredom setting
+in. I can repeat this pattern to get the rest of the relay sockets soldered
+down:</p><figure><img src=/img/posts/2017/2017-11-25-0005.jpg alt="Upper memory card with added sockets and wire wrap posts">
+<img src=/img/posts/2017/2017-11-25-0006.jpg alt="Upper memory card with added sockets and wire wrap posts (rear view)"></figure><p>You may have noticed that there&rsquo;s no gaps left
+for the diodes that sit in front of each relay and that&rsquo;s because they&rsquo;ll be
+popped in to the sockets as well - again this simplifies the soldering.
+Looking at the picture above left you can also see there&rsquo;s a break in the rows
+about two fifths up the card and that&rsquo;s intentional so that the wire wrap can
+run across the card horizontally where needed.</p><p>On the back of the
+card (pictured above) you can also see another alternative approach - this
+time in how I&rsquo;m constructing the ground lines. On previous cards I&rsquo;ve used
+insulated wire that needs individually cutting, trimming and soldering down.
+Again, that&rsquo;s a time consuming (and increasingly tedious) job and so it&rsquo;s ripe
+for a change of approach. So, this time around I&rsquo;ve soldered bare wire down
+right across all the points that need it. This is much quicker but does run
+the risk of shorting something out although once soldered down those wires
+aren&rsquo;t going anywhere so the risk is pretty minimal. All other power lines
+still stick with the insulated wire as they cross ground wires in many places.
+Note that on this card there are two power lines: the red 12V line and the
+yellow 5V line.</p><p>With all the soldering in place it&rsquo;s time to move
+on to fitting the diodes and making a start on the wire wrap:</p><figure><img src=/img/posts/2017/2017-11-25-0007.jpg alt="Upper memory card with added diodes and initial wire wrap"></figure><p>You can now see how the diodes fit in which would make
+replacement easier in the (very) unlikely event of a component failure. The
+first round of wire wrap here brings the data bus in to the conversion relays
+such that when a line of the bus is connected to 12V the relays connect the
+output to 5V and when a line of the bus is disconnected from 12V the relays
+connect the output to the 5V ground. Let&rsquo;s complete the incoming data bus wire
+wrap:</p><figure><img src=/img/posts/2017/2017-11-25-0008.jpg alt="Upper memory card with added inbound data bus gating wire wrap"></figure><p>The converted inbound data bus lines are now
+routed through a set of gating relays so that it&rsquo;s only connected to the
+internal memory bus when we need it &mldr; and &lsquo;when we need it&rsquo; is determined by
+the &lsquo;Bus To Memory&rsquo; (B2M) control line seen here in yellow. Similarly we can
+now wire up the output data bus:</p><figure><img src=/img/posts/2017/2017-11-25-0009.jpg alt="Upper memory card with added data bus out gating wire wrap">
+<img src=/img/posts/2017/2017-11-25-0010.jpg alt="Upper memory card with added data bus out wire wrap"></figure><p>This time the green wire wrap comes off the card
+interconnects and sends the outbound memory data bus through a set of gating
+relays. This time we&rsquo;re only gating those lines when the memory is being read.
+The control wiring is set up such that B2M is vetoed when the MR (memory read)
+line is active. The outbound memory data bus is unusual in that when a
+bit is set in memory the according bus line is grounded (and is held high
+otherwise) due to the way the relay driver IC works on the lower card. This
+means that we connect the negative side of each relay to this data bus and the
+positive side to 12V (via the memory enable switch). From those &lsquo;conversion&rsquo;
+relays it&rsquo;s straight out to the computer&rsquo;s data bus.</p><p>Last wire wrap
+job is to hook up the computer&rsquo;s address bus to the local memory address
+bus:</p><figure><img src=/img/posts/2017/2017-11-25-0011.jpg alt="Upper memory card with added address bus wire wrap"></figure><p>This is very similar to the incoming data bus wire wrap in
+that we convert the connected/disconnected 12V to 5V power/ground. This time
+though no gating is required as the address bus is permanently connected to
+the memory chip and is effectively &lsquo;read only&rsquo;. Note that there are only 15
+relays because the last bit of the address bus is used to select the memory
+unit &mldr; when unset the memory unit is active and when set the memory unit
+effectively disconnects from the computer. This way you can address the full
+32,768 slots of the memory chip whilst leaving another 32,768 slots available
+for future expansion. That &lsquo;future expansion&rsquo; doesn&rsquo;t have to be more memory
+by the way &mldr; it could be a display unit or similar.</p><p>Right, let&rsquo;s
+pop the relays in and the upper memory card is complete:</p><figure><img src=/img/posts/2017/2017-11-25-0012.jpg alt="Upper memory card with added relays"></figure><p>In
+my next post I&rsquo;ll connect the upper and lower cards together thereby forming
+the memory unit as a whole and give it all a test.</p></div><div class="field is-grouped is-grouped-multiline"><div class=control><a href=/archive#2017 class="tags has-addons"><span class="tag is-link">Published</span>
+<span class="tag is-info">Nov 25, 2017</span></a></div><div class=control><a href=/tags#construction class=tags><span class="tag is-primary">construction</span></a></div><div class=control><a href=/tags#memory class=tags><span class="tag is-primary">memory</span></a></div></div><div class=columns><div class=column><span class=has-text-weight-semibold>Previous Post</span><br><a href=/posts/2017/11/memory-construction-part-1-of-2/>Memory Construction (Part 1 of 2)</a></div><div class="column has-text-right"><span class=has-text-weight-semibold>Next Post</span><br><a href=/posts/2017/11/memory-test/>Memory Test</a></div></div></div></div></div></section><section class="hero is-small is-success"><div class="hero-body py-1"></div></section><footer class="footer pt-5"><div class=container><div class=columns><div class=column><p class=has-text-weight-semibold>On this blog</p><p><a href=https://relaycomputer.co.uk/>Home</a></p><p><a href=https://relaycomputer.co.uk/posts/>Posts</a></p><p><a href=https://relaycomputer.co.uk/tags/>Tags</a></p><p><a href=https://relaycomputer.co.uk/pages/progress/>Progress</a></p></div><div class=column><p class=has-text-weight-semibold>Related sites</p><p><a href=https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p><p><a href=https://github.com/paul80nd><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p><p><a href=http://simulator.relaycomputer.co.uk><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+Simulator</a></p></div><div class=column><p class=has-text-weight-semibold>Share this page</p><p><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f&quote=Memory%20Construction%20%28Part%202%20of%202%29" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden=true></i><span class=sr-only>Share on Facebook</span></a>
+<a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f&text=Memory%20Construction%20%28Part%202%20of%202%29:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f" target=_blank title=Tweet><i class="fab fa-twitter-square fa-2x" aria-hidden=true></i><span class=sr-only>Tweet</span></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f&description=Memory%20Construction%20%28Part%202%20of%202%29" target=_blank title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden=true></i><span class=sr-only>Pin it</span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f&title=Memory%20Construction%20%28Part%202%20of%202%29&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden=true></i><span class=sr-only>Share on LinkedIn</span></a>
+<a href="mailto:?subject=Memory%20Construction%20%28Part%202%20of%202%29&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f11%2fmemory-construction-part-2-of-2%2f" target=_blank title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden=true></i><span class=sr-only>Send email</span></a></p></div></div></div></footer></body></html>

@@ -1,0 +1,132 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><title>Memory Design (Part 1 of 2) | Relay Computer</title><meta name=description content="In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &mldr; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &lsquo;complexities&rsquo; a bit.
+The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &mldr; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus."><meta name=robots content="noindex, nofollow"><link href=https://use.fontawesome.com/releases/v5.0.8/css/all.css rel=stylesheet><link rel=stylesheet href=/css/main.css><link rel=apple-touch-icon sizes=57x57 href=/img/favicon/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/img/favicon/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/img/favicon/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/img/favicon/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/img/favicon/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/img/favicon/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/img/favicon/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/img/favicon/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/img/favicon/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/img/favicon/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/img/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/img/favicon/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/img/favicon/favicon-16x16.png><link rel=manifest href=/img/favicon/manifest.json><meta name=msapplication-TileColor content="#ffffff"><meta name=msapplication-TileImage content="/img/favicon/ms-icon-144x144.png"><meta name=theme-color content="#ffffff"><meta property="og:title" content="Memory Design (Part 1 of 2)"><meta property="og:description" content="In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &mldr; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &lsquo;complexities&rsquo; a bit.
+The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &mldr; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus."><meta property="og:type" content="article"><meta property="og:url" content="https://relaycomputer.co.uk/posts/2017/09/memory-design-part-1-of-2/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-09-03T22:35:00+01:00"><meta property="article:modified_time" content="2017-09-03T22:35:00+01:00"><meta itemprop=name content="Memory Design (Part 1 of 2)"><meta itemprop=description content="In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &mldr; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &lsquo;complexities&rsquo; a bit.
+The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &mldr; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus."><meta itemprop=datePublished content="2017-09-03T22:35:00+01:00"><meta itemprop=dateModified content="2017-09-03T22:35:00+01:00"><meta itemprop=wordCount content="1577"><meta itemprop=keywords content="design,memory,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Memory Design (Part 1 of 2)"><meta name=twitter:description content="In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &mldr; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &lsquo;complexities&rsquo; a bit.
+The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &mldr; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus."><link rel=stylesheet type=text/css href=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css><script src=https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js data-cfasync=false></script>
+<script>window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},theme:"edgeless"})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-47484999-2","auto"),ga("send","pageview"))</script></head><body><nav class="navbar is-primary" role=navigation aria-label="main navigation"><div class=container><div class=navbar-brand><a href=/ class="navbar-item has-text-weight-semibold"><img class=mr-2 src=/img/favicon/favicon-96x96.png width=32>
+Relay Computer</a>
+<a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarBasicExample><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu><div class=navbar-end><a href=/ class=navbar-item>Home</a>
+<a href=/pages/overview/ class=navbar-item>Overview</a>
+<a href=/pages/progress/ class=navbar-item>Progress</a>
+<a href=/posts/ class="navbar-item is-active">Posts</a>
+<a href=/tags/ class=navbar-item>Tags</a></div></div></div></nav><section class="hero is-bold is-small is-primary"><div class="hero-body pb-3 pt-4"><div class=container><h1 class="title is-size-4">Memory Design (Part 1 of 2)</h1><h2 class=subtitle></h2></div></div></section><section class="section has-background-white"><div class=container><div class=columns><div class="column is-three-quarters-widescreen"><div class=content><p>In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip
+in my relay computer &mldr; I also alluded to there being some complexities in
+interfacing the rest of the computer with that memory chip. The memory unit
+will be spread over two cards and in this post I cover the design of the first
+half and expand on those &lsquo;complexities&rsquo; a bit.</p><p>The memory chip I&rsquo;m
+using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &mldr;
+effectively meaning it can store 32,768 separate 8 bit values referenced by a
+15bit address bus. Buying chips can be a bit of a &rsquo;needle in a haystack&rsquo; when
+you&rsquo;re buying through one of the larger electronics suppliers (I use Mouser).
+Knowing the chip number isn&rsquo;t enough to actually buy one and doing a search on
+Mouser for &lsquo;62256 memory&rsquo; narrows it down to 61 matches. I can narrow it down
+further as I know I need through-hole mounting (not surface mount) and that
+gets me to 6 matches. Next choice is access speed &mldr; 55ns or 70ns. This is
+actually a bit of a mute point for this computer as it&rsquo;ll get nowhere near
+that speed (the relays take around 5ms to switch) so lets ignore that one. So
+faced with 6 choices it comes down to price and what&rsquo;s in stock. In the end I
+went for a mid-priced chip from Cypress Semiconductor &mldr; a CY62256NLL-70PXC
+for £2.77 (&lsquo;cheap as chips&rsquo; &mldr; literally).</p><p>CY62256NLL-70PXC &mldr;
+catchy name eh?! There&rsquo;s a
+<a href=http://www.mouser.com/ds/2/100/001-06511_CY62256N_256-Kbit_32_K_8_Static_RAM-319275.pdf>data sheet for the chip here</a>
+but effectively the code is
+telling you it&rsquo;s from Cypress Semiconductor [CY]; it&rsquo;s the 62 family of CMOS
+32K SRAM chips (256Kbit) [62256]; it&rsquo;s using a Nitride Seal Mask fix [N]; it&rsquo;s
+low power [LL]; access time is 70ns [70]; packaged in a 28-pin moulded DIP
+[PX]; and finally it&rsquo;s the commercial temperature grade [C] that&rsquo;s happiest
+between 0 and 70 degrees centigrade.</p><p>What&rsquo;s quite nice with these
+62256 chips is that you can pair two of them up together sharing the same data
+and address bus and then use the most significant bit of the address bus to
+enable one chip and disable the other. With that set up you get the full 64K
+memory for your 16-bit address bus. As mentioned in my last post though I&rsquo;m
+not going with that solution and I&rsquo;m sticking with one 32K chip and using the
+remaining address space for &lsquo;future expansion&rsquo;.</p><p>Right, so back to
+that &lsquo;complexity&rsquo; (no, buying the right chip wasn&rsquo;t the &lsquo;complex&rsquo; thing).
+CMOS chips have some interesting properties but the one to definitely
+watch out for is making sure that any inputs are connected to voltage or to
+ground - never left unconnected. This is because the inputs have very high
+impedance (resistance) which is good because it means they will not affect the
+part of the circuit where they are connected. However, it also means that
+unconnected inputs can easily pick up electrical noise and rapidly change
+between high and low states in an unpredictable way. This is likely to make
+the chip behave erratically and to prevent problems all unused inputs
+absolutely must be connected even if it&rsquo;s a part of the chip that&rsquo;s not being
+used (which can be tempting with chips that have multiple logic gates).</p><p>Why am I picking that out specifically then? Well, the computer
+operates by connecting and disconnecting power via relays which means that a
+line coming from a relay that&rsquo;s turned off is disconnected (not wired to
+ground). It&rsquo;s floating and for a CMOS chip that means erratic behaviour. To
+make this all work I&rsquo;m going to have to do some clever relay work to ensure
+the memory chip is always connected to power or ground. Oh &mldr; did I also
+mention the chip works on 5V not the 12V the rest of the computer uses? That
+means there&rsquo;ll be two levels of voltage running around the card and though the
+lines which&rsquo;ll all need careful planning. Anyhoo, let&rsquo;s make a start.</p><p>First things first let&rsquo;s get the memory chip on to the card and to power it
+I&rsquo;ll add a DC/DC convertor which will drop the 12V down to the 5V the chip
+needs:</p><figure><img src=/img/posts/2017/2017-09-03-0000.png alt="Memory Card B with memory chip and DC/DC convertor added"><figcaption markdown=span>Memory Card B with memory chip and DC/DC convertor added (<a href=/img/posts/2017/2017-09-03-1000.png>larger</a>)</figcaption></figure><p>At the bottom of the card there are board interconnects for the 5V
+and ground coming out of the DC/DC convertor which will pass through to the
+other memory card and are used as needed (which will be discussed in my next
+blog post). Also worthy of note is the 0.1 micro farad capacitor to the left
+of the CMOS chip. This is a <a href=https://en.wikipedia.org/wiki/Decoupling_capacitor>decoupling capacitor</a>
+and works best when placed as close
+to the chip as possible.</p><p>I can now start wiring the memory chip out
+and I&rsquo;ll start with a easy one &mldr; the address bus:</p><figure><img src=/img/posts/2017/2017-09-03-0001.png alt="Memory Card B with address bus lines added"><figcaption markdown=span>Memory Card B with address bus lines added (<a href=/img/posts/2017/2017-09-03-1001.png>larger</a>)</figcaption></figure><p>As
+mentioned earlier these bus lines must be connected to either +5V or ground
+representing a binary 0 or 1 respectively. The responsibility for this is
+handed off to the other memory card via the board interconnects. Note that
+there&rsquo;s only 15 bits connected (to address the 32K locations). I can now move
+on to the data bus:</p><figure><img src=/img/posts/2017/2017-09-03-0002.png alt="Memory Card B with data bus lines added"><figcaption markdown=span>Memory Card B with data bus lines added (<a href=/img/posts/2017/2017-09-03-1002.png>larger</a>)</figcaption></figure><p>As
+with the address bus these data bus lines must be connected to either +5V or
+ground. You can probably work out that the address bus is &lsquo;read only&rsquo;, that
+is, the chip never sets a value on the address bus. What maybe isn&rsquo;t so
+obvious is that the data bus here is also &lsquo;read only&rsquo;. We&rsquo;ll see why shortly
+but in the meanwhile given we&rsquo;ve got address and data busses down lets add
+some LEDs:</p><figure><img src=/img/posts/2017/2017-09-03-0003.png alt="Memory Card B with LEDs added"><figcaption markdown=span>Memory Card B with LEDs added (<a href=/img/posts/2017/2017-09-03-1003.png>larger</a>)</figcaption></figure><p>There&rsquo;s nothing
+too surprising there &mldr; the usual LEDs &mldr; however it&rsquo;s worth noting that
+we&rsquo;re running the LEDs on 5V this time around rather than the usual 12V.
+Actually, this is something that totally passed me by when I designed the card
+and ordered the parts so I&rsquo;ve ended up with yet more 12V LEDs. They&rsquo;ll work on
+5V but won&rsquo;t be as bright as all the other LEDs in the computer &mldr; annoying
+but not the end of the World.</p><p>Anyhoo, back to that data bus &mldr; the
+memory chip can read from the data bus or write to it depending what you ask
+for. When we&rsquo;re doing a read operation we need to drive the main data bus of
+the computer which runs at 12V. We&rsquo;ve only got 5V running on our &rsquo;local&rsquo; data
+bus however so there&rsquo;s an extra bit of wizardry required:</p><figure><img src=/img/posts/2017/2017-09-03-0004.png alt="Memory Card B with relay driver added"><figcaption markdown=span>Memory Card B with relay driver added (<a href=/img/posts/2017/2017-09-03-1004.png>larger</a>)</figcaption></figure><p>Here
+I&rsquo;ve added a ULN2803 darlington transistor array (<a href=https://www.sparkfun.com/datasheets/IC/uln2803a.pdf>data sheet here</a>)
+to react to the 5V data bus and drive out
+12V on the other side. This is quite a nicely laid out chip with each input
+having its corresponding output on the opposite side. There is, however, a bit
+of a quirk with this chip which means that a high value on the input creates a
+low value on the output and vice-verse &mldr; effectively inverting the input.
+It&rsquo;s not really a quirk of course, just the way the design works, but that&rsquo;ll
+need wiring out on the other memory card.</p><p>Nearly there now. Let&rsquo;s
+start adding some control lines:</p><figure><img src=/img/posts/2017/2017-09-03-0005.png alt="Memory Card B with first control lines added"><figcaption markdown=span>Memory Card B with first control lines added (<a href=/img/posts/2017/2017-09-03-1005.png>larger</a>)</figcaption></figure><p>First of all there are three pull up resistors which keep the
+inputs high on WE (write enable), OE (output enable) and CS (chip select).
+Whilst these lines are kept high the chip is in read mode (WE high), outputs
+disconnected / high resistance (OE high) and chip deselected / disabled (CS
+high). That doesn&rsquo;t sound very useful of course in that state but all you have
+to do is short those lines to ground to switch the behaviour. That&rsquo;s why
+there&rsquo;s a relatively &lsquo;juicy&rsquo; resistor on each pull up to ensure that the
+current flow is restricted when shorted to ground whilst still keeping enough
+current going to pull the line up. The WE line is passed over to the other
+memory card where pulling it to ground (as opposed to leaving disconnected)
+will switch the chip to write mode.</p><p>Finally, let&rsquo;s add the
+remaining control lines:</p><figure><img src=/img/posts/2017/2017-09-03-0006.png alt="Memory Card B with final control lines added"><figcaption markdown=span>Memory Card B with final control lines added (<a href=/img/posts/2017/2017-09-03-1006.png>larger</a>)</figcaption></figure><p>There&rsquo;s a little more going on this time. Starting at the address
+bus connector at the top left of the card we pick up the most
+significant bit (AF) and take it down to a relay at the middle right of the
+card. Whilst AF is low the chip select (CS) line is held low which enables the
+chip &mldr; when the AF line is high the chip select line is held high which
+disables the chip. This ensures that the chip effectively gets out of the way
+when using the higher memory addresses. Likewise the output enable line is
+connected or disconnected accordingly effectively vetoing the other memory
+card pulling the OE line low which would enable the output.</p><p>So that&rsquo;s it for this
+card. I&rsquo;ll continue the design in my next post where I&rsquo;ll
+need to take all of those board interconnects and handle the differences in
+voltage between this card and the rest of the computer and wire out those
+inverted data bus outputs.</p></div><div class="field is-grouped is-grouped-multiline"><div class=control><a href=/archive#2017 class="tags has-addons"><span class="tag is-link">Published</span>
+<span class="tag is-info">Sep 03, 2017</span></a></div><div class=control><a href=/tags#design class=tags><span class="tag is-primary">design</span></a></div><div class=control><a href=/tags#memory class=tags><span class="tag is-primary">memory</span></a></div></div><div class=columns><div class=column><span class=has-text-weight-semibold>Previous Post</span><br><a href=/posts/2017/08/the-problem-with-memory/>The problem with memory</a></div><div class="column has-text-right"><span class=has-text-weight-semibold>Next Post</span><br><a href=/posts/2017/09/memory-design-part-2-of-2/>Memory Design (Part 2 of 2)</a></div></div></div></div></div></section><section class="hero is-small is-success"><div class="hero-body py-1"></div></section><footer class="footer pt-5"><div class=container><div class=columns><div class=column><p class=has-text-weight-semibold>On this blog</p><p><a href=https://relaycomputer.co.uk/>Home</a></p><p><a href=https://relaycomputer.co.uk/posts/>Posts</a></p><p><a href=https://relaycomputer.co.uk/tags/>Tags</a></p><p><a href=https://relaycomputer.co.uk/pages/progress/>Progress</a></p></div><div class=column><p class=has-text-weight-semibold>Related sites</p><p><a href=https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p><p><a href=https://github.com/paul80nd><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p><p><a href=http://simulator.relaycomputer.co.uk><span class="fas fa-flask fa-lg fa-fw"></span> Relay
+Simulator</a></p></div><div class=column><p class=has-text-weight-semibold>Share this page</p><p><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f&quote=Memory%20Design%20%28Part%201%20of%202%29" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden=true></i><span class=sr-only>Share on Facebook</span></a>
+<a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f&text=Memory%20Design%20%28Part%201%20of%202%29:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f" target=_blank title=Tweet><i class="fab fa-twitter-square fa-2x" aria-hidden=true></i><span class=sr-only>Tweet</span></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f&description=Memory%20Design%20%28Part%201%20of%202%29" target=_blank title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden=true></i><span class=sr-only>Pin it</span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f&title=Memory%20Design%20%28Part%201%20of%202%29&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden=true></i><span class=sr-only>Share on LinkedIn</span></a>
+<a href="mailto:?subject=Memory%20Design%20%28Part%201%20of%202%29&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2017%2f09%2fmemory-design-part-1-of-2%2f" target=_blank title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden=true></i><span class=sr-only>Send email</span></a></p></div></div></div></footer></body></html>
