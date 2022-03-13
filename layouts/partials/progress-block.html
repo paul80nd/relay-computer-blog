@@ -66,7 +66,7 @@
       {{ if isset . "tmbsch"}}
       {{ $schlink := printf "/img/pages/%s" .flssch }}
       {{ if isset . "pdfsch" }}
-      {{ $schlink := printf "/pdf/%s" .pdfsch }}
+      {{ $schlink = printf "/pdf/%s" .pdfsch }}
       {{ end }}
       {{ partial "progress-blockimg" (dict "isDouble" .isDouble "link" $schlink "img" .tmbsch "title" .title "type"
       "Schematic") }}
@@ -75,7 +75,7 @@
       {{ if isset . "tmbpcb"}}
       {{ $pcblink := printf "/img/pages/%s" .flspcb }}
       {{ if isset . "pdfpcb" }}
-      {{ $pcblink := printf "/pdf/%s" .pdfpcb }}
+      {{ $pcblink = printf "/pdf/%s" .pdfpcb }}
       {{ end }}
       {{ partial "progress-blockimg" (dict "isDouble" .isDouble "link" $pcblink "img" .tmbpcb "title" .title "type"
       "PCB Design") }}
