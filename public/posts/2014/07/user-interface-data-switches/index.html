@@ -51,21 +51,7 @@ The switches I&rsquo;m going to concentrate on first are the primary data switch
 <meta name="twitter:title" content="User Interface: Data Switches"/>
 <meta name="twitter:description" content="Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with the computer. Currently I&rsquo;m controlling the computer via a set of DIP switches which is incredibly fiddly so it&rsquo;s time to construct something &lsquo;chunkier&rsquo;.
 The switches I&rsquo;m going to concentrate on first are the primary data switches which permit values to be placed on the data bus."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

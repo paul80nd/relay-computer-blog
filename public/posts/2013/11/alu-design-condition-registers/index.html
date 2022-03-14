@@ -51,21 +51,7 @@
 <meta name="twitter:title" content="ALU Design: Condition Registers"/>
 <meta name="twitter:description" content="This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card. There are three Condition Registers in this computer:
  Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off)."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

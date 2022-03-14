@@ -47,21 +47,7 @@
 <meta itemprop="keywords" content="incrementer,completion,video," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Incrementer Test"/>
 <meta name="twitter:description" content="In my last two posts I covered the construction of the upper and lower incrementer cards. The lower card is a 16-bit half adder and the upper card is a 16-bit register. Together they form the incrementer unit as a whole which can add one to whichever value is currently on the address bus and then hold that value ready for pushing back out to the address bus. More often than not the incrementer will be used to push the program counter on one place but in theory it can be used to increment any value put on the address bus."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -79,9 +65,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

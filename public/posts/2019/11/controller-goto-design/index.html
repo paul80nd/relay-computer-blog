@@ -51,21 +51,7 @@ Branch/Call &amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h
 <meta name="twitter:title" content="Controller Design: GOTO Instruction"/>
 <meta name="twitter:description" content="With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
 Branch/Call &amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h h  l l l l l l l l    d = destination register (0-M, 1-J)"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

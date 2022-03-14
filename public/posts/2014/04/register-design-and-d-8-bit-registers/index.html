@@ -55,21 +55,7 @@ So, diving straight in, here is what the main bit relays look like for the two 8
 <meta name="twitter:description" content="In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.
 So, diving straight in, here is what the main bit relays look like for the two 8-bit registers when placed on the usual 55 x 40 hole pad board (excluding wire links):
  2 x 8 bit register relays (larger)  Each of the relays above stores a single 1-bit value so there&rsquo;s 16-bits worth in total (which could all be used together if we were making a 16-bit register) or two lots of 8-bits (for our two 8-bit registers)."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -87,9 +73,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

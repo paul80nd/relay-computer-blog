@@ -55,21 +55,7 @@ So, diving straight in, here is what eight of the 1-bit Arithmetic Units look li
 <meta name="twitter:description" content="In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.
 So, diving straight in, here is what eight of the 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad board (excluding wire lines):
  8 x 1-bit Arithmetic Unit Relays (larger)  As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic)."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -87,9 +73,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

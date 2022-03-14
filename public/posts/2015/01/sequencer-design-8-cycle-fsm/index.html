@@ -47,21 +47,7 @@
 <meta itemprop="keywords" content="sequencing,design," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sequencer Design: 8-cycle FSM"/>
 <meta name="twitter:description" content="So far I&rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&rsquo;m well on the way to having the computer perform MOV-8, ALU and SETAB instructions. Later I&rsquo;ll get on to the control card design where the computer will operate the control lines according to the 8-bit opcode stored in the instruction register. Before that though there&rsquo;s the sequencer card which will generate the pulses that drive the control card."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -79,9 +65,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

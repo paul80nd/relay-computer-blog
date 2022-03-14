@@ -47,21 +47,7 @@
 <meta itemprop="keywords" content="control,design," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Controller Design: ALU, MOV8 &amp; SETAB Instructions"/>
 <meta name="twitter:description" content="In my last post I covered off the controller design for the GOTO instruction. Being as I&rsquo;ve decided to implement the controller on a new set of PCB cards I need to transfer over the existing ALU, MOV8 &amp; SETAB instructions to the new controller design. At the relay level nothing really changes so I&rsquo;ll just quickly recap the timing and implementations here using the new schematic style and then in my next post I can move on to putting the full controller schematic and PCB design together."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -79,9 +65,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

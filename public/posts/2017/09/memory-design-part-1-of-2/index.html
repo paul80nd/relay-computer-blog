@@ -51,21 +51,7 @@ The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256K
 <meta name="twitter:title" content="Memory Design (Part 1 of 2)"/>
 <meta name="twitter:description" content="In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &hellip; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &lsquo;complexities&rsquo; a bit.
 The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &hellip; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

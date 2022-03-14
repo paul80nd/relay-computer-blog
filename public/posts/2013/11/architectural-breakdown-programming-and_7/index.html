@@ -51,21 +51,7 @@
 <meta name="twitter:title" content="Architectural breakdown: Programming and Control 2"/>
 <meta name="twitter:description" content="So, the last post didn&rsquo;t quite wrap up this &lsquo;mini-series&rsquo; but hopefully this one will. Continuing on with how the Programming and Control of the computer happens here again, for the last time (really last time), is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
  System Architecture for a Relay Computer[^1]  In the last post I covered an example of the steps required to subtract 6 from 10 (with 6 placed in register B and 10 in register C beforehand) and also that each step is represented by an opcode which is placed in the Instruction register so the computer can work out the sequence of actions to take to perform the step."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

@@ -51,21 +51,7 @@
 <meta name="twitter:title" content="Architectural breakdown: Memory"/>
 <meta name="twitter:description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the memory. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
  System Architecture for a Relay Computer[^1]  In my last post I wrote about the computer registers, each of which can store a binary value — they&rsquo;re typically very fast although there&rsquo;s a fixed number of them (in this computer there&rsquo;s eight &lsquo;general registers&rsquo; A, B, C, D, M1, M2, X and Y)."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

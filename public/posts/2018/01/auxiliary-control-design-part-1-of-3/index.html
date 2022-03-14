@@ -47,21 +47,7 @@
 <meta itemprop="keywords" content="sequencing,design,control,UI," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Auxiliary Control Design (Part 1 of 3)"/>
 <meta name="twitter:description" content="My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that&rsquo;s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired &lsquo;opcode&rsquo;, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that&rsquo;s four buttons to press simultaneously."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -79,9 +65,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

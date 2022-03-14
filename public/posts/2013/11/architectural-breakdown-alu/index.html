@@ -51,21 +51,7 @@
 <meta name="twitter:title" content="Architectural breakdown: the ALU"/>
 <meta name="twitter:description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer)
  System Architecture for a Relay Computer[^1]  The Arithmetic Logic Unit (ALU) sits at the very heart of the computer and without it you wouldn&rsquo;t be able to do much at all &hellip; you could certainly move data back and forth between the memory and registers but that&rsquo;d be about it."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

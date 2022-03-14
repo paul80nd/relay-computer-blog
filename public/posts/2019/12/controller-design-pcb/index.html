@@ -51,21 +51,7 @@ It&rsquo;s also worth mentioning at this point that the schematics and PCB desig
 <meta name="twitter:title" content="Controller Design: Schematic &amp; PCBs"/>
 <meta name="twitter:description" content="In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of instructions. Now it&rsquo;s time to bring all those schematics together and design the two controller PCBs. As with the sequencer, the controller is spread over two interconnected cards and I&rsquo;ll need to decide what&rsquo;s going on the upper card and what will go on the lower card.
 It&rsquo;s also worth mentioning at this point that the schematics and PCB designs I&rsquo;m about to share will have some instruction classes laid out that I haven&rsquo;t covered yet in this blog."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

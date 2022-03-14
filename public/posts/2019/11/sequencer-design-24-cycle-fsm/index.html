@@ -51,21 +51,7 @@
 <meta name="twitter:title" content="Sequencer Design: 24-cycle FSM"/>
 <meta name="twitter:description" content="Recently I&rsquo;ve been looking at what&rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:
  GOTO opcode timing chart (larger)  To achieve this timing I&rsquo;ll need a sequencer that can &lsquo;count&rsquo; up to 24 (currently it only goes up to 8). Actually none of this is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -83,9 +69,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

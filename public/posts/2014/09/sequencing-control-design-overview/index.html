@@ -47,21 +47,7 @@
 <meta itemprop="keywords" content="theory,sequencing,design,control," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sequencing &amp; Control Design: Overview"/>
 <meta name="twitter:description" content="I&rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. It&rsquo;s time to move things on a bit now and work towards getting the computer to the point where given a specific instruction/op-code it can operate the control lines itself without further input from the user. Eventually the computer will be given a list of instructions to perform which it&rsquo;ll work through step by step but for now the next milestone is to automate the operation of a single instruction."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -79,9 +65,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

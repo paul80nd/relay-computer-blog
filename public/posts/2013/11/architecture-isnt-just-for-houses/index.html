@@ -55,21 +55,7 @@
 <meta name="twitter:description" content="So, with the scene now set (see previous posts) let&rsquo;s dive right in and take a look at the system architecture I&rsquo;ll be building my computer upon &hellip; here it is &hellip;
  System Architecture for a Relay Computer[^1]  This is a direct copy of the architecture Dr Harry Porter designed when creating his own relay computer. The architecture has the following features:
  8-bit data bus 16-bit address bus 8 x 8-bit general purpose registers (A, B, C, D, M1, M2, X, Y)  Registers M1 and M2 combine to make a read only 16-bit register Registers X and Y combine to make a general purpose 16-bit register   8-bit Arithmetic Logic Unit with 3 condition registers (Zero, Carry and Sign) 16-bit jump register (J) 8-bit instruction register 16-bit program counter (PC) with increment unit 32K x 8-bit SRAM  I personally think this design has a really good balance of functionality vs complexity."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -87,9 +73,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">

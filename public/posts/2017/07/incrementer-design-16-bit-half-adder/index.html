@@ -55,21 +55,7 @@ So, diving straight in, here is what sixteen of the 1-bit Half Adder units look 
 <meta name="twitter:description" content="In the last post I introduced the design for the 1-bit Half Adder. This post covers connecting sixteen of these units together to make the 16-bit Half Adder.
 So, diving straight in, here is what sixteen of the 1-bit Half Adder units look like all together on the usual 55 x 40 hole pad board:
  16 x 1-bit Half Adder Units (larger)  Each half adder bit is made up of two relays (as seen in the previous blog post) and starting at the bottom right of the diagram above the bit stages run upwards from 0 to 3 and then continuing on in rising columns to the left until bit 15 at the top left."/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "edgeless"
-});
-</script>
+
 
   
 <script type="application/javascript">
@@ -87,9 +73,26 @@ if (!doNotTrack) {
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
   
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
