@@ -51,14 +51,16 @@
   {{- template "_internal/schema.html" . -}}
   {{- template "_internal/twitter_cards.html" . }}
 
-  {{- partial "plugins/cookie-consent.html" }}
   {{ template "_internal/google_analytics.html" . }}
 
   {{ $js := resources.Get "js/main.js" | js.Build "js/main.js" }}
   <script defer language="javascript" type="text/javascript"  src="{{ $js.RelPermalink }}"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
+  {{ partial "plugins/cookie-consent.html" }}
   {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
   {{ block "main" . }}{{ end }}
   {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
