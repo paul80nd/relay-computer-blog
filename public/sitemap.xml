@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://relaycomputer.co.uk/</loc>
+    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/2022/05/intermission/</loc>
+    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/musings/</loc>
+    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/</loc>
+    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/</loc>
+    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2020/02/twenty-twenty-update/</loc>
     <lastmod>2020-02-01T03:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/</loc>
-    <lastmod>2020-02-01T03:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://relaycomputer.co.uk/tags/completion/</loc>
-    <lastmod>2020-02-01T03:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/posts/</loc>
-    <lastmod>2020-02-01T03:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/</loc>
     <lastmod>2020-02-01T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/video/</loc>
@@ -87,9 +93,6 @@
     <lastmod>2019-03-04T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/01/change-of-approach/</loc>
-    <lastmod>2019-01-14T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/musings/</loc>
     <lastmod>2019-01-14T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/01/procrastination-is/</loc>

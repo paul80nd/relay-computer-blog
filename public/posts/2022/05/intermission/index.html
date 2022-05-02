@@ -46,7 +46,7 @@ What’s been going on then? Well first of all I’m fine (and actually writing 
 <meta itemprop="description" content="So, is fair to say that things have been a bit quiet around here of late … and if you’ve been following my YouTube channel I do hope you haven’t been holding your breath for the next episode of ‘making a relay computer clock’ as the last episode came out just over a year ago!
 What’s been going on then? Well first of all I’m fine (and actually writing this on one of the lazier days of a holiday in Crete … so I’m especially ‘fine’ and relaxed) but like most people the Covid lockdown has had its impact."><meta itemprop="datePublished" content="2022-05-02T11:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-05-02T11:00:00+00:00" />
-<meta itemprop="wordCount" content="1198">
+<meta itemprop="wordCount" content="844">
 <meta itemprop="keywords" content="musings," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Intermission"/>
 <meta name="twitter:description" content="So, is fair to say that things have been a bit quiet around here of late … and if you’ve been following my YouTube channel I do hope you haven’t been holding your breath for the next episode of ‘making a relay computer clock’ as the last episode came out just over a year ago!
@@ -179,73 +179,52 @@ I’ve been up to. If you’re curious you can find my <a href="https://github.c
 that contains my assembler, this blog plus a host of other bits and bobs. I’ll be doing a post soon that explains
 more about the assembler but if you want to have a play the <a href="https://editor.relaycomputer.co.uk">end result is here</a> and using
 this you can make programs and run them on a <a href="https://simulator.relaycomputer.co.uk">simulation of my relay computer here</a>.</p>
-<p>Other than that then what’s coming up - well what was true in my 2020 update videos is still true now and the todo list looks something like this:</p>
-<p>Finish off the clock card
-Prototype full relay clock circuit (with halt and restart)
-Design digital secondary clock (higher accuracy, variable speeds but inauthentic)
-Prototype digital secondary clock
-Design PCB for dual clock
-Build dual clock
-Fit clock to computer and test/demonstrate
-Add instruction classes
-Load/Store - to copy values between registers and memory
-Mov8/Mov16 - to copy values between all main registers (8 bit and 16 bit)
-IncXY - to increment the XY register (useful for indexing operations and stacks etc)
-Upgrades
-Replace wire wrap cards with PCBs
-Replace old backplanes with stacked PCBs
-Replace power distribution board with PCB equivalent
-Rebuild enclosure/case enabling:
-New ‘DisplayC’ which will be a very low resolution matrix display
-New paper tape reader (for easy entry of programs)
-Landscape case rather than portrait making videos much easier to record ;)</p>
-<p>You’ll notice that most of the above fits in to the same ‘hobby’ category so this is where I’ll break things up a bit by working on the relay computer simulator and assembler but also, of course, the aforementioned ‘other stuff’.</p>
-<p>XXXXX</p>
-<p>As the clock struck midnight at the very end of 2019 I decided, over a glass of something sparkling, that I&rsquo;d set myself a
-challenge to put out a series of six YouTube videos within the space of one month. This, I thought, seemed timely as I&rsquo;ve now
-got my relay computer to the point where it can perform branching operations and therefore run more interesting programs.</p>
-<p>Well, somehow I managed to stick to my challenge and although it turned out to be a gruelling schedule below are the six
-videos I published. If you&rsquo;ve been following me on YouTube you&rsquo;ll no doubt have seen these by now but just for completness
-I&rsquo;ve repeated them below.</p>
-<p>In episode 1/6 I gave an overview of the underlying architecture of my relay computer and dipped in to some of the decisions
-that led to that architecture:</p>
+<p>Other than that then what’s coming up - well what was true in my
+<a href="/posts/2020/02/twenty-twenty-update/">2020 update videos</a> is still true now and the todo list
+looks something like this:</p>
+<ul>
+<li>Finish off the clock card
+<ul>
+<li>Prototype full relay clock circuit (with halt and restart)</li>
+<li>Design digital secondary clock (higher accuracy, variable speeds but inauthentic)</li>
+<li>Prototype digital secondary clock</li>
+<li>Design PCB for dual clock</li>
+<li>Build dual clock</li>
+<li>Fit clock to computer and test/demonstrate</li>
+</ul>
+</li>
+<li>Add instruction classes
+<ul>
+<li>Load/Store - to copy values between registers and memory</li>
+<li>Mov8/Mov16 - to copy values between all main registers (8 bit and 16 bit)</li>
+<li>IncXY - to increment the XY register (useful for indexing operations and stacks etc)</li>
+</ul>
+</li>
+<li>Upgrades
+<ul>
+<li>Replace wire wrap cards with PCBs</li>
+<li>Replace old backplanes with stacked PCBs</li>
+<li>Replace power distribution board with PCB equivalent</li>
+</ul>
+</li>
+<li>Rebuild enclosure/case enabling:
+<ul>
+<li>New ‘DisplayC’ which will be a very low resolution matrix display</li>
+<li>New paper tape reader (for easy entry of programs)</li>
+<li>Landscape case rather than portrait making videos much easier to record ;)</li>
+</ul>
+</li>
+</ul>
+<p>You’ll notice that most of the above fits in to the same ‘hobby’ category so this is where I’ll break things
+up a bit by working on the relay computer simulator and assembler but also, of course, the aforementioned
+‘other stuff’.</p>
+<p>I&rsquo;ll leave it there for now then but if you want a bit more context for my &rsquo;todo list&rsquo; above the video below
+(which followed the <a href="/posts/2020/02/twenty-twenty-update/">2020 update series</a>) provides
+just that:</p>
 <figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/NfvgQCoFykE" frameborder="0" allowfullscreen></iframe>
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/kPBr53kvvLg" frameborder="0" allowfullscreen></iframe>
 </figure>
 
-<p>In episode 2/6 I covered the instruction set (collection of opcodes) which can be used to tell the computer what to do:</p>
-<figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/szvNLpovAGM" frameborder="0" allowfullscreen></iframe>
-</figure>
-
-<p>Given opcodes are made up of 8-bit binary values they&rsquo;re not particularly user friendly and so in episode 3/6 I introduced an
-assembly language which makes it much easier to program the computer:</p>
-<figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/IQW445iMnrc" frameborder="0" allowfullscreen></iframe>
-</figure>
-
-<p>In episode 4/6 I used the architecture diagram and  assembly language from the earlier videos to create a program that can
-calculate a portion of the Fibonacci series. I then used the list of opcodes to &lsquo;hand assemble&rsquo; the program making it suitable
-for loading into the computer:</p>
-<figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/_iBnu5HXscI" frameborder="0" allowfullscreen></iframe>
-</figure>
-
-<p>Episode 5/6 I took a visual tour around my relay computer as it stands today:</p>
-<figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/B_U0LM3CCgA" frameborder="0" allowfullscreen></iframe>
-</figure>
-
-<p>In the last video, arguably the main attraction, I take everything covered so far and put it all together to demonstrate
-running the Fibonacci program, for real, on my relay computer:</p>
-<figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/JZyFSrNyhy8" frameborder="0" allowfullscreen></iframe>
-</figure>
-
-<p>So, all in all, there&rsquo;s around 144 minutes of content in those videos above but I can assure you it took a lot longer than
-that to create them so I&rsquo;m pretty much video&rsquo;d out for the moment ;) That said though, in February I&rsquo;m going to have a think
-about what comes next and what things I&rsquo;d like to work on for my relay computer in the coming year &hellip; I&rsquo;ll no doubt make a
-video covering what I come up with and I&rsquo;ll be blogging, of course, about it here.</p>
 
         </div>
         <div class="field is-grouped is-grouped-multiline">
@@ -297,21 +276,20 @@ video covering what I come up with and I&rsquo;ll be blogging, of course, about 
       </div>
       <div class="column">
         <p class="has-text-weight-semibold">Related sites</p>
-        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span
-              class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
         <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
-        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay
-            Simulator</a></p>
+        <p><a href="https://editor.relaycomputer.co.uk"><span class="fas fa-code fa-lg fa-fw"></span> Relay Code Editor</a></p>
+        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
       </div>
       <div class="column">
         <p class="has-text-weight-semibold">Share this page</p>
         <p>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&quote=Intermission" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
-            <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&text=Intermission:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
-            <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&description=Intermission" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
-            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&title=Intermission&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
-            <a href="mailto:?subject=Intermission&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
-        </p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&quote=Intermission" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&text=Intermission:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&description=Intermission" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f&title=Intermission&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Intermission&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fintermission%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+      </p>
       </div>
     </div>
   </div>
