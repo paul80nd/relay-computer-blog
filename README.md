@@ -7,4 +7,4 @@ Bulma CSS styles are brought in on npm packages so a `npm install` will sort tho
 
 ## Build
 
-Run `hugo` to build the project. All the website artifacts will then be stored in the `public/` directory (which are then uploaded verbatim to my host). 
+Run `HUGO_ENV=production hugo` to production build the project (or `hugo` for development build). All the website artifacts will then be stored in the `public/` directory (which are then uploaded verbatim to my host). 
