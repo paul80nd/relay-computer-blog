@@ -21,6 +21,8 @@ paginate = 12
   description = 'My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.'
   youtube_channel_url = 'https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA'
   github_profile_url = 'https://github.com/paul80nd'
+  editor_url = 'https://editor.relaycomputer.co.uk'
+  simulator_url = 'https://simulator.relaycomputer.co.uk'
 
 # Allow html in markdown (typically <br> and the like)
 [markup.goldmark.renderer]
