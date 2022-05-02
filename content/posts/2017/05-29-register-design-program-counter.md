@@ -122,7 +122,7 @@ The [latest version of this can be found here](http://80nd.co.uk/relaycomputer/)
 so as this post gets older the simulator might be newer than you'd expect). 
 Feel free to fire this up and have a play with the program counter. If you're 
 interested in what's behind the simulator you can see all the 
-[source code on my GitHub page](https://github.com/paul80nd/relay-computer).
+[source code on my GitHub page]({{< param github_profile_url >}}/relay-computer).
 
 Next time I'll cover the design of the 
 incrementer which allows you to add one to the value of the program counter 
