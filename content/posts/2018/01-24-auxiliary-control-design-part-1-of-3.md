@@ -68,7 +68,7 @@ picture):
 
 As 
 you will hopefully have seen in one of my many videos on 
-[YouTube](https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA?view_as=subscriber) all 
+[YouTube]({{< param youtube_channel_url >}}) all 
 of the blue and grey switches above are momentary and return to their 
 positions pictured above. It's the blue switches we're concentrating on in 
 this post and the first two can be pressed up or down to get the 'next' and 
