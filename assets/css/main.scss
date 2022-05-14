@@ -11,6 +11,8 @@ $tabs-link-active-border-bottom-color: $primary;
 
 @import "bulma-ribbon.sass";
 
+@import "railroad.scss";
+
 .hpc-image {
   width: 10rem !important;
 }
@@ -49,4 +51,8 @@ body {
 
 .hero {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.highlight {
+  margin-bottom: 1.2em;
 }

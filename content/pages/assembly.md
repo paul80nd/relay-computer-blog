@@ -13,10 +13,10 @@ series of opcodes required to perform that action.
 
 The list of available instructions is as follows:
 
-{% include pages-mnemonic.html mnemonic="mov" %}
-{% include pages-mnemonic.html mnemonic="clr" %}
-{% include pages-mnemonic.html mnemonic="ldi" %}
-{% include pages-mnemonic.html mnemonic="arith" %}
-{% include pages-mnemonic.html mnemonic="logic" %}
-{% include pages-mnemonic.html mnemonic="branch" %}
-{% include pages-mnemonic.html mnemonic="opc" %}
+{{< mnemonic mov >}}
+{{< mnemonic clr >}}
+{{< mnemonic ldi >}}
+{{< mnemonic arith >}}
+{{< mnemonic logic >}}
+{{< mnemonic branch >}}
+{{< mnemonic opc >}}

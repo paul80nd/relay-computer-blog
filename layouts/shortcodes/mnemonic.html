@@ -1,0 +1,8 @@
+{{ range where $.Site.Data.mnemonics "id" (index .Params 0) }}
+<article class="box">
+  <div class="content">
+    <h4>{{ .title }}</h4>
+    {{ readFile (print "/static/svg/rail_" .id ".svg") | safeHTML }}
+  </div>
+</article>
+{{ end }}
