@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Assembling an assembler - overview | Relay Computer</title>
+  <meta name="description" content="To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work through them one at a time doing whatever operation that opcode represents. Here’s an example program:">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Assembling an assembler - overview" />
+<meta property="og:description" content="To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work through them one at a time doing whatever operation that opcode represents. Here’s an example program:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2022/05/assembly-part-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-14T11:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-14T11:00:00+00:00" />
+
+<meta itemprop="name" content="Assembling an assembler - overview">
+<meta itemprop="description" content="To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work through them one at a time doing whatever operation that opcode represents. Here’s an example program:"><meta itemprop="datePublished" content="2022-05-14T11:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-05-14T11:00:00+00:00" />
+<meta itemprop="wordCount" content="1719">
+<meta itemprop="keywords" content="coding," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Assembling an assembler - overview"/>
+<meta name="twitter:description" content="To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work through them one at a time doing whatever operation that opcode represents. Here’s an example program:"/>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-47484999-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+  <script defer language="javascript" type="text/javascript"  src="/js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        
+        <a href="/" class="navbar-item ">
+          Home
+        </a>
+        
+        <a href="/pages/overview/" class="navbar-item ">
+          Overview
+        </a>
+        
+        <a href="/pages/progress/" class="navbar-item ">
+          Progress
+        </a>
+        
+        <a href="/posts/" class="navbar-item is-active">
+          Posts
+        </a>
+        
+        <a href="/tags/" class="navbar-item ">
+          Tags
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Assembling an assembler - overview</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in
+memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally
+followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work
+through them one at a time doing whatever operation that opcode represents. Here’s an example program:</p>
+<pre tabindex="0"><code>41
+60
+11
+08
+81
+E8 00 05
+E6 00 02
+</code></pre><p>Can you guess what it does? If you’ve not seen it before or you aren’t extremely familiar with this computer’s
+instruction set it’s going to be a tough ask. Imagine then that you need to write a much more complicated program
+with 100s of lines &hellip; a tough ask becomes a Herculean task. This is why ‘higher level’ languages came about as it makes
+writing a program easier for the user but then, of course, there’s some translation needed to get that back to the
+‘low level’ list of machine code/instructions.</p>
+<p>Assembly language is a good choice for something that’s well balanced between human and machine. In the simplest cases
+most assembly language instructions have a 1:1 relationship with an equivalent 8-bit machine operation but beyond the
+basics assembly language can make looping, logic branching, handling data and so on much, much easier. Try this example:</p>
+<pre tabindex="0"><code>start:  ldi a,1     ; initial setup A = 1
+        ldi b,0     ;               B = 0
+
+loop:   mov c,b     ; slide B -&gt; C
+        mov b,a     ;       A -&gt; B
+        add         ; and add together
+
+done:   bcs done    ; infinite loop if overflowed
+
+        jmp loop    ; otherwise have another go
+</code></pre><p>If you haven’t spotted it (and don’t feel bad if you haven’t) this is the exact same program you saw before &hellip; just the
+assembly language equivalent. So, how do we get from one to the other then? Well that’s the job of an assembler. Let’s try the example above by hand first to get a feel for what&rsquo;s involved.</p>
+<p>To start with let&rsquo;s look at our first set of assembly language instructions - <code>ldi</code>, <code>mov</code> and <code>add</code>:</p>
+<figure>
+<svg class="railroad-diagram" width="420" height="92" viewBox="0 0 420 92">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 21v20m10 -20v20m-10 -10h20"></path>
+</g>
+<path d="M40 31h10"></path>
+<g class="terminal ">
+<path d="M50 31h0"></path>
+<path d="M94 31h0"></path>
+<rect x="50" y="20" width="44" height="22" rx="10" ry="10"></rect>
+<text x="72" y="35">ldi</text>
+</g>
+<path d="M94 31h10"></path>
+<g>
+<path d="M104 31h0"></path>
+<path d="M172 31h0"></path>
+<path d="M104 31h20"></path>
+<g class="terminal ">
+<path d="M124 31h0"></path>
+<path d="M152 31h0"></path>
+<rect x="124" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="138" y="35">a</text>
+</g>
+<path d="M152 31h20"></path>
+<path d="M104 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M124 61h0"></path>
+<path d="M152 61h0"></path>
+<rect x="124" y="50" width="28" height="22" rx="10" ry="10"></rect>
+<text x="138" y="65">b</text>
+</g>
+<path d="M152 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M172 31h10"></path>
+<g class="terminal ">
+<path d="M182 31h0"></path>
+<path d="M210 31h0"></path>
+<rect x="182" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="196" y="35">,</text>
+</g>
+<path d="M210 31h10"></path>
+<path d="M220 31h10"></path>
+<g class="non-terminal ">
+<path d="M230 31h0"></path>
+<path d="M370 31h0"></path>
+<rect x="230" y="20" width="140" height="22"></rect>
+<text x="300" y="35">value (-16..15)</text>
+</g>
+<path d="M370 31h10"></path>
+<path d="M 380 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>
+</figure>
+<figure>
+<svg class="railroad-diagram" width="451" height="152" viewBox="0 0 451 152">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 21v20m10 -20v20m-10 -10h20"></path>
+</g>
+<path d="M40 31h10"></path>
+<g class="terminal ">
+<path d="M50 31h0"></path>
+<path d="M94 31h0"></path>
+<rect x="50" y="20" width="44" height="22" rx="10" ry="10"></rect>
+<text x="72" y="35">mov</text>
+</g>
+<path d="M94 31h10"></path>
+<path d="M104 31h10"></path>
+<g class="comment ">
+<path d="M114 31h0"></path>
+<path d="M159 31h0"></path>
+<text x="136.5" y="36" class="comment">dest:</text>
+</g>
+<path d="M159 31h10"></path>
+<g>
+<path d="M169 31h0"></path>
+<path d="M237 31h0"></path>
+<path d="M169 31h20"></path>
+<g class="terminal ">
+<path d="M189 31h0"></path>
+<path d="M217 31h0"></path>
+<rect x="189" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="203" y="35">a</text>
+</g>
+<path d="M217 31h20"></path>
+<path d="M169 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M189 61h0"></path>
+<path d="M217 61h0"></path>
+<rect x="189" y="50" width="28" height="22" rx="10" ry="10"></rect>
+<text x="203" y="65">b</text>
+</g>
+<path d="M217 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+<path d="M169 31a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M189 91h0"></path>
+<path d="M217 91h0"></path>
+<rect x="189" y="80" width="28" height="22" rx="10" ry="10"></rect>
+<text x="203" y="95">c</text>
+</g>
+<path d="M217 91a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path>
+<path d="M169 31a10 10 0 0 1 10 10v70a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M189 121h0"></path>
+<path d="M217 121h0"></path>
+<rect x="189" y="110" width="28" height="22" rx="10" ry="10"></rect>
+<text x="203" y="125">d</text>
+</g>
+<path d="M217 121a10 10 0 0 0 10 -10v-70a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M237 31h10"></path>
+<g class="terminal ">
+<path d="M247 31h0"></path>
+<path d="M275 31h0"></path>
+<rect x="247" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="261" y="35">,</text>
+</g>
+<path d="M275 31h10"></path>
+<path d="M285 31h10"></path>
+<g class="comment ">
+<path d="M295 31h0"></path>
+<path d="M333 31h0"></path>
+<text x="314" y="36" class="comment">src:</text>
+</g>
+<path d="M333 31h10"></path>
+<g>
+<path d="M343 31h0"></path>
+<path d="M411 31h0"></path>
+<path d="M343 31h20"></path>
+<g class="terminal ">
+<path d="M363 31h0"></path>
+<path d="M391 31h0"></path>
+<rect x="363" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="377" y="35">a</text>
+</g>
+<path d="M391 31h20"></path>
+<path d="M343 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M363 61h0"></path>
+<path d="M391 61h0"></path>
+<rect x="363" y="50" width="28" height="22" rx="10" ry="10"></rect>
+<text x="377" y="65">b</text>
+</g>
+<path d="M391 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+<path d="M343 31a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M363 91h0"></path>
+<path d="M391 91h0"></path>
+<rect x="363" y="80" width="28" height="22" rx="10" ry="10"></rect>
+<text x="377" y="95">c</text>
+</g>
+<path d="M391 91a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path>
+<path d="M343 31a10 10 0 0 1 10 10v70a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M363 121h0"></path>
+<path d="M391 121h0"></path>
+<rect x="363" y="110" width="28" height="22" rx="10" ry="10"></rect>
+<text x="377" y="125">d</text>
+</g>
+<path d="M391 121a10 10 0 0 0 10 -10v-70a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M 411 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>
+</figure>
+<figure>
+<svg class="railroad-diagram" width="277" height="112" viewBox="0 0 277 112">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 21v20m10 -20v20m-10 -10h20"></path>
+</g>
+<path d="M40 31h10"></path>
+<g class="terminal ">
+<path d="M50 31h0"></path>
+<path d="M94 31h0"></path>
+<rect x="50" y="20" width="44" height="22" rx="10" ry="10"></rect>
+<text x="72" y="35">add</text>
+</g>
+<path d="M94 31h10"></path>
+<path d="M104 31h10"></path>
+<g class="comment ">
+<path d="M114 31h0"></path>
+<path d="M159 31h0"></path>
+<text x="136.5" y="36" class="comment">dest:</text>
+</g>
+<path d="M159 31h10"></path>
+<g>
+<path d="M169 31h0"></path>
+<path d="M237 31h0"></path>
+<path d="M169 31h20"></path>
+<g>
+<path d="M189 31h28"></path>
+</g>
+<path d="M217 31h20"></path>
+<path d="M169 31a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M189 51h0"></path>
+<path d="M217 51h0"></path>
+<rect x="189" y="40" width="28" height="22" rx="10" ry="10"></rect>
+<text x="203" y="55">a</text>
+</g>
+<path d="M217 51a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<path d="M169 31a10 10 0 0 1 10 10v30a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M189 81h0"></path>
+<path d="M217 81h0"></path>
+<rect x="189" y="70" width="28" height="22" rx="10" ry="10"></rect>
+<text x="203" y="85">d</text>
+</g>
+<path d="M217 81a10 10 0 0 0 10 -10v-30a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M 237 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>
+</figure>
+<p>These &lsquo;railroad&rsquo; diagrams show the acceptable syntax of each assembly language instruction:</p>
+<ul>
+<li><code>ldi</code> loads an immediate value in to either register a or b</li>
+<li><code>mov</code> copies a value from one register (a, b, c or d) to another register (again - a, b, c or d)</li>
+<li><code>add</code> adds the values in register b and c together placing the result in register a or d (if the destination
+isn&rsquo;t specified it&rsquo;ll assume register a).</li>
+</ul>
+<p>As mentioned above each of these assembly instructions has a direct equivalent opcode and we can use our opcode charts
+to work out what they should be:</p>
+<p>
+<article class="box">
+  <div class="content">
+    <h4>Load Immediate</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">SETAB</span>
+          <span class="tag is-success">8</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-info">r</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)</code></pre>
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
+    <h4>8-Bit Move</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">MOV8</span>
+          <span class="tag is-success">8</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">s</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br>sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)</code></pre>
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
+    <h4>ALU Operation</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">ALU</span>
+          <span class="tag is-success">8</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">r</span>
+          <span class="tag is-info">f</span>
+          <span class="tag is-info">f</span>
+          <span class="tag is-info">f</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>  r = destination register (0-A, 1-D)<br>fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL)</code></pre>
+  </div>
+</article>
+
+</p>
+<p>We see here then that <code>ldi</code> is a specific variant of a SETAB class opcode, <code>mov</code> similarly for the MOV8 class and
+<code>add</code> for the ALU class. Taking all this together then we arrive at:</p>
+<pre tabindex="0"><code>01000001  |  start:  ldi a,1     ; initial setup A = 1
+01100000  |          ldi b,0     ;               B = 0
+
+00010001  |  loop:   mov c,b     ; slide B -&gt; C
+00001000  |          mov b,a     ;       A -&gt; B
+10000001  |          add         ; and add together
+
+????????  |  done:   bcs done    ; infinite loop if overflowed
+
+????????  |          jmp loop    ; otherwise have another go
+</code></pre><p>We&rsquo;ve now got the 8-bit opcodes for most of our assembly instructions. Typically when writing these 8-bit values we do
+it in hexadecimal rather than binary (as it&rsquo;s shorter) - let&rsquo;s update what we&rsquo;ve got:</p>
+<pre tabindex="0"><code>41  |  start:  ldi a,1     ; initial setup A = 1
+60  |          ldi b,0     ;               B = 0
+
+11  |  loop:   mov c,b     ; slide B -&gt; C
+08  |          mov b,a     ;       A -&gt; B
+81  |          add         ; and add together
+
+??  |  done:   bcs done    ; infinite loop if overflowed
+
+??  |          jmp loop    ; otherwise have another go
+</code></pre><p>Notice how this is now starting resemble the &lsquo;random numbers&rsquo; at the top of this post?</p>
+<p>So what about those last two lines? What do we do about the loop and jump? Let&rsquo;s start with the railroad diagram
+for branching operations:</p>
+<figure>
+<svg class="railroad-diagram" width="416" height="92" viewBox="0 0 416 92">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 21v20m10 -20v20m-10 -10h20"></path>
+</g>
+<g>
+<path d="M40 31h0"></path>
+<path d="M296 31h0"></path>
+<path d="M40 31h20"></path>
+<g>
+<path d="M60 31h25.5"></path>
+<path d="M250.5 31h25.5"></path>
+<g class="comment ">
+<path d="M85.5 31h0"></path>
+<path d="M186.5 31h0"></path>
+<text x="136" y="36" class="comment">unconditional</text>
+</g>
+<path d="M186.5 31h10"></path>
+<path d="M196.5 31h10"></path>
+<g class="terminal ">
+<path d="M206.5 31h0"></path>
+<path d="M250.5 31h0"></path>
+<rect x="206.5" y="20" width="44" height="22" rx="10" ry="10"></rect>
+<text x="228.5" y="35">jmp</text>
+</g>
+</g>
+<path d="M276 31h20"></path>
+<path d="M40 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M60 61h0"></path>
+<path d="M276 61h0"></path>
+<g class="comment ">
+<path d="M60 61h0"></path>
+<path d="M147 61h0"></path>
+<text x="103.5" y="66" class="comment">conditional</text>
+</g>
+<path d="M147 61h10"></path>
+<path d="M157 61h10"></path>
+<g class="comment ">
+<path d="M167 61h0"></path>
+<path d="M212 61h0"></path>
+<text x="189.5" y="66" class="comment">carry</text>
+</g>
+<path d="M212 61h10"></path>
+<path d="M222 61h10"></path>
+<g class="terminal ">
+<path d="M232 61h0"></path>
+<path d="M276 61h0"></path>
+<rect x="232" y="50" width="44" height="22" rx="10" ry="10"></rect>
+<text x="254" y="65">bcs</text>
+</g>
+</g>
+<path d="M276 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M296 31h10"></path>
+<g class="non-terminal ">
+<path d="M306 31h0"></path>
+<path d="M366 31h0"></path>
+<rect x="306" y="20" width="60" height="22"></rect>
+<text x="336" y="35">label</text>
+</g>
+<path d="M366 31h10"></path>
+<path d="M 376 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>
+</figure>
+<p><code>jmp</code> will set the program counter to a given location unconditionally (i.e. always). <code>bcs</code> will also set the program
+counter to a given location but only if the last arithmetic operation set the &lsquo;carry&rsquo; flag (i.e. it overflowed)
+otherwise the program counter will move on to the next location in memory. In the case of our code above the
+arithmetic operation is the immediately preceding <code>add</code>.</p>
+<p><code>jmp</code> and <code>bcs</code> have opcode equivalents of course but how do we translate those labels, as in, how do we say where we
+want to jump to? Well, it turns out that whilst assembling we need to keep track of where the program counter will be.
+Let&rsquo;s assume the program starts at the first location in memory (address 0000 in hexadecimal) and counting up from there
+we get the following:</p>
+<pre tabindex="0"><code>0000: 41  |  start:  ldi a,1     ; initial setup A = 1
+0001: 60  |          ldi b,0     ;               B = 0
+
+0002: 11  |  loop:   mov c,b     ; slide B -&gt; C
+0003: 08  |          mov b,a     ;       A -&gt; B
+0004: 81  |          add         ; and add together
+
+0005: ??  |  done:   bcs done    ; infinite loop if overflowed
+
+0008: ??  |          jmp loop    ; otherwise have another go
+</code></pre><p>We now have a 16-bit value at the far left of each line representing a location in memory (for where that program line is
+stored). Hang on though, why did the counter jump three places rather than one at the jumps? Well, those instructions need to be followed by a 16 bit value for where in memory you need to jump to like so:</p>
+
+<article class="box">
+  <div class="content">
+    <h4>Branch/Call &amp; 16-bit Load Immediate</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">GOTO</span>
+          <span class="tag is-success">24</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">c</span>
+          <span class="tag is-info">z</span>
+          <span class="tag is-info">n</span>
+          <span class="tag is-info">x</span>
+        </div>
+        
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+        </div>
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>d = destination register (0-M, 1-J)<br>s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br>c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br>z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br>n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br>x = 1 = copy PC to XY; 0 = no copy<br>hhhhhhhh = address high byte (to set in M2/J2)<br>llllllll = address low byte (to set in M1/J1)</code></pre>
+  </div>
+</article>
+
+
+<p>… and those labels … they represent a certain location in memory making it much easier for the human to indicate where
+in the program they want to jump to without having to do the program counter tracking in their head.</p>
+<p>We can now finish the hand assembling by replacing those labels with the now known program counter values to arrive at:</p>
+<pre tabindex="0"><code>0000: 41        |  start:  ldi a,1     ; initial setup A = 1
+0001: 60        |          ldi b,0 
+
+0002: 11        |  loop:   mov c,b     ; slide B -&gt; C
+0003: 08        |          mov b,a     ;       A -&gt; B
+0004: 81        |          add         ; and add together
+
+0005: E8 00 05  |  done:   bcs done    ; infinite loop if overflowed
+
+0008: E6 00 02  |          jmp loop    ; otherwise have another go
+</code></pre><p>Removing all our &lsquo;working out&rsquo; above we get back to where we first started:</p>
+<pre tabindex="0"><code>41
+60
+11
+08
+81
+E8 00 05
+E6 00 02
+</code></pre><p>Now, this is a really simple example but that’s the basics of an assembler. From here though you could extend the
+assembly language to allow the human programmer to change where the program counter starts from or maybe to allow some
+basic arithmetic around labels (so <code>label1 + 5</code> for example &hellip; i.e. 5 locations further on from wherever <code>label1</code> points
+to). Commercial assemblers can be much more sophisticated but it always comes down to producing a list of values that
+will be loaded into a computer’s memory for it to follow and operate on.</p>
+<p>In designing my assembly language I’ve drawn inspiration from several existing ones out there to produce something that
+I personally find aesthetically pleasing. The mnemonics are mostly inspired by
+<a href="https://en.wikipedia.org/wiki/MOS_Technology_6502">6502</a> (used in computers like the Commodore 64 and BBC Micro) as I
+like that they are all three characters which makes everything line up neatly (to my eye) but I also like the parameter format of <a href="https://en.wikipedia.org/wiki/Zilog_Z80">Z80</a> (used in the Sinclair ZX Spectrum - my first computer). If you compare my assembly language with those I’m sure you can see the influences coming through and as I add more to my assembly language you’ll see this pattern continue.</p>
+<p>So, that’ll do for this post - next time in this mini series I’ll take a look at how I can write an assembler that will
+automate this whole assembly language to machine code translation process. Looking at what I did by hand above you might
+think it’s quite easy but think about what I’m doing above. There’s a lot comes for free with the human brain and I’m
+automatically extracting a lot of semantic meaning out of what really is just a series of characters - a file of text &hellip;
+the assembler is going to need to be taught all of that.</p>
+<p>If you&rsquo;re hungry for more in the meanwhile though you can find the
+<a href="/pages/assembly/">complete railroad diagrams here</a> and there&rsquo;s also a video below going through my
+chosen assembly language instructions &hellip;</p>
+<figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/IQW445iMnrc" frameborder="0" allowfullscreen></iframe>
+</figure>
+
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a href="/archive#2022" class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">May 14, 2022</span>
+            </a>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/tags#coding" class="tags">
+              <span class="tag is-primary">coding</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2022/05/intermission/">Intermission</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="https://editor.relaycomputer.co.uk"><span class="fas fa-code fa-lg fa-fw"></span> Relay Code Editor</a></p>
+        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f&quote=Assembling%20an%20assembler%20-%20overview" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f&text=Assembling%20an%20assembler%20-%20overview:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f&description=Assembling%20an%20assembler%20-%20overview" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f&title=Assembling%20an%20assembler%20-%20overview&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Assembling%20an%20assembler%20-%20overview&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f05%2fassembly-part-1%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

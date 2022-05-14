@@ -6,7 +6,16 @@
     <description>Recent content in A blog about a computer made from relays on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 02 May 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 May 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assembling an assembler - overview</title>
+      <link>https://relaycomputer.co.uk/posts/2022/05/assembly-part-1/</link>
+      <pubDate>Sat, 14 May 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2022/05/assembly-part-1/</guid>
+      <description>To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work through them one at a time doing whatever operation that opcode represents. Here’s an example program:</description>
+    </item>
+    
     <item>
       <title>Intermission</title>
       <link>https://relaycomputer.co.uk/posts/2022/05/intermission/</link>

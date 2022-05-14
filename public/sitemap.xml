@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://relaycomputer.co.uk/</loc>
-    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
+    <lastmod>2022-05-14T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/2022/05/assembly-part-1/</loc>
+    <lastmod>2022-05-14T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/coding/</loc>
+    <lastmod>2022-05-14T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/</loc>
+    <lastmod>2022-05-14T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/</loc>
+    <lastmod>2022-05-14T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2022/05/intermission/</loc>
     <lastmod>2022-05-02T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/musings/</loc>
-    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/posts/</loc>
-    <lastmod>2022-05-02T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/</loc>
     <lastmod>2022-05-02T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2020/02/twenty-twenty-update/</loc>
@@ -186,9 +192,6 @@
     <lastmod>2017-05-29T17:13:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/architecture/</loc>
-    <lastmod>2016-07-24T22:13:00+01:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/coding/</loc>
     <lastmod>2016-07-24T22:13:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/simulation/</loc>
