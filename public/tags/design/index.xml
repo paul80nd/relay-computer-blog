@@ -42,7 +42,7 @@ It&amp;rsquo;s also worth mentioning at this point that the schematics and PCB d
       
       <guid>https://relaycomputer.co.uk/posts/2019/11/controller-goto-design/</guid>
       <description>With the sequencer now designed and constructed I&amp;rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&amp;rsquo;s the GOTO instruction itself:
-Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h h  l l l l l l l l    d = destination register (0-M, 1-J)</description>
+Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pulse-dist/</guid>
       <description>In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions. In this case we&amp;rsquo;re looking to implement the GOTO instruction so that the computer can perform branching.
 As a recap here&amp;rsquo;s the outputs from the newly designed FSM:
- 24-cycle FSM Outputs (larger)  &amp;hellip; and here&amp;rsquo;s the timing chart that we&amp;rsquo;re trying to obtain:</description>
+24-cycle FSM Outputs (larger) &amp;hellip; and here&amp;rsquo;s the timing chart that we&amp;rsquo;re trying to obtain:</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@ As a recap here&amp;rsquo;s the outputs from the newly designed FSM:
       
       <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-24-cycle-fsm/</guid>
       <description>Recently I&amp;rsquo;ve been looking at what&amp;rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:
- GOTO opcode timing chart (larger)  To achieve this timing I&amp;rsquo;ll need a sequencer that can &amp;lsquo;count&amp;rsquo; up to 24 (currently it only goes up to 8). Actually none of this is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays.</description>
+GOTO opcode timing chart (larger) To achieve this timing I&amp;rsquo;ll need a sequencer that can &amp;lsquo;count&amp;rsquo; up to 24 (currently it only goes up to 8). Actually none of this is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays.</description>
     </item>
     
     <item>
@@ -82,7 +82,8 @@ As a recap here&amp;rsquo;s the outputs from the newly designed FSM:
       
       <guid>https://relaycomputer.co.uk/posts/2019/10/branching-opcode-timing/</guid>
       <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&amp;rsquo;s where I got to last time:
-Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h h  l l l l l l l l    d = destination register (0-M, 1-J)</description>
+Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit</description>
     </item>
     
     <item>
@@ -128,8 +129,8 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       
       <guid>https://relaycomputer.co.uk/posts/2018/02/auxiliary-control-design-part-3-of-3/</guid>
       <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory. In my last post I covered the design of the auxiliary clock which resulted in the following schematic:
- Auxiliary Clock Schematic (larger)  &amp;hellip; which generates the following timing pulses &amp;hellip;
-  This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
+Auxiliary Clock Schematic (larger) &amp;hellip; which generates the following timing pulses &amp;hellip;
+This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
     </item>
     
     <item>
@@ -139,7 +140,7 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       
       <guid>https://relaycomputer.co.uk/posts/2018/01/auxiliary-control-design-part-2-of-3/</guid>
       <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer. If you haven&amp;rsquo;t read my previous post then it&amp;rsquo;s definitely worth doing so as this post picks up where that one left off. As a reminder though we&amp;rsquo;re looking to perform the following operations:
- Auxiliary Control Operations Timing (larger)  &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
+Auxiliary Control Operations Timing (larger) &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
     </item>
     
     <item>
@@ -168,7 +169,7 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       <guid>https://relaycomputer.co.uk/posts/2017/09/memory-design-part-2-of-2/</guid>
       <description>In my last post I started the design for the computer&amp;rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.
 Let&amp;rsquo;s dive straight in by bringing up the board interconnects from the lower card:
- Memory Card A with initial interconnects (larger)  The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0.</description>
+Memory Card A with initial interconnects (larger) The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0.</description>
     </item>
     
     <item>
@@ -208,7 +209,7 @@ The problem with memory is that typically you need quite a lot of it and that&am
       <guid>https://relaycomputer.co.uk/posts/2017/07/incrementer-design-16-bit-half-adder/</guid>
       <description>In the last post I introduced the design for the 1-bit Half Adder. This post covers connecting sixteen of these units together to make the 16-bit Half Adder.
 So, diving straight in, here is what sixteen of the 1-bit Half Adder units look like all together on the usual 55 x 40 hole pad board:
- 16 x 1-bit Half Adder Units (larger)  Each half adder bit is made up of two relays (as seen in the previous blog post) and starting at the bottom right of the diagram above the bit stages run upwards from 0 to 3 and then continuing on in rising columns to the left until bit 15 at the top left.</description>
+16 x 1-bit Half Adder Units (larger) Each half adder bit is made up of two relays (as seen in the previous blog post) and starting at the bottom right of the diagram above the bit stages run upwards from 0 to 3 and then continuing on in rising columns to the left until bit 15 at the top left.</description>
     </item>
     
     <item>
@@ -360,7 +361,7 @@ For the A and D registers I ended up with the following circuit per 8-bit regist
       <guid>https://relaycomputer.co.uk/posts/2014/04/register-design-and-d-8-bit-registers/</guid>
       <description>In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.
 So, diving straight in, here is what the main bit relays look like for the two 8-bit registers when placed on the usual 55 x 40 hole pad board (excluding wire links):
- 2 x 8 bit register relays (larger)  Each of the relays above stores a single 1-bit value so there&amp;rsquo;s 16-bits worth in total (which could all be used together if we were making a 16-bit register) or two lots of 8-bits (for our two 8-bit registers).</description>
+2 x 8 bit register relays (larger) Each of the relays above stores a single 1-bit value so there&amp;rsquo;s 16-bits worth in total (which could all be used together if we were making a 16-bit register) or two lots of 8-bits (for our two 8-bit registers).</description>
     </item>
     
     <item>
@@ -418,7 +419,7 @@ allow me to work out how I&amp;rsquo;d physically arrange the cards later on. Ho
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-design-control-unit/</guid>
       <description>In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&amp;rsquo;ll put all three of these components together to make up the ALU Control Card. So, placing the relays from the three components onto the card (excluding wire links) we get the following:
- ALU Control Card Relays (larger)  Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&amp;rsquo;t quite so tightly packed in this time.</description>
+ALU Control Card Relays (larger) Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&amp;rsquo;t quite so tightly packed in this time.</description>
     </item>
     
     <item>
@@ -428,7 +429,7 @@ allow me to work out how I&amp;rsquo;d physically arrange the cards later on. Ho
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/alu-design-condition-registers/</guid>
       <description>This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card. There are three Condition Registers in this computer:
- Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off).</description>
+Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off).</description>
     </item>
     
     <item>
@@ -447,7 +448,7 @@ allow me to work out how I&amp;rsquo;d physically arrange the cards later on. Ho
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/design-function-decoder/</guid>
       <description>This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card. The Decoder takes a 3-bit ALU Function code as its input and activates 1 of 8 control lines accordingly. The function codes are as follows:
-   Code Operation Description     000 CLR Clear/No Operation   001 ADD B + C   010 INC Increment B   011 AND B AND C   100 OR B OR C   101 XOR B XOR C   110 NOT NOT C   111 SHL Shift Left B    The control lines which are fed to the Arithmetic and Logic Units via the Ctrl-Z bus are:</description>
+Code Operation Description 000 CLR Clear/No Operation 001 ADD B + C 010 INC Increment B 011 AND B AND C 100 OR B OR C 101 XOR B XOR C 110 NOT NOT C 111 SHL Shift Left B The control lines which are fed to the Arithmetic and Logic Units via the Ctrl-Z bus are:</description>
     </item>
     
     <item>
@@ -458,7 +459,7 @@ allow me to work out how I&amp;rsquo;d physically arrange the cards later on. Ho
       <guid>https://relaycomputer.co.uk/posts/2013/11/design-8-bit-arithmetic-unit/</guid>
       <description>In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with result gating and increment functionality.
 So, diving straight in, here is what eight of the 1-bit Arithmetic Units look like all together on the usual 55 x 40 hole pad board (excluding wire lines):
- 8 x 1-bit Arithmetic Unit Relays (larger)  As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic).</description>
+8 x 1-bit Arithmetic Unit Relays (larger) As before (with the Logic Unit card) things are a bit on the tight side but everything fits within the 40 hole horizontal confines of the pad board (as if by magic).</description>
     </item>
     
     <item>
@@ -468,7 +469,7 @@ So, diving straight in, here is what eight of the 1-bit Arithmetic Units look li
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/design-1-bit-arithmetic-unit/</guid>
       <description>This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&amp;rsquo;s a schematic of the 1-bit Arithmetic Unit (based directly on the one used in the Harry Porter Relay Computer):
-  The diagram shows two 4PDT relays (just as before for the 1-bit Logic Unit) but this time the second relay has been rotated 180 degrees to make the diagram simpler to draw.</description>
+The diagram shows two 4PDT relays (just as before for the 1-bit Logic Unit) but this time the second relay has been rotated 180 degrees to make the diagram simpler to draw.</description>
     </item>
     
     <item>
@@ -488,7 +489,7 @@ Sticking with the same diagram style I introduced in the last post here is what 
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/design-1-bit-logic-unit/</guid>
       <description>This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here&amp;rsquo;s a schematic of the 1-bit Logic Unit (based directly on the one used in the Harry Porter Relay Computer):
-  The diagram shows two 4PDT (4 pole double toggle) relays with the coils of each shown as a striped box at the top.</description>
+The diagram shows two 4PDT (4 pole double toggle) relays with the coils of each shown as a striped box at the top.</description>
     </item>
     
     <item>

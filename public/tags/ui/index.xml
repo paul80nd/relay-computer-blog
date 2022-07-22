@@ -14,7 +14,7 @@
       
       <guid>https://relaycomputer.co.uk/posts/2018/03/auxiliary-control-construction/</guid>
       <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …
-  Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
+Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@
       
       <guid>https://relaycomputer.co.uk/posts/2018/02/auxiliary-control-design-part-3-of-3/</guid>
       <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory. In my last post I covered the design of the auxiliary clock which resulted in the following schematic:
- Auxiliary Clock Schematic (larger)  &amp;hellip; which generates the following timing pulses &amp;hellip;
-  This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
+Auxiliary Clock Schematic (larger) &amp;hellip; which generates the following timing pulses &amp;hellip;
+This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       
       <guid>https://relaycomputer.co.uk/posts/2018/01/auxiliary-control-design-part-2-of-3/</guid>
       <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer. If you haven&amp;rsquo;t read my previous post then it&amp;rsquo;s definitely worth doing so as this post picks up where that one left off. As a reminder though we&amp;rsquo;re looking to perform the following operations:
- Auxiliary Control Operations Timing (larger)  &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
+Auxiliary Control Operations Timing (larger) &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
     </item>
     
     <item>

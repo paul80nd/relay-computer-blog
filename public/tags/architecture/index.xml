@@ -33,7 +33,7 @@ This should be viewed alongside the architecture diagram which can be found in m
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</guid>
       <description>So, the last post didn&amp;rsquo;t quite wrap up this &amp;lsquo;mini-series&amp;rsquo; but hopefully this one will. Continuing on with how the Programming and Control of the computer happens here again, for the last time (really last time), is the architecture I&amp;rsquo;ll be building against (from the Harry Porter Relay Computer)
- System Architecture for a Relay Computer[^1]  In the last post I covered an example of the steps required to subtract 6 from 10 (with 6 placed in register B and 10 in register C beforehand) and also that each step is represented by an opcode which is placed in the Instruction register so the computer can work out the sequence of actions to take to perform the step.</description>
+System Architecture for a Relay Computer[^1] In the last post I covered an example of the steps required to subtract 6 from 10 (with 6 placed in register B and 10 in register C beforehand) and also that each step is represented by an opcode which is placed in the Instruction register so the computer can work out the sequence of actions to take to perform the step.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ This should be viewed alongside the architecture diagram which can be found in m
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</guid>
       <description>In this post I&amp;rsquo;ll wrap up this &amp;lsquo;mini-series&amp;rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — finally now we come on to Programming and Control of the computer. Here again, for the last time, is the architecture I&amp;rsquo;ll be building against (from the Harry Porter Relay Computer)
- System Architecture for a Relay Computer[^1]  With all the various parts of the architecture I&amp;rsquo;ve discussed so far — the busses, registers, memory and ALU — we have a computer that could be manually operated, albeit laboriously, to perform various tasks.</description>
+System Architecture for a Relay Computer[^1] With all the various parts of the architecture I&amp;rsquo;ve discussed so far — the busses, registers, memory and ALU — we have a computer that could be manually operated, albeit laboriously, to perform various tasks.</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ This should be viewed alongside the architecture diagram which can be found in m
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</guid>
       <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s the Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I&amp;rsquo;ll be building against (from the Harry Porter Relay Computer)
- System Architecture for a Relay Computer[^1]  The Arithmetic Logic Unit (ALU) sits at the very heart of the computer and without it you wouldn&amp;rsquo;t be able to do much at all &amp;hellip; you could certainly move data back and forth between the memory and registers but that&amp;rsquo;d be about it.</description>
+System Architecture for a Relay Computer[^1] The Arithmetic Logic Unit (ALU) sits at the very heart of the computer and without it you wouldn&amp;rsquo;t be able to do much at all &amp;hellip; you could certainly move data back and forth between the memory and registers but that&amp;rsquo;d be about it.</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@ This should be viewed alongside the architecture diagram which can be found in m
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</guid>
       <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s the memory. Here again is the architecture I&amp;rsquo;ll be building against (from the Harry Porter Relay Computer)
- System Architecture for a Relay Computer[^1]  In my last post I wrote about the computer registers, each of which can store a binary value — they&amp;rsquo;re typically very fast although there&amp;rsquo;s a fixed number of them (in this computer there&amp;rsquo;s eight &amp;lsquo;general registers&amp;rsquo; A, B, C, D, M1, M2, X and Y).</description>
+System Architecture for a Relay Computer[^1] In my last post I wrote about the computer registers, each of which can store a binary value — they&amp;rsquo;re typically very fast although there&amp;rsquo;s a fixed number of them (in this computer there&amp;rsquo;s eight &amp;lsquo;general registers&amp;rsquo; A, B, C, D, M1, M2, X and Y).</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ This should be viewed alongside the architecture diagram which can be found in m
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</guid>
       <description>In this post I&amp;rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&amp;rsquo;s buses and registers. Here again is the architecture I&amp;rsquo;ll be building against (from the Harry Porter Relay Computer):
- System Architecture for a Relay Computer[^1]  Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits.</description>
+System Architecture for a Relay Computer[^1] Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits.</description>
     </item>
     
     <item>
@@ -92,8 +92,8 @@ This should be viewed alongside the architecture diagram which can be found in m
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/architecture-isnt-just-for-houses/</guid>
       <description>So, with the scene now set (see previous posts) let&amp;rsquo;s dive right in and take a look at the system architecture I&amp;rsquo;ll be building my computer upon &amp;hellip; here it is &amp;hellip;
- System Architecture for a Relay Computer[^1]  This is a direct copy of the architecture Dr Harry Porter designed when creating his own relay computer. The architecture has the following features:
- 8-bit data bus 16-bit address bus 8 x 8-bit general purpose registers (A, B, C, D, M1, M2, X, Y)  Registers M1 and M2 combine to make a read only 16-bit register Registers X and Y combine to make a general purpose 16-bit register   8-bit Arithmetic Logic Unit with 3 condition registers (Zero, Carry and Sign) 16-bit jump register (J) 8-bit instruction register 16-bit program counter (PC) with increment unit 32K x 8-bit SRAM  I personally think this design has a really good balance of functionality vs complexity.</description>
+System Architecture for a Relay Computer[^1] This is a direct copy of the architecture Dr Harry Porter designed when creating his own relay computer. The architecture has the following features:
+8-bit data bus 16-bit address bus 8 x 8-bit general purpose registers (A, B, C, D, M1, M2, X, Y) Registers M1 and M2 combine to make a read only 16-bit register Registers X and Y combine to make a general purpose 16-bit register 8-bit Arithmetic Logic Unit with 3 condition registers (Zero, Carry and Sign) 16-bit jump register (J) 8-bit instruction register 16-bit program counter (PC) with increment unit 32K x 8-bit SRAM I personally think this design has a really good balance of functionality vs complexity.</description>
     </item>
     
   </channel>

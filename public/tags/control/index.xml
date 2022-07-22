@@ -43,7 +43,7 @@ It&amp;rsquo;s also worth mentioning at this point that the schematics and PCB d
       
       <guid>https://relaycomputer.co.uk/posts/2019/11/controller-goto-design/</guid>
       <description>With the sequencer now designed and constructed I&amp;rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&amp;rsquo;s the GOTO instruction itself:
-Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h h  l l l l l l l l    d = destination register (0-M, 1-J)</description>
+Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)</description>
     </item>
     
     <item>
@@ -53,7 +53,8 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       
       <guid>https://relaycomputer.co.uk/posts/2019/10/branching-opcode-timing/</guid>
       <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&amp;rsquo;s where I got to last time:
-Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h h h h  l l l l l l l l    d = destination register (0-M, 1-J)</description>
+Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit</description>
     </item>
     
     <item>
@@ -72,7 +73,7 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       
       <guid>https://relaycomputer.co.uk/posts/2018/03/auxiliary-control-construction/</guid>
       <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …
-  Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
+Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
     </item>
     
     <item>
@@ -82,8 +83,8 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       
       <guid>https://relaycomputer.co.uk/posts/2018/02/auxiliary-control-design-part-3-of-3/</guid>
       <description>This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&amp;rsquo;s memory. In my last post I covered the design of the auxiliary clock which resulted in the following schematic:
- Auxiliary Clock Schematic (larger)  &amp;hellip; which generates the following timing pulses &amp;hellip;
-  This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
+Auxiliary Clock Schematic (larger) &amp;hellip; which generates the following timing pulses &amp;hellip;
+This post covers the last part of the puzzle which is designing the control logic that will take the pulses above and use them to drive the appropriate control lines at the right time according to the instruction the user requested as follows:</description>
     </item>
     
     <item>
@@ -93,7 +94,7 @@ Branch/Call &amp;amp; 16-bit Load Immediate GOTO 24   1 1 d s c z n x  h h h h h
       
       <guid>https://relaycomputer.co.uk/posts/2018/01/auxiliary-control-design-part-2-of-3/</guid>
       <description>In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&amp;rsquo;s a computer within a computer. If you haven&amp;rsquo;t read my previous post then it&amp;rsquo;s definitely worth doing so as this post picks up where that one left off. As a reminder though we&amp;rsquo;re looking to perform the following operations:
- Auxiliary Control Operations Timing (larger)  &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
+Auxiliary Control Operations Timing (larger) &amp;hellip; which can be derived from the following pulses &amp;hellip;</description>
     </item>
     
     <item>

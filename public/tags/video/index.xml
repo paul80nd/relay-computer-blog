@@ -24,7 +24,7 @@ Well, somehow I managed to stick to my challenge and although it turned out to b
       
       <guid>https://relaycomputer.co.uk/posts/2020/01/decoder-construction/</guid>
       <description>In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and tested. As before I&amp;rsquo;ve put a video together which covers the highlights:
-  As you can see towards the end of the video that&amp;rsquo;s the basics of branching complete and finally my computer is capable of running more complicated programs that have loops and decision making points in them.</description>
+As you can see towards the end of the video that&amp;rsquo;s the basics of branching complete and finally my computer is capable of running more complicated programs that have loops and decision making points in them.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ Let&amp;rsquo;s start with the lower card and, as before, I&amp;rsquo;ve put tog
       <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-construction/</guid>
       <description>In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I can get on with soldering up the cards and giving them a test.
 Let&amp;rsquo;s start with the lower card and, as before, I&amp;rsquo;ve put together a video which covers the highlights:
-  Likewise, here&amp;rsquo;s a video covering the upper card construction which also includes giving the cards a test together and then testing the whole sequencer unit when placed in the computer:</description>
+Likewise, here&amp;rsquo;s a video covering the upper card construction which also includes giving the cards a test together and then testing the whole sequencer unit when placed in the computer:</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ Let&amp;rsquo;s start with the lower card and, as before, I&amp;rsquo;ve put tog
       
       <guid>https://relaycomputer.co.uk/posts/2018/03/auxiliary-control-construction/</guid>
       <description>In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the bag’ it’s time to get constructing although this time we’re not starting with a blank card …
-  Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
+Currently the auxiliary card has the gating relays along the bottom which connect the primary switches to either the address or data bus as required.</description>
     </item>
     
     <item>
@@ -93,8 +93,8 @@ Let&amp;rsquo;s start with the lower card and, as before, I&amp;rsquo;ve put tog
       <guid>https://relaycomputer.co.uk/posts/2017/11/memory-test/</guid>
       <description>I&amp;rsquo;ve covered the construction of the upper and lower memory cards in my last two posts &amp;hellip; it&amp;rsquo;s now time to bring those two cards together to form the memory unit proper and give it all a test.
 Here&amp;rsquo;s the upper card (in close up and at a rakish angle) &amp;hellip;
-  &amp;hellip; and here&amp;rsquo;s the lower memory card (at an equally rakish angle) &amp;hellip;
-  &amp;hellip; and when sandwiched together here&amp;rsquo;s how the memory unit as a whole looks:</description>
+&amp;hellip; and here&amp;rsquo;s the lower memory card (at an equally rakish angle) &amp;hellip;
+&amp;hellip; and when sandwiched together here&amp;rsquo;s how the memory unit as a whole looks:</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ Here&amp;rsquo;s the upper card (in close up and at a rakish angle) &amp;hellip;
       
       <guid>https://relaycomputer.co.uk/posts/2017/11/program-counter-construction/</guid>
       <description>In my last couple of posts I&amp;rsquo;ve been slightly distracted by some &amp;lsquo;miscellany&amp;rsquo; but now I return to form and crack on with constructing the program counter. The program counter is effectively two 8bit registers bolted together and wired out slightly differently using the address bus rather than data bus. As usual I&amp;rsquo;ll start with soldering down the LEDs:
-  This should all be very familiar now and there&amp;rsquo;s nothing unusual about these LEDs compared to previous cards.</description>
+This should all be very familiar now and there&amp;rsquo;s nothing unusual about these LEDs compared to previous cards.</description>
     </item>
     
     <item>
@@ -170,7 +170,7 @@ The card in question is the decoder which will take the value on the instruction
       
       <guid>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</guid>
       <description>Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
-  As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality.</description>
+As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality.</description>
     </item>
     
     <item>
@@ -190,7 +190,7 @@ The upper enclosure is constructed very similarly to the lower enclosure &amp;he
       
       <guid>https://relaycomputer.co.uk/posts/2014/06/register-construction-completed-and-d-8/</guid>
       <description>The A/D Register card is now complete and looks like this:
-  As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. This time I don&amp;rsquo;t show testing the card on its own as the A/D register is pretty much the same as the B/C register shown last time around &amp;hellip; needless to say I did test the card fully off camera and everything worked fine (first time believe it or not).</description>
+As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. This time I don&amp;rsquo;t show testing the card on its own as the A/D register is pretty much the same as the B/C register shown last time around &amp;hellip; needless to say I did test the card fully off camera and everything worked fine (first time believe it or not).</description>
     </item>
     
     <item>
@@ -200,7 +200,7 @@ The upper enclosure is constructed very similarly to the lower enclosure &amp;he
       
       <guid>https://relaycomputer.co.uk/posts/2014/05/register-construction-completed-b-and-c/</guid>
       <description>The B/C Register card is now complete and looks like this:
-  As usual I&amp;rsquo;ve put a video together which demonstrates this card in operation &amp;hellip; firstly on its own but then together with all the other cards constructed so far. Hopefully these videos are &amp;lsquo;adding value&amp;rsquo; and are worthwhile (they really do take ages to put together &amp;hellip; this one took about 5 hours effort in total for 20 mins of video).</description>
+As usual I&amp;rsquo;ve put a video together which demonstrates this card in operation &amp;hellip; firstly on its own but then together with all the other cards constructed so far. Hopefully these videos are &amp;lsquo;adding value&amp;rsquo; and are worthwhile (they really do take ages to put together &amp;hellip; this one took about 5 hours effort in total for 20 mins of video).</description>
     </item>
     
     <item>
@@ -210,8 +210,8 @@ The upper enclosure is constructed very similarly to the lower enclosure &amp;he
       
       <guid>https://relaycomputer.co.uk/posts/2014/03/completed-alu/</guid>
       <description>Following my last post on the completed backplane I&amp;rsquo;m now in a position to connect all the other completed cards together to test the full ALU. The ALU is made up of the logic, arithmetic and control cards and here&amp;rsquo;s how those cards look when plugged in to the backplane:
-  &amp;hellip; and when viewed from the top and back &amp;hellip;
-  &amp;hellip; and finally here&amp;rsquo;s the four cards laid out side by side:</description>
+&amp;hellip; and when viewed from the top and back &amp;hellip;
+&amp;hellip; and finally here&amp;rsquo;s the four cards laid out side by side:</description>
     </item>
     
     <item>
@@ -221,7 +221,7 @@ The upper enclosure is constructed very similarly to the lower enclosure &amp;he
       
       <guid>https://relaycomputer.co.uk/posts/2014/03/alu-construction-completed-control-card/</guid>
       <description>The ALU Control Card is now complete and looks like this:
-  This card was, on the whole, much simpler and quicker to put together than previous cards (despite me initially messing up the zero detection relay positions). As the card isn&amp;rsquo;t too busy I&amp;rsquo;ve arranged the wiring away from the empty part of the card so there&amp;rsquo;s room for future expansion or modifications if needed in the future. Not entirely sure what they&amp;rsquo;d actually be but you never know.</description>
+This card was, on the whole, much simpler and quicker to put together than previous cards (despite me initially messing up the zero detection relay positions). As the card isn&amp;rsquo;t too busy I&amp;rsquo;ve arranged the wiring away from the empty part of the card so there&amp;rsquo;s room for future expansion or modifications if needed in the future. Not entirely sure what they&amp;rsquo;d actually be but you never know.</description>
     </item>
     
     <item>
@@ -231,8 +231,8 @@ The upper enclosure is constructed very similarly to the lower enclosure &amp;he
       
       <guid>https://relaycomputer.co.uk/posts/2014/02/alu-construction-completed-arithmetic/</guid>
       <description>The ALU arithmetic card is now complete! The final card looks like this:
-  As I did for the ALU logic card before I&amp;rsquo;ve put the following YouTube video together which gives a walkthrough of the arithmetic card in operation &amp;hellip; and as before this one also has a narrative track delivered by my own fair gob.
-  So, that&amp;rsquo;s two out of the three ALU cards done with just the control card left to do.</description>
+As I did for the ALU logic card before I&amp;rsquo;ve put the following YouTube video together which gives a walkthrough of the arithmetic card in operation &amp;hellip; and as before this one also has a narrative track delivered by my own fair gob.
+So, that&amp;rsquo;s two out of the three ALU cards done with just the control card left to do.</description>
     </item>
     
     <item>
@@ -243,7 +243,7 @@ The upper enclosure is constructed very similarly to the lower enclosure &amp;he
       <guid>https://relaycomputer.co.uk/posts/2014/01/alu-construction-1-bit-arithmetic-full/</guid>
       <description>So, as mentioned in my last post this time I&amp;rsquo;ve put in the wire links and wraps needed to test the first bit of the arithmetic card. With these in place I can make sure everything works as it should before repeating it all eight times over to make the full 8-bit adder.
 As a quick reminder here&amp;rsquo;s the diagram for the 1-bit full adder:
-  Reproducing this on the arithmetic card gives the following (on the front of the card):</description>
+Reproducing this on the arithmetic card gives the following (on the front of the card):</description>
     </item>
     
     <item>
@@ -253,7 +253,7 @@ As a quick reminder here&amp;rsquo;s the diagram for the 1-bit full adder:
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-completed-logic-card/</guid>
       <description>The ALU logic card is now finally complete! &amp;hellip; well, it is now I&amp;rsquo;ve popped the last few relays into their sockets. The final card looks like this:
-  As the old saying goes: a picture paints a thousand words &amp;hellip; I&amp;rsquo;m not sure therefore how many words a video paints but it definitely seems the best way to demonstrate the card in operation. So, with that in mind, I&amp;rsquo;ve (painstakingly) put the following YouTube video together which gives a walkthrough of the ALU logic card in operation.</description>
+As the old saying goes: a picture paints a thousand words &amp;hellip; I&amp;rsquo;m not sure therefore how many words a video paints but it definitely seems the best way to demonstrate the card in operation. So, with that in mind, I&amp;rsquo;ve (painstakingly) put the following YouTube video together which gives a walkthrough of the ALU logic card in operation.</description>
     </item>
     
     <item>
@@ -273,7 +273,7 @@ So, it&amp;rsquo;s time to crack out the relays and pop them in the sockets that
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-1-bit-logic-full/</guid>
       <description>So, although I probably should construct the logic card methodically a full stage at a time (solder header pins then sockets then wire wrap) I can&amp;rsquo;t resist fully assembling a single bit alone to see if/how it works. Here of some pictures of that single bit all soldered in and wired up:
-  This is the first bit logic unit out of 8 in total and effectively the pattern is repeated 4 times across the board and for 2 rows up the board.</description>
+This is the first bit logic unit out of 8 in total and effectively the pattern is repeated 4 times across the board and for 2 rows up the board.</description>
     </item>
     
     <item>
@@ -283,7 +283,7 @@ So, it&amp;rsquo;s time to crack out the relays and pop them in the sockets that
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-tests/</guid>
       <description>Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control). As promised, here are the videos of said testing:
-      You might notice I&amp;rsquo;m prodding around slightly more carefully on the arithmetic and control cards &amp;hellip; due to a lack of foresight I&amp;rsquo;ve ended up with every second header pin being a direct line to 0v &amp;hellip; which is not great when the thing I&amp;rsquo;m holding has 12v at the tip.</description>
+You might notice I&amp;rsquo;m prodding around slightly more carefully on the arithmetic and control cards &amp;hellip; due to a lack of foresight I&amp;rsquo;ve ended up with every second header pin being a direct line to 0v &amp;hellip; which is not great when the thing I&amp;rsquo;m holding has 12v at the tip.</description>
     </item>
     
     <item>

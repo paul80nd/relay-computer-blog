@@ -15,8 +15,8 @@
       <guid>https://relaycomputer.co.uk/posts/2017/11/memory-test/</guid>
       <description>I&amp;rsquo;ve covered the construction of the upper and lower memory cards in my last two posts &amp;hellip; it&amp;rsquo;s now time to bring those two cards together to form the memory unit proper and give it all a test.
 Here&amp;rsquo;s the upper card (in close up and at a rakish angle) &amp;hellip;
-  &amp;hellip; and here&amp;rsquo;s the lower memory card (at an equally rakish angle) &amp;hellip;
-  &amp;hellip; and when sandwiched together here&amp;rsquo;s how the memory unit as a whole looks:</description>
+&amp;hellip; and here&amp;rsquo;s the lower memory card (at an equally rakish angle) &amp;hellip;
+&amp;hellip; and when sandwiched together here&amp;rsquo;s how the memory unit as a whole looks:</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ The LEDs and backplane connectors were soldered down in my last post so we can j
       
       <guid>https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-1-of-2/</guid>
       <description>It&amp;rsquo;s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than &amp;lsquo;boring old registers&amp;rsquo; and so I&amp;rsquo;ll split it over two posts. Let&amp;rsquo;s dive in with the easy part - soldering down the LEDs and backplane connectors:
-  For the lower memory card there are 16 LEDs for the 16-bit address bus and 8 LEDs for the 8-bit data bus.</description>
+For the lower memory card there are 16 LEDs for the 16-bit address bus and 8 LEDs for the 8-bit data bus.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ The LEDs and backplane connectors were soldered down in my last post so we can j
       <guid>https://relaycomputer.co.uk/posts/2017/09/memory-design-part-2-of-2/</guid>
       <description>In my last post I started the design for the computer&amp;rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.
 Let&amp;rsquo;s dive straight in by bringing up the board interconnects from the lower card:
- Memory Card A with initial interconnects (larger)  The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0.</description>
+Memory Card A with initial interconnects (larger) The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0.</description>
     </item>
     
     <item>
