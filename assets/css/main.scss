@@ -7,7 +7,6 @@ $tabs-link-active-color: $primary;
 $tabs-link-active-border-bottom-color: $primary;
 
 @import 'bulma.sass';
-@import 'bulma-badge.sass';
 
 @import "bulma-ribbon.sass";
 
@@ -21,6 +20,7 @@ $tabs-link-active-border-bottom-color: $primary;
   .pull-up {
     margin-top: -10rem !important;
   }
+
   .hpc-image {
     width: 8rem !important;
   }
@@ -43,10 +43,10 @@ body {
 }
 
 .bg-img {
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-size:  cover;
-    background-color: #ccc;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ccc;
 }
 
 .hero {
@@ -55,4 +55,20 @@ body {
 
 .highlight {
   margin-bottom: 1.2em;
+}
+
+.progress-blockimg {
+  border: 2px solid white;
+  border-right: none;
+}
+
+.progress-blockimg:last-child {
+  border-right: 2px solid white;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+
+  figure {
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+  }
 }
