@@ -41,7 +41,7 @@
     state: PartComplete
     summary: control
     video: kMu4q65IUk8
-    eda: controller-upper
+    eda: controller-lower
     tmbsch: ctl-0000.png
     pdfsch: controller-lo.pdf
     tmbpcb: ctl-0001.png

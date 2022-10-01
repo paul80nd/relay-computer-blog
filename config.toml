@@ -1,7 +1,7 @@
 # The URL of the site
-baseURL = "https://relaycomputer.co.uk/"
+baseURL = 'https://relaycomputer.co.uk/'
 
- # The title of site
+# The title of site
 languageCode = 'en-gb'
 title = 'Relay Computer'
 
@@ -29,7 +29,7 @@ paginate = 12
   unsafe = true
 
 [taxonomies]
-    tag = "tags"
+    tag = 'tags'
 
 [menu]
 [[menu.main]]
