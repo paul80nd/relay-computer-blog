@@ -2,13 +2,15 @@
 
   {{ range $.Site.Data.progress }}
   <div class="column is-12">
-    <div class="box has-background-grey-lighter">
-      <p class="title is-4">{{ .title }}</p>
-      <div class="columns is-multiline">
-        {{ range .cards }}
-        {{ partial "progress-block" . }}
-        {{ end }}
-      </div>
+    <div class="tabs">
+      <ul>
+        <li class="is-active"><a>{{ .title }}</a></li>
+      </ul>
+    </div>
+    <div class="columns is-multiline">
+      {{ range .cards }}
+      {{ partial "progress-block" . }}
+      {{ end }}
     </div>
   </div>
   {{ end }}
