@@ -46,7 +46,7 @@ In addition to the general purpose registers there are five special registers na
 <meta itemprop="description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
 In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register.">
 
-<meta itemprop="wordCount" content="258">
+<meta itemprop="wordCount" content="189">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Registers Summary"/>
 <meta name="twitter:description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
@@ -159,51 +159,113 @@ window.cookieconsent.initialise({
 <thead>
 <tr>
 <th></th>
-<th>Design</th>
-<th>Construction</th>
-<th>Testing</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Registers</strong><br /><em>(in general)</em></td>
 <td><a href="/posts/2014/04/register-design-general-purpose-8-bit/">General Purpose 8-bit Register</a><br /><a href="/posts/2019/07/16bit-register-design/">General Purpose 16-bit Register</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>A / D Register</strong></td>
-<td><a href="/posts/2014/04/register-design-and-d-8-bit-registers/">A and D 8-bit Registers</a></td>
-<td><a href="/posts/2014/06/register-construction-and-d-8-bit/">A and D 8-bit Registers</a></td>
-<td><a href="/posts/2014/06/register-construction-completed-and-d-8/">A and D 8-bit Registers Full Test</a></td>
-</tr>
-<tr>
-<td><strong>B / C Register</strong></td>
-<td><a href="/posts/2014/04/register-design-dual-output-8-bit/">Dual Output 8-bit Register</a><br /><a href="/posts/2014/05/register-design-b-and-c-8-bit-registers/">B and C 8-bit Registers</a></td>
-<td><a href="/posts/2014/05/register-construction-b-and-c-8-bit/">B and C 8-bit Registers</a></td>
-<td><a href="/posts/2014/05/register-construction-completed-b-and-c/">B and C 8-bit Registers Full Test</a></td>
-</tr>
-<tr>
-<td><strong>Increment Register</strong></td>
-<td><a href="/posts/2017/07/incrementer-design/">Increment Register</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Instruction Register</strong></td>
-<td><a href="/posts/2014/12/register-design-instruction-register/">Instruction Register</a></td>
-<td><a href="/posts/2015/05/register-construction-instruction/">Instruction Register</a></td>
-<td><a href="/posts/2015/05/register-construction-completed/">Instruction Register Full Test</a></td>
-</tr>
-<tr>
-<td><strong>Program Counter</strong></td>
-<td><a href="/posts/2017/05/register-design-program-counter/">Program Counter</a></td>
-<td><a href="/posts/2017/11/program-counter-construction/">Program Counter</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 
+          
+          <div class="columns is-multiline">
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/incrementer/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Incrementer</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/register-ad/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Register A/D</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/register-bc/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Register B/C</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/register-i/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Instruction Register</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/register-j/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Register J</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/register-m/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Register M</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    
+                    <p class="title is-5"><a href="/cards/register-xy/"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;Register XY</a></p>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            
+          </div>
+          
         </div>
       </div>
     </div>
