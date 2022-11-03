@@ -20,11 +20,7 @@ Following on from my last post I can now test the LEDs that have been soldered
 and hooked up to the header pins on each of the three ALU cards (Logic, 
 Arithmetic and Control). As promised, here are the videos of said testing:
 
-{{< youtube v5X9MSLctaM >}}
-
-{{< youtube FYBwbvHwhFc >}}
-
-{{< youtube bl5los2hLNQ >}}
+{{< youtube v5X9MSLctaM FYBwbvHwhFc bl5los2hLNQ >}}
 
 You might notice I'm prodding around slightly 
 more carefully on the arithmetic and control cards ... due to a lack of 

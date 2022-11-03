@@ -22,11 +22,11 @@ An overview of the architecture used in this relay computer can be found in the 
 
 The following posts go in to more detail ... starting with the basics and building up from there:
 
-* [Architecturalbreakdown: Binary]({{< relref "/posts/2013/11-04-architectural-breakdown-binary" >}})
-* [Architecturalbreakdown: Buses and Registers]({{< relref "/posts/2013/11-05-architectural-breakdown-buses-and" >}})
-* [Architecturalbreakdown: Memory]({{< relref "/posts/2013/11-06-architectural-breakdown-memory" >}})
+* [Architectural breakdown: Binary]({{< relref "/posts/2013/11-04-architectural-breakdown-binary" >}})
+* [Architectural breakdown: Buses and Registers]({{< relref "/posts/2013/11-05-architectural-breakdown-buses-and" >}})
+* [Architectural breakdown: Memory]({{< relref "/posts/2013/11-06-architectural-breakdown-memory" >}})
 * [Architectural breakdown: the ALU]({{< relref "/posts/2013/11-07-architectural-breakdown-alu" >}})
-* [Architecturalbreakdown: Programming and Control]({{< relref "/posts/2013/11-07-architectural-breakdown-programming-and" >}})
+* [Architectural breakdown: Programming and Control]({{< relref "/posts/2013/11-07-architectural-breakdown-programming-and" >}})
 * [Architectural breakdown: Programming and Control 2]({{< relref "/posts/2013/11-07-architectural-breakdown-programming-and_7" >}})
 
 An insight into the choice of relays to be used can be found here:
@@ -40,9 +40,4 @@ Finally, an initial instruction set can be found here:
 If you like your information delivered in a more visual way here's the most recent collection of 'update' videos from Jan
 2020 which cover off many of the items above:
 
-{{< youtube NfvgQCoFykE >}}
-{{< youtube szvNLpovAGM >}}
-{{< youtube IQW445iMnrc >}}
-{{< youtube _iBnu5HXscI >}}
-{{< youtube B_U0LM3CCgA >}}
-{{< youtube JZyFSrNyhy8 >}}
+{{< youtube NfvgQCoFykE szvNLpovAGM IQW445iMnrc _iBnu5HXscI B_U0LM3CCgA JZyFSrNyhy8>}}
