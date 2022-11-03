@@ -6,6 +6,24 @@
       <div class="column is-three-quarters-widescreen">
         <div class="content">
           {{ .Content }}
+          {{ if isset .Params "linked-cards" }}
+          <div class="columns is-multiline">
+            {{ range (index .Params "linked-cards") }}
+            <div class="column is-half">
+              <article class="card">
+                <div class="card-content has-background-white">
+                  <div class="content">
+                    {{ with (index $.Site.Taxonomies.cards .) }}
+                    <p class="title is-5"><a href="{{ .Page.RelPermalink }}"><span class="icon"><i
+                            class="fas fa-cube fa-fw"></i></span>&nbsp;&nbsp;{{ .Page.Title }}</a></p>
+                    {{ end }}
+                  </div>
+                </div>
+              </article>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
         </div>
       </div>
     </div>
