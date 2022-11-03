@@ -3,17 +3,17 @@
   cards:
 
   - title: Backplane W
+    card: backplane
     state: Complete
-    summary: enclosure
     tmbsch: alu-0006.png
     flssch: alu-1006.png
     tmbpto: alu-0007.jpg
     flspto: alu-1007.jpg
 
   - title: Decoder
+    card: decoder
     version: 2
     state: Complete
-    summary: control
     video: R2zvB_M4D-k
     eda: decoder
     tmbsch: dcr-0000.png
@@ -24,10 +24,10 @@
     flspto: dcr-1002.jpg
 
   - title: Controller
+    card: controller
     version: 2
     derv: upper
     state: PartComplete
-    summary: control
     video: iCu2DRJhtUc
     eda: controller-upper
     tmbsch: cth-0000.png
@@ -36,10 +36,10 @@
     pdfpcb: sequencer-hi-pcbp.pdf
 
   - title: Controller
+    card: controller
     version: 2
     derv: lower
     state: PartComplete
-    summary: control
     video: kMu4q65IUk8
     eda: controller-lower
     tmbsch: ctl-0000.png
@@ -48,10 +48,10 @@
     pdfpcb: sequencer-lo-pcbp.pdf
 
   - title: Sequencer
+    card: sequencer
     version: 2
     derv: upper
     state: Complete
-    summary: control
     video: aIFWOAhqXLY
     eda: sequencer-upper
     tmbsch: sqh-0000.png
@@ -62,10 +62,10 @@
     flspto: sqh-1002.jpg
 
   - title: Sequencer
+    card: sequencer
     version: 2
     derv: lower
     state: Complete
-    summary: control
     video: HBvL6sCmf1c
     eda: sequencer-lower
     tmbsch: sql-0000.png
@@ -80,16 +80,16 @@
   cards:
 
   - title: Backplane X
+    card: backplane
     state: Complete
-    summary: enclosure
 
   - title: Clock
     state: NotStarted
     summary: control
 
   - title: Incrementer
+    card: incrementer
     state: Complete
-    summary: control
     video: GfK5cpXfPv8
     tmbsch: alu-0020.png
     flssch: alu-1020.png
@@ -97,8 +97,8 @@
     flspto: alu-1021.jpg
 
   - title: Instruction Register
+    card: register-i
     state: Complete
-    summary: registers
     video: 42g6BejUVUA
     tmbsch: alu-0028.png
     flssch: alu-1028.png
@@ -106,8 +106,8 @@
     flspto: alu-1029.jpg
 
   - title: Program Counter
+    card: register-pc
     state: Complete
-    summary: registers
     video: geT5kJOs29c
     tmbsch: alu-0030.png
     flssch: alu-1030.png
@@ -119,8 +119,8 @@
   cards:
 
   - title: Backplane Y
+    card: backplane
     state: Complete
-    summary: enclosure
     video: GT0gxIFDWqc
     tmbsch: bpy-0000.png
     flssch: bpy-1000.pdf
@@ -128,8 +128,8 @@
     flspcb: bpy-1001.pdf
 
   - title: Memory
+    card: memory
     state: Complete
-    summary: control
     video: s0lELXLXHPY
     tmbsch: alu-0022.png
     flssch: alu-1022.png
@@ -149,8 +149,8 @@
     flspto: rey-1002.jpg
 
   - title: Register M
+    card: register-m
     state: Complete
-    summary: registers
     video: hhMye5aeCRQ
     eda: register-xymj
     tmbsch: rey-0000.png
@@ -161,8 +161,8 @@
     flspto: rey-1002.jpg
 
   - title: Register XY
+    card: register-xy
     state: Complete
-    summary: registers
     video: hhMye5aeCRQ
     eda: register-xymj
     tmbsch: rey-0000.png
@@ -177,16 +177,16 @@
   cards:
 
   - title: Backplane Z
+    card: backplane
     state: Complete
-    summary: enclosure
     tmbsch: alu-0008.png
     flssch: alu-1008.png
     tmbpto: alu-0009.jpg
     flspto: alu-1009.jpg
 
   - title: ALU Arithmetic Unit
+    card: arithmetic-unit
     state: Complete
-    summary: alu
     video: PXoxrAFgzKs
     tmbsch: alu-0000.png
     flssch: alu-1000.png
@@ -194,8 +194,8 @@
     flspto: alu-1001.jpg
 
   - title: ALU Control Unit
+    card: control-unit
     state: Complete
-    summary: alu
     video: ZmQDZCt3m10
     tmbsch: alu-0002.png
     flssch: alu-1002.png
@@ -203,8 +203,8 @@
     flspto: alu-1003.jpg
 
   - title: ALU Logic Unit
+    card: logic-unit
     state: Complete
-    summary: alu
     video: pVNtRphZdQI
     tmbsch: alu-0004.png
     flssch: alu-1004.png
@@ -212,8 +212,8 @@
     flspto: alu-1005.jpg
 
   - title: Register A/D
+    card: register-ad
     state: Complete
-    summary: registers
     video: 3ckqsQZIBtc
     tmbsch: alu-0024.png
     flssch: alu-1024.png
@@ -221,8 +221,8 @@
     flspto: alu-1025.jpg
 
   - title: Register B/C
+    card: register-bc
     state: Complete
-    summary: registers
     video: JyeZpZLaZNQ
     tmbsch: alu-0026.png
     flssch: alu-1026.png
@@ -234,8 +234,8 @@
   cards:
 
   - title: Auxiliary Control
+    card: aux-ctrl
     state: Complete
-    summary: ui
     video: Jqr_2ryiy2c
     tmbsch: axc-0000.png
     flssch: axc-1000.png
@@ -243,8 +243,8 @@
     flspto: axc-1001.jpg
 
   - title: Display A
+    card: display-a
     state: PartComplete
-    summary: ui
     video: -nCNhBx65u0
     tmbsch: alu-0014.png
     flssch: alu-1014.png
@@ -252,8 +252,8 @@
     flspto: alu-1015.jpg
 
   - title: Display B
+    card: display-b
     state: PartComplete
-    summary: ui
     video: -nCNhBx65u0
     tmbsch: alu-0016.png
     flssch: alu-1016.png
@@ -269,8 +269,8 @@
     flspto: alu-1019.jpg
 
   - title: Test Board
+    card: test-board
     state: Complete
-    summary: ui
     tmbpto: alu-0034.jpg
     flspto: alu-1034.jpg
 
@@ -279,9 +279,9 @@
   cards:
 
   - title: Controller
+    card: controller
     version: 1
     state: Abandoned
-    summary: control
     video: fJzvwv28CEE
     tmbsch: alu-0010.png
     flssch: alu-1010.png
@@ -289,9 +289,9 @@
     flspto: alu-1011.jpg
 
   - title: Decoder
+    card: decoder
     version: 1
     state: Abandoned
-    summary: control
     video: pYF2HUBwMp4
     tmbsch: alu-0012.png
     flssch: alu-1012.png
@@ -299,9 +299,9 @@
     flspto: alu-1013.jpg
 
   - title: Sequencer
+    card: sequencer
     version: 1
     state: Abandoned
-    summary: control
     video: P2G8LHeWb80
     tmbsch: alu-0032.png
     flssch: alu-1032.png
