@@ -29,6 +29,7 @@ paginate = 12
   unsafe = true
 
 [taxonomies]
+    card = 'cards'
     tag = 'tags'
 
 [menu]
