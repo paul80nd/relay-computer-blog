@@ -14,10 +14,22 @@
               <span class="tag is-info">{{ .Date.Format "Jan 02, 2006" }}</span>
             </a>
           </div>
+          {{ with .Param "cards" }}
+          {{ range (. | sort) }}
+          <div class="control">
+            <a href="/cards/{{ . }}" class="tags has-addons">
+              <span class="tag is-link">Card</span>
+              <span class="tag is-info">{{ . }}</span>
+            </a>
+          </div>
+          {{ end }}
+          {{ end }}
+          </div>
+          <div class="field is-grouped is-grouped-multiline">
           {{ with .Param "tags" }}
           {{ range (. | sort) }}
           <div class="control">
-            <a href="/tags#{{ . }}" class="tags">
+            <a href="/tags/{{ . }}/" class="tags">
               <span class="tag is-primary">{{ . }}</span>
             </a>
           </div>
