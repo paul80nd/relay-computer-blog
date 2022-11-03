@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>register-i on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/cards/register-i/</link>
+    <description>Recent content in register-i on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 16 May 2015 10:19:00 +0100</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/register-i/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Register Construction: Completed Instruction Register Full Test</title>
+      <link>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</link>
+      <pubDate>Sat, 16 May 2015 10:19:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</guid>
+      <description>Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
+As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality.</description>
+    </item>
+    
+    <item>
+      <title>Register Construction: Instruction Register</title>
+      <link>https://relaycomputer.co.uk/posts/2015/05/register-construction-instruction/</link>
+      <pubDate>Sat, 09 May 2015 20:01:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2015/05/register-construction-instruction/</guid>
+      <description>There&amp;rsquo;s been lots of theory going on in my recent posts but the time for design is over (for now) &amp;hellip; it&amp;rsquo;s time to get constructing. The first card up in this batch is the instruction register and as it shares much of its design with the other register cards the construction is very similar.
+The first step is to solder down the LEDs. Here&amp;rsquo;s some pictures, front and back, of the card following this first round of soldering:</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Instruction Register</title>
+      <link>https://relaycomputer.co.uk/posts/2014/12/register-design-instruction-register/</link>
+      <pubDate>Mon, 01 Dec 2014 21:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2014/12/register-design-instruction-register/</guid>
+      <description>Well, it&amp;rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &amp;hellip; and that&amp;rsquo;s mainly because &amp;lsquo;decorating&amp;rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &amp;hellip; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&amp;rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer.</description>
+    </item>
+    
+  </channel>
+</rss>

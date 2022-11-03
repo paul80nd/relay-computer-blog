@@ -32,10 +32,16 @@
     <loc>https://relaycomputer.co.uk/tags/video/</loc>
     <lastmod>2020-02-01T03:03:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/</loc>
+    <lastmod>2020-01-05T03:03:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/tags/construction/</loc>
     <lastmod>2020-01-05T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/decoder/</loc>
+    <lastmod>2020-01-05T03:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/decoder/</loc>
     <lastmod>2020-01-05T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2020/01/decoder-construction/</loc>
@@ -50,6 +56,9 @@
     <loc>https://relaycomputer.co.uk/tags/control/</loc>
     <lastmod>2019-12-21T03:03:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/controller/</loc>
+    <lastmod>2019-12-21T03:03:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/12/controller-construction/</loc>
     <lastmod>2019-12-21T03:03:00+00:00</lastmod>
   </url><url>
@@ -61,6 +70,9 @@
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/11/controller-goto-design/</loc>
     <lastmod>2019-11-30T03:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/sequencer/</loc>
+    <lastmod>2019-11-20T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/11/sequencer-construction/</loc>
     <lastmod>2019-11-20T03:03:00+00:00</lastmod>
@@ -89,11 +101,23 @@
     <loc>https://relaycomputer.co.uk/posts/2019/08/16bit-register-pcb-design/</loc>
     <lastmod>2019-08-09T01:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-j/</loc>
+    <lastmod>2019-08-09T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-m/</loc>
+    <lastmod>2019-08-09T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-xy/</loc>
+    <lastmod>2019-08-09T01:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/tags/registers/</loc>
     <lastmod>2019-08-09T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/07/16bit-register-design/</loc>
     <lastmod>2019-07-15T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/backplane/</loc>
+    <lastmod>2019-03-04T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/03/making-a-pcb/</loc>
     <lastmod>2019-03-04T11:00:00+00:00</lastmod>
@@ -103,6 +127,9 @@
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/01/procrastination-is/</loc>
     <lastmod>2019-01-06T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/aux-ctrl/</loc>
+    <lastmod>2018-03-27T22:07:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2018/03/auxiliary-control-construction/</loc>
     <lastmod>2018-03-27T22:07:00+00:00</lastmod>
@@ -125,6 +152,9 @@
     <loc>https://relaycomputer.co.uk/tags/incrementer/</loc>
     <lastmod>2018-01-07T13:04:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/incrementer/</loc>
+    <lastmod>2018-01-07T13:04:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2018/01/incrementer-test/</loc>
     <lastmod>2018-01-07T13:04:00+00:00</lastmod>
   </url><url>
@@ -135,6 +165,9 @@
     <lastmod>2017-12-10T11:07:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/memory/</loc>
+    <lastmod>2017-11-30T21:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/memory/</loc>
     <lastmod>2017-11-30T21:15:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2017/11/memory-test/</loc>
@@ -149,6 +182,15 @@
     <loc>https://relaycomputer.co.uk/posts/2017/11/program-counter-construction/</loc>
     <lastmod>2017-11-11T10:25:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-pc/</loc>
+    <lastmod>2017-11-11T10:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/display-a/</loc>
+    <lastmod>2017-11-05T10:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/display-b/</loc>
+    <lastmod>2017-11-05T10:47:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/tags/enclosure/</loc>
     <lastmod>2017-11-05T10:47:00+00:00</lastmod>
   </url><url>
@@ -159,6 +201,9 @@
     <lastmod>2017-10-29T11:01:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/power/</loc>
+    <lastmod>2017-10-29T11:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/power-dist/</loc>
     <lastmod>2017-10-29T11:01:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2017/09/control-design-fetch-and-increment/</loc>
@@ -221,6 +266,9 @@
     <loc>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</loc>
     <lastmod>2015-05-16T10:19:00+01:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-i/</loc>
+    <lastmod>2015-05-16T10:19:00+01:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2015/05/register-construction-instruction/</loc>
     <lastmod>2015-05-09T20:01:00+01:00</lastmod>
   </url><url>
@@ -272,10 +320,16 @@
     <loc>https://relaycomputer.co.uk/posts/2014/06/register-construction-completed-and-d-8/</loc>
     <lastmod>2014-06-28T13:12:00+01:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-ad/</loc>
+    <lastmod>2014-06-28T13:12:00+01:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/06/register-construction-and-d-8-bit/</loc>
     <lastmod>2014-06-22T18:35:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/05/register-construction-completed-b-and-c/</loc>
+    <lastmod>2014-05-26T09:59:00+01:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/register-bc/</loc>
     <lastmod>2014-05-26T09:59:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/05/register-construction-b-and-c-8-bit/</loc>
@@ -317,6 +371,9 @@
     <loc>https://relaycomputer.co.uk/posts/2014/03/alu-construction-completed-control-card/</loc>
     <lastmod>2014-03-16T08:59:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/control-unit/</loc>
+    <lastmod>2014-03-16T08:59:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/03/alu-construction-control-card-power/</loc>
     <lastmod>2014-03-14T19:51:00+00:00</lastmod>
   </url><url>
@@ -327,6 +384,9 @@
     <lastmod>2014-03-01T10:55:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/02/alu-construction-completed-arithmetic/</loc>
+    <lastmod>2014-02-23T17:31:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/arithmetic-unit/</loc>
     <lastmod>2014-02-23T17:31:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/02/alu-construction-arithmetic-card-wire_19/</loc>
@@ -353,6 +413,9 @@
     <loc>https://relaycomputer.co.uk/posts/2013/12/alu-construction-completed-logic-card/</loc>
     <lastmod>2013-12-18T08:26:00+00:00</lastmod>
   </url><url>
+    <loc>https://relaycomputer.co.uk/cards/logic-unit/</loc>
+    <lastmod>2013-12-18T08:26:00+00:00</lastmod>
+  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-wire-wrap-3/</loc>
     <lastmod>2013-12-18T08:01:00+00:00</lastmod>
   </url><url>
@@ -369,6 +432,9 @@
     <lastmod>2013-12-10T22:56:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2013/12/test-board-construction/</loc>
+    <lastmod>2013-12-10T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/test-board/</loc>
     <lastmod>2013-12-10T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-relay/</loc>

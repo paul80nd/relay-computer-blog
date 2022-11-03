@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>register-pc on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/cards/register-pc/</link>
+    <description>Recent content in register-pc on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 11 Nov 2017 10:25:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/register-pc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Program Counter Construction</title>
+      <link>https://relaycomputer.co.uk/posts/2017/11/program-counter-construction/</link>
+      <pubDate>Sat, 11 Nov 2017 10:25:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2017/11/program-counter-construction/</guid>
+      <description>In my last couple of posts I&amp;rsquo;ve been slightly distracted by some &amp;lsquo;miscellany&amp;rsquo; but now I return to form and crack on with constructing the program counter. The program counter is effectively two 8bit registers bolted together and wired out slightly differently using the address bus rather than data bus. As usual I&amp;rsquo;ll start with soldering down the LEDs:
+This should all be very familiar now and there&amp;rsquo;s nothing unusual about these LEDs compared to previous cards.</description>
+    </item>
+    
+    <item>
+      <title>Register Design: Program Counter</title>
+      <link>https://relaycomputer.co.uk/posts/2017/05/register-design-program-counter/</link>
+      <pubDate>Mon, 29 May 2017 17:13:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2017/05/register-design-program-counter/</guid>
+      <description>It&amp;rsquo;s been a while since my last post &amp;hellip; pretty much 10 months in fact &amp;hellip; and I&amp;rsquo;d love to say I&amp;rsquo;ve been quietly working on my relay computer in the meantime but I haven&amp;rsquo;t. Designing, building and blogging about the various parts of the computer is really time consuming and unfortunately I&amp;rsquo;m just one of those people who has way too many hobbies. Anyway, after picking up some subscribers on YouTube I thought it was high time (or maybe I felt guilty enough) to focus back on the computer and get it through to the next milestone &amp;hellip; where it can step through a simple program stored in its memory without any human intervention (beyond entering the program itself and setting the computer running).</description>
+    </item>
+    
+  </channel>
+</rss>

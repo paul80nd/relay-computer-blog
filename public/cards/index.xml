@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cards on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/cards/</link>
+    <description>Recent content in Cards on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 05 Jan 2020 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>decoder</title>
+      <link>https://relaycomputer.co.uk/cards/decoder/</link>
+      <pubDate>Sun, 05 Jan 2020 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/decoder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>controller</title>
+      <link>https://relaycomputer.co.uk/cards/controller/</link>
+      <pubDate>Sat, 21 Dec 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/controller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sequencer</title>
+      <link>https://relaycomputer.co.uk/cards/sequencer/</link>
+      <pubDate>Wed, 20 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/sequencer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-j</title>
+      <link>https://relaycomputer.co.uk/cards/register-j/</link>
+      <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-m</title>
+      <link>https://relaycomputer.co.uk/cards/register-m/</link>
+      <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-xy</title>
+      <link>https://relaycomputer.co.uk/cards/register-xy/</link>
+      <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-xy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backplane</title>
+      <link>https://relaycomputer.co.uk/cards/backplane/</link>
+      <pubDate>Mon, 04 Mar 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/backplane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aux-ctrl</title>
+      <link>https://relaycomputer.co.uk/cards/aux-ctrl/</link>
+      <pubDate>Tue, 27 Mar 2018 22:07:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/aux-ctrl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>incrementer</title>
+      <link>https://relaycomputer.co.uk/cards/incrementer/</link>
+      <pubDate>Sun, 07 Jan 2018 13:04:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/incrementer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memory</title>
+      <link>https://relaycomputer.co.uk/cards/memory/</link>
+      <pubDate>Thu, 30 Nov 2017 21:15:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-pc</title>
+      <link>https://relaycomputer.co.uk/cards/register-pc/</link>
+      <pubDate>Sat, 11 Nov 2017 10:25:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-pc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>display-a</title>
+      <link>https://relaycomputer.co.uk/cards/display-a/</link>
+      <pubDate>Sun, 05 Nov 2017 10:47:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/display-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>display-b</title>
+      <link>https://relaycomputer.co.uk/cards/display-b/</link>
+      <pubDate>Sun, 05 Nov 2017 10:47:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/display-b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>power-dist</title>
+      <link>https://relaycomputer.co.uk/cards/power-dist/</link>
+      <pubDate>Sun, 29 Oct 2017 11:01:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/power-dist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-i</title>
+      <link>https://relaycomputer.co.uk/cards/register-i/</link>
+      <pubDate>Sat, 16 May 2015 10:19:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-ad</title>
+      <link>https://relaycomputer.co.uk/cards/register-ad/</link>
+      <pubDate>Sat, 28 Jun 2014 13:12:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-ad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>register-bc</title>
+      <link>https://relaycomputer.co.uk/cards/register-bc/</link>
+      <pubDate>Mon, 26 May 2014 09:59:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/register-bc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>control-unit</title>
+      <link>https://relaycomputer.co.uk/cards/control-unit/</link>
+      <pubDate>Sun, 16 Mar 2014 08:59:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/control-unit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arithmetic-unit</title>
+      <link>https://relaycomputer.co.uk/cards/arithmetic-unit/</link>
+      <pubDate>Sun, 23 Feb 2014 17:31:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/arithmetic-unit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logic-unit</title>
+      <link>https://relaycomputer.co.uk/cards/logic-unit/</link>
+      <pubDate>Wed, 18 Dec 2013 08:26:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/logic-unit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test-board</title>
+      <link>https://relaycomputer.co.uk/cards/test-board/</link>
+      <pubDate>Tue, 10 Dec 2013 07:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/test-board/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

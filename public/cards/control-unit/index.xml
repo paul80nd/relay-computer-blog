@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>control-unit on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/cards/control-unit/</link>
+    <description>Recent content in control-unit on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 16 Mar 2014 08:59:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/control-unit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ALU Construction: Completed Control Card Full Test</title>
+      <link>https://relaycomputer.co.uk/posts/2014/03/alu-construction-completed-control-card/</link>
+      <pubDate>Sun, 16 Mar 2014 08:59:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2014/03/alu-construction-completed-control-card/</guid>
+      <description>The ALU Control Card is now complete and looks like this:
+This card was, on the whole, much simpler and quicker to put together than previous cards (despite me initially messing up the zero detection relay positions). As the card isn&amp;rsquo;t too busy I&amp;rsquo;ve arranged the wiring away from the empty part of the card so there&amp;rsquo;s room for future expansion or modifications if needed in the future. Not entirely sure what they&amp;rsquo;d actually be but you never know.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Control Card Power Rails &amp; Wire Wrap</title>
+      <link>https://relaycomputer.co.uk/posts/2014/03/alu-construction-control-card-power/</link>
+      <pubDate>Fri, 14 Mar 2014 19:51:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2014/03/alu-construction-control-card-power/</guid>
+      <description>I&amp;rsquo;ve been a bit short of time lately so I&amp;rsquo;ve been working on the ALU Control Card in little bursts &amp;hellip; but after lots of these little bursts I&amp;rsquo;ve now got all the power rails and wire wrap done for this card.
+Here&amp;rsquo;s the card as it currently stands:
+&amp;hellip; and this is how the power rails look on the solder side of the card &amp;hellip;
+With the rails and wire wrap all done the card just needs the relays popping in and it should be ready for a test drive.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Control Card Header Pins &amp; Relay Sockets</title>
+      <link>https://relaycomputer.co.uk/posts/2014/03/alu-construction-control-card-header/</link>
+      <pubDate>Tue, 04 Mar 2014 18:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2014/03/alu-construction-control-card-header/</guid>
+      <description>Following on from the first two successfully completed ALU cards, for logic and arithmetic, it&amp;rsquo;s time to make a start on the control card (well, actually, the LEDs and connectors are already done from earlier but you get the gist). The control card performs three functions: control registers, function decoding and zero detection &amp;hellip; and thankfully this card is much simpler than the previous two in terms of relay count and sheer amount of soldering so should come together relatively quickly.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: LED Tests</title>
+      <link>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-tests/</link>
+      <pubDate>Fri, 06 Dec 2013 20:55:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-tests/</guid>
+      <description>Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control). As promised, here are the videos of said testing:
+You might notice I&amp;rsquo;m prodding around slightly more carefully on the arithmetic and control cards &amp;hellip; due to a lack of foresight I&amp;rsquo;ve ended up with every second header pin being a direct line to 0v &amp;hellip; which is not great when the thing I&amp;rsquo;m holding has 12v at the tip.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: LED Header Pins</title>
+      <link>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-header-pins/</link>
+      <pubDate>Thu, 05 Dec 2013 21:46:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-header-pins/</guid>
+      <description>So far, in the construction of the three ALU cards (Logic, Arithmetic and Control) I&amp;rsquo;ve soldered down the connectors and LEDs. It&amp;rsquo;s now time to solder in some header pins and join them to the existing connectors and LEDs ready for wire-wrapping later.
+You can get proper wire-wrap posts but they&amp;rsquo;re really expensive for what they are (mainly, I guess, because it&amp;rsquo;s quite an old-fashioned construction method). I&amp;rsquo;ve found, though, that header pins do the job just as well but being as they&amp;rsquo;re not as tall you can only get a maximum of two wraps on each pin.</description>
+    </item>
+    
+    <item>
+      <title>ALU Construction: Connectors and LEDs</title>
+      <link>https://relaycomputer.co.uk/posts/2013/12/alu-construction-connectors-and-leds/</link>
+      <pubDate>Mon, 02 Dec 2013 18:05:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-connectors-and-leds/</guid>
+      <description>As promised in my last post it&amp;rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU. I&amp;rsquo;m going start by laying down the connectors and LEDs on each card to make sure I&amp;rsquo;m happy with the look and feel of things and then I can move on to everything else needed later.
+As mentioned in earlier posts I&amp;rsquo;m basing my construction around 55 x 40 hole pad boards which fit my designs quite nicely at the right sort of size I&amp;rsquo;m looking to construct at.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Control Unit</title>
+      <link>https://relaycomputer.co.uk/posts/2013/12/alu-design-control-unit/</link>
+      <pubDate>Sun, 01 Dec 2013 21:21:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/12/alu-design-control-unit/</guid>
+      <description>In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&amp;rsquo;ll put all three of these components together to make up the ALU Control Card. So, placing the relays from the three components onto the card (excluding wire links) we get the following:
+ALU Control Card Relays (larger) Unlike the other cards that make up the full ALU (the logic and arithmetic cards) things aren&amp;rsquo;t quite so tightly packed in this time.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Condition Registers</title>
+      <link>https://relaycomputer.co.uk/posts/2013/11/alu-design-condition-registers/</link>
+      <pubDate>Sat, 30 Nov 2013 10:12:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/11/alu-design-condition-registers/</guid>
+      <description>This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card. There are three Condition Registers in this computer:
+Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off).</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Zero Detect</title>
+      <link>https://relaycomputer.co.uk/posts/2013/11/alu-design-zero-detect/</link>
+      <pubDate>Sat, 23 Nov 2013 08:57:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/11/alu-design-zero-detect/</guid>
+      <description>This post covers the design of the Zero Detect circuit which along with the 3-to-8 Function Decoder (covered in my last post) and the Condition Registers (next post) make up the ALU Control Card. The Zero Detect circuit &amp;hellip; wait for it &amp;hellip; detects when a value is zero. The value in question is taken from the data bus so in effect we&amp;rsquo;re detecting when no bits are set. The output from this circuit is then passed to the Condition Registers so that the current value can be stored for future operations.</description>
+    </item>
+    
+    <item>
+      <title>ALU Design: Function Decoder</title>
+      <link>https://relaycomputer.co.uk/posts/2013/11/design-function-decoder/</link>
+      <pubDate>Wed, 20 Nov 2013 22:18:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2013/11/design-function-decoder/</guid>
+      <description>This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card. The Decoder takes a 3-bit ALU Function code as its input and activates 1 of 8 control lines accordingly. The function codes are as follows:
+Code Operation Description 000 CLR Clear/No Operation 001 ADD B + C 010 INC Increment B 011 AND B AND C 100 OR B OR C 101 XOR B XOR C 110 NOT NOT C 111 SHL Shift Left B The control lines which are fed to the Arithmetic and Logic Units via the Ctrl-Z bus are:</description>
+    </item>
+    
+  </channel>
+</rss>

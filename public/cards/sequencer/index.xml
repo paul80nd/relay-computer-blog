@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sequencer on Relay Computer</title>
+    <link>https://relaycomputer.co.uk/cards/sequencer/</link>
+    <description>Recent content in sequencer on Relay Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 20 Nov 2019 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/sequencer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sequencer Construction</title>
+      <link>https://relaycomputer.co.uk/posts/2019/11/sequencer-construction/</link>
+      <pubDate>Wed, 20 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-construction/</guid>
+      <description>In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I can get on with soldering up the cards and giving them a test.
+Let&amp;rsquo;s start with the lower card and, as before, I&amp;rsquo;ve put together a video which covers the highlights:
+Likewise, here&amp;rsquo;s a video covering the upper card construction which also includes giving the cards a test together and then testing the whole sequencer unit when placed in the computer:</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: Schematic &amp; PCBs</title>
+      <link>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pcb/</link>
+      <pubDate>Mon, 11 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pcb/</guid>
+      <description>I&amp;rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&amp;rsquo;s left for the sequencer is to bring the schematics together and then design the PCBs &amp;hellip; and yup, that&amp;rsquo;s PCBs plural as this is going to be another part of the computer that is complicated enough to need spreading over two interconnected cards. The way I can tell this is a &amp;rsquo;two card job&amp;rsquo; is purely down to the number of relays I&amp;rsquo;ve used.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: Pulse Distribution</title>
+      <link>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pulse-dist/</link>
+      <pubDate>Sat, 02 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-pulse-dist/</guid>
+      <description>In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions. In this case we&amp;rsquo;re looking to implement the GOTO instruction so that the computer can perform branching.
+As a recap here&amp;rsquo;s the outputs from the newly designed FSM:
+24-cycle FSM Outputs (larger) &amp;hellip; and here&amp;rsquo;s the timing chart that we&amp;rsquo;re trying to obtain:</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: 24-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-24-cycle-fsm/</link>
+      <pubDate>Fri, 01 Nov 2019 03:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2019/11/sequencer-design-24-cycle-fsm/</guid>
+      <description>Recently I&amp;rsquo;ve been looking at what&amp;rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing chart for the GOTO class which is repeated below:
+GOTO opcode timing chart (larger) To achieve this timing I&amp;rsquo;ll need a sequencer that can &amp;lsquo;count&amp;rsquo; up to 24 (currently it only goes up to 8). Actually none of this is too difficult as counting beyond 8 more-or-less repeats the same pattern of relays.</description>
+    </item>
+    
+    <item>
+      <title>Branching: Opcode Design</title>
+      <link>https://relaycomputer.co.uk/posts/2019/09/branching-opcode-design/</link>
+      <pubDate>Mon, 23 Sep 2019 01:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2019/09/branching-opcode-design/</guid>
+      <description>There&amp;rsquo;s been a common theme recently in the comments on my YouTube videos &amp;hellip; people are ready to see my relay computer gain the power of branching and become a &amp;lsquo;proper&amp;rsquo; computer &amp;hellip; and that&amp;rsquo;s fair enough because that&amp;rsquo;s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don&amp;rsquo;t want to keep you (or I) waiting for the &amp;lsquo;main event&amp;rsquo; any longer so it&amp;rsquo;s time to start designing the most complicated of all instruction classes &amp;hellip; the &amp;lsquo;GOTO&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Sequencing &amp; Control Test</title>
+      <link>https://relaycomputer.co.uk/posts/2016/05/sequencing-control-test/</link>
+      <pubDate>Tue, 24 May 2016 21:12:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2016/05/sequencing-control-test/</guid>
+      <description>It&amp;rsquo;s finally time to give all the cards created so far a test so I can check everything works together as expected. This represents quite a bit of a milestone as the computer can now perform a single ALU, SETAB or MOV-8 instruction. This means a user can technically run a program by entering and running each instruction in turn and although the computer is still a long way from completion with this latest round of functionality it&amp;rsquo;s a lot more usable than before.</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Construction: 8-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/posts/2015/07/sequencer-construction-8-cycle-fsm/</link>
+      <pubDate>Wed, 08 Jul 2015 09:27:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2015/07/sequencer-construction-8-cycle-fsm/</guid>
+      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones. In this post it&amp;rsquo;s the sequencer cards which will deal with the &amp;lsquo;when&amp;rsquo; of instructions by sending out timing pulses which the upcoming control cards will then use to operate the various control lines of the computer at the right time.</description>
+    </item>
+    
+    <item>
+      <title>Pulse Distribution Design: Pulses C,D and E</title>
+      <link>https://relaycomputer.co.uk/posts/2015/03/pulse-distribution-design-pulses-cd-and/</link>
+      <pubDate>Sun, 22 Mar 2015 13:58:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2015/03/pulse-distribution-design-pulses-cd-and/</guid>
+      <description>In my last post I covered the design of the 8-cycle finite state machine (FSM). In this post I&amp;rsquo;ll now take the outputs from that FSM and combine them to produce the timing pulses that will be needed to perform the MOV-8, ALU and SETAB instructions. The sequencer and pulse distribution share a &amp;lsquo;double&amp;rsquo; card and so I&amp;rsquo;ll also cover the resulting design when these two systems are combined.
+To quickly recap &amp;hellip; the 8-cycle FSM will produce the following states given a clock signal as an input:</description>
+    </item>
+    
+    <item>
+      <title>Sequencer Design: 8-cycle FSM</title>
+      <link>https://relaycomputer.co.uk/posts/2015/01/sequencer-design-8-cycle-fsm/</link>
+      <pubDate>Mon, 26 Jan 2015 22:03:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2015/01/sequencer-design-8-cycle-fsm/</guid>
+      <description>So far I&amp;rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&amp;rsquo;m well on the way to having the computer perform MOV-8, ALU and SETAB instructions. Later I&amp;rsquo;ll get on to the control card design where the computer will operate the control lines according to the 8-bit opcode stored in the instruction register. Before that though there&amp;rsquo;s the sequencer card which will generate the pulses that drive the control card.</description>
+    </item>
+    
+    <item>
+      <title>Sequencing &amp; Control Design: Overview</title>
+      <link>https://relaycomputer.co.uk/posts/2014/09/sequencing-control-design-overview/</link>
+      <pubDate>Fri, 19 Sep 2014 23:27:00 +0100</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2014/09/sequencing-control-design-overview/</guid>
+      <description>I&amp;rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. It&amp;rsquo;s time to move things on a bit now and work towards getting the computer to the point where given a specific instruction/op-code it can operate the control lines itself without further input from the user. Eventually the computer will be given a list of instructions to perform which it&amp;rsquo;ll work through step by step but for now the next milestone is to automate the operation of a single instruction.</description>
+    </item>
+    
+  </channel>
+</rss>
