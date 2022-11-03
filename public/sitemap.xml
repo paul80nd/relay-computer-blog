@@ -179,10 +179,10 @@
     <loc>https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-1-of-2/</loc>
     <lastmod>2017-11-19T14:53:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/2017/11/program-counter-construction/</loc>
+    <loc>https://relaycomputer.co.uk/cards/register-pc/</loc>
     <lastmod>2017-11-11T10:25:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/register-pc/</loc>
+    <loc>https://relaycomputer.co.uk/posts/2017/11/program-counter-construction/</loc>
     <lastmod>2017-11-11T10:25:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/cards/display-a/</loc>
@@ -263,10 +263,10 @@
     <loc>https://relaycomputer.co.uk/posts/2015/06/decoder-construction-mov-8-alu-setab/</loc>
     <lastmod>2015-06-07T21:43:00+01:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</loc>
+    <loc>https://relaycomputer.co.uk/cards/register-i/</loc>
     <lastmod>2015-05-16T10:19:00+01:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/register-i/</loc>
+    <loc>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</loc>
     <lastmod>2015-05-16T10:19:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2015/05/register-construction-instruction/</loc>
@@ -317,19 +317,19 @@
     <loc>https://relaycomputer.co.uk/posts/2014/07/user-interface-data-switches/</loc>
     <lastmod>2014-07-05T09:40:00+01:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/2014/06/register-construction-completed-and-d-8/</loc>
+    <loc>https://relaycomputer.co.uk/cards/register-ad/</loc>
     <lastmod>2014-06-28T13:12:00+01:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/register-ad/</loc>
+    <loc>https://relaycomputer.co.uk/posts/2014/06/register-construction-completed-and-d-8/</loc>
     <lastmod>2014-06-28T13:12:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/06/register-construction-and-d-8-bit/</loc>
     <lastmod>2014-06-22T18:35:00+01:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/2014/05/register-construction-completed-b-and-c/</loc>
+    <loc>https://relaycomputer.co.uk/cards/register-bc/</loc>
     <lastmod>2014-05-26T09:59:00+01:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/register-bc/</loc>
+    <loc>https://relaycomputer.co.uk/posts/2014/05/register-construction-completed-b-and-c/</loc>
     <lastmod>2014-05-26T09:59:00+01:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/05/register-construction-b-and-c-8-bit/</loc>
@@ -383,10 +383,10 @@
     <loc>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</loc>
     <lastmod>2014-03-01T10:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/2014/02/alu-construction-completed-arithmetic/</loc>
+    <loc>https://relaycomputer.co.uk/cards/arithmetic-unit/</loc>
     <lastmod>2014-02-23T17:31:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/arithmetic-unit/</loc>
+    <loc>https://relaycomputer.co.uk/posts/2014/02/alu-construction-completed-arithmetic/</loc>
     <lastmod>2014-02-23T17:31:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2014/02/alu-construction-arithmetic-card-wire_19/</loc>
@@ -431,10 +431,10 @@
     <loc>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-power-rails/</loc>
     <lastmod>2013-12-10T22:56:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/2013/12/test-board-construction/</loc>
+    <loc>https://relaycomputer.co.uk/cards/test-board/</loc>
     <lastmod>2013-12-10T07:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/test-board/</loc>
+    <loc>https://relaycomputer.co.uk/posts/2013/12/test-board-construction/</loc>
     <lastmod>2013-12-10T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-relay/</loc>
