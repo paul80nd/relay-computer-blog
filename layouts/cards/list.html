@@ -1,9 +1,15 @@
 {{ define "main" }}
 
 {{ if .Parent.Section }}
+{{ if isset .Params "multiple"}}
+{{ partial "hero" (dict
+  "title" (printf "%s Cards" .Title)
+  "subtitle" (printf "List of articles related to the '%s' cards" .Title)) }}
+{{ else }}
 {{ partial "hero" (dict
   "title" (printf "%s Card" .Title)
   "subtitle" (printf "List of articles related to the '%s' card" .Title)) }}
+{{ end }}
 {{ else }}
 {{ partial "hero" (dict "title" .Title "subtitle" "List of cards appearing in articles") }}
 {{ end }}
