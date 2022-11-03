@@ -1,6 +1,9 @@
 {{ define "main" }}
 {{ if .Parent.Section }}
-{{ partial "hero" (dict "title" (printf "#%s" .Title) "subtitle" (printf "List of articles tagged with '%s'" .Title)) }}
+{{ partial "hero" (dict
+  "title" (printf "#%s" .Title)
+  "subtitle" (printf "List of articles tagged with '%s'" .Title)
+  "section" "Tags") }}
 {{ else }}
 {{ partial "hero" (dict "title" .Title "subtitle" "List of tags appearing in articles") }}
 {{ end }}

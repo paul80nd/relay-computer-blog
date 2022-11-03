@@ -4,11 +4,13 @@
 {{ if isset .Params "multiple"}}
 {{ partial "hero" (dict
   "title" (printf "%s Cards" .Title)
-  "subtitle" (printf "List of articles related to the '%s' cards" .Title)) }}
+  "subtitle" (printf "List of articles related to the '%s' cards" .Title)
+  "section" "Cards") }}
 {{ else }}
 {{ partial "hero" (dict
   "title" (printf "%s Card" .Title)
-  "subtitle" (printf "List of articles related to the '%s' card" .Title)) }}
+  "subtitle" (printf "List of articles related to the '%s' card" .Title)
+  "section" "Cards") }}
 {{ end }}
 {{ else }}
 {{ partial "hero" (dict "title" .Title "subtitle" "List of cards appearing in articles") }}

@@ -1,6 +1,7 @@
 {{ define "main" }}
-{{ partial "hero" (dict "title" "Blog Posts" "subtitle" (printf "List of all articles (page %d of %d)"
-.Paginator.PageNumber .Paginator.TotalPages)) }}
+{{ partial "hero" (dict
+"title" "Blog Posts"
+"subtitle" (printf "List of all articles (page %d of %d)" .Paginator.PageNumber .Paginator.TotalPages)) }}
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
