@@ -72,3 +72,12 @@ body {
     border-bottom-right-radius: 0.2rem;
   }
 }
+
+.tabs-content li {
+  display: none;
+  list-style: none;
+}
+
+.tabs-content li.is-active {
+  display: block;
+}
