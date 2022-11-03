@@ -7,7 +7,7 @@ author: Paul Law
 tags:
 - theory
 - architecture
-- ALU
+- alu
 modified_time: '2014-01-26T10:55:55.601Z'
 thumbnail: /img/posts/2013/2013-11-07-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-6285585213738371916

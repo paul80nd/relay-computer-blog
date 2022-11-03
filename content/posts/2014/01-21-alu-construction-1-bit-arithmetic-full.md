@@ -7,7 +7,7 @@ author: Paul Law
 tags:
 - construction
 - video
-- ALU
+- alu
 modified_time: '2014-01-25T10:05:26.773Z'
 thumbnail: /img/posts/2014/2014-01-21-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5794749048591352002

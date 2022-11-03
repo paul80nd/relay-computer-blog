@@ -6,7 +6,7 @@ date: '2014-01-17T23:23:00.002Z'
 author: Paul Law
 tags:
 - construction
-- ALU
+- alu
 modified_time: '2014-01-25T10:20:18.329Z'
 thumbnail: /img/posts/2014/2014-01-17-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3800207095686166492

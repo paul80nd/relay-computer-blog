@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - completion
 - video
-- ALU
+- alu
 modified_time: '2014-03-30T12:15:32.911+01:00'
 thumbnail: /img/posts/2014/2014-03-30-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-3486129073758146018

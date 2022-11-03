@@ -6,7 +6,7 @@ date: '2013-11-17T10:43:00.001Z'
 author: Paul Law
 tags:
 - design
-- ALU
+- alu
 modified_time: '2014-01-26T10:39:31.491Z'
 thumbnail: /img/posts/2013/2013-11-17-4000.png
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-9149380662838298177

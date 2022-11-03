@@ -6,7 +6,7 @@ author: Paul Law
 tags:
 - construction
 - video
-- ALU
+- alu
 modified_time: '2013-12-06T20:55:08.192Z'
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5299767763719193145
 blogger_orig_url: http://relaycomputer.blogspot.com/2013/12/alu-construction-led-tests.html

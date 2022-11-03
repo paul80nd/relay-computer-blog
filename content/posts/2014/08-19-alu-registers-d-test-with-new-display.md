@@ -9,7 +9,7 @@ tags:
 - registers
 - UI
 - video
-- ALU
+- alu
 modified_time: '2014-08-19T18:24:56.780+01:00'
 thumbnail: /img/posts/2014/2014-08-19-4000.JPG
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-575235464124926731
