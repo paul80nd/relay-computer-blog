@@ -4,6 +4,8 @@ title: 'Register Construction: B and C 8-bit Registers'
 slug: register-construction-b-and-c-8-bit
 date: '2014-05-24T17:23:00.001+01:00'
 author: Paul Law
+cards:
+- register-bc
 tags:
 - construction
 - registers

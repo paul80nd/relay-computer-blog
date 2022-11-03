@@ -4,6 +4,8 @@ title: 'ALU Construction: Arithmetic Card Wire Wrap 2'
 slug: alu-construction-arithmetic-card-wire_19
 date: '2014-02-19T22:37:00.000Z'
 author: Paul Law
+cards:
+- arithmetic-unit
 tags:
 - construction
 - alu

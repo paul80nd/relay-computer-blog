@@ -4,6 +4,8 @@ title: 'ALU Construction: 1-bit Logic Full Construction'
 slug: alu-construction-1-bit-logic-full
 date: '2013-12-07T01:54:00.000Z'
 author: Paul Law
+cards:
+- logic-unit
 tags:
 - construction
 - video

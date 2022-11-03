@@ -4,6 +4,8 @@ title: 'Register Construction: Completed Instruction Register Full Test'
 slug: register-construction-completed
 date: '2015-05-16T10:19:00.001+01:00'
 author: Paul Law
+cards:
+- register-i
 tags:
 - completion
 - registers

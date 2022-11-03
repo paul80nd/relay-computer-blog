@@ -3,6 +3,8 @@ layout: post
 title: 'Sequencer Construction: 8-cycle FSM'
 date: '2015-07-08T09:27:00.000+01:00'
 author: Paul Law
+cards:
+- sequencer
 tags:
 - sequencing
 - pulse-distribution

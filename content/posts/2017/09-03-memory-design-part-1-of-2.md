@@ -3,6 +3,8 @@ layout: post
 title: Memory Design (Part 1 of 2)
 date: '2017-09-03T22:35:00.001+01:00'
 author: Paul Law
+cards:
+- memory
 tags:
 - design
 - memory

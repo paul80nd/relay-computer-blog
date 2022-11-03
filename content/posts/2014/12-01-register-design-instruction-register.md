@@ -3,6 +3,8 @@ layout: post
 title: 'Register Design: Instruction Register'
 date: '2014-12-01T21:00:00.001Z'
 author: Paul Law
+cards:
+- register-i
 tags:
 - design
 - registers

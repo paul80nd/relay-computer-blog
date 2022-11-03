@@ -4,6 +4,8 @@ title: Fetch and Increment - Construction and Test
 slug: fetch-and-increment-construction-and
 date: '2018-01-16T22:16:00.001Z'
 author: Paul Law
+cards:
+- controller
 tags:
 - sequencing
 - completion

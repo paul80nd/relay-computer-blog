@@ -3,6 +3,8 @@ layout: post
 title: Incrementer Design
 date: '2017-07-17T21:34:00.001+01:00'
 author: Paul Law
+cards:
+- incrementer
 tags:
 - incrementer
 - design

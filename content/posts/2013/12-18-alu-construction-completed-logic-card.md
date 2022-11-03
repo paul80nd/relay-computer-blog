@@ -4,6 +4,8 @@ title: 'ALU Construction: Completed Logic Card Full Test'
 slug: alu-construction-completed-logic-card
 date: '2013-12-18T08:26:00.001Z'
 author: Paul Law
+cards:
+- logic-unit
 tags:
 - completion
 - construction

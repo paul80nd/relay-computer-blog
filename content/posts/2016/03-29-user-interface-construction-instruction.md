@@ -4,6 +4,9 @@ title: 'User Interface Construction: Instruction, Clock and Sequencer'
 slug: user-interface-construction-instruction
 date: '2016-03-29T22:38:00.000+01:00'
 author: Paul Law
+cards:
+- display-a
+- display-b
 tags:
 - construction
 - UI

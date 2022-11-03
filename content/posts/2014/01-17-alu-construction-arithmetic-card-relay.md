@@ -4,6 +4,8 @@ title: 'ALU Construction: Arithmetic Card Relay Sockets'
 slug: alu-construction-arithmetic-card-relay
 date: '2014-01-17T23:23:00.002Z'
 author: Paul Law
+cards:
+- arithmetic-unit
 tags:
 - construction
 - alu

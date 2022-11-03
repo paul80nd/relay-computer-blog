@@ -3,6 +3,8 @@ layout: post
 title: 'Control Design: Fetch and Increment'
 date: '2017-09-17T12:57:00.000+01:00'
 author: Paul Law
+cards:
+- controller
 tags:
 - pulse-distribution
 - design

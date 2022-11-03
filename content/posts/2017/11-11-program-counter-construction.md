@@ -3,6 +3,8 @@ layout: post
 title: Program Counter Construction
 date: '2017-11-11T10:25:00.001Z'
 author: Paul Law
+cards:
+- register-pc
 tags:
 - completion
 - construction

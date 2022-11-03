@@ -4,6 +4,8 @@ title: 'ALU Construction: Arithmetic Card Power Rails'
 slug: alu-construction-arithmetic-card-power
 date: '2014-01-26T23:26:00.002Z'
 author: Paul Law
+cards:
+- arithmetic-unit
 tags:
 - construction
 - alu

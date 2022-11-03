@@ -4,6 +4,8 @@ title: 'ALU Construction: Control Card Power Rails & Wire Wrap'
 slug: alu-construction-control-card-power
 date: '2014-03-14T19:51:00.001Z'
 author: Paul Law
+cards:
+- control-unit
 tags:
 - construction
 - alu

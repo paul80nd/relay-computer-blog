@@ -3,6 +3,8 @@ layout: post
 title: Making a PCB
 date: '2019-03-04T11:00:00.001Z'
 author: Paul Law
+cards:
+- backplane
 tags:
 - construction
 - video

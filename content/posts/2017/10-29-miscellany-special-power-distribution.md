@@ -3,6 +3,8 @@ layout: post
 title: 'Miscellany Special: Power Distribution'
 date: '2017-10-29T11:01:00.000Z'
 author: Paul Law
+cards:
+- power-dist
 tags:
 - construction
 - power

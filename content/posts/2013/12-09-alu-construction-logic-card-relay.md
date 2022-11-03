@@ -4,6 +4,8 @@ title: 'ALU Construction: Logic Card Relay Sockets'
 slug: alu-construction-logic-card-relay
 date: '2013-12-09T07:27:00.000Z'
 author: Paul Law
+cards:
+- logic-unit
 tags:
 - construction
 - alu

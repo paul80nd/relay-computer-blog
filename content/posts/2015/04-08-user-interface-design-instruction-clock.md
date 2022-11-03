@@ -4,6 +4,10 @@ title: 'User Interface Design: Instruction, Clock and Sequencer'
 slug: user-interface-design-instruction-clock
 date: '2015-04-08T23:19:00.000+01:00'
 author: Paul Law
+cards:
+- aux-ctrl
+- display-a
+- display-b
 tags:
 - design
 - UI

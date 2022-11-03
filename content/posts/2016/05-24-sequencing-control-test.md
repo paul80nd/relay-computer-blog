@@ -3,6 +3,9 @@ layout: post
 title: Sequencing & Control Test
 date: '2016-05-24T21:12:00.000+01:00'
 author: Paul Law
+cards:
+- controller
+- sequencer
 tags:
 - completion
 - video

@@ -3,6 +3,8 @@ layout: post
 title: The problem with memory
 date: '2017-08-18T22:58:00.000+01:00'
 author: Paul Law
+cards:
+- memory
 tags:
 - theory
 - design

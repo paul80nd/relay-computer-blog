@@ -3,6 +3,8 @@ layout: post
 title: 'Decoder Construction: MOV-8, ALU & SETAB'
 date: '2015-06-07T21:43:00.001+01:00'
 author: Paul Law
+cards:
+- decoder
 tags:
 - completion
 - construction

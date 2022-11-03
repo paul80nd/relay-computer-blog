@@ -4,6 +4,8 @@ title: 'Pulse Distribution Design: Pulses C,D and E'
 slug: pulse-distribution-design-pulses-cd-and
 date: '2015-03-22T13:58:00.003Z'
 author: Paul Law
+cards:
+- sequencer
 tags:
 - pulse-distribution
 - design

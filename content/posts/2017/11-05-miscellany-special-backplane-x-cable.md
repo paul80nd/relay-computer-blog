@@ -4,6 +4,10 @@ title: 'Miscellany Special: Backplane X, Cable Routing and Address Bus'
 slug: miscellany-special-backplane-x-cable
 date: '2017-11-05T10:47:00.001Z'
 author: Paul Law
+cards:
+- backplane
+- display-a
+- display-b
 tags:
 - construction
 - enclosure

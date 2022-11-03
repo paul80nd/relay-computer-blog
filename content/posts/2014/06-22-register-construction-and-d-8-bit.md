@@ -4,6 +4,8 @@ title: 'Register Construction: A and D 8-bit Registers'
 slug: register-construction-and-d-8-bit
 date: '2014-06-22T18:35:00.003+01:00'
 author: Paul Law
+cards:
+- register-ad
 tags:
 - construction
 - registers

@@ -3,6 +3,8 @@ layout: post
 title: Backplane Design and Construction
 date: '2013-12-03T19:27:00.001Z'
 author: Paul Law
+cards:
+- backplane
 tags:
 - design
 - construction

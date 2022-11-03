@@ -3,6 +3,8 @@ layout: post
 title: Incrementer Construction (Part 1 of 2)
 date: '2017-12-10T11:07:00.002Z'
 author: Paul Law
+cards:
+- incrementer
 tags:
 - incrementer
 - construction

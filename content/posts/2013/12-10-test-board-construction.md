@@ -3,6 +3,8 @@ layout: post
 title: 'Test Board: Construction'
 date: '2013-12-10T07:00:00.000Z'
 author: Paul Law
+cards:
+- test-board
 tags:
 - construction
 modified_time: '2014-01-25T10:41:15.755Z'

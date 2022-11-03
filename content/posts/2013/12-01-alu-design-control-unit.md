@@ -3,6 +3,8 @@ layout: post
 title: 'ALU Design: Control Unit'
 date: '2013-12-01T21:21:00.001Z'
 author: Paul Law
+cards:
+- control-unit
 tags:
 - design
 - alu

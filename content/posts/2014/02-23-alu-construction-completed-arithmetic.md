@@ -4,6 +4,8 @@ title: 'ALU Construction: Completed Arithmetic Card Full Test'
 slug: alu-construction-completed-arithmetic
 date: '2014-02-23T17:31:00.000Z'
 author: Paul Law
+cards:
+- arithmetic-unit
 tags:
 - completion
 - construction

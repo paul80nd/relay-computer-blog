@@ -4,6 +4,8 @@ title: 'Controller Construction: MOV-8, ALU and SETAB'
 slug: controller-construction-mov-8-alu-and
 date: '2016-01-01T23:23:00.006Z'
 author: Paul Law
+cards:
+- controller
 tags:
 - construction
 - control

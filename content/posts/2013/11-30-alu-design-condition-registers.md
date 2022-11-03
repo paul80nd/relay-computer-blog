@@ -3,6 +3,8 @@ layout: post
 title: 'ALU Design: Condition Registers'
 date: '2013-11-30T10:12:00.000Z'
 author: Paul Law
+cards:
+- control-unit
 tags:
 - design
 - alu

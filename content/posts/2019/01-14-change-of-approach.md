@@ -4,6 +4,8 @@ title: A change of approach
 slug: change-of-approach
 date: '2019-01-14T11:00:00.001Z'
 author: Paul Law
+cards:
+- backplane
 tags:
 - design
 - musings

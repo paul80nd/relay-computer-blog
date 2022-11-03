@@ -4,6 +4,8 @@ title: 'Sequencer Design: Schematic & PCBs'
 slug: sequencer-design-pcb
 date: '2019-11-11T03:03:00.004Z'
 author: Paul Law
+cards:
+- sequencer
 tags:
 - sequencing
 - design

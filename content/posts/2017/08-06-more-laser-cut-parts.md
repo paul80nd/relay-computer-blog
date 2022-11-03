@@ -3,6 +3,9 @@ layout: post
 title: More Laser Cut Parts
 date: '2017-08-06T13:13:00.000+01:00'
 author: Paul Law
+cards:
+- display-a
+- display-b
 tags:
 - construction
 - enclosure

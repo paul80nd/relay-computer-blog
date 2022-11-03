@@ -4,6 +4,8 @@ title: 'ALU Construction: 1-bit Arithmetic Full Construction'
 slug: alu-construction-1-bit-arithmetic-full
 date: '2014-01-21T18:25:00.002Z'
 author: Paul Law
+cards:
+- arithmetic-unit
 tags:
 - construction
 - video

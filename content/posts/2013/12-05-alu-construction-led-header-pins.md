@@ -3,6 +3,10 @@ layout: post
 title: 'ALU Construction: LED Header Pins'
 date: '2013-12-05T21:46:00.003Z'
 author: Paul Law
+cards:
+- arithmetic-unit
+- control-unit
+- logic-unit
 tags:
 - construction
 - alu

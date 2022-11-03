@@ -3,6 +3,8 @@ layout: post
 title: Auxiliary Control Design (Part 3 of 3)
 date: '2018-02-07T22:07:00.001Z'
 author: Paul Law
+cards:
+- aux-ctrl
 tags:
 - sequencing
 - design

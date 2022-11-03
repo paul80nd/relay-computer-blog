@@ -3,6 +3,8 @@ layout: post
 title: 'ALU Construction: Logic Card Wire Wrap 3'
 date: '2013-12-18T08:01:00.002Z'
 author: Paul Law
+cards:
+- logic-unit
 tags:
 - construction
 - alu

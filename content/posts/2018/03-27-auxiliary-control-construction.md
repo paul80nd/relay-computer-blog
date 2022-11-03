@@ -3,6 +3,8 @@ layout: post
 title: Auxiliary Control Construction
 date: '2018-03-27T22:07:00.001Z'
 author: Paul Law
+cards:
+- aux-ctrl
 tags:
 - sequencing
 - construction

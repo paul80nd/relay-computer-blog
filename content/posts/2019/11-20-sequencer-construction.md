@@ -3,6 +3,8 @@ layout: post
 title: 'Sequencer Construction'
 date: '2019-11-20T03:03:00.004Z'
 author: Paul Law
+cards:
+- sequencer
 tags:
 - completion
 - construction

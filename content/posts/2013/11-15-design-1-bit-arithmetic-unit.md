@@ -4,6 +4,8 @@ title: 'ALU Design: 1-bit Arithmetic Unit'
 slug: design-1-bit-arithmetic-unit
 date: '2013-11-15T22:33:00.001Z'
 author: Paul Law
+cards:
+- arithmetic-unit
 tags:
 - design
 - alu

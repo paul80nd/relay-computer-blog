@@ -3,6 +3,8 @@ layout: post
 title: 'Decoder Design: MOV-8, ALU & SETAB '
 date: '2015-01-04T22:12:00.003Z'
 author: Paul Law
+cards:
+- decoder
 tags:
 - design
 - decoder

@@ -4,6 +4,8 @@ title: 'Controller Design: GOTO Instruction'
 slug: controller-goto-design
 date: '2019-11-30T03:03:00.004Z'
 author: Paul Law
+cards:
+- controller
 tags:
 - control
 - design

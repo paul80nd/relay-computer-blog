@@ -3,6 +3,8 @@ layout: post
 title: 'Branching: Opcode Timing'
 date: '2019-10-06T01:00:00.001Z'
 author: Paul Law
+cards:
+- controller
 tags:
 - theory
 - sequencing

@@ -3,6 +3,9 @@ layout: post
 title: 'Sequencing & Control Design: Overview'
 date: '2014-09-19T23:27:00.000+01:00'
 author: Paul Law
+cards:
+- controller
+- sequencer
 tags:
 - theory
 - sequencing

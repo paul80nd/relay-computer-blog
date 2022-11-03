@@ -3,6 +3,10 @@ layout: post
 title: 'ALU Construction: Connectors and LEDs'
 date: '2013-12-02T18:05:00.000Z'
 author: Paul Law
+cards:
+- arithmetic-unit
+- control-unit
+- logic-unit
 tags:
 - construction
 - video

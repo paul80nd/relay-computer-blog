@@ -3,6 +3,8 @@ layout: post
 title: 'ALU Construction: Logic Card Power Rails'
 date: '2013-12-10T22:56:00.000Z'
 author: Paul Law
+cards:
+- logic-unit
 tags:
 - construction
 - alu

@@ -3,6 +3,8 @@ layout: post
 title: 'Register Design: B and C 8-bit Registers'
 date: '2014-05-11T10:08:00.002+01:00'
 author: Paul Law
+cards:
+- register-bc
 tags:
 - design
 - registers

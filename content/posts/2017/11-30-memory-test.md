@@ -3,6 +3,8 @@ layout: post
 title: Memory Test
 date: '2017-11-30T21:15:00.000Z'
 author: Paul Law
+cards:
+- memory
 tags:
 - completion
 - memory

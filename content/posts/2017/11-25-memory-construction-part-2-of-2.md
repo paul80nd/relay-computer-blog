@@ -3,6 +3,8 @@ layout: post
 title: Memory Construction (Part 2 of 2)
 date: '2017-11-25T16:52:00.000Z'
 author: Paul Law
+cards:
+- memory
 tags:
 - construction
 - memory

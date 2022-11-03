@@ -3,6 +3,8 @@ layout: post
 title: 'User Interface: Data Switches'
 date: '2014-07-05T09:40:00.000+01:00'
 author: Paul Law
+cards:
+- aux-ctrl
 tags:
 - design
 - construction

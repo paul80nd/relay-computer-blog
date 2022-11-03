@@ -3,6 +3,8 @@ layout: post
 title: 'Sequencer Design: 8-cycle FSM'
 date: '2015-01-26T22:03:00.004Z'
 author: Paul Law
+cards:
+- sequencer
 tags:
 - sequencing
 - design

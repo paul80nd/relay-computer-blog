@@ -3,6 +3,10 @@ layout: post
 title: 'ALU Construction: LED Tests'
 date: '2013-12-06T20:55:00.000Z'
 author: Paul Law
+cards:
+- arithmetic-unit
+- control-unit
+- logic-unit
 tags:
 - construction
 - video

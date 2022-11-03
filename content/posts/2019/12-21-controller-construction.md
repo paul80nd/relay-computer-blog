@@ -3,6 +3,8 @@ layout: post
 title: 'Controller Construction'
 date: '2019-12-21T03:03:00.004Z'
 author: Paul Law
+cards:
+- controller
 tags:
 - control
 - completion

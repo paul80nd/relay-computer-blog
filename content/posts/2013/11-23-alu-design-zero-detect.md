@@ -3,6 +3,8 @@ layout: post
 title: 'ALU Design: Zero Detect'
 date: '2013-11-23T08:57:00.001Z'
 author: Paul Law
+cards:
+- control-unit
 tags:
 - design
 - alu

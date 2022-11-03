@@ -3,6 +3,8 @@ layout: post
 title: 'Incrementer Design: 16-bit Half Adder'
 date: '2017-07-15T14:57:00.000+01:00'
 author: Paul Law
+cards:
+- incrementer
 tags:
 - incrementer
 - design

@@ -3,6 +3,8 @@ layout: post
 title: Incrementer Test
 date: '2018-01-07T13:04:00.000Z'
 author: Paul Law
+cards:
+- incrementer
 tags:
 - incrementer
 - completion

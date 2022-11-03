@@ -3,6 +3,8 @@ layout: post
 title: 'Register Design: Program Counter'
 date: '2017-05-29T17:13:00.000+01:00'
 author: Paul Law
+cards:
+- register-pc
 tags:
 - design
 - registers

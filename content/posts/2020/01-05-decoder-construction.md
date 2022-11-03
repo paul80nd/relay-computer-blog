@@ -3,6 +3,8 @@ layout: post
 title: 'Decoder Construction'
 date: '2020-01-05T03:03:00.004Z'
 author: Paul Law
+cards:
+- decoder
 tags:
 - decoder
 - completion

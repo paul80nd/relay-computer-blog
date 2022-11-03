@@ -3,6 +3,9 @@ layout: post
 title: 'Branching: Opcode Design'
 date: '2019-09-23T01:00:00.001Z'
 author: Paul Law
+cards:
+- controller
+- sequencer
 tags:
 - theory
 - sequencing
