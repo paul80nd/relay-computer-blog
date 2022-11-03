@@ -1,0 +1,60 @@
+{{ define "main" }}
+
+{{ if .Parent.Section }}
+{{ partial "hero" (dict
+  "title" (printf "%s Card" .Title)
+  "subtitle" (printf "List of articles related to the '%s' card" .Title)) }}
+{{ else }}
+{{ partial "hero" (dict "title" .Title "subtitle" "List of cards appearing in articles") }}
+{{ end }}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-flex">
+        <article class="card">
+          <div class="card-content">
+            <div class="content">
+              {{ if .Parent.Section }}
+              <p>
+                Below is a list of the blog articles relating to this card (in reverse date order):
+              </p>
+              {{ else }}
+              <p>
+                My relay computer is made up of several independent cards with each performing a specific function.
+                This approach makes designing, constructing and testing each part of my computer much easier and
+                means I can build it over time testing as I go.
+              </p>
+              <p>
+                Each card is based on a 160mm x 115mm PCB and either sits in one of 4 bays in the
+                <a href="/pages/enclosure/">computer enclosure</a> (bays W, X, Y and Z) or within the upper enclosure.
+              </p>
+              <p>
+                Below is a list of the cards making up my relay computer and each links to a list of blog articles
+                relating to that card.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="columns is-multiline">
+      {{ if .Parent.Section }}
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="column is-half is-one-third-widescreen">
+        {{ .Render "summary" }}
+      </div>
+      {{ end }}
+      {{ else }}
+      {{ range .Pages.ByTitle }}
+      <div class="column is-half is-one-third-desktop">
+        {{ .Render "summary" }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
