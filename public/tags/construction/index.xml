@@ -58,6 +58,16 @@ Currently the auxiliary card has the gating relays along the bottom which connec
     </item>
     
     <item>
+      <title>Incrementer Construction (Part 2 of 2)</title>
+      <link>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-2-of-2/</link>
+      <pubDate>Sun, 17 Dec 2017 12:32:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-2-of-2/</guid>
+      <description>In my last post I covered the construction of the lower incrementer card which is effectively a 16-bit half adder. This time I&amp;rsquo;m going to cover constructing the upper card of the incrementer which is a 16-bit register that can hold on to the incremented value before pushing it back out to the address bus.
+The backplane connectors and LEDs were soldered down in my last post but there&amp;rsquo;s plenty more soldering to do.</description>
+    </item>
+    
+    <item>
       <title>Incrementer Construction (Part 1 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-1-of-2/</link>
       <pubDate>Sun, 10 Dec 2017 11:07:00 +0000</pubDate>
