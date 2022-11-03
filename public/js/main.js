@@ -379,4 +379,74 @@
     }
   };
   core_default.registerPlugin("navbar", Navbar);
+
+  // node_modules/@vizuaalog/bulmajs/src/plugins/tabs.js
+  var Tabs = class extends Plugin {
+    static parseDocument(context) {
+      let elements;
+      if (typeof context.classList === "object" && context.classList.has("tabs-wrapper")) {
+        elements = [context];
+      } else {
+        elements = context.querySelectorAll(".tabs-wrapper");
+      }
+      core_default.each(elements, (element) => {
+        core_default(element).tabs({
+          hover: element.hasAttribute("data-hover") ? true : false
+        });
+      });
+    }
+    static defaultConfig() {
+      return {
+        hover: false
+      };
+    }
+    constructor(config, root) {
+      super(config, root);
+      this.root = this.config.get("root");
+      this.root.setAttribute("data-bulma-attached", "attached");
+      this.hover = this.config.get("hover");
+      this.nav = this.findNav();
+      this.navItems = this.findNavItems();
+      this.content = this.findContent();
+      this.contentItems = this.findContentItems();
+      this.setupNavEvents();
+      core_default(this.root).data("tabs", this);
+      this.trigger("init");
+    }
+    findNav() {
+      return this.root.querySelector(".tabs");
+    }
+    findNavItems() {
+      return this.nav.querySelectorAll("li");
+    }
+    findContent() {
+      return this.root.querySelector(".tabs-content");
+    }
+    findContentItems() {
+      return this.root.querySelectorAll(".tabs-content > ul > li");
+    }
+    setupNavEvents() {
+      core_default.each(this.navItems, (navItem, index) => {
+        navItem.addEventListener("click", () => {
+          this.setActive(index);
+        });
+        if (this.hover) {
+          navItem.addEventListener("mouseover", () => {
+            this.setActive(index);
+          });
+        }
+      });
+    }
+    setActive(index) {
+      core_default.each(this.navItems, (navItem) => {
+        navItem.classList.remove("is-active");
+      });
+      core_default.each(this.contentItems, (contentItem) => {
+        contentItem.classList.remove("is-active");
+      });
+      this.navItems[index].classList.add("is-active");
+      this.contentItems[index].classList.add("is-active");
+    }
+  };
+  core_default.registerPlugin("tabs", Tabs);
 })();
