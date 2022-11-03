@@ -6,6 +6,8 @@ author: Paul Law
 cards:
 - incrementer
 tags: 
+- incrementer
+- construction
 modified_time: '2017-12-17T12:32:02.935Z'
 thumbnail: /img/posts/2017/2017-12-17-4000.jpg
 blogger_id: tag:blogger.com,1999:blog-6989692556630001604.post-5285697635886901352
