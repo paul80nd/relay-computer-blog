@@ -9,10 +9,10 @@
         </div>
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
-            <a href="/archive#{{ .Date.Format "2006" }}" class="tags has-addons">
+            <span class="tags has-addons">
               <span class="tag is-link">Published</span>
               <span class="tag is-info">{{ .Date.Format "Jan 02, 2006" }}</span>
-            </a>
+            </span>
           </div>
           {{ with .Param "cards" }}
           {{ range (. | sort) }}
