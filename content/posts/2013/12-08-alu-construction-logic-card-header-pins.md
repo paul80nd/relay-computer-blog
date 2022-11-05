@@ -3,6 +3,8 @@ layout: post
 title: 'ALU Construction: Logic Card Header Pins'
 date: '2013-12-08T09:57:00.000Z'
 author: Paul Law
+cards:
+- logic-unit
 tags:
 - construction
 - alu
