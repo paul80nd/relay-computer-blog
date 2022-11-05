@@ -4,11 +4,10 @@
 
   - title: Backplane W
     card: backplane
+    version: 2
     state: Complete
-    tmbsch: alu-0006.png
-    flssch: alu-1006.png
-    tmbpto: alu-0007.jpg
-    flspto: alu-1007.jpg
+    tmbpcb: bpw-0001.png
+    pdfpcb: backplane-w-pcb.pdf
 
   - title: Decoder
     card: decoder
@@ -120,12 +119,10 @@
 
   - title: Backplane Y
     card: backplane
-    state: Complete
-    video: GT0gxIFDWqc
-    tmbsch: bpy-0000.png
-    flssch: bpy-1000.pdf
-    tmbpcb: bpy-0001.png
-    flspcb: bpy-1001.pdf
+    version: 2
+    state: Designed
+    tmbpcb: bpy-0001a.png
+    pdfpcb: backplane-y-pcb-2.pdf
 
   - title: Memory
     card: memory
@@ -178,11 +175,10 @@
 
   - title: Backplane Z
     card: backplane
-    state: Complete
-    tmbsch: alu-0008.png
-    flssch: alu-1008.png
-    tmbpto: alu-0009.jpg
-    flspto: alu-1009.jpg
+    version: 2
+    state: Designed
+    tmbpcb: bpz-0001.png
+    pdfpcb: backplane-z-pcb.pdf
 
   - title: ALU Arithmetic Unit
     card: arithmetic-unit
@@ -277,6 +273,34 @@
 - section: D
   title: Depreciated Cards
   cards:
+
+  - title: Backplane W
+    card: backplane
+    state: Abandoned
+    version: 1
+    tmbsch: alu-0006.png
+    flssch: alu-1006.png
+    tmbpto: alu-0007.jpg
+    flspto: alu-1007.jpg
+
+  - title: Backplane Y
+    card: backplane
+    state: Abandoned
+    version: 1
+    video: GT0gxIFDWqc
+    tmbsch: bpy-0000.png
+    flssch: bpy-1000.pdf
+    tmbpcb: bpy-0001.png
+    flspcb: bpy-1001.pdf
+
+  - title: Backplane Z
+    card: backplane
+    state: Abandoned
+    version: 1
+    tmbsch: alu-0008.png
+    flssch: alu-1008.png
+    tmbpto: alu-0009.jpg
+    flspto: alu-1009.jpg
 
   - title: Controller
     card: controller
