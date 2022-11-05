@@ -6,6 +6,8 @@
     card: backplane
     version: 2
     state: Complete
+    tmbsch: bpw-0000.png
+    pdfsch: backplane-w.pdf
     tmbpcb: bpw-0001.png
     pdfpcb: backplane-w-pcb.pdf
 
@@ -121,8 +123,10 @@
     card: backplane
     version: 2
     state: Designed
+    tmbsch: bpy-0000a.png
+    pdfsch: backplane-y-v2.pdf
     tmbpcb: bpy-0001a.png
-    pdfpcb: backplane-y-pcb-2.pdf
+    pdfpcb: backplane-y-v2-pcb.pdf
 
   - title: Memory
     card: memory
@@ -177,8 +181,10 @@
     card: backplane
     version: 2
     state: Designed
+    tmbsch: bpz-0000.png
+    pdfsch: backplane-z-v2.pdf
     tmbpcb: bpz-0001.png
-    pdfpcb: backplane-z-pcb.pdf
+    pdfpcb: backplane-z-v2-pcb.pdf
 
   - title: ALU Arithmetic Unit
     card: arithmetic-unit
@@ -289,9 +295,9 @@
     version: 1
     video: GT0gxIFDWqc
     tmbsch: bpy-0000.png
-    flssch: bpy-1000.pdf
+    pdfsch: backplane-y-v1.pdf
     tmbpcb: bpy-0001.png
-    flspcb: bpy-1001.pdf
+    pdfpcb: backplane-y-v1-pcb.pdf
 
   - title: Backplane Z
     card: backplane

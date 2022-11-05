@@ -23,7 +23,7 @@ that the cards would slot in to — a bit like those 19 inch server racks that
 take CPU cards. This would also give the cards some physical support so I 
 could test several cards together with the whole thing freestanding.
 
-Design-wise there's not much to it (also available [here in PDF format](/pdf/backplane-z.pdf)):
+Design-wise there's not much to it (also available [here in PDF format](/pdf/backplane-z-v1.pdf)):
 
 {{< fig caption="Backplane (Type-Z) ([larger](/img/posts/2013/2013-12-03-1000.png))" >}}![Backplane (Type-Z)](/img/posts/2013/2013-12-03-0000.png){{< /fig >}}
 

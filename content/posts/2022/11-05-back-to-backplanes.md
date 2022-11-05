@@ -93,8 +93,8 @@ blog or video them if there's anything of particular note but failing that they'
 If you'd like to take a closer look at any of these you can find the full colour previews in PDF format as follows:
 
 * [Backplane W](/pdf/backplane-w-pcb.pdf) + [Daughterboard W](/pdf/backplane-db-w-pcb.pdf)
-* [Backplane Y](/pdf/backplane-y-pcb-2.pdf) + [Daughterboard Y](/pdf/backplane-db-y-pcb.pdf)
-* [Backplane Z](/pdf/backplane-z-pcb.pdf) + [Daughterboard Z](/pdf/backplane-db-z-pcb.pdf)
+* [Backplane Y](/pdf/backplane-y-v2-pcb.pdf) + [Daughterboard Y](/pdf/backplane-db-y-pcb.pdf)
+* [Backplane Z](/pdf/backplane-z-v2-pcb.pdf) + [Daughterboard Z](/pdf/backplane-db-z-pcb.pdf)
 
 You can also see the schematic for these cards (or even download the Gerber files and manufacture one of your own) at
 the [progress page]({{< relref "/pages/progress" >}}) and [cards page]({{< relref "/cards/backplane" >}}).
