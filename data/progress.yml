@@ -6,6 +6,7 @@
     card: backplane
     version: 2
     state: Complete
+    eda: backplane-w
     tmbsch: bpw-0000.png
     pdfsch: backplane-w.pdf
     tmbpcb: bpw-0001.png
@@ -135,6 +136,7 @@
     card: backplane
     version: 2
     state: Designed
+    eda: backplane-y
     tmbsch: bpy-0000a.png
     pdfsch: backplane-y-v2.pdf
     tmbpcb: bpy-0001a.png
@@ -201,6 +203,7 @@
     card: backplane
     version: 2
     state: Designed
+    eda: backplane-z
     tmbsch: bpz-0000.png
     pdfsch: backplane-z-v2.pdf
     tmbpcb: bpz-0001.png
