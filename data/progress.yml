@@ -137,8 +137,8 @@
     flspto: alu-1023.png
 
   - title: Register J
+    card: register-j
     state: Complete
-    summary: registers
     video: hhMye5aeCRQ
     eda: register-xymj
     tmbsch: rey-0000.png

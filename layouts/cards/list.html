@@ -3,14 +3,14 @@
 {{ if .Parent.Section }}
 {{ if isset .Params "multiple"}}
 {{ partial "hero" (dict
-  "title" (printf "%s Cards" .Title)
-  "subtitle" (printf "List of articles related to the '%s' cards" .Title)
-  "section" "Cards") }}
+"title" (printf "%s Cards" .Title)
+"subtitle" (printf "List of articles related to the '%s' cards" .Title)
+"section" "Cards") }}
 {{ else }}
 {{ partial "hero" (dict
-  "title" (printf "%s Card" .Title)
-  "subtitle" (printf "List of articles related to the '%s' card" .Title)
-  "section" "Cards") }}
+"title" (printf "%s Card" .Title)
+"subtitle" (printf "List of articles related to the '%s' card" .Title)
+"section" "Cards") }}
 {{ end }}
 {{ else }}
 {{ partial "hero" (dict "title" .Title "subtitle" "List of cards appearing in articles") }}
@@ -19,8 +19,8 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="column is-flex">
-        <article class="card">
+      <div class="column">
+        <article class="card" style="height: 100%;">
           <div class="card-content">
             <div class="content">
               {{ if .Parent.Section }}
@@ -47,6 +47,17 @@
           </div>
         </article>
       </div>
+      {{ if eq .Data.Term "backplane" }}
+      </div>
+      <div class="columns">
+      {{ end }}
+      {{ if .Parent.Section }}
+      {{ range $.Site.Data.progress }}
+      {{ range where (where .cards "card" $.Data.Term) "state" "ne" "Abandoned" }}
+      {{ partial "card-block" . }}
+      {{ end }}
+      {{ end }}
+      {{ end }}
     </div>
 
     <div class="columns is-multiline">

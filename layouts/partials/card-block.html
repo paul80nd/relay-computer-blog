@@ -1,0 +1,87 @@
+<div class="column is-3">
+  <article class="card has-ribbon" style="height: 100%;">
+
+    {{ if eq .state "NotStarted" }}
+    <div class="ribbon is-danger is-small"><span class="fas fa-circle fa-fw"></span>&nbsp;Not Started</div>
+    {{ end }}
+    {{ if eq .state "Designed" }}
+    <div class="ribbon is-warning is-small"><span class="fas fa-play-circle fa-fw"></span>&nbsp;Designed</div>
+    {{ end }}
+    {{ if eq .state "PartComplete" }}
+    <div class="ribbon is-warning is-small"><span class="fas fa-play-circle fa-fw"></span>&nbsp;Part-Complete</div>
+    {{ end }}
+    {{ if eq .state "Abandoned" }}
+    <div class="ribbon is-danger is-small"><span class="fas fa-times-circle fa-fw"></span>&nbsp;Abandoned</div>
+    {{ end }}
+    {{ if eq .state "Complete" }}
+    <div class="ribbon is-success is-small"><span class="fas fa-check-circle fa-fw"></span>&nbsp;Complete</div>
+    {{ end }}
+
+    <div class="card-image">
+      <div class="columns is-mobile m-0">
+        {{ if not (isset . "tmbsch")}}
+        {{ partial "card-blockimg" }}
+        {{ end }}
+        {{ if not (isset . "tmbpcb")}}
+        {{ partial "card-blockimg" }}
+        {{ end }}
+
+        {{ if isset . "tmbsch"}}
+        {{ $schlink := printf "/img/pages/%s" .flssch }}
+        {{ if isset . "pdfsch" }}
+        {{ $schlink = printf "/pdf/%s" .pdfsch }}
+        {{ end }}
+        {{ partial "card-blockimg" (dict "isDouble" .isDouble "link" $schlink "img" .tmbsch "title" .title "type"
+        "Schematic") }}
+        {{ end }}
+
+        {{ if isset . "tmbpcb"}}
+        {{ $pcblink := printf "/img/pages/%s" .flspcb }}
+        {{ if isset . "pdfpcb" }}
+        {{ $pcblink = printf "/pdf/%s" .pdfpcb }}
+        {{ end }}
+        {{ partial "card-blockimg" (dict "isDouble" .isDouble "link" $pcblink "img" .tmbpcb "title" .title "type"
+        "PCB Design") }}
+        {{ end }}
+
+        {{ if isset . "tmbpto"}}
+        {{ $ptolink := printf "/img/pages/%s" .flspto }}
+        {{ partial "card-blockimg" (dict "isDouble" .isDouble "link" $ptolink "img" .tmbpto "title" .title "type"
+        "Photo") }}
+        {{ end }}
+
+        {{ if not (isset . "tmbpto")}}
+        {{ partial "card-blockimg" }}
+        {{ end }}
+      </div>
+    </div>
+    <div class="card-content is-align-self-flex-end">
+      <div>
+        <p class="title is-5 mb-2">
+          {{ .title }}
+          {{ if isset . "version" }}
+          <span class="is-size-7" title="Version {{.version}}"> v{{.version}}</span>
+          {{ end }}
+          {{ if isset . "derv" }}
+          <span class="is-size-7" title="{{.derv}}">{{ (substr .derv 0 2) }}</span>
+          {{ end }}
+        </p>
+      </div>
+      <div>
+        {{ if isset . "video" }}
+        <a href="https://youtu.be/{{.video}}" title="View construction video on YouTube">
+          <span class="icon"><i class="fab fa-youtube fa-fw"></i></span>
+        </a>
+        {{ end }}
+        {{ if isset . "eda" }}
+        <a href="https://easyeda.com/paul_6392/rc-{{.eda}}" title="View schematics & PCB on EasyEDA">
+          <span class="icon"><i class="fas fa-code-branch fa-fw"></i></span>
+        </a>
+        <a href="/grb/{{.eda}}.zip" title="Download PCB Gerber files">
+          <span class="icon"><i class="fas fa-file-archive fa-fw"></i></span>
+          {{ end }}
+        </a>
+      </div>
+    </div>
+  </article>
+</div>
