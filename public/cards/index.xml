@@ -22,7 +22,7 @@
       <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/backplane-db/</guid>
-      <description>Similar to the Backplanes themselves these are a specialised collection of cards. These &amp;lsquo;cards&amp;rsquo; are used in place of ribbon cables to pass the required signals and busses between a given backplane and other backplanes.</description>
+      <description>Similar to the backplanes themselves these are a specialised collection of cards. These &amp;lsquo;cards&amp;rsquo; are used in place of ribbon cables to pass the required signals and busses between a given backplane and other backplanes.</description>
     </item>
     
     <item>
@@ -58,7 +58,8 @@
       <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/register-j/</guid>
-      <description>The J Register is one of the specialised registers within the relay computer. It can hold two 8-bit values (J1 and J2) and can read (but not write) from the data bus. Additionally it can also write (but not read) a 16-bit value to the address bus combining the J1 and J2 8-bit registers together. Typically it is used to store the address for a jump on the GOTO instruction.</description>
+      <description>The J Register is one of the specialised registers within the relay computer. It can hold two 8-bit values (J1 and J2) and can read (but not write) from the data bus.
+Additionally it can also write (but not read) a 16-bit value to the address bus combining the J1 and J2 8-bit registers together. Typically it is used to store the address for a jump on the GOTO instruction.</description>
     </item>
     
     <item>
@@ -67,7 +68,8 @@
       <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/register-m/</guid>
-      <description>The M Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values (M1 and M2) and can read and write from/to the data bus. Additionally it can also write (but not read) a 16-bit value to the address bus combining the M1 and M2 8-bit registers together.</description>
+      <description>The M Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values (M1 and M2) and can read and write from/to the data bus.
+Additionally it can also write (but not read) a 16-bit value to the address bus combining the M1 and M2 8-bit registers together.</description>
     </item>
     
     <item>
@@ -76,7 +78,8 @@
       <pubDate>Fri, 09 Aug 2019 01:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/register-xy/</guid>
-      <description>The XY Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values and can read and write from/to the data bus. Additionally it can also read and write a 16-bit value from/to the address bus combining the X and Y 8-bit registers together.</description>
+      <description>The XY Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values and can read and write from/to the data bus.
+Additionally it can also read and write a 16-bit value from/to the address bus combining the X and Y 8-bit registers together.</description>
     </item>
     
     <item>
@@ -85,7 +88,8 @@
       <pubDate>Tue, 27 Mar 2018 22:07:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/aux-ctrl/</guid>
-      <description>This card incorporates the primary input switches at the front of the computer and allows for a program to be loaded into memory (and confirmed) line-by-line. The 8-bit switches are set for each instruction and then deposited into memory. The card also contains a limited clock, sequencer and controller to operate the appropriate control lines and move the program counter on as necessary.</description>
+      <description>This card incorporates the primary input switches at the front of the computer and allows for a program to be loaded into memory (and confirmed) line-by-line. The 8-bit switches are set for each instruction and then deposited into memory.
+The card also contains a limited clock, sequencer and controller to operate the appropriate control lines and move the program counter on as necessary.</description>
     </item>
     
     <item>
@@ -94,7 +98,8 @@
       <pubDate>Sun, 07 Jan 2018 13:04:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/incrementer/</guid>
-      <description>The incrementer card can take an input from the address bus and increment it by one placing the result in the increment register. This is primarily used to increment to program counter but also can increment the XY register too. The incrementer makes up the broader &amp;lsquo;control unit&amp;rsquo; within the computer.</description>
+      <description>The incrementer card can take an input from the address bus and increment it by one placing the result in the increment register. This is primarily used to increment to program counter but also can increment the XY register too.
+The incrementer makes up the broader &amp;lsquo;control unit&amp;rsquo; within the computer.</description>
     </item>
     
     <item>
@@ -166,7 +171,8 @@
       <pubDate>Mon, 26 May 2014 09:59:00 +0100</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/register-bc/</guid>
-      <description>The B/C Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values and can read and write from/to the data bus. Additionally this register also directly feeds in to the ALU providing its inputs. As such a value can&amp;rsquo;t be loaded to these registers whilst an ALU operation is in progress.</description>
+      <description>The B/C Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values and can read and write from/to the data bus.
+Additionally this register also directly feeds in to the ALU providing its inputs. As such a value can&amp;rsquo;t be loaded to these registers whilst an ALU operation is in progress.</description>
     </item>
     
     <item>
@@ -175,7 +181,8 @@
       <pubDate>Sun, 16 Mar 2014 08:59:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/control-unit/</guid>
-      <description>The Control Unit is one of the three cards making up the broader Artihmetic Logic Unit (ALU). This card handles function decoding, zero detection and holds the condition registers.</description>
+      <description>The Control Unit is one of the three cards making up the broader Artihmetic Logic Unit (ALU).
+This card handles function decoding, zero detection and holds the condition registers.</description>
     </item>
     
     <item>
@@ -184,7 +191,8 @@
       <pubDate>Sun, 23 Feb 2014 17:31:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/arithmetic-unit/</guid>
-      <description>The Arithmetic Unit is one of the three cards making up the broader Artihmetic Logic Unit (ALU). This card primarily handles 8-bit addition operations (adding together the inputs from register B and C) but can also perform an 8-bit increment (adding 1 to the input from register B). In either case the output from this card can then be loaded into register A or D.</description>
+      <description>The Arithmetic Unit is one of the three cards making up the broader Artihmetic Logic Unit (ALU).
+This card primarily handles 8-bit addition operations (adding together the inputs from register B and C) but can also perform an 8-bit increment (adding 1 to the input from register B). In either case the output from this card can then be loaded into register A or D).</description>
     </item>
     
     <item>
@@ -193,7 +201,8 @@
       <pubDate>Wed, 18 Dec 2013 08:26:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/logic-unit/</guid>
-      <description>The Logic Unit is one of the three cards making up the broader Artihmetic Logic Unit (ALU). This card handles 8-bit binary logic operations (AND, OR, XOR of the inputs from register B and C) and 8-bit unary logic operations (NOT and SHL of the inputs from register B). In all cases the output from this card can then be loaded into register A or D.</description>
+      <description>The Logic Unit is one of the three cards making up the broader Artihmetic Logic Unit (ALU).
+This card handles 8-bit binary logic operations (AND, OR, XOR of the inputs from register B and C) and 8-bit unary logic operations (NOT and SHL of the inputs from register B). In all cases the output from this card can then be loaded into register A or D.</description>
     </item>
     
     <item>
