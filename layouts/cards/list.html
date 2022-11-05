@@ -47,7 +47,7 @@
           </div>
         </article>
       </div>
-      {{ if eq .Data.Term "backplane" }}
+      {{ if hasPrefix .Data.Term "backplane" }}
       </div>
       <div class="columns">
       {{ end }}

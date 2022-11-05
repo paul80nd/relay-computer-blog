@@ -13,6 +13,16 @@
     tmbpto: bpw-0002.jpg
     flspto: bpw-1002.jpg
 
+  - title: Backplane W Daughterboard
+    card: backplane-db
+    state: Complete
+    tmbsch: bpw-0000.png
+    pdfsch: backplane-w.pdf
+    tmbpcb: dbw-0001.png
+    pdfpcb: backplane-db-w-pcb.pdf
+    tmbpto: dbw-0002.jpg
+    flspto: dbw-1002.jpg
+
   - title: Decoder
     card: decoder
     version: 2
@@ -130,6 +140,14 @@
     tmbpcb: bpy-0001a.png
     pdfpcb: backplane-y-v2-pcb.pdf
 
+  - title: Backplane Y Daughterboard
+    card: backplane-db
+    state: Designed
+    tmbsch: bpy-0000a.png
+    pdfsch: backplane-y-v2.pdf
+    tmbpcb: dby-0001.png
+    pdfpcb: backplane-db-y-pcb.pdf
+
   - title: Memory
     card: memory
     state: Complete
@@ -187,6 +205,14 @@
     pdfsch: backplane-z-v2.pdf
     tmbpcb: bpz-0001.png
     pdfpcb: backplane-z-v2-pcb.pdf
+
+  - title: Backplane Z Daughterboard
+    card: backplane-db
+    state: Designed
+    tmbsch: bpz-0000.png
+    pdfsch: backplane-z-v2.pdf
+    tmbpcb: dbz-0001.png
+    pdfpcb: backplane-db-z-pcb.pdf
 
   - title: ALU Arithmetic Unit
     card: arithmetic-unit
