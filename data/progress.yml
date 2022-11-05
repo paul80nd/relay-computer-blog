@@ -98,8 +98,13 @@
     state: Complete
 
   - title: Clock
-    state: NotStarted
+    state: Designed
     summary: control
+    eda: clock
+    tmbsch: clk-0000.png
+    pdfsch: clock.pdf
+    tmbpcb: clk-0001.png
+    pdfpcb: clock-pcb.pdf
 
   - title: Incrementer
     card: incrementer
