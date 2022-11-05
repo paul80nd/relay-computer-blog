@@ -6,7 +6,16 @@
     <description>Recent content in Cards on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 05 Jan 2020 03:03:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backplane</title>
+      <link>https://relaycomputer.co.uk/cards/backplane/</link>
+      <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/backplane/</guid>
+      <description>Not a single card but actually one of four &amp;hellip; and technically not a card at all but they are card shaped. These are the &amp;lsquo;cards&amp;rsquo; that connect a group of five cards together in each card bay (W, X, Y and Z). Each carries a selection of lines and busses to the cards it holds and also hosts connections to the ribbon cables taking the busses and control lines of to other backplane cards and areas of the computer.</description>
+    </item>
+    
     <item>
       <title>Decoder</title>
       <link>https://relaycomputer.co.uk/cards/decoder/</link>
@@ -59,15 +68,6 @@
       
       <guid>https://relaycomputer.co.uk/cards/register-xy/</guid>
       <description>The XY Register is one of the general purpose registers within the relay computer. It can hold two 8-bit values and can read and write from/to the data bus. Additionally it can also read and write a 16-bit value from/to the address bus combining the X and Y 8-bit registers together.</description>
-    </item>
-    
-    <item>
-      <title>Backplane</title>
-      <link>https://relaycomputer.co.uk/cards/backplane/</link>
-      <pubDate>Mon, 04 Mar 2019 11:00:00 +0000</pubDate>
-      
-      <guid>https://relaycomputer.co.uk/cards/backplane/</guid>
-      <description>Not a single card but actually one of four &amp;hellip; and technically not a card at all but they are card shaped. These are the &amp;lsquo;cards&amp;rsquo; that connect a group of five cards together in each card bay (W, X, Y and Z). Each carries a selection of lines and busses to the cards it holds and also hosts connections to the ribbon cables taking the busses and control lines of to other backplane cards and areas of the computer.</description>
     </item>
     
     <item>

@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 14 May 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>construction</title>
+      <link>https://relaycomputer.co.uk/tags/construction/</link>
+      <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/tags/construction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://relaycomputer.co.uk/tags/design/</link>
+      <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/tags/design/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>coding</title>
       <link>https://relaycomputer.co.uk/tags/coding/</link>
@@ -44,29 +62,11 @@
     </item>
     
     <item>
-      <title>construction</title>
-      <link>https://relaycomputer.co.uk/tags/construction/</link>
-      <pubDate>Sun, 05 Jan 2020 03:03:00 +0000</pubDate>
-      
-      <guid>https://relaycomputer.co.uk/tags/construction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>decoder</title>
       <link>https://relaycomputer.co.uk/tags/decoder/</link>
       <pubDate>Sun, 05 Jan 2020 03:03:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/tags/decoder/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>design</title>
-      <link>https://relaycomputer.co.uk/tags/design/</link>
-      <pubDate>Sun, 22 Dec 2019 03:03:00 +0000</pubDate>
-      
-      <guid>https://relaycomputer.co.uk/tags/design/</guid>
       <description></description>
     </item>
     

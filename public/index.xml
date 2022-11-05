@@ -6,7 +6,18 @@
     <description>Recent content in A blog about a computer made from relays on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 14 May 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Back to Backplanes</title>
+      <link>https://relaycomputer.co.uk/posts/2022/11/back-to-backplanes/</link>
+      <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2022/11/back-to-backplanes/</guid>
+      <description>Quite a while ago I decided to give up on the tedious wire wrap technique for building my cards. Although it was certainly more authentic and in-keeping with my computer&amp;rsquo;s theme it was massively time consuming for me and was ultimately putting me off making progress on construction.
+Another problem with my previous construction methods was creating monstrosities like this:
+This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of the &amp;lsquo;W&amp;rsquo; type cards together &amp;hellip; and its as precarious as it looks and over time I&amp;rsquo;ve found the ribbon cable on the back of these backplanes are getting a bit temperamental.</description>
+    </item>
+    
     <item>
       <title>Assembling an assembler - overview</title>
       <link>https://relaycomputer.co.uk/posts/2022/05/assembly-part-1/</link>
