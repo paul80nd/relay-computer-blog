@@ -18,7 +18,7 @@
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   {{- $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "assets/css")) -}}
-  {{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts }}
+  {{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts | minify }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
   {{ end }}
 
@@ -53,7 +53,7 @@
 
   {{ template "_internal/google_analytics.html" . }}
 
-  {{ $js := resources.Get "js/main.js" | js.Build "js/main.js" }}
+  {{ $js := resources.Get "js/main.js" | js.Build "js/main.js" | minify }}
   <script defer language="javascript" type="text/javascript"  src="{{ $js.RelPermalink }}"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
