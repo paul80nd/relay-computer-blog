@@ -10,6 +10,8 @@
     pdfsch: backplane-w.pdf
     tmbpcb: bpw-0001.png
     pdfpcb: backplane-w-pcb.pdf
+    tmbpto: bpw-0002.jpg
+    flspto: bpw-1002.jpg
 
   - title: Decoder
     card: decoder
