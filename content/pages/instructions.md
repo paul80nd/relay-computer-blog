@@ -11,6 +11,7 @@ The list of available instructions is as follows:
 {{< instruction GOTO >}}
 {{< instruction MOV8 >}}
 {{< instruction SETAB >}}
+{{< instruction HALT >}}
 
 There's also a video summary (as at Jan 2020) of the available instructions:
 

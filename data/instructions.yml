@@ -22,3 +22,9 @@
   cycles: '8'
   prefix: 2
   arguments: '    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)'
+- class: HALT
+  title: Halt
+  opcode: '1010111r'
+  cycles: '10'
+  prefix: 7
+  arguments: 'r = reload program counter (0-no reload, 1-reload from switches)'
