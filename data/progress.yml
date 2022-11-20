@@ -98,13 +98,16 @@
     state: Complete
 
   - title: Clock
-    state: Designed
-    summary: control
+    card: clock
+    state: Complete
+    video: 8-Qav8gh1NI
     eda: clock
     tmbsch: clk-0000.png
     pdfsch: clock.pdf
     tmbpcb: clk-0001.png
     pdfpcb: clock-pcb.pdf
+    tmbpto: clk-0002.jpg
+    flspto: clk-1002.jpg
 
   - title: Incrementer
     card: incrementer
