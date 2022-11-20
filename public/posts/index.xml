@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 05 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tick Tock</title>
+      <link>https://relaycomputer.co.uk/posts/2022/11/tick-tock/</link>
+      <pubDate>Sun, 20 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2022/11/tick-tock/</guid>
+      <description>Well, what a journey that&amp;rsquo;s been then &amp;hellip; I started work on a clock for my relay computer back in May 2020 and today (20th Nov 2022) this post marks the end of it. Needless to say that global pandemic got in the way a bit and hampered progress but I also, well, kind of fell out of love with my relay computer for a bit.
+Like most of my hobbies I can blow &amp;lsquo;hot and cold&amp;rsquo; but given I also set myself the challenge of closely detailing progress in a series of videos (all 16 of them) it was leaning me towards the &amp;lsquo;cold&amp;rsquo; rather than the &amp;lsquo;hot&amp;rsquo;.</description>
+    </item>
+    
     <item>
       <title>Back to Backplanes</title>
       <link>https://relaycomputer.co.uk/posts/2022/11/back-to-backplanes/</link>

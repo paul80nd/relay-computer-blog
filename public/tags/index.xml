@@ -6,11 +6,20 @@
     <description>Recent content in Tags on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 05 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>completion</title>
+      <link>https://relaycomputer.co.uk/tags/completion/</link>
+      <pubDate>Sun, 20 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/tags/completion/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>construction</title>
       <link>https://relaycomputer.co.uk/tags/construction/</link>
-      <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Nov 2022 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/tags/construction/</guid>
       <description></description>
@@ -19,9 +28,18 @@
     <item>
       <title>design</title>
       <link>https://relaycomputer.co.uk/tags/design/</link>
-      <pubDate>Sat, 05 Nov 2022 11:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Nov 2022 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video</title>
+      <link>https://relaycomputer.co.uk/tags/video/</link>
+      <pubDate>Sun, 20 Nov 2022 11:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/tags/video/</guid>
       <description></description>
     </item>
     
@@ -40,24 +58,6 @@
       <pubDate>Mon, 02 May 2022 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/tags/musings/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>completion</title>
-      <link>https://relaycomputer.co.uk/tags/completion/</link>
-      <pubDate>Sat, 01 Feb 2020 03:03:00 +0000</pubDate>
-      
-      <guid>https://relaycomputer.co.uk/tags/completion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>video</title>
-      <link>https://relaycomputer.co.uk/tags/video/</link>
-      <pubDate>Sat, 01 Feb 2020 03:03:00 +0000</pubDate>
-      
-      <guid>https://relaycomputer.co.uk/tags/video/</guid>
       <description></description>
     </item>
     
