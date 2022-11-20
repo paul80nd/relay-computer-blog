@@ -8,12 +8,13 @@
     <language>en-gb</language>
     <lastBuildDate>Sun, 20 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>clock</title>
+      <title>Clock</title>
       <link>https://relaycomputer.co.uk/cards/clock/</link>
       <pubDate>Sun, 20 Nov 2022 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/cards/clock/</guid>
-      <description></description>
+      <description>The Card card is quite literally the &amp;lsquo;beating heart&amp;rsquo; of the computer and without it nothing would work.
+Although a single card it&amp;rsquo;s actually made up of two different clocks that can be selected. One is a more &amp;rsquo;traditional&amp;rsquo; relay based clock but has a fixed speed. The other is crystal oscillator based and the frequency can be changed from 0.25Hz through to 32Hz.</description>
     </item>
     
     <item>
