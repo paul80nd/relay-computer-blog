@@ -5,7 +5,7 @@ baseURL = 'https://relaycomputer.co.uk/'
 languageCode = 'en-gb'
 title = 'Relay Computer'
 
-googleAnalytics = 'UA-47484999-2'
+googleAnalytics = 'G-RNXVW69CMT'
 
 # Disable Hugo generator meta tag in the HTML head.
 disableHugoGeneratorInject =  true
