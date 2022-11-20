@@ -1,6 +1,7 @@
 ---
 title: Control Summary
 linked-cards:
+- clock
 - controller
 - decoder
 - incrementer
