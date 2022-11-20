@@ -49,7 +49,7 @@ ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)" />
 The list of available instructions is as follows:
 ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)">
 
-<meta itemprop="wordCount" content="308">
+<meta itemprop="wordCount" content="329">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Instructions"/>
 <meta name="twitter:description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit &lsquo;op-code&rsquo; and falls in to a class of related instructions (identifiable by the leading part of the op-code).
@@ -58,18 +58,17 @@ ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)"/>
 
 
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-47484999-2', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
 }
 </script>
+
 
   
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
@@ -296,6 +295,36 @@ related instructions (identifiable by the leading part of the op-code).</p>
       </div>
     </div>
     <pre class="is-size-7"><code>    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)</code></pre>
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
+    <h4>Halt</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">HALT</span>
+          <span class="tag is-success">10</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-info">r</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>r = reload program counter (0-no reload, 1-reload from switches)</code></pre>
   </div>
 </article>
 
