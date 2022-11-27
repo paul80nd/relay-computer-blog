@@ -28,6 +28,9 @@ paginate = 12
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.highlight]
+  style = 'monokailight'
+
 [taxonomies]
     card = 'cards'
     tag = 'tags'
