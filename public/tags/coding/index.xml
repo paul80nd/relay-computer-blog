@@ -6,7 +6,17 @@
     <description>Recent content in coding on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 14 May 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 10:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assembling an assembler - token scanning</title>
+      <link>https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/</link>
+      <pubDate>Sun, 27 Nov 2022 10:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/</guid>
+      <description>In the last episode of this mini-series I explained about how an assembler&amp;rsquo;s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this &amp;hellip;
+start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&amp;gt; C mov b,a ; A -&amp;gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go &amp;hellip; and turn it in to something like this &amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Assembling an assembler - overview</title>
       <link>https://relaycomputer.co.uk/posts/2022/05/assembly-part-1/</link>
