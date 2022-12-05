@@ -16,6 +16,12 @@
   cycles: '8'
   prefix: 2
   arguments: 'ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br>sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)'
+- class: MOV16
+  title: 16-Bit Move
+  opcode: '10100dss'
+  cycles: '10'
+  prefix: 5
+  arguments: 'd = dest reg (0-XY or 1-PC)<br>ss = src reg (00-M, 01-XY, 10-J, 11-AS)'
 - class: SETAB
   title:  Load Immediate
   opcode: '01rddddd'
@@ -28,3 +34,9 @@
   cycles: '10'
   prefix: 7
   arguments: 'r = reload program counter (0-no reload, 1-reload from switches)'
+- class: LDSW
+  title: Load Switches
+  opcode: '1010110d'
+  cycles: '10'
+  prefix: 7
+  arguments: 'd = destination register (0-A, 1-D)'
