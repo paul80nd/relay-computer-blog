@@ -6,7 +6,16 @@
     <description>Recent content in Cards on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 20 Nov 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Dec 2022 06:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Controller</title>
+      <link>https://relaycomputer.co.uk/cards/controller/</link>
+      <pubDate>Mon, 05 Dec 2022 06:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/cards/controller/</guid>
+      <description>The role of the controller card is to operate the various control lines of the computer at the right time according to the current instruction class. It makes up a key part of the broader &amp;lsquo;control unit&amp;rsquo; within the computer. It is primarily driven by the sequencer card to known &amp;lsquo;when&amp;rsquo; something should happen.</description>
+    </item>
+    
     <item>
       <title>Clock</title>
       <link>https://relaycomputer.co.uk/cards/clock/</link>
@@ -42,15 +51,6 @@ Although a single card it&amp;rsquo;s actually made up of two different clocks t
       
       <guid>https://relaycomputer.co.uk/cards/decoder/</guid>
       <description>The decoder card takes its input from the instruction bus and decides which class of instruction the input represents. This is then used by the controller and sequencer cards in order to perform their tasks. The decoder card makes up part of the broader &amp;lsquo;control unit&amp;rsquo; within the computer.</description>
-    </item>
-    
-    <item>
-      <title>Controller</title>
-      <link>https://relaycomputer.co.uk/cards/controller/</link>
-      <pubDate>Sat, 21 Dec 2019 03:03:00 +0000</pubDate>
-      
-      <guid>https://relaycomputer.co.uk/cards/controller/</guid>
-      <description>The role of the controller card is to operate the various control lines of the computer at the right time according to the current instruction class. It makes up a key part of the broader &amp;lsquo;control unit&amp;rsquo; within the computer. It is primarily driven by the sequencer card to known &amp;lsquo;when&amp;rsquo; something should happen.</description>
     </item>
     
     <item>

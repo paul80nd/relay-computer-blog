@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Controller Design: MOV8, MOV16 &amp; MISC Instructions | Relay Computer</title>
+  <meta name="description" content="Way back in 2019 I discussed how you can&rsquo;t &lsquo;half design a PCB&rsquo; and that, as a result, my controller cards already have all the required functionality laid down &hellip; I just haven&rsquo;t explained how those &lsquo;missing&rsquo; bits of functionality work in this blog yet.
+To ensure I was &lsquo;playing fair&rsquo; when constructing the controller I only soldered in the relays for the instructions I&rsquo;d explained in this blog so far.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.min.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Controller Design: MOV8, MOV16 &amp; MISC Instructions" />
+<meta property="og:description" content="Way back in 2019 I discussed how you can&rsquo;t &lsquo;half design a PCB&rsquo; and that, as a result, my controller cards already have all the required functionality laid down &hellip; I just haven&rsquo;t explained how those &lsquo;missing&rsquo; bits of functionality work in this blog yet.
+To ensure I was &lsquo;playing fair&rsquo; when constructing the controller I only soldered in the relays for the instructions I&rsquo;d explained in this blog so far." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-05T06:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-05T06:00:00+00:00" />
+
+<meta itemprop="name" content="Controller Design: MOV8, MOV16 &amp; MISC Instructions">
+<meta itemprop="description" content="Way back in 2019 I discussed how you can&rsquo;t &lsquo;half design a PCB&rsquo; and that, as a result, my controller cards already have all the required functionality laid down &hellip; I just haven&rsquo;t explained how those &lsquo;missing&rsquo; bits of functionality work in this blog yet.
+To ensure I was &lsquo;playing fair&rsquo; when constructing the controller I only soldered in the relays for the instructions I&rsquo;d explained in this blog so far."><meta itemprop="datePublished" content="2022-12-05T06:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-12-05T06:00:00+00:00" />
+<meta itemprop="wordCount" content="1575">
+<meta itemprop="keywords" content="control,design," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Controller Design: MOV8, MOV16 &amp; MISC Instructions"/>
+<meta name="twitter:description" content="Way back in 2019 I discussed how you can&rsquo;t &lsquo;half design a PCB&rsquo; and that, as a result, my controller cards already have all the required functionality laid down &hellip; I just haven&rsquo;t explained how those &lsquo;missing&rsquo; bits of functionality work in this blog yet.
+To ensure I was &lsquo;playing fair&rsquo; when constructing the controller I only soldered in the relays for the instructions I&rsquo;d explained in this blog so far."/>
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
+}
+</script>
+
+
+  
+  <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item has-text-weight-semibold">
+        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        
+        <a href="/" class="navbar-item ">
+          Home
+        </a>
+        
+        <a href="/pages/overview/" class="navbar-item ">
+          Overview
+        </a>
+        
+        <a href="/pages/progress/" class="navbar-item ">
+          Progress
+        </a>
+        
+        <a href="/cards/" class="navbar-item ">
+          Cards
+        </a>
+        
+        <a href="/posts/" class="navbar-item is-active">
+          Posts
+        </a>
+        
+        <a href="/tags/" class="navbar-item ">
+          Tags
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Controller Design: MOV8, MOV16 &amp; MISC Instructions</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-white">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Way back in <a href="/posts/2019/12/controller-design-pcb/">2019 I discussed how you can&rsquo;t &lsquo;half design a PCB&rsquo;</a>
+and that, as a result, my controller cards already have all the required functionality laid down &hellip; I just haven&rsquo;t explained
+how those &lsquo;missing&rsquo; bits of functionality work in this blog yet.</p>
+<p>To ensure I was &lsquo;playing fair&rsquo; when
+<a href="/posts/2019/12/controller-construction/">constructing the controller</a> I only soldered in the relays for
+the instructions I&rsquo;d explained in this blog so far. Well, in my
+<a href="/posts/2022/11/tick-tock/">Relay Clock Series</a> you may have noticed in the final episode I decided to
+solder the remaining relays in on the lower controller card meaning &hellip; the MOV8, MOV16 and MISC instruction classes are now
+complete and pretty much raring to go &hellip; which means I should probably get on with explaining them.</p>
+<h3 id="mov-8-8-bit-move">MOV-8: 8-bit Move</h3>
+<p>I explained the basics of the <a href="/posts/2019/12/controller-alu-mov8-setab-design/">8-bit move instruction</a> previously
+but its purpose is to copy an 8-bit value from one register to another (yes, copy not move). If the source and destination
+register are the same then the value in that register is cleared:</p>
+
+<article class="box">
+  <div class="content">
+    <h4>8-Bit Move</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">MOV8</span>
+          <span class="tag is-success">8</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">s</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br>sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)</code></pre>
+  </div>
+</article>
+
+
+<p>Here&rsquo;s the MOV-8 timing chart:</p>
+<figure>
+  <img src="/img/posts/2019/2019-12-07-0002.png" alt="MOV8 opcode timing chart">
+  
+  <figcaption markdown="span">MOV8 opcode timing chart (<a href="/pdf/timing-mov8.pdf">larger</a>)</figcaption>
+  
+</figure>
+
+<p>By soldering in those remaining relays to the lower controller card I now have registers M1, M2, X and Y available in the list
+of source and destination registers to pick from. Effectively that means there&rsquo;s now 64 combinations of register moves possible
+from this instruction alone. If you exclude moving a register from itself to itself (which clears the register) there&rsquo;s 56
+potential combinations.</p>
+<p>The last time I discussed the schematic for MOV-8 I blanked out the additional relays for brevity and clarity but now I can
+show the whole thing:</p>
+<figure>
+  <img src="/img/posts/2022/2022-12-07-0000.png" alt="MOV8 schematic">
+  
+  <figcaption markdown="span">MOV8 schematic (<a href="/img/posts/2022/2022-12-07-1000.png">larger</a>)</figcaption>
+  
+</figure>
+
+<h3 id="mov-16-16-bit-move">MOV-16: 16-bit Move</h3>
+<p>You can clearly achieve a lot of &lsquo;moving&rsquo; with the MOV-8 instruction and although you can copy the M register to
+the XY register by copying M1 to X and M2 to Y in sequence (via the 8-bit data bus) it&rsquo;d be much quicker, and easier, to have a
+command that does it all in one go (via the 16-bit address bus). Well, that&rsquo;s our MOV-16:</p>
+
+<article class="box">
+  <div class="content">
+    <h4>16-Bit Move</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">MOV16</span>
+          <span class="tag is-success">10</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">s</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>d = dest reg (0-XY or 1-PC)<br>ss = src reg (00-M, 01-XY, 10-J, 11-AS)</code></pre>
+  </div>
+</article>
+
+
+<p>So, notice there&rsquo;s some limitations on where you can copy to? This reflects the physical limitations within the computer and registers M and J are read-only by design and so that leaves us with registers XY and the Program Counter (PC) as
+destinations &hellip; which is convenient given we&rsquo;ve only got 3-bits spare in the instruction to define source and destination.</p>
+<p>In terms of sources most are pretty self-explanatory (registers M, XY and J) but what about the &lsquo;AS&rsquo; one? Well this refers to
+the primary switches on the front of the computer and using &lsquo;AS&rsquo; (address switches) as a source will gate these to the lower
+8-bits of the address bus (with the upper 8-bits set to 0s).</p>
+<p>In the architecture of the <a href="http://www.computerculture.org/projects/rc3/">RC-3 Relay Computer</a> (this computer&rsquo;s architectural
+parent) the &lsquo;AS&rsquo; source makes more sense as there&rsquo;s a row of 16 dedicated switches for this purpose. In my design I dropped
+these for compactness but kept the &lsquo;AS&rsquo; source available on the MOV-16 instruction and just gated the 8 primary switches to the
+address bus instead. As such, in practice, the &lsquo;AS&rsquo; source probably won&rsquo;t get much use in my computer.</p>
+<p>Also of note is that setting the Program Counter has an interesting side effect of course &hellip; it&rsquo;ll change
+where the computer takes its next instruction from. Surely we&rsquo;ve got jumps for that on the GOTO instruction? Well, yes we have
+but there&rsquo;s something special we can do on the GOTO instruction &hellip; let&rsquo;s take a look at it again:</p>
+
+<article class="box">
+  <div class="content">
+    <h4>Branch/Call &amp; 16-bit Load Immediate</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">GOTO</span>
+          <span class="tag is-success">24</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">c</span>
+          <span class="tag is-info">z</span>
+          <span class="tag is-info">n</span>
+          <span class="tag is-info">x</span>
+        </div>
+        
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+          <span class="tag is-info">h</span>
+        </div>
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+          <span class="tag is-info">l</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>d = destination register (0-M, 1-J)<br>s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br>c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br>z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br>n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br>x = 1 = copy PC to XY; 0 = no copy<br>hhhhhhhh = address high byte (to set in M2/J2)<br>llllllll = address low byte (to set in M1/J1)</code></pre>
+  </div>
+</article>
+
+
+<p>There&rsquo;s the option (in the last bit <code>x</code> of the opcode) to store the location of the next instruction in memory (right after the
+GOTO instruction itself) into the XY register before taking the jump. Why would you want this? Well, it gives you the
+opportunity to come back to where you jumped from after whatever you&rsquo;ve jumped to has finished. To come back we just copy the
+address in the XY register back to the Program Counter (with a MOV-16 <code>10100101</code>). This effectively behaves as a &lsquo;return&rsquo;
+instruction and in my assembly language <code>rts</code> maps to <code>10100101</code> accordingly.</p>
+<p>Actually, whilst we&rsquo;re talking of &lsquo;instructions within instructions&rsquo; there&rsquo;s a hidden one within the GOTO too. If you execute a
+<code>11000000</code> it&rsquo;ll load the M register with the next 16-bits of memory without taking any jumps. Effectively this makes it a
+form of &rsquo;load immediate&rsquo; allowing a 16-bit value to be loaded directly in to the M register. Variant <code>11100000</code> does the same
+trick but loads the J register. Arguably that&rsquo;s less useful as the J register is write-only from the data bus and
+read-only to the address bus so all you can then do is copy it to XY or PC via a MOV-16 instruction.</p>
+<p>Anyho, let&rsquo;s take a look at the MOV-16 timing chart:</p>
+<figure>
+  <img src="/img/posts/2022/2022-12-07-0001.png" alt="MOV16 opcode timing chart">
+  
+  <figcaption markdown="span">MOV16 opcode timing chart (<a href="/pdf/timing-mov16.pdf">larger</a>)</figcaption>
+  
+</figure>
+
+<p>&hellip; and in terms of the schematic it&rsquo;s not too dissimilar to what we saw earlier for MOV-8 &hellip;</p>
+<figure>
+  <img src="/img/posts/2022/2022-12-07-0002.png" alt="MOV16 schematic">
+  
+  <figcaption markdown="span">MOV16 schematic (<a href="/img/posts/2022/2022-12-07-1002.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>The reason for the &lsquo;odd layout&rsquo; of this schematic is because the MOV-8 and MOV-16 schematics share the same page and so fit
+around each other as you&rsquo;ll see later.</p>
+<p>So, that leaves us with just one instruction class left for this post:</p>
+<h3 id="misc-miscellaneous-stuff">MISC: Miscellaneous Stuff</h3>
+<p>Ah yes, the instruction class that covers &rsquo;everything&rsquo; else. In this case anything starting with <code>10101</code> will be classified
+by the decoder as belonging to the MISC class (similarly to the way anything beginning <code>10100</code> belongs to the MOV-16 class).
+With the first 5 bits taken for classification that leaves us 3-bits spare for some more instructions:</p>
+
+<article class="box">
+  <div class="content">
+    <h4>Load Switches</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">LDSW</span>
+          <span class="tag is-success">10</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">d</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>d = destination register (0-A, 1-D)</code></pre>
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
+    <h4>Halt</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">HALT</span>
+          <span class="tag is-success">10</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-info">r</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>r = reload program counter (0-no reload, 1-reload from switches)</code></pre>
+  </div>
+</article>
+
+
+<p>Load switches is pretty straightforward and is very similar to the &lsquo;AS&rsquo; source of MOV-16. In this case the same primary
+switches will be gated to the data bus and then loaded to the A or D register. This gives a nice handy way of getting input
+from the user &hellip; especially when combined with the second instruction above.</p>
+<p>Halt does &lsquo;what it says on the tin&rsquo; - it halts the computer. If you&rsquo;ve seen my last video you&rsquo;ll also know it additionally
+rings a bell to let you know it&rsquo;s halted (as if the silenced relays isn&rsquo;t enough to give it away). When the computer is in the
+halt state, and with the last bit of the instruction set to 0, the program counter will stay pointing at the next instruction
+in memory. If you follow the halt with a &rsquo;load switches&rsquo; instruction you&rsquo;re effectively waiting for the user to set the input
+switches. Once done so they can release the halt with the &lsquo;restart&rsquo; switch.</p>
+<p>If the last bit of halt is set to 1 then it&rsquo;ll load the program counter (lower 8-bits again just like with MOV-16s &lsquo;AS&rsquo;). Again,
+this is a bit of a hang over from the RC-3 design where loading from the dedicated address switches was handy for re-starting a
+demo program from a location in memory. Here in my computer it&rsquo;ll likely not get used much.</p>
+<p>The timing chart is remarkably similar to the MOV-16 one &hellip;</p>
+<figure>
+  <img src="/img/posts/2022/2022-12-07-0003.png" alt="MISC opcode timing chart">
+  
+  <figcaption markdown="span">MISC opcode timing chart (<a href="/pdf/timing-misc.pdf">larger</a>)</figcaption>
+  
+</figure>
+
+<p>&hellip; and in many ways it is although sometimes it won&rsquo;t do the register select part and sometimes it won&rsquo;t do the register load
+part (all depending on exactly what the instruction requires). In either case though the &lsquo;potential&rsquo; timing diagram remains the
+same. The schematic for MISC makes this more explicit:</p>
+<figure>
+  <img src="/img/posts/2022/2022-12-07-0004.png" alt="MISC schematic">
+  
+  <figcaption markdown="span">MISC schematic (<a href="/img/posts/2022/2022-12-07-1004.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>That&rsquo;s it &hellip; we&rsquo;ve finished off the MOV-8 instruction class and added two new ones. As I alluded to earlier on in this post
+all three of these instruction classes fit nicely in to the same area of the controller PCB and so the schematic follows suit.
+To finish off then, below is the full schematic for the MOV-8, MOV-16 and MISC instructions:</p>
+<figure>
+  <img src="/img/posts/2022/2022-12-07-0005.png" alt="Combined MOV8, MOV16 &amp; MISC schematic">
+  
+  <figcaption markdown="span">Combined MOV8, MOV16 &amp; MISC schematic (<a href="/pdf/controller-lo.pdf">larger - see 2nd page of PDF</a>)</figcaption>
+  
+</figure>
+
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <span class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Dec 05, 2022</span>
+            </span>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/cards/controller" class="tags has-addons">
+              <span class="tag is-link">Card</span>
+              <span class="tag is-info">controller</span>
+            </a>
+          </div>
+          
+          
+          </div>
+          <div class="field is-grouped is-grouped-multiline">
+          
+          
+          <div class="control">
+            <a href="/tags/control/" class="tags">
+              <span class="tag is-primary">control</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags/design/" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2022/11/assembly-part-2/">Assembling an assembler - token scanning</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="https://editor.relaycomputer.co.uk"><span class="fas fa-code fa-lg fa-fw"></span> Relay Code Editor</a></p>
+        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&quote=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&text=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f" target="_blank" title="Tweet"><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&description=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions" target="_blank" title="Pin it"><i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&title=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f" target="_blank" title="Send email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

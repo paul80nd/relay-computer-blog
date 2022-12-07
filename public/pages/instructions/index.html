@@ -49,7 +49,7 @@ ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)" />
 The list of available instructions is as follows:
 ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)">
 
-<meta itemprop="wordCount" content="329">
+<meta itemprop="wordCount" content="374">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Instructions"/>
 <meta name="twitter:description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit &lsquo;op-code&rsquo; and falls in to a class of related instructions (identifiable by the leading part of the op-code).
@@ -272,6 +272,36 @@ related instructions (identifiable by the leading part of the op-code).</p>
 
 <article class="box">
   <div class="content">
+    <h4>16-Bit Move</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">MOV16</span>
+          <span class="tag is-success">10</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">d</span>
+          <span class="tag is-info">s</span>
+          <span class="tag is-info">s</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>d = dest reg (0-XY or 1-PC)<br>ss = src reg (00-M, 01-XY, 10-J, 11-AS)</code></pre>
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
     <h4>Load Immediate</h4>
     <div class="field is-grouped is-grouped-multiline is-family-monospace">
       <div class="control">
@@ -295,6 +325,36 @@ related instructions (identifiable by the leading part of the op-code).</p>
       </div>
     </div>
     <pre class="is-size-7"><code>    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)</code></pre>
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
+    <h4>Load Switches</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium">
+          <span class="tag is-primary">LDSW</span>
+          <span class="tag is-success">10</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">d</span>
+        </div>
+        
+      </div>
+    </div>
+    <pre class="is-size-7"><code>d = destination register (0-A, 1-D)</code></pre>
   </div>
 </article>
 

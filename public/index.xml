@@ -6,7 +6,17 @@
     <description>Recent content in A blog about a computer made from relays on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 27 Nov 2022 10:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Dec 2022 06:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Controller Design: MOV8, MOV16 &amp; MISC Instructions</title>
+      <link>https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/</link>
+      <pubDate>Mon, 05 Dec 2022 06:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/</guid>
+      <description>Way back in 2019 I discussed how you can&amp;rsquo;t &amp;lsquo;half design a PCB&amp;rsquo; and that, as a result, my controller cards already have all the required functionality laid down &amp;hellip; I just haven&amp;rsquo;t explained how those &amp;lsquo;missing&amp;rsquo; bits of functionality work in this blog yet.
+To ensure I was &amp;lsquo;playing fair&amp;rsquo; when constructing the controller I only soldered in the relays for the instructions I&amp;rsquo;d explained in this blog so far.</description>
+    </item>
+    
     <item>
       <title>Assembling an assembler - token scanning</title>
       <link>https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/</link>
@@ -1351,7 +1361,7 @@ The design of the computer is based on the one constructed by Dr. Harry Porter a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/pages/progress/</guid>
-      <description> Bay W Bay X Bay Y Bay Z Others Depreciated Cards &amp;nbsp;Complete Backplane W v2 More Info | | &amp;nbsp;Complete Backplane W Daughterboard More Info &amp;nbsp;Complete Decoder v2 More Info | | | &amp;nbsp;Part-Complete Controller v2 upper&amp;nbsp; More Info | | | &amp;nbsp;Part-Complete Controller v2 lower&amp;nbsp; More Info | | | &amp;nbsp;Complete Sequencer v2 upper&amp;nbsp; More Info | | | &amp;nbsp;Complete Sequencer v2 lower&amp;nbsp; More Info | | | &amp;nbsp;Complete Backplane X More Info &amp;nbsp;Complete Clock More Info | | | &amp;nbsp;Complete Incrementer More Info | &amp;nbsp;Complete Instruction Register More Info | &amp;nbsp;Complete Program Counter More Info | &amp;nbsp;Designed Backplane Y v2 More Info | | &amp;nbsp;Designed Backplane Y Daughterboard More Info &amp;nbsp;Complete Memory More Info | &amp;nbsp;Complete Register J More Info | | | &amp;nbsp;Complete Register M More Info | | | &amp;nbsp;Complete Register XY More Info | | | &amp;nbsp;Designed Backplane Z v2 More Info | | &amp;nbsp;Designed Backplane Z Daughterboard More Info &amp;nbsp;Complete ALU Arithmetic Unit More Info | &amp;nbsp;Complete ALU Control Unit More Info | &amp;nbsp;Complete ALU Logic Unit More Info | &amp;nbsp;Complete Register A/D More Info | &amp;nbsp;Complete Register B/C More Info | &amp;nbsp;Complete Auxiliary Control More Info | &amp;nbsp;Part-Complete Display A More Info | &amp;nbsp;Part-Complete Display B More Info | &amp;nbsp;Part-Complete Enclosure More Info &amp;nbsp;Complete Test Board More Info &amp;nbsp;Abandoned Backplane W v1 More Info &amp;nbsp;Abandoned Backplane Y v1 More Info | &amp;nbsp;Abandoned Backplane Z v1 More Info &amp;nbsp;Abandoned Controller v1 More Info | &amp;nbsp;Abandoned Decoder v1 More Info | &amp;nbsp;Abandoned Sequencer v1 More Info | </description>
+      <description> Bay W Bay X Bay Y Bay Z Others Depreciated Cards &amp;nbsp;Complete Backplane W v2 More Info | | &amp;nbsp;Complete Backplane W Daughterboard More Info &amp;nbsp;Complete Decoder v2 More Info | | | &amp;nbsp;Part-Complete Controller v2 upper&amp;nbsp; More Info | | | &amp;nbsp;Complete Controller v2 lower&amp;nbsp; More Info | | | &amp;nbsp;Complete Sequencer v2 upper&amp;nbsp; More Info | | | &amp;nbsp;Complete Sequencer v2 lower&amp;nbsp; More Info | | | &amp;nbsp;Complete Backplane X More Info &amp;nbsp;Complete Clock More Info | | | &amp;nbsp;Complete Incrementer More Info | &amp;nbsp;Complete Instruction Register More Info | &amp;nbsp;Complete Program Counter More Info | &amp;nbsp;Designed Backplane Y v2 More Info | | &amp;nbsp;Designed Backplane Y Daughterboard More Info &amp;nbsp;Complete Memory More Info | &amp;nbsp;Complete Register J More Info | | | &amp;nbsp;Complete Register M More Info | | | &amp;nbsp;Complete Register XY More Info | | | &amp;nbsp;Designed Backplane Z v2 More Info | | &amp;nbsp;Designed Backplane Z Daughterboard More Info &amp;nbsp;Complete ALU Arithmetic Unit More Info | &amp;nbsp;Complete ALU Control Unit More Info | &amp;nbsp;Complete ALU Logic Unit More Info | &amp;nbsp;Complete Register A/D More Info | &amp;nbsp;Complete Register B/C More Info | &amp;nbsp;Complete Auxiliary Control More Info | &amp;nbsp;Part-Complete Display A More Info | &amp;nbsp;Part-Complete Display B More Info | &amp;nbsp;Part-Complete Enclosure More Info &amp;nbsp;Complete Test Board More Info &amp;nbsp;Abandoned Backplane W v1 More Info &amp;nbsp;Abandoned Backplane Y v1 More Info | &amp;nbsp;Abandoned Backplane Z v1 More Info &amp;nbsp;Abandoned Controller v1 More Info | &amp;nbsp;Abandoned Decoder v1 More Info | &amp;nbsp;Abandoned Sequencer v1 More Info | </description>
     </item>
     
     <item>

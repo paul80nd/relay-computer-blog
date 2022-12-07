@@ -3,22 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://relaycomputer.co.uk/</loc>
-    <lastmod>2022-11-27T10:00:00+00:00</lastmod>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/control/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/cards/controller/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/design/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/</loc>
+    <lastmod>2022-12-05T06:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/</loc>
     <lastmod>2022-11-27T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/coding/</loc>
     <lastmod>2022-11-27T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/posts/</loc>
-    <lastmod>2022-11-27T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/</loc>
-    <lastmod>2022-11-27T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/cards/</loc>
-    <lastmod>2022-11-20T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/cards/clock/</loc>
     <lastmod>2022-11-20T11:00:00+00:00</lastmod>
@@ -27,9 +39,6 @@
     <lastmod>2022-11-20T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/tags/construction/</loc>
-    <lastmod>2022-11-20T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/design/</loc>
     <lastmod>2022-11-20T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2022/11/tick-tock/</loc>
@@ -70,12 +79,6 @@
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/12/decoder-design-pcb/</loc>
     <lastmod>2019-12-22T03:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/control/</loc>
-    <lastmod>2019-12-21T03:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/cards/controller/</loc>
-    <lastmod>2019-12-21T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/12/controller-construction/</loc>
     <lastmod>2019-12-21T03:03:00+00:00</lastmod>

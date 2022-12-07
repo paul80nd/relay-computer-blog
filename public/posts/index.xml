@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 27 Nov 2022 10:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Dec 2022 06:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Controller Design: MOV8, MOV16 &amp; MISC Instructions</title>
+      <link>https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/</link>
+      <pubDate>Mon, 05 Dec 2022 06:00:00 +0000</pubDate>
+      
+      <guid>https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/</guid>
+      <description>Way back in 2019 I discussed how you can&amp;rsquo;t &amp;lsquo;half design a PCB&amp;rsquo; and that, as a result, my controller cards already have all the required functionality laid down &amp;hellip; I just haven&amp;rsquo;t explained how those &amp;lsquo;missing&amp;rsquo; bits of functionality work in this blog yet.
+To ensure I was &amp;lsquo;playing fair&amp;rsquo; when constructing the controller I only soldered in the relays for the instructions I&amp;rsquo;d explained in this blog so far.</description>
+    </item>
+    
     <item>
       <title>Assembling an assembler - token scanning</title>
       <link>https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/</link>
