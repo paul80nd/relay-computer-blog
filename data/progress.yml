@@ -53,7 +53,7 @@
     card: controller
     version: 2
     derv: lower
-    state: PartComplete
+    state: Complete
     video: kMu4q65IUk8
     eda: controller-lower
     tmbsch: ctl-0000.png
