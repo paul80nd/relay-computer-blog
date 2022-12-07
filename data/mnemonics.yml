@@ -5,10 +5,12 @@
 - id: ldi
   title: Load Immediate
 - id: arith
-  title:  Arithmetic Ops
+  title: Arithmetic Ops
 - id: logic
-  title:  Logic/Bitwise Ops
+  title: Logic/Bitwise Ops
 - id: branch
-  title:  Branching
+  title: Branching
+- id: halt
+  title: Clock Control
 - id: opc
-  title:  Direct op-code
+  title: Direct op-code

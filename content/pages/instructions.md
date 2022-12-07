@@ -10,7 +10,9 @@ The list of available instructions is as follows:
 {{< instruction ALU >}}
 {{< instruction GOTO >}}
 {{< instruction MOV8 >}}
+{{< instruction MOV16 >}}
 {{< instruction SETAB >}}
+{{< instruction LDSW >}}
 {{< instruction HALT >}}
 
 There's also a video summary (as at Jan 2020) of the available instructions:
