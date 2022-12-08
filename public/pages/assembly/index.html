@@ -46,7 +46,7 @@ I have designed an assembly style language which is made up of a series of mnemo
 <meta itemprop="description" content="Although the computer is primarily controlled by a set of 8-bit opcodes these can be tricky to work with when designing more complicated programs. As with many computers we can use a higher-level language which is more readable for a human but then will need converting into 8-bit opcodes for the computer to understand.
 I have designed an assembly style language which is made up of a series of mnemonics that each map directly to an equivalent opcode.">
 
-<meta itemprop="wordCount" content="345">
+<meta itemprop="wordCount" content="359">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Assembly"/>
 <meta name="twitter:description" content="Although the computer is primarily controlled by a set of 8-bit opcodes these can be tricky to work with when designing more complicated programs. As with many computers we can use a higher-level language which is more readable for a human but then will need converting into 8-bit opcodes for the computer to understand.
@@ -1238,6 +1238,45 @@ series of opcodes required to perform that action.</p>
         </g>
         <path d="M 440 31 h 20 m -10 -10 v 20 m 10 -20 v 20"/>
     </g>
+</svg>
+
+  </div>
+</article>
+
+
+
+<article class="box">
+  <div class="content">
+    <h4>Clock Control</h4>
+    <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="railroad-diagram" width="164" height="92" viewBox="0 0 164 92">
+  <g transform="translate(.5 .5)">
+    <g>
+      <path d="M20 21v20m10 -20v20m-10 -10h20"></path>
+    </g>
+    <g>
+      <path d="M40 31h0"></path>
+      <path d="M124 31h0"></path>
+      <path d="M40 31h20"></path>
+      <g class="terminal ">
+        <path d="M60 31h0"></path>
+        <path d="M104 31h0"></path>
+        <rect x="60" y="20" width="44" height="22" rx="10" ry="10"></rect>
+        <text x="82" y="35">hlt</text>
+      </g>
+      <path d="M104 31h20"></path>
+      <path d="M40 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+      <g class="terminal ">
+        <path d="M60 61h0"></path>
+        <path d="M104 61h0"></path>
+        <rect x="60" y="50" width="44" height="22" rx="10" ry="10"></rect>
+        <text x="82" y="65">hlr</text>
+      </g>
+      <path d="M104 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+    </g>
+    <path d="M 124 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+  </g>
 </svg>
 
   </div>
