@@ -155,11 +155,13 @@
 
   - title: Backplane Y Daughterboard
     card: backplane-db
-    state: Designed
+    state: Complete
     tmbsch: bpy-0000a.png
     pdfsch: backplane-y-v2.pdf
     tmbpcb: dby-0001.png
     pdfpcb: backplane-db-y-pcb.pdf
+    tmbpto: dby-0002.jpg
+    flspto: dby-1002.jpg
 
   - title: Memory
     card: memory
@@ -224,11 +226,13 @@
 
   - title: Backplane Z Daughterboard
     card: backplane-db
-    state: Designed
+    state: Complete
     tmbsch: bpz-0000.png
     pdfsch: backplane-z-v2.pdf
     tmbpcb: dbz-0001.png
     pdfpcb: backplane-db-z-pcb.pdf
+    tmbpto: dbz-0002.jpg
+    flspto: dbz-1002.jpg
 
   - title: ALU Arithmetic Unit
     card: arithmetic-unit
