@@ -19,4 +19,5 @@ The list of available instructions is as follows:
 {{< mnemonic arith >}}
 {{< mnemonic logic >}}
 {{< mnemonic branch >}}
+{{< mnemonic halt >}}
 {{< mnemonic opc >}}
