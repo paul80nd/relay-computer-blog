@@ -143,12 +143,15 @@
   - title: Backplane Y
     card: backplane
     version: 2
-    state: Designed
+    state: Complete
     eda: backplane-y
     tmbsch: bpy-0000a.png
     pdfsch: backplane-y-v2.pdf
     tmbpcb: bpy-0001a.png
     pdfpcb: backplane-y-v2-pcb.pdf
+    tmbpto: bpy-0002.jpg
+    flspto: bpy-1002.jpg
+
 
   - title: Backplane Y Daughterboard
     card: backplane-db
@@ -210,12 +213,14 @@
   - title: Backplane Z
     card: backplane
     version: 2
-    state: Designed
+    state: Complete
     eda: backplane-z
     tmbsch: bpz-0000.png
     pdfsch: backplane-z-v2.pdf
     tmbpcb: bpz-0001.png
     pdfpcb: backplane-z-v2-pcb.pdf
+    tmbpto: bpz-0002.jpg
+    flspto: bpz-1002.jpg
 
   - title: Backplane Z Daughterboard
     card: backplane-db
