@@ -53,13 +53,12 @@ start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&g
   <meta itemprop="datePublished" content="2022-11-27T10:00:00+00:00">
   <meta itemprop="dateModified" content="2022-11-27T10:00:00+00:00">
   <meta itemprop="wordCount" content="1924">
-  <meta itemprop="keywords" content="Coding"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Assembling an assembler - token scanning"/>
-<meta name="twitter:description" content="In the last episode of this mini-series I explained about how an assembler&rsquo;s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this &hellip;
-start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&gt; C mov b,a ; A -&gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go &hellip; and turn it in to something like this &hellip;"/>
+  <meta itemprop="keywords" content="Coding">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Assembling an assembler - token scanning">
+  <meta name="twitter:description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
+start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&gt; C mov b,a ; A -&gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go … and turn it in to something like this …">
 
-
-  
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
 <script>
 var doNotTrack = false;

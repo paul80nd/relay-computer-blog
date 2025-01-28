@@ -54,13 +54,12 @@ System Architecture for a Relay Computer[^1] Buses are simply a set of wires tha
   <meta itemprop="datePublished" content="2013-11-05T19:07:00+00:00">
   <meta itemprop="dateModified" content="2013-11-05T19:07:00+00:00">
   <meta itemprop="wordCount" content="788">
-  <meta itemprop="keywords" content="Theory,Architecture"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Architectural breakdown: Buses and Registers"/>
-<meta name="twitter:description" content="In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and registers. Here again is the architecture I&rsquo;ll be building against (from the Harry Porter Relay Computer):
-System Architecture for a Relay Computer[^1] Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits. In this architecture the data bus is 8 bits wide and the address bus (which I&rsquo;ll go in to further in the next post on the memory) is 16 bits wide. You can only have a single value on a bus at the same time so any part of the computer that needs to talk to another part has to wait its turn for the bus to become free. It&rsquo;s worth noting though that because the data and address bus are physically separate you can have different values on each without problem. In the diagram above the data bus is shown as a thick line on the left and the address bus is the thick line on the right. In real life, of course, there would be as many wires as there are bits but to simplify the diagram they&rsquo;re shown as a single thick line."/>
+  <meta itemprop="keywords" content="Theory,Architecture">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Architectural breakdown: Buses and Registers">
+  <meta name="twitter:description" content="In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s buses and registers. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer):
+System Architecture for a Relay Computer[^1] Buses are simply a set of wires that connect up the various parts of a computer. As each wire can carry 1 bit it therefore takes 8 wires to carry 8 bits. In this architecture the data bus is 8 bits wide and the address bus (which I’ll go in to further in the next post on the memory) is 16 bits wide. You can only have a single value on a bus at the same time so any part of the computer that needs to talk to another part has to wait its turn for the bus to become free. It’s worth noting though that because the data and address bus are physically separate you can have different values on each without problem. In the diagram above the data bus is shown as a thick line on the left and the address bus is the thick line on the right. In real life, of course, there would be as many wires as there are bits but to simplify the diagram they’re shown as a single thick line.">
 
-
-  
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
 <script>
 var doNotTrack = false;

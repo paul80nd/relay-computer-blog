@@ -54,13 +54,12 @@ Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate
   <meta itemprop="datePublished" content="2013-11-30T10:12:00+00:00">
   <meta itemprop="dateModified" content="2013-11-30T10:12:00+00:00">
   <meta itemprop="wordCount" content="684">
-  <meta itemprop="keywords" content="Design,Alu"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ALU Design: Condition Registers"/>
-<meta name="twitter:description" content="This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card. There are three Condition Registers in this computer:
-Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off). Sign: set when the most significant bit is set (which would indicate a negative result for signed values). This condition has no direct meaning for unsigned numbers (other than indicating the number has a value of 128 or more). When the ALU performs an operation the current values of these three conditions are stored in the condition registers so that they can be referred to in other operations. An example of this would be where given two numbers the first is negated and then added to the second &hellip; if the two numbers are equal it will result in zero and therefore the Zero condition will be set. Based on this condition register being set you could then branch to a different location in the executing program if desired. That is, for example, if number A and B are equal then go to line C in the program. It&rsquo;s this &lsquo;branching&rsquo; functionality that elevates the computer in terms of power and flexibility and the condition registers are at the heart of this."/>
+  <meta itemprop="keywords" content="Design,Alu">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ALU Design: Condition Registers">
+  <meta name="twitter:description" content="This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card. There are three Condition Registers in this computer:
+Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off). Sign: set when the most significant bit is set (which would indicate a negative result for signed values). This condition has no direct meaning for unsigned numbers (other than indicating the number has a value of 128 or more). When the ALU performs an operation the current values of these three conditions are stored in the condition registers so that they can be referred to in other operations. An example of this would be where given two numbers the first is negated and then added to the second … if the two numbers are equal it will result in zero and therefore the Zero condition will be set. Based on this condition register being set you could then branch to a different location in the executing program if desired. That is, for example, if number A and B are equal then go to line C in the program. It’s this ‘branching’ functionality that elevates the computer in terms of power and flexibility and the condition registers are at the heart of this.">
 
-
-  
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
 <script>
 var doNotTrack = false;
