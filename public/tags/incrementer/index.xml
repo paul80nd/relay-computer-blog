@@ -4,73 +4,56 @@
     <title>Incrementer on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/incrementer/</link>
     <description>Recent content in Incrementer on Relay Computer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 07 Jan 2018 13:04:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/incrementer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jan 2018 13:04:00 +0000</lastBuildDate>
+    <atom:link href="https://relaycomputer.co.uk/tags/incrementer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Incrementer Test</title>
       <link>https://relaycomputer.co.uk/posts/2018/01/incrementer-test/</link>
       <pubDate>Sun, 07 Jan 2018 13:04:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2018/01/incrementer-test/</guid>
-      <description>In my last two posts I covered the construction of the upper and lower incrementer cards. The lower card is a 16-bit half adder and the upper card is a 16-bit register. Together they form the incrementer unit as a whole which can add one to whichever value is currently on the address bus and then hold that value ready for pushing back out to the address bus. More often than not the incrementer will be used to push the program counter on one place but in theory it can be used to increment any value put on the address bus.
-</description>
+      <description>In my last two posts I covered the construction of the upper and lower incrementer cards. The lower card is a 16-bit half adder and the upper card is a 16-bit register. Together they form the incrementer unit as a whole which can add one to whichever value is currently on the address bus and then hold that value ready for pushing back out to the address bus. More often than not the incrementer will be used to push the program counter on one place but in theory it can be used to increment any value put on the address bus.</description>
     </item>
-    
     <item>
       <title>Incrementer Construction (Part 2 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-2-of-2/</link>
       <pubDate>Sun, 17 Dec 2017 12:32:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-2-of-2/</guid>
-      <description>In my last post I covered the construction of the lower incrementer card which is effectively a 16-bit half adder. This time I&amp;rsquo;m going to cover constructing the upper card of the incrementer which is a 16-bit register that can hold on to the incremented value before pushing it back out to the address bus.
-The backplane connectors and LEDs were soldered down in my last post but there&amp;rsquo;s plenty more soldering to do. First up I can add the relay sockets, wire wrap posts and card interconnect wrap posts:
-</description>
+      <description>In my last post I covered the construction of the lower incrementer card which is effectively a 16-bit half adder. This time I’m going to cover constructing the upper card of the incrementer which is a 16-bit register that can hold on to the incremented value before pushing it back out to the address bus.
+The backplane connectors and LEDs were soldered down in my last post but there’s plenty more soldering to do. First up I can add the relay sockets, wire wrap posts and card interconnect wrap posts:</description>
     </item>
-    
     <item>
       <title>Incrementer Construction (Part 1 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-1-of-2/</link>
       <pubDate>Sun, 10 Dec 2017 11:07:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-1-of-2/</guid>
-      <description>We&amp;rsquo;re getting nearer and nearer to a computer that can run though a program in memory rather than just a single instruction &amp;hellip; we&amp;rsquo;ve got memory to hold the program and a program counter to point to the current instruction in memory. Now it&amp;rsquo;s time to construct the 16-bit incrementer which will be used to advance the program counter on to point at the next instruction.
-As the incrementer is spread over two cards I&amp;rsquo;ll likewise spread the construction over two blog posts focussing this time on the lower card. Before that though I&amp;rsquo;ll get a head start and solder down the LEDs and backplane connectors for both cards:
-</description>
+      <description>We’re getting nearer and nearer to a computer that can run though a program in memory rather than just a single instruction … we’ve got memory to hold the program and a program counter to point to the current instruction in memory. Now it’s time to construct the 16-bit incrementer which will be used to advance the program counter on to point at the next instruction.
+As the incrementer is spread over two cards I’ll likewise spread the construction over two blog posts focussing this time on the lower card. Before that though I’ll get a head start and solder down the LEDs and backplane connectors for both cards:</description>
     </item>
-    
     <item>
       <title>Incrementer Design</title>
       <link>https://relaycomputer.co.uk/posts/2017/07/incrementer-design/</link>
       <pubDate>Mon, 17 Jul 2017 21:34:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/07/incrementer-design/</guid>
-      <description>In my last post I covered the design of the 16-bit half adder which takes whatever value is currently on the address bus and increments it by one. To make this incremented value useable we need to create a register so that we can store the value ready for pushing back on to the address bus. Typically this incremented value would then be loaded into the program counter to get it ready for the next instruction in memory.
-</description>
+      <description>In my last post I covered the design of the 16-bit half adder which takes whatever value is currently on the address bus and increments it by one. To make this incremented value useable we need to create a register so that we can store the value ready for pushing back on to the address bus. Typically this incremented value would then be loaded into the program counter to get it ready for the next instruction in memory.</description>
     </item>
-    
     <item>
       <title>Incrementer Design: 16-bit Half Adder</title>
       <link>https://relaycomputer.co.uk/posts/2017/07/incrementer-design-16-bit-half-adder/</link>
       <pubDate>Sat, 15 Jul 2017 14:57:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/07/incrementer-design-16-bit-half-adder/</guid>
       <description>In the last post I introduced the design for the 1-bit Half Adder. This post covers connecting sixteen of these units together to make the 16-bit Half Adder.
 So, diving straight in, here is what sixteen of the 1-bit Half Adder units look like all together on the usual 55 x 40 hole pad board:
-16 x 1-bit Half Adder Units (larger) Each half adder bit is made up of two relays (as seen in the previous blog post) and starting at the bottom right of the diagram above the bit stages run upwards from 0 to 3 and then continuing on in rising columns to the left until bit 15 at the top left. Between each bit the carry out lines of the prior bit are connected to the carry in and the carry out lines connect to the carry in of the next bit effectively chaining each bit together to form a ripple carry adder circuit.
-</description>
+16 x 1-bit Half Adder Units (larger) Each half adder bit is made up of two relays (as seen in the previous blog post) and starting at the bottom right of the diagram above the bit stages run upwards from 0 to 3 and then continuing on in rising columns to the left until bit 15 at the top left. Between each bit the carry out lines of the prior bit are connected to the carry in and the carry out lines connect to the carry in of the next bit effectively chaining each bit together to form a ripple carry adder circuit.</description>
     </item>
-    
     <item>
       <title>Incrementer Design: 1-bit Half Adder</title>
       <link>https://relaycomputer.co.uk/posts/2017/06/incrementer-design-1-bit-half-adder/</link>
       <pubDate>Sun, 04 Jun 2017 22:42:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/06/incrementer-design-1-bit-half-adder/</guid>
-      <description>Typical isn&amp;rsquo;t it?! &amp;hellip; you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I move on to the design of the incrementer.
-The incrementer takes any value currently on the 16-bit address bus and adds one to it, or rather, it increments it (clue is in the name of course). Typically that value on the address bus is going to come from the program counter (in order to point it at the next instruction in memory) but it&amp;rsquo;ll also be possible to bump the upcoming XY register eventually too.
-</description>
+      <description>Typical isn’t it?! … you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I move on to the design of the incrementer.
+The incrementer takes any value currently on the 16-bit address bus and adds one to it, or rather, it increments it (clue is in the name of course). Typically that value on the address bus is going to come from the program counter (in order to point it at the next instruction in memory) but it’ll also be possible to bump the upcoming XY register eventually too.</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,128 +4,96 @@
     <title>Enclosure on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/enclosure/</link>
     <description>Recent content in Enclosure on Relay Computer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 05 Nov 2017 10:47:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/enclosure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2017 10:47:00 +0000</lastBuildDate>
+    <atom:link href="https://relaycomputer.co.uk/tags/enclosure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Miscellany Special: Backplane X, Cable Routing and Address Bus</title>
       <link>https://relaycomputer.co.uk/posts/2017/11/miscellany-special-backplane-x-cable/</link>
       <pubDate>Sun, 05 Nov 2017 10:47:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/11/miscellany-special-backplane-x-cable/</guid>
-      <description>Continuing on with the theme from my last post &amp;hellip; here is another &amp;lsquo;miscellany special&amp;rsquo; covering all the little &amp;lsquo;side jobs&amp;rsquo; I&amp;rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There&amp;rsquo;s three things worth covering (plus an additional minor mention) &amp;hellip; let&amp;rsquo;s start with backplanes.
-The computer is designed with four backplanes (W, X, Y and Z) each taking five cards. Each card of the computer is designed to fit in a specific backplane as each backplane offers a unique selection of busses and connections. Generally you can put a card designated for a given backplane in to any of the five backplane slots (position mainly being an aesthetic thing) however the W backplane is the notable exception having slots W1 - W2 - W1 - W2 - W1 taking two double cards (with W1 and W2 connectors) and one single card (W1 connectors).
-</description>
+      <description>Continuing on with the theme from my last post … here is another ‘miscellany special’ covering all the little ‘side jobs’ I’ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There’s three things worth covering (plus an additional minor mention) … let’s start with backplanes.
+The computer is designed with four backplanes (W, X, Y and Z) each taking five cards. Each card of the computer is designed to fit in a specific backplane as each backplane offers a unique selection of busses and connections. Generally you can put a card designated for a given backplane in to any of the five backplane slots (position mainly being an aesthetic thing) however the W backplane is the notable exception having slots W1 - W2 - W1 - W2 - W1 taking two double cards (with W1 and W2 connectors) and one single card (W1 connectors).</description>
     </item>
-    
     <item>
       <title>Miscellany Special: Power Distribution</title>
       <link>https://relaycomputer.co.uk/posts/2017/10/miscellany-special-power-distribution/</link>
       <pubDate>Sun, 29 Oct 2017 11:01:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/10/miscellany-special-power-distribution/</guid>
-      <description>Having somehow forgotten to take time off work I&amp;rsquo;m now playing &amp;lsquo;annual leave catch up&amp;rsquo; which means lots of four day weeks but also, and more importantly for this blog, I&amp;rsquo;m getting time to crack on with construction of my relay computer. The current milestone I&amp;rsquo;m working towards is finishing off the Program Counter, Incrementer and Memory cards (which are all well under way now) so that I can load a simple program in to the computer and set it running without any further intervention.
-</description>
+      <description>Having somehow forgotten to take time off work I’m now playing ‘annual leave catch up’ which means lots of four day weeks but also, and more importantly for this blog, I’m getting time to crack on with construction of my relay computer. The current milestone I’m working towards is finishing off the Program Counter, Incrementer and Memory cards (which are all well under way now) so that I can load a simple program in to the computer and set it running without any further intervention.</description>
     </item>
-    
     <item>
       <title>More Laser Cut Parts</title>
       <link>https://relaycomputer.co.uk/posts/2017/08/more-laser-cut-parts/</link>
       <pubDate>Sun, 06 Aug 2017 13:13:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/08/more-laser-cut-parts/</guid>
-      <description>I&amp;rsquo;ve nearly got the design for the memory cards done and ready to share but once that&amp;rsquo;s out the way it&amp;rsquo;ll be time to get on with some construction again. With that in mind I cracked out the credit cards and got buying more relays plus some other bits and bobs and whilst I was in a spending mood I decided it was high time to treat the computer to some more laser cut parts.
-</description>
+      <description>I’ve nearly got the design for the memory cards done and ready to share but once that’s out the way it’ll be time to get on with some construction again. With that in mind I cracked out the credit cards and got buying more relays plus some other bits and bobs and whilst I was in a spending mood I decided it was high time to treat the computer to some more laser cut parts.</description>
     </item>
-    
     <item>
       <title>ALU &amp; Registers A-D Test with new Display Cards</title>
       <link>https://relaycomputer.co.uk/posts/2014/08/alu-registers-d-test-with-new-display/</link>
       <pubDate>Tue, 19 Aug 2014 18:22:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/08/alu-registers-d-test-with-new-display/</guid>
-      <description>Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&amp;rsquo;s time to fit them to the upper enclosure. With that done the upper enclosure can then be connected to the lower enclosure and everything can be given a test together.
-The upper enclosure is constructed very similarly to the lower enclosure &amp;hellip; as before, out of aluminium profile. Here&amp;rsquo;s a Sketchup image of how the upper enclosure should look when sat on top of the lower enclosure:
-</description>
+      <description>Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it’s time to fit them to the upper enclosure. With that done the upper enclosure can then be connected to the lower enclosure and everything can be given a test together.
+The upper enclosure is constructed very similarly to the lower enclosure … as before, out of aluminium profile. Here’s a Sketchup image of how the upper enclosure should look when sat on top of the lower enclosure:</description>
     </item>
-    
     <item>
       <title>Enclosure Update: Magic Pen</title>
       <link>https://relaycomputer.co.uk/posts/2014/05/enclosure-update-magic-pen/</link>
       <pubDate>Sat, 10 May 2014 09:46:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/05/enclosure-update-magic-pen/</guid>
-      <description>Just need to quickly share my experience with what I&amp;rsquo;m dubbing the &amp;lsquo;magic pen&amp;rsquo; before I put up the B/C register schematics (yup, they&amp;rsquo;re finally ready). If you&amp;rsquo;ve read my recent posts you&amp;rsquo;ll know I ordered in some laser cut acrylic parts for my enclosure including one part which is engraved as well as cut for the switch panel. Close up it looks like this:
-Only problem now is I&amp;rsquo;ve got tons of cleaning fluid left and a pen mostly full of paint so I&amp;rsquo;m off now to find things around the house to draw on.
-</description>
+      <description>Just need to quickly share my experience with what I’m dubbing the ‘magic pen’ before I put up the B/C register schematics (yup, they’re finally ready). If you’ve read my recent posts you’ll know I ordered in some laser cut acrylic parts for my enclosure including one part which is engraved as well as cut for the switch panel. Close up it looks like this:
+Only problem now is I’ve got tons of cleaning fluid left and a pen mostly full of paint so I’m off now to find things around the house to draw on.</description>
     </item>
-    
     <item>
       <title>Enclosure Update: Fitting of Laser Cut Parts</title>
       <link>https://relaycomputer.co.uk/posts/2014/05/enclosure-update-fitting-of-laser-cut/</link>
       <pubDate>Mon, 05 May 2014 11:03:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/05/enclosure-update-fitting-of-laser-cut/</guid>
-      <description>I was going to spread the fitting of the laser cut parts to the lower enclosure over a couple of evenings but in a fit of geeky excitement I ended up doing it all in one evening. Fortunately I didn&amp;rsquo;t damage anything in my &amp;lsquo;rush&amp;rsquo; (although I had to accept a few niggles) and it went something along this lines of this &amp;hellip;
-First job was to fit the panels in to the front and rear door frames. As is often the case with these things I had this picture in my head of the panels popping straight in the frames with no fuss &amp;hellip; a picture which always seems to differ substantially with the real life experience. To say this thing was a tight fit is an understatement. I started off with a U shaped frame and the idea was to slide the panel in from the top but as the panel moves further down it builds up more and more friction resistance in the plastic panel holder strips. In the end I took the frame apart and built it back up again around the panel but even with this it certainly took some considerable arm strength to persuade it to go together. After much perspiration the panel was in and looks like this:
-</description>
+      <description>I was going to spread the fitting of the laser cut parts to the lower enclosure over a couple of evenings but in a fit of geeky excitement I ended up doing it all in one evening. Fortunately I didn’t damage anything in my ‘rush’ (although I had to accept a few niggles) and it went something along this lines of this …
+First job was to fit the panels in to the front and rear door frames. As is often the case with these things I had this picture in my head of the panels popping straight in the frames with no fuss … a picture which always seems to differ substantially with the real life experience. To say this thing was a tight fit is an understatement. I started off with a U shaped frame and the idea was to slide the panel in from the top but as the panel moves further down it builds up more and more friction resistance in the plastic panel holder strips. In the end I took the frame apart and built it back up again around the panel but even with this it certainly took some considerable arm strength to persuade it to go together. After much perspiration the panel was in and looks like this:</description>
     </item>
-    
     <item>
       <title>Enclosure Update: Laser Cut Parts Arrived</title>
       <link>https://relaycomputer.co.uk/posts/2014/05/enclosure-update-laser-cut-parts-arrived/</link>
       <pubDate>Sat, 03 May 2014 09:49:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/05/enclosure-update-laser-cut-parts-arrived/</guid>
-      <description>I&amp;rsquo;ve been looking forward to this moment for nearly a month &amp;hellip; the laser cut parts I ordered to move my enclosure construction forward have finally arrived.
-The picture on the left is viewing the part from the top side and the one on the right from the underside. The part was cut with the top side facing up and so the bottom side has picked up plenty of burn marks which is reasonably inevitable when cutting plywood with a laser. The odd hexagon shaped burns on the underside come from, I think, the cutting bed which has a lattice structure with this shape. All of these burn marks can be carefully sanded away but I actually quite like them &amp;hellip; a mark of its provenance if you like.
-</description>
+      <description>I’ve been looking forward to this moment for nearly a month … the laser cut parts I ordered to move my enclosure construction forward have finally arrived.
+The picture on the left is viewing the part from the top side and the one on the right from the underside. The part was cut with the top side facing up and so the bottom side has picked up plenty of burn marks which is reasonably inevitable when cutting plywood with a laser. The odd hexagon shaped burns on the underside come from, I think, the cutting bed which has a lattice structure with this shape. All of these burn marks can be carefully sanded away but I actually quite like them … a mark of its provenance if you like.</description>
     </item>
-    
     <item>
       <title>Enclosure Update: Laser Cutting</title>
       <link>https://relaycomputer.co.uk/posts/2014/04/enclosure-update-laser-cutting/</link>
       <pubDate>Thu, 10 Apr 2014 19:58:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/04/enclosure-update-laser-cutting/</guid>
-      <description>I couldn&amp;rsquo;t resist it any longer &amp;hellip; I&amp;rsquo;ve ordered the laser cut parts for the case doors, sides and bay floor/ceilings. I did say I&amp;rsquo;d wait for my chosen laser cut website to put out a free delivery offer but I ended up crumbling under the weight of my own impatience. Needless to say within 24 hours of placing my order they announced a free delivery offer for the end of April &amp;hellip; c&amp;rsquo;est la vie and all that jazz.
-</description>
+      <description>I couldn’t resist it any longer … I’ve ordered the laser cut parts for the case doors, sides and bay floor/ceilings. I did say I’d wait for my chosen laser cut website to put out a free delivery offer but I ended up crumbling under the weight of my own impatience. Needless to say within 24 hours of placing my order they announced a free delivery offer for the end of April … c’est la vie and all that jazz.</description>
     </item>
-    
     <item>
       <title>Enclosure Initial Construction</title>
       <link>https://relaycomputer.co.uk/posts/2014/03/enclosure-initial-construction/</link>
       <pubDate>Sat, 22 Mar 2014 00:08:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/03/enclosure-initial-construction/</guid>
-      <description>I&amp;rsquo;ve been promising this post for quite a while now &amp;hellip; an update on how the enclosure construction is going. Well, it&amp;rsquo;s very good thanks :)
-Firstly, here&amp;rsquo;s a quick reminder of the SketchUp design showing how the enclosure should look:
-&amp;hellip; and here&amp;rsquo;s how it looks, so far, in reality &amp;hellip;
-This is the main frame of the card enclosure and you can see it forms four compartments that will hold five cards each plus backplanes. At the moment the front and back doors are incomplete as they&amp;rsquo;re waiting for the perspex/acrylic sheet (3mm smoked transparent) to be cut. Likewise the perspex that fits in the sides of the main frame are also pending. Because of this the frame as it appears above isn&amp;rsquo;t fully screwed together yet &amp;hellip; the back bars (which kind of form a shape like two &amp;lsquo;E&amp;rsquo;s back to back) are just held in by friction on the corners. Once the side perspex panels are in then everything can be screwed together and a very rigid strong frame results. All the joints are held together with self tapping torx screws which are driven into the end of a piece of profile and then the screw head rests in the slot of a second piece of profile and is tightened with a screw driver via a drilled access hole.
-</description>
+      <description>I’ve been promising this post for quite a while now … an update on how the enclosure construction is going. Well, it’s very good thanks :)
+Firstly, here’s a quick reminder of the SketchUp design showing how the enclosure should look:
+… and here’s how it looks, so far, in reality …
+This is the main frame of the card enclosure and you can see it forms four compartments that will hold five cards each plus backplanes. At the moment the front and back doors are incomplete as they’re waiting for the perspex/acrylic sheet (3mm smoked transparent) to be cut. Likewise the perspex that fits in the sides of the main frame are also pending. Because of this the frame as it appears above isn’t fully screwed together yet … the back bars (which kind of form a shape like two ‘E’s back to back) are just held in by friction on the corners. Once the side perspex panels are in then everything can be screwed together and a very rigid strong frame results. All the joints are held together with self tapping torx screws which are driven into the end of a piece of profile and then the screw head rests in the slot of a second piece of profile and is tightened with a screw driver via a drilled access hole.</description>
     </item>
-    
     <item>
       <title>Enclosure Disclosure</title>
       <link>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</link>
       <pubDate>Sat, 01 Mar 2014 10:55:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</guid>
       <description>Sorry, I will try to rain in the terrible punning post titles.
-This time I wanted to share the thoughts and ideas I&amp;rsquo;ve been having around building a case to hold my computer when it&amp;rsquo;s eventually complete. I wanted to use a material that would be easy to handle and work with but also one that would produce a nice looking result. I was initially drawn to using wood or possibly even laser cut plywood but in the end I settled on aluminium profile as its sturdy, easy to assemble and, I think, looks really great. In addition to this it&amp;rsquo;s available in a large variety of sizes, shapes and there&amp;rsquo;s plenty of fixtures and fittings available for it.
-</description>
+This time I wanted to share the thoughts and ideas I’ve been having around building a case to hold my computer when it’s eventually complete. I wanted to use a material that would be easy to handle and work with but also one that would produce a nice looking result. I was initially drawn to using wood or possibly even laser cut plywood but in the end I settled on aluminium profile as its sturdy, easy to assemble and, I think, looks really great. In addition to this it’s available in a large variety of sizes, shapes and there’s plenty of fixtures and fittings available for it.</description>
     </item>
-    
     <item>
       <title>Sketchy Diversion</title>
       <link>https://relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</link>
       <pubDate>Tue, 04 Feb 2014 19:10:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</guid>
-      <description>I&amp;rsquo;m taking a break &amp;hellip; just a short one.
-In between all the bouts of wire wrapping for the ALU arithmetic card I&amp;rsquo;m starting to think about enclosure options for the computer when it&amp;rsquo;s finally (finally!) finished. I&amp;rsquo;ve been trawling the internet for inspiration and I&amp;rsquo;m starting to get a feel for the sort of materials and finish I want and I&amp;rsquo;ve even been getting some prototype laser etching done (more on this in a later post). One thing I&amp;rsquo;m finding as I&amp;rsquo;m going along though is that I&amp;rsquo;m trying to picture things in my head and there&amp;rsquo;s a lot of guesswork going on. What I need is to employ some CAD so I can make sure things fit together before really fitting them together.
-</description>
+      <description>I’m taking a break … just a short one.
+In between all the bouts of wire wrapping for the ALU arithmetic card I’m starting to think about enclosure options for the computer when it’s finally (finally!) finished. I’ve been trawling the internet for inspiration and I’m starting to get a feel for the sort of materials and finish I want and I’ve even been getting some prototype laser etching done (more on this in a later post). One thing I’m finding as I’m going along though is that I’m trying to picture things in my head and there’s a lot of guesswork going on. What I need is to employ some CAD so I can make sure things fit together before really fitting them together.</description>
     </item>
-    
   </channel>
 </rss>

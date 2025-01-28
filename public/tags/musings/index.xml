@@ -4,116 +4,87 @@
     <title>Musings on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/musings/</link>
     <description>Recent content in Musings on Relay Computer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 02 May 2022 11:00:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/musings/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 11:00:00 +0000</lastBuildDate>
+    <atom:link href="https://relaycomputer.co.uk/tags/musings/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intermission</title>
       <link>https://relaycomputer.co.uk/posts/2022/05/intermission/</link>
       <pubDate>Mon, 02 May 2022 11:00:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2022/05/intermission/</guid>
       <description>So, is fair to say that things have been a bit quiet around here of late … and if you’ve been following my YouTube channel I do hope you haven’t been holding your breath for the next episode of ‘making a relay computer clock’ as the last episode came out just over a year ago!
-What’s been going on then? Well first of all I’m fine (and actually writing this on one of the lazier days of a holiday in Crete … so I’m especially ‘fine’ and relaxed) but like most people the Covid lockdown has had its impact. My day job was always quite busy but over the last couple of years it’s been particularly busy and then combined with not having holidays to recharge I’d frankly lost all interest (and time) for my hobbies. Normality ultimately returns though (even if it&amp;rsquo;s a &amp;rsquo;new normal&amp;rsquo;) and so does my appetite for hobbies.
-</description>
+What’s been going on then? Well first of all I’m fine (and actually writing this on one of the lazier days of a holiday in Crete … so I’m especially ‘fine’ and relaxed) but like most people the Covid lockdown has had its impact. My day job was always quite busy but over the last couple of years it’s been particularly busy and then combined with not having holidays to recharge I’d frankly lost all interest (and time) for my hobbies. Normality ultimately returns though (even if it’s a ’new normal’) and so does my appetite for hobbies.</description>
     </item>
-    
     <item>
       <title>A change of approach</title>
       <link>https://relaycomputer.co.uk/posts/2019/01/change-of-approach/</link>
       <pubDate>Mon, 14 Jan 2019 11:00:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2019/01/change-of-approach/</guid>
-      <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&amp;rsquo;ve followed my blog (over the years) you&amp;rsquo;ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter. Each register card follows the same construction pattern: solder down LEDs, solder down relay sockets, solder down wire wrap posts, solder ground and power lines, wire wrap, wire wrap, wire wrap, wire wrap, etc, etc, insert relays in sockets. Tedious, tedious, tedious.
-</description>
+      <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you’ve followed my blog (over the years) you’ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter. Each register card follows the same construction pattern: solder down LEDs, solder down relay sockets, solder down wire wrap posts, solder ground and power lines, wire wrap, wire wrap, wire wrap, wire wrap, etc, etc, insert relays in sockets. Tedious, tedious, tedious.</description>
     </item>
-    
     <item>
       <title>Procrastination is the thief of time</title>
       <link>https://relaycomputer.co.uk/posts/2019/01/procrastination-is/</link>
       <pubDate>Sun, 06 Jan 2019 11:00:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2019/01/procrastination-is/</guid>
-      <description>&amp;hellip; or so the proverb goes &amp;hellip; and it&amp;rsquo;s fair to say I&amp;rsquo;ve been procrastinating quite a bit recently.
-I typically take a summer break from working on the relay computer so that I can service all the other hobbies I have on the go but also to enjoy the brief warm weather we get here in the UK. Usually come autumn time I&amp;rsquo;m back building, blogging and making videos but this year &amp;lsquo;summer&amp;rsquo; has hung on &amp;hellip; through to the end of the year no less &amp;hellip; and it&amp;rsquo;s because I&amp;rsquo;m intentionally/unintentionally putting off getting started. What&amp;rsquo;s to blame? Other than my own lack of self control? &amp;hellip; it&amp;rsquo;s those damn registers. Let me try and explain &amp;hellip;
-</description>
+      <description>… or so the proverb goes … and it’s fair to say I’ve been procrastinating quite a bit recently.
+I typically take a summer break from working on the relay computer so that I can service all the other hobbies I have on the go but also to enjoy the brief warm weather we get here in the UK. Usually come autumn time I’m back building, blogging and making videos but this year ‘summer’ has hung on … through to the end of the year no less … and it’s because I’m intentionally/unintentionally putting off getting started. What’s to blame? Other than my own lack of self control? … it’s those damn registers. Let me try and explain …</description>
     </item>
-    
     <item>
       <title>The problem with memory</title>
       <link>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</link>
       <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</guid>
-      <description>It&amp;rsquo;s time, at last, to start looking at the design for the computer&amp;rsquo;s memory and this is a bit of a game changer as it&amp;rsquo;s the final part of the jigsaw that lets the computer run a program. However, it&amp;rsquo;s also the part of the computer that leaves me in a bit of a quandary.
-The problem with memory is that typically you need quite a lot of it and that&amp;rsquo;s something that doesn&amp;rsquo;t come easy with relays. In a way the registers already present in the computer are a kind of memory &amp;hellip; they store a single byte of data. So, effectively you can get two bytes worth of storage on one of the usual computer cards. You can maybe see where this is going.
-</description>
+      <description>It’s time, at last, to start looking at the design for the computer’s memory and this is a bit of a game changer as it’s the final part of the jigsaw that lets the computer run a program. However, it’s also the part of the computer that leaves me in a bit of a quandary.
+The problem with memory is that typically you need quite a lot of it and that’s something that doesn’t come easy with relays. In a way the registers already present in the computer are a kind of memory … they store a single byte of data. So, effectively you can get two bytes worth of storage on one of the usual computer cards. You can maybe see where this is going.</description>
     </item>
-    
     <item>
       <title>Enclosure Disclosure</title>
       <link>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</link>
       <pubDate>Sat, 01 Mar 2014 10:55:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</guid>
       <description>Sorry, I will try to rain in the terrible punning post titles.
-This time I wanted to share the thoughts and ideas I&amp;rsquo;ve been having around building a case to hold my computer when it&amp;rsquo;s eventually complete. I wanted to use a material that would be easy to handle and work with but also one that would produce a nice looking result. I was initially drawn to using wood or possibly even laser cut plywood but in the end I settled on aluminium profile as its sturdy, easy to assemble and, I think, looks really great. In addition to this it&amp;rsquo;s available in a large variety of sizes, shapes and there&amp;rsquo;s plenty of fixtures and fittings available for it.
-</description>
+This time I wanted to share the thoughts and ideas I’ve been having around building a case to hold my computer when it’s eventually complete. I wanted to use a material that would be easy to handle and work with but also one that would produce a nice looking result. I was initially drawn to using wood or possibly even laser cut plywood but in the end I settled on aluminium profile as its sturdy, easy to assemble and, I think, looks really great. In addition to this it’s available in a large variety of sizes, shapes and there’s plenty of fixtures and fittings available for it.</description>
     </item>
-    
     <item>
       <title>Sketchy Diversion</title>
       <link>https://relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</link>
       <pubDate>Tue, 04 Feb 2014 19:10:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</guid>
-      <description>I&amp;rsquo;m taking a break &amp;hellip; just a short one.
-In between all the bouts of wire wrapping for the ALU arithmetic card I&amp;rsquo;m starting to think about enclosure options for the computer when it&amp;rsquo;s finally (finally!) finished. I&amp;rsquo;ve been trawling the internet for inspiration and I&amp;rsquo;m starting to get a feel for the sort of materials and finish I want and I&amp;rsquo;ve even been getting some prototype laser etching done (more on this in a later post). One thing I&amp;rsquo;m finding as I&amp;rsquo;m going along though is that I&amp;rsquo;m trying to picture things in my head and there&amp;rsquo;s a lot of guesswork going on. What I need is to employ some CAD so I can make sure things fit together before really fitting them together.
-</description>
+      <description>I’m taking a break … just a short one.
+In between all the bouts of wire wrapping for the ALU arithmetic card I’m starting to think about enclosure options for the computer when it’s finally (finally!) finished. I’ve been trawling the internet for inspiration and I’m starting to get a feel for the sort of materials and finish I want and I’ve even been getting some prototype laser etching done (more on this in a later post). One thing I’m finding as I’m going along though is that I’m trying to picture things in my head and there’s a lot of guesswork going on. What I need is to employ some CAD so I can make sure things fit together before really fitting them together.</description>
     </item>
-    
     <item>
       <title>Relay Rumination</title>
       <link>https://relaycomputer.co.uk/posts/2013/11/relay-rumination/</link>
       <pubDate>Sun, 10 Nov 2013 23:16:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2013/11/relay-rumination/</guid>
-      <description>If there&amp;rsquo;s one thing a relay computer needs a lot of it&amp;rsquo;s &amp;hellip; erm &amp;hellip; relays (of course) &amp;hellip; which happens to be a bit unfortunate as relays, compared to the other parts of the computer, are rather expensive. The Dr Harry Porter Relay Computer (which my computer is based on) uses 415 x 4PDT (4 pole double toggle) relays in total. A comparable part is the Omron MY4-DC12(S) relay and a quick check online with Mouser (other suppliers are available ;) prices them around £3.20 a piece (excluding UK VAT @ 20%) &amp;hellip; that&amp;rsquo;s just under £1600 including VAT which is a bit eye watering for a hobby project (the Harry Porter computer came to just over $5000 in total for everything). Also of note is that the MY4 relays are sized 28 x 21.5 x 36mm &amp;hellip; not huge but big enough when you&amp;rsquo;ve got 415 of them wired together (again, see the Harry Porter computer to see exactly how big these machines can be). Here&amp;rsquo;s a scaled diagram of the MY4 relay showing the coil and four sets of double toggle contacts.
-</description>
+      <description>If there’s one thing a relay computer needs a lot of it’s … erm … relays (of course) … which happens to be a bit unfortunate as relays, compared to the other parts of the computer, are rather expensive. The Dr Harry Porter Relay Computer (which my computer is based on) uses 415 x 4PDT (4 pole double toggle) relays in total. A comparable part is the Omron MY4-DC12(S) relay and a quick check online with Mouser (other suppliers are available ;) prices them around £3.20 a piece (excluding UK VAT @ 20%) … that’s just under £1600 including VAT which is a bit eye watering for a hobby project (the Harry Porter computer came to just over $5000 in total for everything). Also of note is that the MY4 relays are sized 28 x 21.5 x 36mm … not huge but big enough when you’ve got 415 of them wired together (again, see the Harry Porter computer to see exactly how big these machines can be). Here’s a scaled diagram of the MY4 relay showing the coil and four sets of double toggle contacts.</description>
     </item>
-    
     <item>
       <title>The three Rs</title>
       <link>https://relaycomputer.co.uk/posts/2013/11/the-three-rs/</link>
       <pubDate>Sun, 03 Nov 2013 09:35:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2013/11/the-three-rs/</guid>
-      <description>It strikes me that when embarking on a project like this there&amp;rsquo;s three things that are of uttermost importance, the three Rs if you will:
+      <description>It strikes me that when embarking on a project like this there’s three things that are of uttermost importance, the three Rs if you will:
 Research, research and research.
-There&amp;rsquo;s a lot to be said for experimentation and working things out but the human race wouldn&amp;rsquo;t have got very far it didn&amp;rsquo;t share knowledge and learn from each others mistakes. So naturally, if I want to build my own computer from scratch I should start out by doing lots of reading about how old computers were built.
-</description>
+There’s a lot to be said for experimentation and working things out but the human race wouldn’t have got very far it didn’t share knowledge and learn from each others mistakes. So naturally, if I want to build my own computer from scratch I should start out by doing lots of reading about how old computers were built.</description>
     </item>
-    
     <item>
       <title>Why?</title>
       <link>https://relaycomputer.co.uk/posts/2013/11/why/</link>
       <pubDate>Sat, 02 Nov 2013 10:46:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2013/11/why/</guid>
-      <description>Whenever I tell people I&amp;rsquo;m building a relay computer the overwhelming response is &amp;hellip; why on Earth would you want to do that?! Or alternatively, as a work colleague delicately put it to me yesterday, if you go to the front of your house there&amp;rsquo;s a big block of wood that opens — it&amp;rsquo;s called a door — if you go through it you&amp;rsquo;ll discover pubs and things. They&amp;rsquo;ve all got a point though, this project will be very time consuming and I&amp;rsquo;ve not particularly got a use in mind for the resulting jumble of wires. In fact it&amp;rsquo;s difficult to think of a real use for it as I&amp;rsquo;ll be left with something that could be outperformed by a pocket calculator (not a scientific calculator mind, more the kind you might find in a Christmas cracker). So why would I invest lots of time and effort in to making a relay computer? Well, as they say (rather tritely) it&amp;rsquo;s the journey not the destination.
-</description>
+      <description>Whenever I tell people I’m building a relay computer the overwhelming response is … why on Earth would you want to do that?! Or alternatively, as a work colleague delicately put it to me yesterday, if you go to the front of your house there’s a big block of wood that opens — it’s called a door — if you go through it you’ll discover pubs and things. They’ve all got a point though, this project will be very time consuming and I’ve not particularly got a use in mind for the resulting jumble of wires. In fact it’s difficult to think of a real use for it as I’ll be left with something that could be outperformed by a pocket calculator (not a scientific calculator mind, more the kind you might find in a Christmas cracker). So why would I invest lots of time and effort in to making a relay computer? Well, as they say (rather tritely) it’s the journey not the destination.</description>
     </item>
-    
     <item>
       <title>It begins</title>
       <link>https://relaycomputer.co.uk/posts/2013/10/it-begins/</link>
       <pubDate>Thu, 31 Oct 2013 22:21:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2013/10/it-begins/</guid>
-      <description>&amp;hellip; although being as I&amp;rsquo;m already a couple of months in on my little project then perhaps that should be &amp;lsquo;it began&amp;rsquo;.
-If I do see this project all the way through to the end, and I&amp;rsquo;ve plenty of half finished projects littering the place by the way, then I&amp;rsquo;ll have created an 8 bit computer from scratch. No, not a PC assembled from off the shelf parts — a CPU, motherboard, memory, power supply, case, etc — but made out of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.
-</description>
+      <description>… although being as I’m already a couple of months in on my little project then perhaps that should be ‘it began’.
+If I do see this project all the way through to the end, and I’ve plenty of half finished projects littering the place by the way, then I’ll have created an 8 bit computer from scratch. No, not a PC assembled from off the shelf parts — a CPU, motherboard, memory, power supply, case, etc — but made out of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.</description>
     </item>
-    
   </channel>
 </rss>

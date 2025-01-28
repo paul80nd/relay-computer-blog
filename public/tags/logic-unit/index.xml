@@ -4,19 +4,17 @@
     <title>Logic-Unit on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/logic-unit/</link>
     <description>Recent content in Logic-Unit on Relay Computer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 08 Dec 2013 09:57:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/logic-unit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Dec 2013 09:57:00 +0000</lastBuildDate>
+    <atom:link href="https://relaycomputer.co.uk/tags/logic-unit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ALU Construction: Logic Card Header Pins</title>
       <link>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-header-pins/</link>
       <pubDate>Sun, 08 Dec 2013 09:57:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-header-pins/</guid>
-      <description>Following on from the successful construction of the first bit on the ALU logic card in my last post it&amp;rsquo;s now time to start putting together the other 7 bits and the gating circuits (to place one of the logic results on to the data bus). First up is soldering down all the header pins that I&amp;rsquo;ll wire wrap to.
-This part of the construction is certainly repetitive and it&amp;rsquo;s easy to make mistakes &amp;hellip; and actually I made a couple within placing down the first few headers. Suffice to say that it&amp;rsquo;s a lot easier to solder multi-leg components than it is to unsolder them. Here&amp;rsquo;s the result of this evenings work:
-</description>
+      <description>Following on from the successful construction of the first bit on the ALU logic card in my last post it’s now time to start putting together the other 7 bits and the gating circuits (to place one of the logic results on to the data bus). First up is soldering down all the header pins that I’ll wire wrap to.
+This part of the construction is certainly repetitive and it’s easy to make mistakes … and actually I made a couple within placing down the first few headers. Suffice to say that it’s a lot easier to solder multi-leg components than it is to unsolder them. Here’s the result of this evenings work:</description>
     </item>
-    
   </channel>
 </rss>

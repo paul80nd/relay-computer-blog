@@ -4,76 +4,59 @@
     <title>Memory on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/memory/</link>
     <description>Recent content in Memory on Relay Computer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 30 Nov 2017 21:15:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Nov 2017 21:15:00 +0000</lastBuildDate>
+    <atom:link href="https://relaycomputer.co.uk/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Memory Test</title>
       <link>https://relaycomputer.co.uk/posts/2017/11/memory-test/</link>
       <pubDate>Thu, 30 Nov 2017 21:15:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/11/memory-test/</guid>
-      <description>I&amp;rsquo;ve covered the construction of the upper and lower memory cards in my last two posts &amp;hellip; it&amp;rsquo;s now time to bring those two cards together to form the memory unit proper and give it all a test.
-Here&amp;rsquo;s the upper card (in close up and at a rakish angle) &amp;hellip;
-&amp;hellip; and here&amp;rsquo;s the lower memory card (at an equally rakish angle) &amp;hellip;
-</description>
+      <description>I’ve covered the construction of the upper and lower memory cards in my last two posts … it’s now time to bring those two cards together to form the memory unit proper and give it all a test.
+Here’s the upper card (in close up and at a rakish angle) …
+… and here’s the lower memory card (at an equally rakish angle) …</description>
     </item>
-    
     <item>
       <title>Memory Construction (Part 2 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-2-of-2/</link>
       <pubDate>Sat, 25 Nov 2017 16:52:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-2-of-2/</guid>
       <description>In my last post I made a start on the memory unit construction with the lower memory card. The lower card centres around the memory IC which runs at 5V. The upper memory card picks up the task of converting the data and address bus coming in from the rest of the computer (running at 12V) to the 5V needed by the memory IC.
-The LEDs and backplane connectors were soldered down in my last post so we can jump straight to adding the card interconnects which pass the local address/data busses to the lower card:
-</description>
+The LEDs and backplane connectors were soldered down in my last post so we can jump straight to adding the card interconnects which pass the local address/data busses to the lower card:</description>
     </item>
-    
     <item>
       <title>Memory Construction (Part 1 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-1-of-2/</link>
       <pubDate>Sun, 19 Nov 2017 14:53:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/11/memory-construction-part-1-of-2/</guid>
-      <description>It&amp;rsquo;s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than &amp;lsquo;boring old registers&amp;rsquo; and so I&amp;rsquo;ll split it over two posts. Let&amp;rsquo;s dive in with the easy part - soldering down the LEDs and backplane connectors:
-For the lower memory card there are 16 LEDs for the 16-bit address bus and 8 LEDs for the 8-bit data bus. Both of these busses are &amp;rsquo;local&amp;rsquo; to the memory unit and operate on &#43;5V and ground as covered in my post on the memory unit design. Unfortunately I&amp;rsquo;ve messed up here a bit as I&amp;rsquo;ve merrily gone and soldered down the same LEDs I use on all the other cards &amp;hellip; the 12V ones. Although these LEDs will work with 5V they won&amp;rsquo;t be as bright due to the internal resistor in each being rated for 12V operation. A bit of a silly mistake to make but it&amp;rsquo;s done and I&amp;rsquo;m not so upset by it that it&amp;rsquo;s worth changing them over &amp;hellip; I only realised when I tested the card and noticed the LEDs weren&amp;rsquo;t as bright as usual (doh).
-</description>
+      <description>It’s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than ‘boring old registers’ and so I’ll split it over two posts. Let’s dive in with the easy part - soldering down the LEDs and backplane connectors:
+For the lower memory card there are 16 LEDs for the 16-bit address bus and 8 LEDs for the 8-bit data bus. Both of these busses are ’local’ to the memory unit and operate on &#43;5V and ground as covered in my post on the memory unit design. Unfortunately I’ve messed up here a bit as I’ve merrily gone and soldered down the same LEDs I use on all the other cards … the 12V ones. Although these LEDs will work with 5V they won’t be as bright due to the internal resistor in each being rated for 12V operation. A bit of a silly mistake to make but it’s done and I’m not so upset by it that it’s worth changing them over … I only realised when I tested the card and noticed the LEDs weren’t as bright as usual (doh).</description>
     </item>
-    
     <item>
       <title>Memory Design (Part 2 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/09/memory-design-part-2-of-2/</link>
       <pubDate>Wed, 06 Sep 2017 22:55:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/09/memory-design-part-2-of-2/</guid>
-      <description>In my last post I started the design for the computer&amp;rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.
-Let&amp;rsquo;s dive straight in by bringing up the board interconnects from the lower card:
-Memory Card A with initial interconnects (larger) The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0. The third column brings up the outbound data bus which will sink 12V to ground for a logic 1 but holds at 12V for a logic 0 (effectively an inverse of what you&amp;rsquo;d expect). The fourth column brings up the inbound data bus which takes 5V for 1 and ground for 0 along with the write enable (WE) control line and output enable (OE) line which work in reverse (5V for disabled and ground for enabled). The last three connects to the right are power at 12V, ground for 5V and finally 5V. As you can probably guess there&amp;rsquo;s going to need to be quite a lot of &amp;rsquo;translation&amp;rsquo; logic on this card.
-</description>
+      <description>In my last post I started the design for the computer’s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.
+Let’s dive straight in by bringing up the board interconnects from the lower card:
+Memory Card A with initial interconnects (larger) The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0. The third column brings up the outbound data bus which will sink 12V to ground for a logic 1 but holds at 12V for a logic 0 (effectively an inverse of what you’d expect). The fourth column brings up the inbound data bus which takes 5V for 1 and ground for 0 along with the write enable (WE) control line and output enable (OE) line which work in reverse (5V for disabled and ground for enabled). The last three connects to the right are power at 12V, ground for 5V and finally 5V. As you can probably guess there’s going to need to be quite a lot of ’translation’ logic on this card.</description>
     </item>
-    
     <item>
       <title>Memory Design (Part 1 of 2)</title>
       <link>https://relaycomputer.co.uk/posts/2017/09/memory-design-part-1-of-2/</link>
       <pubDate>Sun, 03 Sep 2017 22:35:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/09/memory-design-part-1-of-2/</guid>
-      <description>In my last post I explained my decision to use a &amp;lsquo;modern&amp;rsquo; memory chip in my relay computer &amp;hellip; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &amp;lsquo;complexities&amp;rsquo; a bit.
-The memory chip I&amp;rsquo;m using is from the &amp;lsquo;62&amp;rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &amp;hellip; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus. Buying chips can be a bit of a &amp;rsquo;needle in a haystack&amp;rsquo; when you&amp;rsquo;re buying through one of the larger electronics suppliers (I use Mouser). Knowing the chip number isn&amp;rsquo;t enough to actually buy one and doing a search on Mouser for &amp;lsquo;62256 memory&amp;rsquo; narrows it down to 61 matches. I can narrow it down further as I know I need through-hole mounting (not surface mount) and that gets me to 6 matches. Next choice is access speed &amp;hellip; 55ns or 70ns. This is actually a bit of a mute point for this computer as it&amp;rsquo;ll get nowhere near that speed (the relays take around 5ms to switch) so lets ignore that one. So faced with 6 choices it comes down to price and what&amp;rsquo;s in stock. In the end I went for a mid-priced chip from Cypress Semiconductor &amp;hellip; a CY62256NLL-70PXC for £2.77 (&amp;lsquo;cheap as chips&amp;rsquo; &amp;hellip; literally).
-</description>
+      <description>In my last post I explained my decision to use a ‘modern’ memory chip in my relay computer … I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those ‘complexities’ a bit.
+The memory chip I’m using is from the ‘62’ family of CMOS 256Kbit (32K x 8) Static RAM … effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus. Buying chips can be a bit of a ’needle in a haystack’ when you’re buying through one of the larger electronics suppliers (I use Mouser). Knowing the chip number isn’t enough to actually buy one and doing a search on Mouser for ‘62256 memory’ narrows it down to 61 matches. I can narrow it down further as I know I need through-hole mounting (not surface mount) and that gets me to 6 matches. Next choice is access speed … 55ns or 70ns. This is actually a bit of a mute point for this computer as it’ll get nowhere near that speed (the relays take around 5ms to switch) so lets ignore that one. So faced with 6 choices it comes down to price and what’s in stock. In the end I went for a mid-priced chip from Cypress Semiconductor … a CY62256NLL-70PXC for £2.77 (‘cheap as chips’ … literally).</description>
     </item>
-    
     <item>
       <title>The problem with memory</title>
       <link>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</link>
       <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</guid>
-      <description>It&amp;rsquo;s time, at last, to start looking at the design for the computer&amp;rsquo;s memory and this is a bit of a game changer as it&amp;rsquo;s the final part of the jigsaw that lets the computer run a program. However, it&amp;rsquo;s also the part of the computer that leaves me in a bit of a quandary.
-The problem with memory is that typically you need quite a lot of it and that&amp;rsquo;s something that doesn&amp;rsquo;t come easy with relays. In a way the registers already present in the computer are a kind of memory &amp;hellip; they store a single byte of data. So, effectively you can get two bytes worth of storage on one of the usual computer cards. You can maybe see where this is going.
-</description>
+      <description>It’s time, at last, to start looking at the design for the computer’s memory and this is a bit of a game changer as it’s the final part of the jigsaw that lets the computer run a program. However, it’s also the part of the computer that leaves me in a bit of a quandary.
+The problem with memory is that typically you need quite a lot of it and that’s something that doesn’t come easy with relays. In a way the registers already present in the computer are a kind of memory … they store a single byte of data. So, effectively you can get two bytes worth of storage on one of the usual computer cards. You can maybe see where this is going.</description>
     </item>
-    
   </channel>
 </rss>

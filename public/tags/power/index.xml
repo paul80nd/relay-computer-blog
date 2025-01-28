@@ -4,18 +4,16 @@
     <title>Power on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/power/</link>
     <description>Recent content in Power on Relay Computer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 29 Oct 2017 11:01:00 +0000</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/power/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Oct 2017 11:01:00 +0000</lastBuildDate>
+    <atom:link href="https://relaycomputer.co.uk/tags/power/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Miscellany Special: Power Distribution</title>
       <link>https://relaycomputer.co.uk/posts/2017/10/miscellany-special-power-distribution/</link>
       <pubDate>Sun, 29 Oct 2017 11:01:00 +0000</pubDate>
-      
       <guid>https://relaycomputer.co.uk/posts/2017/10/miscellany-special-power-distribution/</guid>
-      <description>Having somehow forgotten to take time off work I&amp;rsquo;m now playing &amp;lsquo;annual leave catch up&amp;rsquo; which means lots of four day weeks but also, and more importantly for this blog, I&amp;rsquo;m getting time to crack on with construction of my relay computer. The current milestone I&amp;rsquo;m working towards is finishing off the Program Counter, Incrementer and Memory cards (which are all well under way now) so that I can load a simple program in to the computer and set it running without any further intervention.
-</description>
+      <description>Having somehow forgotten to take time off work I’m now playing ‘annual leave catch up’ which means lots of four day weeks but also, and more importantly for this blog, I’m getting time to crack on with construction of my relay computer. The current milestone I’m working towards is finishing off the Program Counter, Incrementer and Memory cards (which are all well under way now) so that I can load a simple program in to the computer and set it running without any further intervention.</description>
     </item>
-    
   </channel>
 </rss>
