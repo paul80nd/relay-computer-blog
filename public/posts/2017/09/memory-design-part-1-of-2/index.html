@@ -35,13 +35,18 @@ The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256K
   <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <meta property="og:title" content="Memory Design (Part 1 of 2)" />
-<meta property="og:description" content="In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &hellip; I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those &lsquo;complexities&rsquo; a bit.
-The memory chip I&rsquo;m using is from the &lsquo;62&rsquo; family of CMOS 256Kbit (32K x 8) Static RAM &hellip; effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus. Buying chips can be a bit of a &rsquo;needle in a haystack&rsquo; when you&rsquo;re buying through one of the larger electronics suppliers (I use Mouser). Knowing the chip number isn&rsquo;t enough to actually buy one and doing a search on Mouser for &lsquo;62256 memory&rsquo; narrows it down to 61 matches. I can narrow it down further as I know I need through-hole mounting (not surface mount) and that gets me to 6 matches. Next choice is access speed &hellip; 55ns or 70ns. This is actually a bit of a mute point for this computer as it&rsquo;ll get nowhere near that speed (the relays take around 5ms to switch) so lets ignore that one. So faced with 6 choices it comes down to price and what&rsquo;s in stock. In the end I went for a mid-priced chip from Cypress Semiconductor &hellip; a CY62256NLL-70PXC for £2.77 (&lsquo;cheap as chips&rsquo; &hellip; literally)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://relaycomputer.co.uk/posts/2017/09/memory-design-part-1-of-2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-09-03T22:35:00+01:00" />
-<meta property="article:modified_time" content="2017-09-03T22:35:00+01:00" />
+  <meta property="og:url" content="https://relaycomputer.co.uk/posts/2017/09/memory-design-part-1-of-2/">
+  <meta property="og:site_name" content="Relay Computer">
+  <meta property="og:title" content="Memory Design (Part 1 of 2)">
+  <meta property="og:description" content="In my last post I explained my decision to use a ‘modern’ memory chip in my relay computer … I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those ‘complexities’ a bit.
+The memory chip I’m using is from the ‘62’ family of CMOS 256Kbit (32K x 8) Static RAM … effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus. Buying chips can be a bit of a ’needle in a haystack’ when you’re buying through one of the larger electronics suppliers (I use Mouser). Knowing the chip number isn’t enough to actually buy one and doing a search on Mouser for ‘62256 memory’ narrows it down to 61 matches. I can narrow it down further as I know I need through-hole mounting (not surface mount) and that gets me to 6 matches. Next choice is access speed … 55ns or 70ns. This is actually a bit of a mute point for this computer as it’ll get nowhere near that speed (the relays take around 5ms to switch) so lets ignore that one. So faced with 6 choices it comes down to price and what’s in stock. In the end I went for a mid-priced chip from Cypress Semiconductor … a CY62256NLL-70PXC for £2.77 (‘cheap as chips’ … literally).">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-09-03T22:35:00+01:00">
+    <meta property="article:modified_time" content="2017-09-03T22:35:00+01:00">
+    <meta property="article:tag" content="Design">
+    <meta property="article:tag" content="Memory">
 
   <meta itemprop="name" content="Memory Design (Part 1 of 2)">
   <meta itemprop="description" content="In my last post I explained my decision to use a ‘modern’ memory chip in my relay computer … I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those ‘complexities’ a bit.

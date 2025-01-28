@@ -36,14 +36,19 @@ So, diving straight in, here is what the main bit relays look like for the two 8
   <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <meta property="og:title" content="Register Design: A and D 8-bit Registers" />
-<meta property="og:description" content="In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.
+  <meta property="og:url" content="https://relaycomputer.co.uk/posts/2014/04/register-design-and-d-8-bit-registers/">
+  <meta property="og:site_name" content="Relay Computer">
+  <meta property="og:title" content="Register Design: A and D 8-bit Registers">
+  <meta property="og:description" content="In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.
 So, diving straight in, here is what the main bit relays look like for the two 8-bit registers when placed on the usual 55 x 40 hole pad board (excluding wire links):
-2 x 8 bit register relays (larger) Each of the relays above stores a single 1-bit value so there&rsquo;s 16-bits worth in total (which could all be used together if we were making a 16-bit register) or two lots of 8-bits (for our two 8-bit registers). Each of the 1-bit register relays need gating to and from the data bus so that the values stored don&rsquo;t conflict with any other value on the data bus. With these additional control and gating relays added we get the following (this time including internal wire links in the 1-bit register relays and result links between the 1-bit register relays and the gating relays):" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://relaycomputer.co.uk/posts/2014/04/register-design-and-d-8-bit-registers/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-04-20T11:15:00+01:00" />
-<meta property="article:modified_time" content="2014-04-20T11:15:00+01:00" />
+2 x 8 bit register relays (larger) Each of the relays above stores a single 1-bit value so there’s 16-bits worth in total (which could all be used together if we were making a 16-bit register) or two lots of 8-bits (for our two 8-bit registers). Each of the 1-bit register relays need gating to and from the data bus so that the values stored don’t conflict with any other value on the data bus. With these additional control and gating relays added we get the following (this time including internal wire links in the 1-bit register relays and result links between the 1-bit register relays and the gating relays):">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-04-20T11:15:00+01:00">
+    <meta property="article:modified_time" content="2014-04-20T11:15:00+01:00">
+    <meta property="article:tag" content="Design">
+    <meta property="article:tag" content="Registers">
 
   <meta itemprop="name" content="Register Design: A and D 8-bit Registers">
   <meta itemprop="description" content="In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to implement the full A and D registers.
