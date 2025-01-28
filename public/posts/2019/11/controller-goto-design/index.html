@@ -8,7 +8,15 @@
 
   <title>Controller Design: GOTO Instruction | Relay Computer</title>
   <meta name="description" content="With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)">
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) &hellip; and here&rsquo;s the associated timing chart to be implemented &hellip;
+">
   <meta name="robots" content="index, follow">
   
 
@@ -36,20 +44,43 @@ Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h 
 
   <meta property="og:title" content="Controller Design: GOTO Instruction" />
 <meta property="og:description" content="With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)" />
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) &hellip; and here&rsquo;s the associated timing chart to be implemented &hellip;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://relaycomputer.co.uk/posts/2019/11/controller-goto-design/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-11-30T03:03:00+00:00" />
 <meta property="article:modified_time" content="2019-11-30T03:03:00+00:00" />
-<meta itemprop="name" content="Controller Design: GOTO Instruction">
-<meta itemprop="description" content="With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)"><meta itemprop="datePublished" content="2019-11-30T03:03:00+00:00" />
-<meta itemprop="dateModified" content="2019-11-30T03:03:00+00:00" />
-<meta itemprop="wordCount" content="614">
-<meta itemprop="keywords" content="control,design," /><meta name="twitter:card" content="summary"/>
+
+  <meta itemprop="name" content="Controller Design: GOTO Instruction">
+  <meta itemprop="description" content="With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here’s the GOTO instruction itself:
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) … and here’s the associated timing chart to be implemented …">
+  <meta itemprop="datePublished" content="2019-11-30T03:03:00+00:00">
+  <meta itemprop="dateModified" content="2019-11-30T03:03:00+00:00">
+  <meta itemprop="wordCount" content="614">
+  <meta itemprop="keywords" content="Control,Design"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Controller Design: GOTO Instruction"/>
 <meta name="twitter:description" content="With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)"/>
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) &hellip; and here&rsquo;s the associated timing chart to be implemented &hellip;"/>
 
 
   

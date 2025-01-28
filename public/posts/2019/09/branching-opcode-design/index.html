@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Branching: Opcode Design | Relay Computer</title>
-  <meta name="description" content="There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a &lsquo;proper&rsquo; computer &hellip; and that&rsquo;s fair enough because that&rsquo;s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don&rsquo;t want to keep you (or I) waiting for the &lsquo;main event&rsquo; any longer so it&rsquo;s time to start designing the most complicated of all instruction classes &hellip; the &lsquo;GOTO&rsquo;.">
+  <meta name="description" content="There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a &lsquo;proper&rsquo; computer &hellip; and that&rsquo;s fair enough because that&rsquo;s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don&rsquo;t want to keep you (or I) waiting for the &lsquo;main event&rsquo; any longer so it&rsquo;s time to start designing the most complicated of all instruction classes &hellip; the &lsquo;GOTO&rsquo;.
+">
   <meta name="robots" content="index, follow">
   
 
@@ -39,11 +40,13 @@
 <meta property="og:url" content="https://relaycomputer.co.uk/posts/2019/09/branching-opcode-design/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-09-23T01:00:00+00:00" />
 <meta property="article:modified_time" content="2019-09-23T01:00:00+00:00" />
-<meta itemprop="name" content="Branching: Opcode Design">
-<meta itemprop="description" content="There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a &lsquo;proper&rsquo; computer &hellip; and that&rsquo;s fair enough because that&rsquo;s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don&rsquo;t want to keep you (or I) waiting for the &lsquo;main event&rsquo; any longer so it&rsquo;s time to start designing the most complicated of all instruction classes &hellip; the &lsquo;GOTO&rsquo;."><meta itemprop="datePublished" content="2019-09-23T01:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-09-23T01:00:00+00:00" />
-<meta itemprop="wordCount" content="1385">
-<meta itemprop="keywords" content="theory,sequencing,design,control," /><meta name="twitter:card" content="summary"/>
+
+  <meta itemprop="name" content="Branching: Opcode Design">
+  <meta itemprop="description" content="There’s been a common theme recently in the comments on my YouTube videos … people are ready to see my relay computer gain the power of branching and become a ‘proper’ computer … and that’s fair enough because that’s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don’t want to keep you (or I) waiting for the ‘main event’ any longer so it’s time to start designing the most complicated of all instruction classes … the ‘GOTO’.">
+  <meta itemprop="datePublished" content="2019-09-23T01:00:00+00:00">
+  <meta itemprop="dateModified" content="2019-09-23T01:00:00+00:00">
+  <meta itemprop="wordCount" content="1385">
+  <meta itemprop="keywords" content="Theory,Sequencing,Design,Control"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Branching: Opcode Design"/>
 <meta name="twitter:description" content="There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a &lsquo;proper&rsquo; computer &hellip; and that&rsquo;s fair enough because that&rsquo;s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don&rsquo;t want to keep you (or I) waiting for the &lsquo;main event&rsquo; any longer so it&rsquo;s time to start designing the most complicated of all instruction classes &hellip; the &lsquo;GOTO&rsquo;."/>
 
@@ -163,117 +166,117 @@ or unconditionally) so at a later point we can return control to that instructio
 <p>For the conditional jumps we can use the ALU condition register which provides some feedback on the last ALU operation
 performed. The condition register has three flags, set/cleared after each ALU operation, as follows:</p>
 <table>
-<thead>
-<tr>
-<th>Flag</th>
-<th>Id</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Carry</td>
-<td>C</td>
-<td>set when a bit is carried in the arithmetic unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added)</td>
-</tr>
-<tr>
-<td>Zero</td>
-<td>Z</td>
-<td>set when the ALU result is zero (all bits are off)</td>
-</tr>
-<tr>
-<td>Sign</td>
-<td>S</td>
-<td>set when the most significant bit is set (which would indicate a negative result for signed values). This condition has no direct meaning for unsigned numbers (other than indicating the number has a value of 128 or more).</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Flag</th>
+          <th>Id</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Carry</td>
+          <td>C</td>
+          <td>set when a bit is carried in the arithmetic unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added)</td>
+      </tr>
+      <tr>
+          <td>Zero</td>
+          <td>Z</td>
+          <td>set when the ALU result is zero (all bits are off)</td>
+      </tr>
+      <tr>
+          <td>Sign</td>
+          <td>S</td>
+          <td>set when the most significant bit is set (which would indicate a negative result for signed values). This condition has no direct meaning for unsigned numbers (other than indicating the number has a value of 128 or more).</td>
+      </tr>
+  </tbody>
 </table>
 <p>For convenience I&rsquo;ll also design a &lsquo;virtual&rsquo; flag for when a result is not zero &hellip; this is simply the opposite of the zero flag. So, what sort of conditional branching logic can we achieve with the (C)arry, (Z)ero, (N)ot-Zero and (S)ign flags?</p>
 <p>As well as reacting to individual condition flags we can also combine flags together to create more interesting combinations.
 If we build a truth table where &lsquo;0&rsquo; means ignore that flag and &lsquo;1&rsquo; means the flag must be set with multiple &lsquo;1&rsquo;s meaning at
 least one of those flags must be set (OR combination) we get the following:</p>
 <table>
-<thead>
-<tr>
-<th>S</th>
-<th>C</th>
-<th>Z</th>
-<th>N</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>Never branch (arguably not that useful)</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>Branch if result not zero (can test for inequality following B XOR C)</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>Branch if result zero (can test for equality following B XOR C)</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>Always branch (unconditional branching)</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>Branch if carry (useful after ADD or INC operation)</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>Branch if carry or not zero</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>Branch if carry or zero</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>Branch if sign bit set (can test for B &lt; C following B ADD -C)</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>Branch if sign bit set or zero (can test for B &lt;= C following B ADD -C)</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>Branch if sign bit set or carry</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>S</th>
+          <th>C</th>
+          <th>Z</th>
+          <th>N</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Never branch (arguably not that useful)</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>Branch if result not zero (can test for inequality following B XOR C)</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>Branch if result zero (can test for equality following B XOR C)</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Always branch (unconditional branching)</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Branch if carry (useful after ADD or INC operation)</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>Branch if carry or not zero</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>Branch if carry or zero</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Branch if sign bit set (can test for B &lt; C following B ADD -C)</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>Branch if sign bit set or zero (can test for B &lt;= C following B ADD -C)</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Branch if sign bit set or carry</td>
+      </tr>
+  </tbody>
 </table>
 <p>So, we can see that from the table above we now have 4-bits of our GOTO opcode (<code>sczn</code>) and that fulfils our first two
 requirements (conditional and unconditional branching). To implement our third requirement (store &lsquo;return&rsquo; address) we
@@ -441,42 +444,42 @@ destination flag to specify if we load J or M with the given address we get our 
 
 <p>To put that in to context here&rsquo;s some example GOTO opcodes:</p>
 <table>
-<thead>
-<tr>
-<th>Opcode</th>
-<th>Instruction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>11100100</code></td>
-<td>Branch to the following address if ALU result was zero</td>
-</tr>
-<tr>
-<td><code>11100010</code></td>
-<td>Branch to the following address if ALU result was non-zero</td>
-</tr>
-<tr>
-<td><code>11101000</code></td>
-<td>Branch to the following address if ALU result had carry</td>
-</tr>
-<tr>
-<td><code>11110000</code></td>
-<td>Branch to the following address if ALU result was negative</td>
-</tr>
-<tr>
-<td><code>11100110</code></td>
-<td>Branch to the following address (unconditionaly)</td>
-</tr>
-<tr>
-<td><code>11100111</code></td>
-<td>Call to the following address (unconditionaly &amp; storing return address in XY)</td>
-</tr>
-<tr>
-<td><code>11000000</code></td>
-<td>Load the following address in to M</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Opcode</th>
+          <th>Instruction</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>11100100</code></td>
+          <td>Branch to the following address if ALU result was zero</td>
+      </tr>
+      <tr>
+          <td><code>11100010</code></td>
+          <td>Branch to the following address if ALU result was non-zero</td>
+      </tr>
+      <tr>
+          <td><code>11101000</code></td>
+          <td>Branch to the following address if ALU result had carry</td>
+      </tr>
+      <tr>
+          <td><code>11110000</code></td>
+          <td>Branch to the following address if ALU result was negative</td>
+      </tr>
+      <tr>
+          <td><code>11100110</code></td>
+          <td>Branch to the following address (unconditionaly)</td>
+      </tr>
+      <tr>
+          <td><code>11100111</code></td>
+          <td>Call to the following address (unconditionaly &amp; storing return address in XY)</td>
+      </tr>
+      <tr>
+          <td><code>11000000</code></td>
+          <td>Load the following address in to M</td>
+      </tr>
+  </tbody>
 </table>
 <p>So, that&rsquo;s the opcode sorted and the hard work begins. As you can see there&rsquo;s a lot going on with this instruction &hellip; we need
 to load a 16-bit address into either the M or J register, optionally copy the PC to the XY register, inspect the ALU condition

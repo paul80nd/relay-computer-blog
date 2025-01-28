@@ -9,7 +9,18 @@
   <title>Instructions | Relay Computer</title>
   <meta name="description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit &lsquo;op-code&rsquo; and falls in to a class of related instructions (identifiable by the leading part of the op-code).
 The list of available instructions is as follows:
-ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)">
+ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)
+fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL) Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) 8-Bit Move MOV8 8 0 0 d d d s s s ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)
+sss = source register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y) 16-Bit Move MOV16 10 1 0 1 0 0 d s s d = dest reg (0-XY or 1-PC)
+ss = src reg (00-M, 01-XY, 10-J, 11-AS) Load Immediate SETAB 8 0 1 r d d d d d r = destination register (0-A, 1-B)
+ddddd = value (-16..15) Load Switches LDSW 10 1 0 1 0 1 1 0 d d = destination register (0-A, 1-D) Halt HALT 10 1 0 1 0 1 1 1 r r = reload program counter (0-no reload, 1-reload from switches) ">
   <meta name="robots" content="index, follow">
   
 
@@ -38,22 +49,52 @@ ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)">
   <meta property="og:title" content="Instructions" />
 <meta property="og:description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit &lsquo;op-code&rsquo; and falls in to a class of related instructions (identifiable by the leading part of the op-code).
 The list of available instructions is as follows:
-ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)" />
+ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)
+fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL) Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) 8-Bit Move MOV8 8 0 0 d d d s s s ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)
+sss = source register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y) 16-Bit Move MOV16 10 1 0 1 0 0 d s s d = dest reg (0-XY or 1-PC)
+ss = src reg (00-M, 01-XY, 10-J, 11-AS) Load Immediate SETAB 8 0 1 r d d d d d r = destination register (0-A, 1-B)
+ddddd = value (-16..15) Load Switches LDSW 10 1 0 1 0 1 1 0 d d = destination register (0-A, 1-D) Halt HALT 10 1 0 1 0 1 1 1 r r = reload program counter (0-no reload, 1-reload from switches)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://relaycomputer.co.uk/pages/instructions/" /><meta property="article:section" content="pages" />
 
-
-<meta itemprop="name" content="Instructions">
-<meta itemprop="description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit &lsquo;op-code&rsquo; and falls in to a class of related instructions (identifiable by the leading part of the op-code).
+  <meta itemprop="name" content="Instructions">
+  <meta itemprop="description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit ‘op-code’ and falls in to a class of related instructions (identifiable by the leading part of the op-code).
 The list of available instructions is as follows:
-ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)">
-
-<meta itemprop="wordCount" content="374">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)
+fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL) Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) 8-Bit Move MOV8 8 0 0 d d d s s s ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)
+sss = source register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y) 16-Bit Move MOV16 10 1 0 1 0 0 d s s d = dest reg (0-XY or 1-PC)
+ss = src reg (00-M, 01-XY, 10-J, 11-AS) Load Immediate SETAB 8 0 1 r d d d d d r = destination register (0-A, 1-B)
+ddddd = value (-16..15) Load Switches LDSW 10 1 0 1 0 1 1 0 d d = destination register (0-A, 1-D) Halt HALT 10 1 0 1 0 1 1 1 r r = reload program counter (0-no reload, 1-reload from switches)">
+  <meta itemprop="wordCount" content="374"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Instructions"/>
 <meta name="twitter:description" content="The computer is controlled by a series of instructions held in memory (a computer program) that are loaded into the instruction register one at a time and executed. Each instruction is formed of an 8-bit &lsquo;op-code&rsquo; and falls in to a class of related instructions (identifiable by the leading part of the op-code).
 The list of available instructions is as follows:
-ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)"/>
+ALU Operation ALU 8 1 0 0 0 r f f f r = destination register (0-A, 1-D)
+fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL) Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
+s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
+c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
+z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
+n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
+x = 1 = copy PC to XY; 0 = no copy
+hhhhhhhh = address high byte (to set in M2/J2)
+llllllll = address low byte (to set in M1/J1) 8-Bit Move MOV8 8 0 0 d d d s s s ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)
+sss = source register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y) 16-Bit Move MOV16 10 1 0 1 0 0 d s s d = dest reg (0-XY or 1-PC)
+ss = src reg (00-M, 01-XY, 10-J, 11-AS) Load Immediate SETAB 8 0 1 r d d d d d r = destination register (0-A, 1-B)
+ddddd = value (-16..15) Load Switches LDSW 10 1 0 1 0 1 1 0 d d = destination register (0-A, 1-D) Halt HALT 10 1 0 1 0 1 1 1 r r = reload program counter (0-no reload, 1-reload from switches)"/>
 
 
   

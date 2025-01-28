@@ -8,7 +8,8 @@
 
   <title>Registers Summary | Relay Computer</title>
   <meta name="description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
-In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register.">
+In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus.
+">
   <meta name="robots" content="index, follow">
   
 
@@ -36,20 +37,17 @@ In addition to the general purpose registers there are five special registers na
 
   <meta property="og:title" content="Registers Summary" />
 <meta property="og:description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
-In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register." />
+In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://relaycomputer.co.uk/pages/registers/" /><meta property="article:section" content="pages" />
 
-
-<meta itemprop="name" content="Registers Summary">
-<meta itemprop="description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
-In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register.">
-
-<meta itemprop="wordCount" content="189">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+  <meta itemprop="name" content="Registers Summary">
+  <meta itemprop="description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
+In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus.">
+  <meta itemprop="wordCount" content="189"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Registers Summary"/>
 <meta name="twitter:description" content="The computer has eight general purpose 8-bit registers named A, B, C, D, M1, M2, X and Y. Although each can be used generally some of the registers have additional specific uses. Register B and C feed the ALU inputs, M1 and M2 form a 16-bit memory pointer (M) and X and Y form a 16-bit memory pointer (XY) typically used to store a return address when performing jumps.
-In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register."/>
+In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus."/>
 
 
   
@@ -154,18 +152,18 @@ window.cookieconsent.initialise({
 <p>In addition to the general purpose registers there are five special registers named J1, J2, the instruction register, the program counter and the ALU condition code register. J1 and J2 form a 16-bit memory pointer (J) typically used to store a jump address. J1 and J2 cannot be selected and J cannot be loaded hence why they are not therefore classed as general purpose. The instruction register holds the current instruction to be executed and can only be loaded. The program counter can only be loaded and selected from/to the address bus.</p>
 <p>Details of the design, construction and testing of each register can be found in the following posts:</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Registers</strong><br /><em>(in general)</em></td>
-<td><a href="/posts/2014/04/register-design-general-purpose-8-bit/">General Purpose 8-bit Register</a><br /><a href="/posts/2019/07/16bit-register-design/">General Purpose 16-bit Register</a></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Registers</strong><br /><em>(in general)</em></td>
+          <td><a href="/posts/2014/04/register-design-general-purpose-8-bit/">General Purpose 8-bit Register</a><br /><a href="/posts/2019/07/16bit-register-design/">General Purpose 16-bit Register</a></td>
+      </tr>
+  </tbody>
 </table>
 
           
