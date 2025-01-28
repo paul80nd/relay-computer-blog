@@ -7,10 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Memory Design (Part 2 of 2) | Relay Computer</title>
-  <meta name="description" content="In my last post I started the design for the computer&rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.
-Let&rsquo;s dive straight in by bringing up the board interconnects from the lower card:
-Memory Card A with initial interconnects (larger) The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0. The third column brings up the outbound data bus which will sink 12V to ground for a logic 1 but holds at 12V for a logic 0 (effectively an inverse of what you&rsquo;d expect). The fourth column brings up the inbound data bus which takes 5V for 1 and ground for 0 along with the write enable (WE) control line and output enable (OE) line which work in reverse (5V for disabled and ground for enabled). The last three connects to the right are power at 12V, ground for 5V and finally 5V. As you can probably guess there&rsquo;s going to need to be quite a lot of &rsquo;translation&rsquo; logic on this card.
-">
+  <meta name="description" content="In my last post I started the design for the computer’s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the job and design the upper card which will interface the rest of the computer with the memory chip of the lower card.
+Let’s dive straight in by bringing up the board interconnects from the lower card:
+Memory Card A with initial interconnects (larger) The left two columns bring up the address bus for the memory chip which needs to be at 5V for a logic 1 and at ground for a logic 0. The third column brings up the outbound data bus which will sink 12V to ground for a logic 1 but holds at 12V for a logic 0 (effectively an inverse of what you’d expect). The fourth column brings up the inbound data bus which takes 5V for 1 and ground for 0 along with the write enable (WE) control line and output enable (OE) line which work in reverse (5V for disabled and ground for enabled). The last three connects to the right are power at 12V, ground for 5V and finally 5V. As you can probably guess there’s going to need to be quite a lot of ’translation’ logic on this card.">
   <meta name="robots" content="index, follow">
   
 
