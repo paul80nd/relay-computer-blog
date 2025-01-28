@@ -13,7 +13,8 @@
       <pubDate>Sun, 29 Oct 2017 11:01:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2017/10/miscellany-special-power-distribution/</guid>
-      <description>Having somehow forgotten to take time off work I&amp;rsquo;m now playing &amp;lsquo;annual leave catch up&amp;rsquo; which means lots of four day weeks but also, and more importantly for this blog, I&amp;rsquo;m getting time to crack on with construction of my relay computer. The current milestone I&amp;rsquo;m working towards is finishing off the Program Counter, Incrementer and Memory cards (which are all well under way now) so that I can load a simple program in to the computer and set it running without any further intervention.</description>
+      <description>Having somehow forgotten to take time off work I&amp;rsquo;m now playing &amp;lsquo;annual leave catch up&amp;rsquo; which means lots of four day weeks but also, and more importantly for this blog, I&amp;rsquo;m getting time to crack on with construction of my relay computer. The current milestone I&amp;rsquo;m working towards is finishing off the Program Counter, Incrementer and Memory cards (which are all well under way now) so that I can load a simple program in to the computer and set it running without any further intervention.
+</description>
     </item>
     
     <item>
@@ -22,7 +23,8 @@
       <pubDate>Mon, 11 Apr 2016 21:07:00 +0100</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2016/04/w-backplane-construction-power/</guid>
-      <description>Before I can test the new decoder, sequencer and controller cards all working together with the rest of the computer I need to construct the &amp;lsquo;W&amp;rsquo; backplane which the new cards sit on. Generally this backplane is similar in design to the &amp;lsquo;Z&amp;rsquo; backplane that the ALU cards and A/D and B/C register cards sit on. However, whereas each card on the Z backplane has the exact same connectors the W backplane is slightly more complex as the sequencer and control units are spread over two cards each requiring a different set of connectors.</description>
+      <description>Before I can test the new decoder, sequencer and controller cards all working together with the rest of the computer I need to construct the &amp;lsquo;W&amp;rsquo; backplane which the new cards sit on. Generally this backplane is similar in design to the &amp;lsquo;Z&amp;rsquo; backplane that the ALU cards and A/D and B/C register cards sit on. However, whereas each card on the Z backplane has the exact same connectors the W backplane is slightly more complex as the sequencer and control units are spread over two cards each requiring a different set of connectors. The upshot is that the backplane has three &amp;lsquo;W1&amp;rsquo; card slots and two &amp;lsquo;W2&amp;rsquo; card slots. A diagram explains it better:
+</description>
     </item>
     
   </channel>

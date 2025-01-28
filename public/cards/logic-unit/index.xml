@@ -14,7 +14,8 @@
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-completed-logic-card/</guid>
       <description>The ALU logic card is now finally complete! &amp;hellip; well, it is now I&amp;rsquo;ve popped the last few relays into their sockets. The final card looks like this:
-As the old saying goes: a picture paints a thousand words &amp;hellip; I&amp;rsquo;m not sure therefore how many words a video paints but it definitely seems the best way to demonstrate the card in operation. So, with that in mind, I&amp;rsquo;ve (painstakingly) put the following YouTube video together which gives a walkthrough of the ALU logic card in operation.</description>
+As the old saying goes: a picture paints a thousand words &amp;hellip; I&amp;rsquo;m not sure therefore how many words a video paints but it definitely seems the best way to demonstrate the card in operation. So, with that in mind, I&amp;rsquo;ve (painstakingly) put the following YouTube video together which gives a walkthrough of the ALU logic card in operation. This one also breaks tradition with my previous videos, where the only sound is the relays clicking, and has a narrative track added courtesy of my very own &amp;lsquo;dulcet&amp;rsquo; tones.
+</description>
     </item>
     
     <item>
@@ -24,7 +25,8 @@ As the old saying goes: a picture paints a thousand words &amp;hellip; I&amp;rsq
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-wire-wrap-3/</guid>
       <description>I&amp;rsquo;m now just one session of wire wrapping away from a completed ALU logic card. The final job is to wire up the gating relays that select one of the five logic results back on to the data bus. Nothing too difficult &amp;hellip; just a case of routing the wires in the best way possible to keep things neat and out of the way of the relay sockets.
-Keeping with the same wiring colour convention as before the green wires are the results heading out to the data bus, the blue wires are the inputs B and C and the yellow wires are the control lines which activate each of the gating relays as required.</description>
+Keeping with the same wiring colour convention as before the green wires are the results heading out to the data bus, the blue wires are the inputs B and C and the yellow wires are the control lines which activate each of the gating relays as required.
+</description>
     </item>
     
     <item>
@@ -34,7 +36,8 @@ Keeping with the same wiring colour convention as before the green wires are the
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-8-bit-logic-unit-tests/</guid>
       <description>There&amp;rsquo;s now enough sockets, solder and wires to test all eight bits of the ALU logic card. This isn&amp;rsquo;t quite a full test as the gating relays that apply one of the results produced by each bit unit haven&amp;rsquo;t been wired up yet but there&amp;rsquo;s enough there to be able to set an input and see the results displayed on the LEDs along the front of the card.
-So, it&amp;rsquo;s time to crack out the relays and pop them in the sockets that make up each logic bit unit.</description>
+So, it&amp;rsquo;s time to crack out the relays and pop them in the sockets that make up each logic bit unit. There&amp;rsquo;s four relays needed in each logic bit unit so thats 32 relays in total and this is what it looks like:
+</description>
     </item>
     
     <item>
@@ -45,7 +48,8 @@ So, it&amp;rsquo;s time to crack out the relays and pop them in the sockets that
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-wire-wrap-2/</guid>
       <description>Continuing on with the wire wrapping for the ALU logic card next up is the input and result links:
 Given the limited range of colours I&amp;rsquo;ve got to choose from (Black, Red, Green, Blue, Yellow) I&amp;rsquo;ve chosen the following scheme for the wire links:
-Black: Internal wire links Red: Power links Blue: Input links Green: Result links Yellow: Control links I&amp;rsquo;ll no doubt break this convention at some point but in general it should make the cards a little bit easier to fathom out at first glance &amp;hellip; especially as the number of wires on the board increases.</description>
+Black: Internal wire links Red: Power links Blue: Input links Green: Result links Yellow: Control links I&amp;rsquo;ll no doubt break this convention at some point but in general it should make the cards a little bit easier to fathom out at first glance &amp;hellip; especially as the number of wires on the board increases.
+</description>
     </item>
     
     <item>
@@ -55,7 +59,8 @@ Black: Internal wire links Red: Power links Blue: Input links Green: Result link
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-wire-wrap-1/</guid>
       <description>Finally, with all the soldering now done, it&amp;rsquo;s time to set about wire wrapping the ALU logic card. First up is the internal connections within each logic bit:
-After wire wrapping a new set of wires I always run the multimeter over the board to double check everything is connected as intended. Again though, if there are any mis-wirings it&amp;rsquo;s trivial to correct — just unwrap the wire and wrap in a new one.</description>
+After wire wrapping a new set of wires I always run the multimeter over the board to double check everything is connected as intended. Again though, if there are any mis-wirings it&amp;rsquo;s trivial to correct — just unwrap the wire and wrap in a new one. There is a bit of skill required to get a &amp;lsquo;perfect&amp;rsquo; wrap (where a bit of the insulation is taken around the post followed by nice tight coils above that) and mine are certainly not all perfect but bad ones can always be re-done.
+</description>
     </item>
     
     <item>
@@ -65,7 +70,8 @@ After wire wrapping a new set of wires I always run the multimeter over the boar
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-power-rails/</guid>
       <description>It seems that every time I move on to the next stage of construction on the ALU logic card it&amp;rsquo;s fiddlier than the stage before it &amp;hellip; this stage is no exception. This time I&amp;rsquo;m adding the power and ground rails that run around the solder side of the board. I&amp;rsquo;ll start with a picture of how it looks:
-The really, really, fiddly bit this time is cutting all those lengths of (solid single core) wire to the required length and then stripping the insulator, bending the ends and soldering down — nothing complex &amp;hellip; just fiddly.</description>
+The really, really, fiddly bit this time is cutting all those lengths of (solid single core) wire to the required length and then stripping the insulator, bending the ends and soldering down — nothing complex &amp;hellip; just fiddly. As part of adding these rails I&amp;rsquo;ve laid down some additional header pins up the middle of the board to get power to the relay gates as needed. Following usual convention the 12V power rails are in red and the ground rails are in black.
+</description>
     </item>
     
     <item>
@@ -75,7 +81,8 @@ The really, really, fiddly bit this time is cutting all those lengths of (solid 
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-relay/</guid>
       <description>The construction of the ALU logic card is coming along nicely but there&amp;rsquo;s still a lot of soldering ahead to get all the relay sockets down &amp;hellip; and this part is the fiddliest bit yet.
-The biggest issue I&amp;rsquo;ve found getting the sockets in place is that unlike the header pins, which tend to stay in place on the board whilst you solder them, the sockets will keep falling out. Usually if I&amp;rsquo;m soldering components down I&amp;rsquo;ll work in order of height from shortest to tallest so that when the board is turned over the components have nowhere to go &amp;hellip; unfortunately because I started with the LEDs first there&amp;rsquo;s nothing to hold the sockets in place when soldering.</description>
+The biggest issue I&amp;rsquo;ve found getting the sockets in place is that unlike the header pins, which tend to stay in place on the board whilst you solder them, the sockets will keep falling out. Usually if I&amp;rsquo;m soldering components down I&amp;rsquo;ll work in order of height from shortest to tallest so that when the board is turned over the components have nowhere to go &amp;hellip; unfortunately because I started with the LEDs first there&amp;rsquo;s nothing to hold the sockets in place when soldering. To get around this I&amp;rsquo;ve had to develop a new skill where I hold the socket in with a finger on one hand and then pick and place a blob of solder with the other hand (remembering which pin I&amp;rsquo;ve got my finger on to avoid a nasty burn). Needless to say I&amp;rsquo;ll try and make sure I do things in the &amp;lsquo;right&amp;rsquo; order on the other cards ;)
+</description>
     </item>
     
     <item>
@@ -85,7 +92,8 @@ The biggest issue I&amp;rsquo;ve found getting the sockets in place is that unli
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-logic-card-header-pins/</guid>
       <description>Following on from the successful construction of the first bit on the ALU logic card in my last post it&amp;rsquo;s now time to start putting together the other 7 bits and the gating circuits (to place one of the logic results on to the data bus). First up is soldering down all the header pins that I&amp;rsquo;ll wire wrap to.
-This part of the construction is certainly repetitive and it&amp;rsquo;s easy to make mistakes &amp;hellip; and actually I made a couple within placing down the first few headers.</description>
+This part of the construction is certainly repetitive and it&amp;rsquo;s easy to make mistakes &amp;hellip; and actually I made a couple within placing down the first few headers. Suffice to say that it&amp;rsquo;s a lot easier to solder multi-leg components than it is to unsolder them. Here&amp;rsquo;s the result of this evenings work:
+</description>
     </item>
     
     <item>
@@ -95,7 +103,8 @@ This part of the construction is certainly repetitive and it&amp;rsquo;s easy to
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-1-bit-logic-full/</guid>
       <description>So, although I probably should construct the logic card methodically a full stage at a time (solder header pins then sockets then wire wrap) I can&amp;rsquo;t resist fully assembling a single bit alone to see if/how it works. Here of some pictures of that single bit all soldered in and wired up:
-This is the first bit logic unit out of 8 in total and effectively the pattern is repeated 4 times across the board and for 2 rows up the board.</description>
+This is the first bit logic unit out of 8 in total and effectively the pattern is repeated 4 times across the board and for 2 rows up the board. One thing I was definitely reminded of when putting this first bit together is how small components on a 0.1 inch pitch actually are and it really is quite fiddly work. Again, the soldering is a bit grizzly where I&amp;rsquo;ve joined several pads together and couldn&amp;rsquo;t keep the heat up and solder flowing.
+</description>
     </item>
     
     <item>
@@ -105,7 +114,8 @@ This is the first bit logic unit out of 8 in total and effectively the pattern i
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-tests/</guid>
       <description>Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control). As promised, here are the videos of said testing:
-You might notice I&amp;rsquo;m prodding around slightly more carefully on the arithmetic and control cards &amp;hellip; due to a lack of foresight I&amp;rsquo;ve ended up with every second header pin being a direct line to 0v &amp;hellip; which is not great when the thing I&amp;rsquo;m holding has 12v at the tip.</description>
+You might notice I&amp;rsquo;m prodding around slightly more carefully on the arithmetic and control cards &amp;hellip; due to a lack of foresight I&amp;rsquo;ve ended up with every second header pin being a direct line to 0v &amp;hellip; which is not great when the thing I&amp;rsquo;m holding has 12v at the tip. Luckily my power supply handles short circuits well but even the briefest of sparks can be a tad embarrassing. At some point I&amp;rsquo;ll chop off the extraneous header pins (as they&amp;rsquo;re not needed) to ensure I don&amp;rsquo;t accidentally wire-wrap to one of them later on.
+</description>
     </item>
     
     <item>
@@ -115,7 +125,8 @@ You might notice I&amp;rsquo;m prodding around slightly more carefully on the ar
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-led-header-pins/</guid>
       <description>So far, in the construction of the three ALU cards (Logic, Arithmetic and Control) I&amp;rsquo;ve soldered down the connectors and LEDs. It&amp;rsquo;s now time to solder in some header pins and join them to the existing connectors and LEDs ready for wire-wrapping later.
-You can get proper wire-wrap posts but they&amp;rsquo;re really expensive for what they are (mainly, I guess, because it&amp;rsquo;s quite an old-fashioned construction method). I&amp;rsquo;ve found, though, that header pins do the job just as well but being as they&amp;rsquo;re not as tall you can only get a maximum of two wraps on each pin.</description>
+You can get proper wire-wrap posts but they&amp;rsquo;re really expensive for what they are (mainly, I guess, because it&amp;rsquo;s quite an old-fashioned construction method). I&amp;rsquo;ve found, though, that header pins do the job just as well but being as they&amp;rsquo;re not as tall you can only get a maximum of two wraps on each pin. Incidentally, I&amp;rsquo;ve chosen wire-wrap for most of the cards inner connections as it allows easy and quick modifications and correction of errors (something that can be quite difficult with soldered connections or pretty impossible with etched PCBs). Additionally, I quite like the finished look you get with wire-wrap.
+</description>
     </item>
     
     <item>
@@ -125,7 +136,8 @@ You can get proper wire-wrap posts but they&amp;rsquo;re really expensive for wh
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/alu-construction-connectors-and-leds/</guid>
       <description>As promised in my last post it&amp;rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU. I&amp;rsquo;m going start by laying down the connectors and LEDs on each card to make sure I&amp;rsquo;m happy with the look and feel of things and then I can move on to everything else needed later.
-As mentioned in earlier posts I&amp;rsquo;m basing my construction around 55 x 40 hole pad boards which fit my designs quite nicely at the right sort of size I&amp;rsquo;m looking to construct at.</description>
+As mentioned in earlier posts I&amp;rsquo;m basing my construction around 55 x 40 hole pad boards which fit my designs quite nicely at the right sort of size I&amp;rsquo;m looking to construct at. The connectors are right angled box headers and are simply soldered down to the back of the boards whilst the LEDs run along the front. The LEDs themselves are 3mm 12V types so that an additional resistor is not required (which would make the &amp;lsquo;crammed in&amp;rsquo; Logic unit design even more tricky) and to make construction a bit more manageable each LED sits in a right angled holder.
+</description>
     </item>
     
     <item>
@@ -135,7 +147,8 @@ As mentioned in earlier posts I&amp;rsquo;m basing my construction around 55 x 4
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/design-8-bit-logic-unit/</guid>
       <description>In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, status LEDs and gating relays thereby forming a complete 8-bit Logic Unit.
-Sticking with the same diagram style I introduced in the last post here is what 8 of the 1-bit Logic Units look like all crammed on to the 55 x 40 hole pad board (excluding wire links):</description>
+Sticking with the same diagram style I introduced in the last post here is what 8 of the 1-bit Logic Units look like all crammed on to the 55 x 40 hole pad board (excluding wire links):
+</description>
     </item>
     
     <item>
@@ -145,7 +158,8 @@ Sticking with the same diagram style I introduced in the last post here is what 
       
       <guid>https://relaycomputer.co.uk/posts/2013/11/design-1-bit-logic-unit/</guid>
       <description>This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here&amp;rsquo;s a schematic of the 1-bit Logic Unit (based directly on the one used in the Harry Porter Relay Computer):
-The diagram shows two 4PDT (4 pole double toggle) relays with the coils of each shown as a striped box at the top.</description>
+The diagram shows two 4PDT (4 pole double toggle) relays with the coils of each shown as a striped box at the top. The four double toggle switches are also shown on each relay and the current position of each switch is as when the relay is off. When power is applied to the relay coil all four switches change over simultaneously. The two relays together with all the various connections form the 1-bit Logic Unit. Inputs to the unit are shown with &amp;lsquo;cupped&amp;rsquo; line ends: B and C are the two 1-bit inputs; V is a permanent connection to the power supply. Outputs from the unit are shown with an arrowed line end: the outputs AND, OR, XOR, NOT and SHL. Wire joins are shown with a dot (otherwise the wire is passing over but not connecting to another wire) and unused switches on a relay are shown in grey.
+</description>
     </item>
     
   </channel>

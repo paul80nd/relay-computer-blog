@@ -15,7 +15,8 @@
       <guid>https://relaycomputer.co.uk/posts/2022/11/back-to-backplanes/</guid>
       <description>Quite a while ago I decided to give up on the tedious wire wrap technique for building my cards. Although it was certainly more authentic and in-keeping with my computer&amp;rsquo;s theme it was massively time consuming for me and was ultimately putting me off making progress on construction.
 Another problem with my previous construction methods was creating monstrosities like this:
-This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of the &amp;lsquo;W&amp;rsquo; type cards together &amp;hellip; and its as precarious as it looks and over time I&amp;rsquo;ve found the ribbon cable on the back of these backplanes are getting a bit temperamental.</description>
+This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of the &amp;lsquo;W&amp;rsquo; type cards together &amp;hellip; and its as precarious as it looks and over time I&amp;rsquo;ve found the ribbon cable on the back of these backplanes are getting a bit temperamental. If left well alone they&amp;rsquo;re fine but any knocks or pokes and whole lines can become disconnected. To solve this I made my own PCB for the Y backplane removing the need for the ribbon cable:
+</description>
     </item>
     
   </channel>

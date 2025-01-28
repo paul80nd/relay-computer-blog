@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pulse-distribution on Relay Computer</title>
+    <title>Pulse-Distribution on Relay Computer</title>
     <link>https://relaycomputer.co.uk/tags/pulse-distribution/</link>
-    <description>Recent content in pulse-distribution on Relay Computer</description>
+    <description>Recent content in Pulse-Distribution on Relay Computer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 17 Sep 2017 12:57:00 +0100</lastBuildDate><atom:link href="https://relaycomputer.co.uk/tags/pulse-distribution/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Sun, 17 Sep 2017 12:57:00 +0100</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2017/09/control-design-fetch-and-increment/</guid>
-      <description>The design of the computer&amp;rsquo;s memory, incrementer and program counter are now complete but there&amp;rsquo;s one last piece of the &amp;lsquo;puzzle&amp;rsquo; required to get the computer running a program. The controller now needs updating to orchestrate the &amp;lsquo;fetch and increment&amp;rsquo; cycle. This cycle retrieves the next instruction from memory (into the instruction register) and then increments the program counter to point at the next instruction in memory. In this post I&amp;rsquo;ll cover the changes needed to the controller cards to implement this cycle.</description>
+      <description>The design of the computer&amp;rsquo;s memory, incrementer and program counter are now complete but there&amp;rsquo;s one last piece of the &amp;lsquo;puzzle&amp;rsquo; required to get the computer running a program. The controller now needs updating to orchestrate the &amp;lsquo;fetch and increment&amp;rsquo; cycle. This cycle retrieves the next instruction from memory (into the instruction register) and then increments the program counter to point at the next instruction in memory. In this post I&amp;rsquo;ll cover the changes needed to the controller cards to implement this cycle.
+</description>
     </item>
     
     <item>
@@ -22,7 +23,8 @@
       <pubDate>Wed, 08 Jul 2015 09:27:00 +0100</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2015/07/sequencer-construction-8-cycle-fsm/</guid>
-      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones. In this post it&amp;rsquo;s the sequencer cards which will deal with the &amp;lsquo;when&amp;rsquo; of instructions by sending out timing pulses which the upcoming control cards will then use to operate the various control lines of the computer at the right time.</description>
+      <description>I&amp;rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &amp;hellip; time for the slightly more complex ones. In this post it&amp;rsquo;s the sequencer cards which will deal with the &amp;lsquo;when&amp;rsquo; of instructions by sending out timing pulses which the upcoming control cards will then use to operate the various control lines of the computer at the right time.
+</description>
     </item>
     
     <item>
@@ -32,7 +34,8 @@
       
       <guid>https://relaycomputer.co.uk/posts/2015/03/pulse-distribution-design-pulses-cd-and/</guid>
       <description>In my last post I covered the design of the 8-cycle finite state machine (FSM). In this post I&amp;rsquo;ll now take the outputs from that FSM and combine them to produce the timing pulses that will be needed to perform the MOV-8, ALU and SETAB instructions. The sequencer and pulse distribution share a &amp;lsquo;double&amp;rsquo; card and so I&amp;rsquo;ll also cover the resulting design when these two systems are combined.
-To quickly recap &amp;hellip; the 8-cycle FSM will produce the following states given a clock signal as an input:</description>
+To quickly recap &amp;hellip; the 8-cycle FSM will produce the following states given a clock signal as an input:
+</description>
     </item>
     
   </channel>

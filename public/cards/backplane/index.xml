@@ -15,7 +15,8 @@
       <guid>https://relaycomputer.co.uk/posts/2022/11/back-to-backplanes/</guid>
       <description>Quite a while ago I decided to give up on the tedious wire wrap technique for building my cards. Although it was certainly more authentic and in-keeping with my computer&amp;rsquo;s theme it was massively time consuming for me and was ultimately putting me off making progress on construction.
 Another problem with my previous construction methods was creating monstrosities like this:
-This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of the &amp;lsquo;W&amp;rsquo; type cards together &amp;hellip; and its as precarious as it looks and over time I&amp;rsquo;ve found the ribbon cable on the back of these backplanes are getting a bit temperamental.</description>
+This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of the &amp;lsquo;W&amp;rsquo; type cards together &amp;hellip; and its as precarious as it looks and over time I&amp;rsquo;ve found the ribbon cable on the back of these backplanes are getting a bit temperamental. If left well alone they&amp;rsquo;re fine but any knocks or pokes and whole lines can become disconnected. To solve this I made my own PCB for the Y backplane removing the need for the ribbon cable:
+</description>
     </item>
     
     <item>
@@ -24,7 +25,8 @@ This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of t
       <pubDate>Mon, 04 Mar 2019 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2019/03/making-a-pcb/</guid>
-      <description>After years of using pad/prototyping boards to build my computer I&amp;rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire wrapping which will come in handy as I&amp;rsquo;ll soon be constructing three fairly-identical register cards and my patience is notoriously short. That said though it probably makes sense that my first PCB should be something a bit simpler.</description>
+      <description>After years of using pad/prototyping boards to build my computer I&amp;rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it should save me loads of time soldering and wire wrapping which will come in handy as I&amp;rsquo;ll soon be constructing three fairly-identical register cards and my patience is notoriously short. That said though it probably makes sense that my first PCB should be something a bit simpler. As it happens I do need to construct the Y backplane (which the 5 &amp;lsquo;Y&amp;rsquo; type cards connect in to) which is a much simpler design and therefore an excellent &amp;lsquo;first PCB&amp;rsquo; candidate.
+</description>
     </item>
     
     <item>
@@ -33,7 +35,8 @@ This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of t
       <pubDate>Mon, 14 Jan 2019 11:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2019/01/change-of-approach/</guid>
-      <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&amp;rsquo;ve followed my blog (over the years) you&amp;rsquo;ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter. Each register card follows the same construction pattern: solder down LEDs, solder down relay sockets, solder down wire wrap posts, solder ground and power lines, wire wrap, wire wrap, wire wrap, wire wrap, etc, etc, insert relays in sockets.</description>
+      <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&amp;rsquo;ve followed my blog (over the years) you&amp;rsquo;ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter. Each register card follows the same construction pattern: solder down LEDs, solder down relay sockets, solder down wire wrap posts, solder ground and power lines, wire wrap, wire wrap, wire wrap, wire wrap, etc, etc, insert relays in sockets. Tedious, tedious, tedious.
+</description>
     </item>
     
     <item>
@@ -43,7 +46,8 @@ This is the &amp;lsquo;W&amp;rsquo; backplane connector which connects five of t
       
       <guid>https://relaycomputer.co.uk/posts/2017/11/miscellany-special-backplane-x-cable/</guid>
       <description>Continuing on with the theme from my last post &amp;hellip; here is another &amp;lsquo;miscellany special&amp;rsquo; covering all the little &amp;lsquo;side jobs&amp;rsquo; I&amp;rsquo;ve been doing on my relay computer alongside the primary work of constructing the Program Counter, Memory and Incrementer cards. There&amp;rsquo;s three things worth covering (plus an additional minor mention) &amp;hellip; let&amp;rsquo;s start with backplanes.
-The computer is designed with four backplanes (W, X, Y and Z) each taking five cards.</description>
+The computer is designed with four backplanes (W, X, Y and Z) each taking five cards. Each card of the computer is designed to fit in a specific backplane as each backplane offers a unique selection of busses and connections. Generally you can put a card designated for a given backplane in to any of the five backplane slots (position mainly being an aesthetic thing) however the W backplane is the notable exception having slots W1 - W2 - W1 - W2 - W1 taking two double cards (with W1 and W2 connectors) and one single card (W1 connectors).
+</description>
     </item>
     
     <item>
@@ -52,7 +56,8 @@ The computer is designed with four backplanes (W, X, Y and Z) each taking five c
       <pubDate>Mon, 11 Apr 2016 21:07:00 +0100</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2016/04/w-backplane-construction-power/</guid>
-      <description>Before I can test the new decoder, sequencer and controller cards all working together with the rest of the computer I need to construct the &amp;lsquo;W&amp;rsquo; backplane which the new cards sit on. Generally this backplane is similar in design to the &amp;lsquo;Z&amp;rsquo; backplane that the ALU cards and A/D and B/C register cards sit on. However, whereas each card on the Z backplane has the exact same connectors the W backplane is slightly more complex as the sequencer and control units are spread over two cards each requiring a different set of connectors.</description>
+      <description>Before I can test the new decoder, sequencer and controller cards all working together with the rest of the computer I need to construct the &amp;lsquo;W&amp;rsquo; backplane which the new cards sit on. Generally this backplane is similar in design to the &amp;lsquo;Z&amp;rsquo; backplane that the ALU cards and A/D and B/C register cards sit on. However, whereas each card on the Z backplane has the exact same connectors the W backplane is slightly more complex as the sequencer and control units are spread over two cards each requiring a different set of connectors. The upshot is that the backplane has three &amp;lsquo;W1&amp;rsquo; card slots and two &amp;lsquo;W2&amp;rsquo; card slots. A diagram explains it better:
+</description>
     </item>
     
     <item>
@@ -62,7 +67,8 @@ The computer is designed with four backplanes (W, X, Y and Z) each taking five c
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/backplane-design-and-construction/</guid>
       <description>Originally when I was thinking about how I&amp;rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and physically flexible which would
-allow me to work out how I&amp;rsquo;d physically arrange the cards later on. However, the more I thought about it the more I liked the idea of using a backplane that the cards would slot in to — a bit like those 19 inch server racks that take CPU cards.</description>
+allow me to work out how I&amp;rsquo;d physically arrange the cards later on. However, the more I thought about it the more I liked the idea of using a backplane that the cards would slot in to — a bit like those 19 inch server racks that take CPU cards. This would also give the cards some physical support so I could test several cards together with the whole thing freestanding.
+</description>
     </item>
     
   </channel>

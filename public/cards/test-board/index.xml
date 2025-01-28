@@ -14,7 +14,8 @@
       
       <guid>https://relaycomputer.co.uk/posts/2013/12/test-board-construction/</guid>
       <description>I&amp;rsquo;ve just realised that as I&amp;rsquo;ve been constructing the first ALU card I&amp;rsquo;ve not given much thought to how I&amp;rsquo;ll actually test the card (or other cards for that matter) when complete &amp;hellip; this post therefore represents a quick aside to tackle testing.
-What I&amp;rsquo;m looking for is a small board with enough switches on it to drive the various inputs of each card &amp;hellip; ideally it&amp;rsquo;ll be reusable between cards and easy to use.</description>
+What I&amp;rsquo;m looking for is a small board with enough switches on it to drive the various inputs of each card &amp;hellip; ideally it&amp;rsquo;ll be reusable between cards and easy to use. I did originally think of using DIP switches but they&amp;rsquo;re a bit on the fiddly side so I&amp;rsquo;ve gone for tactile switches instead — the main problem with these is that they&amp;rsquo;re non latching but I figure that I won&amp;rsquo;t need to push more than 10 buttons at a time hopefully.
+</description>
     </item>
     
   </channel>

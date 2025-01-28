@@ -14,7 +14,8 @@
       
       <guid>https://relaycomputer.co.uk/posts/2015/05/register-construction-completed/</guid>
       <description>Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
-As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality.</description>
+As usual I&amp;rsquo;ve put a video together that demonstrates this card in operation. In this video I give a quick overview of the card and then demonstrate loading values in to the register and instruction bus. I also demonstrate gating part of the instruction bus on to the data bus for the I2B (Immediate to Bus) functionality.
+</description>
     </item>
     
     <item>
@@ -24,7 +25,8 @@ As usual I&amp;rsquo;ve put a video together that demonstrates this card in oper
       
       <guid>https://relaycomputer.co.uk/posts/2015/05/register-construction-instruction/</guid>
       <description>There&amp;rsquo;s been lots of theory going on in my recent posts but the time for design is over (for now) &amp;hellip; it&amp;rsquo;s time to get constructing. The first card up in this batch is the instruction register and as it shares much of its design with the other register cards the construction is very similar.
-The first step is to solder down the LEDs. Here&amp;rsquo;s some pictures, front and back, of the card following this first round of soldering:</description>
+The first step is to solder down the LEDs. Here&amp;rsquo;s some pictures, front and back, of the card following this first round of soldering:
+</description>
     </item>
     
     <item>
@@ -33,7 +35,8 @@ The first step is to solder down the LEDs. Here&amp;rsquo;s some pictures, front
       <pubDate>Mon, 01 Dec 2014 21:00:00 +0000</pubDate>
       
       <guid>https://relaycomputer.co.uk/posts/2014/12/register-design-instruction-register/</guid>
-      <description>Well, it&amp;rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &amp;hellip; and that&amp;rsquo;s mainly because &amp;lsquo;decorating&amp;rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &amp;hellip; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&amp;rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer.</description>
+      <description>Well, it&amp;rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &amp;hellip; and that&amp;rsquo;s mainly because &amp;lsquo;decorating&amp;rsquo; included re-wiring, re-plumbing, re-plastering, re-carpeting &amp;hellip; all before I got anywhere near choosing a tasteful shade of emulsion for the walls. Needless to say then that spending time on my relay computer has suffered quite a bit. However, things are starting to calm down (now that there&amp;rsquo;s two rooms in the house that are semi-habitable) so I can get back to designing the next bits for the computer.
+</description>
     </item>
     
   </channel>
