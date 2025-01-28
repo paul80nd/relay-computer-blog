@@ -12,7 +12,7 @@
       <p class="subtitle is-7 mb-5">{{.Date.Format "02 Jan 2006"}} - {{ .ReadingTime }} min read</p>
       <p class="title is-5 mb-3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
       <p>
-        {{ .Summary | truncate 175 }}
+        {{ .Summary | plainify | truncate 175 }}
       </p>
       <div class="columns is-vcentered is-mobile">
         <div class="column is-narrow">
