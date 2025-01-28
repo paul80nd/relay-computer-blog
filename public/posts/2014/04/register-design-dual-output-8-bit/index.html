@@ -60,19 +60,20 @@ For the A and D registers I ended up with the following circuit per 8-bit regist
   <meta name="twitter:description" content="In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I’m now making a start on the design for the B/C register card and although its pretty much the same as the A/D card there’s an extra complexity because the B/C registers additionally feed the ALU B and C inputs.
 For the A and D registers I ended up with the following circuit per 8-bit register:">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

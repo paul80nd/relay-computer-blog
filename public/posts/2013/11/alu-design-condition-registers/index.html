@@ -60,19 +60,20 @@ Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate
   <meta name="twitter:description" content="This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the ALU Control Card. There are three Condition Registers in this computer:
 Carry: set when a bit is carried in the Arithmetic Unit (which can also indicate arithmetic overflow depending on the interpretation of the numbers being added). Zero: set when the ALU result is zero (all bits are off). Sign: set when the most significant bit is set (which would indicate a negative result for signed values). This condition has no direct meaning for unsigned numbers (other than indicating the number has a value of 128 or more). When the ALU performs an operation the current values of these three conditions are stored in the condition registers so that they can be referred to in other operations. An example of this would be where given two numbers the first is negated and then added to the second … if the two numbers are equal it will result in zero and therefore the Zero condition will be set. Based on this condition register being set you could then branch to a different location in the executing program if desired. That is, for example, if number A and B are equal then go to line C in the program. It’s this ‘branching’ functionality that elevates the computer in terms of power and flexibility and the condition registers are at the heart of this.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

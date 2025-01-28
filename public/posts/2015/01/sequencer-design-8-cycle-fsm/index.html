@@ -56,19 +56,20 @@
   <meta name="twitter:title" content="Sequencer Design: 8-cycle FSM">
   <meta name="twitter:description" content="So far I’ve got the design complete for the instruction register along with the initial design for the decoder and so I’m well on the way to having the computer perform MOV-8, ALU and SETAB instructions. Later I’ll get on to the control card design where the computer will operate the control lines according to the 8-bit opcode stored in the instruction register. Before that though there’s the sequencer card which will generate the pulses that drive the control card.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

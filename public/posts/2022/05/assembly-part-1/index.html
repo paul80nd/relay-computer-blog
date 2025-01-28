@@ -55,19 +55,20 @@
   <meta name="twitter:title" content="Assembling an assembler - overview">
   <meta name="twitter:description" content="To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an opcode (portmanteau of operation and code) optionally followed by one or two further 8-bit values (usually referencing a location in memory). The computer will work through them one at a time doing whatever operation that opcode represents. Here’s an example program:">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

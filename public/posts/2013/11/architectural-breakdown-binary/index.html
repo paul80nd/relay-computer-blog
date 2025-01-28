@@ -56,19 +56,20 @@
   <meta name="twitter:title" content="Architectural breakdown: Binary">
   <meta name="twitter:description" content="… and it all begins with binary. Binary is a ‘base 2’ numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base 10) for their day-to-day numerical needs which, of course, uses the numbers 0 to 9. Binary is particularly suitable for electronics as the numbers 0 and 1 can be represented by a circuit being on (1) or off (0), or more relevantly to this computer, a wire may be carrying power (1) or not (0). If you wanted to be able to carry a single decimal digit (0-9) on a wire you’d need to pull some fancy tricks - perhaps have a different level of power signifying the different digits or send pulses counting up the number. All this gets very complicated though - binary keeps it nice and simple.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

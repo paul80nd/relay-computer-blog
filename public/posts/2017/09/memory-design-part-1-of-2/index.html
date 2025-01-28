@@ -60,19 +60,20 @@ The memory chip I’m using is from the ‘62’ family of CMOS 256Kbit (32K x 8
   <meta name="twitter:description" content="In my last post I explained my decision to use a ‘modern’ memory chip in my relay computer … I also alluded to there being some complexities in interfacing the rest of the computer with that memory chip. The memory unit will be spread over two cards and in this post I cover the design of the first half and expand on those ‘complexities’ a bit.
 The memory chip I’m using is from the ‘62’ family of CMOS 256Kbit (32K x 8) Static RAM … effectively meaning it can store 32,768 separate 8 bit values referenced by a 15bit address bus. Buying chips can be a bit of a ’needle in a haystack’ when you’re buying through one of the larger electronics suppliers (I use Mouser). Knowing the chip number isn’t enough to actually buy one and doing a search on Mouser for ‘62256 memory’ narrows it down to 61 matches. I can narrow it down further as I know I need through-hole mounting (not surface mount) and that gets me to 6 matches. Next choice is access speed … 55ns or 70ns. This is actually a bit of a mute point for this computer as it’ll get nowhere near that speed (the relays take around 5ms to switch) so lets ignore that one. So faced with 6 choices it comes down to price and what’s in stock. In the end I went for a mid-priced chip from Cypress Semiconductor … a CY62256NLL-70PXC for £2.77 (‘cheap as chips’ … literally).">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

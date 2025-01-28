@@ -59,19 +59,20 @@ What I’m looking for is a small board with enough switches on it to drive the 
   <meta name="twitter:description" content="I’ve just realised that as I’ve been constructing the first ALU card I’ve not given much thought to how I’ll actually test the card (or other cards for that matter) when complete … this post therefore represents a quick aside to tackle testing.
 What I’m looking for is a small board with enough switches on it to drive the various inputs of each card … ideally it’ll be reusable between cards and easy to use. I did originally think of using DIP switches but they’re a bit on the fiddly side so I’ve gone for tactile switches instead — the main problem with these is that they’re non latching but I figure that I won’t need to push more than 10 buttons at a time hopefully.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

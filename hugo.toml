@@ -18,6 +18,10 @@ paginate = 12
   [services.googleAnalytics]
     id = 'G-RNXVW69CMT'
 
+[privacy]
+  [privacy.googleAnalytics]
+    respectDoNotTrack = true
+
 [params]
   author = 'Paul Law'
   description = 'My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.'

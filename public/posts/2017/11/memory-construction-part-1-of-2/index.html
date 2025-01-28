@@ -60,19 +60,20 @@ For the lower memory card there are 16 LEDs for the 16-bit address bus and 8 LED
   <meta name="twitter:description" content="It’s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than ‘boring old registers’ and so I’ll split it over two posts. Let’s dive in with the easy part - soldering down the LEDs and backplane connectors:
 For the lower memory card there are 16 LEDs for the 16-bit address bus and 8 LEDs for the 8-bit data bus. Both of these busses are ’local’ to the memory unit and operate on &#43;5V and ground as covered in my post on the memory unit design. Unfortunately I’ve messed up here a bit as I’ve merrily gone and soldered down the same LEDs I use on all the other cards … the 12V ones. Although these LEDs will work with 5V they won’t be as bright due to the internal resistor in each being rated for 12V operation. A bit of a silly mistake to make but it’s done and I’m not so upset by it that it’s worth changing them over … I only realised when I tested the card and noticed the LEDs weren’t as bright as usual (doh).">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

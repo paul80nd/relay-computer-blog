@@ -59,19 +59,20 @@ I typically take a summer break from working on the relay computer so that I can
   <meta name="twitter:description" content="… or so the proverb goes … and it’s fair to say I’ve been procrastinating quite a bit recently.
 I typically take a summer break from working on the relay computer so that I can service all the other hobbies I have on the go but also to enjoy the brief warm weather we get here in the UK. Usually come autumn time I’m back building, blogging and making videos but this year ‘summer’ has hung on … through to the end of the year no less … and it’s because I’m intentionally/unintentionally putting off getting started. What’s to blame? Other than my own lack of self control? … it’s those damn registers. Let me try and explain …">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

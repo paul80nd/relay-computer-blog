@@ -100,19 +100,20 @@ sss = source register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)
 ss = src reg (00-M, 01-XY, 10-J, 11-AS) Load Immediate SETAB 8 0 1 r d d d d d r = destination register (0-A, 1-B)
 ddddd = value (-16..15) Load Switches LDSW 10 1 0 1 0 1 1 0 d d = destination register (0-A, 1-D) Halt HALT 10 1 0 1 0 1 1 1 r r = reload program counter (0-no reload, 1-reload from switches)">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

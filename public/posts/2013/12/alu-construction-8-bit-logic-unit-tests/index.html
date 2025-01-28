@@ -61,19 +61,20 @@ So, it’s time to crack out the relays and pop them in the sockets that make up
   <meta name="twitter:description" content="There’s now enough sockets, solder and wires to test all eight bits of the ALU logic card. This isn’t quite a full test as the gating relays that apply one of the results produced by each bit unit haven’t been wired up yet but there’s enough there to be able to set an input and see the results displayed on the LEDs along the front of the card.
 So, it’s time to crack out the relays and pop them in the sockets that make up each logic bit unit. There’s four relays needed in each logic bit unit so thats 32 relays in total and this is what it looks like:">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

@@ -60,19 +60,20 @@ To ensure I was ‘playing fair’ when constructing the controller I only solde
   <meta name="twitter:description" content="Way back in 2019 I discussed how you can’t ‘half design a PCB’ and that, as a result, my controller cards already have all the required functionality laid down … I just haven’t explained how those ‘missing’ bits of functionality work in this blog yet.
 To ensure I was ‘playing fair’ when constructing the controller I only soldered in the relays for the instructions I’d explained in this blog so far. Well, in my Relay Clock Series you may have noticed in the final episode I decided to solder the remaining relays in on the lower controller card meaning … the MOV8, MOV16 and MISC instruction classes are now complete and pretty much raring to go … which means I should probably get on with explaining them.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

@@ -58,19 +58,20 @@
   <meta name="twitter:title" content="Auxiliary Control Design (Part 1 of 3)">
   <meta name="twitter:description" content="My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into memory in the first place and at the moment that’s a bit of a pain. For each line of the program you need to set the primary data switches to match the desired ‘opcode’, gate the switches to the data bus, gate the program counter to the address bus, gate the data bus to the memory and then write to the memory - that’s four buttons to press simultaneously. Once that’s done the program counter needs advancing ready for the next line of the program via holding the select PC and load INC buttons followed by select INC and load PC. This cycle is repeated for each line of the program until it’s all loaded into memory. Like I said, it’s a pain and there must be a better way to do this.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

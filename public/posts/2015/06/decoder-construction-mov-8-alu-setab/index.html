@@ -62,19 +62,20 @@ The card in question is the decoder which will take the value on the instruction
   <meta name="twitter:description" content="In a change from prior form I’m combining the construction and testing of the next card in to a single post this time. Partly because this card is a nice easy one but also because it’s the first card that I’ll be partially constructing to begin with and then I’ll return to it later to add further functionality.
 The card in question is the decoder which will take the value on the instruction bus and use it to decide which instruction class it represents. This class will then be used by the upcoming control card along with the sequencer pulses to operate the various control lines of the computer in the appropriate order. To begin with the decoder will recognise MOV8, ALU and SETAB instruction classes but there’ll be more added later on.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

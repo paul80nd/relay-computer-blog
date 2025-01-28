@@ -56,19 +56,20 @@
   <meta name="twitter:title" content="16-bit Register Design">
   <meta name="twitter:description" content="In my last couple of posts I’ve been building up to a change of approach in how I’m making the cards in my computer. This is mainly because I can’t face the monotony of hand building the upcoming register cards (which I’ll need three of so it’s triple the procrastination holding me back). The obvious solution to all of this is to create a Printed Circuit Board (PCB) which will cut out most of the trickier soldering and pretty much all the repetitive wirewrap … and that looked like the way to go until I had a go at hand crafting a simplified PCB for the Y backplane and I realised it’s not as easy as it might otherwise appear.">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-RNXVW69CMT', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
   <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
