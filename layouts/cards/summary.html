@@ -1,10 +1,9 @@
 <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
       <p class="title is-5">
         <a href="{{ .RelPermalink }}">
-          <span class="icon"><i class="fas fa-cube fa-fw"></i></span>
-          &nbsp;&nbsp;
+          <span class="icon"><i class="fas fa-cube fa-fw"></i></span>&nbsp;
           {{ if isset .Params "multiple"}}{{ .Params.multiple }}{{else}}{{ .Title }}{{end}}
         </a>
       </p>

@@ -47,10 +47,12 @@ $pcb-green: hsl(93, 100%, 13%);
 */
 .hero.is-primary {
   --bulma-hero-color-l: 95%;
+
   .breadcrumb {
     --bulma-breadcrumb-item-color: $white;
     --bulma-breadcrumb-item-separator-color: $white;
   }
+
   .breadcrumb a {
     color: $white;
   }
@@ -64,6 +66,10 @@ $pcb-green: hsl(93, 100%, 13%);
 
 .content {
   p:not(.title) {
+    a {
+      font-weight: 500;
+    }
+
     a:hover {
       text-decoration: underline;
     }
@@ -73,6 +79,7 @@ $pcb-green: hsl(93, 100%, 13%);
 .card {
   border: .1px solid var(--bulma-grey);
 }
+
 /*
 @include tablet {
 
@@ -109,23 +116,49 @@ $pcb-green: hsl(93, 100%, 13%);
 .highlight {
   margin-bottom: 1.2em;
 }
+*/
+
+// Progress image blocks
 
 .progress-blockimg {
-  border: 2px solid white;
+  border: 2px solid var(--bulma-body-background-color);
   border-right: none;
 }
 
 .progress-blockimg:last-child {
-  border-right: 2px solid white;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-right: 2px solid var(--bulma-body-background-color);
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
 
   figure {
-    border-top-right-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
   }
 }
 
+// Override corners when used in a card image
+.card-image {
+  .progress-blockimg:first-child {
+    border-top-left-radius: 0.8rem;
+
+    figure {
+      border-top-left-radius: 0.7rem;
+    }
+  }
+
+  .progress-blockimg:last-child {
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0;
+
+    figure {
+      border-top-right-radius: 0.7rem;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+
+/*
 .tabs-content li {
   display: none;
   list-style: none;
