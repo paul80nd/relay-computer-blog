@@ -9,7 +9,9 @@ title = 'Relay Computer'
 disableHugoGeneratorInject =  true
 
 enableRobotsTXT = true
-paginate = 12
+
+[pagination]
+  pagerSize = 12
 
 [permalinks]
   posts = '/posts/:year/:month/:slug'
