@@ -58,3 +58,31 @@ svg.railroad-diagram {
     fill: #eee;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  svg.railroad-diagram {
+    background-color: hsl(30, 20%, 5%);
+
+    path {
+      stroke: gray;
+    }
+
+    rect {
+      stroke: gray;
+      fill: hsl(120, 100%, 12%);
+    }
+
+    path.diagram-text {
+      stroke: white;
+      fill: black;
+    }
+
+    g.diagram-text:hover path.diagram-text {
+      fill: #111;
+    }
+
+    g {
+      fill: lightgray;
+    }
+  }
+}

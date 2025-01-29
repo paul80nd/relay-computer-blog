@@ -34,17 +34,6 @@ $pcb-green: hsl(93, 100%, 13%);
   --bulma-primary-invert-l: 100%;
 }
 
-/*
-:root {
-  --bulma-body-background-color: #F0F2F4;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bulma-body-background-color: #0F0D0B;
-  }
-}
-*/
 .hero.is-primary {
   --bulma-hero-color-l: 95%;
 
@@ -65,7 +54,7 @@ $pcb-green: hsl(93, 100%, 13%);
 }
 
 .content {
-  p:not(.title) {
+  p:not(.title), table, li {
     a {
       font-weight: 500;
     }
@@ -80,6 +69,17 @@ $pcb-green: hsl(93, 100%, 13%);
   border: .1px solid var(--bulma-grey);
 }
 
+.tag.is-link {
+ background-color: #485fc7;
+ color: $white;
+}
+.tag.is-info {
+  background-color: #3e8ed0;
+  color: $white;
+}
+.tag.is-success {
+  color: $white;
+}
 /*
 @include tablet {
 
