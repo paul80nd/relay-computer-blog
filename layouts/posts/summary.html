@@ -7,9 +7,9 @@
       {{ end }}
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">{{.Date.Format "02 Jan 2006"}} - {{ .ReadingTime }} min read</p>
+      <p class="subtitle is-7 mb-2">{{.Date.Format "02 Jan 2006"}} - {{ .ReadingTime }} min read</p>
       <p class="title is-5 mb-3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
       <p>
         {{ .Summary | plainify | truncate 175 }}
