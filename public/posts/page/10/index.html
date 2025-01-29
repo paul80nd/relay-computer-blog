@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item is-active">
+        <a href="/posts/" class="navbar-item is-tab is-active">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item ">
+        <a href="/tags/" class="navbar-item is-tab ">
           Tags
         </a>
         
@@ -137,7 +138,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -164,9 +165,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Dec 2013 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">05 Dec 2013 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-led-header-pins/">ALU Construction: LED Header Pins</a></p>
       <p>
         So far, in the construction of the three ALU cards (Logic, Arithmetic and Control) I&rsquo;ve soldered down the connectors and LEDs. It&rsquo;s now time to solder in some …
@@ -208,9 +209,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">03 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">03 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/backplane-design-and-construction/">Backplane Design and Construction</a></p>
       <p>
         Originally when I was thinking about how I&rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and …
@@ -252,9 +253,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">02 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-connectors-and-leds/">ALU Construction: Connectors and LEDs</a></p>
       <p>
         As promised in my last post it&rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU. I&rsquo;m going start …
@@ -300,9 +301,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">01 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-design-control-unit/">ALU Design: Control Unit</a></p>
       <p>
         In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of …
@@ -344,9 +345,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/alu-design-condition-registers/">ALU Design: Condition Registers</a></p>
       <p>
         This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the …
@@ -388,9 +389,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">23 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/alu-design-zero-detect/">ALU Design: Zero Detect</a></p>
       <p>
         This post covers the design of the Zero Detect circuit which along with the 3-to-8 Function Decoder (covered in my last post) and the Condition Registers (next post) make up …
@@ -432,9 +433,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-function-decoder/">ALU Design: Function Decoder</a></p>
       <p>
         This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card. The Decoder …
@@ -476,9 +477,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">17 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">17 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-8-bit-arithmetic-unit/">ALU Design: 8-bit Arithmetic Unit</a></p>
       <p>
         In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with …
@@ -520,9 +521,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Nov 2013 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">15 Nov 2013 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-1-bit-arithmetic-unit/">ALU Design: 1-bit Arithmetic Unit</a></p>
       <p>
         This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&rsquo;s a schematic of the 1-bit Arithmetic …
@@ -564,9 +565,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">13 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">13 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-8-bit-logic-unit/">ALU Design: 8-bit Logic Unit</a></p>
       <p>
         In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, …
@@ -608,9 +609,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-1-bit-logic-unit/">ALU Design: 1-bit Logic Unit</a></p>
       <p>
         This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here&rsquo;s a schematic of the …
@@ -652,9 +653,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">10 Nov 2013 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">10 Nov 2013 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/relay-rumination/">Relay Rumination</a></p>
       <p>
         If there&rsquo;s one thing a relay computer needs a lot of it&rsquo;s &hellip; erm &hellip; relays (of course) &hellip; which happens to be a bit unfortunate as relays, …

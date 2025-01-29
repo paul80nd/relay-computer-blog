@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item is-active">
+        <a href="/posts/" class="navbar-item is-tab is-active">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item ">
+        <a href="/tags/" class="navbar-item is-tab ">
           Tags
         </a>
         
@@ -137,7 +138,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -162,9 +163,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Nov 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">07 Nov 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/instruction-set/">Instruction Set</a></p>
       <p>
         In the last post I promised to reveal the planned instruction set for the computer and here it is (pdf file).
@@ -207,9 +208,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">07 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-programming-and_7/">Architectural breakdown: Programming and Control 2</a></p>
       <p>
         So, the last post didn&rsquo;t quite wrap up this &lsquo;mini-series&rsquo; but hopefully this one will. Continuing on with how the Programming and Control of the computer …
@@ -251,9 +252,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Nov 2013 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">07 Nov 2013 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-programming-and/">Architectural breakdown: Programming and Control</a></p>
       <p>
         In this post I&rsquo;ll wrap up this &lsquo;mini-series&rsquo; of trying to explain away the various bits of the architecture that will make up my relay computer project — …
@@ -295,9 +296,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">07 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-alu/">Architectural breakdown: the ALU</a></p>
       <p>
         In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic …
@@ -343,9 +344,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">06 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-memory/">Architectural breakdown: Memory</a></p>
       <p>
         In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the memory. …
@@ -387,9 +388,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">05 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-buses-and/">Architectural breakdown: Buses and Registers</a></p>
       <p>
         In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s buses and …
@@ -429,9 +430,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Nov 2013 - 7 min read</p>
+      <p class="subtitle is-7 mb-2">04 Nov 2013 - 7 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-binary/">Architectural breakdown: Binary</a></p>
       <p>
         &hellip; and it all begins with binary. Binary is a &lsquo;base 2&rsquo; numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base …
@@ -473,9 +474,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">04 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architecture-isnt-just-for-houses/">Architecture isn&#39;t just for houses</a></p>
       <p>
         So, with the scene now set (see previous posts) let&rsquo;s dive right in and take a look at the system architecture I&rsquo;ll be building my computer upon &hellip; here it …
@@ -511,9 +512,9 @@ This should be viewed alongside the architecture diagram which …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">03 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">03 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/the-three-rs/">The three Rs</a></p>
       <p>
         It strikes me that when embarking on a project like this there&rsquo;s three things that are of uttermost importance, the three Rs if you will:
@@ -550,9 +551,9 @@ Research, research and …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">02 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/why/">Why?</a></p>
       <p>
         Whenever I tell people I&rsquo;m building a relay computer the overwhelming response is &hellip; why on Earth would you want to do that?! Or alternatively, as a work colleague …
@@ -588,9 +589,9 @@ Research, research and …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">31 Oct 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">31 Oct 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/10/it-begins/">It begins</a></p>
       <p>
         &hellip; although being as I&rsquo;m already a couple of months in on my little project then perhaps that should be &lsquo;it began&rsquo;.

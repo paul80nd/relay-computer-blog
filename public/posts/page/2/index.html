@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item is-active">
+        <a href="/posts/" class="navbar-item is-tab is-active">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item ">
+        <a href="/tags/" class="navbar-item is-tab ">
           Tags
         </a>
         
@@ -137,7 +138,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -164,9 +165,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2019 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2019 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/controller-goto-design/">Controller Design: GOTO Instruction</a></p>
       <p>
         With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so …
@@ -208,9 +209,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2019 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2019 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-construction/">Sequencer Construction</a></p>
       <p>
         In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I can get on with soldering up the cards and giving …
@@ -256,9 +257,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2019 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2019 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-design-pcb/">Sequencer Design: Schematic &amp; PCBs</a></p>
       <p>
         I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design …
@@ -300,9 +301,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 Nov 2019 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">02 Nov 2019 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-design-pulse-dist/">Sequencer Design: Pulse Distribution</a></p>
       <p>
         In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions. In this case …
@@ -344,9 +345,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Nov 2019 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">01 Nov 2019 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-design-24-cycle-fsm/">Sequencer Design: 24-cycle FSM</a></p>
       <p>
         Recently I&rsquo;ve been looking at what&rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing …
@@ -388,9 +389,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Oct 2019 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">06 Oct 2019 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/10/branching-opcode-timing/">Branching: Opcode Timing</a></p>
       <p>
         In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&rsquo;s where I got to last time: …
@@ -440,9 +441,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Sep 2019 - 7 min read</p>
+      <p class="subtitle is-7 mb-2">23 Sep 2019 - 7 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/09/branching-opcode-design/">Branching: Opcode Design</a></p>
       <p>
         There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a …
@@ -492,9 +493,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">09 Aug 2019 - 9 min read</p>
+      <p class="subtitle is-7 mb-2">09 Aug 2019 - 9 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/08/16bit-register-pcb-design/">16-bit Register PCB Design</a></p>
       <p>
         It&rsquo;s time for the oddly therapeutic part of designing a PCB &hellip; laying out the board. In my last post I covered the schematic design and so we now have all the …
@@ -536,9 +537,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Jul 2019 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">15 Jul 2019 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/07/16bit-register-design/">16-bit Register Design</a></p>
       <p>
         In my last couple of posts I&rsquo;ve been building up to a change of approach in how I&rsquo;m making the cards in my computer. This is mainly because I can&rsquo;t face the …
@@ -580,9 +581,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Mar 2019 - 12 min read</p>
+      <p class="subtitle is-7 mb-2">04 Mar 2019 - 12 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/03/making-a-pcb/">Making a PCB</a></p>
       <p>
         After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it …
@@ -624,9 +625,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">14 Jan 2019 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">14 Jan 2019 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/01/change-of-approach/">A change of approach</a></p>
       <p>
         In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&rsquo;ve followed my blog (over …
@@ -668,9 +669,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Jan 2019 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">06 Jan 2019 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/01/procrastination-is/">Procrastination is the thief of time</a></p>
       <p>
         &hellip; or so the proverb goes &hellip; and it&rsquo;s fair to say I&rsquo;ve been procrastinating quite a bit recently.

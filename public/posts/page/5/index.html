@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item is-active">
+        <a href="/posts/" class="navbar-item is-tab is-active">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item ">
+        <a href="/tags/" class="navbar-item is-tab ">
           Tags
         </a>
         
@@ -137,7 +138,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -164,9 +165,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 May 2016 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">24 May 2016 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/05/sequencing-control-test/">Sequencing &amp; Control Test</a></p>
       <p>
         It&rsquo;s finally time to give all the cards created so far a test so I can check everything works together as expected. This represents quite a bit of a milestone as the …
@@ -208,9 +209,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Apr 2016 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">11 Apr 2016 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/04/w-backplane-construction-power/">W Backplane Construction &amp; Power Distribution</a></p>
       <p>
         Before I can test the new decoder, sequencer and controller cards all working together with the rest of the computer I need to construct the &lsquo;W&rsquo; backplane which …
@@ -248,9 +249,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">29 Mar 2016 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">29 Mar 2016 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/03/user-interface-construction-instruction/">User Interface Construction: Instruction, Clock and Sequencer</a></p>
       <p>
         Well, the good news is I&rsquo;ve just passed a major milestone in constructing this relay computer &hellip; it can now perform a single instruction in full firing the various …
@@ -292,9 +293,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Jan 2016 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">01 Jan 2016 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/01/controller-construction-mov-8-alu-and/">Controller Construction: MOV-8, ALU and SETAB</a></p>
       <p>
         So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the …
@@ -340,9 +341,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">08 Jul 2015 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">08 Jul 2015 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/07/sequencer-construction-8-cycle-fsm/">Sequencer Construction: 8-cycle FSM</a></p>
       <p>
         I&rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &hellip; time …
@@ -392,9 +393,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Jun 2015 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">07 Jun 2015 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/06/decoder-construction-mov-8-alu-setab/">Decoder Construction: MOV-8, ALU &amp; SETAB</a></p>
       <p>
         In a change from prior form I&rsquo;m combining the construction and testing of the next card in to a single post this time. Partly because this card is a nice easy one but …
@@ -444,9 +445,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 May 2015 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">16 May 2015 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/05/register-construction-completed/">Register Construction: Completed Instruction Register Full Test</a></p>
       <p>
         Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
@@ -493,9 +494,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">09 May 2015 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">09 May 2015 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/05/register-construction-instruction/">Register Construction: Instruction Register</a></p>
       <p>
         There&rsquo;s been lots of theory going on in my recent posts but the time for design is over (for now) &hellip; it&rsquo;s time to get constructing. The first card up in this …
@@ -537,9 +538,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 May 2015 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">04 May 2015 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/05/new-workbench/">New Workbench</a></p>
       <p>
         Those who have been reading my posts and watching my videos (you have my sympathy) will know that alongside constructing this computer I&rsquo;ve also been busy renovating a …
@@ -581,9 +582,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">08 Apr 2015 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">08 Apr 2015 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/04/user-interface-design-instruction-clock/">User Interface Design: Instruction, Clock and Sequencer</a></p>
       <p>
         Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final …
@@ -625,9 +626,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Apr 2015 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">04 Apr 2015 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/04/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 2 of 2)</a></p>
       <p>
         In part one of this two part post I introduced the design of the control relays for each of the MOV-8, ALU and SETAB instructions. With these in hand I can now move on to …
@@ -669,9 +670,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">31 Mar 2015 - 9 min read</p>
+      <p class="subtitle is-7 mb-2">31 Mar 2015 - 9 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/03/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 1 of 2)</a></p>
       <p>
         Over the last five posts I&rsquo;ve been building up the design of a set of cards so that the computer will be able to understand and perform the MOV-8, ALU and SETAB …

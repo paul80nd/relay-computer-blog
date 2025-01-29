@@ -13,7 +13,7 @@ To ensure I was ‘playing fair’ when constructing the controller I only solde
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -98,11 +98,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -111,27 +112,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item is-active">
+        <a href="/posts/" class="navbar-item is-tab is-active">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item ">
+        <a href="/tags/" class="navbar-item is-tab ">
           Tags
         </a>
         
@@ -152,7 +153,7 @@ window.cookieconsent.initialise({
 </section>
 
 
-<section class="section has-background-white">
+<section class="section">
   <div class="container">
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
@@ -176,13 +177,13 @@ register are the same then the value in that register is cleared:</p>
     <h4>8-Bit Move</h4>
     <div class="field is-grouped is-grouped-multiline is-family-monospace">
       <div class="control">
-        <div class="tags has-addons are-medium">
+        <div class="tags has-addons are-medium has-text-white">
           <span class="tag is-primary">MOV8</span>
           <span class="tag is-success">8</span>
         </div>
       </div>
       <div class="control">
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-0">
           <span class="tag is-link">0</span>
           <span class="tag is-link">0</span>
           <span class="tag is-info">d</span>
@@ -231,13 +232,13 @@ command that does it all in one go (via the 16-bit address bus). Well, that&rsqu
     <h4>16-Bit Move</h4>
     <div class="field is-grouped is-grouped-multiline is-family-monospace">
       <div class="control">
-        <div class="tags has-addons are-medium">
+        <div class="tags has-addons are-medium has-text-white">
           <span class="tag is-primary">MOV16</span>
           <span class="tag is-success">10</span>
         </div>
       </div>
       <div class="control">
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-0">
           <span class="tag is-link">1</span>
           <span class="tag is-link">0</span>
           <span class="tag is-link">1</span>
@@ -273,13 +274,13 @@ but there&rsquo;s something special we can do on the GOTO instruction &hellip; l
     <h4>Branch/Call &amp; 16-bit Load Immediate</h4>
     <div class="field is-grouped is-grouped-multiline is-family-monospace">
       <div class="control">
-        <div class="tags has-addons are-medium">
+        <div class="tags has-addons are-medium has-text-white">
           <span class="tag is-primary">GOTO</span>
           <span class="tag is-success">24</span>
         </div>
       </div>
       <div class="control">
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-0">
           <span class="tag is-link">1</span>
           <span class="tag is-link">1</span>
           <span class="tag is-info">d</span>
@@ -290,7 +291,7 @@ but there&rsquo;s something special we can do on the GOTO instruction &hellip; l
           <span class="tag is-info">x</span>
         </div>
         
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-1 mt-1">
           <span class="tag is-info">h</span>
           <span class="tag is-info">h</span>
           <span class="tag is-info">h</span>
@@ -300,7 +301,7 @@ but there&rsquo;s something special we can do on the GOTO instruction &hellip; l
           <span class="tag is-info">h</span>
           <span class="tag is-info">h</span>
         </div>
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-0">
           <span class="tag is-info">l</span>
           <span class="tag is-info">l</span>
           <span class="tag is-info">l</span>
@@ -357,13 +358,13 @@ With the first 5 bits taken for classification that leaves us 3-bits spare for s
     <h4>Load Switches</h4>
     <div class="field is-grouped is-grouped-multiline is-family-monospace">
       <div class="control">
-        <div class="tags has-addons are-medium">
+        <div class="tags has-addons are-medium has-text-white">
           <span class="tag is-primary">LDSW</span>
           <span class="tag is-success">10</span>
         </div>
       </div>
       <div class="control">
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-0">
           <span class="tag is-link">1</span>
           <span class="tag is-link">0</span>
           <span class="tag is-link">1</span>
@@ -387,13 +388,13 @@ With the first 5 bits taken for classification that leaves us 3-bits spare for s
     <h4>Halt</h4>
     <div class="field is-grouped is-grouped-multiline is-family-monospace">
       <div class="control">
-        <div class="tags has-addons are-medium">
+        <div class="tags has-addons are-medium has-text-white">
           <span class="tag is-primary">HALT</span>
           <span class="tag is-success">10</span>
         </div>
       </div>
       <div class="control">
-        <div class="tags has-addons are-medium" style="margin-bottom: 0;">
+        <div class="tags has-addons are-medium mb-0">
           <span class="tag is-link">1</span>
           <span class="tag is-link">0</span>
           <span class="tag is-link">1</span>
