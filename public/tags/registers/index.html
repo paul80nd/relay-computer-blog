@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -169,9 +170,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">09 Aug 2019 - 9 min read</p>
+      <p class="subtitle is-7 mb-2">09 Aug 2019 - 9 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/08/16bit-register-pcb-design/">16-bit Register PCB Design</a></p>
       <p>
         It&rsquo;s time for the oddly therapeutic part of designing a PCB &hellip; laying out the board. In my last post I covered the schematic design and so we now have all the …
@@ -213,9 +214,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Jul 2019 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">15 Jul 2019 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/07/16bit-register-design/">16-bit Register Design</a></p>
       <p>
         In my last couple of posts I&rsquo;ve been building up to a change of approach in how I&rsquo;m making the cards in my computer. This is mainly because I can&rsquo;t face the …
@@ -257,9 +258,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2017 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2017 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/11/program-counter-construction/">Program Counter Construction</a></p>
       <p>
         In my last couple of posts I&rsquo;ve been slightly distracted by some &lsquo;miscellany&rsquo; but now I return to form and crack on with constructing the program counter. …
@@ -309,9 +310,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">29 May 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">29 May 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/05/register-design-program-counter/">Register Design: Program Counter</a></p>
       <p>
         It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in …
@@ -353,9 +354,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 May 2015 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">16 May 2015 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/05/register-construction-completed/">Register Construction: Completed Instruction Register Full Test</a></p>
       <p>
         Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
@@ -402,9 +403,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">09 May 2015 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">09 May 2015 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/05/register-construction-instruction/">Register Construction: Instruction Register</a></p>
       <p>
         There&rsquo;s been lots of theory going on in my recent posts but the time for design is over (for now) &hellip; it&rsquo;s time to get constructing. The first card up in this …
@@ -446,9 +447,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Dec 2014 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">01 Dec 2014 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/12/register-design-instruction-register/">Register Design: Instruction Register</a></p>
       <p>
         Well, it&rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &hellip; and that&rsquo;s mainly because …
@@ -490,9 +491,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Aug 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">19 Aug 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/08/alu-registers-d-test-with-new-display/">ALU &amp; Registers A-D Test with new Display Cards</a></p>
       <p>
         Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&rsquo;s time to fit them to the upper enclosure. …
@@ -546,9 +547,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">28 Jun 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">28 Jun 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/06/register-construction-completed-and-d-8/">Register Construction: Completed A and D 8-bit Registers Full Test</a></p>
       <p>
         The A/D Register card is now complete and looks like this:
@@ -595,9 +596,9 @@ As usual I&rsquo;ve put a video together that demonstrates this card in operatio
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">22 Jun 2014 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">22 Jun 2014 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/06/register-construction-and-d-8-bit/">Register Construction: A and D 8-bit Registers</a></p>
       <p>
         I haven&rsquo;t posted in nearly a month but in between bouts of enjoying the rare British sunshine I&rsquo;ve been plodding away at the A/D register card and it&rsquo;s now …
@@ -639,9 +640,9 @@ As usual I&rsquo;ve put a video together that demonstrates this card in operatio
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">26 May 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">26 May 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/05/register-construction-completed-b-and-c/">Register Construction: Completed B and C 8-bit Registers Full Test</a></p>
       <p>
         The B/C Register card is now complete and looks like this:
@@ -688,9 +689,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 May 2014 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">24 May 2014 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/05/register-construction-b-and-c-8-bit/">Register Construction: B and C 8-bit Registers</a></p>
       <p>
         As mentioned in my last post I decided this time around not to post after each stage of card construction (being as the construction steps are now pretty similar to those for …
@@ -732,9 +733,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 May 2014 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">11 May 2014 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/05/register-design-b-and-c-8-bit-registers/">Register Design: B and C 8-bit Registers</a></p>
       <p>
         In a recent post I put up the design for the A and D 8-bit register card &hellip; the B and C register card is very similar in design but has the additional complexity that it …
@@ -776,9 +777,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 Apr 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">24 Apr 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/register-design-dual-output-8-bit/">Register Design: Dual Output 8-bit Register</a></p>
       <p>
         In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the …
@@ -820,9 +821,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Apr 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">20 Apr 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/register-design-and-d-8-bit-registers/">Register Design: A and D 8-bit Registers</a></p>
       <p>
         In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to …
@@ -864,9 +865,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 Apr 2014 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">16 Apr 2014 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/register-design-general-purpose-8-bit/">Register Design: General Purpose 8-bit Register</a></p>
       <p>
         This post covers the design of a general purpose 8-bit register that can be loaded from the data bus and then selected back to the data bus at a later time. This permits …

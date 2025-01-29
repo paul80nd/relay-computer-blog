@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -169,9 +170,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2022 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2022 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/11/tick-tock/">Tick Tock</a></p>
       <p>
         Well, what a journey that&rsquo;s been then &hellip; I started work on a clock for my relay computer back in May 2020 and today (20th Nov 2022) this post marks the end of it. …
@@ -221,9 +222,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Feb 2020 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">01 Feb 2020 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2020/02/twenty-twenty-update/">2020 Update</a></p>
       <p>
         As the clock struck midnight at the very end of 2019 I decided, over a glass of something sparkling, that I&rsquo;d set myself a challenge to put out a series of six YouTube …
@@ -265,9 +266,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Jan 2020 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">05 Jan 2020 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2020/01/decoder-construction/">Decoder Construction</a></p>
       <p>
         In my last post I covered off the full design for the decoder card so all that remains is to get it soldered up and tested. As before I&rsquo;ve put a video together which …
@@ -317,9 +318,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">21 Dec 2019 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">21 Dec 2019 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/12/controller-construction/">Controller Construction</a></p>
       <p>
         In my last couple of posts I covered off the full design for the controller unit. As the PCBs have now arrived I can get on with soldering up the cards and giving them a test. …
@@ -369,9 +370,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2019 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2019 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-construction/">Sequencer Construction</a></p>
       <p>
         In my last couple of posts I covered off the full design for the sequencer unit. With PCBs now safely arrived in the post I can get on with soldering up the cards and giving …
@@ -417,9 +418,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Mar 2019 - 12 min read</p>
+      <p class="subtitle is-7 mb-2">04 Mar 2019 - 12 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/03/making-a-pcb/">Making a PCB</a></p>
       <p>
         After years of using pad/prototyping boards to build my computer I&rsquo;ve decided to switch things up a bit and have a go at making a custom PCB. The thinking is that it …
@@ -461,9 +462,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">27 Mar 2018 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">27 Mar 2018 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/03/auxiliary-control-construction/">Auxiliary Control Construction</a></p>
       <p>
         In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the …
@@ -517,9 +518,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 Jan 2018 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">16 Jan 2018 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/01/fetch-and-increment-construction-and/">Fetch and Increment - Construction and Test</a></p>
       <p>
         This is a bit of a landmark moment &hellip; at least for the construction of my relay computer. For a long time now my blog posts have been leading up to the point where my …
@@ -569,9 +570,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Jan 2018 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">07 Jan 2018 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/01/incrementer-test/">Incrementer Test</a></p>
       <p>
         In my last two posts I covered the construction of the upper and lower incrementer cards. The lower card is a 16-bit half adder and the upper card is a 16-bit register. …
@@ -617,9 +618,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2017 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2017 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/11/memory-test/">Memory Test</a></p>
       <p>
         I&rsquo;ve covered the construction of the upper and lower memory cards in my last two posts &hellip; it&rsquo;s now time to bring those two cards together to form the memory …
@@ -665,9 +666,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2017 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2017 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/11/program-counter-construction/">Program Counter Construction</a></p>
       <p>
         In my last couple of posts I&rsquo;ve been slightly distracted by some &lsquo;miscellany&rsquo; but now I return to form and crack on with constructing the program counter. …
@@ -717,9 +718,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">18 Aug 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">18 Aug 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/08/the-problem-with-memory/">The problem with memory</a></p>
       <p>
         It&rsquo;s time, at last, to start looking at the design for the computer&rsquo;s memory and this is a bit of a game changer as it&rsquo;s the final part of the jigsaw that …
@@ -773,9 +774,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Aug 2017 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">06 Aug 2017 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/08/more-laser-cut-parts/">More Laser Cut Parts</a></p>
       <p>
         I&rsquo;ve nearly got the design for the memory cards done and ready to share but once that&rsquo;s out the way it&rsquo;ll be time to get on with some construction again. …
@@ -821,9 +822,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 May 2016 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">24 May 2016 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/05/sequencing-control-test/">Sequencing &amp; Control Test</a></p>
       <p>
         It&rsquo;s finally time to give all the cards created so far a test so I can check everything works together as expected. This represents quite a bit of a milestone as the …
@@ -865,9 +866,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Jan 2016 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">01 Jan 2016 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/01/controller-construction-mov-8-alu-and/">Controller Construction: MOV-8, ALU and SETAB</a></p>
       <p>
         So yea, it&rsquo;s been a while since my last post &hellip; in fact it&rsquo;s been just over six months. For some reason I decided I didn&rsquo;t have enough to do in the …
@@ -913,9 +914,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">08 Jul 2015 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">08 Jul 2015 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/07/sequencer-construction-8-cycle-fsm/">Sequencer Construction: 8-cycle FSM</a></p>
       <p>
         I&rsquo;m just about at the half way mark now for getting the computer to operate the MOV8, ALU and SETAB instructions. The easier cards are out of the way now &hellip; time …
@@ -965,9 +966,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Jun 2015 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">07 Jun 2015 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/06/decoder-construction-mov-8-alu-setab/">Decoder Construction: MOV-8, ALU &amp; SETAB</a></p>
       <p>
         In a change from prior form I&rsquo;m combining the construction and testing of the next card in to a single post this time. Partly because this card is a nice easy one but …
@@ -1017,9 +1018,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 May 2015 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">16 May 2015 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/05/register-construction-completed/">Register Construction: Completed Instruction Register Full Test</a></p>
       <p>
         Following on from my last post, and after popping in some relays, the instruction register is complete and looks like this:
@@ -1066,9 +1067,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Aug 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">19 Aug 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/08/alu-registers-d-test-with-new-display/">ALU &amp; Registers A-D Test with new Display Cards</a></p>
       <p>
         Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&rsquo;s time to fit them to the upper enclosure. …
@@ -1122,9 +1123,9 @@ As usual I&rsquo;ve put a video together that …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">28 Jun 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">28 Jun 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/06/register-construction-completed-and-d-8/">Register Construction: Completed A and D 8-bit Registers Full Test</a></p>
       <p>
         The A/D Register card is now complete and looks like this:
@@ -1171,9 +1172,9 @@ As usual I&rsquo;ve put a video together that demonstrates this card in operatio
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">26 May 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">26 May 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/05/register-construction-completed-b-and-c/">Register Construction: Completed B and C 8-bit Registers Full Test</a></p>
       <p>
         The B/C Register card is now complete and looks like this:
@@ -1220,9 +1221,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Mar 2014 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">30 Mar 2014 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/completed-alu/">Completed ALU</a></p>
       <p>
         Following my last post on the completed backplane I&rsquo;m now in a position to connect all the other completed cards together to test the full ALU. The ALU is made up of the …
@@ -1268,9 +1269,9 @@ As usual I&rsquo;ve put a video together which demonstrates this card in operati
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 Mar 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">16 Mar 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/alu-construction-completed-control-card/">ALU Construction: Completed Control Card Full Test</a></p>
       <p>
         The ALU Control Card is now complete and looks like this:
@@ -1321,9 +1322,9 @@ This card was, on the whole, much simpler and quicker to put together than previ
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Feb 2014 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">23 Feb 2014 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/02/alu-construction-completed-arithmetic/">ALU Construction: Completed Arithmetic Card Full Test</a></p>
       <p>
         The ALU arithmetic card is now complete! The final card looks like this:
@@ -1374,9 +1375,9 @@ As I did for the ALU logic card before I&rsquo;ve put the following YouTube vide
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">21 Jan 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">21 Jan 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/01/alu-construction-1-bit-arithmetic-full/">ALU Construction: 1-bit Arithmetic Full Construction</a></p>
       <p>
         So, as mentioned in my last post this time I&rsquo;ve put in the wire links and wraps needed to test the first bit of the arithmetic card. With these in place I can make sure …
@@ -1422,9 +1423,9 @@ As I did for the ALU logic card before I&rsquo;ve put the following YouTube vide
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">18 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">18 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-completed-logic-card/">ALU Construction: Completed Logic Card Full Test</a></p>
       <p>
         The ALU logic card is now finally complete! &hellip; well, it is now I&rsquo;ve popped the last few relays into their sockets. The final card looks like this:
@@ -1475,9 +1476,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">12 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">12 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-8-bit-logic-unit-tests/">ALU Construction: 8-bit Logic Unit Tests</a></p>
       <p>
         There&rsquo;s now enough sockets, solder and wires to test all eight bits of the ALU logic card. This isn&rsquo;t quite a full test as the gating relays that apply one of the …
@@ -1523,9 +1524,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">07 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-1-bit-logic-full/">ALU Construction: 1-bit Logic Full Construction</a></p>
       <p>
         So, although I probably should construct the logic card methodically a full stage at a time (solder header pins then sockets then wire wrap) I can&rsquo;t resist fully …
@@ -1569,9 +1570,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">06 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-led-tests/">ALU Construction: LED Tests</a></p>
       <p>
         Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control). …
@@ -1617,9 +1618,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">02 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-connectors-and-leds/">ALU Construction: Connectors and LEDs</a></p>
       <p>
         As promised in my last post it&rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU. I&rsquo;m going start …
@@ -1663,9 +1664,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">31 Oct 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">31 Oct 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/10/it-begins/">It begins</a></p>
       <p>
         &hellip; although being as I&rsquo;m already a couple of months in on my little project then perhaps that should be &lsquo;it began&rsquo;.

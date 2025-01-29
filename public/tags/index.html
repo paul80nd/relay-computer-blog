@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -159,9 +160,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/alu/"><small class="has-text-grey">#</small>Alu</a></p>
+      <p class="title is-5">
+        <a href="/tags/alu/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Alu
+        </a>
     </div>
   </div>
 </article>
@@ -170,9 +175,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/architecture/"><small class="has-text-grey">#</small>Architecture</a></p>
+      <p class="title is-5">
+        <a href="/tags/architecture/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Architecture
+        </a>
     </div>
   </div>
 </article>
@@ -181,9 +190,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/coding/"><small class="has-text-grey">#</small>Coding</a></p>
+      <p class="title is-5">
+        <a href="/tags/coding/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Coding
+        </a>
     </div>
   </div>
 </article>
@@ -192,9 +205,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/completion/"><small class="has-text-grey">#</small>Completion</a></p>
+      <p class="title is-5">
+        <a href="/tags/completion/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Completion
+        </a>
     </div>
   </div>
 </article>
@@ -203,9 +220,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/construction/"><small class="has-text-grey">#</small>Construction</a></p>
+      <p class="title is-5">
+        <a href="/tags/construction/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Construction
+        </a>
     </div>
   </div>
 </article>
@@ -214,9 +235,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/control/"><small class="has-text-grey">#</small>Control</a></p>
+      <p class="title is-5">
+        <a href="/tags/control/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Control
+        </a>
     </div>
   </div>
 </article>
@@ -225,9 +250,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/decoder/"><small class="has-text-grey">#</small>Decoder</a></p>
+      <p class="title is-5">
+        <a href="/tags/decoder/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Decoder
+        </a>
     </div>
   </div>
 </article>
@@ -236,9 +265,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/design/"><small class="has-text-grey">#</small>Design</a></p>
+      <p class="title is-5">
+        <a href="/tags/design/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Design
+        </a>
     </div>
   </div>
 </article>
@@ -247,9 +280,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/enclosure/"><small class="has-text-grey">#</small>Enclosure</a></p>
+      <p class="title is-5">
+        <a href="/tags/enclosure/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Enclosure
+        </a>
     </div>
   </div>
 </article>
@@ -258,9 +295,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/incrementer/"><small class="has-text-grey">#</small>Incrementer</a></p>
+      <p class="title is-5">
+        <a href="/tags/incrementer/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Incrementer
+        </a>
     </div>
   </div>
 </article>
@@ -269,9 +310,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/logic-unit/"><small class="has-text-grey">#</small>Logic-Unit</a></p>
+      <p class="title is-5">
+        <a href="/tags/logic-unit/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Logic-Unit
+        </a>
     </div>
   </div>
 </article>
@@ -280,9 +325,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/memory/"><small class="has-text-grey">#</small>Memory</a></p>
+      <p class="title is-5">
+        <a href="/tags/memory/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Memory
+        </a>
     </div>
   </div>
 </article>
@@ -291,9 +340,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/misc/"><small class="has-text-grey">#</small>Misc</a></p>
+      <p class="title is-5">
+        <a href="/tags/misc/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Misc
+        </a>
     </div>
   </div>
 </article>
@@ -302,9 +355,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/musings/"><small class="has-text-grey">#</small>Musings</a></p>
+      <p class="title is-5">
+        <a href="/tags/musings/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Musings
+        </a>
     </div>
   </div>
 </article>
@@ -313,9 +370,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/power/"><small class="has-text-grey">#</small>Power</a></p>
+      <p class="title is-5">
+        <a href="/tags/power/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Power
+        </a>
     </div>
   </div>
 </article>
@@ -324,9 +385,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/pulse-distribution/"><small class="has-text-grey">#</small>Pulse-Distribution</a></p>
+      <p class="title is-5">
+        <a href="/tags/pulse-distribution/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Pulse-Distribution
+        </a>
     </div>
   </div>
 </article>
@@ -335,9 +400,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/registers/"><small class="has-text-grey">#</small>Registers</a></p>
+      <p class="title is-5">
+        <a href="/tags/registers/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Registers
+        </a>
     </div>
   </div>
 </article>
@@ -346,9 +415,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/sequencing/"><small class="has-text-grey">#</small>Sequencing</a></p>
+      <p class="title is-5">
+        <a href="/tags/sequencing/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Sequencing
+        </a>
     </div>
   </div>
 </article>
@@ -357,9 +430,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/simulation/"><small class="has-text-grey">#</small>Simulation</a></p>
+      <p class="title is-5">
+        <a href="/tags/simulation/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Simulation
+        </a>
     </div>
   </div>
 </article>
@@ -368,9 +445,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/theory/"><small class="has-text-grey">#</small>Theory</a></p>
+      <p class="title is-5">
+        <a href="/tags/theory/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Theory
+        </a>
     </div>
   </div>
 </article>
@@ -379,9 +460,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/ui/"><small class="has-text-grey">#</small>UI</a></p>
+      <p class="title is-5">
+        <a href="/tags/ui/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          UI
+        </a>
     </div>
   </div>
 </article>
@@ -390,9 +475,13 @@ window.cookieconsent.initialise({
       
       <div class="column is-half is-one-third-desktop">
         <article class="card">
-  <div class="card-content has-background-white">
+  <div class="card-content">
     <div class="content">
-      <p class="title is-4"><a href="/tags/video/"><small class="has-text-grey">#</small>Video</a></p>
+      <p class="title is-5">
+        <a href="/tags/video/">
+          <span class="icon"><i class="far fa-tag fa-fw"></i></span>&nbsp;
+          Video
+        </a>
     </div>
   </div>
 </article>

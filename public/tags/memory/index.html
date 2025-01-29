@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -169,9 +170,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2017 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2017 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/11/memory-test/">Memory Test</a></p>
       <p>
         I&rsquo;ve covered the construction of the upper and lower memory cards in my last two posts &hellip; it&rsquo;s now time to bring those two cards together to form the memory …
@@ -217,9 +218,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">25 Nov 2017 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">25 Nov 2017 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/11/memory-construction-part-2-of-2/">Memory Construction (Part 2 of 2)</a></p>
       <p>
         In my last post I made a start on the memory unit construction with the lower memory card. The lower card centres around the memory IC which runs at 5V. The upper memory card …
@@ -261,9 +262,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Nov 2017 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">19 Nov 2017 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/11/memory-construction-part-1-of-2/">Memory Construction (Part 1 of 2)</a></p>
       <p>
         It&rsquo;s time to make a start on the construction of the memory unit and as mentioned in my last post this one is a bit more complex than &lsquo;boring old registers&rsquo; …
@@ -305,9 +306,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Sep 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">06 Sep 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/09/memory-design-part-2-of-2/">Memory Design (Part 2 of 2)</a></p>
       <p>
         In my last post I started the design for the computer&rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the …
@@ -349,9 +350,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">03 Sep 2017 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">03 Sep 2017 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/09/memory-design-part-1-of-2/">Memory Design (Part 1 of 2)</a></p>
       <p>
         In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &hellip; I also alluded to there being some complexities in interfacing …
@@ -393,9 +394,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">18 Aug 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">18 Aug 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/08/the-problem-with-memory/">The problem with memory</a></p>
       <p>
         It&rsquo;s time, at last, to start looking at the design for the computer&rsquo;s memory and this is a bit of a game changer as it&rsquo;s the final part of the jigsaw that …

@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -169,9 +170,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">27 Mar 2018 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">27 Mar 2018 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/03/auxiliary-control-construction/">Auxiliary Control Construction</a></p>
       <p>
         In my last three posts I covered the design of the auxiliary control unit which will ease entering and inspecting programs in the computer’s memory. With the design ‘in the …
@@ -225,9 +226,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Feb 2018 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">07 Feb 2018 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/02/auxiliary-control-design-part-3-of-3/">Auxiliary Control Design (Part 3 of 3)</a></p>
       <p>
         This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&rsquo;s …
@@ -277,9 +278,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">29 Jan 2018 - 12 min read</p>
+      <p class="subtitle is-7 mb-2">29 Jan 2018 - 12 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/01/auxiliary-control-design-part-2-of-3/">Auxiliary Control Design (Part 2 of 3)</a></p>
       <p>
         In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&rsquo;s a …
@@ -329,9 +330,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 Jan 2018 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">24 Jan 2018 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/01/auxiliary-control-design-part-1-of-3/">Auxiliary Control Design (Part 1 of 3)</a></p>
       <p>
         My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into …
@@ -381,9 +382,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">29 Mar 2016 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">29 Mar 2016 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2016/03/user-interface-construction-instruction/">User Interface Construction: Instruction, Clock and Sequencer</a></p>
       <p>
         Well, the good news is I&rsquo;ve just passed a major milestone in constructing this relay computer &hellip; it can now perform a single instruction in full firing the various …
@@ -425,9 +426,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">08 Apr 2015 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">08 Apr 2015 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/04/user-interface-design-instruction-clock/">User Interface Design: Instruction, Clock and Sequencer</a></p>
       <p>
         Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final …
@@ -469,9 +470,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Aug 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">19 Aug 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/08/alu-registers-d-test-with-new-display/">ALU &amp; Registers A-D Test with new Display Cards</a></p>
       <p>
         Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&rsquo;s time to fit them to the upper enclosure. …
@@ -525,9 +526,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Jul 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">20 Jul 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/07/user-interface-display-b-initial-design/">User Interface: Display B Initial Design and Construction</a></p>
       <p>
         In my last post I put together the beginnings of the first display card &hellip; named in a brilliant flash of nomenclature as display card A. This time I&rsquo;m turning my …
@@ -573,9 +574,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">12 Jul 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">12 Jul 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/07/user-interface-display-initial-design/">User Interface: Display A Initial Design and Construction</a></p>
       <p>
         Following on from working on the main data switches in my last post this time I&rsquo;ve taken the first steps in designing and constructing the first of two display cards …
@@ -621,9 +622,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Jul 2014 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">05 Jul 2014 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/07/user-interface-data-switches/">User Interface: Data Switches</a></p>
       <p>
         Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with …

@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -169,9 +170,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Dec 2022 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">05 Dec 2022 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/12/controller-mov8-mov16-misc-design/">Controller Design: MOV8, MOV16 &amp; MISC Instructions</a></p>
       <p>
         Way back in 2019 I discussed how you can&rsquo;t &lsquo;half design a PCB&rsquo; and that, as a result, my controller cards already have all the required functionality laid …
@@ -213,9 +214,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2022 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2022 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/11/tick-tock/">Tick Tock</a></p>
       <p>
         Well, what a journey that&rsquo;s been then &hellip; I started work on a clock for my relay computer back in May 2020 and today (20th Nov 2022) this post marks the end of it. …
@@ -265,9 +266,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Nov 2022 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">05 Nov 2022 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/11/back-to-backplanes/">Back to Backplanes</a></p>
       <p>
         Quite a while ago I decided to give up on the tedious wire wrap technique for building my cards. Although it was certainly more authentic and in-keeping with my …
@@ -309,9 +310,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">22 Dec 2019 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">22 Dec 2019 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/12/decoder-design-pcb/">Decoder Design: Schematic &amp; PCBs</a></p>
       <p>
         I&rsquo;ve almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing the sequencer and controller units is …
@@ -353,9 +354,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Dec 2019 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">20 Dec 2019 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/12/controller-design-pcb/">Controller Design: Schematic &amp; PCBs</a></p>
       <p>
         In my last couple of posts I finalised the controller schematic designs for the ALU, SETAB, MOV8 and GOTO class of instructions. Now it&rsquo;s time to bring all those …
@@ -397,9 +398,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Dec 2019 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">07 Dec 2019 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/12/controller-alu-mov8-setab-design/">Controller Design: ALU, MOV8 &amp; SETAB Instructions</a></p>
       <p>
         In my last post I covered off the controller design for the GOTO instruction. Being as I&rsquo;ve decided to implement the controller on a new set of PCB cards I need to …
@@ -441,9 +442,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2019 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2019 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/controller-goto-design/">Controller Design: GOTO Instruction</a></p>
       <p>
         With the sequencer now designed and constructed I&rsquo;m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so …
@@ -485,9 +486,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2019 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2019 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-design-pcb/">Sequencer Design: Schematic &amp; PCBs</a></p>
       <p>
         I&rsquo;ve got the designs for the 24-cycle FSM and pulse distribution in place so all that&rsquo;s left for the sequencer is to bring the schematics together and then design …
@@ -529,9 +530,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 Nov 2019 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">02 Nov 2019 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-design-pulse-dist/">Sequencer Design: Pulse Distribution</a></p>
       <p>
         In my last post I extended the 8-cycle FSM (finite state machine) design all the way up to 24-cycles so that we can run longer and more complicated instructions. In this case …
@@ -573,9 +574,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Nov 2019 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">01 Nov 2019 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/11/sequencer-design-24-cycle-fsm/">Sequencer Design: 24-cycle FSM</a></p>
       <p>
         Recently I&rsquo;ve been looking at what&rsquo;s needed to implement branching in my computer (the upcoming GOTO class of instructions). In my last post I covered the timing …
@@ -617,9 +618,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Oct 2019 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">06 Oct 2019 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/10/branching-opcode-timing/">Branching: Opcode Timing</a></p>
       <p>
         In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here&rsquo;s where I got to last time: …
@@ -669,9 +670,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Sep 2019 - 7 min read</p>
+      <p class="subtitle is-7 mb-2">23 Sep 2019 - 7 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/09/branching-opcode-design/">Branching: Opcode Design</a></p>
       <p>
         There&rsquo;s been a common theme recently in the comments on my YouTube videos &hellip; people are ready to see my relay computer gain the power of branching and become a …
@@ -721,9 +722,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">09 Aug 2019 - 9 min read</p>
+      <p class="subtitle is-7 mb-2">09 Aug 2019 - 9 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/08/16bit-register-pcb-design/">16-bit Register PCB Design</a></p>
       <p>
         It&rsquo;s time for the oddly therapeutic part of designing a PCB &hellip; laying out the board. In my last post I covered the schematic design and so we now have all the …
@@ -765,9 +766,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Jul 2019 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">15 Jul 2019 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/07/16bit-register-design/">16-bit Register Design</a></p>
       <p>
         In my last couple of posts I&rsquo;ve been building up to a change of approach in how I&rsquo;m making the cards in my computer. This is mainly because I can&rsquo;t face the …
@@ -809,9 +810,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">14 Jan 2019 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">14 Jan 2019 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2019/01/change-of-approach/">A change of approach</a></p>
       <p>
         In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you&rsquo;ve followed my blog (over …
@@ -853,9 +854,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Feb 2018 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">07 Feb 2018 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/02/auxiliary-control-design-part-3-of-3/">Auxiliary Control Design (Part 3 of 3)</a></p>
       <p>
         This is the last post in a mini-series of three covering the design of the auxiliary control unit which will ease entering and inspecting programs in the computer&rsquo;s …
@@ -905,9 +906,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">29 Jan 2018 - 12 min read</p>
+      <p class="subtitle is-7 mb-2">29 Jan 2018 - 12 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/01/auxiliary-control-design-part-2-of-3/">Auxiliary Control Design (Part 2 of 3)</a></p>
       <p>
         In my last post I made a start on the auxiliary control design which once completed will make it much easier to load instructions in to memory - effectively it&rsquo;s a …
@@ -957,9 +958,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 Jan 2018 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">24 Jan 2018 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2018/01/auxiliary-control-design-part-1-of-3/">Auxiliary Control Design (Part 1 of 3)</a></p>
       <p>
         My relay computer is now at the point where it can execute a program in memory without assistance. In order to do that though, of course, the program needs to be loaded into …
@@ -1009,9 +1010,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">17 Sep 2017 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">17 Sep 2017 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/09/control-design-fetch-and-increment/">Control Design: Fetch and Increment</a></p>
       <p>
         The design of the computer&rsquo;s memory, incrementer and program counter are now complete but there&rsquo;s one last piece of the &lsquo;puzzle&rsquo; required to get the …
@@ -1057,9 +1058,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Sep 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">06 Sep 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/09/memory-design-part-2-of-2/">Memory Design (Part 2 of 2)</a></p>
       <p>
         In my last post I started the design for the computer&rsquo;s memory unit which is spread over two cards. With the lower memory card design in place its now time to finish the …
@@ -1101,9 +1102,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">03 Sep 2017 - 8 min read</p>
+      <p class="subtitle is-7 mb-2">03 Sep 2017 - 8 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/09/memory-design-part-1-of-2/">Memory Design (Part 1 of 2)</a></p>
       <p>
         In my last post I explained my decision to use a &lsquo;modern&rsquo; memory chip in my relay computer &hellip; I also alluded to there being some complexities in interfacing …
@@ -1145,9 +1146,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">18 Aug 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">18 Aug 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/08/the-problem-with-memory/">The problem with memory</a></p>
       <p>
         It&rsquo;s time, at last, to start looking at the design for the computer&rsquo;s memory and this is a bit of a game changer as it&rsquo;s the final part of the jigsaw that …
@@ -1201,9 +1202,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">17 Jul 2017 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">17 Jul 2017 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/07/incrementer-design/">Incrementer Design</a></p>
       <p>
         In my last post I covered the design of the 16-bit half adder which takes whatever value is currently on the address bus and increments it by one. To make this incremented …
@@ -1245,9 +1246,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Jul 2017 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">15 Jul 2017 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/07/incrementer-design-16-bit-half-adder/">Incrementer Design: 16-bit Half Adder</a></p>
       <p>
         In the last post I introduced the design for the 1-bit Half Adder. This post covers connecting sixteen of these units together to make the 16-bit Half Adder.
@@ -1290,9 +1291,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Jun 2017 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">04 Jun 2017 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/06/incrementer-design-1-bit-half-adder/">Incrementer Design: 1-bit Half Adder</a></p>
       <p>
         Typical isn&rsquo;t it?! &hellip; you wait 10 months for a post and then two come along at once. Well, all being well, this should be the first of a short flurry of posts as I …
@@ -1334,9 +1335,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">29 May 2017 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">29 May 2017 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2017/05/register-design-program-counter/">Register Design: Program Counter</a></p>
       <p>
         It&rsquo;s been a while since my last post &hellip; pretty much 10 months in fact &hellip; and I&rsquo;d love to say I&rsquo;ve been quietly working on my relay computer in …
@@ -1378,9 +1379,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">08 Apr 2015 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">08 Apr 2015 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/04/user-interface-design-instruction-clock/">User Interface Design: Instruction, Clock and Sequencer</a></p>
       <p>
         Over my last seven posts I&rsquo;ve been slowly putting together the card designs so that the computer will be able to operate the MOV-8, ALU and SETAB instructions. The final …
@@ -1422,9 +1423,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Apr 2015 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">04 Apr 2015 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/04/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 2 of 2)</a></p>
       <p>
         In part one of this two part post I introduced the design of the control relays for each of the MOV-8, ALU and SETAB instructions. With these in hand I can now move on to …
@@ -1466,9 +1467,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">31 Mar 2015 - 9 min read</p>
+      <p class="subtitle is-7 mb-2">31 Mar 2015 - 9 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/03/control-design-mov-8-alu-and-setab-part/">Control Design: MOV-8, ALU and SETAB (part 1 of 2)</a></p>
       <p>
         Over the last five posts I&rsquo;ve been building up the design of a set of cards so that the computer will be able to understand and perform the MOV-8, ALU and SETAB …
@@ -1510,9 +1511,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">22 Mar 2015 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">22 Mar 2015 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/03/pulse-distribution-design-pulses-cd-and/">Pulse Distribution Design: Pulses C,D and E</a></p>
       <p>
         In my last post I covered the design of the 8-cycle finite state machine (FSM). In this post I&rsquo;ll now take the outputs from that FSM and combine them to produce the …
@@ -1554,9 +1555,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">26 Jan 2015 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">26 Jan 2015 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/01/sequencer-design-8-cycle-fsm/">Sequencer Design: 8-cycle FSM</a></p>
       <p>
         So far I&rsquo;ve got the design complete for the instruction register along with the initial design for the decoder and so I&rsquo;m well on the way to having the computer …
@@ -1598,9 +1599,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Jan 2015 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">04 Jan 2015 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2015/01/decoder-design-mov-8-alu-setab/">Decoder Design: MOV-8, ALU &amp; SETAB </a></p>
       <p>
         In my last post I introduced the design for the instruction register which holds the current 8-bit opcode that the computer is executing. The next card to design is the …
@@ -1642,9 +1643,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Dec 2014 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">01 Dec 2014 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/12/register-design-instruction-register/">Register Design: Instruction Register</a></p>
       <p>
         Well, it&rsquo;s fair to say that I rather underestimated just how much time decorating the new house would take up &hellip; and that&rsquo;s mainly because …
@@ -1686,9 +1687,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Sep 2014 - 11 min read</p>
+      <p class="subtitle is-7 mb-2">19 Sep 2014 - 11 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/09/sequencing-control-design-overview/">Sequencing &amp; Control Design: Overview</a></p>
       <p>
         I&rsquo;ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. …
@@ -1738,9 +1739,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Jul 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">20 Jul 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/07/user-interface-display-b-initial-design/">User Interface: Display B Initial Design and Construction</a></p>
       <p>
         In my last post I put together the beginnings of the first display card &hellip; named in a brilliant flash of nomenclature as display card A. This time I&rsquo;m turning my …
@@ -1786,9 +1787,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">12 Jul 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">12 Jul 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/07/user-interface-display-initial-design/">User Interface: Display A Initial Design and Construction</a></p>
       <p>
         Following on from working on the main data switches in my last post this time I&rsquo;ve taken the first steps in designing and constructing the first of two display cards …
@@ -1834,9 +1835,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Jul 2014 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">05 Jul 2014 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/07/user-interface-data-switches/">User Interface: Data Switches</a></p>
       <p>
         Now I&rsquo;ve got a fully working ALU and four registers completed I want to take a short break from card building and turn my attention to making it easier to interact with …
@@ -1882,9 +1883,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 May 2014 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">11 May 2014 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/05/register-design-b-and-c-8-bit-registers/">Register Design: B and C 8-bit Registers</a></p>
       <p>
         In a recent post I put up the design for the A and D 8-bit register card &hellip; the B and C register card is very similar in design but has the additional complexity that it …
@@ -1926,9 +1927,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">24 Apr 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">24 Apr 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/register-design-dual-output-8-bit/">Register Design: Dual Output 8-bit Register</a></p>
       <p>
         In the last post I introduced the design for the A/D register card (which as its name suggests contains the A and D 8-bit registers). I&rsquo;m now making a start on the …
@@ -1970,9 +1971,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Apr 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">20 Apr 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/register-design-and-d-8-bit-registers/">Register Design: A and D 8-bit Registers</a></p>
       <p>
         In the last post I introduced the design for a general purpose 8-bit register. This post covers taking two of those registers along with status LEDs and gating relays to …
@@ -2014,9 +2015,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 Apr 2014 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">16 Apr 2014 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/register-design-general-purpose-8-bit/">Register Design: General Purpose 8-bit Register</a></p>
       <p>
         This post covers the design of a general purpose 8-bit register that can be loaded from the data bus and then selected back to the data bus at a later time. This permits …
@@ -2058,9 +2059,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">10 Apr 2014 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">10 Apr 2014 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/04/enclosure-update-laser-cutting/">Enclosure Update: Laser Cutting</a></p>
       <p>
         I couldn&rsquo;t resist it any longer &hellip; I&rsquo;ve ordered the laser cut parts for the case doors, sides and bay floor/ceilings. I did say I&rsquo;d wait for my chosen …
@@ -2106,9 +2107,9 @@ So, diving …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Mar 2014 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">01 Mar 2014 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/enclosure-disclosure/">Enclosure Disclosure</a></p>
       <p>
         Sorry, I will try to rain in the terrible punning post titles.
@@ -2155,9 +2156,9 @@ This time I wanted to share the thoughts and ideas I&rsquo;ve been having around
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Feb 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">04 Feb 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/02/sketchy-diversion/">Sketchy Diversion</a></p>
       <p>
         I&rsquo;m taking a break &hellip; just a short one.
@@ -2204,9 +2205,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">03 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">03 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/backplane-design-and-construction/">Backplane Design and Construction</a></p>
       <p>
         Originally when I was thinking about how I&rsquo;d connect up the various cards of this computer I had ribbon cables in mind. Ribbon cables are straightforward to use and …
@@ -2248,9 +2249,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">01 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-design-control-unit/">ALU Design: Control Unit</a></p>
       <p>
         In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of …
@@ -2292,9 +2293,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/alu-design-condition-registers/">ALU Design: Condition Registers</a></p>
       <p>
         This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the …
@@ -2336,9 +2337,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">23 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/alu-design-zero-detect/">ALU Design: Zero Detect</a></p>
       <p>
         This post covers the design of the Zero Detect circuit which along with the 3-to-8 Function Decoder (covered in my last post) and the Condition Registers (next post) make up …
@@ -2380,9 +2381,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-function-decoder/">ALU Design: Function Decoder</a></p>
       <p>
         This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card. The Decoder …
@@ -2424,9 +2425,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">17 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">17 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-8-bit-arithmetic-unit/">ALU Design: 8-bit Arithmetic Unit</a></p>
       <p>
         In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with …
@@ -2468,9 +2469,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Nov 2013 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">15 Nov 2013 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-1-bit-arithmetic-unit/">ALU Design: 1-bit Arithmetic Unit</a></p>
       <p>
         This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&rsquo;s a schematic of the 1-bit Arithmetic …
@@ -2512,9 +2513,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">13 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">13 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-8-bit-logic-unit/">ALU Design: 8-bit Logic Unit</a></p>
       <p>
         In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, …
@@ -2556,9 +2557,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-1-bit-logic-unit/">ALU Design: 1-bit Logic Unit</a></p>
       <p>
         This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here&rsquo;s a schematic of the …
@@ -2600,9 +2601,9 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I&rsquo;m 
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">10 Nov 2013 - 6 min read</p>
+      <p class="subtitle is-7 mb-2">10 Nov 2013 - 6 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/relay-rumination/">Relay Rumination</a></p>
       <p>
         If there&rsquo;s one thing a relay computer needs a lot of it&rsquo;s &hellip; erm &hellip; relays (of course) &hellip; which happens to be a bit unfortunate as relays, …

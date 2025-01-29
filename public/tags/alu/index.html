@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item ">
+        <a href="/" class="navbar-item is-tab ">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item is-active">
+        <a href="/tags/" class="navbar-item is-tab is-active">
           Tags
         </a>
         
@@ -138,7 +139,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <nav class="breadcrumb has-succeeds-separator is-small mb-3" aria-label="breadcrumbs">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
         <ul>
           <li> <a href="/"> Home </a> </li>
           
@@ -169,9 +170,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Aug 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">19 Aug 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/08/alu-registers-d-test-with-new-display/">ALU &amp; Registers A-D Test with new Display Cards</a></p>
       <p>
         Now that the two display cards are complete enough to display and control the status of the ALU and four registers (A-D) it&rsquo;s time to fit them to the upper enclosure. …
@@ -225,9 +226,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Mar 2014 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">30 Mar 2014 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/completed-alu/">Completed ALU</a></p>
       <p>
         Following my last post on the completed backplane I&rsquo;m now in a position to connect all the other completed cards together to test the full ALU. The ALU is made up of the …
@@ -273,9 +274,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">26 Mar 2014 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">26 Mar 2014 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/alu-construction-completed-backplane/">ALU Construction: Completed Backplane</a></p>
       <p>
         In my last post I mentioned I&rsquo;d suffered a bit of a set back with the construction of the ALU backplane. Well, the short version of things is that I&rsquo;ve admitted …
@@ -321,9 +322,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 Mar 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">16 Mar 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/alu-construction-completed-control-card/">ALU Construction: Completed Control Card Full Test</a></p>
       <p>
         The ALU Control Card is now complete and looks like this:
@@ -374,9 +375,9 @@ This card was, on the whole, much simpler and quicker to put together than previ
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">14 Mar 2014 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">14 Mar 2014 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/alu-construction-control-card-power/">ALU Construction: Control Card Power Rails &amp; Wire Wrap</a></p>
       <p>
         I&rsquo;ve been a bit short of time lately so I&rsquo;ve been working on the ALU Control Card in little bursts &hellip; but after lots of these little bursts I&rsquo;ve now …
@@ -418,9 +419,9 @@ This card was, on the whole, much simpler and quicker to put together than previ
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">04 Mar 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">04 Mar 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/03/alu-construction-control-card-header/">ALU Construction: Control Card Header Pins &amp; Relay Sockets</a></p>
       <p>
         Following on from the first two successfully completed ALU cards, for logic and arithmetic, it&rsquo;s time to make a start on the control card (well, actually, the LEDs and …
@@ -462,9 +463,9 @@ This card was, on the whole, much simpler and quicker to put together than previ
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Feb 2014 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">23 Feb 2014 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/02/alu-construction-completed-arithmetic/">ALU Construction: Completed Arithmetic Card Full Test</a></p>
       <p>
         The ALU arithmetic card is now complete! The final card looks like this:
@@ -515,9 +516,9 @@ As I did for the ALU logic card before I&rsquo;ve put the following YouTube vide
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">19 Feb 2014 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">19 Feb 2014 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/02/alu-construction-arithmetic-card-wire_19/">ALU Construction: Arithmetic Card Wire Wrap 2</a></p>
       <p>
         I&rsquo;ve managed to squeeze in a couple more wire wrapping sessions this week so in this post there&rsquo;s a few photos of progress so far.
@@ -560,9 +561,9 @@ Inputs B and C are fully wired …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">16 Feb 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">16 Feb 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/02/alu-construction-arithmetic-card-wire/">ALU Construction: Arithmetic Card Wire Wrap 1</a></p>
       <p>
         Fear not (just in case you were for some reason) all this talk of Sketchup and enclosures and so on hasn&rsquo;t totally diverted me from the main task of constructing the …
@@ -604,9 +605,9 @@ Inputs B and C are fully wired …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">26 Jan 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">26 Jan 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/01/alu-construction-arithmetic-card-power/">ALU Construction: Arithmetic Card Power Rails</a></p>
       <p>
         Another round of soldering done &hellip; this time putting down the power rails on the arithmetic card along with some soldered wire links. This is the last of the soldering …
@@ -648,9 +649,9 @@ Inputs B and C are fully wired …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">21 Jan 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">21 Jan 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/01/alu-construction-1-bit-arithmetic-full/">ALU Construction: 1-bit Arithmetic Full Construction</a></p>
       <p>
         So, as mentioned in my last post this time I&rsquo;ve put in the wire links and wraps needed to test the first bit of the arithmetic card. With these in place I can make sure …
@@ -696,9 +697,9 @@ Inputs B and C are fully wired …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">17 Jan 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">17 Jan 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/01/alu-construction-arithmetic-card-relay/">ALU Construction: Arithmetic Card Relay Sockets</a></p>
       <p>
         It&rsquo;s always a fiddly job getting the relay sockets soldered in and the ALU arithmetic card proved no exception. With this in mind I&rsquo;ve been spreading the work out …
@@ -740,9 +741,9 @@ Inputs B and C are fully wired …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Jan 2014 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">06 Jan 2014 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2014/01/alu-construction-arithmetic-card-header/">ALU Construction: Arithmetic Card Header Pins</a></p>
       <p>
         Following on from the successful construction of the ALU logic card in my last post it&rsquo;s time to start off the new year with the next ALU card (number 2 of 3 ALU cards …
@@ -784,9 +785,9 @@ Inputs B and C are fully wired …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">18 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">18 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-completed-logic-card/">ALU Construction: Completed Logic Card Full Test</a></p>
       <p>
         The ALU logic card is now finally complete! &hellip; well, it is now I&rsquo;ve popped the last few relays into their sockets. The final card looks like this:
@@ -837,9 +838,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">18 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">18 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-wire-wrap-3/">ALU Construction: Logic Card Wire Wrap 3</a></p>
       <p>
         I&rsquo;m now just one session of wire wrapping away from a completed ALU logic card. The final job is to wire up the gating relays that select one of the five logic results …
@@ -881,9 +882,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">12 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">12 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-8-bit-logic-unit-tests/">ALU Construction: 8-bit Logic Unit Tests</a></p>
       <p>
         There&rsquo;s now enough sockets, solder and wires to test all eight bits of the ALU logic card. This isn&rsquo;t quite a full test as the gating relays that apply one of the …
@@ -929,9 +930,9 @@ As the old …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">12 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">12 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-wire-wrap-2/">ALU Construction: Logic Card Wire Wrap 2</a></p>
       <p>
         Continuing on with the wire wrapping for the ALU logic card next up is the input and result links:
@@ -974,9 +975,9 @@ Given the limited range of colours I&rsquo;ve got to choose from (Black, …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">12 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">12 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-wire-wrap-1/">ALU Construction: Logic Card Wire Wrap 1</a></p>
       <p>
         Finally, with all the soldering now done, it&rsquo;s time to set about wire wrapping the ALU logic card. First up is the internal connections within each logic bit:
@@ -1019,9 +1020,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">10 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">10 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-power-rails/">ALU Construction: Logic Card Power Rails</a></p>
       <p>
         It seems that every time I move on to the next stage of construction on the ALU logic card it&rsquo;s fiddlier than the stage before it &hellip; this stage is no exception. …
@@ -1063,9 +1064,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">09 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">09 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-relay/">ALU Construction: Logic Card Relay Sockets</a></p>
       <p>
         The construction of the ALU logic card is coming along nicely but there&rsquo;s still a lot of soldering ahead to get all the relay sockets down &hellip; and this part is the …
@@ -1107,9 +1108,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">08 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">08 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-header-pins/">ALU Construction: Logic Card Header Pins</a></p>
       <p>
         Following on from the successful construction of the first bit on the ALU logic card in my last post it&rsquo;s now time to start putting together the other 7 bits and the …
@@ -1155,9 +1156,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Dec 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">07 Dec 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-1-bit-logic-full/">ALU Construction: 1-bit Logic Full Construction</a></p>
       <p>
         So, although I probably should construct the logic card methodically a full stage at a time (solder header pins then sockets then wire wrap) I can&rsquo;t resist fully …
@@ -1201,9 +1202,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">06 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-led-tests/">ALU Construction: LED Tests</a></p>
       <p>
         Following on from my last post I can now test the LEDs that have been soldered and hooked up to the header pins on each of the three ALU cards (Logic, Arithmetic and Control). …
@@ -1249,9 +1250,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">06 Dec 2013 - 1 min read</p>
+      <p class="subtitle is-7 mb-2">06 Dec 2013 - 1 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-logic-card-wire-links/">ALU Construction: Logic Card Wire Links</a></p>
       <p>
         Before I can test all of the LEDs laid down so far (to make sure they survived the heat of the soldering iron) I need to add some wire links on the logic card between the LED …
@@ -1293,9 +1294,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Dec 2013 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">05 Dec 2013 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-led-header-pins/">ALU Construction: LED Header Pins</a></p>
       <p>
         So far, in the construction of the three ALU cards (Logic, Arithmetic and Control) I&rsquo;ve soldered down the connectors and LEDs. It&rsquo;s now time to solder in some …
@@ -1337,9 +1338,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">02 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-construction-connectors-and-leds/">ALU Construction: Connectors and LEDs</a></p>
       <p>
         As promised in my last post it&rsquo;s finally time to get the soldering iron out and make a start on constructing the three cards that make up the ALU. I&rsquo;m going start …
@@ -1385,9 +1386,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">01 Dec 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">01 Dec 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/12/alu-design-control-unit/">ALU Design: Control Unit</a></p>
       <p>
         In the last three posts I introduced the design for the 3-to-8 Function Decoder, Zero Detect circuit and the Condition Registers. In this post I&rsquo;ll put all three of …
@@ -1429,9 +1430,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">30 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">30 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/alu-design-condition-registers/">ALU Design: Condition Registers</a></p>
       <p>
         This post covers the design of the ALU Condition Registers which along with the 3-to-8 Function Decoder and Zero Detect circuit (both covered in my previous posts) make up the …
@@ -1473,9 +1474,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">23 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">23 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/alu-design-zero-detect/">ALU Design: Zero Detect</a></p>
       <p>
         This post covers the design of the Zero Detect circuit which along with the 3-to-8 Function Decoder (covered in my last post) and the Condition Registers (next post) make up …
@@ -1517,9 +1518,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2013 - 2 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2013 - 2 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-function-decoder/">ALU Design: Function Decoder</a></p>
       <p>
         This post covers the design of a 3-to-8 Function Decoder which along with the Zero Detect circuit and Condition Registers will all go in to the ALU Control Card. The Decoder …
@@ -1561,9 +1562,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">17 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">17 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-8-bit-arithmetic-unit/">ALU Design: 8-bit Arithmetic Unit</a></p>
       <p>
         In the last post I introduced the design for the 1-bit Arithmetic Unit. This post covers connecting eight of these units together to make an 8-bit Arithmetic Unit along with …
@@ -1605,9 +1606,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">15 Nov 2013 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">15 Nov 2013 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-1-bit-arithmetic-unit/">ALU Design: 1-bit Arithmetic Unit</a></p>
       <p>
         This post covers the design of a 1-bit Arithmetic Unit that can add two input bits together (B and C) with carry in and out. Here&rsquo;s a schematic of the 1-bit Arithmetic …
@@ -1649,9 +1650,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">13 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">13 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-8-bit-logic-unit/">ALU Design: 8-bit Logic Unit</a></p>
       <p>
         In the last post I introduced the design for a 1-bit Logic Unit. This post covers the design effort to cram 8 of these on to a single pad board complete with connectors, …
@@ -1693,9 +1694,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">11 Nov 2013 - 5 min read</p>
+      <p class="subtitle is-7 mb-2">11 Nov 2013 - 5 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/design-1-bit-logic-unit/">ALU Design: 1-bit Logic Unit</a></p>
       <p>
         This post covers the design of a 1-bit Logic Unit that can produce AND, OR, XOR, NOT and SHL (Shift Left) outputs from two input bits B and C. Here&rsquo;s a schematic of the …
@@ -1737,9 +1738,9 @@ After wire …
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">07 Nov 2013 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">07 Nov 2013 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2013/11/architectural-breakdown-alu/">Architectural breakdown: the ALU</a></p>
       <p>
         In this post I&rsquo;ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it&rsquo;s the Arithmetic …
