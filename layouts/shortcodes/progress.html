@@ -5,14 +5,14 @@
       <div class="tabs">
         <ul>
           {{ range $index, $element := $.Site.Data.progress }}
-          <li class="{{ if (eq $index 0) }}is-active{{ end }}"><a>{{ $element.title }}</a></li>
+          <li class="{{ if (eq $index 0) }}is-active{{ end }}"><a onclick="openTab(event, 'Overview')">{{ $element.title }}</a></li>
           {{ end }}
         </ul>
       </div>
       <div class="tabs-content">
         <ul>
           {{ range $index, $element :=  $.Site.Data.progress }}
-          <li class="{{ if (eq $index 0) }}is-active{{ end }}">
+          <li class="{{ if (eq $index 0) }}is-active{{ end }} pt-3">
             <div class="columns is-multiline">
               {{ range .cards }}
               {{ partial "progress-block" . }}
@@ -24,5 +24,4 @@
       </div>
     </div>
   </div>
-
 </div>

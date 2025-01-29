@@ -80,27 +80,6 @@ $pcb-green: hsl(93, 100%, 13%);
 .tag.is-success {
   color: $white;
 }
-/*
-@include tablet {
-
-  .hpc-image {
-    width: 8rem !important;
-  }
-}
-
-@include desktop {
-  .hpc-image {
-    width: 10rem !important;
-  }
-}
-
-@include widescreen {
-  .hpc-image {
-    width: 12rem !important;
-  }
-}
-*/
-
 
 //.bg-img {
 //  background-position: center center;
@@ -157,14 +136,6 @@ $pcb-green: hsl(93, 100%, 13%);
   }
 }
 
-
-/*
-.tabs-content li {
+.tabs-content li:not(.is-active) {
   display: none;
-  list-style: none;
 }
-
-.tabs-content li.is-active {
-  display: block;
-}
-*/
