@@ -12,7 +12,7 @@
   
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
@@ -91,11 +91,12 @@ window.cookieconsent.initialise({
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         Relay Computer
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -104,27 +105,27 @@ window.cookieconsent.initialise({
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         
-        <a href="/" class="navbar-item is-active">
+        <a href="/" class="navbar-item is-tab is-active">
           Home
         </a>
         
-        <a href="/pages/overview/" class="navbar-item ">
+        <a href="/pages/overview/" class="navbar-item is-tab ">
           Overview
         </a>
         
-        <a href="/pages/progress/" class="navbar-item ">
+        <a href="/pages/progress/" class="navbar-item is-tab ">
           Progress
         </a>
         
-        <a href="/cards/" class="navbar-item ">
+        <a href="/cards/" class="navbar-item is-tab ">
           Cards
         </a>
         
-        <a href="/posts/" class="navbar-item ">
+        <a href="/posts/" class="navbar-item is-tab ">
           Posts
         </a>
         
-        <a href="/tags/" class="navbar-item ">
+        <a href="/tags/" class="navbar-item is-tab ">
           Tags
         </a>
         
@@ -135,12 +136,11 @@ window.cookieconsent.initialise({
 
   
 
-<section class="hero is-bold is-primary is-medium" 
+<section class="hero is-primary is-medium" 
   style="background: url('/img/header-bg.jpg') no-repeat center center; background-size: cover;" >
-  <div class="hero-body pt-6"
-    style="background-image: linear-gradient(to left, rgba(25,52,0,0), rgba(25,52,0,1),rgba(25,52,0,1));">
+  <div class="hero-body pt-6" style="background-image: linear-gradient(to left, rgba(25,52,0,0), rgba(25,52,0,1),rgba(25,52,0,1));">
     <div class="container pr-6">
-      <h1 class="title is-italic">A blog about a computer made from relays</h1>
+      <h1 class="title is-italic mb-1">A blog about a computer made from relays</h1>
       <h2 class="subtitle">My journey in constructing an 8 bit relay computer from scratch ... made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.</h2>
     </div>
   </div>
@@ -190,8 +190,8 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white">
-    <p class="subtitle is-7 mb-5"><b>Latest Post</b> - 05 Dec 2022 - 8 min read</p>
+  <div class="card-content">
+    <p class="subtitle is-7 mb-1"><b>Latest Post</b> - 05 Dec 2022 - 8 min read</p>
     <p class="title is-4 mb-3">
       <a href="/posts/2022/12/controller-mov8-mov16-misc-design/">Controller Design: MOV8, MOV16 &amp; MISC Instructions</a>
     </p>
@@ -237,9 +237,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">27 Nov 2022 - 10 min read</p>
+      <p class="subtitle is-7 mb-2">27 Nov 2022 - 10 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/11/assembly-part-2/">Assembling an assembler - token scanning</a></p>
       <p>
         In the last episode of this mini-series I explained about how an assembler&rsquo;s job is effectively to convert a program written in a language a human programmer can …
@@ -277,9 +277,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">20 Nov 2022 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">20 Nov 2022 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/11/tick-tock/">Tick Tock</a></p>
       <p>
         Well, what a journey that&rsquo;s been then &hellip; I started work on a clock for my relay computer back in May 2020 and today (20th Nov 2022) this post marks the end of it. …
@@ -329,9 +329,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">05 Nov 2022 - 3 min read</p>
+      <p class="subtitle is-7 mb-2">05 Nov 2022 - 3 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/11/back-to-backplanes/">Back to Backplanes</a></p>
       <p>
         Quite a while ago I decided to give up on the tedious wire wrap technique for building my cards. Although it was certainly more authentic and in-keeping with my …
@@ -373,9 +373,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">14 May 2022 - 9 min read</p>
+      <p class="subtitle is-7 mb-2">14 May 2022 - 9 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/05/assembly-part-1/">Assembling an assembler - overview</a></p>
       <p>
         To make my relay computer do something interesting (or anything at all) it needs a list of instructions held in memory. Each instruction consists of an 8-bit value called an …
@@ -413,9 +413,9 @@ window.cookieconsent.initialise({
       
     </figure>
   </div>
-  <div class="card-content has-background-white" style="border-top: 1px solid #ededed">
+  <div class="card-content">
     <div class="content">
-      <p class="subtitle is-7 mb-5">02 May 2022 - 4 min read</p>
+      <p class="subtitle is-7 mb-2">02 May 2022 - 4 min read</p>
       <p class="title is-5 mb-3"><a href="/posts/2022/05/intermission/">Intermission</a></p>
       <p>
         So, is fair to say that things have been a bit quiet around here of late … and if you’ve been following my YouTube channel I do hope you haven’t been holding your breath for …
