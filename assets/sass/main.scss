@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+$white: hsl(221, 14%, 100%);
+$pcb-green: hsl(93, 100%, 13%);
+
+@use "bulma/sass" with (
+  $blue: hsl(153, 53%, 45%),
+  $family-sans-serif: '"Montserrat", sans-serif',
+  $primary: $pcb-green,
+  $navbar-item-color: $white,
+  $navbar-tab-active-color: $white,
+  $title-weight: 500,
+  $subtitle-weight: 300,
+  $content-heading-weight: 500,
+);
+@use "bulma/sass/utilities/mixins";
+
+@use "bulma-ribbon.scss";
+@use "railroad.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&display=swap');
+
+//$tabs-link-active-color: $primary;
+//$tabs-link-active-border-bottom-color: $primary;
+
+
+/*
+.hpc-image {
+  width: 10rem !important;
+}*/
+
+
+:root {
+  --bulma-primary-invert-l: 100%;
+}
+
+/*
+:root {
+  --bulma-body-background-color: #F0F2F4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bulma-body-background-color: #0F0D0B;
+  }
+}
+*/
+.hero.is-primary {
+  --bulma-hero-color-l: 95%;
+  .breadcrumb {
+    --bulma-breadcrumb-item-color: $white;
+    --bulma-breadcrumb-item-separator-color: $white;
+  }
+  .breadcrumb a {
+    color: $white;
+  }
+}
+
+.pull-up {
+  @include mixins.tablet {
+    margin-top: -10rem !important;
+  }
+}
+
+.content {
+  p:not(.title) {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card {
+  border: .1px solid var(--bulma-grey);
+}
+/*
+@include tablet {
+
+  .hpc-image {
+    width: 8rem !important;
+  }
+}
+
+@include desktop {
+  .hpc-image {
+    width: 10rem !important;
+  }
+}
+
+@include widescreen {
+  .hpc-image {
+    width: 12rem !important;
+  }
+}
+*/
+
+
+//.bg-img {
+//  background-position: center center;
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  background-color: #ccc;
+//}
+
+//.hero {
+//  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+//}
+/*
+.highlight {
+  margin-bottom: 1.2em;
+}
+
+.progress-blockimg {
+  border: 2px solid white;
+  border-right: none;
+}
+
+.progress-blockimg:last-child {
+  border-right: 2px solid white;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+
+  figure {
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+  }
+}
+
+.tabs-content li {
+  display: none;
+  list-style: none;
+}
+
+.tabs-content li.is-active {
+  display: block;
+}
+*/

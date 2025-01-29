@@ -19,9 +19,23 @@
   {{ end }}
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  {{- $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "assets/css")) -}}
-  {{ with $styles := resources.Get "css/main.scss" | toCSS $cssOpts | minify }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{- with resources.Get "sass/main.scss" }}
+    {{- $opts := dict
+      "enableSourceMap" (not hugo.IsProduction)
+      "outputStyle" (cond hugo.IsProduction "compressed" "expanded")
+      "targetPath" "css/main.css"
+      "transpiler" "dartsass"
+      "includePaths" (slice "node_modules" "assets/css")
+    }}
+    {{- with . | toCSS $opts }}
+      {{- if hugo.IsProduction }}
+        {{- with . | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+        {{- end }}
+      {{- else }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+      {{- end }}
+    {{- end }}
   {{ end }}
 
   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
