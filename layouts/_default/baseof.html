@@ -28,13 +28,7 @@
       "includePaths" (slice "node_modules" "assets/css")
     }}
     {{- with . | toCSS $opts }}
-      {{- if hugo.IsProduction }}
-        {{- with . | fingerprint }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-        {{- end }}
-      {{- else }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
-      {{- end }}
     {{- end }}
   {{ end }}
 
