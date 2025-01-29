@@ -8,8 +8,8 @@
       {{ end }}
     </figure>
   </div>
-  <div class="card-content has-background-white">
-    <p class="subtitle is-7 mb-5"><b>Latest Post</b> - {{.Date.Format "02 Jan 2006"}} - {{ .ReadingTime }} min read</p>
+  <div class="card-content">
+    <p class="subtitle is-7 mb-1"><b>Latest Post</b> - {{.Date.Format "02 Jan 2006"}} - {{ .ReadingTime }} min read</p>
     <p class="title is-4 mb-3">
       <a href="{{ .RelPermalink }}">{{.Title}}</a>
     </p>

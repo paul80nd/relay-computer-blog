@@ -2,11 +2,12 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a href="/" class="navbar-item has-text-weight-semibold">
-        <img class="mr-2" src="/img/favicon/favicon-96x96.png" width="32">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
         {{ .Site.Title}}
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -15,7 +16,7 @@
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         {{ range $.Site.Menus.main }}
-        <a href="{{ .URL }}" class="navbar-item {{ if or (eq $plink .URL) (and (hasPrefix $plink .URL) (ne .URL "/")) }}is-active{{ end }}">
+        <a href="{{ .URL }}" class="navbar-item is-tab {{ if or (eq $plink .URL) (and (hasPrefix $plink .URL) (ne .URL "/")) }}is-active{{ end }}">
           {{ .Name }}
         </a>
         {{ end }}
