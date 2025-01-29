@@ -11,7 +11,7 @@
             {{ range (index .Params "linked-cards") }}
             <div class="column is-half">
               <article class="card">
-                <div class="card-content has-background-white">
+                <div class="card-content">
                   <div class="content">
                     {{ with (index $.Site.Taxonomies.cards .) }}
                     <p class="title is-5"><a href="{{ .Page.RelPermalink }}"><span class="icon"><i
