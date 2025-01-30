@@ -17,6 +17,7 @@
   - title: Backplane W Daughterboard
     card: backplane-db
     state: Complete
+    eda: backplane-w
     tmbsch: bpw-0000.png
     pdfsch: backplane-w.pdf
     tmbpcb: dbw-0001.png
@@ -156,6 +157,7 @@
   - title: Backplane Y Daughterboard
     card: backplane-db
     state: Complete
+    eda: backplane-y
     tmbsch: bpy-0000a.png
     pdfsch: backplane-y-v2.pdf
     tmbpcb: dby-0001.png
@@ -227,6 +229,7 @@
   - title: Backplane Z Daughterboard
     card: backplane-db
     state: Complete
+    eda: backplane-z
     tmbsch: bpz-0000.png
     pdfsch: backplane-z-v2.pdf
     tmbpcb: dbz-0001.png
@@ -325,7 +328,7 @@
     flspto: alu-1034.jpg
 
 - section: D
-  title: Depreciated Cards
+  title: Deprecated Cards
   cards:
 
   - title: Backplane W
