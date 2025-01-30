@@ -41,13 +41,16 @@ $colors: (
   border-right: none;
   color: $ribbon-color;
   font-size: var(--bulma-size-normal);
+  font-weight: 500 !important;
   justify-content: center;
   padding-left: 0.75em;
   padding-right: 0.75em;
+  padding-top: .4em;
+  padding-bottom: .35em;
   text-align: center;
   white-space: nowrap;
   position: absolute;
-  top: .6rem;
+  top: .8rem;
   right: 0;
   font-weight: 400;
   z-index: 2;
@@ -55,13 +58,8 @@ $colors: (
   @each $name in $colors {
     &.is-#{$name}:not(.is-outlined) {
       background-color: var(--bulma-#{$name});
-      border-color: transparent;
-      color: var(--bulma-#{$name}-invert) !important;
 
-      &.is-#{$name} &.is-outlined {
-        background-color: transparent;
-        border-color: var(--bulma-#{$name});
-      }
+      color: var(--bulma-#{$name}-invert) !important;
     }
   }
 
@@ -76,9 +74,5 @@ $colors: (
 
   &.is-large {
     font-size: var(--bulma-size-large);
-  }
-
-  &.is-outlined {
-    background-color: transparent
   }
 }
