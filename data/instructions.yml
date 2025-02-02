@@ -3,40 +3,47 @@
   opcode: '1000rfff'
   cycles: '8'
   prefix: 4
+  description: 'Performs an arithmetic or logic operation on the B (and optionally C) register(s).'
   arguments: '  r = destination register (0-A, 1-D)<br>fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL)'
 - class: GOTO
   title: Branch/Call & 16-bit Load Immediate
   opcode: '11dscznx'
   cycles: '24'
   prefix: 2
+  description: 'Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).'
   arguments: 'd = destination register (0-M, 1-J)<br>s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br>c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br>z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br>n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br>x = 1 = copy PC to XY; 0 = no copy<br>hhhhhhhh = address high byte (to set in M2/J2)<br>llllllll = address low byte (to set in M1/J1)'
 - class: MOV8
   title: 8-Bit Move
   opcode: '00dddsss'
   cycles: '8'
   prefix: 2
+  description: 'Copies the content of one 8-bit register to another.'
   arguments: 'ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br>sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)'
 - class: MOV16
   title: 16-Bit Move
   opcode: '10100dss'
   cycles: '10'
   prefix: 5
+  description: 'Copies the content of one 16-bit register to another.'
   arguments: 'd = dest reg (0-XY or 1-PC)<br>ss = src reg (00-M, 01-XY, 10-J, 11-AS)'
 - class: SETAB
   title:  Load Immediate
   opcode: '01rddddd'
   cycles: '8'
   prefix: 2
+  description: 'Loads a value between -16 and +15 in register A or B.'
   arguments: '    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)'
 - class: HALT
   title: Halt
   opcode: '1010111r'
   cycles: '10'
   prefix: 7
+  description: 'Halts execution of the program (optionally reseting the program counter from the front panel switches).'
   arguments: 'r = reload program counter (0-no reload, 1-reload from switches)'
 - class: LDSW
   title: Load Switches
   opcode: '1010110d'
   cycles: '10'
   prefix: 7
+  description: 'Loads the value set on the front panel switches into register A or D.'
   arguments: 'd = destination register (0-A, 1-D)'
