@@ -8,14 +8,7 @@
 
   <title>Controller Design: GOTO Instruction | Relay Computer</title>
   <meta name="description" content="With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here’s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
-s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
-c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
-z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
-n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
-x = 1 = copy PC to XY; 0 = no copy
-hhhhhhhh = address high byte (to set in M2/J2)
-llllllll = address low byte (to set in M1/J1) … and here’s the associated timing chart to be implemented …">
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).">
   <meta name="robots" content="index, follow">
   
 
@@ -47,14 +40,7 @@ llllllll = address low byte (to set in M1/J1) … and here’s the associated ti
   <meta property="og:site_name" content="Relay Computer">
   <meta property="og:title" content="Controller Design: GOTO Instruction">
   <meta property="og:description" content="With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here’s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
-s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
-c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
-z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
-n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
-x = 1 = copy PC to XY; 0 = no copy
-hhhhhhhh = address high byte (to set in M2/J2)
-llllllll = address low byte (to set in M1/J1) … and here’s the associated timing chart to be implemented …">
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -65,29 +51,15 @@ llllllll = address low byte (to set in M1/J1) … and here’s the associated ti
 
   <meta itemprop="name" content="Controller Design: GOTO Instruction">
   <meta itemprop="description" content="With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here’s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
-s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
-c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
-z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
-n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
-x = 1 = copy PC to XY; 0 = no copy
-hhhhhhhh = address high byte (to set in M2/J2)
-llllllll = address low byte (to set in M1/J1) … and here’s the associated timing chart to be implemented …">
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).">
   <meta itemprop="datePublished" content="2019-11-30T03:03:00+00:00">
   <meta itemprop="dateModified" content="2019-11-30T03:03:00+00:00">
-  <meta itemprop="wordCount" content="614">
+  <meta itemprop="wordCount" content="648">
   <meta itemprop="keywords" content="Control,Design">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Controller Design: GOTO Instruction">
   <meta name="twitter:description" content="With the sequencer now designed and constructed I’m much closer to getting branching working on my relay computer. The next hurdle is updating the controller cards so that they can fire the appropriate control lines at the right time as directed by the sequencer pulses. As a reminder here’s the GOTO instruction itself:
-Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l d = destination register (0-M, 1-J)
-s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit
-c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit
-z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set
-n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear
-x = 1 = copy PC to XY; 0 = no copy
-hhhhhhhh = address high byte (to set in M2/J2)
-llllllll = address low byte (to set in M1/J1) … and here’s the associated timing chart to be implemented …">
+Branch/Call &amp; 16-bit Load Immediate GOTO 24 1 1 d s c z n x h h h h h h h h l l l l l l l l Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).">
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
       <script>
@@ -237,6 +209,9 @@ by the sequencer pulses. As a reminder here&rsquo;s the GOTO instruction itself:
         
       </div>
     </div>
+    
+    <p>Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).</p>
+    
     <pre class="is-size-7"><code>d = destination register (0-M, 1-J)<br>s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br>c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br>z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br>n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br>x = 1 = copy PC to XY; 0 = no copy<br>hhhhhhhh = address high byte (to set in M2/J2)<br>llllllll = address low byte (to set in M1/J1)</code></pre>
   </div>
 </article>

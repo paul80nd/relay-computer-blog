@@ -51,7 +51,7 @@
   <meta itemprop="description" content="I’ve almost got everything I need now to get my relay computer to do branching. The hard work of designing and constructing the sequencer and controller units is complete and both units can perform a GOTO operation. The only problem now is the decoder card doesn’t understand what a GOTO instruction looks like and so can’t tell the controller unit to perform a GOTO. That’s easily fixed though as the decoder is one of the simplest cards in my computer.">
   <meta itemprop="datePublished" content="2019-12-22T03:03:00+00:00">
   <meta itemprop="dateModified" content="2019-12-22T03:03:00+00:00">
-  <meta itemprop="wordCount" content="780">
+  <meta itemprop="wordCount" content="814">
   <meta itemprop="keywords" content="Decoder,Design">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Decoder Design: Schematic & PCBs">
@@ -214,6 +214,9 @@ this:</p>
         
       </div>
     </div>
+    
+    <p>Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).</p>
+    
     <pre class="is-size-7"><code>d = destination register (0-M, 1-J)<br>s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br>c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br>z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br>n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br>x = 1 = copy PC to XY; 0 = no copy<br>hhhhhhhh = address high byte (to set in M2/J2)<br>llllllll = address low byte (to set in M1/J1)</code></pre>
   </div>
 </article>

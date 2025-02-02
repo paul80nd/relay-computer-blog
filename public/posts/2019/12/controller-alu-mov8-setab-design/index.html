@@ -51,7 +51,7 @@
   <meta itemprop="description" content="In my last post I covered off the controller design for the GOTO instruction. Being as I’ve decided to implement the controller on a new set of PCB cards I need to transfer over the existing ALU, MOV8 &amp; SETAB instructions to the new controller design. At the relay level nothing really changes so I’ll just quickly recap the timing and implementations here using the new schematic style and then in my next post I can move on to putting the full controller schematic and PCB design together.">
   <meta itemprop="datePublished" content="2019-12-07T03:03:00+00:00">
   <meta itemprop="dateModified" content="2019-12-07T03:03:00+00:00">
-  <meta itemprop="wordCount" content="587">
+  <meta itemprop="wordCount" content="621">
   <meta itemprop="keywords" content="Control,Design">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Controller Design: ALU, MOV8 & SETAB Instructions">
@@ -191,6 +191,9 @@ available bits in the instruction opcode:</p>
         
       </div>
     </div>
+    
+    <p>Loads a value between -16 and &#43;15 in register A or B.</p>
+    
     <pre class="is-size-7"><code>    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)</code></pre>
   </div>
 </article>
@@ -243,6 +246,9 @@ for operations that only work on one value). The result of the operation can be 
         
       </div>
     </div>
+    
+    <p>Performs an arithmetic or logic operation on the B (and optionally C) register(s).</p>
+    
     <pre class="is-size-7"><code>  r = destination register (0-A, 1-D)<br>fff = function code (000-NOP, 001-ADD, 010-INC, 011-AND, 100-OR, 101-XOR, 110-NOT, 111-SHL)</code></pre>
   </div>
 </article>
@@ -292,6 +298,9 @@ register are the same then the value in that register is cleared:</p>
         
       </div>
     </div>
+    
+    <p>Copies the content of one 8-bit register to another.</p>
+    
     <pre class="is-size-7"><code>ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br>sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)</code></pre>
   </div>
 </article>
