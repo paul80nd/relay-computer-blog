@@ -62,7 +62,7 @@
     tmbpcb: ctl-0001.png
     pdfpcb: controller-lo-pcbp.pdf
     tmbpto: ctl-0002.jpg
-    flspto: sql-1002.jpg
+    flspto: ctl-1002.jpg
 
   - title: Sequencer
     card: sequencer
