@@ -48,7 +48,7 @@
     tmbsch: cth-0000.png
     pdfsch: controller-hi.pdf
     tmbpcb: cth-0001.png
-    pdfpcb: sequencer-hi-pcbp.pdf
+    pdfpcb: controller-hi-pcbp.pdf
 
   - title: Controller
     card: controller
@@ -60,7 +60,7 @@
     tmbsch: ctl-0000.png
     pdfsch: controller-lo.pdf
     tmbpcb: ctl-0001.png
-    pdfpcb: sequencer-lo-pcbp.pdf
+    pdfpcb: controller-lo-pcbp.pdf
 
   - title: Sequencer
     card: sequencer
