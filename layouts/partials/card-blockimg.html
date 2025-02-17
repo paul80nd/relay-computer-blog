@@ -1,7 +1,7 @@
 <div class="column is-4 p-0 progress-blockimg">
   {{ if isset . "img" }}
       <a title="{{ .title }} ({{ .type }})"  href="{{.link}}">
-          <figure class="image bg-img" style="height: 9em; background-image: url(/img/pages/{{.img}})"></figure>
+          <figure class="image bg-img" style="height: 9em; background-image: url(/img/pages/{{.img}}); background-position: center;"></figure>
       </a>
   {{ else }}
       <figure class="image bg-img has-background-light" style="height: 9em;"></figure>
