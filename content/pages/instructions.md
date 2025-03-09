@@ -17,6 +17,9 @@ The list of available instructions is as follows:
 {{< instruction MOV8 >}}
 {{< instruction MOV16 >}}
 {{< instruction SETAB >}}
+{{< instruction LOAD >}}
+{{< instruction STORE >}}
+{{< instruction INCXY >}}
 {{< instruction LDSW >}}
 {{< instruction HALT >}}
 
