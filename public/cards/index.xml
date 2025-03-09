@@ -6,12 +6,12 @@
     <description>Recent content in Cards on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 05 Dec 2022 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Mar 2025 06:00:00 +0000</lastBuildDate>
     <atom:link href="https://relaycomputer.co.uk/cards/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Controller</title>
       <link>https://relaycomputer.co.uk/cards/controller/</link>
-      <pubDate>Mon, 05 Dec 2022 06:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Mar 2025 06:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/cards/controller/</guid>
       <description>The role of the controller card is to operate the various control lines of the computer at the right time according to the current instruction class. It makes up a key part of the broader ‘control unit’ within the computer. It is primarily driven by the sequencer card to known ‘when’ something should happen.</description>
     </item>

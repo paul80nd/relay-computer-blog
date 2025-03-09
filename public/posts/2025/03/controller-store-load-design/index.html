@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Controller Design: MOV8, MOV16 &amp; MISC Instructions | Relay Computer</title>
+  <title>Controller Design: STORE, LOAD &amp; INCXY Instructions | Relay Computer</title>
   <meta name="description" content="Way back in 2019 I discussed how you can’t ‘half design a PCB’ and that, as a result, my controller cards already have all the required functionality laid down … I just haven’t explained how those ‘missing’ bits of functionality work in this blog yet.
 To ensure I was ‘playing fair’ when constructing the controller I only soldered in the relays for the instructions I’d explained in this blog so far. Well, in my Relay Clock Series you may have noticed in the final episode I decided to solder the remaining relays in on the lower controller card meaning … the MOV8, MOV16 and MISC instruction classes are now complete and pretty much raring to go … which means I should probably get on with explaining them.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, nofollow">
   
 
   <link href="/fa/css/fontawesome.min.css" rel="stylesheet" />
@@ -36,28 +36,28 @@ To ensure I was ‘playing fair’ when constructing the controller I only solde
   <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <meta property="og:url" content="https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/">
+  <meta property="og:url" content="http://localhost:1313/posts/2025/03/controller-store-load-design/">
   <meta property="og:site_name" content="Relay Computer">
-  <meta property="og:title" content="Controller Design: MOV8, MOV16 & MISC Instructions">
+  <meta property="og:title" content="Controller Design: STORE, LOAD & INCXY Instructions">
   <meta property="og:description" content="Way back in 2019 I discussed how you can’t ‘half design a PCB’ and that, as a result, my controller cards already have all the required functionality laid down … I just haven’t explained how those ‘missing’ bits of functionality work in this blog yet.
 To ensure I was ‘playing fair’ when constructing the controller I only soldered in the relays for the instructions I’d explained in this blog so far. Well, in my Relay Clock Series you may have noticed in the final episode I decided to solder the remaining relays in on the lower controller card meaning … the MOV8, MOV16 and MISC instruction classes are now complete and pretty much raring to go … which means I should probably get on with explaining them.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-12-05T06:00:00+00:00">
-    <meta property="article:modified_time" content="2022-12-05T06:00:00+00:00">
+    <meta property="article:published_time" content="2025-03-08T06:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-08T06:00:00+00:00">
     <meta property="article:tag" content="Control">
     <meta property="article:tag" content="Design">
 
-  <meta itemprop="name" content="Controller Design: MOV8, MOV16 & MISC Instructions">
+  <meta itemprop="name" content="Controller Design: STORE, LOAD & INCXY Instructions">
   <meta itemprop="description" content="Way back in 2019 I discussed how you can’t ‘half design a PCB’ and that, as a result, my controller cards already have all the required functionality laid down … I just haven’t explained how those ‘missing’ bits of functionality work in this blog yet.
 To ensure I was ‘playing fair’ when constructing the controller I only soldered in the relays for the instructions I’d explained in this blog so far. Well, in my Relay Clock Series you may have noticed in the final episode I decided to solder the remaining relays in on the lower controller card meaning … the MOV8, MOV16 and MISC instruction classes are now complete and pretty much raring to go … which means I should probably get on with explaining them.">
-  <meta itemprop="datePublished" content="2022-12-05T06:00:00+00:00">
-  <meta itemprop="dateModified" content="2022-12-05T06:00:00+00:00">
+  <meta itemprop="datePublished" content="2025-03-08T06:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-08T06:00:00+00:00">
   <meta itemprop="wordCount" content="1656">
   <meta itemprop="keywords" content="Control,Design">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Controller Design: MOV8, MOV16 & MISC Instructions">
+  <meta name="twitter:title" content="Controller Design: STORE, LOAD & INCXY Instructions">
   <meta name="twitter:description" content="Way back in 2019 I discussed how you can’t ‘half design a PCB’ and that, as a result, my controller cards already have all the required functionality laid down … I just haven’t explained how those ‘missing’ bits of functionality work in this blog yet.
 To ensure I was ‘playing fair’ when constructing the controller I only soldered in the relays for the instructions I’d explained in this blog so far. Well, in my Relay Clock Series you may have noticed in the final episode I decided to solder the remaining relays in on the lower controller card meaning … the MOV8, MOV16 and MISC instruction classes are now complete and pretty much raring to go … which means I should probably get on with explaining them.">
 
@@ -148,7 +148,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <h1 class="title is-size-4">Controller Design: MOV8, MOV16 &amp; MISC Instructions</h1>
+      <h1 class="title is-size-4">Controller Design: STORE, LOAD &amp; INCXY Instructions</h1>
       <h2 class="subtitle"></h2>
     </div>
   </div>
@@ -201,9 +201,7 @@ register are the same then the value in that register is cleared:</p>
     
     <p>Copies the content of one 8-bit register to another.</p>
     
-    
     <pre class="is-size-7"><code>ddd = destination register (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)<br>sss = source register      (000-A, 001-B, 010-C, 011-D, 100-M1, 101-M2, 110-X, 111-Y)</code></pre>
-    
   </div>
 </article>
 
@@ -261,9 +259,7 @@ command that does it all in one go (via the 16-bit address bus). Well, that&rsqu
     
     <p>Copies the content of one 16-bit register to another.</p>
     
-    
     <pre class="is-size-7"><code>d = dest reg (0-XY or 1-PC)<br>ss = src reg (00-M, 01-XY, 10-J, 11-AS)</code></pre>
-    
   </div>
 </article>
 
@@ -329,9 +325,7 @@ but there&rsquo;s something special we can do on the GOTO instruction &hellip; l
     
     <p>Branches to a given address if stated condition register flag(s) is set. Address of next instruction can optionally be saved in XY register. M register can also be loaded with 16-bit value (without jump).</p>
     
-    
     <pre class="is-size-7"><code>d = destination register (0-M, 1-J)<br>s = 1 = load PC if sign bit is set (if negative); 0 = ignore sign bit<br>c = 1 = load PC if carry bit is set (if carry); 0 = ignore carry bit<br>z = 1 = load PC if zero bit set (if result is zero); 0 = ignore if zero bit set<br>n = 1 = load PC if zero bit clear (if result is not zero); 0 = ignore if zero bit clear<br>x = 1 = copy PC to XY; 0 = no copy<br>hhhhhhhh = address high byte (to set in M2/J2)<br>llllllll = address low byte (to set in M1/J1)</code></pre>
-    
   </div>
 </article>
 
@@ -397,9 +391,7 @@ With the first 5 bits taken for classification that leaves us 3-bits spare for s
     
     <p>Loads the value set on the front panel switches into register A or D.</p>
     
-    
     <pre class="is-size-7"><code>d = destination register (0-A, 1-D)</code></pre>
-    
   </div>
 </article>
 
@@ -432,9 +424,7 @@ With the first 5 bits taken for classification that leaves us 3-bits spare for s
     
     <p>Halts execution of the program (optionally reseting the program counter from the front panel switches).</p>
     
-    
     <pre class="is-size-7"><code>r = reload program counter (0-no reload, 1-reload from switches)</code></pre>
-    
   </div>
 </article>
 
@@ -484,7 +474,7 @@ To finish off then, below is the full schematic for the MOV-8, MOV-16 and MISC i
           <div class="control">
             <span class="tags has-addons">
               <span class="tag is-link">Published</span>
-              <span class="tag is-info">Dec 05, 2022</span>
+              <span class="tag is-info">Mar 08, 2025</span>
             </span>
           </div>
           
@@ -519,13 +509,10 @@ To finish off then, below is the full schematic for the MOV-8, MOV-16 and MISC i
           <div class="column">
             
             <span class="has-text-weight-semibold">Previous Post</span><br />
-            <a href="/posts/2022/11/assembly-part-2/">Assembling an assembler - token scanning</a>
+            <a href="/posts/2022/12/controller-mov8-mov16-misc-design/">Controller Design: MOV8, MOV16 &amp; MISC Instructions</a>
             
           </div>
           <div class="column has-text-right">
-            
-            <span class="has-text-weight-semibold">Next Post</span><br />
-            <a href="/posts/2025/03/controller-load-store-incxy-design/">Controller Design: LOAD, STORE &amp; INCXY Instructions</a>
             
           </div>
         </div>
@@ -543,10 +530,10 @@ To finish off then, below is the full schematic for the MOV-8, MOV-16 and MISC i
     <div class="columns">
       <div class="column">
         <p class="has-text-weight-semibold">On this blog</p>
-        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
-        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
-        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
-        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+        <p><a href="http://localhost:1313/">Home</a></p>
+        <p><a href="http://localhost:1313/posts/">Posts</a></p>
+        <p><a href="http://localhost:1313/tags/">Tags</a></p>
+        <p><a href="http://localhost:1313/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
         <p class="has-text-weight-semibold">Related sites</p>
@@ -558,11 +545,11 @@ To finish off then, below is the full schematic for the MOV-8, MOV-16 and MISC i
       <div class="column">
         <p class="has-text-weight-semibold">Share this page</p>
         <p>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&quote=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
-          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&text=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
-          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&description=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
-          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f&title=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
-          <a href="mailto:?subject=Controller%20Design%3a%20MOV8%2c%20MOV16%20%26%20MISC%20Instructions&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2022%2f12%2fcontroller-mov8-mov16-misc-design%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f&quote=Controller%20Design%3a%20STORE%2c%20LOAD%20%26%20INCXY%20Instructions" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f&text=Controller%20Design%3a%20STORE%2c%20LOAD%20%26%20INCXY%20Instructions:http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f&description=Controller%20Design%3a%20STORE%2c%20LOAD%20%26%20INCXY%20Instructions" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f&title=Controller%20Design%3a%20STORE%2c%20LOAD%20%26%20INCXY%20Instructions&source=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Controller%20Design%3a%20STORE%2c%20LOAD%20%26%20INCXY%20Instructions&body=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fcontroller-store-load-design%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
       </p>
       </div>
     </div>

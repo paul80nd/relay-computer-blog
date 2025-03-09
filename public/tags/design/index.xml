@@ -6,8 +6,15 @@
     <description>Recent content in Design on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 05 Dec 2022 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Mar 2025 06:00:00 +0000</lastBuildDate>
     <atom:link href="https://relaycomputer.co.uk/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Controller Design: LOAD, STORE &amp; INCXY Instructions</title>
+      <link>https://relaycomputer.co.uk/posts/2025/03/controller-load-store-incxy-design/</link>
+      <pubDate>Sun, 09 Mar 2025 06:00:00 +0000</pubDate>
+      <guid>https://relaycomputer.co.uk/posts/2025/03/controller-load-store-incxy-design/</guid>
+      <description>For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.</description>
+    </item>
     <item>
       <title>Controller Design: MOV8, MOV16 &amp; MISC Instructions</title>
       <link>https://relaycomputer.co.uk/posts/2022/12/controller-mov8-mov16-misc-design/</link>

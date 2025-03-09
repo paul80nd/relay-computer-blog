@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Controller Design: LOAD, STORE &amp; INCXY Instructions | Relay Computer</title>
+  <meta name="description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="/fa/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="/fa/css/brands.min.css" rel="stylesheet" />
+  <link href="/fa/css/solid.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:url" content="https://relaycomputer.co.uk/posts/2025/03/controller-load-store-incxy-design/">
+  <meta property="og:site_name" content="Relay Computer">
+  <meta property="og:title" content="Controller Design: LOAD, STORE & INCXY Instructions">
+  <meta property="og:description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-09T06:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-09T06:00:00+00:00">
+    <meta property="article:tag" content="Control">
+    <meta property="article:tag" content="Design">
+
+  <meta itemprop="name" content="Controller Design: LOAD, STORE & INCXY Instructions">
+  <meta itemprop="description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta itemprop="datePublished" content="2025-03-09T06:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-09T06:00:00+00:00">
+  <meta itemprop="wordCount" content="1051">
+  <meta itemprop="keywords" content="Control,Design">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Controller Design: LOAD, STORE & INCXY Instructions">
+  <meta name="twitter:description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
+  <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        
+        <a href="/" class="navbar-item is-tab ">
+          Home
+        </a>
+        
+        <a href="/pages/overview/" class="navbar-item is-tab ">
+          Overview
+        </a>
+        
+        <a href="/pages/progress/" class="navbar-item is-tab ">
+          Progress
+        </a>
+        
+        <a href="/cards/" class="navbar-item is-tab ">
+          Cards
+        </a>
+        
+        <a href="/posts/" class="navbar-item is-tab is-active">
+          Posts
+        </a>
+        
+        <a href="/tags/" class="navbar-item is-tab ">
+          Tags
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Controller Design: LOAD, STORE &amp; INCXY Instructions</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>For a while now my computer has been missing its final three instruction classes &hellip; and two of them are &lsquo;up there&rsquo; alongside
+branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these
+instructions are already present on the controller PCB because you can&rsquo;t
+<a href="/posts/2019/12/controller-design-pcb/">&lsquo;half design a PCB&rsquo;</a> but to &lsquo;play fair&rsquo; I&rsquo;ve not soldered in
+the relays yet because I haven&rsquo;t explained them yet in this blog &hellip; but that&rsquo;s about to change.</p>
+<p>Those three instructions are LOAD, STORE and INCXY. The important two are LOAD and STORE and it&rsquo;s with those that my
+computer reaches an important milestone where much more complicated programs can be run. Let&rsquo;s take a look at each in
+turn.</p>
+<h3 id="load-8-bit-register-load">LOAD: 8-bit Register Load</h3>
+<p>A key capability for any computer is being able to read and write data in memory and it&rsquo;s the LOAD instruction that covers
+the first part of that. Any of the first four general purpose registers can be loaded (A, B, C or D) but a key requirement
+is that the 16-bit M register is set pointing to the wanted location in memory first.</p>
+<p>There&rsquo;s a few options for loading register M although typically the
+<a href="/posts/2019/11/controller-goto-design/">16-bit load immediate</a> is used with a known address. This is akin to
+how variables work in modern programming languages and, in this case at least, a variable can be thought of as just a location
+in memory that is holding a value of interest.</p>
+<p>Given the destination register is 8-bits it follows that it&rsquo;ll be an 8-bit value in memory loaded into the register.</p>
+
+<article class="box">
+  <div class="content">
+    <h4>Load Register</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium has-text-white">
+          <span class="tag is-primary">LOAD</span>
+          <span class="tag is-success">12</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium mb-0">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">r</span>
+          <span class="tag is-info">r</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <p>Loads a value from memory into register A, B, C or D. The memory address is taken from the 16-bit M Register.</p>
+    
+    
+    <pre class="is-size-7"><code>rr = destination register (00-A, 01-B, 10-C, 11-D)</code></pre>
+    
+  </div>
+</article>
+
+
+<p>Here&rsquo;s the LOAD timing chart:</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0000.png" alt="LOAD opcode timing chart">
+  
+  <figcaption markdown="span">LOAD opcode timing chart (<a href="/pdf/timing-load.pdf">larger</a>)</figcaption>
+  
+</figure>
+
+<p>Schematic wise things follow a very similar pattern to the other instructions:</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0001.png" alt="LOAD schematic">
+  
+  <figcaption markdown="span">LOAD schematic (<a href="/img/posts/2025/2025-03-09-1001.png">larger</a>)</figcaption>
+  
+</figure>
+
+<h3 id="store-8-bit-register-store">STORE: 8-bit Register Store</h3>
+<p>As you might expect STORE is the opposite of LOAD and stores a value in register A, B, C or D back into memory. As with LOAD
+the M register needs setting for the location in memory to be written to.</p>
+
+<article class="box">
+  <div class="content">
+    <h4>Store Register</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium has-text-white">
+          <span class="tag is-primary">STORE</span>
+          <span class="tag is-success">12</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium mb-0">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-info">r</span>
+          <span class="tag is-info">r</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <p>Stores a value in register A, B, C or D into memory. The memory address is taken from the 16-bit M Register.</p>
+    
+    
+    <pre class="is-size-7"><code>rr = source register (00-A, 01-B, 10-C, 11-D)</code></pre>
+    
+  </div>
+</article>
+
+
+<p>Here&rsquo;s the STORE timing chart:</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0002.png" alt="STORE opcode timing chart">
+  
+  <figcaption markdown="span">STORE opcode timing chart (<a href="/pdf/timing-store.pdf">larger</a>)</figcaption>
+  
+</figure>
+
+<p>There&rsquo;s a couple of things worth noting on the timing charts:</p>
+<ul>
+<li>
+<p>STORE and LOAD are 12 cycle instructions and the reason for the longer timing is because we have to wait for the address
+bus to be available following the fetch/increment cycle. Instructions like MOV-8, SETAB and ALU are 8 cycle as they
+can get started earlier because they&rsquo;re only using the data bus.</p>
+</li>
+<li>
+<p>STORE makes use of the B2M control line (Bus-to-Memory) which gates the data bus into the memory chip. This extra control
+line is mainly needed because of how the memory card is built and that we need to interface 12V with the 5V of the memory
+chip. The address bus is always gated into the memory chip but for the data bus we need to explicitly read from the chip
+or write to the chip - B2M marks that differentiation.</p>
+</li>
+</ul>
+<p>The schematic for STORE is as follows:</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0003.png" alt="STORE schematic">
+  
+  <figcaption markdown="span">STORE schematic (<a href="/img/posts/2025/2025-03-09-1003.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>If you&rsquo;ve got a keen eye you might notice the LOAD and STORE schematics slot together and indeed they can both be found
+together on page 2 of the upper controller card schematic.</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0004.png" alt="Combined LOAD &amp; STORE schematic">
+  
+  <figcaption markdown="span">Combined LOAD &amp; STORE schematic (<a href="/pdf/controller-hi.pdf">larger - see 2nd page of PDF</a>)</figcaption>
+  
+</figure>
+
+<p>So, that&rsquo;s the crucial LOAD and STORE covered but we&rsquo;ve still got one last instruction class to cover.</p>
+<h3 id="incxy-16-bit-increment">INCXY: 16-bit Increment</h3>
+<p>Although my relay computer is capable of various 8-bit logic and arithmetic operations there&rsquo;s often a need to increment a
+value held in a 16-bit register. This usually happens when a register is used for &lsquo;indexing&rsquo; memory, that is, we have a
+reference to a location in memory and we want to move through memory cell by cell.</p>
+<p>You could, of course, increment each 8-bit register in turn via the ALU, say, M2 or Y followed by M1 or X but that also means
+you&rsquo;d have to handle any carry that occurs. There&rsquo;s a lot of steps involved there and given we&rsquo;ve got a 16-bit half
+adder available in the incrementer unit it seems a shame not to take advantage. The incrementer unit is primarily used in the
+fetch/increment cycle to increment the program counter but nothing stops us from placing the value in a different 16-bit register.</p>
+<p>Well, actually, there is a slight limitation. If you look at the architecture diagram you might spot it:</p>
+<figure>
+  <img src="/img/posts/shared/architecture-sm.png" alt="Relay Computer Architecture">
+  
+  <figcaption markdown="span">Relay Computer Architecture (<a href="/img/posts/shared/architecture-lg.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>There&rsquo;s only two 16-bit registers that can be written to as well as read from the address bus &hellip; the program counter and the XY
+register. Now, changing the program counter&rsquo;s value effectively changes where the next instruction in the program will be read from.
+In fact, that&rsquo;s exactly what the GOTO instruction relies on - load an address in to the J register and then if the jump is
+required then copy J to the program counter. So, the only other register that we could increment is the XY register &hellip; and that&rsquo;s
+where we get our INCXY instruction from:</p>
+
+<article class="box">
+  <div class="content">
+    <h4>Increment XY Register</h4>
+    <div class="field is-grouped is-grouped-multiline is-family-monospace">
+      <div class="control">
+        <div class="tags has-addons are-medium has-text-white">
+          <span class="tag is-primary">INCXY</span>
+          <span class="tag is-success">14</span>
+        </div>
+      </div>
+      <div class="control">
+        <div class="tags has-addons are-medium mb-0">
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">1</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+          <span class="tag is-link">0</span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <p>Increments the 16-bit XY register.</p>
+    
+    
+  </div>
+</article>
+
+
+<p>Here&rsquo;s the INCXY timing chart:</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0005.png" alt="INCXY opcode timing chart">
+  
+  <figcaption markdown="span">INCXY opcode timing chart (<a href="/pdf/timing-incxy.pdf">larger</a>)</figcaption>
+  
+</figure>
+
+<p>The timing for incrementing the XY register is, of course, very similar to the program counter increment at the beginning of the
+instruction. Schematic wise we have the following:</p>
+<figure>
+  <img src="/img/posts/2025/2025-03-09-0006.png" alt="INCXY schematic">
+  
+  <figcaption markdown="span">INCXY schematic (<a href="/img/posts/2025/2025-03-09-1006.png">larger</a>)</figcaption>
+  
+</figure>
+
+<p>That&rsquo;s it, that&rsquo;s all the major instruction classes covered which means the controller is fully designed now and all that stands
+between that and a complete physical controller card is soldering in the remaining relays. That last bit of soldering also gets
+me to a major milestone with the relay computer - Turing completeness - and I&rsquo;ll cover that a bit in the next blog post.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <span class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Mar 09, 2025</span>
+            </span>
+          </div>
+          
+          
+          <div class="control">
+            <a href="/cards/controller" class="tags has-addons">
+              <span class="tag is-link">Card</span>
+              <span class="tag is-info">controller</span>
+            </a>
+          </div>
+          
+          
+          </div>
+          <div class="field is-grouped is-grouped-multiline">
+          
+          
+          <div class="control">
+            <a href="/tags/control/" class="tags">
+              <span class="tag is-primary">control</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags/design/" class="tags">
+              <span class="tag is-primary">design</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2022/12/controller-mov8-mov16-misc-design/">Controller Design: MOV8, MOV16 &amp; MISC Instructions</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="https://editor.relaycomputer.co.uk"><span class="fas fa-code fa-lg fa-fw"></span> Relay Code Editor</a></p>
+        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&quote=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&text=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&description=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&title=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
