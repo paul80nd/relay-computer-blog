@@ -47,7 +47,9 @@
     {{ if .description }}
     <p>{{ .description }}</p>
     {{ end }}
+    {{ if .arguments }}
     <pre class="is-size-7"><code>{{ .arguments | safeHTML }}</code></pre>
+    {{ end }}
   </div>
 </article>
 {{ end }}

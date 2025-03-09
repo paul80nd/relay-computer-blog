@@ -33,6 +33,26 @@
   prefix: 2
   description: 'Loads a value between -16 and +15 in register A or B.'
   arguments: '    r = destination register (0-A, 1-B)<br>ddddd = value (-16..15)'
+- class: LOAD
+  title: Load Register
+  opcode: '100100rr'
+  cycles: '12'
+  prefix: 6
+  description: 'Loads a value from memory into register A, B, C or D. The memory address is taken from the 16-bit M Register.'
+  arguments: 'rr = destination register (00-A, 01-B, 10-C, 11-D)'
+- class: STORE
+  title: Store Register
+  opcode: '100110rr'
+  cycles: '12'
+  prefix: 6
+  description: 'Stores a value in register A, B, C or D into memory. The memory address is taken from the 16-bit M Register.'
+  arguments: 'rr = source register (00-A, 01-B, 10-C, 11-D)'
+- class: INCXY
+  title: Increment XY Register
+  opcode: '10110000'
+  cycles: '14'
+  prefix: 8
+  description: 'Increments the 16-bit XY register.'
 - class: HALT
   title: Halt
   opcode: '1010111r'
