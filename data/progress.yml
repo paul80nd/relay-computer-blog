@@ -42,13 +42,15 @@
     card: controller
     version: 2
     derv: upper
-    state: PartComplete
+    state: Complete
     video: iCu2DRJhtUc
     eda: controller-upper
     tmbsch: cth-0000.png
     pdfsch: controller-hi.pdf
     tmbpcb: cth-0001.png
     pdfpcb: controller-hi-pcbp.pdf
+    tmbpto: cth-0002.jpg
+    flspto: cth-1002.jpg
 
   - title: Controller
     card: controller
