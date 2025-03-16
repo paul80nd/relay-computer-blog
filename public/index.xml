@@ -6,8 +6,17 @@
     <description>Recent content in A blog about a computer made from relays on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 09 Mar 2025 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Mar 2025 06:00:00 +0000</lastBuildDate>
     <atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turing Completeness</title>
+      <link>https://relaycomputer.co.uk/posts/2025/03/turing-completeness/</link>
+      <pubDate>Sun, 16 Mar 2025 06:00:00 +0000</pubDate>
+      <guid>https://relaycomputer.co.uk/posts/2025/03/turing-completeness/</guid>
+      <description>Well, it’s only taken 12 years but my computer has finally reached a major milestone - Turing completeness.
+The architecture of my computer has, of course, been Turing complete all along, that is, it’s capable of simulating a Turing machine and therefore represents the design of a general purpose computer.
+Relay Computer Architecture (larger) The challenge has been bringing that architecture and design into physical reality and that’s where the last 12 years have gone. Now, obviously it doesn’t take that long to build a relay computer if you’re working on it full time but for me this has been a part time hobby and something I’ve fallen in and out of fondness for. Nonetheless, my relay computer is now Turing complete.</description>
+    </item>
     <item>
       <title>Controller Design: LOAD, STORE &amp; INCXY Instructions</title>
       <link>https://relaycomputer.co.uk/posts/2025/03/controller-load-store-incxy-design/</link>

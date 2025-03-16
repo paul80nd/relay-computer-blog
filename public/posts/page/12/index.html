@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Relay Computer</title>
+  <meta name="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="/fa/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="/fa/css/brands.min.css" rel="stylesheet" />
+  <link href="/fa/css/solid.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Relay Computer" />
+  <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Relay Computer" />
+  
+  <meta property="og:url" content="https://relaycomputer.co.uk/posts/">
+  <meta property="og:site_name" content="Relay Computer">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Posts">
+  <meta itemprop="description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+  <meta itemprop="datePublished" content="2025-03-16T06:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-16T06:00:00+00:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Posts">
+  <meta name="twitter:description" content="My journey in constructing an 8 bit relay computer from scratch … made from of a ton of solder, wires, lights, relays, sweat, tears, swearing and money.">
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
+  <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        
+        <a href="/" class="navbar-item is-tab ">
+          Home
+        </a>
+        
+        <a href="/pages/overview/" class="navbar-item is-tab ">
+          Overview
+        </a>
+        
+        <a href="/pages/progress/" class="navbar-item is-tab ">
+          Progress
+        </a>
+        
+        <a href="/cards/" class="navbar-item is-tab ">
+          Cards
+        </a>
+        
+        <a href="/posts/" class="navbar-item is-tab is-active">
+          Posts
+        </a>
+        
+        <a href="/tags/" class="navbar-item is-tab ">
+          Tags
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <nav class="breadcrumb has-succeeds-separator is-small mb-2" aria-label="breadcrumbs">
+        <ul>
+          <li> <a href="/"> Home </a> </li>
+          
+          <li class="is-active"> <a href="#">Blog Posts</a> </li>
+        </ul>
+      </nav>
+      <h1 class="title is-size-4">Blog Posts</h1>
+      <h2 class="subtitle">List of all articles (page 12 of 12)</h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      
+      <div class="column is-half is-one-third-widescreen">
+        
+<article class="card" style="height: 100%;">
+  <div class="card-image">
+    <figure class="image" style="height:8rem; overflow:hidden;">
+      
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="content">
+      <p class="subtitle is-7 mb-2">31 Oct 2013 - 2 min read</p>
+      <p class="title is-5 mb-3"><a href="/posts/2013/10/it-begins/">It begins</a></p>
+      <p>
+        &hellip; although being as I&rsquo;m already a couple of months in on my little project then perhaps that should be &lsquo;it began&rsquo;.
+If I do see this project all the …
+      </p>
+      <div class="columns is-vcentered is-mobile">
+        <div class="column is-narrow">
+          <a href="/posts/2013/10/it-begins/" class="button is-small">Read More</a>
+        </div>
+        
+        <div class="column" style="line-height: 1rem;">
+          <small>
+            
+            <a href="/tags/musings">
+              #musings
+            </a>
+            
+            <a href="/tags/video">
+              #video
+            </a>
+            
+          </small>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</article>
+
+      </div>
+      
+    </div>
+    <div class="card">
+      <div class="card-content py-3">
+        
+
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+  
+  
+  <a href="/posts/page/11/" class="pagination-previous is-info">Previous</a>
+  
+
+  
+  
+  <p class="pagination-next" disabled>Next</p>
+  
+
+  <ul class="pagination-list">
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/" class="pagination-link">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/page/9/" class="pagination-link">9</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/page/10/" class="pagination-link">10</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li><a href="/posts/page/11/" class="pagination-link">11</a></li>
+    
+    
+    
+    
+    <li><a class="pagination-link is-current">12</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="https://editor.relaycomputer.co.uk"><span class="fas fa-code fa-lg fa-fw"></span> Relay Code Editor</a></p>
+        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&quote=Posts" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&text=Posts:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&description=Posts" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f&title=Posts&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Posts&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Controller Design: LOAD, STORE &amp; INCXY Instructions | Relay Computer</title>
-  <meta name="description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
-  <meta name="robots" content="index, follow">
+  <title>Turing Complete | Relay Computer</title>
+  <meta name="description" content="Well, it’s only taken 12 years but my computer has finally reached a major milestone - Turing completeness.
+The architecture of my computer has, of course, being Turing complete all along
+For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta name="robots" content="noindex, nofollow">
   
 
   <link href="/fa/css/fontawesome.min.css" rel="stylesheet" />
@@ -35,27 +37,34 @@
   <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <meta property="og:url" content="https://relaycomputer.co.uk/posts/2025/03/controller-load-store-incxy-design/">
+  <meta property="og:url" content="http://localhost:1313/posts/2025/03/turing-complete/">
   <meta property="og:site_name" content="Relay Computer">
-  <meta property="og:title" content="Controller Design: LOAD, STORE & INCXY Instructions">
-  <meta property="og:description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta property="og:title" content="Turing Complete">
+  <meta property="og:description" content="Well, it’s only taken 12 years but my computer has finally reached a major milestone - Turing completeness.
+The architecture of my computer has, of course, being Turing complete all along
+For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-03-09T06:00:00+00:00">
-    <meta property="article:modified_time" content="2025-03-09T06:00:00+00:00">
+    <meta property="article:published_time" content="2025-03-16T06:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-16T06:00:00+00:00">
     <meta property="article:tag" content="Control">
-    <meta property="article:tag" content="Design">
+    <meta property="article:tag" content="Completion">
+    <meta property="article:tag" content="Video">
 
-  <meta itemprop="name" content="Controller Design: LOAD, STORE & INCXY Instructions">
-  <meta itemprop="description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
-  <meta itemprop="datePublished" content="2025-03-09T06:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-03-09T06:00:00+00:00">
-  <meta itemprop="wordCount" content="1051">
-  <meta itemprop="keywords" content="Control,Design">
+  <meta itemprop="name" content="Turing Complete">
+  <meta itemprop="description" content="Well, it’s only taken 12 years but my computer has finally reached a major milestone - Turing completeness.
+The architecture of my computer has, of course, being Turing complete all along
+For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta itemprop="datePublished" content="2025-03-16T06:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-16T06:00:00+00:00">
+  <meta itemprop="wordCount" content="1082">
+  <meta itemprop="keywords" content="Control,Completion,Video">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Controller Design: LOAD, STORE & INCXY Instructions">
-  <meta name="twitter:description" content="For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
+  <meta name="twitter:title" content="Turing Complete">
+  <meta name="twitter:description" content="Well, it’s only taken 12 years but my computer has finally reached a major milestone - Turing completeness.
+The architecture of my computer has, of course, being Turing complete all along
+For a while now my computer has been missing its final three instruction classes … and two of them are ‘up there’ alongside branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these instructions are already present on the controller PCB because you can’t ‘half design a PCB’ but to ‘play fair’ I’ve not soldered in the relays yet because I haven’t explained them yet in this blog … but that’s about to change.">
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
       <script>
@@ -144,7 +153,7 @@ window.cookieconsent.initialise({
 <section class="hero is-bold is-small is-primary">
   <div class="hero-body pb-3 pt-4">
     <div class="container">
-      <h1 class="title is-size-4">Controller Design: LOAD, STORE &amp; INCXY Instructions</h1>
+      <h1 class="title is-size-4">Turing Complete</h1>
       <h2 class="subtitle"></h2>
     </div>
   </div>
@@ -156,7 +165,10 @@ window.cookieconsent.initialise({
     <div class="columns">
       <div class="column is-three-quarters-widescreen">
         <div class="content">
-          <p>For a while now my computer has been missing its final three instruction classes &hellip; and two of them are &lsquo;up there&rsquo; alongside
+          <p>Well, it&rsquo;s only taken 12 years but my computer has finally reached a major milestone - Turing completeness.</p>
+<p>The architecture of my computer has, of course, being Turing complete all along</p>
+<hr>
+<p>For a while now my computer has been missing its final three instruction classes &hellip; and two of them are &lsquo;up there&rsquo; alongside
 branching in terms of overall importance for the capability of my relay computer. The irony is, of course, that these
 instructions are already present on the controller PCB because you can&rsquo;t
 <a href="/posts/2019/12/controller-design-pcb/">&lsquo;half design a PCB&rsquo;</a> but to &lsquo;play fair&rsquo; I&rsquo;ve not soldered in
@@ -382,7 +394,7 @@ me to a major milestone with the relay computer - Turing completeness - and I&rs
           <div class="control">
             <span class="tags has-addons">
               <span class="tag is-link">Published</span>
-              <span class="tag is-info">Mar 09, 2025</span>
+              <span class="tag is-info">Mar 16, 2025</span>
             </span>
           </div>
           
@@ -400,14 +412,20 @@ me to a major milestone with the relay computer - Turing completeness - and I&rs
           
           
           <div class="control">
+            <a href="/tags/completion/" class="tags">
+              <span class="tag is-primary">completion</span>
+            </a>
+          </div>
+          
+          <div class="control">
             <a href="/tags/control/" class="tags">
               <span class="tag is-primary">control</span>
             </a>
           </div>
           
           <div class="control">
-            <a href="/tags/design/" class="tags">
-              <span class="tag is-primary">design</span>
+            <a href="/tags/video/" class="tags">
+              <span class="tag is-primary">video</span>
             </a>
           </div>
           
@@ -417,13 +435,10 @@ me to a major milestone with the relay computer - Turing completeness - and I&rs
           <div class="column">
             
             <span class="has-text-weight-semibold">Previous Post</span><br />
-            <a href="/posts/2022/12/controller-mov8-mov16-misc-design/">Controller Design: MOV8, MOV16 &amp; MISC Instructions</a>
+            <a href="/posts/2025/03/controller-load-store-incxy-design/">Controller Design: LOAD, STORE &amp; INCXY Instructions</a>
             
           </div>
           <div class="column has-text-right">
-            
-            <span class="has-text-weight-semibold">Next Post</span><br />
-            <a href="/posts/2025/03/turing-completeness/">Turing Completeness</a>
             
           </div>
         </div>
@@ -441,10 +456,10 @@ me to a major milestone with the relay computer - Turing completeness - and I&rs
     <div class="columns">
       <div class="column">
         <p class="has-text-weight-semibold">On this blog</p>
-        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
-        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
-        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
-        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+        <p><a href="http://localhost:1313/">Home</a></p>
+        <p><a href="http://localhost:1313/posts/">Posts</a></p>
+        <p><a href="http://localhost:1313/tags/">Tags</a></p>
+        <p><a href="http://localhost:1313/pages/progress/">Progress</a></p>
       </div>
       <div class="column">
         <p class="has-text-weight-semibold">Related sites</p>
@@ -456,11 +471,11 @@ me to a major milestone with the relay computer - Turing completeness - and I&rs
       <div class="column">
         <p class="has-text-weight-semibold">Share this page</p>
         <p>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&quote=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
-          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&text=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
-          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&description=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
-          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f&title=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
-          <a href="mailto:?subject=Controller%20Design%3a%20LOAD%2c%20STORE%20%26%20INCXY%20Instructions&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f03%2fcontroller-load-store-incxy-design%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f&quote=Turing%20Complete" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f&text=Turing%20Complete:http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f&description=Turing%20Complete" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f&title=Turing%20Complete&source=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Turing%20Complete&body=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f03%2fturing-complete%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
       </p>
       </div>
     </div>
