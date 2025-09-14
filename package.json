@@ -3,7 +3,7 @@
   "description": "Relay Computer Blog",
   "version": "2.0.0",
   "dependencies": {
-    "bulma": "^1.0.3"
+    "bulma": "^1.0.4"
   },
   "devDependencies": {
     "@vizuaalog/bulmajs": "^0.12.2"
