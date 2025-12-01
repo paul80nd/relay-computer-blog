@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calculating Pi | Relay Computer</title>
+  <meta name="description" content="Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I am, six months after the event, finally updating my blog. There’s new news on what’s next though, so hang in there.
+For some reason lately I seem to be adopting a pattern of completely overstretching myself with a mammoth video series and then having to take the rest of the year off … and 2025 was no exception - this time with my ‘grandest’ challenge yet: to see if I could get my relay computer to calculate Pi to 20 digits.">
+  <meta name="robots" content="index, follow">
+  
+
+  <link href="/fa/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="/fa/css/brands.min.css" rel="stylesheet" />
+  <link href="/fa/css/solid.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css">
+  
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:url" content="https://relaycomputer.co.uk/posts/2025/12/calculating-pi/">
+  <meta property="og:site_name" content="Relay Computer">
+  <meta property="og:title" content="Calculating Pi">
+  <meta property="og:description" content="Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I am, six months after the event, finally updating my blog. There’s new news on what’s next though, so hang in there.
+For some reason lately I seem to be adopting a pattern of completely overstretching myself with a mammoth video series and then having to take the rest of the year off … and 2025 was no exception - this time with my ‘grandest’ challenge yet: to see if I could get my relay computer to calculate Pi to 20 digits.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-01T08:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-01T08:00:00+00:00">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="Theory">
+    <meta property="article:tag" content="Video">
+
+  <meta itemprop="name" content="Calculating Pi">
+  <meta itemprop="description" content="Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I am, six months after the event, finally updating my blog. There’s new news on what’s next though, so hang in there.
+For some reason lately I seem to be adopting a pattern of completely overstretching myself with a mammoth video series and then having to take the rest of the year off … and 2025 was no exception - this time with my ‘grandest’ challenge yet: to see if I could get my relay computer to calculate Pi to 20 digits.">
+  <meta itemprop="datePublished" content="2025-12-01T08:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-01T08:00:00+00:00">
+  <meta itemprop="wordCount" content="928">
+  <meta itemprop="keywords" content="Coding,Theory,Video">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calculating Pi">
+  <meta name="twitter:description" content="Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I am, six months after the event, finally updating my blog. There’s new news on what’s next though, so hang in there.
+For some reason lately I seem to be adopting a pattern of completely overstretching myself with a mammoth video series and then having to take the rest of the year off … and 2025 was no exception - this time with my ‘grandest’ challenge yet: to see if I could get my relay computer to calculate Pi to 20 digits.">
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RNXVW69CMT');
+        }
+      </script>
+  <script defer language="javascript" type="text/javascript"  src="/js/main.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+
+  
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+        <img src="/img/favicon/favicon-96x96.png" width="32">
+        Relay Computer
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        
+        <a href="/" class="navbar-item is-tab ">
+          Home
+        </a>
+        
+        <a href="/pages/overview/" class="navbar-item is-tab ">
+          Overview
+        </a>
+        
+        <a href="/pages/progress/" class="navbar-item is-tab ">
+          Progress
+        </a>
+        
+        <a href="/cards/" class="navbar-item is-tab ">
+          Cards
+        </a>
+        
+        <a href="/posts/" class="navbar-item is-tab is-active">
+          Posts
+        </a>
+        
+        <a href="/tags/" class="navbar-item is-tab ">
+          Tags
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+<section class="hero is-bold is-small is-primary">
+  <div class="hero-body pb-3 pt-4">
+    <div class="container">
+      <h1 class="title is-size-4">Calculating Pi</h1>
+      <h2 class="subtitle"></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-three-quarters-widescreen">
+        <div class="content">
+          <p>Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I
+am, six months after the event, finally updating my blog. There&rsquo;s new news on what’s next though, so hang in there.</p>
+<p>For some reason lately I seem to be adopting a pattern of completely overstretching myself with a mammoth video series and then
+having to take the rest of the year off &hellip; and 2025 was no exception - this time with my ‘grandest’ challenge yet: to see if I could get
+my relay computer to calculate Pi to 20 digits.</p>
+<p>This all started innocently enough with a gauntlet thrown down in a video comment:</p>
+<figure>
+  <img src="/img/posts/2025/2025-12-01-0000.png" alt="Gauntlet thrown down">
+  
+  <figcaption markdown="span">Gauntlet thrown down</figcaption>
+  
+</figure>
+
+<p>Now, to be fair, I don’t take every YouTube comment as a call to action (otherwise I’d have spent the last three or four years
+building a relay computer port of Doom), but this one seemed within reasonable grasp while also being a decent intellectual challenge.</p>
+<p>In theory it’s totally possible for any <a href="/posts/2025/03/turing-completeness/">Turing complete</a> computer but, as
+with most things computing, run-time would be the major factor. Well, that and I couldn’t remember how to do long division.</p>
+<p>So, where to start?! At the beginning I guess &hellip;</p>
+<div class="columns is-multiline">
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/tcgfeRkKpMU"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/UAIYP3sQdtc"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+</div>
+
+<p>&hellip; and I’ll fully admit I started the video series before I had a clear idea of exactly how I’d arrive at Pi. For some that might seem
+foolhardy but, in many ways, it was my way of avoiding procrastination. By laying down the first video I&rsquo;d committed myself to seeing
+the project through to some degree of completion.</p>
+<p>After setting out the general direction in the first video there were some basics I needed to cover (and reaffirm for myself) and this was
+all about breaking down the challenge into smaller programming tasks.</p>
+<div class="columns is-multiline">
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/7DCDP3Giywg"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/0N6kBriM2z0"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+</div>
+
+<p>I knew I’d be writing a lot of new subroutines and mathematical functions to do the heavy lifting which led me to using a high-level language
+(Microsoft .NET) to prove out the approach before spending considerable time writing assembly code.</p>
+<p>I continued breaking the challenge into smaller problems until episode 5 where I hit a celebratory milestone:</p>
+<div class="columns is-multiline">
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/subFMbYxcc8"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/V-U6E-uJrpM"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+</div>
+
+<p>That milestone was, of course, achieving <a href="/posts/2025/03/turing-completeness/">Turing completeness</a>. In effect the
+relay computer had been ‘Turing ready’ for some time &hellip; it just needed a handful of relays soldered in to complete the controller cards
+thereby gaining the ability to save and retrieve values to and from memory. In my typical self-deprecating way I only made a
+fair-to-medium fuss over this milestone but internally I was immensely proud.</p>
+<p>With the ability to shuffle values around in memory it was time to put that to good use and lay down the long addition and subtraction
+approaches in episode 6. So far so good — which just left the unavoidable challenge I’d been quietly dreading &hellip;</p>
+<div class="columns is-multiline">
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/qEJRCGBKgwo"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+  <div class="column is-half">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/1axNdrTlE7Q"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+</div>
+
+<p>&hellip; binary long division. This took two episodes to cover - not just to get the routine working but to optimise it as best I could. This
+was important as the division routines are core to the overall calculation and run many-many times meaning their run-time make a bit
+impact in the overall run-time.</p>
+<p>By this point I had all the ‘ingredients’ I needed to pull off the Pi calculation so the next step was to bring it all together:</p>
+<div class="columns is-multiline">
+  
+  <div class="column is-four-fifths-tablet is-three-quarters-desktop">
+    <figure class="image is-16by9 m-0">
+      <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/BP_x1ufQpiw"
+        frameborder="0" allowfullscreen></iframe>
+    </figure>
+  </div>
+  
+</div>
+
+<p>Which turned into to a mamoth 45-minute episode and became quite a deep dive into assembly programming &hellip; but it
+was all worth it in the end, wasn’t it?</p>
+<p>Well, not quite. I absolutely achieved calculating Pi to 20 decimal places — but only in my emulator. The problem was that the
+projected run-time was around twelve and a half hours — way too long for my computer to realistically run. There was no doubt about
+the theory but could I guarantee perfect execution for that length of time? No chance.</p>
+<p>Behind the scenes I’d been having numerous reliability problems running my computer and getting a successful run of even simple routines
+was becoming a bit of a dice roll — which was especially annoying when a fault would appear in the last couple of instructions (as it
+often did). The main culprit was dry joints in my ground lines which is where the ‘randomness’ of the faults came from.</p>
+<figure>
+  <img src="/img/posts/2025/2025-12-01-0001.jpg" alt="Dry - so very, very, dry.">
+  
+  <figcaption markdown="span">Dry - so very, very, dry.</figcaption>
+  
+</figure>
+
+<p>Fixing those problems isn’t the only answer to unlocking Pi (although fix them I must). There’s no escaping that twelve hours is still an awfully long
+time to run a relay computer - even with perfect reliability. My computer also has a finite lifespan dictated by the relays themselves and,
+well, I don’t want to spend it all on one challenge.</p>
+<p>Is there another way? I didn’t want to give up on the idea of Pi just yet so I spent the summer ‘having a think’ and it dawned on me that I
+should just do what others have done before me: if it’s too slow to run in code then implement it in hardware. Yup, the way forward was clear:
+I needed to implement a hardware divider unit.</p>
+<p>So, I spent the next couple of months prototyping that and then seeing what impact it’d have on the Pi routine and &hellip; well &hellip; it’s twelve hours
+down to around four. Quite the saving and it basically puts Pi back within reasonable reach. The question now is &hellip; should I keep going? This
+will be another considerable build (and at considerable cost) and today I’m right on the decision point of whether to proceed or not.</p>
+
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <span class="tags has-addons">
+              <span class="tag is-link">Published</span>
+              <span class="tag is-info">Dec 01, 2025</span>
+            </span>
+          </div>
+          
+          </div>
+          <div class="field is-grouped is-grouped-multiline">
+          
+          
+          <div class="control">
+            <a href="/tags/coding/" class="tags">
+              <span class="tag is-primary">coding</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags/theory/" class="tags">
+              <span class="tag is-primary">theory</span>
+            </a>
+          </div>
+          
+          <div class="control">
+            <a href="/tags/video/" class="tags">
+              <span class="tag is-primary">video</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        <div class="columns">
+          <div class="column">
+            
+            <span class="has-text-weight-semibold">Previous Post</span><br />
+            <a href="/posts/2025/03/turing-completeness/">Turing Completeness</a>
+            
+          </div>
+          <div class="column has-text-right">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-small is-success">
+  <div class="hero-body py-1">
+  </div>
+</section>
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-weight-semibold">On this blog</p>
+        <p><a href="https://relaycomputer.co.uk/">Home</a></p>
+        <p><a href="https://relaycomputer.co.uk/posts/">Posts</a></p>
+        <p><a href="https://relaycomputer.co.uk/tags/">Tags</a></p>
+        <p><a href="https://relaycomputer.co.uk/pages/progress/">Progress</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Related sites</p>
+        <p><a href="https://www.youtube.com/channel/UCDn07eKw2HDPIgSAGQgliAA"><span class="fab fa-youtube fa-lg fa-fw"></span> YouTube Channel</a></p>
+        <p><a href="https://github.com/paul80nd"><span class="fab fa-github fa-lg fa-fw"></span> GitHub Repos</a></p>
+        <p><a href="https://editor.relaycomputer.co.uk"><span class="fas fa-code fa-lg fa-fw"></span> Relay Code Editor</a></p>
+        <p><a href="https://simulator.relaycomputer.co.uk"><span class="fas fa-flask fa-lg fa-fw"></span> Relay Simulator</a></p>
+      </div>
+      <div class="column">
+        <p class="has-text-weight-semibold">Share this page</p>
+        <p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f&quote=Calculating%20Pi" target="_blank" title="Share on Facebook"><i class="fab fa-square-facebook fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f&text=Calculating%20Pi:https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f" target="_blank" title="Tweet"><i class="fab fa-square-x-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+          <a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f&description=Calculating%20Pi" target="_blank" title="Pin it"><i class="fab fa-square-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f&title=Calculating%20Pi&source=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+          <a href="mailto:?subject=Calculating%20Pi&body=https%3a%2f%2frelaycomputer.co.uk%2fposts%2f2025%2f12%2fcalculating-pi%2f" target="_blank" title="Send email"><i class="fas fa-square-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

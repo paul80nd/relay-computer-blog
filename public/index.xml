@@ -6,8 +6,16 @@
     <description>Recent content in A blog about a computer made from relays on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 16 Mar 2025 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Dec 2025 08:00:00 +0000</lastBuildDate>
     <atom:link href="https://relaycomputer.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculating Pi</title>
+      <link>https://relaycomputer.co.uk/posts/2025/12/calculating-pi/</link>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>https://relaycomputer.co.uk/posts/2025/12/calculating-pi/</guid>
+      <description>Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I am, six months after the event, finally updating my blog. There’s new news on what’s next though, so hang in there.
+For some reason lately I seem to be adopting a pattern of completely overstretching myself with a mammoth video series and then having to take the rest of the year off … and 2025 was no exception - this time with my ‘grandest’ challenge yet: to see if I could get my relay computer to calculate Pi to 20 digits.</description>
+    </item>
     <item>
       <title>Turing Completeness</title>
       <link>https://relaycomputer.co.uk/posts/2025/03/turing-completeness/</link>

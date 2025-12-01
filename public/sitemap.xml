@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://relaycomputer.co.uk/</loc>
-    <lastmod>2025-03-16T06:00:00+00:00</lastmod>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/2025/12/calculating-pi/</loc>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/coding/</loc>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/posts/</loc>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/</loc>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/theory/</loc>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaycomputer.co.uk/tags/video/</loc>
+    <lastmod>2025-12-01T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/cards/</loc>
     <lastmod>2025-03-16T06:00:00+00:00</lastmod>
@@ -17,16 +35,7 @@
     <loc>https://relaycomputer.co.uk/cards/controller/</loc>
     <lastmod>2025-03-16T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/posts/</loc>
-    <lastmod>2025-03-16T06:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/</loc>
-    <lastmod>2025-03-16T06:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://relaycomputer.co.uk/posts/2025/03/turing-completeness/</loc>
-    <lastmod>2025-03-16T06:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/video/</loc>
     <lastmod>2025-03-16T06:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2025/03/controller-load-store-incxy-design/</loc>
@@ -39,9 +48,6 @@
     <lastmod>2022-12-05T06:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/</loc>
-    <lastmod>2022-11-27T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/coding/</loc>
     <lastmod>2022-11-27T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/cards/clock/</loc>
@@ -74,10 +80,10 @@
     <loc>https://relaycomputer.co.uk/posts/2020/02/twenty-twenty-update/</loc>
     <lastmod>2020-02-01T03:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/tags/decoder/</loc>
+    <loc>https://relaycomputer.co.uk/cards/decoder/</loc>
     <lastmod>2020-01-05T03:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/decoder/</loc>
+    <loc>https://relaycomputer.co.uk/tags/decoder/</loc>
     <lastmod>2020-01-05T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2020/01/decoder-construction/</loc>
@@ -117,9 +123,6 @@
     <lastmod>2019-11-01T03:03:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/10/branching-opcode-timing/</loc>
-    <lastmod>2019-10-06T01:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://relaycomputer.co.uk/tags/theory/</loc>
     <lastmod>2019-10-06T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2019/09/branching-opcode-design/</loc>
@@ -173,10 +176,10 @@
     <loc>https://relaycomputer.co.uk/posts/2018/01/fetch-and-increment-construction-and/</loc>
     <lastmod>2018-01-16T22:16:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/tags/incrementer/</loc>
+    <loc>https://relaycomputer.co.uk/cards/incrementer/</loc>
     <lastmod>2018-01-07T13:04:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/incrementer/</loc>
+    <loc>https://relaycomputer.co.uk/tags/incrementer/</loc>
     <lastmod>2018-01-07T13:04:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2018/01/incrementer-test/</loc>
@@ -188,10 +191,10 @@
     <loc>https://relaycomputer.co.uk/posts/2017/12/incrementer-construction-part-1-of-2/</loc>
     <lastmod>2017-12-10T11:07:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/tags/memory/</loc>
+    <loc>https://relaycomputer.co.uk/cards/memory/</loc>
     <lastmod>2017-11-30T21:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://relaycomputer.co.uk/cards/memory/</loc>
+    <loc>https://relaycomputer.co.uk/tags/memory/</loc>
     <lastmod>2017-11-30T21:15:00+00:00</lastmod>
   </url><url>
     <loc>https://relaycomputer.co.uk/posts/2017/11/memory-test/</loc>
