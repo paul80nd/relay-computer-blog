@@ -52,7 +52,7 @@
       <div class="columns">
       {{ end }}
       {{ if .Parent.Section }}
-      {{ range $.Site.Data.progress }}
+      {{ range hugo.Data.progress }}
       {{ range where (where .cards "card" $.Data.Term) "state" "ne" "Abandoned" }}
       {{ partial "card-block" . }}
       {{ end }}

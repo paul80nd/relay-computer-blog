@@ -2,7 +2,7 @@
 baseURL = 'https://relaycomputer.co.uk/'
 
 # The title of site
-languageCode = 'en-gb'
+locale = 'en-gb'
 title = 'Relay Computer'
 
 # Disable Hugo generator meta tag in the HTML head.

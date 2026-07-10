@@ -1,4 +1,4 @@
-{{ range where $.Site.Data.mnemonics "id" (index .Params 0) }}
+{{ range where hugo.Data.mnemonics "id" (index .Params 0) }}
 <article class="box">
   <div class="content">
     <h4>{{ .title }}</h4>

@@ -4,14 +4,14 @@
     <div class="tabs-wrapper">
       <div class="tabs">
         <ul>
-          {{ range $index, $element := $.Site.Data.progress }}
+          {{ range $index, $element := hugo.Data.progress }}
           <li class="{{ if (eq $index 0) }}is-active{{ end }}"><a>{{ $element.title }}</a></li>
           {{ end }}
         </ul>
       </div>
       <div class="tabs-content">
         <ul>
-          {{ range $index, $element :=  $.Site.Data.progress }}
+          {{ range $index, $element :=  hugo.Data.progress }}
           <li class="{{ if (eq $index 0) }}is-active{{ end }} pt-3">
             <div class="columns is-multiline">
               {{ range .cards }}

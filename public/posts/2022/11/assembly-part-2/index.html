@@ -37,27 +37,27 @@ start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&g
   <meta name="theme-color" content="#ffffff">
 
   <meta property="og:url" content="https://relaycomputer.co.uk/posts/2022/11/assembly-part-2/">
-  <meta property="og:site_name" content="Relay Computer">
-  <meta property="og:title" content="Assembling an assembler - token scanning">
-  <meta property="og:description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
+	<meta property="og:site_name" content="Relay Computer">
+	<meta property="og:title" content="Assembling an assembler - token scanning">
+	<meta property="og:description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
 start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&gt; C mov b,a ; A -&gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go … and turn it in to something like this …">
-  <meta property="og:locale" content="en_gb">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-11-27T10:00:00+00:00">
-    <meta property="article:modified_time" content="2022-11-27T10:00:00+00:00">
-    <meta property="article:tag" content="Coding">
+	<meta property="og:locale" content="en_gb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2022-11-27T10:00:00+00:00">
+		<meta property="article:modified_time" content="2022-11-27T10:00:00+00:00">
+		<meta property="article:tag" content="Coding">
 
-  <meta itemprop="name" content="Assembling an assembler - token scanning">
-  <meta itemprop="description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
+	<meta itemprop="name" content="Assembling an assembler - token scanning">
+	<meta itemprop="description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
 start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&gt; C mov b,a ; A -&gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go … and turn it in to something like this …">
-  <meta itemprop="datePublished" content="2022-11-27T10:00:00+00:00">
-  <meta itemprop="dateModified" content="2022-11-27T10:00:00+00:00">
-  <meta itemprop="wordCount" content="1924">
-  <meta itemprop="keywords" content="Coding">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Assembling an assembler - token scanning">
-  <meta name="twitter:description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
+	<meta itemprop="datePublished" content="2022-11-27T10:00:00+00:00">
+	<meta itemprop="dateModified" content="2022-11-27T10:00:00+00:00">
+	<meta itemprop="wordCount" content="1924">
+	<meta itemprop="keywords" content="Coding">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Assembling an assembler - token scanning">
+	<meta name="twitter:description" content="In the last episode of this mini-series I explained about how an assembler’s job is effectively to convert a program written in a language a human programmer can understand (assembly language in this case) into something which a computer can understand. So as an example, the assembler will take something like this …
 start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&gt; C mov b,a ; A -&gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go … and turn it in to something like this …">
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNXVW69CMT"></script>
@@ -163,7 +163,7 @@ window.cookieconsent.initialise({
 assembler&rsquo;s job is effectively to convert a program written in a language a human programmer can understand (assembly
 language in this case) into something which a computer can understand. So as an example, the assembler will take something
 like this &hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#111">start:</span>  <span style="color:#75af00">ldi</span> <span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span>     <span style="color:#75715e">; initial setup A = 1</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#111">start:</span>  <span style="color:#75af00">ldi</span> <span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span>     <span style="color:#75715e">; initial setup A = 1</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75af00">ldi</span> <span style="color:#111">b</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">;               B = 0</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#111">loop:</span>   <span style="color:#75af00">mov</span> <span style="color:#111">c</span><span style="color:#111">,</span><span style="color:#111">b</span>     <span style="color:#75715e">; slide B -&gt; C</span>
@@ -174,7 +174,7 @@ like this &hellip;</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75af00">jmp</span> <span style="color:#111">loop</span>    <span style="color:#75715e">; otherwise have another go</span>
 </span></span></code></pre></div><p>&hellip; and turn it in to something like this &hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hexdump" data-lang="hexdump"><span style="display:flex;"><span><span style="color:#111">41</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-hexdump" data-lang="hexdump"><span style="display:flex;"><span><span style="color:#111">41</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">60</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">11</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">08</span>
@@ -189,12 +189,12 @@ assembler?</p>
 lot comes for free with the human brain and, for me, I&rsquo;m automatically extracting a lot of semantic meaning out of what really
 is just a series of characters - a file of text. That is, to the assembler, the program is going to look something more like
 this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>start:  ldi a,1     ; initial setup A = 1\n        ldi b,0     ;               B = 0\n\nloop:   mov c,b     ; slide B -&gt; C\n        mov b,a     ;       A -&gt; B\n        add         ; and add together\n\ndone:   bcs done    ; infinite loop if overflowed\n\n        jmp loop    ; otherwise have another go
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>start:  ldi a,1     ; initial setup A = 1\n        ldi b,0     ;               B = 0\n\nloop:   mov c,b     ; slide B -&gt; C\n        mov b,a     ;       A -&gt; B\n        add         ; and add together\n\ndone:   bcs done    ; infinite loop if overflowed\n\n        jmp loop    ; otherwise have another go
 </span></span></code></pre></div><p>The first job of an assembler is to take the stream of characters above and try and derive some sort of meaning from it. A good
 place to start here is to try and break it down in to tokens, i.e. try and group sets of characters together to form pieces that
 have some meaning. This is a process called tokenisation or lexical scanning.</p>
 <p>In the simplest case we can go one character at a time and when we have something we recognise we can create a token &hellip; so for example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>s
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>s
 </span></span><span style="display:flex;"><span>st
 </span></span><span style="display:flex;"><span>sta
 </span></span><span style="display:flex;"><span>star
@@ -203,7 +203,7 @@ have some meaning. This is a process called tokenisation or lexical scanning.</p
 </span></span></code></pre></div><p>By the time we&rsquo;ve considered the first 6 characters of the input we&rsquo;ve recognised that this must be a label because it contains
 one or more letters followed by a single <code>:</code>. By building up a series of these &lsquo;rules&rsquo; we can build our tokeniser.</p>
 <p>Let&rsquo;s start with some easy bits:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>WSS = WS+
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>WSS = WS+
 </span></span><span style="display:flex;"><span>WS  = &#39; &#39; / &#39;\t&#39;
 </span></span></code></pre></div><p>What now?! Yes, well, I appear to have introduced yet another language &hellip; this time it&rsquo;s a derivative of a
 <a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar">parsing expression grammar</a>, that is, a language designed to
@@ -214,16 +214,16 @@ white space.</p>
 <p>Above that line we define another token called <code>WSS</code> and that consists of one or more instance of <code>WS</code> (that&rsquo;s what the <code>+</code>
 represents). This will ensure that any sequence of whitespace characters is considered a single WSS token.</p>
 <p>So, what does this give us. Well, lets tokenise the first two lines our original program:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#111">start:</span>  <span style="color:#75af00">ldi</span> <span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span>     <span style="color:#75715e">; initial setup A = 1</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#111">start:</span>  <span style="color:#75af00">ldi</span> <span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span>     <span style="color:#75715e">; initial setup A = 1</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75af00">ldi</span> <span style="color:#111">b</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">;               B = 0</span>
 </span></span></code></pre></div><p>&hellip; becomes &hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span> 
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;start:&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;ldi&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;a,1&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;;&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;initial&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;setup&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;A&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;=&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;1&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;ldi&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;b,0&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;;&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;=&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;WSS&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;0&#34;</span> 
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
 </span></span></code></pre></div><p>For the purposes of clarity I&rsquo;ll ignore the <code>WSS</code> tokens from this point forward but just remember they&rsquo;re still valid tokens
 and would be included in the result of our tokenisation process. With <code>WSS</code> excluded we get:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span> 
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;start:&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;ldi&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;a,1&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;;&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;initial&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;setup&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;A&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;=&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;1&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;ldi&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;b,0&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;;&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;=&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;0&#34;</span> 
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
@@ -231,7 +231,7 @@ and would be included in the result of our tokenisation process. With <code>WSS<
 Well, one thing that stands out is the comments - effectively everything on a single line after a semicolon <code>;</code>.
 These are there purely for the benefit of the human programmer and have no meaning or use for the assembler or for the
 resulting machine code that&rsquo;ll be used by the relay computer. Let&rsquo;s get that defined and added to our tokeniser:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>COMMENT = (SEM (!EOL .)*)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>COMMENT = (SEM (!EOL .)*)
 </span></span><span style="display:flex;"><span>EOL     = [\n\r]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SEM = &#39;;&#39;
@@ -246,10 +246,10 @@ the <code>!</code>) an <code>EOL</code> (end of line) type character.</p>
 <p>Detecting comments in some languages can be a lot more involved and many languages allow comments over multiple lines. For
 example, C# treats everything between <code>/*</code> and <code>*/</code> as a comment. Here in our assembly language we keep it simple and everything
 after a <code>;</code> will be ignored right up until the end of the line. So, what does that do for our tokenising:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#111">start:</span>  <span style="color:#75af00">ldi</span> <span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span>     <span style="color:#75715e">; initial setup A = 1</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#111">start:</span>  <span style="color:#75af00">ldi</span> <span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span>     <span style="color:#75715e">; initial setup A = 1</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75af00">ldi</span> <span style="color:#111">b</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">;               B = 0</span>
 </span></span></code></pre></div><p>&hellip; becomes &hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span> 
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;start:&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;ldi&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;a,1&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;ldi&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;b,0&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
@@ -258,11 +258,11 @@ remains is our actual program that has the real meaning that we&rsquo;ll need to
 <p>The most important meaning in our program is the assembly language mnemonics (the three letter instructions that tell the
 computer what type of action to perform). In our full assembly program above we have <code>ldi</code>, <code>mov</code>, <code>add</code> and so on. These are
 pretty straightforward to pick out:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>MNEMONIC = [a-z]i+
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>MNEMONIC = [a-z]i+
 </span></span></code></pre></div><p>So, this says that any one character between <code>a</code> and <code>z</code> is acceptable and then we follow that with an <code>i</code> (meaning we&rsquo;re not
 worried about case and <code>ldi</code> is the same as <code>LDI</code> &hellip; and even <code>LdI</code> is ok) and then finally, as before, the <code>+</code> says we&rsquo;ll
 want one or more of these &lsquo;acceptable characters&rsquo; in a sequence. That now gives us:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;MNEMONIC(start)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;:&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;MNEMONIC(a)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;,1&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;MNEMONIC(b)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;,0&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
@@ -271,7 +271,7 @@ it shouldn&rsquo;t have and mis-categorised them because our rules aren&rsquo;t 
 <p>What can we do to improve this? Well, let&rsquo;s look at what&rsquo;s been mis-identified &hellip; the <code>a</code> in <code>a,1</code> and the <code>b</code> in <code>b,0</code> stand
 out and that&rsquo;s because although they&rsquo;re using letters just like the mnemonics we&rsquo;re actually referring to registers here. Let&rsquo;s
 define this rule alongside the <code>MNEMONIC</code> rule:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>MNEMONIC = [a-z]i+
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>MNEMONIC = [a-z]i+
 </span></span><span style="display:flex;"><span>REGISTER = (A / B / C / D)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>A = &#39;a&#39;i
@@ -282,12 +282,12 @@ define this rule alongside the <code>MNEMONIC</code> rule:</p>
 characters <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code> respectively. Note for each I&rsquo;ve added <code>i</code> to indicate we&rsquo;re case insensitive and so <code>a</code> or <code>A</code>
 are both an <code>A</code> token. So, with that in hand a <code>REGISTER</code> is a single <code>A</code>, <code>B</code>, <code>C</code> or <code>D</code> token. Let&rsquo;s see what that does for
 our tokenising:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;MNEMONIC(start)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;:&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;REGISTER(a)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;,1&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;REGISTER(b)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;,0&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
 </span></span></code></pre></div><p>We can likewise fix the mis-identified <code>start:</code> label by defining how we know when something is a label:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>LABEL    = ident COL
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>LABEL    = ident COL
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>ident    = (alpha+ alphanum*)
 </span></span><span style="display:flex;"><span>alpha    = [a-zA-Z_]
@@ -297,20 +297,20 @@ our tokenising:</p>
 </span></span></code></pre></div><p>So, a <code>LABEL</code> is an <code>ident</code> followed by a colon <code>:</code> and an <code>ident</code> is one or more <code>alpha</code> characters followed by zero
 or more <code>alphanum</code> characters, that is, an identifier can be made up of letters or numbers but must start with a letter.
 The <code>*</code> indicates zero or more here whereas the <code>+</code> indicates one or more. With this rule we&rsquo;re now at:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;LABEL(start:)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;REGISTER(a)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;,1&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;REGISTER(b)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;,0&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
 </span></span></code></pre></div><p>Keeping up? Effectively though this whole process is about defining the rules needed to extract the tokens from the plain text.
 Finishing off we can pick out the literal values <code>0</code> and <code>1</code> along with the <code>,</code> as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>LITERAL  = decimal 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>LITERAL  = decimal 
 </span></span><span style="display:flex;"><span>COMMA    = CMA
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>decimal = [0-9]+
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>CMA = &#39;,&#39;
 </span></span></code></pre></div><p>&hellip; to get &hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#111">[</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;LABEL(start:)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;REGISTER(a)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMA&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;LITERAL(1)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;MNEMONIC(ldi)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;REGISTER(b)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMA&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;LITERAL(0)&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;COMMENT&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">]</span>
@@ -330,7 +330,7 @@ top of this post in the right hand pane. The result will be the tokenised output
   
 </figure>
 
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>TOKENS = TOKEN*
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>TOKENS = TOKEN*
 </span></span><span style="display:flex;"><span>TOKEN = WSS / COMMENT / LABEL / REGISTER / COMMA / LITERAL / MNEMONIC / EOL
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// Tokens
