@@ -9,6 +9,11 @@ on:
 env:
   HUGO_ENV: production
 
+# Least-privilege GITHUB_TOKEN: the deploy step (peaceiris/actions-gh-pages)
+# pushes the built site to the gh-pages branch, which requires contents: write.
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
