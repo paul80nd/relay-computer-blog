@@ -6,6 +6,7 @@
     "bulma": "^1.0.4"
   },
   "devDependencies": {
-    "@vizuaalog/bulmajs": "^0.12.2"
+    "@vizuaalog/bulmajs": "^0.12.2",
+    "sass-embedded": "^1.100.0"
   }
 }

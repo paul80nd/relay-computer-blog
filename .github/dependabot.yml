@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # npm packages (bulma, bulmajs, sass-embedded) via package.json / lockfile
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      npm:
+        patterns:
+          - "*"
+
+  # GitHub Actions used in .github/workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns:
+          - "*"
