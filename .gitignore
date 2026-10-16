@@ -12,3 +12,6 @@ public/skp/
 resources/
 
 .idea
+
+# Source map from non-production builds; never published
+public/css/main.css.map

@@ -2,6 +2,9 @@
 layout: post
 title: 'Controller Design: LOAD, STORE & INCXY Instructions'
 slug: controller-load-store-incxy-design
+aliases:
+- /posts/2025/03/controller-store-load-design/
+- /posts/2025/03/controller-store-load-incxy-design/
 date: '2025-03-09T06:00:00.004Z'
 author: Paul Law
 cards:

@@ -2,6 +2,8 @@
 layout: post
 title: 'Turing Completeness'
 slug: turing-completeness
+aliases:
+- /posts/2025/03/turing-complete/
 date: '2025-03-16T06:00:00.004Z'
 author: Paul Law
 cards:
