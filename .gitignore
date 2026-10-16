@@ -10,6 +10,7 @@ public/grb/
 public/pdf/
 public/skp/
 resources/
+.hugo_build.lock
 
 .idea
 
