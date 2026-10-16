@@ -76,7 +76,7 @@ this:
 
 {{< fig >}}![Relay Computer Simulator updated for Incrementer](/img/posts/2017/2017-07-17-0003.png){{< /fig >}}
 
-The [latest version of this can be found here](http://80nd.co.uk/relaycomputer/) (although note 
+The [latest version of this can be found here](https://simulator.relaycomputer.co.uk/) (although note 
 that I only ever host the latest version so as this post gets older the 
 simulator might be newer than you'd expect). Feel free to fire this up and 
 have a play with the program counter. If you're interested in what's behind 

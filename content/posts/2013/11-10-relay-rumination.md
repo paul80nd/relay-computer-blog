@@ -34,7 +34,7 @@ coil and four sets of double toggle contacts.
 Many of the constructors of 
 other relay computers I've read about have gone hunting on eBay for a job lot 
 of relays or managed, in one case even, to persuade the manufacturer to donate 
-them (to the [RC-3 Relay Computer at the Museum of Computer Culture](http://www.computerculture.org/projects/rc3/)). I 
+them (to the [RC-3 Relay Computer at the Museum of Computer Culture](https://web.archive.org/web/20231004134328/https://www.computerculture.org/projects/rc3/)). I 
 therefore find myself with a (self imposed) quandary ... I'm too impatient to 
 wait it out on eBay or to go scavenging but I'm too tight to spend all my 
 pocket money on new relays. I also don't want to make a behemoth computer 

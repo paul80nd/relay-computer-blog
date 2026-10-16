@@ -30,7 +30,7 @@ seemed a good time to kills two birds with one stone as the old saying
 goes.
 
 So, getting straight to it you can find my 
-[simulator here](http://80nd.co.uk/relaycomputer). 
+[simulator here](https://simulator.relaycomputer.co.uk/). 
 Feel free to have a play - I haven't tested it much beyond my own computer and 
 a couple of tablets/phones etc so it might not work everywhere (such is the 
 'challenge' of developing for the web) but hopefully most newish browsers 

@@ -20,7 +20,7 @@ arithmetic card proved no exception. With this in mind I've been spreading the
 work out over several mini sessions in accordance with my new post-Xmas lack 
 of patience. Therefore it's taken me a bit longer than it would otherwise to 
 complete this stage of construction although to be fair I also got distracted 
-with a [Nixie clock kit](http://www.pvelectronics.co.uk/index.php?main_page=product_info&amp;cPath=21&amp;products_id=129) my partner bought me for Christmas ... and 
+with a [Nixie clock kit](https://web.archive.org/web/20210727122839/https://www.pvelectronics.co.uk/index.php?main_page=product_info&amp;cPath=21&amp;products_id=129) my partner bought me for Christmas ... and 
 I ran out of solder (this time though I've finally stumped up the cash to buy 
 a 500g reel which should keep me going for a good while). Anyho, after much 
 procrastination all the sockets (and diodes) are now on.

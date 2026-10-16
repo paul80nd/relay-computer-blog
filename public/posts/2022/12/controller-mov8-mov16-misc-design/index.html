@@ -273,7 +273,7 @@ destinations &hellip; which is convenient given we&rsquo;ve only got 3-bits spar
 <p>In terms of sources most are pretty self-explanatory (registers M, XY and J) but what about the &lsquo;AS&rsquo; one? Well this refers to
 the primary switches on the front of the computer and using &lsquo;AS&rsquo; (address switches) as a source will gate these to the lower
 8-bits of the address bus (with the upper 8-bits set to 0s).</p>
-<p>In the architecture of the <a href="http://www.computerculture.org/projects/rc3/">RC-3 Relay Computer</a> (this computer&rsquo;s architectural
+<p>In the architecture of the <a href="https://web.archive.org/web/20231004134328/https://www.computerculture.org/projects/rc3/">RC-3 Relay Computer</a> (this computer&rsquo;s architectural
 parent) the &lsquo;AS&rsquo; source makes more sense as there&rsquo;s a row of 16 dedicated switches for this purpose. In my design I dropped
 these for compactness but kept the &lsquo;AS&rsquo; source available on the MOV-16 instruction and just gated the 8 primary switches to the
 address bus instead. As such, in practice, the &lsquo;AS&rsquo; source probably won&rsquo;t get much use in my computer.</p>

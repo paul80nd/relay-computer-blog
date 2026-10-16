@@ -99,7 +99,7 @@ ALU, SETAB and MOV-8 are the ones I'm going to concentrate on. Before I go any
 further I should mention that the instruction set I'm using is directly based 
 on that used in the [relay computer by Dr Harry Porter](http://web.cecs.pdx.edu/~harry/Relay/index.html) which was then expanded 
 on by Phil Ryals at the Goodwill Computer Museum on the 
-[RC-3 relay computer](http://www.computerculture.org/projects/rc3/).
+[RC-3 relay computer](https://web.archive.org/web/20231004134328/https://www.computerculture.org/projects/rc3/).
 
 Each mnemonic I use has an exact opcode equivalent 
 and some examples of these are listed below (effectively a list of all the 
