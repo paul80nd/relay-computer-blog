@@ -4,9 +4,9 @@ This is the source of my [relay computer blog](https://relaycomputer.co.uk) gene
 
 ## Prerequisites
 
-- **Hugo (extended)** — the site uses SCSS, so the *extended* build is required. CI pins `0.164.0`; install a matching version locally (e.g. `brew install hugo`).
+- **Hugo (extended)** — the site uses SCSS, so the *extended* build is required. CI pins `0.168.0`; install a matching version locally (e.g. `brew install hugo`).
 - **Node** — see `.nvmrc` (Node 24). Run `npm install` to pull in the CSS/JS packages (Bulma, BulmaJS) and Dart Sass.
-- **Dart Sass** — Hugo compiles `assets/sass/main.scss` with Dart Sass, which must be on your `PATH`. `npm install` installs `sass-embedded` into `node_modules/.bin`; either add that to your `PATH` or install it globally with `npm install -g sass-embedded`.
+- **Dart Sass** — Hugo compiles `assets/sass/main.scss` with Dart Sass, which must be on your `PATH`. `npm install` installs `sass-embedded`, whose native binary lives in `node_modules/sass-embedded-<platform>/dart-sass` (e.g. `sass-embedded-darwin-arm64` on Apple Silicon); add that directory to your `PATH`, or install Dart Sass separately (e.g. `brew install sass/sass/sass`). Don't use `node_modules/.bin`: its `sass` may be the pure-JS package, which Hugo can't use.
 
 ## Development server
 

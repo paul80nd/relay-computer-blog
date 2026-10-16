@@ -29,6 +29,7 @@
       "targetPath" "css/main.css"
       "transpiler" "dartsass"
       "includePaths" (slice "node_modules" "assets/css")
+      "silenceDependencyDeprecations" true
     }}
     {{- with . | toCSS $opts }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
