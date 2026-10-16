@@ -258,11 +258,12 @@ Now we've got our list of tokens we need to extract some sort of semantic meanin
 tokens actually asking us to do and does that actually make sense? Is it something the computer is actually capable of doing?
 This we'll look at in the next episode of this mini-series.
 
-The definition language I've been using so far is utilised by [PEG.js](https://pegjs.org) to create a tokeniser (and a parser
+The definition language I've been using so far is utilised by [PEG.js](https://web.archive.org/web/20231228201442/https://pegjs.org/) to create a tokeniser (and a parser
 too as we'll see in the next episode) taking all the hard work out of this stage of the assembly process. You could, of course,
 create a tokeniser from scratch but there really is no need with something like PEG.js.
 
-If you'd like to have a play with tokenising you can use the [PEG.js online tool here](https://pegjs.org/online). The full
+If you'd like to have a play with tokenising you can use the [Peggy online tool here](https://peggyjs.org/online) (*Peggy is the
+maintained successor to PEG.js, which is no longer online, and accepts the same grammar*). The full
 tokeniser covered so far is below and you can enter this in the left-hand pane and then put the assembly program from the
 top of this post in the right hand pane. The result will be the tokenised output at the bottom right.
 

@@ -55,7 +55,7 @@ considering the grand-daddy of this kind of thing) is the
 [Harry Porter Relay Computer](http://web.cecs.pdx.edu/~harry/Relay/index.html) 
 which is quite an impressive beast (both technically 
 and of physical size). Second is the 
-[RC-3 Relay Computer](http://www.computerculture.org/projects/rc3/) 
+[RC-3 Relay Computer](https://web.archive.org/web/20231004134328/https://www.computerculture.org/projects/rc3/) 
 built by Phil Ryals' team at the Museum of Computer Culture which 
 is itself inspired by Harry Porter's computer. Harry provides a wealth of 
 information on how his computer is constructed and the theory behind it (in 

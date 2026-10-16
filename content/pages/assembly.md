@@ -15,8 +15,7 @@ If you'd like to try out my assembly language there's an [editor available here]
 
 * [rcasm](https://github.com/paul80nd/rcasm) - the assembler itself (written in TypeScript)
 * [rcasm-languageservice](https://github.com/paul80nd/rcasm-languageservice) - wraps the assembler adding language 'smarts' such as code folding detection, hover-over documentation and so on.
-* [monaco-editor](https://github.com/paul80nd/monaco-editor) - a fork of the Microsoft Monaco 'in-browser' code editor customised to use my rcasm language service and adds syntax highlighting.
-* [relay-computer-ide](https://github.com/paul80nd/relay-computer-ide) - the complete editor which combines the rcasm assembler with the customised Monaco editor. A simplistic emulator for my relay computer is also included so that programs can be tried and tested.
+* [relay-computer-ide](https://github.com/paul80nd/relay-computer-ide) - the complete editor which combines the rcasm assembler with the Microsoft Monaco 'in-browser' code editor. A simplistic emulator for my relay computer is also included so that programs can be tried and tested.
 
 The list of available instructions is as follows:
 

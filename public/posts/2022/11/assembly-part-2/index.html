@@ -53,7 +53,7 @@ start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&g
 start: ldi a,1 ; initial setup A = 1 ldi b,0 ; B = 0 loop: mov c,b ; slide B -&gt; C mov b,a ; A -&gt; B add ; and add together done: bcs done ; infinite loop if overflowed jmp loop ; otherwise have another go … and turn it in to something like this …">
 	<meta itemprop="datePublished" content="2022-11-27T10:00:00+00:00">
 	<meta itemprop="dateModified" content="2022-11-27T10:00:00+00:00">
-	<meta itemprop="wordCount" content="1924">
+	<meta itemprop="wordCount" content="1941">
 	<meta itemprop="keywords" content="Coding">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Assembling an assembler - token scanning">
@@ -319,10 +319,11 @@ first process in assembling an assembly language program.</p>
 <p>Now we&rsquo;ve got our list of tokens we need to extract some sort of semantic meaning from them, that is, what are these series of
 tokens actually asking us to do and does that actually make sense? Is it something the computer is actually capable of doing?
 This we&rsquo;ll look at in the next episode of this mini-series.</p>
-<p>The definition language I&rsquo;ve been using so far is utilised by <a href="https://pegjs.org">PEG.js</a> to create a tokeniser (and a parser
+<p>The definition language I&rsquo;ve been using so far is utilised by <a href="https://web.archive.org/web/20231228201442/https://pegjs.org/">PEG.js</a> to create a tokeniser (and a parser
 too as we&rsquo;ll see in the next episode) taking all the hard work out of this stage of the assembly process. You could, of course,
 create a tokeniser from scratch but there really is no need with something like PEG.js.</p>
-<p>If you&rsquo;d like to have a play with tokenising you can use the <a href="https://pegjs.org/online">PEG.js online tool here</a>. The full
+<p>If you&rsquo;d like to have a play with tokenising you can use the <a href="https://peggyjs.org/online">Peggy online tool here</a> (<em>Peggy is the
+maintained successor to PEG.js, which is no longer online, and accepts the same grammar</em>). The full
 tokeniser covered so far is below and you can enter this in the left-hand pane and then put the assembly program from the
 top of this post in the right hand pane. The result will be the tokenised output at the bottom right.</p>
 <figure>

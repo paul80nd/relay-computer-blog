@@ -63,7 +63,7 @@ seem relatively reasonable ... well, until you add delivery and the 20% UK
 sales tax / VAT on top of the final price of course. RazorLab have a good 
 section on their website showing samples of cuts and etching on their 
 available materials ... this is the 
-[3mm plywood](http://www.razorlab.co.uk/materials/info/?id=169) 
+[3mm plywood](https://web.archive.org/web/20191112080601/http://www.razorlab.co.uk/materials/info/?id=169) 
 I'm using for the above. Each material comes in three sizes P1, P2 
 and P3, the largest, which is 790x384 mm (31.1x15.1 in) and it's the P3 size 
 I'm using for the above.
@@ -72,7 +72,7 @@ Now, what's better than lasering one sheet
 of material? Lasering up three sheets of course. In addition to the floors and 
 ceilings I also need to put in some sides to the enclosure and also add panels 
 to the front and back door. These are going be made from 
-[smoked acrylic/Perspex](http://www.razorlab.co.uk/materials/info/?id=179) 
+[smoked acrylic/Perspex](https://web.archive.org/web/20191112075828/http://www.razorlab.co.uk/materials/info/?id=179) 
 so you'll be able to see the LEDs flashing away inside 
 when the doors are closed. This is the look I'm aiming for:
 

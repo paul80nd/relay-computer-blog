@@ -77,7 +77,7 @@ switches). Next you set the target address one slot higher, set the next
 opcode and load the value into memory. This sequence is repeated until the 
 program is all loaded in. Needless to say if you get a power cut then you'll 
 have to start again from scratch. Incidentally the 
-[Phil Ryals RC-3 Relay Computer](http://www.computerculture.org/projects/rc3/) 
+[Phil Ryals RC-3 Relay Computer](https://web.archive.org/web/20231004134328/https://www.computerculture.org/projects/rc3/) 
 makes this all a little bit easier by letting the user 
 set the opcode and then flick a single switch which stores the value in memory 
 and increments the address by one.

@@ -60,7 +60,7 @@ In terms of sources most are pretty self-explanatory (registers M, XY and J) but
 the primary switches on the front of the computer and using 'AS' (address switches) as a source will gate these to the lower
 8-bits of the address bus (with the upper 8-bits set to 0s).
 
-In the architecture of the [RC-3 Relay Computer](http://www.computerculture.org/projects/rc3/) (this computer's architectural
+In the architecture of the [RC-3 Relay Computer](https://web.archive.org/web/20231004134328/https://www.computerculture.org/projects/rc3/) (this computer's architectural
 parent) the 'AS' source makes more sense as there's a row of 16 dedicated switches for this purpose. In my design I dropped 
 these for compactness but kept the 'AS' source available on the MOV-16 instruction and just gated the 8 primary switches to the
 address bus instead. As such, in practice, the 'AS' source probably won't get much use in my computer.
