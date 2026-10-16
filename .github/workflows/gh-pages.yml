@@ -29,14 +29,16 @@ jobs:
       - run: npm install
 
       # Dart Sass (sass-embedded) is a pinned devDependency; expose its
-      # binary on PATH so Hugo's dartsass transpiler can find it.
+      # native binary on PATH so Hugo's dartsass transpiler can find it.
+      # Not node_modules/.bin: npm may also install the pure-JS `sass`
+      # package, whose `sass` bin shadows it and has no --embedded mode.
       - name: Make Dart Sass available to Hugo
-        run: echo "$PWD/node_modules/.bin" >> "$GITHUB_PATH"
+        run: echo "$PWD/node_modules/sass-embedded-linux-x64/dart-sass" >> "$GITHUB_PATH"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.164.0'
+          hugo-version: '0.168.0'
           extended: true
 
       - name: Build
