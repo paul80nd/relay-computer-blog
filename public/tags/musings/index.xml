@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Musings on Relay Computer</title>
-    <link>https://relaycomputer.co.uk/tags/musings/</link>
+    <link>https://www.relaycomputer.co.uk/tags/musings/</link>
     <description>Recent content in Musings on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 02 May 2022 11:00:00 +0000</lastBuildDate>
-    <atom:link href="https://relaycomputer.co.uk/tags/musings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.relaycomputer.co.uk/tags/musings/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intermission</title>
-      <link>https://relaycomputer.co.uk/posts/2022/05/intermission/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2022/05/intermission/</link>
       <pubDate>Mon, 02 May 2022 11:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2022/05/intermission/</guid>
       <description>So, is fair to say that things have been a bit quiet around here of late … and if you’ve been following my YouTube channel I do hope you haven’t been holding your breath for the next episode of ‘making a relay computer clock’ as the last episode came out just over a year ago!
@@ -18,14 +18,14 @@ What’s been going on then? Well first of all I’m fine (and actually writing 
     </item>
     <item>
       <title>A change of approach</title>
-      <link>https://relaycomputer.co.uk/posts/2019/01/change-of-approach/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2019/01/change-of-approach/</link>
       <pubDate>Mon, 14 Jan 2019 11:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2019/01/change-of-approach/</guid>
       <description>In my last post I touched on how the repetitive nature of making register cards has been putting me off progressing my relay computer. If you’ve followed my blog (over the years) you’ll have witnessed the construction of the general purpose registers A, B, C and D along with the specialised registers in the incrementer and program counter. Each register card follows the same construction pattern: solder down LEDs, solder down relay sockets, solder down wire wrap posts, solder ground and power lines, wire wrap, wire wrap, wire wrap, wire wrap, etc, etc, insert relays in sockets. Tedious, tedious, tedious.</description>
     </item>
     <item>
       <title>Procrastination is the thief of time</title>
-      <link>https://relaycomputer.co.uk/posts/2019/01/procrastination-is/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2019/01/procrastination-is/</link>
       <pubDate>Sun, 06 Jan 2019 11:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2019/01/procrastination-is/</guid>
       <description>… or so the proverb goes … and it’s fair to say I’ve been procrastinating quite a bit recently.
@@ -33,7 +33,7 @@ I typically take a summer break from working on the relay computer so that I can
     </item>
     <item>
       <title>The problem with memory</title>
-      <link>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</link>
       <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</guid>
       <description>It’s time, at last, to start looking at the design for the computer’s memory and this is a bit of a game changer as it’s the final part of the jigsaw that lets the computer run a program. However, it’s also the part of the computer that leaves me in a bit of a quandary.
@@ -41,7 +41,7 @@ The problem with memory is that typically you need quite a lot of it and that’
     </item>
     <item>
       <title>Enclosure Disclosure</title>
-      <link>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</link>
       <pubDate>Sat, 01 Mar 2014 10:55:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2014/03/enclosure-disclosure/</guid>
       <description>Sorry, I will try to rain in the terrible punning post titles.
@@ -49,7 +49,7 @@ This time I wanted to share the thoughts and ideas I’ve been having around bui
     </item>
     <item>
       <title>Sketchy Diversion</title>
-      <link>https://relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</link>
       <pubDate>Tue, 04 Feb 2014 19:10:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2014/02/sketchy-diversion/</guid>
       <description>I’m taking a break … just a short one.
@@ -57,14 +57,14 @@ In between all the bouts of wire wrapping for the ALU arithmetic card I’m star
     </item>
     <item>
       <title>Relay Rumination</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/relay-rumination/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/relay-rumination/</link>
       <pubDate>Sun, 10 Nov 2013 23:16:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/relay-rumination/</guid>
       <description>If there’s one thing a relay computer needs a lot of it’s … erm … relays (of course) … which happens to be a bit unfortunate as relays, compared to the other parts of the computer, are rather expensive. The Dr Harry Porter Relay Computer (which my computer is based on) uses 415 x 4PDT (4 pole double toggle) relays in total. A comparable part is the Omron MY4-DC12(S) relay and a quick check online with Mouser (other suppliers are available ;) prices them around £3.20 a piece (excluding UK VAT @ 20%) … that’s just under £1600 including VAT which is a bit eye watering for a hobby project (the Harry Porter computer came to just over $5000 in total for everything). Also of note is that the MY4 relays are sized 28 x 21.5 x 36mm … not huge but big enough when you’ve got 415 of them wired together (again, see the Harry Porter computer to see exactly how big these machines can be). Here’s a scaled diagram of the MY4 relay showing the coil and four sets of double toggle contacts.</description>
     </item>
     <item>
       <title>The three Rs</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/the-three-rs/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/the-three-rs/</link>
       <pubDate>Sun, 03 Nov 2013 09:35:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/the-three-rs/</guid>
       <description>It strikes me that when embarking on a project like this there’s three things that are of uttermost importance, the three Rs if you will:
@@ -73,14 +73,14 @@ There’s a lot to be said for experimentation and working things out but the hu
     </item>
     <item>
       <title>Why?</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/why/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/why/</link>
       <pubDate>Sat, 02 Nov 2013 10:46:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/why/</guid>
       <description>Whenever I tell people I’m building a relay computer the overwhelming response is … why on Earth would you want to do that?! Or alternatively, as a work colleague delicately put it to me yesterday, if you go to the front of your house there’s a big block of wood that opens — it’s called a door — if you go through it you’ll discover pubs and things. They’ve all got a point though, this project will be very time consuming and I’ve not particularly got a use in mind for the resulting jumble of wires. In fact it’s difficult to think of a real use for it as I’ll be left with something that could be outperformed by a pocket calculator (not a scientific calculator mind, more the kind you might find in a Christmas cracker). So why would I invest lots of time and effort in to making a relay computer? Well, as they say (rather tritely) it’s the journey not the destination.</description>
     </item>
     <item>
       <title>It begins</title>
-      <link>https://relaycomputer.co.uk/posts/2013/10/it-begins/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/10/it-begins/</link>
       <pubDate>Thu, 31 Oct 2013 22:21:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/10/it-begins/</guid>
       <description>… although being as I’m already a couple of months in on my little project then perhaps that should be ‘it began’.

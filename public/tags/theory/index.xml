@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theory on Relay Computer</title>
-    <link>https://relaycomputer.co.uk/tags/theory/</link>
+    <link>https://www.relaycomputer.co.uk/tags/theory/</link>
     <description>Recent content in Theory on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 01 Dec 2025 08:00:00 +0000</lastBuildDate>
-    <atom:link href="https://relaycomputer.co.uk/tags/theory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.relaycomputer.co.uk/tags/theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculating Pi</title>
-      <link>https://relaycomputer.co.uk/posts/2025/12/calculating-pi/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2025/12/calculating-pi/</link>
       <pubDate>Mon, 01 Dec 2025 08:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2025/12/calculating-pi/</guid>
       <description>Talk about raking over old coals! Well, for those of you who follow my YouTube channel this’ll mostly be old news but here I am, six months after the event, finally updating my blog. There’s new news on what’s next though, so hang in there.
@@ -18,7 +18,7 @@ For some reason lately I seem to be adopting a pattern of completely overstretch
     </item>
     <item>
       <title>Branching: Opcode Timing</title>
-      <link>https://relaycomputer.co.uk/posts/2019/10/branching-opcode-timing/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2019/10/branching-opcode-timing/</link>
       <pubDate>Sun, 06 Oct 2019 01:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2019/10/branching-opcode-timing/</guid>
       <description>In my last post I covered the design for the GOTO opcode which will enable my relay computer to perform branching, loops and so on. Here’s where I got to last time:
@@ -34,14 +34,14 @@ llllllll = address low byte (to set in M1/J1)</description>
     </item>
     <item>
       <title>Branching: Opcode Design</title>
-      <link>https://relaycomputer.co.uk/posts/2019/09/branching-opcode-design/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2019/09/branching-opcode-design/</link>
       <pubDate>Mon, 23 Sep 2019 01:00:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2019/09/branching-opcode-design/</guid>
       <description>There’s been a common theme recently in the comments on my YouTube videos … people are ready to see my relay computer gain the power of branching and become a ‘proper’ computer … and that’s fair enough because that’s the point where the computer can do way more interesting things and run more complicated programs. Originally I was going to add new instructions to the computer in order of complexity but I don’t want to keep you (or I) waiting for the ‘main event’ any longer so it’s time to start designing the most complicated of all instruction classes … the ‘GOTO’.</description>
     </item>
     <item>
       <title>The problem with memory</title>
-      <link>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</link>
       <pubDate>Fri, 18 Aug 2017 22:58:00 +0100</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2017/08/the-problem-with-memory/</guid>
       <description>It’s time, at last, to start looking at the design for the computer’s memory and this is a bit of a game changer as it’s the final part of the jigsaw that lets the computer run a program. However, it’s also the part of the computer that leaves me in a bit of a quandary.
@@ -49,14 +49,14 @@ The problem with memory is that typically you need quite a lot of it and that’
     </item>
     <item>
       <title>Sequencing &amp; Control Design: Overview</title>
-      <link>https://relaycomputer.co.uk/posts/2014/09/sequencing-control-design-overview/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2014/09/sequencing-control-design-overview/</link>
       <pubDate>Fri, 19 Sep 2014 23:27:00 +0100</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2014/09/sequencing-control-design-overview/</guid>
       <description>I’ve now got my computer to a state where I can perform ALU operations and push values around the four registers by manually operating the various control lines. It’s time to move things on a bit now and work towards getting the computer to the point where given a specific instruction/op-code it can operate the control lines itself without further input from the user. Eventually the computer will be given a list of instructions to perform which it’ll work through step by step but for now the next milestone is to automate the operation of a single instruction.</description>
     </item>
     <item>
       <title>Architectural breakdown: Programming and Control 2</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</link>
       <pubDate>Thu, 07 Nov 2013 23:22:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</guid>
       <description>So, the last post didn’t quite wrap up this ‘mini-series’ but hopefully this one will. Continuing on with how the Programming and Control of the computer happens here again, for the last time (really last time), is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -64,7 +64,7 @@ System Architecture for a Relay Computer[^1] In the last post I covered an examp
     </item>
     <item>
       <title>Architectural breakdown: Programming and Control</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</link>
       <pubDate>Thu, 07 Nov 2013 21:54:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</guid>
       <description>In this post I’ll wrap up this ‘mini-series’ of trying to explain away the various bits of the architecture that will make up my relay computer project — finally now we come on to Programming and Control of the computer. Here again, for the last time, is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -72,7 +72,7 @@ System Architecture for a Relay Computer[^1] With all the various parts of the a
     </item>
     <item>
       <title>Architectural breakdown: the ALU</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</link>
       <pubDate>Thu, 07 Nov 2013 07:24:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</guid>
       <description>In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -80,7 +80,7 @@ System Architecture for a Relay Computer[^1] The Arithmetic Logic Unit (ALU) sit
     </item>
     <item>
       <title>Architectural breakdown: Memory</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</link>
       <pubDate>Wed, 06 Nov 2013 20:14:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</guid>
       <description>In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the memory. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -88,7 +88,7 @@ System Architecture for a Relay Computer[^1] In my last post I wrote about the c
     </item>
     <item>
       <title>Architectural breakdown: Buses and Registers</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</link>
       <pubDate>Tue, 05 Nov 2013 19:07:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</guid>
       <description>In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s buses and registers. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer):
@@ -96,7 +96,7 @@ System Architecture for a Relay Computer[^1] Buses are simply a set of wires tha
     </item>
     <item>
       <title>Architectural breakdown: Binary</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-binary/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-binary/</link>
       <pubDate>Mon, 04 Nov 2013 10:35:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-binary/</guid>
       <description>… and it all begins with binary. Binary is a ‘base 2’ numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base 10) for their day-to-day numerical needs which, of course, uses the numbers 0 to 9. Binary is particularly suitable for electronics as the numbers 0 and 1 can be represented by a circuit being on (1) or off (0), or more relevantly to this computer, a wire may be carrying power (1) or not (0). If you wanted to be able to carry a single decimal digit (0-9) on a wire you’d need to pull some fancy tricks - perhaps have a different level of power signifying the different digits or send pulses counting up the number. All this gets very complicated though - binary keeps it nice and simple.</description>
