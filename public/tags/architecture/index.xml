@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Relay Computer</title>
-    <link>https://relaycomputer.co.uk/tags/architecture/</link>
+    <link>https://www.relaycomputer.co.uk/tags/architecture/</link>
     <description>Recent content in Architecture on Relay Computer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 24 Jul 2016 22:13:00 +0100</lastBuildDate>
-    <atom:link href="https://relaycomputer.co.uk/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.relaycomputer.co.uk/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yet another diversion</title>
-      <link>https://relaycomputer.co.uk/posts/2016/07/yet-another-diversion/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2016/07/yet-another-diversion/</link>
       <pubDate>Sun, 24 Jul 2016 22:13:00 +0100</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2016/07/yet-another-diversion/</guid>
       <description>It’s been a bit quiet on the relay computer front again for a while … well it is summer after all and there’s no point staying inside the house tending to my hobbies when I can be running around outside getting sunburnt. Of course though, this is the UK and summer consists mostly of rain (as do most of the other seasons here) so what other excuse do I have for not posting in ages?</description>
     </item>
     <item>
       <title>Instruction Set</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/instruction-set/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/instruction-set/</link>
       <pubDate>Thu, 07 Nov 2013 23:47:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/instruction-set/</guid>
       <description>In the last post I promised to reveal the planned instruction set for the computer and here it is (pdf file).
@@ -25,7 +25,7 @@ This should be viewed alongside the architecture diagram which can be found in m
     </item>
     <item>
       <title>Architectural breakdown: Programming and Control 2</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</link>
       <pubDate>Thu, 07 Nov 2013 23:22:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and_7/</guid>
       <description>So, the last post didn’t quite wrap up this ‘mini-series’ but hopefully this one will. Continuing on with how the Programming and Control of the computer happens here again, for the last time (really last time), is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -33,7 +33,7 @@ System Architecture for a Relay Computer[^1] In the last post I covered an examp
     </item>
     <item>
       <title>Architectural breakdown: Programming and Control</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</link>
       <pubDate>Thu, 07 Nov 2013 21:54:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-programming-and/</guid>
       <description>In this post I’ll wrap up this ‘mini-series’ of trying to explain away the various bits of the architecture that will make up my relay computer project — finally now we come on to Programming and Control of the computer. Here again, for the last time, is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -41,7 +41,7 @@ System Architecture for a Relay Computer[^1] With all the various parts of the a
     </item>
     <item>
       <title>Architectural breakdown: the ALU</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</link>
       <pubDate>Thu, 07 Nov 2013 07:24:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-alu/</guid>
       <description>In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the Arithmetic Logic Unit (ALU). Here (yet again) is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -49,7 +49,7 @@ System Architecture for a Relay Computer[^1] The Arithmetic Logic Unit (ALU) sit
     </item>
     <item>
       <title>Architectural breakdown: Memory</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</link>
       <pubDate>Wed, 06 Nov 2013 20:14:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-memory/</guid>
       <description>In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s the memory. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer)
@@ -57,7 +57,7 @@ System Architecture for a Relay Computer[^1] In my last post I wrote about the c
     </item>
     <item>
       <title>Architectural breakdown: Buses and Registers</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</link>
       <pubDate>Tue, 05 Nov 2013 19:07:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-buses-and/</guid>
       <description>In this post I’ll continue to try and explain away the various bits of the architecture that will make up my relay computer project — this time it’s buses and registers. Here again is the architecture I’ll be building against (from the Harry Porter Relay Computer):
@@ -65,14 +65,14 @@ System Architecture for a Relay Computer[^1] Buses are simply a set of wires tha
     </item>
     <item>
       <title>Architectural breakdown: Binary</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-binary/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architectural-breakdown-binary/</link>
       <pubDate>Mon, 04 Nov 2013 10:35:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architectural-breakdown-binary/</guid>
       <description>… and it all begins with binary. Binary is a ‘base 2’ numbering system which means it uses the numbers 0 and 1. In contrast humans tend to use decimal (base 10) for their day-to-day numerical needs which, of course, uses the numbers 0 to 9. Binary is particularly suitable for electronics as the numbers 0 and 1 can be represented by a circuit being on (1) or off (0), or more relevantly to this computer, a wire may be carrying power (1) or not (0). If you wanted to be able to carry a single decimal digit (0-9) on a wire you’d need to pull some fancy tricks - perhaps have a different level of power signifying the different digits or send pulses counting up the number. All this gets very complicated though - binary keeps it nice and simple.</description>
     </item>
     <item>
       <title>Architecture isn&#39;t just for houses</title>
-      <link>https://relaycomputer.co.uk/posts/2013/11/architecture-isnt-just-for-houses/</link>
+      <link>https://www.relaycomputer.co.uk/posts/2013/11/architecture-isnt-just-for-houses/</link>
       <pubDate>Mon, 04 Nov 2013 08:51:00 +0000</pubDate>
       <guid>https://relaycomputer.co.uk/posts/2013/11/architecture-isnt-just-for-houses/</guid>
       <description>So, with the scene now set (see previous posts) let’s dive right in and take a look at the system architecture I’ll be building my computer upon … here it is …

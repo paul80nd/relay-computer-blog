@@ -1,5 +1,5 @@
 # The URL of the site
-baseURL = 'https://relaycomputer.co.uk/'
+baseURL = 'https://www.relaycomputer.co.uk/'
 
 # The title of site
 locale = 'en-gb'
